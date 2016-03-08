@@ -1,0 +1,4 @@
+<dot:ListBox DataSource="{value: Fruits}" SelectedValue="{value: SelectedFruit}" 
+             SelectionChanged="{command: IsItReallyFruit()}"/>
+
+{{value: Message}}

@@ -1,0 +1,27 @@
+@viewModel System.Object, mscorlib
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>My Awesome App</h1>
+
+    <div>
+        <dot:ContentPlaceHolder ID="TopMenu">
+            <!-- Content from page.dothtml with id TopMenu will be placed here. -->
+        </dot:ContentPlaceHolder>
+    </div>
+
+    <div>
+        <dot:ContentPlaceHolder ID="Main">
+            <!-- Content from page.dothtml with id Main will be placed here. -->
+        </dot:ContentPlaceHolder>
+    </div>
+
+</body>
+</html>

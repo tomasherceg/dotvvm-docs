@@ -1,0 +1,11 @@
+<bs:ButtonGroup>
+  <bs:RadioButton Text="test1" GroupName="radioGroup" ID="1" CheckedValue="value1" CheckedItem="{value: Radio}" />
+  <bs:RadioButton Text="test2" GroupName="radioGroup" ID="2" CheckedValue="value2" CheckedItem="{value: Radio}" />
+  <bs:RadioButton Text="test3" GroupName="radioGroup" ID="3" CheckedValue="value3" CheckedItem="{value: Radio}" />
+  <bs:RadioButton Text="test4" GroupName="radioGroup" ID="4" CheckedValue="value4" CheckedItem="{value: Radio}" />
+  <bs:RadioButton GroupName="radioGroup" ID="5" CheckedValue="value5" CheckedItem="{value: Radio}">test5</bs:RadioButton>
+</bs:ButtonGroup>
+
+<dot:Button Text="Get value" Click="{command: UpdateRadio()}"/>
+Confirmed with button: {{value: RadioResult}}
+Currently selected: {{value: Radio}}

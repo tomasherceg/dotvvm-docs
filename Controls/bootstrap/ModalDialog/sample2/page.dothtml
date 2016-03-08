@@ -1,0 +1,17 @@
+﻿<bs:Button Text="Open modal" data-toggle="modal" data-target="#modal" />
+
+<bs:CheckBox Checked="{value: Displayed}"></bs:CheckBox> 
+  
+<bs:ModalDialog HeaderText="{value: Title}" IsDisplayed="{value: Displayed}" Size="Small" ID="modal">
+	<HeaderTemplate>
+		{{value: Header}}
+		<bs:CloseButton/>
+	</HeaderTemplate>
+	<ContentTemplate>
+		{{value: Body}}
+	</ContentTemplate>
+	<FooterTemplate>
+		{{value: Footer}}
+		<bs:Button Text="Close" />
+	</FooterTemplate>
+</bs:ModalDialog>

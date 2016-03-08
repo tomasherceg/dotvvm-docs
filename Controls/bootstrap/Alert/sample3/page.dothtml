@@ -1,0 +1,5 @@
+﻿@viewModel DotvvmWeb.Views.Docs.Controls.bootstrap.Alert.sample3.ViewModel, DotvvmWeb
+
+<bs:Alert Text="{value: AlertText}" Type="{value: AlertType}" />
+
+<bs:Button Text="Do Something" Click="{command: DoSomething()}"/>

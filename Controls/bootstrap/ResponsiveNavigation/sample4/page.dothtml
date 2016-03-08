@@ -1,0 +1,23 @@
+﻿<bs:ResponsiveNavigation>
+  <LeftAlignedItemsTemplate>
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" IsSelected="true" />
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3 Schools" IsDisabled="true" />
+    <bs:DropDownButton Text="DropDownButton">
+      <Items>
+        <bs:DropDownButtonItem NavigateUrl="https://www.google.com/">
+          Google
+        </bs:DropDownButtonItem>
+        <bs:DropDownButtonItem NavigateUrl="https://github.com/riganti/dotvvm">
+          DotVVM
+        </bs:DropDownButtonItem>
+      </Items>
+    </bs:DropDownButton>
+  </LeftAlignedItemsTemplate>
+  <RightAlignedItemsTemplate>
+    <bs:Form>
+      <bs:FormGroup>
+        <dot:TextBox Text="TEST" />
+      </bs:FormGroup>
+    </bs:Form>
+  </RightAlignedItemsTemplate>
+</bs:ResponsiveNavigation>

@@ -1,0 +1,11 @@
+﻿<dot:Button Text="Open modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal" />
+
+<bs:ModalDialog HeaderText="Simple Modal" ID="modal">
+  <HeaderTemplate>
+    Simple modal header. This modal does not contain Footer.
+    <bs:CloseButton/>
+  </HeaderTemplate>
+  <ContentTemplate>
+    Modal Body
+  </ContentTemplate>
+</bs:ModalDialog>

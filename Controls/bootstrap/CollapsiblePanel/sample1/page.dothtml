@@ -1,0 +1,17 @@
+﻿<bs:CollapsiblePanel Type="Danger">
+  <HeaderTemplate>
+    Header
+  </HeaderTemplate>
+  <ContentTemplate>
+    Content
+  </ContentTemplate>
+  <FooterTemplate>
+    Footer
+  </FooterTemplate>
+  <AdditionalContentTemplate>
+    <bs:ListGroup>
+      <bs:ListGroupItem Text="ListGroup" />
+      <bs:ListGroupItem Text="ListGroup" />
+    </bs:ListGroup>
+  </AdditionalContentTemplate>
+</bs:CollapsiblePanel>

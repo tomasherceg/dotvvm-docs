@@ -1,0 +1,20 @@
+{
+  "files": [
+    { "name": "page.dothtml" },
+    {
+      "name": "master.dotmaster",
+      "replacements": [
+        {
+          "pattern": "(\\<!.*\\<body\\>)",
+          "replacement": "",
+          "singleLine": true
+        },
+        {
+          "pattern": "(\\</body\\>.*)$",
+          "replacement": "",
+          "singleLine": true
+        }
+      ]
+    }
+  ]
+}

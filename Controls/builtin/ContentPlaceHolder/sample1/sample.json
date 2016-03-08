@@ -1,0 +1,21 @@
+{
+  "files": [
+    {
+      "name": "master.dotmaster",
+      "replacements": [
+        {
+          "pattern": "(\\<!.*\\<body\\>)",
+          "replacement": "",
+          "singleLine": true
+        },
+        {
+          "pattern": "(\\</body\\>.*)$",
+          "replacement": "",
+          "singleLine": true
+        }
+      ]
+    },
+    { "name": "page.dothtml" },
+    { "name": "ViewModel.cs" }
+  ]
+}

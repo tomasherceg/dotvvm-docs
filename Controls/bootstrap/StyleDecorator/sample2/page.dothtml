@@ -1,0 +1,23 @@
+﻿<bs:StyleDecorator BackgroundColor="None">
+  <p>Text with BackgroundColor set to: None</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator BackgroundColor="Primary">
+  <p>Text with BackgroundColor set to: Primary</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator BackgroundColor="Success">
+  <p>Text with BackgroundColor set to: Success</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator BackgroundColor="Info">
+  <p>Text with BackgroundColor set to: Info</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator BackgroundColor="Warning">
+  <p>Text with BackgroundColor set to: Warning</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator BackgroundColor="Danger">
+  <p>Text with BackgroundColor set to: Danger</p>
+</bs:StyleDecorator>

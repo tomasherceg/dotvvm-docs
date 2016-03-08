@@ -1,0 +1,27 @@
+﻿<bs:StyleDecorator TextColor="None">
+  <p>Text with TextColor set to: None</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator TextColor="Muted">
+  <p>Text with TextColor set to: Muted</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator TextColor="Primary">
+  <p>Text with TextColor set to: Primary</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator TextColor="Success">
+  <p>Text with TextColor set to: Success</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator TextColor="Info">
+  <p>Text with TextColor set to: Info</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator TextColor="Warning">
+  <p>Text with TextColor set to: Warning</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator TextColor="Danger">
+  <p>Text with TextColor set to: Danger</p>
+</bs:StyleDecorator>

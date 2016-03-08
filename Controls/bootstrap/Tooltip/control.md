@@ -1,0 +1,1 @@
+Displays small pop-up box that appears when user moves mouse pointer over element.

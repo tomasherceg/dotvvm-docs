@@ -1,0 +1,5 @@
+<dot:RadioButton CheckedItem="{value: Color}" CheckedValue="r" Text="R"/>
+<dot:RadioButton CheckedItem="{value: Color}" CheckedValue="g" Text="G"/>
+<dot:RadioButton CheckedItem="{value: Color}" CheckedValue="b" Text="B"/>
+
+<p>Selected color: {{value: Color}}</p>

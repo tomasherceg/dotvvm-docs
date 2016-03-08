@@ -1,0 +1,24 @@
+﻿<bs:InputGroup>
+  <LeftTemplate>
+    <bs:Button Text="Button" Click="{command: UpdateText()}" />
+  </LeftTemplate>
+  <ContentTemplate>
+    <dot:TextBox Text="{value: Text}" />
+  </ContentTemplate>
+  <RightTemplate>
+    <span>Click the Button on the left.</span>
+  </RightTemplate>
+</bs:InputGroup>
+
+<bs:InputGroup Size="Small">
+  <LeftTemplate>
+    <!-- to make the CheckBox look nice, use IsInline="true" -->
+    <bs:CheckBox Checked="{value: Checked}" Changed="{command: UpdateText2()}" IsInline="true" />
+  </LeftTemplate>
+  <ContentTemplate>
+    <dot:TextBox Text="{value: Text2}" />
+  </ContentTemplate>
+  <RightTemplate>
+    <span>Click the CheckBox on the left.</span>
+  </RightTemplate>
+</bs:InputGroup>

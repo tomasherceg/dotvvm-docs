@@ -1,0 +1,6 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.SpaContentPlaceHolder.sample1.ViewModelB, DotvvmWeb
+@masterPage master.dotmaster
+
+<dot:Content ContentPlaceHolderID="Sample">
+  {{value: Text}}
+</dot:Content>

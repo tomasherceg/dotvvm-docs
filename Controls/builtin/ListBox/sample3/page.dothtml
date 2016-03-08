@@ -1,0 +1,4 @@
+<dot:ListBox DataSource="{value: Fruits}" SelectedValue="{value: SelectedFruitId}" 
+             ValueMember="Id" DisplayMember="Name" />
+
+{{value: SelectedFruitId}}

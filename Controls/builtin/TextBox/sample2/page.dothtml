@@ -1,0 +1,8 @@
+<!-- normal textbox -->
+<dot:TextBox Text="{value: Text}" Type="Normal" />
+
+<!-- password textbox -->
+<dot:TextBox Text="{value: Password}" Type="Password" />
+
+<!-- textarea -->
+<dot:TextBox Text="{value: Message}" Type="MultiLine" />

@@ -1,0 +1,23 @@
+﻿<bs:StyleDecorator Centered="true">
+  <p>Centered text</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator ClearFix="true">
+  <p>Text with ClearFix.</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator ForceShown="true">
+  <p>Force shown text.</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator ForceHidden="true">
+  <p>Force hidden text.</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator Float="Left">
+  <p>Text with float:left.</p>
+</bs:StyleDecorator>
+
+<bs:StyleDecorator Float="Right">
+  <p>Text with float:right.</p>
+</bs:StyleDecorator>

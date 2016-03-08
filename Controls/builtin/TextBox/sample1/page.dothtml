@@ -1,0 +1,3 @@
+<dot:TextBox Text="{value: Name}" />
+
+<dot:TextBox Text="static text" />

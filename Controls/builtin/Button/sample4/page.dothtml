@@ -1,0 +1,4 @@
+<dot:Button ButtonTagName="button" Click="{command: Click()}">
+    <img src="~/images/delete.png" alt="Delete" />
+    Delete
+</dot:Button>

@@ -1,0 +1,4 @@
+<bs:Carousel DataSource="{value: Images}" 
+             ImageUrlBinding="{value: URL}" 
+             CaptionBinding="{value: Caption}"
+             IsActiveBinding="{value: Active}"/>

@@ -1,0 +1,22 @@
+{
+  "files": [    
+    { "name": "page.dothtml" },
+    {
+      "name": "master.dotmaster",
+      "replacements": [
+        {
+          "pattern": "(\\<!.*\\<body\\>)",
+          "replacement": "",
+          "singleLine": true
+        },
+        {
+          "pattern": "(\\</body\\>.*)$",
+          "replacement": "",
+          "singleLine": true
+        }
+      ]
+    },
+    { "name": "PageViewModel.cs" },
+    { "name": "BaseViewModel.cs" }
+  ]
+}

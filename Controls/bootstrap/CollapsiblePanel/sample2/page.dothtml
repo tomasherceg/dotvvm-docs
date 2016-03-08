@@ -1,0 +1,21 @@
+﻿<bs:CollapsiblePanel IsCollapsed="{value: Collapsed1}">
+  <HeaderTemplate>
+    Collapsible Panel with Type binding
+  </HeaderTemplate>
+  <ContentTemplate>
+    This is the panel body.
+  </ContentTemplate>
+</bs:CollapsiblePanel>
+<bs:CollapsiblePanel IsCollapsed="{value: Collapsed2}">
+  <HeaderTemplate>
+    Collapsible Panel with Type binding
+  </HeaderTemplate>
+  <ContentTemplate>
+    This is the panel body.
+  </ContentTemplate>
+</bs:CollapsiblePanel>
+
+<p>First panel: {{value: Collapsed1}}</p>
+<p>Second panel: {{value: Collapsed2}}</p>
+
+<p><dot:Button Text="Collapse All" Click="{command: CollapseAll()}" /></p>

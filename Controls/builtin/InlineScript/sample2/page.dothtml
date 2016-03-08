@@ -1,0 +1,12 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.InlineScript.sample2.ViewModel, DotvvmWeb
+
+<dot:Button Text="Sample Button" Click="{command: NeverEverRunThis()}" />
+
+<!-- put inline script anywhere in the page -->
+<dot:InlineScript>
+	
+	dotvvm.events.error.subscribe(function(args) {
+		alert("Custom error handler!");
+		args.handled = true;
+	});
+</dot:InlineScript>

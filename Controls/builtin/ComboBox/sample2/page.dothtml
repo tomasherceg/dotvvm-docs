@@ -1,0 +1,5 @@
+<dot:ComboBox DataSource="{value: Fruits}" 
+              SelectedValue="{value: SelectedFruit}" 
+              EmptyItemText="Select..." />
+
+{{value: SelectedFruit}}

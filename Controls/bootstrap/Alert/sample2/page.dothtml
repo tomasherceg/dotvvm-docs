@@ -1,0 +1,8 @@
+﻿<bs:Alert IsDismissible="true">
+  Dismissable alert
+</bs:Alert>
+
+<bs:Alert IsDismissed="{value: Dismissed}" Dismissed="{command: AlertDismissed()}" Text="Click the button" />
+<dot:Button Text="Show/Hide" Click="{command: Dismiss()}"/>
+Dismissed: {{value: Dismissed}} <br/>
+{{value: Text}}

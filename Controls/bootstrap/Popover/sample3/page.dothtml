@@ -1,0 +1,11 @@
+﻿<bs:Popover Type="Danger" Size="ExtraSmall" Content="Content" Trigger="Click">
+  Text
+</bs:Popover>
+
+<bs:Popover Type="Success" Size="Large" Content="Content" Trigger="Focus">
+  Text
+</bs:Popover>
+
+<bs:Popover Type="Info" Size="Small" Content="Content" Trigger="Hover">
+  Text
+</bs:Popover>

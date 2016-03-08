@@ -1,0 +1,12 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.Content.sample2.ViewModel, DotvvmWeb
+@masterPage master.dotmaster
+
+<dot:Content ContentPlaceHolderID="Content">
+	<h3>Welcome! {{value: WelcomeMessage}}</h3>
+	<p>Content of the page</p>
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="Menu">
+	<!-- This overrides the default content from the master page. -->
+	There is no menu available on this page.
+</dot:Content>

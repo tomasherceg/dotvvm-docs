@@ -1,0 +1,1 @@
+Renders an image and allows to apply Bootstrap CSS classes - e.g. rounded corners, circle crop etc.

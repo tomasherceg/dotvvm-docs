@@ -1,0 +1,8 @@
+﻿<bs:ProgressBar Color="Danger" IsStriped="true" Value="39">
+  39%
+</bs:ProgressBar>
+
+
+<bs:ProgressBar Color="Success" IsStriped="true" IsAnimated="true" Value="100">
+  COMPLETED
+</bs:ProgressBar>

@@ -1,0 +1,56 @@
+{
+  "files": [
+    {
+      "name": "master.dotmaster",
+      "replacements": [
+        {
+          "pattern": "(\\<!.*\\<body\\>)",
+          "replacement": "",
+          "singleLine": true
+        },
+        {
+          "pattern": "(\\</body\\>.*)$",
+          "replacement": "",
+          "singleLine": true
+        },
+        {
+          "pattern": " RouteName=\"(SampleA)\"",
+          "replacement": "%SampleUniqueName%_SampleA"
+        },
+        {
+          "pattern": " RouteName=\"(SampleB)\"",
+          "replacement": "%SampleUniqueName%_SampleB"
+        },
+        {
+          "pattern": " DefaultRouteName=\"(SampleA)\"",
+          "replacement": "%SampleUniqueName%_SampleA"
+        }
+      ]
+    },
+    {
+      "name": "SampleA.dothtml",
+      "registerRoute": true,
+      "routeName": "SampleA",
+      "routeUrl": ""
+    },
+    {
+      "name": "SampleB.dothtml",
+      "registerRoute": true,
+      "routeName": "SampleB",
+      "routeUrl": "SampleB"
+    },
+    {
+      "name": "DotvvmStartup.cs",
+      "doNotExport": true
+    },
+    {
+      "name": "ViewModelA.cs"
+    },
+    {
+      "name": "ViewModelB.cs"
+    },
+    {
+      "name": "BaseViewModel.cs"
+    }
+  ]
+}

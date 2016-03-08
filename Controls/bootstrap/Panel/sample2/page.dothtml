@@ -1,0 +1,23 @@
+﻿<bs:Panel Type="Primary">
+  <HeaderTemplate>
+    My Panel
+  </HeaderTemplate>
+  <ContentTemplate>
+    This is panel body.
+  </ContentTemplate>
+  <FooterTemplate>
+    Footer template
+  </FooterTemplate>
+  <AdditionalContentTemplate>
+    <table class="table">
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+    </table>
+  </AdditionalContentTemplate>
+</bs:Panel>

@@ -1,0 +1,9 @@
+﻿<bs:Panel Type="Danger">
+  <ContentTemplate>
+    This is panel body.
+  </ContentTemplate>
+</bs:Panel>
+
+<bs:Panel Type="Default">
+    This is panel body.
+</bs:Panel>

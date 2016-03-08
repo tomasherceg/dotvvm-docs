@@ -1,0 +1,3 @@
+<dot:Literal Text="{value: Text}" />
+
+<dot:Literal Text="{value: Date}" FormatString="d.M.yyyy H:mm:ss" />

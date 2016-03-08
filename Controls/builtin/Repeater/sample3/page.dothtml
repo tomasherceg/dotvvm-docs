@@ -1,0 +1,21 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.Repeater.sample3.ViewModel, DotvvmWeb
+
+<p>
+    Create a new task: 
+    <dot:TextBox Text="{value: NewTaskTitle}" /> 
+    <dot:Button Text="Add" Click="{command: AddTask()}" />
+</p>
+
+<dot:Repeater DataSource="{value: Tasks}" WrapperTagName="table">
+    <ItemTemplate>
+        <tr>
+            <td>{{value: Title}}</td>
+            <td>{{value: Completed ? ("Finished: " + CompletionDate) : "Not yet"}}</td>
+            <td>
+                <dot:LinkButton Text="Done" 
+                                Click="{command: CompleteTask()}" 
+                                Visible="{value: !Completed}" />
+            </td>
+        </tr>
+    </ItemTemplate>
+</dot:Repeater>

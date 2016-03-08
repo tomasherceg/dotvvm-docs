@@ -1,0 +1,10 @@
+<p>
+  <dot:CheckBox Checked="{value: IsCompany}" 
+                Text="The customer is a company." />
+</p>
+
+<p>
+  Company Number:
+  <dot:TextBox Text="{value: CompanyNumber}"
+               Enabled="{value: IsCompany}"/>
+</p>

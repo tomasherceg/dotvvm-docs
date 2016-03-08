@@ -1,0 +1,12 @@
+<dot:ComboBox DataSource="{value: Groups}" 
+              SelectedValue="{value: SelectedGroup}" 
+              SelectionChanged="{command: GroupSelectionChanged()}" 
+              EmptyItemText="Select Group..."/> 
+<br />
+
+<dot:ComboBox DataSource="{value: Items}" 
+              SelectedValue="{value: SelectedItem}" 
+              Visible="{value: SelectedGroup != null}" /> 
+<br />
+
+{{value: SelectedItem}}

@@ -1,0 +1,10 @@
+<dot:ContentPlaceHolder ID="Main" />
+
+<menu>
+  <li>
+    <dot:RouteLink RouteName="SampleA" Text="Sample A"/>
+  </li>
+  <li>
+    <dot:RouteLink RouteName="SampleB" Text="Sample B" Param-Id="test"/>
+  </li>
+</menu>

@@ -1,0 +1,9 @@
+<dot:RadioButton Checked="{value: IsCompany}" CheckedValue="{value: false}"
+                 GroupName="RadioGroup">
+  <img src="~/images/person.png" /> person
+</dot:RadioButton>
+
+<dot:RadioButton Checked="{value: IsCompany}" CheckedValue="{value: true}"
+                 GroupName="RadioGroup" Text="company" />
+
+<p>Is company: {{value: IsCompany}}</p>

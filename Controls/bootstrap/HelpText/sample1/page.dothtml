@@ -1,0 +1,14 @@
+﻿<bs:Form Type="Vertical">
+  
+    <bs:FormGroup LabelText="Email">
+    <bs:FormStaticValue>email@example.com</bs:FormStaticValue>
+  </bs:FormGroup>
+  
+  <bs:FormGroup LabelText="Input Password">
+    <dot:TextBox ID="inputHelpBlock" Text="{value: Password}" Type="Password"/>
+    <bs:HelpText ID="help" AssociatedControlID="inputHelpBlock">
+      A simple help text for Input Password
+    </bs:HelpText>
+  </bs:FormGroup>
+
+</bs:Form>

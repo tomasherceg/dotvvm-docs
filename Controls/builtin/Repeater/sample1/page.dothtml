@@ -1,0 +1,5 @@
+<dot:Repeater DataSource="{value: Items}">
+  <ItemTemplate>
+    {{value: _this}}<br />
+  </ItemTemplate>
+</dot:Repeater>

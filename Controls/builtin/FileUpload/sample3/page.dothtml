@@ -1,0 +1,7 @@
+﻿<dot:FileUpload UploadedFiles="{value: Files}" 
+                AllowMultipleFiles="true" />
+<p>
+  <dot:Button Text="Save Files" 
+              Click="{command: Process()}"
+              Enabled="{value: !Files.IsBusy}" />
+</p>

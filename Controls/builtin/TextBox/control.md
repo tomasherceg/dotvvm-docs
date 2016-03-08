@@ -1,0 +1,1 @@
+Renders a HTML text input control.

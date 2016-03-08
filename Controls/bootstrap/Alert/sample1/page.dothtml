@@ -1,0 +1,15 @@
+﻿<bs:Alert Type="Success">
+  Alert: type Success
+</bs:Alert>
+
+<bs:Alert Type="Danger">
+  Alert: type Danger
+</bs:Alert>
+
+<bs:Alert Type="Info">
+  Alert: type Info
+</bs:Alert>
+
+<bs:Alert Type="Warning">
+  Alert: type Warning
+</bs:Alert>

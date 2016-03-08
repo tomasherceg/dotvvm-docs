@@ -1,0 +1,5 @@
+<dot:ListBox DataSource="{value: Fruits}" 
+              SelectedValue="{value: SelectedFruit}" 
+              Size="5" />
+
+{{value: SelectedFruit}}

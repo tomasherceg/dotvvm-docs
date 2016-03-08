@@ -1,0 +1,33 @@
+﻿<bs:Accordion>
+  
+  <bs:CollapsiblePanel Type="Warning" IsCollapsed="false">
+    <HeaderTemplate>
+      Collapsible Panel Number 1
+    </HeaderTemplate>
+    <ContentTemplate>
+      This is panel body.
+    </ContentTemplate>
+    <FooterTemplate>
+      Footer.
+    </FooterTemplate>
+  </bs:CollapsiblePanel>
+
+  <bs:CollapsiblePanel Type="Danger">
+    <HeaderTemplate>
+      Collapsible Panel Number 2
+    </HeaderTemplate>
+    <ContentTemplate>
+      This is panel body.
+    </ContentTemplate>
+  </bs:CollapsiblePanel>
+
+  <bs:CollapsiblePanel Type="Warning">
+    <HeaderTemplate>
+      Collapsible Panel Number 3
+    </HeaderTemplate>
+    <ContentTemplate>
+      This is panel body.
+    </ContentTemplate>
+  </bs:CollapsiblePanel>
+  
+</bs:Accordion>

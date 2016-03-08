@@ -1,0 +1,3 @@
+﻿<bs:Popover Title="Title text" Content="Content text">
+  Text text
+</bs:Popover>

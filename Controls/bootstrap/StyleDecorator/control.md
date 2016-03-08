@@ -1,0 +1,1 @@
+Renders inner element with styles.

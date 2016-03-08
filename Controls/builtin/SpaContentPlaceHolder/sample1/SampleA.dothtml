@@ -1,0 +1,6 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.SpaContentPlaceHolder.sample1.ViewModelA, DotvvmWeb
+@masterPage master.dotmaster
+
+<dot:Content ContentPlaceHolderID="Sample">
+  <dot:TextBox Text="{value: FirstName}" />
+</dot:Content>

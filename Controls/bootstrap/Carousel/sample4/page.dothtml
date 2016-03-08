@@ -1,0 +1,15 @@
+<bs:Carousel>
+  
+    <bs:CarouselItem>
+      <CaptionTemplate>
+        <h1>Los Angeles</h1>
+        <p>On of the most beautiful cities on the west coast.</p>
+      </CaptionTemplate>
+      <bs:Image ImageUrl="~/Images/LA.jpg" />
+    </bs:CarouselItem>
+    
+    <bs:CarouselItem Caption="{value: Caption}">
+      <bs:Image ImageUrl="~/Images/NY.jpg" />
+    </bs:CarouselItem>
+    
+</bs:Carousel>

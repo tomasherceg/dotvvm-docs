@@ -1,0 +1,21 @@
+<bs:ButtonGroup>
+  <bs:CheckBox Checked="{value: Checked1}" Text="CheckBox - Primary" Type="Primary" />
+</bs:ButtonGroup>
+<bs:ButtonGroup>
+  <bs:CheckBox Checked="{value: Checked2}" Text="CheckBox - Success" Type="Success" />
+</bs:ButtonGroup>
+<bs:ButtonGroup>
+  <bs:CheckBox Checked="{value: Checked3}" Text="CheckBox - Info" Type="Info" />
+</bs:ButtonGroup>
+<bs:ButtonGroup>
+  <bs:CheckBox Checked="{value: Checked4}" Text="CheckBox - Warning" Type="Warning" />
+</bs:ButtonGroup>
+<bs:ButtonGroup>
+  <bs:CheckBox Checked="{value: Checked5}" Text="CheckBox - Danger" Type="Danger" />
+</bs:ButtonGroup>
+
+<p>CheckBox - Primary: {{value: Checked1}}</p>
+<p>CheckBox - Success: {{value: Checked2}}</p>
+<p>CheckBox - Info: {{value: Checked3}}</p>
+<p>CheckBox - Warning: {{value: Checked4}}</p>
+<p>CheckBox - Danger: {{value: Checked5}}</p>

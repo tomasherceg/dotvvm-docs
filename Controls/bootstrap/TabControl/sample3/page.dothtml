@@ -1,0 +1,8 @@
+﻿<bs:TabControl DataSource="{value: Tabs}" IsActiveBinding="{value: IsActive}" >
+  <HeaderTemplate>Tab {{value: Name}}</HeaderTemplate>
+  <ContentTemplate>
+    <p>{{value: Description}}</p>
+    <dot:Button Click="{command: _parent.Write(Id)}" Text="Write Contents" />
+  </ContentTemplate>
+</bs:TabControl>
+<p>Result: {{value: Text}}</p>

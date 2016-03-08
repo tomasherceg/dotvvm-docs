@@ -1,0 +1,11 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.Content.sample2.PageViewModel, DotvvmWeb
+@masterPage master.dotmaster
+
+<dot:Content ContentPlaceHolderID="Content">
+
+    <dot:Button Click="{command: Calculate()}" 
+                Text="Button" />
+
+    <p>Current value: {{value: CurrentValue}}</p>
+
+</dot:Content>

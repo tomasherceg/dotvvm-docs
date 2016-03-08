@@ -1,0 +1,13 @@
+<bs:Carousel RenderSideControls="false" EnableAnimation="false" AutoSlideInterval="3">
+    <bs:CarouselItem IsActive="true">
+      <bs:Image ImageUrl="~/Images/LA.jpg" />
+    </bs:CarouselItem>
+    
+    <bs:CarouselItem>
+      <bs:Image ImageUrl="~/Images/NY.jpg" />
+    </bs:CarouselItem>
+    
+    <bs:CarouselItem>
+      <bs:Image ImageUrl="~/Images/Miami.jpg" />
+    </bs:CarouselItem>
+</bs:Carousel>

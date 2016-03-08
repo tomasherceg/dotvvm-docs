@@ -1,0 +1,15 @@
+﻿<bs:Breadcrumb>
+  <bs:ListItem NavigateUrl="https://www.google.com/"
+               Text="Google"
+               IsDisabled="true"/>
+
+  <bs:ListItem NavigateUrl="http://www.w3schools.com/"
+               Text="Wc3Schools"
+               IsSelected="true"/>
+
+  <bs:ListItem RouteName="MyRoute"
+               Param-Id="{value: Test}"
+               Text="Breadcrumb sample 1" />
+</bs:Breadcrumb>
+
+<p>Id from the route: {{value: Id}}</p>

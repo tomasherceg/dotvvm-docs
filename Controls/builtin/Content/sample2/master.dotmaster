@@ -1,0 +1,25 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.Content.sample2.BaseViewModel, DotvvmWeb
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <h1>MasterPage sample</h1>
+
+    <dot:Repeater DataSource="{value: MenuItems}" WrapperTagName="menu">
+        <ItemTemplate>
+            <li>{{value: _this}}</li>
+        </ItemTemplate>
+    </dot:Repeater>
+
+	<div>
+		<dot:ContentPlaceHolder ID="Content" />
+	</div>
+
+</body>
+</html>

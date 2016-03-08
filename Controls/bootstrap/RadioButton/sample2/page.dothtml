@@ -1,0 +1,8 @@
+<bs:ButtonGroup>
+  <bs:RadioButton GroupName="RadioButtons" CheckedValue="RadioButton 1" CheckedItem="{value: Radio}" Text="RadioButton - Default" />
+  <bs:RadioButton GroupName="RadioButtons" CheckedValue="RadioButton 2" CheckedItem="{value: Radio}" Text="RadioButton - Primary" Type="Primary" />
+  <bs:RadioButton GroupName="RadioButtons" CheckedValue="RadioButton 3" CheckedItem="{value: Radio}" Text="RadioButton - Success" Type="Success" />
+  <bs:RadioButton GroupName="RadioButtons" CheckedValue="RadioButton 4" CheckedItem="{value: Radio}" Text="RadioButton - Info" Type="Info" />
+  <bs:RadioButton GroupName="RadioButtons" CheckedValue="RadioButton 4" CheckedItem="{value: Radio}" Text="RadioButton - Warning" Type="Warning" />
+  <bs:RadioButton GroupName="RadioButtons" CheckedValue="RadioButton 4" CheckedItem="{value: Radio}" Text="RadioButton - Danger" Type="Danger" />
+</bs:ButtonGroup>

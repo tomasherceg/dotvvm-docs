@@ -1,0 +1,4 @@
+<dot:RadioButton CheckedItem="{value: Value}" CheckedValue="{value: true}" Changed="{command: OnChanged()}" />
+<dot:RadioButton CheckedItem="{value: Value}" CheckedValue="{value: false}" Changed="{command: OnChanged()}" />
+
+<p>{{value: NumberOfChanges}}</p>

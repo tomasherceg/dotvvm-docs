@@ -1,0 +1,9 @@
+@masterPage master.dotmaster
+
+<dot:Content ContentPlaceHolderID="TopMenu">
+  Here is the CONTENT from this page with id TopMenu
+</dot:Content>
+
+<dot:Content ContentPlaceHolderID="Main">
+  Here is the CONTENT from this page with id Main
+</dot:Content>

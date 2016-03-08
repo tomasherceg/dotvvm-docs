@@ -1,0 +1,13 @@
+﻿<bs:Form>
+  <bs:FormGroup>
+    <LabelTemplate>
+      Your favorite colors
+      <bs:Button Text="Send" Click="{command: DoSomething()}"></bs:Button>
+    </LabelTemplate>
+    <FormContent>
+      <bs:CheckBox Text="Red" Checked="{value: Red}" IsInline="true" />
+      <bs:CheckBox Text="Blue" Checked="{value: Blue}" IsInline="true" />
+    </FormContent>
+  </bs:FormGroup>
+  <span>{{value: Text}}</span>
+</bs:Form>

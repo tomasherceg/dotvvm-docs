@@ -1,0 +1,5 @@
+<dot:TextBox Text="{value: Text}" />
+
+<dot:ValidationSummary />
+
+<dot:Button Text="SEND" Click="{command: Send()}" />

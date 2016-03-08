@@ -1,0 +1,22 @@
+﻿<bs:ListGroup ItemType="Button">
+  <bs:ListGroupItem Text="Item 1" Color="Info" />
+  <bs:ListGroupItem Text="Item 2" Color="Success" IsDisabled="true" />
+  <bs:ListGroupItem Text="Item 3" Color="Warning" IsSelected="true" />
+  <bs:ListGroupItem Text="Item 4" Color="Danger" />
+</bs:ListGroup>
+
+<bs:ListGroup ItemType="Link">
+  <bs:ListGroupItem Text="Google Link" NavigateUrl="https://www.google.com/" Color="Success"/>
+  <bs:ListGroupItem Text="DotVVM" NavigateUrl="{value: BindedUrl}" />
+</bs:ListGroup>
+
+<bs:ListGroup>
+  <bs:ListGroupItem Text="Item 1" Badge="Simple Badge" />
+  <bs:ListGroupItem Color="Info">
+    <bs:GlyphIcon Icon="Info_sign" /> info
+  </bs:ListGroupItem>
+  <bs:ListGroupItem Text="Item 3" Badge="{value: BadgeText}" />
+  <bs:ListGroupItem IsDisabled="true">
+    <bs:GlyphIcon Icon="Music" />
+  </bs:ListGroupItem>
+</bs:ListGroup>

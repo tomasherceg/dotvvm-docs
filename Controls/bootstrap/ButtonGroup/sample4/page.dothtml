@@ -1,0 +1,4 @@
+﻿<bs:ButtonGroup IsJustified="true">
+  <bs:CheckBox Text="CheckBox 1" Checked="{value: Checked1}" />
+  <bs:CheckBox Text="CheckBox 2" Checked="{value: Checked2}" />
+</bs:ButtonGroup>

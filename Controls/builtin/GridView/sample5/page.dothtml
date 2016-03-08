@@ -1,0 +1,14 @@
+<dot:GridView DataSource="{value: Customers}">
+  <RowDecorators>
+    <dot:Decorator Events.Click="{command: _parent.RowClicked(Id)}"
+                   class="clickable"/>
+  </RowDecorators>
+  <Columns>
+    <dot:GridViewTextColumn ValueBinding="{value: Id}" 
+                            HeaderText="ID" />
+    <dot:GridViewTextColumn ValueBinding="{value: Name}" 
+                            HeaderText="Name" />
+  </Columns>
+</dot:GridView>
+
+<p>Last clicked row: {{value: ClickedRowId}}</p>

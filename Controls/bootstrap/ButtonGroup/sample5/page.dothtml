@@ -1,0 +1,12 @@
+﻿<bs:ButtonGroup>
+  <dot:Repeater DataSource="{value: CheckBoxes}">
+    <ItemTemplate>
+      <bs:CheckBox Text="{value: Text}" 
+                   CheckedItems ="{value: _parent.Colors}" 
+                   CheckedValue="{value: CheckedValue}" 
+                   Changed="{command: _parent.UpdateSelectedColors()}"/>
+    </ItemTemplate>
+  </dot:Repeater>
+</bs:ButtonGroup>
+
+<p>{{value: SelectedColors}}</p>

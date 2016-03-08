@@ -1,0 +1,9 @@
+<dot:GridView DataSource="{value: Customers}" SortChanged="{command: Sort}">
+  <Columns>
+    <dot:GridViewTextColumn ValueBinding="{value: Id}" 
+                            HeaderText="ID" AllowSorting="true" />
+    
+    <dot:GridViewTextColumn ValueBinding="{value: Name}" 
+                            HeaderText="Name" AllowSorting="true"/>
+  </Columns>
+</dot:GridView>

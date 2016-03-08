@@ -1,0 +1,5 @@
+<dot:TextBox Text="{value: ChildObject.Text}" />
+
+<dot:ValidationSummary IncludeErrorsFromChildren="true" />
+
+<dot:Button Text="SEND" Click="{command: Send()}" />

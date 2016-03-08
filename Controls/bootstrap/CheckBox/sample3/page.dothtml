@@ -1,0 +1,5 @@
+<bs:CheckBox Text="Red" CheckedItems="{value: Colors}" CheckedValue="r" Changed="{command: UpdateSelectedColors()}" />
+<bs:CheckBox Text="Green" CheckedItems="{value: Colors}" CheckedValue="g" Changed="{command: UpdateSelectedColors()}" />
+<bs:CheckBox Text="Blue" CheckedItems="{value: Colors}" CheckedValue="b" Changed="{command: UpdateSelectedColors()}" />
+
+<p>{{value: SelectedColors}}</p>

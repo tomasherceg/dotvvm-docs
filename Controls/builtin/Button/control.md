@@ -1,0 +1,1 @@
+This control renders HTML button which is able to trigger a postback.

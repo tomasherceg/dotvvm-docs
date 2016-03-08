@@ -1,0 +1,3 @@
+<dot:CheckBox Text="CheckBox Label" Checked="{value: Checked}" />
+
+<p>{{value: Checked}}</p>

@@ -1,0 +1,1 @@
+Renders the hyperlink which behaves like a button.

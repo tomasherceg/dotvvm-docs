@@ -1,0 +1,20 @@
+﻿<bs:Accordion ExpandedPanelIndex="{value: Index}">
+
+  <dot:Repeater DataSource="{value: Panels}" RenderWrapperTag="true">
+    <ItemTemplate>
+      
+      <bs:CollapsiblePanel>
+        <HeaderTemplate>
+          <dot:Literal Text="{value: Header}" />
+        </HeaderTemplate>
+        <ContentTemplate>
+          <dot:Literal Text="{value: Text}" />
+        </ContentTemplate>
+      </bs:CollapsiblePanel>
+    
+    </ItemTemplate>
+  </dot:Repeater>
+
+</bs:Accordion>
+
+<p>Expanded panel index: {{value: Index}}</p>

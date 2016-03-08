@@ -1,0 +1,3 @@
+<dot:Button Click="{command: SetVisible()}" Text="Button" Enabled="{value: Enabled}"/>
+
+<dot:Button Click="{command: SetEnabled()}" Text="Invisible Button" Visible="{value: Visible}"/>

@@ -1,0 +1,9 @@
+<dot:Button Click="{command: Calculate()}" Text="Button with Input tag" ButtonTagName="input"/>
+
+<dot:Button Click="{command: ShowMessage()}" Text="Submit Button" IsSubmitButton="true"/>
+
+<dot:Literal Text="{value: Message}"/>
+
+<dot:Literal Text="Current value: "></dot:Literal><dot:Literal Text="{value: CurrentValue}"/>
+
+<dot:Literal Text="Submitted value: "></dot:Literal><dot:Literal Text="{value: SubmittedValue}"/>

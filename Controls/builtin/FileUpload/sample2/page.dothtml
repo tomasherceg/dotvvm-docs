@@ -1,0 +1,4 @@
+<dot:FileUpload UploadedFiles="{value: Files}" AllowMultipleFiles="true" 
+                UploadCompleted="{command: ProcessFile()}" />
+
+{{value: Message}}

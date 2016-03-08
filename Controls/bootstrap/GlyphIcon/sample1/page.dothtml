@@ -1,0 +1,6 @@
+﻿<bs:GlyphIcon Icon="Check" /> 
+
+<br/><br/>
+
+<dot:CheckBox Checked="{value: IsCorrect}" Text="Is Correct?" /><br/>
+<bs:GlyphIcon Icon="{value: IsCorrect ? Check : Warning_sign}" />

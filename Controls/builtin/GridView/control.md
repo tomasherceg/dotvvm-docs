@@ -1,0 +1,1 @@
+A multi-purpose grid control with advanced binding and templating options and sorting support.

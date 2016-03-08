@@ -1,0 +1,6 @@
+﻿<bs:Label Text="Label-Default"/>
+<bs:Label Text="Label-Primary" Type="Primary"/>
+<bs:Label Text="Label-Success" Type="Success"/>
+<bs:Label Text="Label-Info" Type="Info"/>
+<bs:Label Text="Label-Warning" Type="Warning"/>
+<bs:Label Text="Label-Danger" Type="Danger"/>

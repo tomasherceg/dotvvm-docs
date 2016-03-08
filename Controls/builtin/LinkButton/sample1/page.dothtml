@@ -1,0 +1,5 @@
+<dot:LinkButton Click="{command: DoSomething()}" Text="Simple Link Button" />
+
+<dot:LinkButton Click="{command: DeleteSomething()}">
+  <img src="~/images/delete.png" /> Delete
+</dot:LinkButton>

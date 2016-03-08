@@ -1,0 +1,9 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.UpdateProgress.sample1.ViewModel, DotvvmWeb
+
+<dot:Button Text="Perform difficult calculation" Click="{command: CalculateIt()}" />
+
+<p>{{value: Result}}</p>
+
+<dot:UpdateProgress>
+	<h4>Calculating...</h4>
+</dot:UpdateProgress>

@@ -1,0 +1,21 @@
+<dot:GridView DataSource="{value: Customers}" InlineEditing="true">
+  <Columns>
+    <dot:GridViewTextColumn ValueBinding="{value: Id}" 
+                            HeaderText="ID" 
+                            IsEditable="false" />
+    
+    <dot:GridViewTextColumn ValueBinding="{value: Name}" 
+                            HeaderText="Name" />
+
+    <dot:GridViewTemplateColumn AllowSorting="false">
+      <ContentTemplate>
+        <dot:Button Text="Edit" Click="{command: _parent.Edit(_this)}" />
+      </ContentTemplate>
+      <EditTemplate>
+        <dot:Button Text="Save" Click="{command: _parent.Update(_this)}" />
+        <dot:Button Text="Cancel" Click="{command: _parent.CancelEdit()}" />
+      </EditTemplate>
+    </dot:GridViewTemplateColumn>
+  
+  </Columns>
+</dot:GridView>

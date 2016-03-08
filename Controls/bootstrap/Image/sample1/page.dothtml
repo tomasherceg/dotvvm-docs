@@ -1,0 +1,2 @@
+<bs:Image ImageUrl="~/Images/LA.jpg" AlternateText="Los Angeles" 
+          Height="50%" Width="50%" />

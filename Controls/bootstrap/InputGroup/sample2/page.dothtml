@@ -1,0 +1,14 @@
+﻿<bs:InputGroup>
+  <LeftTemplate>
+    <dot:RadioButton CheckedItem="{value: Color}" CheckedValue="r" Text="R" />
+    <dot:RadioButton CheckedItem="{value: Color}" CheckedValue="g" Text="G" />
+    <dot:RadioButton CheckedItem="{value: Color}" CheckedValue="b" Text="B" />
+  </LeftTemplate>
+  <ContentTemplate>
+    <dot:TextBox Text="{value: Color}"/>
+  </ContentTemplate>
+  <RightTemplate>
+    <bs:Button Text="Button 1" />
+    <bs:Button Text="Button 2" />
+  </RightTemplate>
+</bs:InputGroup>

@@ -1,0 +1,19 @@
+﻿{
+  "files": [
+    {
+      "name": "page.dothtml",
+      "registerRoute": true,
+      "routeName": "MyRoute",
+      "routeUrl": "{Id?}",
+      "replacements": [
+        {
+          "pattern": "RouteName=\"(MyRoute)\"",
+          "replacement": "%SampleUniqueName%_MyRoute"
+        }
+      ]
+    },
+    {
+      "name": "ViewModel.cs"
+    }
+  ]
+}

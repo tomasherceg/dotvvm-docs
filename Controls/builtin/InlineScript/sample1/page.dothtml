@@ -1,0 +1,3 @@
+<dot:InlineScript>
+  dotvvm.events.init.subscribe(function() { alert("Page loaded"); });
+</dot:InlineScript>

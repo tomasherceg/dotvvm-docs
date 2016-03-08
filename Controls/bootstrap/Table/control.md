@@ -1,0 +1,1 @@
+Renders styled tables.

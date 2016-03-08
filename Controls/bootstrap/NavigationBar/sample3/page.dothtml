@@ -1,0 +1,2 @@
+﻿<bs:NavigationBar Type="Pills" IsJustified="true" DataSource="{value: LinksDataSet}" IsDisabledBinding="{value: IsDisabled}" IsSelectedBinding="{value: IsSelected}"
+          TextBinding="{value: Text}" NavigateUrlBinding="{value:  NavigateUrl}" />

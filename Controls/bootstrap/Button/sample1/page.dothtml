@@ -1,0 +1,14 @@
+﻿<bs:Button Click="{command: DoSomething()}" 
+           Text="Button" />
+
+<bs:Button Click="{command: DoSomething()}" 
+           Text="Button" 
+           Size="Large" />
+
+<bs:Button Click="{command: DoSomething()}" 
+           Text="Button" 
+           Size="Small" />
+
+<bs:Button Click="{command: DoSomething()}" 
+           Text="Button" 
+           Size="ExtraSmall" />

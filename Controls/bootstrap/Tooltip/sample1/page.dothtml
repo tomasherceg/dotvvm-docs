@@ -1,0 +1,15 @@
+﻿<bs:Tooltip Position="Left" Title="This element has simple tooltip">
+  <a href="#">Text text text</a>
+</bs:Tooltip>
+
+<bs:Tooltip Position="Right" Title="This element has simple tooltip">
+  <a href="#">Text text text</a>
+</bs:Tooltip>
+
+<bs:Tooltip Position="Bottom" Title="This element has simple tooltip">
+  <a href="#">Text text text</a>
+</bs:Tooltip>
+
+<bs:Tooltip Position="Top" Title="This element has simple tooltip">
+  <a href="#">Text text text</a>
+</bs:Tooltip>

@@ -1,0 +1,3 @@
+<p StyleDecorator.BackgroundColor="Success" StyleDecorator.TextColor="Danger" StyleDecorator.Visibility="HiddenSmall" StyleDecorator.Float="Right" StyleDecorator.ClearFix="true" StyleDecorator.Centered="true" data-ui="activeProp-background-text-binding-all-true">
+  Text text text text.
+</p>

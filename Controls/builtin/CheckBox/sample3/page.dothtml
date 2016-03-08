@@ -1,0 +1,3 @@
+<dot:CheckBox Checked="{value: Value}" Changed="{command: OnChanged()}" />
+
+<p>{{value: NumberOfChanges}}</p>
