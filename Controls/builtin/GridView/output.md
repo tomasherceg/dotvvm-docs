@@ -18,7 +18,7 @@ The control render a classic HTML table:
 </table>
 ```
 
-In the [Client rendering mode](/docs/tutorials/basics-server-side-html-generation), only one row is rendered and the 
+In the [Client rendering mode](/docs/tutorials/basics-server-side-html-generation/{branch}), only one row is rendered and the 
 Knockout *foreach* binding is applied to the *tbody* element.
 
-In the [Server rendering mode](/docs/tutorials/basics-server-side-html-generation), all rows are rendered on the server.
+In the [Server rendering mode](/docs/tutorials/basics-server-side-html-generation/{branch}), all rows are rendered on the server.

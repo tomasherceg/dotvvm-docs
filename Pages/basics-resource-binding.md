@@ -40,5 +40,5 @@ Consider a project with the *Resources\Web\Strings1.resx* and *Resources\Web\Str
 <br />
 
 The bindings are always evaluated on the server. When evaluating, the current thread culture will be used. See the 
-[Globalization](/docs/tutorials/basics-globalization) section for more information.
+[Globalization](/docs/tutorials/basics-globalization/{branch}) section for more information.
 

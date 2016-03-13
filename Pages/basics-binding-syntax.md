@@ -14,7 +14,7 @@ There are several types of data binding in **DotVVM**.
 * `{resource: ResourceFile.ResourceKey}` - gets the resource entry value from the specified RESX file.
 
 There are also _controlCommand_ and _controlProperty_ bindings. They are intended to be used by control developers and they are described
-in the [Markup Controls](/docs/tutorials/control-development-markup-controls) section.
+in the [Markup Controls](/docs/tutorials/control-development-markup-controls/{branch}) section.
 
 > The [DotVVM Pro for Visual Studio 2015](/products/dotvvm-pro-for-vs-2015) has the IntelliSense for expressions in all types of bindings. 
 

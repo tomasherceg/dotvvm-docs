@@ -1,6 +1,6 @@
 ﻿## Creating Custom Postback Handlers
 
-If you want to create a custom [Postback Handler](../docs/tutorials/basics-postback-handlers), you need to do three things:
+If you want to create a custom [Postback Handler](/docs/tutorials/basics-postback-handlers/{branch}), you need to do three things:
 
 1. Create a **postback handler definition** - a C# class declaring which parameters the postback handler accepts.
 
@@ -98,7 +98,7 @@ dotvvm.events.init.subscribe(function () {
 ### Step 3: Register the PostBack Handler
 
 The postback handler is registered in the same way as any other user control. You can find more information about the custom 
-control registration in the [/docs/tutorials/control-development-code-only-controls](Code-only Controls) tutorial.
+control registration in the [Code-only Controls](/docs/tutorials/control-development-code-only-controls/{branch}) tutorial.
 
 <br/>
 

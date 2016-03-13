@@ -21,7 +21,7 @@ You can define, what tag the *Repeater* renders, using the `WrapperTagName`. The
 ```
 
 Using the `RenderWrapperTag` you can turn off the wrapper tag. The Knockout comments will then be used 
-in the [client rendering mode](/docs/tutorials/basics-server-side-html-generation):
+in the [client rendering mode](/docs/tutorials/basics-server-side-html-generation/{branch}):
 ```DOTHTML
 <!-- ko foreach: ... -->
 <p><span data-bind="..."></span></p>

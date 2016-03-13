@@ -1,6 +1,6 @@
 ﻿## DotVVM Project Contents
 
-After you [create a new DotVVM project](/docs/tutorials/how-to-start-dotnet-451) you will find several things in your project.
+After you [create a new DotVVM project](/docs/tutorials/how-to-start-dotnet-451/{branch}) you will find several things in your project.
 
 * **Views\default.dothtml** - an example view.
 

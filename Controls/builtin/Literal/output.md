@@ -1,4 +1,4 @@
-In the [Client rendering mode](/docs/tutorials/basics-server-side-html-generation), the control renders a span with Knockout data-bind 
+In the [Client rendering mode](/docs/tutorials/basics-server-side-html-generation/{branch}), the control renders a span with Knockout data-bind 
 
 ```DOTHTML
 <span data-bind="text: expression"></span>
@@ -12,7 +12,7 @@ If you set the `RenderSpanElement` to *false*, the span won't be rendered. In th
 
 <br />
 
-In the [Server rendering mode](/docs/tutorials/basics-server-side-html-generation), the text is rendered directly to the response.
+In the [Server rendering mode](/docs/tutorials/basics-server-side-html-generation/{branch}), the text is rendered directly to the response.
 This helps the search engines to understand the page content.
 
 ```DOTHTML

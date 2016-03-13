@@ -26,4 +26,4 @@ You can add multiple handlers in the collection. They will chain in the same ord
 
 The default `ConfirmPostBackHandler` provides the basic confirmation functionality using the javascript `confirm` function, but it doesn't provide
 a nice user experience. However, the postback handlers are extensible and it is not difficult to write your own confirmation dialog logic.
-You can find more information about that in the [/docs/tutorials/control-development-creating-custom-postback-handlers](Creating Custom Postback Handlers) tutorial.
+You can find more information about that in the [Creating Custom Postback Handlers](/docs/tutorials/control-development-creating-custom-postback-handlers/{branch}) tutorial.

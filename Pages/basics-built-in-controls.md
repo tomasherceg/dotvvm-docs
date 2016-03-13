@@ -1,7 +1,7 @@
 ## Built-in Controls
 
 Currently, **DotVVM** contains several built-in controls.
-For more information, read the [Built-in Control Reference](/docs/tutorials/control-reference-builtin).
+For more information, read the [Built-in Control Reference](/docs/tutorials/control-reference-builtin/{branch}).
 
 ### Built-in Controls
 

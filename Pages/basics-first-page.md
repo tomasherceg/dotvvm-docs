@@ -61,5 +61,5 @@ We recommend that your viewmodels derive from the `DotVVM.Framework.ViewModel.Do
 which will allow you to interact with the HTTP request, e.g. do a redirect to another page or route.
 
 The `DotvvmViewModelBase` class also has the **Init**, **Load** and **PreRender** methods. You can override them to perform tasks in specific state of
-the request execution. You'll find more information about them in the [ViewModels](/docs/tutorials/basics-viewmodels) tutorial.
+the request execution. You'll find more information about them in the [ViewModels](/docs/tutorials/basics-viewmodels/{branch}) tutorial.
 
