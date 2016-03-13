@@ -1,29 +1,35 @@
 ## Master Pages
 
-In most web applications, you need all pages to have common header, menu and footer. **DotVVM** solves this by using **Master Pages**. 
-If you are familiar with ASP.NET WebForms, the concept of master pages is the same.
+In most web apps, you need all pages to share the header, menu and footer. **DotVVM** supports a thing called **Master Pages**. 
+If you are familiar with _ASP.NET WebForms_, the concept of master pages is exactly the same.
 
-There is a **master page** that contains the common parts and it also defines one or more **content place holders**. 
+We have two kinds of pages:
 
-<img src="/Views/Docs/Pages/basics-master-pages-img1.png" alt="Master Page Schema" />
+1. The **Master Page** has the `.dotmaster` extension. It contains the whole layout of the page including the `<html>`, `<head>` and `<body>` tags.
+The master page contain one or more `<dot:ContentPlaceHolder>` controls.     
 
-Then, there is one or more **content pages** that define one or more **contents**. These contents will be embedded in the 
-corresponding **place holders** in the master page. The content page also specifies which master page it is nested in using 
-the `@masterPage` directive at the top of the file.
+2. The **Content Pages** have the `.dotcontrol` extension and contains one or more `<dot:Control>` elements with content. This content will be embedded
+in the corresponding `ContentPlaceHolder`s in the master page.  
+
+<img src="{imageDir}basics-master-pages-img1.png" alt="Master Page Schema" />
+
+If you want to use the master page, you have to add the `@masterPage` directive at the top of the file.
 
 
 ### Notes
 
-It is not possible to make a HTTP request to the master page, therefore should not be registered in the _Startup.cs_. 
+It is not possible to make a HTTP request to the master page, therefore it should not be registered in the _Startup.cs_. 
 Only content pages can receive HTTP requests. 
 
-You can also nest a master page to another master page and so on - just add the `@masterPage` directive to the master page.
+You can also nest a master page in another master page and so on - just use the `@masterPage` directive in the master page.
 
-Also note that the master page must also specify the `@viewmodel` directive. It doesn't have to be a class, it can be an interface.
-In most cases, _the viewmodel of the masterpage is a common base class for all content page viewmodels_. 
+Also note that even the master page must specify the `@viewmodel` directive. It doesn't have to be a class, it can be an interface. This is because the
+framework needs to know the type that will be used in the bindings in the page. 
 
-The **ContentPlaceHolder** control can have a default content - if the content page has no **Content** with the corresponding ID,
-the default content is used.
+In most cases, _the viewmodel of the masterpage is a common base class for viewmodels of the content pages_. 
+
+The `<dot:ContentPlaceHolder>` doesn't have to be empty. If the content page has no corresponding `<dot:Content>` for any placeholder,
+its content will be used.
 
 ```DOTHTML
     <dot:ContentPlaceHolder ID="OptionalContent">
@@ -31,23 +37,18 @@ the default content is used.
     </dot:ContentPlaceHolder>
 ```
 
-The recommended extension for master pages is `.dotmaster`, because you can simply distinguish pages from master pages. 
-If you use another extension, not all features of the Visual Studio extension are going to work properly.
-
-
-
 ### How to Create the Master Page
 
 All you have to do is to choose **DotVVM Master Page** in the New Item dialog.
 
-<img src="/Views/Docs/Pages/basics-master-pages-img2.png" alt="Creating a Master Page" />
+<img src="{imageDir}basics-master-pages-img2.png" alt="Creating a Master Page" />
 
 Next, the same window for choosing the viewmodel will appear. If you already have a base class viewmodel for the master page,
 just uncheck the _Create ViewModel_ option.
 Make sure that the master page specifies the correct viewmodel - if not, delete the directive and the IntelliSense will help you
 to pick the correct class.
 
-<img src="/Views/Docs/Pages/basics-master-pages-img3.png" alt="Picking the correct class" />
+<img src="{imageDir}basics-master-pages-img3.png" alt="Picking the correct class" />
 
 Finally, write your HTML code. On a place where you need to embed something from a content page, declare a **ContentPlaceHolder**.
 
@@ -56,7 +57,9 @@ Finally, write your HTML code. On a place where you need to embed something from
 </dot:ContentPlaceHolder>
 ```
 
-Most master pages need only one or two of them, however you can use as many ContentPlaceHolders as you need. 
+Most master pages need only one or two of them, however you can use as many `ContentPlaceHolder`s as you need.
+
+> The [DotVVM Pro for Visual Studio 2015](/products/dotvvm-pro-for-vs-2015) has the IntelliSense for the `ContentPlaceHolderId` property and much more. 
 
 
 ### How to Create the Content Page
@@ -64,8 +67,8 @@ Most master pages need only one or two of them, however you can use as many Cont
 Creating the content page is very similar. Just add a new **DotVVM Page** and in the dialog window, tick the **Embed in Master Page** checkbox.
 Then, pick the correct master page.
 
-<img src="/Views/Docs/Pages/basics-master-pages-img4.png" alt="Embedding a page in the master page" />
+<img src="{imageDir}basics-master-pages-img4.png" alt="Embedding a page in the master page" />
 
 The wizard will generate the **Content** controls automatically based on **ContentPlaceHolders** present in the selected master page.
 
-> Don't forget! The master page's viewmodel should be a base class of the content page viewmodels.
+> Don't forget! The viewmodel in the content page must derive or implement from the viewmodel in the master page.

@@ -5,7 +5,7 @@ to the URLs you want to use. In this case, you can use the auto-discovery mechan
 
 Consider the following files in the project and the URLs you want to map:
 
-<table>
+<table class="table table-condensed" style="font-family: monospace">
     <tr>
         <td>Views/home.dothtml</td>
         <td>www.mydomain.com/home</td>

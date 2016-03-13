@@ -1,6 +1,6 @@
 ﻿## DotVVM Project Contents
 
-After you [create a new DotVVM project](/docs/pages/how-to-start-dotnet-451) you will find several things in your project.
+After you [create a new DotVVM project](/docs/tutorials/how-to-start-dotnet-451) you will find several things in your project.
 
 * **Views\default.dothtml** - an example view.
 
@@ -11,6 +11,8 @@ After you [create a new DotVVM project](/docs/pages/how-to-start-dotnet-451) you
 * **DotvvmStartup.cs** - a DotVVM configuration file.
 
 * **web.config** - a configuration file for ASP.NET and IIS.
+
+<img src="{imageDir}basics-project-structure-img1.png" alt="DotVVM Project Structure" />
 
 ## Views and ViewModels Folders
 

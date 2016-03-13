@@ -21,7 +21,7 @@ Because the file is in the **Views** folder, we pass the `Views/page.dothtml` pa
 You can pass an anonymous object, or you can use `IDictionary<string, object>`. 
 
 If you need to register a route which should not be treated as dothtml file (e.g. if you need a handler which serves files or generates RSS feeds). In this case you can
-write a [custom presenter](/docs/pages/advanced-custom-presenters.md) and specify a method, that returns it, as a fifth parameter.
+write a [custom presenter](/docs/tutorials/advanced-custom-presenters.md) and specify a method, that returns it, as a fifth parameter.
 
 ### Route Parameters
 
@@ -48,7 +48,7 @@ else
 }
 ```
 
-We can also register maek the parameter optional (without the default value):
+We can also register make the parameter optional (without the default value):
 
 ```CSHARP
 config.RouteTable.Add("AdminCustomer", "admin/customer/{Id?}", "Views/admin/customer.dothtml");
@@ -69,4 +69,4 @@ DotVVM currently supports the following route constraints:
 
 <br />
 
-If you have a larger project, you may need to [auto-discover routes](/docs/pages/advanced-route-autodiscovery) instead of registering the routes one by one.  
+If you have a larger project, you may need to [auto-discover routes](/docs/tutorials/advanced-route-autodiscovery) instead of registering the routes one by one.  
