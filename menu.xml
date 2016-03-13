@@ -3,7 +3,7 @@
 	<DocPageMenuItem RouteName="introduction" PageName="Introduction" />
 	<DocPageMenuItem RouteName="how-to-start" PageName="How To Start">
 		<DocPageMenuItem RouteName="dotnet-451" PageName="Create a new project (ASP.NET 4.5.1)" />
-		<DocPageMenuItem RouteName="dnx" PageName="Create a new project (ASP.NET 5 aka DNX)" />
+		<DocPageMenuItem RouteName="dnx" PageName="Create a new project (.NET Core and DNX)" />
 		<DocPageMenuItem RouteName="existing-app" PageName="Add DotVVM to existing app" />
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="basics" PageName="Basics">
@@ -35,6 +35,8 @@
 		<DocPageMenuItem RouteName="filter-registration" PageName="Filter Registration" />
 		<DocPageMenuItem RouteName="ioc-di-container" PageName="IoC/DI Containers" />
 		<DocPageMenuItem RouteName="testing-viewmodels" PageName="Testing ViewModels" />
+        <DocPageMenuItem RouteName="custom-presenters" PageName="Custom Presenters">
+        <DocPageMenuItem RouteName="route-autodiscovery" PageName="Auto-Discovering Routes">
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="control-development" PageName="Control Development">
 		<DocPageMenuItem RouteName="introduction" PageName="Introduction" />

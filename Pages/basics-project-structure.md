@@ -1,27 +1,21 @@
 ﻿## DotVVM Project Contents
 
-You can find several item in the default **DotVVM** project template.
+After you [create a new DotVVM project](/docs/pages/how-to-start-dotnet-451) you will find several things in your project.
 
-* **Views\default.dothtml** - an example view file.
+* **Views\default.dothtml** - an example view.
 
-* **ViewModels\DefaultViewModel.cs** - an example viewmodel file.
+* **ViewModels\DefaultViewModel.cs** - an example viewmodel.
 
-* **dotvvm.json** - a DotVVM configuration file which contains security keys, control tag mappings and other configuration stuff.
+* **Startup.cs** - an OWIN startup class which plugs in the DotVVM and Static Files middlewares.
 
-* **Startup.cs** - a file which contains startup code for DotVVM, route registrations and other initialization tasks.
+* **DotvvmStartup.cs** - a DotVVM configuration file.
 
-* **web.config** - good old ASP.NET configuration file.
-
-
-_The dotvvm.json file contains security keys that are used to protect viewmodels on the client side. 
-Please do not copy security keys from one project to another. If you lose or compromise them, 
-run `Generate-DotVVMSecurityKeys` in the Package Manager Console to generate a new pair._
-
-
+* **web.config** - a configuration file for ASP.NET and IIS.
 
 ## Views and ViewModels Folders
 
-Some people prefer to separate views and viewmodels in the **Views** and **ViewModels** folders. 
+Most people prefer to separate views and viewmodels in the **Views** and **ViewModels** folders. 
 Also, there is a naming convention, that the file **default.dothtml** corresponds to the **DefaultViewModel** class.
 
-However, if you don't like these conventions, feel free to create your own!
+If you install the [DotVVM for Visual Studio 2015](/download/vsix_free), you can use the **F7** key to transition from 
+your view to your viewmodel and **Shift-F7** back to your view.

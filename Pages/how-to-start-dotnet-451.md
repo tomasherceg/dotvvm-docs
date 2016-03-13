@@ -5,6 +5,6 @@ Creating a new **DotVVM** project is really simple. First, download and install 
 After the installation completes, just run the **Visual Studio 2015** and click the **Start New Project** link.
 You should see the **ASP.NET DotVVM Project** in the **Web** category.
 
-<img src="/Views/Docs/Pages/how-to-start-dotnet-451_img1.png" alt="Creating a new ASP.NET DotVVM Project" />
+<img src="{imageDir}/how-to-start-dotnet-451_img1.png" alt="Creating a new ASP.NET DotVVM Project" />
 
 
