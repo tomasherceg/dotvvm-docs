@@ -8,7 +8,7 @@
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="basics" PageName="Basics">
 		<DocPageMenuItem RouteName="project-structure" PageName="DotVVM Project Contents" />
-		<DocPageMenuItem RouteName="first-page" PageName="Creating the First Page" />
+        <DocPageMenuItem RouteName="first-page" PageName="Creating the First Page" />
 		<DocPageMenuItem RouteName="routing" PageName="Routing" />
 		<DocPageMenuItem RouteName="master-pages" PageName="Master Pages" />
 		<DocPageMenuItem RouteName="binding-syntax" PageName="Binding Syntax" />
@@ -21,6 +21,7 @@
         <DocPageMenuItem RouteName="request-context" PageName="Request Context" />
 		<DocPageMenuItem RouteName="viewmodel-protection" PageName="ViewModel Protection" />
 		<DocPageMenuItem RouteName="built-in-controls" PageName="Built-in Controls" />
+        <DocPageMenuItem RouteName="configuration" PageName="Configuration" />
 		<DocPageMenuItem RouteName="validation" PageName="Validation" />
 		<DocPageMenuItem RouteName="globalization" PageName="Globalization" />
 		<DocPageMenuItem RouteName="javascript-and-css" PageName="Javascript and CSS Resource Management" />
