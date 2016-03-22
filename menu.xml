@@ -18,6 +18,7 @@
 		<DocPageMenuItem RouteName="resource-binding" PageName="Resource Binding" />
 		<DocPageMenuItem RouteName="binding-context" PageName="Binding Context" />
 		<DocPageMenuItem RouteName="viewmodels" PageName="ViewModels" />
+        <DocPageMenuItem RouteName="request-context" PageName="Request Context" />
 		<DocPageMenuItem RouteName="viewmodel-protection" PageName="ViewModel Protection" />
 		<DocPageMenuItem RouteName="built-in-controls" PageName="Built-in Controls" />
 		<DocPageMenuItem RouteName="validation" PageName="Validation" />
@@ -37,6 +38,7 @@
 		<DocPageMenuItem RouteName="testing-viewmodels" PageName="Testing ViewModels" />
         <DocPageMenuItem RouteName="custom-presenters" PageName="Custom Presenters" />
         <DocPageMenuItem RouteName="route-autodiscovery" PageName="Auto-Discovering Routes" />
+        <DocPageMenuItem RouteName="returning-files" PageName="Returning Files from ViewModels" />
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="control-development" PageName="Control Development">
 		<DocPageMenuItem RouteName="introduction" PageName="Introduction" />

@@ -4,4 +4,4 @@
 
 `MediaObject` inside media list will be rendered with `li` tag.
 
-NOTE: More about [MediaObject](/docs/controls/bootstrap/MediaObject).
+NOTE: More about [MediaObject](/docs/controls/bootstrap/MediaObject/{branch}).
