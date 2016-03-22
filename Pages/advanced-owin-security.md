@@ -1,7 +1,9 @@
 ## Using Owin Security for Authentication
 
-Let's see how to use OWIN Security framework. To set up the standard cookie authentication, 
-just add this snippet in the **Startup.cs** file:
+Let's see how to use the OWIN Security framework. To set up the standard cookie authentication, 
+just add this snippet in the **Startup.cs** file.
+
+>Please note that authentication middlewares should be always registered **before** DotVVM. Otherwise the authorization won't work properly.
 
 ```CSHARP
 app.UseCookieAuthentication(new CookieAuthenticationOptions()
@@ -10,9 +12,8 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions()
 });
 ```
 
-In the login page, you have to verify the user credentials and create the IIdentity
-object that represents the logged user identity.
-Then you call the `SignIn` method:
+In the login page, you have to verify the user credentials and create the `IIdentity` object that represents the logged user identity.
+Typically, you want to use `ClaimsIdentity` for this purpose. Then, you can call the `OwinContext.Authentication.SignIn` method:
 
 ```CSHARP
 using System;
@@ -66,10 +67,12 @@ public void LoginFacebook()
 }
 ```
 
-In the default configuration, the Owin Security middleware will replace the 403 status code
-with 302, which means "redirect". The problem is that the request was made by `dotvvm.postBack`
+### Handling Redirects
+
+In the default configuration, the Owin Security middleware replaces the 403 status code
+with 302, which means "redirect". The problem is, that the postback was made by `dotvvm.postBack`
 and this function uses AJAX to perform the call. If the server sends the HTTP 302, the postBack
-function is not able to detect it.
+function is not able to detect it and tries to load the destination page instead immediately.
 
 Therefore, we need to adjust the redirect request to send HTTP 200 and a JSON-serialized object
 with the URL where DotVVM should redirect. We have a handy method created just for this purpose.
@@ -82,7 +85,7 @@ app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
     ...
     Provider = new FacebookAuthenticationProvider()
     {
-        OnApplyRedirect = context => DotvvmAuthenticationHelper.ApplyRedirectResponse(context.OwinContext, context.RedirectUri),
+        OnApplyRedirect = context => DotvvmAuthenticationHelper.SetRedirectResponse(context.OwinContext, context.RedirectUri),
         ...
     }
 });
@@ -91,5 +94,17 @@ app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
 Now, the redirect to the social login page should work correctly.
 The rest of the job is the same like in ASP.NET MVC or other ASP.NET technology.
 
-The same applies for all external login providers - Google, Twitter or Microsoft Account and others.
+The same applies for all external login providers - Google, Twitter or Microsoft Account and others, even for the cookie authentication.
+
+```CSHARP
+app.UseCookieAuthentication(new CookieAuthenticationOptions()
+{
+    AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
+    LoginPath = new PathString("/login"),       // don't use ~/login here - the ~ in URLs is a DotVVM feature, OWIN security doesn't know it
+    Provider = new CookieAuthenticationProvider()
+    {
+        OnApplyRedirect = e => DotvvmAuthenticationHelper.ApplyRedirectResponse(e.OwinContext, e.RedirectUri)
+    }
+});
+```
 

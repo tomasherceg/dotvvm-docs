@@ -6,7 +6,7 @@ with the authentication.
 **DotVVM** doesn't implement any specific authentication features, however it 
 can use advantage of the common ASP.NET authentication system. The fact, whether
 the user is authenticated and in which role he is, is determined by the 
-`HttpContext.Current.User` property. It's the same as in other ASP.NET frameworks.
+`OwinContext.User` property. It's the same as in other ASP.NET frameworks.
 
 
 ### Restricting Access to ViewModels and ViewModel Methods
@@ -14,9 +14,8 @@ the user is authenticated and in which role he is, is determined by the
 **DotVVM** contains the `[Authorize]` attribute. You can apply it on the whole 
 viewmodel, or on a specific viewmodel method, which is referenced by a command binding.
 
-_Warning: Only the method referenced by a command binding will be checked for this 
-attribute. If you call another methods from the command binding target, the attribute
-on them will be ignored. Be sure to always mark the method which is called by the command binding!_
+>Only the method called directly from a command binding, and the class where that method is declared, 
+> are checked for the Authorize attribute. If you call the method from C# code, the attribute is ignored.
 
 ```CSHARP
 using System;
@@ -53,9 +52,11 @@ namespace DotvvmDemo.ViewModels
         public void DeleteUser(int id)
         {
             // Only the users with the Admin role will be able
-            // to call this method.
+            // to call this method from the command binding.
         }
     }
 }
 ```
 
+If you use the `Microsoft.Owin.Security` package for the authentication, you should read 
+[Using OWIN Security for Authentication](/docs/tutorials/advanced-owin-security/{branch}) chapter. 

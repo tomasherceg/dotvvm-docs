@@ -43,7 +43,9 @@
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="control-development" PageName="Control Development">
 		<DocPageMenuItem RouteName="introduction" PageName="Introduction" />
-		<DocPageMenuItem RouteName="markup-controls" PageName="Markup Controls" />
+		<DocPageMenuItem RouteName="markup-only-controls" PageName="Markup-only Controls" />
+        <DocPageMenuItem RouteName="markup-control-registration" PageName="Markup Control Registration" />
+        <DocPageMenuItem RouteName="markup-controls-with-code" PageName="Markup Controls With Code" />
 		<DocPageMenuItem RouteName="code-only-controls" PageName="Code-only Controls" />
 		<DocPageMenuItem RouteName="interactivity" PageName="Adding Interactivity Using Custom Knockout Binding Handlers" />
 		<DocPageMenuItem RouteName="creating-custom-postback-handlers" PageName="Creating Custom Postback Handlers" />

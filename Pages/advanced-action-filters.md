@@ -7,13 +7,13 @@ You might need to do global exception handling and logging, or you just need to 
 `ModelState.IsValid` on each postback.
 
 In **DotVVM**, we have a concept of filters for this purpose. If you know Action Filters
-in ASP.NET MVC or ASP.NET Web API, it is very similar.
+in ASP.NET MVC or ASP.NET Web API, it is the same concept.
 
 
 ### Action Filters
 
 If you want to apply a common logic to one or more viewmodels, viewmodel commands or 
-a whole app, you have to create a class that derives from `ActionFilterAttribute`.
+a whole application, you have to create a class that derives from `ActionFilterAttribute`.
 
 You have 4 methods you can override in this class:
 
@@ -34,7 +34,7 @@ and the response is rendered.
 ### Model Validation using Filters
 
 If you want to perform the model validation before every command, it is not difficult.
-**DotVVM** already include such filter. Here you can see how it is implemented:
+**DotVVM** already include such filter and includes it for all requests by default, but here is how it's implemented:
 
 ```CSHARP
 using System;
@@ -74,9 +74,10 @@ namespace DotVVM.Framework.Runtime.Filters
 }
 ```
 
-In the OnCommandExecuting method we have to check whether the ValidationTargetPath is set. If not, then
+In the `OnCommandExecuting` method we have to check whether the `ValidationTargetPath` is set or not. If not, then
 the validation was disabled on the control which fired the postback.
 
-Then, we perform the validation and call FailOnInvalidModelState, which throws an exception and return
-the model errors to the client. **DotVVM** will handle such response and display the validation errors
-in the page.
+We need to perform the validation and call `FailOnInvalidModelState`, which throws an exception and return
+the model errors to the client, if there are any. If the viewmodel is valid, it doesn't do anything.
+
+**DotVVM** serializes the validation errors and displays the validation errors in the page.
