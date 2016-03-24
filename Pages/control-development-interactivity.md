@@ -145,7 +145,7 @@ protected override void OnPreRenderComplete(IDotvvmRequestContext context)
 }
 ```
 
-> Now you should be able to wrap any control to be used in DotVVM. As a homework, you can try to wrap your favorite WYSIWYG editor. It's not that difficult.
+> Now you should be able to wrap any control to be used in DotVVM.
 
 
 
