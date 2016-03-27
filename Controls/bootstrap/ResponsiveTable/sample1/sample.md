@@ -1,3 +1,3 @@
 ### Sample 1: Basic ResponsiveTable
 
-To create responsive table it must be inserted inside `bs:ResponsiveTable` element.
+To create responsive table place table inside the control.

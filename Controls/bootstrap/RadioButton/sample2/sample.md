@@ -1,5 +1,5 @@
-### Sample 2: RadioButton with changed type.
-**TYPE PROPERTY CAN BE USED ONLY IF RADIOBUTTON IS PLACED INSIDE ```ButtonGroup``` CONTROL!**
+### Sample 2: RadioButton Types and ButtonGroups
 
-By changing **BootstrapColor** property ```Type``` you can change color of the RadioButton.  
-Available **BootstrapColor**s are: *Default*, *Primary*, *Success*, *Info*, *Warning* and *Danger* .
+**TYPE PROPERTY CAN BE USED ONLY IF RADIOBUTTON IS PLACED INSIDE [ButtonGroup](/docs/controls/bootstrap/ButtonGroup). CONTROL!**
+
+By changing `BootstrapColor` property `Type` you can change color of the RadioButton.  

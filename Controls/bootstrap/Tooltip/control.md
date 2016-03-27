@@ -1,1 +1,3 @@
-Displays small pop-up box that appears when user moves mouse pointer over element.
+Adds Bootstrap Tooltip to inner element or control.
+
+<http://getbootstrap.com/javascript/#tooltips>

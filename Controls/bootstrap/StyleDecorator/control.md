@@ -1,1 +1,1 @@
-Renders inner element with styles.
+Decorates inner elements with properties or/and Bootstrap classes.
