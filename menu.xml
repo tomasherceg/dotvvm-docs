@@ -50,6 +50,10 @@
 		<DocPageMenuItem RouteName="interactivity" PageName="Adding Interactivity Using Custom Knockout Binding Handlers" />
 		<DocPageMenuItem RouteName="creating-custom-postback-handlers" PageName="Creating Custom Postback Handlers" />
 	</DocPageMenuItem>
+	<DocPageMenuItem RouteName="commercial" PageName="Commercial Products">
+		<DocPageMenuItem RouteName="dotvvm-private-nuget-feed" PageName="DotVVM Private Nuget Feed" />
+		<DocPageMenuItem RouteName="bootstrap-for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
+	</DocPageMenuItem>
 	<DocControlCategories />
 	<DocStaticMenuItem RouteName="DocSamples" PageName="Samples" />
 	<DocStaticMenuItem RouteName="DocVideos" PageName="Videos" />
