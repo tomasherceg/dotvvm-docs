@@ -2,7 +2,7 @@
 
 The `Text` property specified the text on the button. Alternatively, you can use the `ButtonTemplate` property.
 
-The `Style` property can specify whether the menu drops up or down.
+The `Type` property can specify whether the menu drops up or down.
 
 The `IsCollapsed` property indicates whether the menu is open or not. You can also use it in data-binding.
 
