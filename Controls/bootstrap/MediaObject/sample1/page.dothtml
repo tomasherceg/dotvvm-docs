@@ -1,2 +1,2 @@
-﻿<bs:MediaObject ImageUrl="/Views/Docs/Controls/bootstrap/Media/Avatar.jpg"  Header="Basic Image" Description="Simple Description"/>
+﻿<bs:MediaObject ImageUrl="~/Images/person.png"  Header="Basic Image" Description="Simple Description"/>
 
