@@ -1,4 +1,4 @@
-﻿<dot:Button Text="Open modal" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal" />
+﻿<bs:Button Text="Open modal" Type="Primary" Size="Large" data-toggle="modal" data-target="#modal" />
 
 <bs:ModalDialog HeaderText="Simple Modal" ID="modal">
   <HeaderTemplate>
