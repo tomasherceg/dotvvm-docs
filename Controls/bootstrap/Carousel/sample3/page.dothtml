@@ -1,26 +1,31 @@
-<bs:Carousel>
-  <SlidesTemplate>
+<div style="height: 428px; width: 640px;">
+
+
+    <bs:Carousel>
+    <SlidesTemplate>
+        
+        <bs:CarouselItem IsActive="true">
+        <bs:Image ImageUrl="~/Images/LA.jpg" />
+        </bs:CarouselItem>
+        
+        <bs:CarouselItem>
+        <bs:Image ImageUrl="~/Images/NY.jpg" />
+        </bs:CarouselItem>
+        
+        <bs:CarouselItem>
+        <bs:Image ImageUrl="~/Images/Miami.jpg" />
+        </bs:CarouselItem>
+        
+    </SlidesTemplate>
     
-    <bs:CarouselItem IsActive="true">
-      <bs:Image ImageUrl="~/Images/LA.jpg" />
-    </bs:CarouselItem>
+    <RightControlTemplate>
+        <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
+    </RightControlTemplate>
     
-    <bs:CarouselItem>
-      <bs:Image ImageUrl="~/Images/NY.jpg" />
-    </bs:CarouselItem>
+    <LeftControlTemplate>
+        <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>
+    </LeftControlTemplate>
     
-    <bs:CarouselItem>
-      <bs:Image ImageUrl="~/Images/Miami.jpg" />
-    </bs:CarouselItem>
-    
-  </SlidesTemplate>
-  
-  <RightControlTemplate>
-    <span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span>
-  </RightControlTemplate>
-  
-  <LeftControlTemplate>
-    <span class="glyphicon glyphicon-hand-left" aria-hidden="true"></span>
-  </LeftControlTemplate>
-  
-</bs:Carousel>
+    </bs:Carousel>
+
+</div>
