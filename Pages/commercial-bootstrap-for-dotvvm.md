@@ -40,8 +40,8 @@ Install-Package Bootstrap
 **Option 3**:  If you have these files elsewhere, you can change the URLs where DotVVM looks for these files in the `DotvvmStartup.cs` file:
 
 ```CSHARP
-config.Resources.FindResource("bootstrap").Url = "your bootstrap.min.js URL";
-config.Resources.FindResource("bootstrap-css").Url = "your bootstrap.min.js URL";
+config.Resources.FindResource("bootstrap").Url = "your bootstrap.min.js URL";   // the URL should start with ~/
+config.Resources.FindResource("bootstrap-css").Url = "your bootstrap.min.css URL";   // the URL should start with ~/
 ```
 
 **Option 4**:  If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell DotVVM that it should not render the default bootstrap resources. Add this in the master page:
