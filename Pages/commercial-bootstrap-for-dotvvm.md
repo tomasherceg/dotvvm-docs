@@ -26,25 +26,25 @@ The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) package doesn't includ
 
 You have the following options:
 
-1. If you don't have Bootstrap installed in your project, install the `Bootstrap` package from the official Nuget feed.
+**Option 1**: If you don't have Bootstrap installed in your project, install the `Bootstrap` package from the official Nuget feed.
 
 ```
 Install-Package Bootstrap
 ```
 
-2. If you already use Bootstrap in your project, make sure the JS and CSS files of Bootstrap are on the following paths:
+**Option 2**:  If you already use Bootstrap in your project, make sure the JS and CSS files of Bootstrap are on the following paths:
 
 * `/Content/bootstrap.min.css`
 * `/Scripts/bootstrap.min.js`
 
-3. If you have these files elsewhere, you can change the URLs where DotVVM looks for these files in the `DotvvmStartup.cs` file:
+**Option 3**:  If you have these files elsewhere, you can change the URLs where DotVVM looks for these files in the `DotvvmStartup.cs` file:
 
 ```CSHARP
 config.Resources.FindResource("bootstrap").Url = "your bootstrap.min.js URL";
 config.Resources.FindResource("bootstrap-css").Url = "your bootstrap.min.js URL";
 ```
 
-4. If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell DotVVM that it should not render the default bootstrap resources. Add this in the master page:
+**Option 4**:  If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell DotVVM that it should not render the default bootstrap resources. Add this in the master page:
 
 ```CSHARP
 resources.Register("jquery", new NullResource());
