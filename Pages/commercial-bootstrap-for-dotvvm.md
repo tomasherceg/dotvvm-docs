@@ -47,9 +47,9 @@ config.Resources.FindResource("bootstrap-css").Url = "your bootstrap.min.css URL
 **Option 4**:  If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell DotVVM that it should not render the default bootstrap resources. Add this in the master page:
 
 ```CSHARP
-resources.Register("jquery", new NullResource());
-resources.Register("bootstrap", new NullResource());
-resources.Register("bootstrap-css", new NullResource());
+config.Resources.Register("jquery", new NullResource(), true);
+config.Resources.Register("bootstrap", new NullResource(), true);
+config.Resources.Register("bootstrap-css", new NullResource(), true);
 ```
 
 In the last method, DotVVM will assume that you have already loaded these resources yourself and it won't care about them. If any control requires them, DotVVM won't render the script and style elements because the resource has already been included in the page.
