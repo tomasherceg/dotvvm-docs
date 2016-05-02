@@ -2,7 +2,7 @@
 
 **DotVVM** supports single page applications (SPA) with minimum effort. It integrates with master pages concept pretty well and 
 the only thing you have to do is to replace `<dot:ContentPlaceHolder>` with `<dot:SpaContentPlaceHolder>`. The content pages will 
-load asynchronously and the current URL will be kept in the URL hash (e.g. http://myapp.local/#ContentPage1).
+load asynchronously and the current URL will be kept in the URL hash (e.g. http://myapp.local/#/ContentPage1).
 
 To be able to navigate in the SPA, you have to use the `<dot:RouteLink>` control. It renders a hyperlink that can load another 
 page in the SPA container and works well with URL routing.
@@ -10,7 +10,7 @@ page in the SPA container and works well with URL routing.
 Consider following route registrations in the `Startup.cs` file:
 ```CSHARP
 
-dotvvmConfiguration.RouteTable.Add("ArticleDetail", "Article/{Id}/{Title}", "article.dothtml");;
+dotvvmConfiguration.RouteTable.Add("ArticleDetail", "Article/{Id}/{Title}", "article.dothtml");
 ```
 
 The RouteLink control is used this way:
