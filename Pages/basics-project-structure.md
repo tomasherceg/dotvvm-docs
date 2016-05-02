@@ -19,5 +19,5 @@ After you [create a new DotVVM project](/docs/tutorials/how-to-start-dotnet-451/
 Most people prefer to separate views and viewmodels in the **Views** and **ViewModels** folders. 
 Also, there is a naming convention, that the file **default.dothtml** corresponds to the **DefaultViewModel** class.
 
-If you install the [DotVVM for Visual Studio 2015](/download/vsix_free), you can use the **F7** key to transition from 
+If you install the [DotVVM for Visual Studio 2015](https://www.dotvvm.com/landing/dotvvm-for-visual-studio-extension), you can use the **F7** key to transition from 
 your view to your viewmodel and **Shift-F7** back to your view.

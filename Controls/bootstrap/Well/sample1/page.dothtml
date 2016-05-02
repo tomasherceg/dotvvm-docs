@@ -1,0 +1,11 @@
+﻿<bs:Well>
+  Content of the well.
+</bs:Well>
+
+<bs:Well Type="Small">
+  Small well.
+</bs:Well>
+
+<bs:Well Type="Large">
+  Large well.
+</bs:Well>

@@ -1,7 +1,3 @@
-### Sample 3: Changed Event
+### Sample 4: TextBox Enabled with CheckBox
 
-By default, if you type something in the TextBox, the value will be propagated in the viewmodel when the TextBox loses its focus.
-However, sometimes you need to update the TextBox immediately. Therefore, the TextBox also has the `UpdateTextAfterKeydown` which 
-will propagate the value in the viewmodel after each key press.
-
-The `Changed` event is triggered when the value of the control changes.
+`TextBox` has `Enabled` property for setting if `TextBox` input is enabled. You can bind and switch it for example with [CheckBox](../docs/controls/builtin/CheckBox).

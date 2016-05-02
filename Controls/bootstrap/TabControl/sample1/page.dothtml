@@ -6,7 +6,7 @@
     </ContentTemplate>
   </bs:TabItem>
 
-  <bs:TabItem IsActive="true" >
+  <bs:TabItem>
     <HeaderTemplate>Tab 2</HeaderTemplate>
     <ContentTemplate>
       <p>Second tab</p>

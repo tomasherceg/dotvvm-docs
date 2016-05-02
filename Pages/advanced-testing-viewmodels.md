@@ -1,10 +1,10 @@
 ## Testing ViewModels
 
 Viewmodels can be easily tested. In your test, just create an instance
-of the viewmodel, set the property values, and verify that the results 
+of the viewmodel, set the property values, call a method and verify that the results 
 are correct.
 
-On the following sample you can see how easily the viewmodel can be tested.
+In the following example, you can see how easily the viewmodel can be tested.
 
 ```CSHARP
 [TestMethod]
@@ -23,19 +23,19 @@ public void NormalTest()
 
 ### Mocking the Context
 
-The only problem in **DotVVM** is when the viewmodel uses the **DotvvmRequestContext**. 
-We need to mock this object to provide the viewmodel correct environment for the action under test.
+The only problem in **DotVVM** is when the viewmodel uses the `DotvvmRequestContext` fratures. 
+We need to mock this object to provide all services to the tested method.
 
-There is a prepared mock class **TestDotvvmRequestContext**. You can set all properties you need
+DotVVM contains a prepared mock class `TestDotvvmRequestContext`. You can set all properties you need
 (Configuration, Route, Parameters, Query, OwinContext, ModelState, ResourceManager etc., but they are all optional).
 
-In the test, you may need to verify whether the viewmodel method has redirected to some URL, or
-whether it returned a file, failed on the model validation etc. The methods InterruptRequest, 
-Redirect, RedirectPermanent, FailOnInvalidModelState and ReturnFile throws the `DotvvmInterruptRequestException`.
-This exception includes a reason why the request was interrupted and a CustomData parameter which holds e.g. the
+In the test, you may need to verify e.g. whether the viewmodel method has redirected to some URL, or
+whether it returned a file, failed on the model validation etc. The methods `InterruptRequest`, 
+`RedirectTo*`, `RedirectPermanentTo*`, `FailOnInvalidModelState` and `ReturnFile` throw the `DotvvmInterruptRequestException`.
+This exception includes a reason why the request was interrupted and a `CustomData` parameter which holds e.g. the
 URL where the viewmodel action tried to redirect.
 
-Here is a test case that verifies the viewmodel has built the proper route.
+Here you can see a test case that verifies the viewmodel has built the proper route.
 
 ```CSHARP
 [TestMethod]

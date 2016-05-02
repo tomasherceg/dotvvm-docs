@@ -1,12 +1,12 @@
 ﻿<bs:MediaList>
 
-  <bs:MediaObject ImageUrl="http://www.adiumxtras.com/images/thumbs/dango_status_icon_set_7_19047_6248_thumb.png"
+  <bs:MediaObject ImageUrl="~/Images/person.png"
                   AlternateText="TEST">
 
     <ContentTemplate>
       <h4>Media object in list</h4>
       <p>Description in template</p>
-      <bs:MediaObject ImageUrl="http://www.adiumxtras.com/images/thumbs/dango_status_icon_set_7_19047_6248_thumb.png"
+      <bs:MediaObject ImageUrl="~/Images/person.png"
                       AlternateText="TEST">
         <ContentTemplate>
           <h4>Child</h4>
@@ -14,7 +14,7 @@
 
           <bs:MediaObject HeaderText="Nested Media Object" Description="Simple description">
             <ImageTemplate>
-              <iframe width="420" height="315" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" frameborder="0" allowfullscreen=""></iframe>
+              <iframe width="300" height="180" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" frameborder="0" allowfullscreen=""></iframe>
             </ImageTemplate>
           </bs:MediaObject>
 
@@ -25,7 +25,7 @@
 
   </bs:MediaObject>
 
-  <bs:MediaObject ImageUrl="http://www.adiumxtras.com/images/thumbs/dango_status_icon_set_7_19047_6248_thumb.png"
+  <bs:MediaObject ImageUrl="~/Images/person.png"
                   AlternateText="TEST" />
 
 </bs:MediaList>

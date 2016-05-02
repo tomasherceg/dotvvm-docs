@@ -1,9 +1,9 @@
 ﻿<bs:MediaList>
 
-  <bs:MediaObject ImageUrl="http://www.adiumxtras.com/images/thumbs/dango_status_icon_set_7_19047_6248_thumb.png"
-                  AlternateText="TEST"/>
+  <bs:MediaObject ImageUrl="~/Images/person.png"
+                  AlternateText="TEST" Header="Basic Image" Description="Simple Description" />
 
-  <bs:MediaObject ImageUrl="http://www.adiumxtras.com/images/thumbs/dango_status_icon_set_7_19047_6248_thumb.png"
-                  AlternateText="TEST" />
+  <bs:MediaObject ImageUrl="~/Images/person.png"
+                  AlternateText="TEST" Header="Basic Image" Description="Simple Description" />
 
 </bs:MediaList>

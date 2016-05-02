@@ -1,82 +1,77 @@
 ## Javascript and CSS Resource Management
 
-**DotVVM** has built-in mechanism for managing reasources. `DotvvmResource` is a class which represents any content that will be 
-linked in HTML output, like javascript files or CSS stylesheets. 
+**DotVVM** has built-in mechanism for managing reasources. It supports javascript files, inline javascript snippets and CSS files.
 
-The resources are named and stored in a global repository inside the `DotvvmConfiguation` object. 
-Resources can also declare their dependencies that will be automatically resolved.
-So if you include a library which has several dependent resources, DotVVM will include all of them and in the correct order.
+The resources are named and stored in a global repository in [DotVVM configuration](/docs/tutorials/basics-configuration/{branch}). 
+
+Each resources can also specify its dependencies. Thanks to this, DotVVM can include all required resources in the page in correct order.
 
 
 ### Resource Repository
 
 All resources are registered in resource respository found in the `DotvvmConfiguration.Resources` collection. 
-You can register new resource using `Register` method. Typically, you want to do this in the `Startup.cs` file.
+You can register new resource using `Register` method, or you can replace existing resource with your own one. Typically, you want to
+do this in the `DotvvmStartup.cs` file.
 
 ```CSHARP
-configuration.Resources.Register("bootstrap-css", new StyleResource()
+config.Resources.Register("bootstrap-css", new StyleResource()
 {
     Url = "~/Content/bootstrap.min.css"
 });
-configuration.Resources.Register("bootstrap", new ScriptResource()
+config.Resources.Register("bootstrap", new ScriptResource()
 {
     Url = "~/Scripts/bootstrap.min.js",
     Dependencies = new[] { "bootstrap-css", "jquery" }
 });
 ```
 
-In the code, you can retrieve the resource by its name using `FindResource` method. 
-
-You can also use `dotvvm.js` to register resources.
-
-<!-- TODO: sample -->
+In the code, you can retrieve the resource by its name using `FindResource` method.
 
 
 ### Built-in Resources
-Several built-in resources are registered and embedded in **DotVVM.Framework** library by default. 
-However, you can overwrite them by your own ones - just call the `Register` method.
+
+DotVVM already includes the following built-in resources. 
 
 * **dotvvm** - a fundamental set of function required by DotVVM to work correctly.
-* **dotvvm.validation** - a DotVVM validation framework.
-* **dotvvm.fileUpload** and **dotvvm.fileUpload-css** - a helper methods and styles for the FileUpload control.
+
 * **dotvvm.debug** - a helper that displays exception details from the commands.
-* **knockout** - Knockout JS 3.2.0
+
+* **dotvvm.fileUpload-css** - a CSS styles for the [FileUpload](/docs/controls/FileUpload/{branch}) control.
+
+* **knockout** - Knockout JS 3.5.0 (custom modified version)
+
 * **jquery** - jQuery 2.1.1
 
-Also, the bootstrap resource is declared, however the Bootstrap files are not included in the **DotVVM.Framework** library.
-
-* **bootstrap** - points to the `~/Scripts/bootstrap.min.js`
-* **bootstrap-css** - points to the `~/Content/bootstrap.min.css`
+* **globalize** - a modified version of the globalize.js library
 
 To support client-side number and date formats, there are also automatically generated resources:
 
-* **globalize** - a Globalize.js library
 * **globalize:en-US** - a globalization resources for en-US culture. All cultures in .NET Framework are supported, 
 however only a subset of the number and datetime formats are supported.
 
 
 ### Requesting Resources
 
-In the page, you can use a **RequiredResource** control to manually link a resource.
+In the page, you can use the [RequiredResource](/docs/controls/builtin/RequiredResource/{branch}) control to manually link a resource.
 
 ```DOTHTML
 <dot:RequiredResource Name="bootstrap" />
 ```
 
-`StyleResource`s are placed in the `head` section, the `ScriptResource`s are placed at the end of the `body` element.
+By default, the `StyleResource`s are placed in the `head` section, the `ScriptResource`s are placed at the end of the `body` element.
 
-Also, each control in the page can request resources it needs to work properly. For example, if you add the FileUpload control to the page,
-the control will call `DotvvmRequestContext.AddRequiredResource` to tell the DotVVM resource manager, that it needs some specific resource.
+Also, each control in the page can request any resources, so it can work properly. For example, if you add the [FileUpload](/docs/controls/FileUpload/{branch}) control in the page,
+the control will call `DotvvmRequestContext.AddRequiredResource` method to tell the DotVVM resource manager, that it needs some specific resource.
 
 When the page is about to be rendered, DotVVM resource manager will get all required resources, sort them to satisfy the dependency constraints, 
-and renders them into the HTML.
+and render them into the HTML.
 
 
 ### Resource Options
 
-All resources have the main property `Url` and a collection `Dependencies` where dependent resource names are specified.
+All resources have the `Url` property and a collection `Dependencies` where dependent resource names are specified.
 
-Sometimes it may be helpful to embed the resource in some assembly. First, you have to add the file to the assembly and set its Build Action as Embedded Resource.
+Sometimes, it may be helpful to embed the resource in some assembly. First, you have to add the file to the assembly and set its Build Action as Embedded Resource.
 Then, the resource class has a property `EmbeddedResourceAssembly` - you need to put the assembly name there.
 In that case, the `Url` property will not contain the resource URL, but the embedded resource name (e.g. MyAssembly.Folder.SubFolder.FileName.js).
 

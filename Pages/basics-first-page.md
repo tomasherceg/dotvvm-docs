@@ -5,12 +5,12 @@ Every page in **DotVVM** consists of a **view** and a **viewmodel**.
 To create a page, just right-click the desired folder in the Solution Explorer window and choose **Add / New Item...**.
 In the dialog, navigate to the Web / DotVVM section and choose the **DotVVM Page** template.
 
-<img src="{imageDir}basics-first-page-img1.png" alt="Adding a new page" />
+<p><img src="{imageDir}basics-first-page-img1.png" alt="Adding a new page" /></p>
 
 After you enter the name of the page and confirm the selection, another window will appear. In this window, you can specify whether you want 
 to create a viewmodel or not, and where it should be placed.
 
-<img src="{imageDir}basics-first-page-img2.png" alt="Creating the viewmodel" />
+<p><img src="{imageDir}basics-first-page-img2.png" alt="Creating the viewmodel" /></p>
 
 After you proceed, the view and the viewmodels are added to the project. If you place your views in the **Views** folder in your project,
 the window will automatically place your viewmodel in the **ViewModels** folder.

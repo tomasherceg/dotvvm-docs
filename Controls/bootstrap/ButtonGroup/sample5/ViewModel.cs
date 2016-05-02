@@ -36,7 +36,7 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.ButtonGroup.sample5
                 new CheckBox()
                 {
                     Text="CheckBox 1",
-                    CheckedValue = "reb"
+                    CheckedValue = "red"
                 },
                 new CheckBox()
                 {

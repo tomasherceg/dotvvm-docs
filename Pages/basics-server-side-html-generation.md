@@ -1,11 +1,30 @@
 ## Server-Side HTML Generation and SEO
 
 **DotVVM** uses javascript libraries to do the job, but don't worry. It won't make your site SEO-unfriendly.
-You only have to be little careful and use server rendering.
+You only have to be little careful and use server rendering where appropriate.
+
+### Server-Side Rendering
+
+Most controls and all HTML elements can specify the `RenderSettings.Mode` property. 
+
+In the `Client` mode (default), the bindings are translated to the Knockout expressions and evaluated on the client.
+
+In the `Server` mode, all value bindings in text (e.g. `<p>{{value: Text}}</p>`), [Literal](/docs/controls/builtin/Literal/{branch})s
+and [HtmlLiteral](/docs/controls/builtin/HtmlLiteral/{branch})s are rendered directly in the HTML.  
+
+Also, the [Repeater](/docs/controls/builtin/Repeater/{branch}) and [GridView](/docs/controls/builtin/GridView/{branch}) controls will render 
+each row directly into the HTML output, not just render a template which is instantiated by the javascript code.
+
+> Even if you use Server mode for everything, the application won't be fully functional if the client has the javascript disabled. 
+> The page texts and content can be displayed without javascript if the whole page renders in the server mode. But even in the server side mode, you won't be 
+> able to do a postback without javascript enabled and many things won't work (e.g. the `Visible` property, validation etc.).
+
+
 
 ### PostBack.Update property
-Do you know `<asp:UpdatePanel>` control is ASP.NET WebForms? It allowed to replace part of the page with another content on postback. 
-We have something similar in DotVVM. It is not a control, it is a property you can apply to almost any element!
+
+If you render some text or table directly in the HTML, sometimes you may need to regenerate and replace the HTML code during the postback.  
+That's why we have the `PostBack.Update` property.
 
 ```DOTHTML
 <div PostBack.Update="true">
@@ -13,21 +32,5 @@ We have something similar in DotVVM. It is not a control, it is a property you c
 </div>
 ```
 
-When **PostBack.Update** is specified, the HTML code rendered by the control is sent to the client on postback and the content is 
+If the `PostBack.Update` is used, the HTML code rendered by the control is sent to the client on every postback and the content is 
 replaced in the page. You'll need to use this property when you use server-side rendering.
-
-
-### Server-Side Rendering
-Most controls allow to use the **RenderSettings.Mode** property. There are two possible values of the property - **Client** (default) and **Server**.
-
-In the **Client** mode, the bindings are translated to the Knockout expressions and all the magic is done on the client.
-
-In the **Server** mode all bindings which render the texts or attribute values, are evaluated on the server and written directly in the HTML.
-Also, the **Repeater** or **GridView** controls will render each row directly into the HTML output.
-If you want anything to be read by search engines and crawlers (e.g. you write an e-shop, blog or magazine), just enable the server rendering.
-
-
-_Please note that even if you use Server mode for everything, the application won't be fully functional then the client has the javascript disabled. 
-The page content can be displayed without javascript if the whole page renders in the server mode. But even in the server side mode, you won't be 
-able to do a postback without javascript enabled._
-

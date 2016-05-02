@@ -17,7 +17,7 @@ public class MyViewModel {
 Please note that the method must be public and should not return anything. If you plan to have an async code inside the method, it can be async and return a `Task`.
 In some cases, this helps the performance of the application because the web server can reuse waiting threads to process other requests.
 
-In the DOTHTML markup, you can use the [Button](/docs/controls/builtin/Button) control and this command binding:
+In the DOTHTML markup, you can use the [Button](/docs/controls/builtin/Button/{branch}) control and this command binding:
 
 ```DOTHTML
 <dot:Button Click="{command: Submit()}" Text="Submit Form" />
@@ -68,22 +68,22 @@ public class Task {
 This is quite a complex sample. In the viewmodel, we have a collection of tasks and a `DeleteTask` method which accepts one argument of type `int`. 
 Each `Task` object has the `Name` and `TaskId` properties.
 
-In the markup, we have used the [Repeater](/docs/controls/builtin/Repeater) control which takes items from the `Tasks` collection in the viewmodel 
+In the markup, we have used the [Repeater](/docs/controls/builtin/Repeater/{branch}) control which takes items from the `Tasks` collection in the viewmodel 
 and renders its `<ItemTemplate>` for each item in this collection.
 
 The template renders the `Name` property as a text in the page. Then, it renders a button that calls the `DeleteTask` method using the **command** binding.
 
 Notice that we use **_parent.DeleteTask**, because the `DeleteTask` method is not declared in the `Task` class, but in the `MyViewModel` class.
  
-That's because the `<dot:Repeater>` control switches the _binding context_ inside the `<ItemTemplate>`, so the bindings are evaluated on the `Task` object  
-instead of the whole viewmodel.
+That's because the `<dot:Repeater>` control switches the [binding context](/docs/tutorials/basics-binding-context/latest/{branch}). 
+All bindings in the `<ItemTemplate>` are evaluated in the context of current item from the `Tasks` collection.
  
 ### Binding Context Variables
  
 You can use the following reserved names in **command** and **value** expressions:
  
 * `_root` goes to the top-level ViewModel object.
-* `_parent` goes to the parent context.
+* `_parent` goes to the parent [binding context](/docs/tutorials/basics-binding-context/latest/{branch}).
 * `_parent{#number}` goes to the parent #number times
 * `_this` goes to the current context. It is useful only if you want to bind directly to the ViewModel object (e.g. if you want to 
 display a collection of strings, or pass current binding context to a method): `{value: _this}`

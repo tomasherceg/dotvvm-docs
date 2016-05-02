@@ -1,0 +1,12 @@
+<p>
+  <dot:TextBox Text="{value: Text}" />
+  <dot:Validator Value="{value: Text}" 
+                 ShowErrorMessageText="true"/>
+</p>
+
+<div Validator.Value="{value: Text2}"
+     Validator.SetToolTipText="true">
+  <dot:TextBox Text="{value: Text2}" />
+</div>
+
+<dot:Button Text="SEND" Click="{command: Send()}" />

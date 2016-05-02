@@ -8,10 +8,10 @@ We have two kinds of pages:
 1. The **Master Page** has the `.dotmaster` extension. It contains the whole layout of the page including the `<html>`, `<head>` and `<body>` tags.
 The master page contain one or more `<dot:ContentPlaceHolder>` controls.     
 
-2. The **Content Pages** have the `.dotcontrol` extension and contains one or more `<dot:Control>` elements with content. This content will be embedded
+2. The **Content Pages** have the `.dothtml` extension and contains one or more `<dot:Content>` elements with content. This content will be embedded
 in the corresponding `ContentPlaceHolder`s in the master page.  
 
-<img src="{imageDir}basics-master-pages-img1.png" alt="Master Page Schema" />
+<p><img src="{imageDir}basics-master-pages-img1.png" alt="Master Page Schema" /></p>
 
 If you want to use the master page, you have to add the `@masterPage` directive at the top of the file.
 
@@ -41,14 +41,14 @@ its content will be used.
 
 All you have to do is to choose **DotVVM Master Page** in the New Item dialog.
 
-<img src="{imageDir}basics-master-pages-img2.png" alt="Creating a Master Page" />
+<p><img src="{imageDir}basics-master-pages-img2.png" alt="Creating a Master Page" /></p>
 
 Next, the same window for choosing the viewmodel will appear. If you already have a base class viewmodel for the master page,
 just uncheck the _Create ViewModel_ option.
 Make sure that the master page specifies the correct viewmodel - if not, delete the directive and the IntelliSense will help you
 to pick the correct class.
 
-<img src="{imageDir}basics-master-pages-img3.png" alt="Picking the correct class" />
+<p><img src="{imageDir}basics-master-pages-img3.png" alt="Picking the correct class" /></p>
 
 Finally, write your HTML code. On a place where you need to embed something from a content page, declare a **ContentPlaceHolder**.
 
@@ -67,7 +67,7 @@ Most master pages need only one or two of them, however you can use as many `Con
 Creating the content page is very similar. Just add a new **DotVVM Page** and in the dialog window, tick the **Embed in Master Page** checkbox.
 Then, pick the correct master page.
 
-<img src="{imageDir}basics-master-pages-img4.png" alt="Embedding a page in the master page" />
+<p><img src="{imageDir}basics-master-pages-img4.png" alt="Embedding a page in the master page" /></p>
 
 The wizard will generate the **Content** controls automatically based on **ContentPlaceHolders** present in the selected master page.
 

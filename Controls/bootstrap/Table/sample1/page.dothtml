@@ -1,4 +1,4 @@
-﻿<bs:Table Style="Default">
+﻿<bs:Table Type="Default">
   <thead>
     <tr>
       <th>1</th>
@@ -29,18 +29,126 @@
   </tbody>
 </bs:Table>
 
-<bs:Table Style="Bordered">
-  ...
+<bs:Table Type="Bordered">
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td>Sit</td>
+    </tr>
+    <tr>
+      <td>Consectetur</td>
+      <td>Adipiscing</td>
+      <td>Elit</td>
+      <td>Vivamus</td>
+    </tr>
+    <tr>
+      <td>Vaucibus</td>
+      <td>Leo</td>
+      <td>Non</td>
+      <td>Dignissim</td>
+    </tr>
+  </tbody>
 </bs:Table>
 
-<bs:Table Style="Condensed">
-  ...
+<bs:Table Type="Condensed">
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td>Sit</td>
+    </tr>
+    <tr>
+      <td>Consectetur</td>
+      <td>Adipiscing</td>
+      <td>Elit</td>
+      <td>Vivamus</td>
+    </tr>
+    <tr>
+      <td>Vaucibus</td>
+      <td>Leo</td>
+      <td>Non</td>
+      <td>Dignissim</td>
+    </tr>
+  </tbody>
 </bs:Table>
 
-<bs:Table Style="Hover">
-  ...
+<bs:Table Type="Hover">
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td>Sit</td>
+    </tr>
+    <tr>
+      <td>Consectetur</td>
+      <td>Adipiscing</td>
+      <td>Elit</td>
+      <td>Vivamus</td>
+    </tr>
+    <tr>
+      <td>Vaucibus</td>
+      <td>Leo</td>
+      <td>Non</td>
+      <td>Dignissim</td>
+    </tr>
+  </tbody>
 </bs:Table>
 
-<bs:Table Style="Striped">
-  ...
+<bs:Table Type="Striped">
+  <thead>
+    <tr>
+      <th>1</th>
+      <th>2</th>
+      <th>3</th>
+      <th>4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td>Sit</td>
+    </tr>
+    <tr>
+      <td>Consectetur</td>
+      <td>Adipiscing</td>
+      <td>Elit</td>
+      <td>Vivamus</td>
+    </tr>
+    <tr>
+      <td>Vaucibus</td>
+      <td>Leo</td>
+      <td>Non</td>
+      <td>Dignissim</td>
+    </tr>
+  </tbody>
 </bs:Table>

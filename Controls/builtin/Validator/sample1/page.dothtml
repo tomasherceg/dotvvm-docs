@@ -1,0 +1,5 @@
+<p>
+  <dot:TextBox Text="{value: Text}" />
+  <dot:Validator Value="{value: Text}">This field is requied!</dot:Validator>
+</p>
+<dot:Button Text="SEND" Click="{command: Send()}" />
