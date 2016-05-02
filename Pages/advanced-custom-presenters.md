@@ -25,11 +25,11 @@ The main advantage of custom presenter over OWIN middleware is that you can use 
             
             // generate RSS feed
             var items = articles
-                .Select(c =>
+                .Select(a =>
                 {
                     var item = new SyndicationItem(a.Title, a.Description, a.Url)
                     {
-                        PublishDate = c.BeginDate
+                        PublishDate = a.BeginDate
                     };
                     item.Authors.Add(new SyndicationPerson() { Name = a.AuthorName });
                     return item;
