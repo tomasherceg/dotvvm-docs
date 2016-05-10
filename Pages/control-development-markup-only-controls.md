@@ -4,7 +4,7 @@ It is very easy to create a markup control. First, you need to create a file wit
 Put your markup inside and don't forget about `@viewModel` directive - it can be an interface or a base class,
 but the control needs to the type of its `DataContext`.
 
->Remember that neither markup controls nor master pages create an instalce of the viewmodel. They get the viewmodel from the page the user navigated to.  
+>Remember that neither markup controls nor master pages create an instace of the viewmodel. They get the viewmodel from the page the user navigated to.  
 
 If your markup control doesn't use data-binding and doesn't depend on viewmodel at all, use `@viewModel System.Object, mscorlib`.
 
@@ -41,5 +41,5 @@ In markup controls, the `@viewModel` directive can be an interface. If you use t
 However the markup control requires the `Street`, `Countries` and the `CountryId` properties because it uses them in data-bindings. That's why you have to create the `IAddress` 
 interface which contains these properties. 
 
-Then, on all places you use you markup control, the [binding context](/docs/tutorials/basics-binding-context/{branch}) must implement the `IAddress` interface. 
+Then, on all places you use your markup control, the [binding context](/docs/tutorials/basics-binding-context/{branch}) must implement the `IAddress` interface. 
 
