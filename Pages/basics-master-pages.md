@@ -8,7 +8,7 @@ We have two kinds of pages:
 1. The **Master Page** has the `.dotmaster` extension. It contains the whole layout of the page including the `<html>`, `<head>` and `<body>` tags.
 The master page contain one or more `<dot:ContentPlaceHolder>` controls.     
 
-2. The **Content Pages** have the `.dothtml` extension and contains one or more `<dot:Content>` elements with content. This content will be embedded
+2. The **Content Pages** have the `.dothtml` extension and contain one or more `<dot:Content>` elements with content. This content will be embedded
 in the corresponding `ContentPlaceHolder`s in the master page.  
 
 <p><img src="{imageDir}basics-master-pages-img1.png" alt="Master Page Schema" /></p>

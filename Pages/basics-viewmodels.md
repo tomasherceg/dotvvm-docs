@@ -10,7 +10,7 @@ The viewmodel contains the _properties_ used in the bindings and _methods_ that 
 
 + The viewmodel is a C# class that derives from `DotvvmViewModelBase`. 
 
-+ Viewmodel contains properties of a primitive types (string, int, double...), collections (List&lt;T&gt; or array) or 
++ Viewmodel contains properties of primitive types (string, int, double...), collections (List&lt;T&gt; or array) or 
 other objects that comply with this paragraph. Everything must be JSON-serializable.
 
 + The properties in viewmodel and all objects it contains, should have plain `{ get; set; }`. There should be no logic in getters, setters 
