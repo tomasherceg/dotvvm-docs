@@ -18,3 +18,8 @@ You have to do the following things to make the inline editing work:
 * If you don't want to use the default `GridViewTextColumn`, which renders a [Literal](/docs/controls/builtin/Literal/{branch}) in the read-only 
     mode and the [TextBox](/docs/controls/builtin/TextBox/{branch}) in the edit mode, use the `GridViewTemplateColumn` and use its `EditTemplate` 
     to specify how the cell will look like when in the edit mode.
+
+<br />
+
+If you use the `RowDecorators` property (see Sample 5), they are applied only to normal rows. If you need to apply a decorator to edit-mode rows,
+use the `EditRowDecorators` property. 
