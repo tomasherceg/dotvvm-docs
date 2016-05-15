@@ -22,37 +22,82 @@ This will register all Bootstrap controls under the `<bs:*` tag prefix, and it a
 
 ### Configuration
 
-The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) package doesn't include the bootstrap CSS and javascript libraries as they are too large and you might have your own compilation of Bootstrap (e.g. if you use some Bootstrap template).   
+The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) package doesn't include the bootstrap CSS and javascript libraries as they are too large and you might have 
+your own compilation of Bootstrap (e.g. if you use some Bootstrap template).   
 
-You have the following options:
+There are two ways how to work with Bootstrap resources.
 
-**Option 1**: If you don't have Bootstrap installed in your project, install the `Bootstrap` package from the official Nuget feed.
+**Option 1**: In most cases you want DotVVM to manage the resources for you. You don't need to include Bootstrap yourself in the page, you just let DotVVM do this for you.
+Use this option if you don't reference the bootstrap CSS and JS files using the `<script>` or `<link>` tags in the page.
+
+**Option 2**: Alternatively, you can turn the resource management for Bootstrap files off. This way is better e.g. if you use  some Bootstrap template which already includes 
+Bootstrap scripts or styles in the page. If you turn the resource management off, DotVVM will assume that Bootstrap is already correctly included in the page.   
+
+
+#### Option 1: Let DotVVM Include the Bootstrap Files in the Page
+
+**Step 1**: If you don't have Bootstrap scripts and styles in your project, install the `Bootstrap` package from the official Nuget feed.
 
 ```
 Install-Package Bootstrap
 ```
 
-**Option 2**:  If you already use Bootstrap in your project, make sure the JS and CSS files of Bootstrap are on the following paths:
+**Step 2**: **Bootstrap for DotVVM** assumes the Bootstrap JS and CSS files are on the following path in your project:
 
 * `/Content/bootstrap.min.css`
 * `/Scripts/bootstrap.min.js`
 
-**Option 3**:  If you have these files elsewhere, you can change the URLs where DotVVM looks for these files in the `DotvvmStartup.cs` file:
+If they are not, you can modify the default paths. In the `DotvvmStartup.cs` file, update the `AddBootstrapConfiguration` call this way::
 
 ```CSHARP
-config.Resources.FindResource("bootstrap").Url = "your bootstrap.min.js URL";   // the URL should start with ~/
-config.Resources.FindResource("bootstrap-css").Url = "your bootstrap.min.css URL";   // the URL should start with ~/
+config.AddBootstrapConfiguration(new DotvvmBootstrapOptions() 
+{
+    BootstrapCssUrl = "your path to bootstrap.css or bootstrap.min.css",
+    BootstrapJsUrl = "your path to bootstrap.js or bootstrap.min.js"
+});
 ```
 
-**Option 4**:  If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell DotVVM that it should not render the default bootstrap resources. Add this in the master page:
+Please note that **DotVVM** includes jQuery in the page automatically because it is required by Bootstrap. You can change the path to jQuery using the following code:
 
 ```CSHARP
-config.Resources.Register("jquery", new NullResource(), true);
-config.Resources.Register("bootstrap", new NullResource(), true);
-config.Resources.Register("bootstrap-css", new NullResource(), true);
+config.AddBootstrapConfiguration(new DotvvmBootstrapOptions() 
+{
+    ...
+    JQueryUrl = "your path to jquery.x.x.x.js or jquery.x.x.x.min.js"
+});
+```
+ 
+<br />
+
+#### Option 2: Include the Bootstrap Files in the Page Yourself
+
+If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell 
+DotVVM that it should not render the default bootstrap resources. Add this in the master page:
+
+```CSHARP
+config.AddBootstrapConfiguration(new DotvvmBootstrapOptions() 
+{
+    IncludeBootstrapResourcesInPage = false
+});
 ```
 
-In the last method, DotVVM will assume that you have already loaded these resources yourself and it won't care about them. If any control requires them, DotVVM won't render the script and style elements because the resource has already been included in the page.
+Optionally, you can also tell DotVVM not to include jQuery. 
+
+```CSHARP
+config.AddBootstrapConfiguration(new DotvvmBootstrapOptions() 
+{
+    IncludeJQueryResourceInPage = false
+});
+```
+
+<br />
+
+#### Is It OK?
+
+To verify that Bootstrap resources are included correctly, press F12 in your web browser. Verify that bootstrap.css or bootstrap.js is not loaded twice, and there are 
+no errors in the developer console, especially some messages which say that some Bootstrap-related resource could not be found.
+
+
 
 <br />
 
