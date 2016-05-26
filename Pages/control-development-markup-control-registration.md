@@ -5,11 +5,11 @@ You need to register the markup control in `DotvvmStartup.cs` file, before you c
 The registration of a markup control looks like this:
 
 ```CSHARP
-config.Add(new DotvvmControlConfiguration() 
+config.Markup.Controls.Add(new DotvvmControlConfiguration() 
 { 
     TagPrefix = "cc",
     TagName = "AddressEditor",
-    Src = "~/Controls/AddressEditor.dotcontrol"
+    Src = "Controls/AddressEditor.dotcontrol"
 });
 ```
 

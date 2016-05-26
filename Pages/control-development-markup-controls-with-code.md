@@ -95,30 +95,25 @@ The `controlProperty` only propagates the value or a binding which was set to th
 
 Now let's add a button which will fill the fields in the `AddressEditor` with the address the user had on his last order.
 Yes, we could put this function to the viewmodel, however in that case the `IAddress` interface could be implemented by many
-classes and we would have to add the implementation of `FillLastAddress` to all those classes.
+classes and we would have to add the implementation of `ClearAddress` to all those classes.
 
 Instead, we can use the `controlCommand` binding and implement this logic in our control. Add this to the markup control:
 
 ```DOTHTML
-<dot:Button Text="Fill Last Address" Click="{controlCommand: FillLastAddress()}" />
+<dot:Button Text="Clear Address" Click="{controlCommand: ClearAddress()}" />
 ````
 
 And then, add this method to the `AddressEditor` class:
 
 ```CSHARP
-public void FillLastAddress() 
+public void ClearAddress() 
 {
-    var address = ... // retrieve data from the database
-    
     var target = (IAddress)DataContext;
-    target.Street = address.Street;
-    target.City = address.City;
+    target.Street = "";
+    target.City = "";
     ...
 }
 ```
-
-_Caution: This is only a sample. In you app, maybe it would be wiser to implement this logic in the viewmodel. It's up to you
-to decide what's appropriate and choose the best solution. This is only a demonstration of possibilities of markup controls._
 
 
 ### Updating the ViewModel Properties
@@ -143,6 +138,6 @@ public void Up()
 }
 ```
 
-Notice that we are changing a value of a property which has a data-binding in the page. DotVVM can update the value in the viewmodel because
-because the `Value` is not a standard property. Ot is a DotVVM property and in the setter it calls the `SetValue` function. This function checks
-the value and if it is a binding, it will try to update the corresponding property in the viewmodel.
+Notice that we are changing a value of a property which has a data-binding in the page. DotVVM can update the value in the viewmodel 
+because the `Value` is not a standard property. It is a DotVVM property and in the setter it calls the `SetValue` function. This function checks
+the value and if finds a binding there, it tries to update the corresponding property in the viewmodel.
