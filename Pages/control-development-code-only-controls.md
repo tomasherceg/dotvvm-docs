@@ -85,7 +85,7 @@ Let's continue with the **TextBox** class. We don't want to render begin and end
 cannot specify any children, so we should override the **RenderContents** method to not render anything.
 
 ```CSHARP
-protected override void RenderBeginTag(IHtmlWriter writer, RenderContext context)
+protected override void RenderBeginTag(IHtmlWriter writer, IDotvvmRequestContext context)
 {   
     // TagName contains the value passed to the base constructor. 
     // We don't want to call base.RenderBeginTag here because it would render the begin tag and then the closing tag.
@@ -94,12 +94,12 @@ protected override void RenderBeginTag(IHtmlWriter writer, RenderContext context
     writer.RenderSelfClosingTag(TagName); 
 }
 
-protected override void RenderContents(IHtmlWriter writer, RenderContext context)
+protected override void RenderContents(IHtmlWriter writer, IDotvvmRequestContext context)
 {   
     // do nothing, textbox cannot contain anything
 }
 
-protected override void RenderEndTag(IHtmlWriter writer, RenderContext context)
+protected override void RenderEndTag(IHtmlWriter writer, IDotvvmRequestContext context)
 {    
     // do nothing, we have already rendered the self-closing tag
 }
@@ -139,7 +139,7 @@ In the first case, we need to render `data-bind="value: FirstName"`, in the seco
 We can solve this by simple if:
 
 ```CSHARP
-protected override void AddAttributesToRender(IHtmlWriter writer, RenderContext context)
+protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequestContext context)
 {
 	var textBinding = GetValueBinding(TextProperty);
     if (textBinding != null) 
@@ -166,7 +166,7 @@ It is a function which is called when the specified property doesn't contain a b
 So we could simplify the function above like this:
 
 ```CSHARP
-protected override void AddAttributesToRender(IHtmlWriter writer, RenderContext context)
+protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequestContext context)
 {
 	writer.AddKnockoutDataBind("value", this, TextProperty, () => {
 		writer.AddAttribute("value", Text);
