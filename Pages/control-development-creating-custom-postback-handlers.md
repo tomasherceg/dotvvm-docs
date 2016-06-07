@@ -61,15 +61,17 @@ You can register a postback handler to be used on the client side using this cod
 dotvvm.events.init.subscribe(function () {
     dotvvm.postBackHandlers["confirm"] = function ConfirmPostBackHandler(options) {
 
-		var message = options.message; // you'll get the parameters passed to the handler in the options object
-
-	    this.execute = function(callback) {
-		    // do whathever you need and if you need to do the postback, invoke the 'callback()' function
-		    if (confirm(message)) {
-			    callback();
-			}
-		};
+	var message = options.message; // you'll get the parameters passed to the handler in the options object
+	
+	return {
+	    execute: function(callback) {
+	    	// do whathever you need and if you need to do the postback, invoke the 'callback()' function
+	    	if (confirm(message)) {
+	    	    callback();
+		}
+	    }
 	};
+    };
 });
 ```
 
