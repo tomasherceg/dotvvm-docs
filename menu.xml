@@ -51,7 +51,7 @@
 		<DocPageMenuItem RouteName="creating-custom-postback-handlers" PageName="Creating Custom Postback Handlers" />
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="commercial" PageName="Commercial Products">
-		<DocPageMenuItem RouteName="dotvvm-private-nuget-feed" PageName="DotVVM Private Nuget Feed" />
+		<DocPageMenuItem RouteName="dotvvm-private-nuget-feed" PageName="DotVVM Private NuGet Feed" />
 		<DocPageMenuItem RouteName="bootstrap-for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
 		<DocPageMenuItem RouteName="troubleshooting-dotvvm-for-visual-studio" PageName="Troubleshooting DotVVM for Visual Studio" />
 	</DocPageMenuItem>

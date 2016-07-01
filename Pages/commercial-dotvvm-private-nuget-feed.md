@@ -1,27 +1,34 @@
-## DotVVM Private Nuget Feed
+## DotVVM Private NuGet Feed
 
-The commerical version of [DotVVM for Visual Studio 2015](/landing/dotvvm-for-visual-studio-extension) adds *DotVVM Private Nuget Feed* in the Visual Studio.
+The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) controls are not available on the official NuGet feed.
 
-This feed is authenticated and requires you to sign in using the same credentials you use on this website.
-The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) controls are distributed using this feed, and you can also find pre-release versions of DotVVM Core in this feed.
+Instead, we have our own private NuGet feed which contains all commercial products we have. You can also find pre-release versions of DotVVM Core in this feed.
+This feed requires authentication and it will give you only the packages you have purchased.
 
+When you install the [DotVVM for Visual Studio 2015](/landing/dotvvm-for-visual-studio-extension) and sign in, the extension will offer to install 
+the *DotVVM Private Nuget Feed* for you. 
 
-### Adding the Feed
+<br />
 
-The installer of the DotVVM extension should add this Nuget feed automatically, but if you only bought [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm), you'll have to
-add the feed yourself.
+### Adding the Feed Manually
 
-1. Choose the _Tools > Options_ menu item in the Visual Studio.
+If you don't see the **DotVVM Private NuGet Feed**, you can also use these manual steps to install it.
 
-2. Navigate to the _Nuget Package Manager > Package Sources_ and add the following feed there:
+1. Locate the `nuget.exe` tool, or [download it from the NuGet website](https://dist.nuget.org/index.html). 
+
+2. Open command line in the folder with `nuget.exe` and run this script (don't forget to fill your own credentials):
 
 ```
-https://www.dotvvm.com/nuget/v3/index.json
+nuget sources Add -Name "Dotvvm Feed" -Source "https://www.dotvvm.com/nuget/v3/index.json" -UserName "YOUR EMAIL ADDRESS" -Password "YOUR PASSWORD"
 ```
 
-3. Don't forget to click the _Update_ button.
+<br />
 
-4. Confirm the changes.
+### Troubleshooting
 
-When you first use the feed, it should ask for your credentials. Use the same credentials as you used on this website when you purchased the license. 
-The feed will display only the packages for which you own a license.
+1. If the **DotVVM for Visual Studio** fails to install the NuGet feed, make sure that you have the latest version of **NuGet Package Manager** extension
+installed. You can update it in the **Tools > Extensions and Updates** menu in Visual Studio.
+
+2. If you don't see any packages in the Dotvvm Private NuGet Feed, make sure you have [activated your license](/customer/profile).
+
+3. Some packages in the feed are still not in final version. If you want to use beta versions, make sure you have checked the **Include Prerelease** box.
