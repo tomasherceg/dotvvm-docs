@@ -1,0 +1,1 @@
+Control renders contets of `IsMemberTempplate` or `IsNotMemberTempplate` based on if user is member of specific role set or not.

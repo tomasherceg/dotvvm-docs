@@ -1,0 +1,8 @@
+<dot:RoleView Roles="admin, moderator , tester" HideNonAuthenticatedUsers="false">
+  <IsMemberTemplate>
+    <p class="result1">I am a member!</p>
+  </IsMemberTemplate>
+  <IsNotMemberTemplate>
+    <p class="result1">I am not a member!</p>
+  </IsNotMemberTemplate>
+</dot:RoleView>

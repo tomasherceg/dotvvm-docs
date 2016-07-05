@@ -1,0 +1,1 @@
+Creates different content for users that are authenticated and users that are not.

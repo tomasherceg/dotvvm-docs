@@ -1,0 +1,1 @@
+Control renders contets of `AuthenticatedTemplate` if user is authenticated or `NotAuthenticatedTempplate` if is not.
