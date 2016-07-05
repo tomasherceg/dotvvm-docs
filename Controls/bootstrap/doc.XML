@@ -19,9 +19,19 @@
             Gets or sets whether a close icon should be displayed in the top right corner of the alert.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Alert.IsDismissed">
+            <summary>
+            Gets or sets whether the alert has been dismissed by the user.
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.Alert.Type">
             <summary>
             Gets or sets the type of the alert.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Alert.Dismissed">
+            <summary>
+            Gets or sets the command that will be triggered when the alert is dismissed.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.Badge">
@@ -34,17 +44,53 @@
             Gets or sets the text inside the badge.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DotvvmBootstrapOptions.BootstrapCssUrl">
+            <summary>
+            Gets or sets the URL of the 'bootstrap.css' or 'bootstrap.min.css' file. 
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DotvvmBootstrapOptions.BootstrapJsUrl">
+            <summary>
+            Gets or sets the URL of the 'bootstrap.js' or 'bootstrap.min.js' file.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DotvvmBootstrapOptions.IncludeBootstrapResourcesInPage">
+            <summary>
+            Gets or sets a value indicating whether DotVVM should include Bootstrap javascript and CSS files in the page automatically.
+            Set this property to false if you have your own &lt;script&gt; and &lt;link&gt; elements in the page.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DotvvmBootstrapOptions.JQueryUrl">
+            <summary>
+            Gets or sets the URL of the jQuery library. This overrides the URL in the jquery DotVVM resource.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DotvvmBootstrapOptions.IncludeJQueryResourceInPage">
+            <summary>
+            Gets or sets a value indicating whether DotVVM should include the jQuery script file in the page automatically.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.LinkButton">
+            <summary>
+            Extends the builtin LinkButton control to allow applying Bootstrap CSS classes to the link.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.LinkButton.Type">
+            <summary>
+            Gets or sets the color of the button.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.LinkButton.Size">
+            <summary>
+            Gets or sets the size of the button.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.ResponsiveNavigation">
             <summary>
-            Renders a Bootstrap badge component.
+            Renders a Bootstrap badge component. BootstrapItemsControl
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.ResponsiveNavigation.IsInverted">
-            <summary>
-            Gets or sets if colors of ResponsiveNavigation are inverted.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.ResponsiveNavigation.AllowCollapsingToButton">
             <summary>
             Gets or sets if colors of ResponsiveNavigation are inverted.
             </summary>
@@ -84,14 +130,24 @@
             Gets or sets the template items that will be aligned to right.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.ResponsiveNavigation.CollapsedButtonTemplate">
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ResponsiveNavigation.CollapseButtonTemplate">
             <summary>
-            Gets or sets the template items that will be used as Collapsed button.
+            Gets or sets the template items that will be aligned to right.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.HtmlBootstrapControlBase">
+            <summary>
+            Base class for all bootstrap controls. 
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.Bootstrap.HtmlBootstrapControlBase.#ctor(System.String)">
             <summary>
             This class wraps all bootstrap controls. By using this class bootstrap resources are automaticly loaded.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.Bootstrap.HtmlBootstrapControlBase.ConcatCssClasses(System.String[])">
+            <summary>
+            Trims all classes and joins them with space.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.GridView">
@@ -159,12 +215,12 @@
             Creates the default item.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.Bootstrap.BootstrapItemsControl.RenderContents(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Runtime.RenderContext)">
+        <member name="M:DotVVM.Framework.Controls.Bootstrap.BootstrapItemsControl.RenderContents(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
             Renders the contents inside the control begin and end tags.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.Bootstrap.BootstrapItemsControl.FinalizeRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Runtime.RenderContext)">
+        <member name="M:DotVVM.Framework.Controls.Bootstrap.BootstrapItemsControl.FinalizeRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
             Called after rendering of inner elements is completed.
             </summary>
@@ -202,6 +258,36 @@
         <member name="P:DotVVM.Framework.Controls.Bootstrap.ListItem.Click">
             <summary>
             Gets or sets the command that will be triggered when the button is clicked.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ListItem.UrlSuffix">
+            <summary>
+            Gets or sets the suffix that will be appended to the generated URL.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.RouteLink">
+            <summary>
+            Extends the builtin RouteLink control to allow applying Bootstrap CSS classes to the link.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.RouteLink.Type">
+            <summary>
+            Gets or sets the color of the button.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.RouteLink.Size">
+            <summary>
+            Gets or sets the size of the button.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.StackedProgressBar">
+            <summary>
+            Renders Bootstrap Stacked Progress Bars.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.StyleDecorator">
+            <summary>
+            Decorates wrapped element.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.Breadcrumb">
@@ -249,7 +335,7 @@
             Renders a Bootstrap carousel widget.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.Animation">
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.EnableAnimation">
             <summary>
             Gets or sets whether the transitions between the slides should be animated or not.
             </summary>
@@ -257,6 +343,16 @@
         <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.AutoSlideInterval">
             <summary>
             Gets or sets interval (in seconds) of changing slides.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.RenderSideControls">
+            <summary>
+            Gets or sets whether the controls for changing the slides will be rendered.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.RenderIndicators">
+            <summary>
+            Gets or sets whether the dots indicating the current slide will be rendered.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.SlidesTemplate">
@@ -274,6 +370,26 @@
             Gets or sets the template for the "move left" control.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.IsActiveBinding">
+            <summary>
+            Gets or sets a value binding that points to a property indicating whether the item is active or not.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.ImageUrlBinding">
+            <summary>
+            Gets or sets a value binding that points to a property that contains the URL of the image.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.CaptionBinding">
+            <summary>
+            Gets or sets a value binding that points to a property that contains the image caption.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Carousel.CaptionTemplateBinding">
+            <summary>
+            Gets or sets a value binding that points to a property that contains the image caption HTML.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.CarouselItem">
             <summary>
             Represents an item inside the Carousel control.
@@ -289,19 +405,119 @@
             Gets or sets the contents of the slide caption.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.CarouselItem.Caption">
+            <summary>
+            Gets or sets the contents of the slide caption. HTML tags are allowed. If you want to use hardCoded caption use CaptionTemplate instead.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.TabControl">
+            <summary>
+            Renders Bootstrap Tabs. (nav-tabs)
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabControl.Items">
+            <summary>
+            Gets or sets list of TabItems.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabControl.HeaderTemplate">
+            <summary>
+            Gets or sets template for header of generated items from DataSource.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabControl.ContentTemplate">
+            <summary>
+            Gets or sets template for content of generated items from DataSource.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabControl.IsActiveBinding">
+            <summary>
+            Gets or sets property that represents IsActive property from objects in DataSource.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabControl.ActiveTabIndex">
+            <summary>
+            Gets or sets default active tab index. (starting with 0)
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.TabItem">
+            <summary>
+            Represents item in bootstrap TabControl.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabItem.IsActive">
+            <summary>
+            Gets or sets if tab item is active.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabItem.HeaderTemplate">
+            <summary>
+            Gets or sets template for header of the tab item.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.TabItem.ContentTemplate">
+            <summary>
+            Gets or sets template for content in tab item.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.Thumbnail">
+            <summary>
+            Renders Bootstrap Thumbnail.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.ImageUrl">
+            <summary>
+            Gets or sets image url.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.NavigateUrl">
+            <summary>
+            Gets or sets navigate url.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.Title">
+            <summary>
+            Gets or sets title.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.AlternateText">
+            <summary>
+            Gets or sets alternate text.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.Width">
+            <summary>
+            Gets or sets width.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.Height">
+            <summary>
+            Gets or sets height.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Thumbnail.CaptionTemplate">
+            <summary>
+            Gets or sets caption template.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.DropDownButton">
             <summary>
             Renders a Bootstrap dropdown button.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DropDownButton.Style">
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DropDownButton.DropDownType">
             <summary>
             Gets or sets the drop-down style of the button.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DropDownButton.Type">
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DropDownButton.ButtonType">
             <summary>
             Gets or sets the color of the button.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DropDownButton.Type">
+            <summary>
+            Gets or sets the type of the button.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.DropDownButton.Text">
@@ -326,12 +542,22 @@
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.GlyphIcon.Icon">
             <summary>
-            Gets or sets the icon to display.
+            Gets or sets the icon to display. As default this property is set to Empty.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.Bootstrap.GlyphIcon.#ctor">
+            <summary>
+            Wraps bootstrap glyphicon classes.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.InputGroup">
             <summary>
-            Renders a Bootstrap input group.
+            Renders a Bootstrap input group widget.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.InputGroup.Size">
+            <summary>
+            Gets or sets the size of the button.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.InputGroup.ContentTemplate">
@@ -398,39 +624,17 @@
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.ListGroupItem.Badge">
             <summary>
-            Gets or sets the text that will appear in the badge. If the text is empty, no badge will be displayed.
+            Gets or sets the text that appears in the badge. If the text is empty, no badge will be displayed.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.ListGroupItem.Color">
             <summary>
-            Gets or sets the color of the list item.
+            Gets or sets the color of the list item. (Based on bootstrap list group styles.)
             </summary>
         </member>
-        <member name="T:DotVVM.Framework.Controls.Bootstrap.Media">
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ListGroupItem.ItemType">
             <summary>
-            Renders the Bootstrap Media widget.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.Media.ContentTemplate">
-            <summary>
-            Gets or sets the content inside the Media object. Use this property if you don't need the default template.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.Media.MediaObject">
-            <summary>
-            Gets or sets the MediaObject control that defines the image content of the widget.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.Media.HeaderText">
-            <summary>
-            Gets or sets the header text in the default content template.
-            Do not use this property in combination with the ContentTemplate property.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.Media.Description">
-            <summary>
-            Gets or sets the description text in the default content template.
-            Do not use this property in combination with the ContentTemplate property.
+            Gets or sets item type of ListGroupItem. Default is default value, other values are Button or Link.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.MetaViewport">
@@ -440,12 +644,12 @@
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.MetaViewport.Width">
             <summary>
-            Gets or sets the width parameter value.
+            Gets or sets the width parameter value with default set to use width of mobilde device(device-width).
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.MetaViewport.InitialScale">
             <summary>
-            Gets or sets the initial-scale parameter value.
+            Gets or sets the initial-scale parameter value(initial zoom level).
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.MetaViewport.MaximumScale">
@@ -455,7 +659,7 @@
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.MetaViewport.IsUserScalable">
             <summary>
-            Gets or sets the user-scalable parameter value.
+            Gets or sets the user-scalable parameter value which controls if user can zoom in on mobile device.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.Popover.Type">
@@ -466,6 +670,36 @@
         <member name="P:DotVVM.Framework.Controls.Bootstrap.Popover.Size">
             <summary>
             Gets or sets the size of the button.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.ProgressBar">
+            <summary>
+            Renders Bootstrap progress bar.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ProgressBar.Color">
+            <summary>
+            Gets or sets contextual color.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ProgressBar.IsStriped">
+            <summary>
+            Gets or sets if progress bar is striped.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ProgressBar.IsAnimated">
+            <summary>
+            Gets or sets if progress bar is animated.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ProgressBar.Value">
+            <summary>
+            Gets or sets value of current progress.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ProgressBar.HiddenTemplate">
+            <summary>
+            Gets or sets additional hidden information of progress bar.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.RadioButton">
@@ -624,98 +858,24 @@
             Change this property if you are using a customized version of Bootstrap with different number of columns.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.SelectedDate">
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.DateTimePicker">
             <summary>
-            Gets or sets the selected date in picker.
+            Renders a DateTimePicker control which lets the user either to type the date, or select it from a calendar popup.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.InitialDate">
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.SelectedDate">
             <summary>
-            Gets or sets date which will be selected after open picker if isn't selected some date. 
-            Default initialDate is now, but you can specify some date.
+            Gets or sets the date selected in the control.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.FormatString">
             <summary>
-            Gets or sets FormatString whitch format see user in view.
-            Format can be specify as ISO-8601 (yyy-mm-dd, yyyy-mm-dd hh:ii, yyyy-mm-dd hh:ii:ss ),
-            or combination of p, P, h, hh, i, ii, s, ss, d, dd, m, mm, M, MM, yy, yyyy.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.WeekStart">
-            <summary>
-            Gets or sets the day which will be first in picker,
-            you can use enum (Sunday, Monday, ..., Saturday).
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.CultureName">
-            <summary>
-            Gets or sets the culture name wich localization picker.
-            Default is culture which use for your application.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.ShowTodayButton">
-            <summary>
-            Gets or sets the button which show today date.
-            Default this button is hidden.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.HighlightToday">
-            <summary>
-            Gets or sets highlight today date.
-            Default this hightlight isn't.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.AutoClose">
-            <summary>
-            Gets or sets auto close picker after select date.
-            Default this feature is off.
+            Gets or sets format string that will be used to display the date.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.Mode">
             <summary>
-            Gets or sets Mode for you picker, (Date, Time, Datetime).
-            Default Mode is DateTime.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.MinuteStep">
-            <summary>
-            Gets or sets minute step.
-            Default value is 5 minutes.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.DaysOfWeekDisabled">
-            <summary>
-            Gets or sets the days which cannot be selected in the picker.
-            Either use comma-separated numbers of days (0 = Sunday, 1 = Monday, ..., 6 = Saturday), 
-            or bind this property to an int[] array.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.MinDate">
-            <summary>
-            Gets or sets MinDate which is minimum date on your picker.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.MaxDate">
-            <summary>
-            Gets or sets MinDate which is maximum date on your picker.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.ShowMeridian">
-            <summary>
-            Gets or sets ShowMeridian for show AM and PM time view.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.TextBoxCssClass">
-            <summary>
-            Gets or sets TextBoxCssClass for setting class for your textbox in picker.
-            Default is form-control
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.Bootstrap.DateTimePicker.PickerPosition">
-            <summary>
-            Gets or sets PickerPosition.
-            Default value is BottomRight. Other value which you can set is BottomLeft
+            Gets or sets whether you want the user to pick only date, only time, or both date and time.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.Form">
@@ -808,6 +968,11 @@
             Gets or sets the tool tip text of the image.
             </summary>
         </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.Jumbotron">
+            <summary>
+            Renders the Bootstrap jumbotron widget.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.Localization">
             <summary>
               A strongly-typed resource class, for looking up localized strings, etc.
@@ -879,6 +1044,93 @@
             Gets or sets the height of the image.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.MediaObject.ContentTemplate">
+            <summary>
+            Gets or sets the content inside the Media object. Use this property if you don't need the default template.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.MediaObject.HeaderText">
+            <summary>
+            Gets or sets the header text in the default content template.
+            Do not use this property in combination with the ContentTemplate property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.MediaObject.Description">
+            <summary>
+            Gets or sets the description text in the default content template.
+            Do not use this property in combination with the ContentTemplate property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.MediaObject.ImageTemplate">
+            <summary>
+            Gets or sets custom content instead of image.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.MediaObject.UrlSuffix">
+            <summary>
+            Gets or sets the suffix that will be appended to the generated URL.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.ModalDialog">
+            <summary>
+            Renders bootstrap modal.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ModalDialog.IsDisplayed">
+            <summary>
+            Gets or Sets IsDisplayed parameter.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ModalDialog.HeaderText">
+            <summary>
+            Gets or Sets header text parameter. Text is displayed with modal-title class.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Controls.Bootstrap.ModalDialog.HeaderTextProperty">
+            <summary>
+            Gets or Sets template for main part of modal dialog.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ModalDialog.HeaderTemplate">
+            <summary>
+            Gets or Sets template for header of modal dialog.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Controls.Bootstrap.ModalDialog.HeaderTemplateProperty">
+            <summary>
+            Sets template for rendering upper part of the modal dialog.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ModalDialog.FooterTemplate">
+            <summary>
+            Gets or Sets template for footer of modal dialog.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Controls.Bootstrap.ModalDialog.FooterTemplateProperty">
+            <summary>
+            Sets template for rendering bottom part of the modal dialog.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ModalDialog.Size">
+            <summary>
+            Gets or Sets size parameter.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Controls.Bootstrap.ModalDialog.SizeProperty">
+            <summary>
+            Sets size of modal dialog.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ModalDialog.HeaderTagName">
+            <summary>
+            Sets or gets name of tag, which is render around of HeaderText.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.Bootstrap.ModalDialog.BuildHeaderText(DotVVM.Framework.Controls.HtmlGenericControl)">
+            <summary>
+            Builds header element with binding or clear text for Title.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.NavigationBar">
             <summary>
             Renders a Bootstrap Navs widget.
@@ -892,6 +1144,16 @@
         <member name="P:DotVVM.Framework.Controls.Bootstrap.NavigationBar.IsJustified">
             <summary>
             Gets or sets whether the items should be justified to fill all available space in the horizontal direction.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.Label">
+            <summary>
+            Extends the builtin Literal control and allows to appky the Bootstrap classes.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Label.Type">
+            <summary>
+            Gets or sets the Bootstrap color.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap.PageHeader">
@@ -927,6 +1189,56 @@
         <member name="P:DotVVM.Framework.Controls.Bootstrap.Panel.AdditionalContentTemplate">
             <summary>
             Gets or sets the contents of the additional content section of the panel. The additional content section has no padding and is intended to place ListGroups or similar controls inside.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.ResponsiveEmbed">
+            <summary>
+            Renders Bootstrap Responsive Embed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.ResponsiveEmbed.Type">
+            <summary>
+            Gets or sets ResponsiveEmbed type.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.ResponsiveTable">
+            <summary>
+            Renders div with Bootstrap table-responsive class.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.Table">
+            <summary>
+            Renders table with optional Bootstrap classes.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Table.Type">
+            <summary>
+            Gets or Sets table type using Bootstrap classes.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.Tooltip">
+            <summary>
+            Adds Bootstrap Tooltip to inner element or control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Tooltip.Title">
+            <summary>
+            Gets or sets title text of the tooltip.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Tooltip.Position">
+            <summary>
+            Gets or sets tooltip position.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap.Well">
+            <summary>
+            Renders Bootstrap well.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap.Well.Type">
+            <summary>
+            Gets or sets type of the well.
             </summary>
         </member>
     </members>
