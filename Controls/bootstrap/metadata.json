@@ -64,7 +64,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Text",
@@ -155,6 +155,21 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -208,7 +223,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -254,6 +269,195 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      }
+    ]
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap",
+    "Name": "LinkButton",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": null,
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "ButtonBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "ButtonBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": ""
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "LinkButton",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 1
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "Click",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "ButtonBase",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "Command",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "LinkButton",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "BootstrapColor",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
       }
     ]
   },
@@ -382,7 +586,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -400,6 +604,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "IsResponsivelyCollapsing",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ResponsiveNavigation",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false
+      },
+      {
         "Name": "LeftAlignedItemsTemplate",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "ResponsiveNavigation",
@@ -415,21 +634,6 @@
         "DefaultValue": null
       },
       {
-        "Name": "AllowCollapsingToButton",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
-        "DeclaringTypeName": "ResponsiveNavigation",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false
-      },
-      {
         "Name": "HeaderImageUrl",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "ResponsiveNavigation",
@@ -440,6 +644,21 @@
           "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "CollapseButtonTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ResponsiveNavigation",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
           "Required": false
         },
         "DefaultValue": null
@@ -476,21 +695,6 @@
       },
       {
         "Name": "RightAlignedItemsTemplate",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
-        "DeclaringTypeName": "ResponsiveNavigation",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ITemplate",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 2,
-          "Required": false
-        },
-        "DefaultValue": null
-      },
-      {
-        "Name": "CollapsedButtonTemplate",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "ResponsiveNavigation",
         "PropertyTypeNamespace": "DotVVM.Framework.Controls",
@@ -580,6 +784,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "NavigateUrlBinding",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "BootstrapItemsControl",
@@ -646,7 +865,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -674,6 +893,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -730,7 +964,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -773,6 +1007,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -844,7 +1093,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -884,7 +1133,7 @@
         "PropertyTypeName": "Boolean",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": true,
+          "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -974,12 +1223,42 @@
         "PropertyTypeName": "Boolean",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": true,
+          "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
         },
         "DefaultValue": false
+      },
+      {
+        "Name": "EditRowDecorators",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "GridView",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List`1",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       },
       {
         "Name": "EmptyDataTemplate",
@@ -1078,7 +1357,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -1166,6 +1445,21 @@
           "AllowBinding": true,
           "AllowHardCodedValue": false,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -1267,7 +1561,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "RouteName",
@@ -1358,6 +1652,225 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "UrlSuffix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ListItem",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      }
+    ]
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap",
+    "Name": "RouteLink",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": null,
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 1
+      },
+      {
+        "Name": "UrlSuffix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "RouteLink",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "RouteLink",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "BootstrapColor",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "RouteLink",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "RouteLink",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": ""
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "RouteLink",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "RouteName",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "RouteLink",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": true
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -1411,7 +1924,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -1439,6 +1952,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -1525,7 +2053,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "ForceHidden",
@@ -1646,6 +2174,21 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -1729,7 +2272,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -1817,6 +2360,21 @@
           "AllowBinding": true,
           "AllowHardCodedValue": false,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -1963,7 +2521,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -2024,6 +2582,21 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -2092,7 +2665,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "IsVertical",
@@ -2153,6 +2726,21 @@
           "Required": false
         },
         "DefaultValue": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -2266,7 +2854,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "ImageUrlBinding",
@@ -2417,6 +3005,21 @@
           "Required": false
         },
         "DefaultValue": true
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -2485,7 +3088,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -2546,6 +3149,21 @@
           "Required": false
         },
         "DefaultValue": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -2614,7 +3232,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -2707,6 +3325,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "IsActiveBinding",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "TabControl",
@@ -2788,7 +3421,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "HeaderTemplate",
@@ -2847,6 +3480,21 @@
           "AllowHardCodedValue": true,
           "MappingMode": 2,
           "Required": true
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
         },
         "DefaultValue": null
       }
@@ -2947,7 +3595,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "NavigateUrl",
@@ -3038,6 +3686,21 @@
           "Required": false
         },
         "DefaultValue": ""
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -3136,7 +3799,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -3304,6 +3967,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "NavigateUrlBinding",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "BootstrapItemsControl",
@@ -3400,7 +4078,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "RouteName",
@@ -3491,6 +4169,36 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "UrlSuffix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ListItem",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -3544,7 +4252,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -3572,6 +4280,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -3628,7 +4351,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -3656,6 +4379,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -3712,7 +4450,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -3740,6 +4478,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -3811,7 +4564,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -3839,6 +4592,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -3895,7 +4663,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Size",
@@ -3986,6 +4754,21 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -4039,7 +4822,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -4067,6 +4850,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -4138,7 +4936,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -4166,6 +4964,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -4267,7 +5080,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -4370,6 +5183,21 @@
           "AllowBinding": true,
           "AllowHardCodedValue": false,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -4486,7 +5314,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "RouteName",
@@ -4607,6 +5435,36 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "UrlSuffix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ListItem",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -4690,7 +5548,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Width",
@@ -4751,6 +5609,21 @@
           "Required": false
         },
         "DefaultValue": "1"
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -4849,7 +5722,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "AutoPlacement",
@@ -4922,6 +5795,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -5008,7 +5896,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "IsStriped",
@@ -5084,6 +5972,21 @@
           "Required": false
         },
         "DefaultValue": 100.0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       },
       {
         "Name": "HiddenTemplate",
@@ -5182,7 +6085,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Enabled",
@@ -5318,6 +6221,21 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -5416,7 +6334,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "IsInline",
@@ -5522,6 +6440,21 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -5590,7 +6523,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -5618,6 +6551,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -5674,7 +6622,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -5720,6 +6668,21 @@
           "Required": false
         },
         "DefaultValue": ""
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -5788,7 +6751,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -5894,6 +6857,21 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -5962,7 +6940,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "SizeLG",
@@ -6115,6 +7093,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "SizeMD",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "Column",
@@ -6196,7 +7189,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Type",
@@ -6239,6 +7232,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -6295,7 +7303,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "FormatString",
@@ -6371,6 +7379,21 @@
           "Required": false
         },
         "DefaultValue": 2
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -6469,7 +7492,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Type",
@@ -6527,6 +7550,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -6628,7 +7666,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -6671,6 +7709,21 @@
           "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -6757,7 +7810,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Height",
@@ -6848,6 +7901,21 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -6901,7 +7969,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -6929,6 +7997,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -6985,7 +8068,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -7013,6 +8096,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -7099,7 +8197,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "VerticalAlignment",
@@ -7132,6 +8230,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "Height",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "MediaObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "Description",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "MediaObject",
@@ -7150,6 +8263,21 @@
         "Name": "InnerText",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "Width",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "MediaObject",
         "PropertyTypeNamespace": "System",
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
@@ -7222,6 +8350,36 @@
         "DefaultValue": null
       },
       {
+        "Name": "UrlSuffix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "MediaObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "ImageTemplate",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "MediaObject",
@@ -7245,36 +8403,6 @@
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null
-      },
-      {
-        "Name": "Width",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
-        "DeclaringTypeName": "MediaObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null
-      },
-      {
-        "Name": "Height",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
-        "DeclaringTypeName": "MediaObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -7363,7 +8491,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "HeaderText",
@@ -7418,7 +8546,7 @@
         "PropertyTypeName": "ModalSize",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": true,
+          "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -7452,6 +8580,36 @@
           "AllowHardCodedValue": true,
           "MappingMode": 2,
           "Required": true
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "HeaderTagName",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ModalDialog",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
         },
         "DefaultValue": null
       }
@@ -7537,7 +8695,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "DataSource",
@@ -7660,6 +8818,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "NavigateUrlBinding",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "BootstrapItemsControl",
@@ -7756,7 +8929,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "RouteName",
@@ -7847,6 +9020,36 @@
           "Required": false
         },
         "DefaultValue": null
+      },
+      {
+        "Name": "UrlSuffix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "ListItem",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -7915,7 +9118,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "FormatString",
@@ -7993,6 +9196,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "ValueType",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "Literal",
@@ -8059,7 +9277,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -8087,6 +9305,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -8143,7 +9376,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "HeaderTemplate",
@@ -8236,6 +9469,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
         "Name": "AdditionalContentTemplate",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "Panel",
@@ -8302,7 +9550,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "Type",
@@ -8345,6 +9593,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -8401,7 +9664,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -8429,6 +9692,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -8485,7 +9763,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -8513,6 +9791,21 @@
           "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
           "Required": false
         },
         "DefaultValue": null
@@ -8569,7 +9862,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -8615,6 +9908,21 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -8625,6 +9933,21 @@
     "DefaultContentPropertyName": null,
     "HasHtmlAttributesCollection": true,
     "Properties": [
+      {
+        "Name": "ForceShown",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false
+      },
       {
         "Name": "Visible",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
@@ -8656,6 +9979,21 @@
         "DefaultValue": 0
       },
       {
+        "Name": "ClearFix",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false
+      },
+      {
         "Name": "DataContext",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "DotvvmBindableObject",
@@ -8683,6 +10021,36 @@
           "MappingMode": 1,
           "Required": false
         },
+        "DefaultValue": 1
+      },
+      {
+        "Name": "ForceHidden",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false
+      },
+      {
+        "Name": "TextColor",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "BootstrapContextualColor",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
         "DefaultValue": 0
       },
       {
@@ -8701,6 +10069,21 @@
         "DefaultValue": null
       },
       {
+        "Name": "BackgroundColor",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "BootstrapContextualBackgroundColor",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
+      },
+      {
         "Name": "ID",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "DotvvmControl",
@@ -8716,6 +10099,51 @@
         "DefaultValue": null
       },
       {
+        "Name": "Centered",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false
+      },
+      {
+        "Name": "Float",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "BootstrapQuickFloat",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
+      },
+      {
+        "Name": "Visibility",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "DeclaringTypeName": "StyleDecorator",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
+        "PropertyTypeName": "BootstrapVisibility",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 0
+      },
+      {
         "Name": "Title",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "Tooltip",
@@ -8729,6 +10157,21 @@
           "Required": false
         },
         "DefaultValue": ""
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   },
@@ -8782,7 +10225,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": 1
       },
       {
         "Name": "InnerText",
@@ -8828,6 +10271,21 @@
           "Required": false
         },
         "DefaultValue": 0
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null
       }
     ]
   }
