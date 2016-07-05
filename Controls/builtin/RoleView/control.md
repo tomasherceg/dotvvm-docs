@@ -1,1 +1,1 @@
-Creates different content users that are member of array of roles.
+Allows to display different content to users that are member of a specific role.

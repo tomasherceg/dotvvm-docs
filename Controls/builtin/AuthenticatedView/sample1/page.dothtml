@@ -1,8 +1,8 @@
 <dot:AuthenticatedView>
   <AuthenticatedTemplate>
-    <p class="result">I am authenticated!</p>
+    I am authenticated.
   </AuthenticatedTemplate>
   <NotAuthenticatedTemplate>
-    <p class="result">I am not authenticated!</p>
+    I am not authenticated.
   </NotAuthenticatedTemplate>
 </dot:AuthenticatedView>

@@ -1,1 +1,1 @@
-Creates different content for users that are authenticated and users that are not.
+Allows to display different content to users that are authenticated and users that are not.

@@ -1,9 +1,10 @@
 ### Sample 1: RoleView
 
-The RoleView control has a `Roles` property that holds specific roles in information system separated by comma.
+The `Roles` property contains a comma-separated list of roles. 
 
-You can set content for users authenticated as one of the specified roles (eq. admin, customer...) in  `IsMemberTemplate` and content for users that are not authentificated as one of the specified roles in `IsNotMemberTemplate`.
+The `IsMemberTemplate` defines the content displayed to the users who are member of at least one of the role in the `Roles` property.
 
-In the `HideNonAuthenticatedUsers` property you can specify whether will `IsNotMemberTemplate` be rendered for non authenticated users. Default value is true.
+The `IsNotMemberTemplate` defines the content displayed to other users.
 
-NOTE: This is done on server side so users can`t access these templates or roles in system.
+By default, the control is hidden completely to the users who are not authenticated. If you want to display the `IsNotMemberTemplate` even to the 
+non-authenticated users, set the `HideToNonAuthenticatedUsers` property to `false`. 

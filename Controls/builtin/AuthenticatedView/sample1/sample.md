@@ -1,7 +1,5 @@
 ### Sample 1: AuthenticatedView
 
-Property ITemplate `AuthenticatedTemplate` holds content for users that are authentificated.
+The `AuthenticatedTemplate` property defines the content for users who are authenticated. The `NotAuthenticatedTemplate` property defines the content for users who are not authenticated. 
 
-You can specify content for not authenticated users in ITemplate property `NotAuthenticatedTemplate`.
-
-NOTE: This is done on server side so users can`t access these templates or roles in system.
+You have to specify at least one of the templates.

@@ -1,1 +1,8 @@
-Control renders contets of `IsMemberTempplate` or `IsNotMemberTempplate` based on if user is member of specific role set or not.
+The control renders the `<div>` element containing the contents of the `IsMemberTemplate` or `IsNotMemberTemplate` property.
+You can change the tag name using the `WrapperTagName` property, or you can disable the wrapper tag completely using the `RenderWrapperTag` property.
+
+```DOTHTML
+<div>
+    <!-- Contents of the IsMemberTemplate or IsNotMemberTemplate -->
+</div>
+```
