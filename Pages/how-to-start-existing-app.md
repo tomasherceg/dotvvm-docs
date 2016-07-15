@@ -31,8 +31,6 @@ namespace DotvvmDemo
 {
     public class Startup
     {
-        private WindsorContainer container;
-    
         public void Configuration(IAppBuilder app)
         {
             // initialize DotVVM
