@@ -14,7 +14,7 @@ You can register new resource using `Register` method, or you can replace existi
 do this in the `DotvvmStartup.cs` file.
 
 ```CSHARP
-config.Resources.Register("bootstrap-css", new StyleResource()
+config.Resources.Register("bootstrap-css", new StylesheetResource()
 {
     Url = "~/Content/bootstrap.min.css"
 });
