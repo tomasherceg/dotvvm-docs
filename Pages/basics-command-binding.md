@@ -62,7 +62,7 @@ public class Task {
             <dot:Button Click="{command: _parent.DeleteTask(TaskId)}" Text="Delete" />
         </p>
     </ItemTemplate>
-</rw:Repeater>
+</dot:Repeater>
 ```
 
 This is quite a complex sample. In the viewmodel, we have a collection of tasks and a `DeleteTask` method which accepts one argument of type `int`. 
