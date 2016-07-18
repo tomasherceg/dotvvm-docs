@@ -11,6 +11,7 @@
         <DocPageMenuItem RouteName="first-page" PageName="Creating the First Page" />
 		<DocPageMenuItem RouteName="routing" PageName="Routing" />
 		<DocPageMenuItem RouteName="master-pages" PageName="Master Pages" />
+		<DocPageMenuItem RouteName="comments" PageName="Comments" />
 		<DocPageMenuItem RouteName="binding-syntax" PageName="Binding Syntax" />
 		<DocPageMenuItem RouteName="value-binding" PageName="Value Binding" />
 		<DocPageMenuItem RouteName="command-binding" PageName="Command Binding" />
