@@ -1,6 +1,6 @@
 ﻿<bs:Button Text="Open modal" Type="Primary" Size="Large" data-toggle="modal" data-target="#myModal" />
 
-<bs:ModalDialog HeaderText="Simple Modal" ID="myModal">
+<bs:ModalDialog ID="myModal">
   <HeaderTemplate>
     Simple modal header. This modal does not contain Footer.
     <bs:CloseButton/>
