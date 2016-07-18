@@ -37,7 +37,7 @@ namespace DotvvmDemo.ViewModels
                 // CreateIdentity is your own method which creates the IIdentity representing the user
                 IIdentity identity = CreateIdentity(UserName);
                 Context.OwinContext.Authentication.SignIn(identity);
-                Context.Redirect("/signedIn");
+                Context.RedirectToUrl("/signedIn");
             }
         }
     }
