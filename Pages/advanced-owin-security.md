@@ -85,7 +85,7 @@ app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
     ...
     Provider = new FacebookAuthenticationProvider()
     {
-        OnApplyRedirect = context => DotvvmAuthenticationHelper.SetRedirectResponse(context.OwinContext, context.RedirectUri),
+        OnApplyRedirect = context => DotvvmAuthenticationHelper.ApplyRedirectResponse(context.OwinContext, context.RedirectUri),
         ...
     }
 });
