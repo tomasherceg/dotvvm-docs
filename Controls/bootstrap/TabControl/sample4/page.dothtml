@@ -1,0 +1,16 @@
+﻿<bs:TabControl ActiveTabChanged="{command: SelectedTabChanged()}">
+    <bs:TabItem>
+        <HeaderTemplate>Tab 1</HeaderTemplate>
+        <ContentTemplate>
+            <p>First tab</p>
+        </ContentTemplate>
+    </bs:TabItem>
+
+    <bs:TabItem>
+        <HeaderTemplate>Tab 2</HeaderTemplate>
+        <ContentTemplate>
+            <p>Second tab</p>
+        </ContentTemplate>
+    </bs:TabItem>
+</bs:TabControl>
+{{value: CountOfChanges}}
