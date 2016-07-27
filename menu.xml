@@ -56,6 +56,9 @@
 		<DocPageMenuItem RouteName="bootstrap-for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
 		<DocPageMenuItem RouteName="troubleshooting-dotvvm-for-visual-studio" PageName="Troubleshooting DotVVM for Visual Studio" />
 	</DocPageMenuItem>
+	<DocPageMenuItem RouteName="troubleshooting" PageName="Troubleshooting">
+		<DocPageMenuItem RouteName="dotvvm-compiler-not-found" PageName="DotVVM Compiler Not Found" />
+	</DocPageMenuItem>
 	<DocControlCategories />
 	<DocStaticMenuItem RouteName="DocSamples" PageName="Samples" />
 	<DocStaticMenuItem RouteName="DocVideos" PageName="Videos" />
