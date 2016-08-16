@@ -21,7 +21,7 @@ public class AddressEditor : DotvvmMarkupControl
 Now we want to add two properties into the control. The first one is `Title`, which will appear inside the **legend** tag.
 The second would be `DisplayPhoneNumber` property which will hide the Phone field. 
 
-The properties in **DotVVM** control cannot be simple C# properties with default getter and setter. To make data-binding work,
+The properties in a **DotVVM** control cannot be simple C# properties with default getter and setter. To make data-binding work,
 you have to expose those properties as a `DotvvmProperty` object which contains metadata about the property. It is quite similar 
 to dependency properties in WPF.
 
@@ -140,4 +140,4 @@ public void Up()
 
 Notice that we are changing a value of a property which has a data-binding in the page. DotVVM can update the value in the viewmodel 
 because the `Value` is not a standard property. It is a DotVVM property and in the setter it calls the `SetValue` function. This function checks
-the value and if finds a binding there, it tries to update the corresponding property in the viewmodel.
+the value and if it finds a binding there, it tries to update the corresponding property in the viewmodel.

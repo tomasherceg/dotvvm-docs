@@ -1,6 +1,6 @@
 ## Comments
 
-You can left client-side or server-side comments in your `.dothtml` files
+You can have client-side or server-side comments in your `.dothtml` files
 
  Client-side comment - will appear in generated html files
 
@@ -14,7 +14,7 @@ You can left client-side or server-side comments in your `.dothtml` files
 <%-- server comment --%>
 ```
 
- You can also let server-side comments between attributes
+ You can also put server-side comments between attributes
 
 ```DOTHTML
 <dot:GridView DataSource="{value: Source}" <%-- server comment in attributes--%> class="table">

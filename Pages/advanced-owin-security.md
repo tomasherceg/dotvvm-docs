@@ -12,7 +12,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions()
 });
 ```
 
-In the login page, you have to verify the user credentials and create the `IIdentity` object that represents the logged user identity.
+In the login page, you have to verify the user credentials and create the `IIdentity` object that represents the logged user's identity.
 Typically, you want to use `ClaimsIdentity` for this purpose. Then, you can call the `OwinContext.Authentication.SignIn` method:
 
 ```CSHARP

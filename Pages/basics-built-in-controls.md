@@ -43,7 +43,7 @@ All DotVVM controls have some properties in common because they all derive from 
 You can use most of these properties on HTML elements too.
 
 + `DataContext` - changes the binding context for the content of the control / element.
-+ `ID` - specifies an ID of the control. Because the control can appearin the page multiple times (e.g. when it is inside the Repeater control), the real
++ `ID` - specifies an ID of the control. Because the control can appear in the page multiple times (e.g. when it is inside the Repeater control), the real
   id of the control might be different and sometimes it is calculated on the client side. You can enforce the ID to be the same as you specified in the markup
   by setting the `ClientIDMode` property to `Static`. 
 + `Visible` - hides the control in the page (using CSS `display: none`).

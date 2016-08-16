@@ -1,6 +1,6 @@
 ## Markup Control Registration
 
-You need to register the markup control in `DotvvmStartup.cs` file, before you can use it in the markup. 
+You need to register the markup control in `DotvvmStartup.cs` file before you can use it in the markup. 
 
 The registration of a markup control looks like this:
 

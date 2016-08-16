@@ -8,7 +8,7 @@ the response of an AJAX call as a file download. You would have to write a custo
 that generates the file and writes it to the response stream. Then you'll redirect the user to this presenter and that's it.
 
 The process described above is not much convenient. That's why DotVVM implements a mechanism which lets you just generate the file in your viewmodel command and 
-deliver it to the client using the `Context.ReturnFile` function.
+deliver it to the client using the `Context.ReturnFile` method.
 
 
 ### Registering the IReturnedFileStorage
@@ -31,7 +31,7 @@ Of course you can implement your own mechanism of returned file storage.
 ### Using context.ReturnFile
 
 The usage is pretty easy then. You just call `Context.ReturnFile` in your viewmodel method. The file is saved in the temporary storage and the user is redirected to 
-a special URL that returns the file to him. The ID of the file is a random Guid so it's not possible to retrieve a that was generated for someone else.
+a special URL that returns the file to him. The ID of the file is a random Guid so it's not possible to retrieve a file that was generated for someone else.
 
 ```CSHARP
 var header = new HeaderDictionary(new Dictionary<string, string[]>());

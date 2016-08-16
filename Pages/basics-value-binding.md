@@ -12,13 +12,13 @@ public class MyViewModel {
 }
 ```
 
-In the DOTHTML markup, you can bind the property e.g. to the hyperlink:
+In the DOTHTML markup, you can bind the property for example to the hyperlink:
 
 ```DOTHTML
 <a href="{value: Url}">Go To URL</a>
 ```
 
-If you run the page and view the page source code, you'll see that DotVVM translated the binding in Knockout JS expression. DotVVM uses this 
+If you run the page and view the page source code, you'll see that DotVVM translated the binding into a Knockout JS expression. DotVVM uses this 
 popular framework to do the data-binding.
  
 This is the HTML that is rendered to the client:
@@ -29,7 +29,7 @@ This is the HTML that is rendered to the client:
 
 The word **value** indicates the type of the binding - value binding in this case. **Url** is an expression that will be evaluated in the client's browser.
 The expression can only use public properties, access collection elements and use several supported operators. 
-You cannot e.g. call functions from the value binding.
+You cannot, for example, call functions from the value binding.
 
 ### Supported Expressions
 
@@ -50,8 +50,7 @@ You cannot e.g. call functions from the value binding.
 If you use the `ICollection.Count` and `Array.Length` property, they are correctly translated to javascript - 
 they simply call `length` on the javascript array.
 
-_You don't have to afraid of null values - if a part of the expression evaluates to null, the rest is not evaluated and the result 
-of the evaluation is null. Internally, we treat every `.` as `.?` in C# 6._
+_You don't have to be afraid of null values - if a part of the expression evaluates to null, the rest is not evaluated and the result of the evaluation is null. Internally, we treat every `.` as `.?` in C# 6._
 
 ### Double and Single Quotes
 

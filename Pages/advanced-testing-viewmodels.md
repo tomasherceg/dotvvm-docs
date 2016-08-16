@@ -23,7 +23,7 @@ public void NormalTest()
 
 ### Mocking the Context
 
-The only problem in **DotVVM** is when the viewmodel uses the `DotvvmRequestContext` fratures. 
+The only problem in **DotVVM** is when the viewmodel uses the `DotvvmRequestContext` features. 
 We need to mock this object to provide all services to the tested method.
 
 DotVVM contains a prepared mock class `TestDotvvmRequestContext`. You can set all properties you need

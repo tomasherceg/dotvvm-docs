@@ -17,7 +17,7 @@ other objects that comply with this paragraph. Everything must be JSON-serializa
 or the constructor of the class.
 
 + It contains several methods that can be called from the UI. These methods shouldn't do anything complicated. If there is 
-some complex stuff that needs to be done, the method wil use some other class to do the job. 
+some complex stuff that needs to be done, the method will use some other class to do the job. 
 In general, the viewmodel methods should only gather data from the viewmodel, call a method that does the real job and after it's finished, 
 update the viewmodel properties with results of the called method. 
 

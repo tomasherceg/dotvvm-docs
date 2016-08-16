@@ -39,7 +39,7 @@ public class ConfirmPostBackHandler : PostBackHandler
 
 This class contains several things:
 
-* The `ClientHandlerName` property specifies the name of the postback handler in the javascript. You'll need the value later in the Step 2 to register the handler.
+* The `ClientHandlerName` property specifies the name of the postback handler in the javascript. You'll need the value later in Step 2 to register the handler.
 
 * The `GetHandlerOptionClientExpressions` returns a key-value collection of postback handler parameters. This collection will be serialized and placed in the 
 HTML page. Thanks to this, you can read the values of the postback handler parameters on the client side. The `TranslateValueOrBinding` generates an expression

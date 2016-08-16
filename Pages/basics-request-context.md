@@ -8,7 +8,7 @@ It can also perform redirects and other things:
 + `ModelState` property represents the state of the [model validation](/docs/tutorials/basics-validation/{branch}). You can report validation errors to the 
 UI using this object's `AddModelError` method, or you can use the `IsValid` property to determine whether there are some validation errors.
 
-+ The `FailOnInvalidViewModel` function checks the validity of the viewmodel and throws an exception if the viewmodel is not valid. The request execution is
++ The `FailOnInvalidViewModel` method checks the validity of the viewmodel and throws an exception if the viewmodel is not valid. The request execution is
 interrupted and the validation errors are displayed in the client's browser (e.g. in the [ValidationSummary](/docs/controls/builtin/ValidationSummary/{branch}) control).
 
 + `Parameters` property is a dictionary which contains parameters from the [route](/docs/tutorials/basics-routing/{branch}).

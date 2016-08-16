@@ -41,7 +41,7 @@ dotvvmConfiguration.Runtime.GlobalFilters.Add(new ErrorHandlingActionFilter());
 
 ### Multiple Filters
 
-You can apply mutliple filters on a viewmodel or a method. The filters are called in the order you have added them to the GlobalFilters collection, or in the order of the attributes
+You can apply multiple filters on a viewmodel or a method. The filters are called in the order you have added them to the GlobalFilters collection, or in the order of the attributes
 on the class or a method.
 
 The `OnViewModelCreated`, `OnCommandExecuting` and `OnResponseRendering` methods are executed in the following order:

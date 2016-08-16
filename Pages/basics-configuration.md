@@ -16,7 +16,7 @@ DotVVM settings.
 
 This call returns the `DotvvmConfiguration` object, but the configuration of DotVVM should be mostly in the `DotvvmStartup.cs`.
 
-In the default project template, the `Startup` class also registers a static files middleware. DotVVM doesn't need it itself, however in 99% cases you OWIN to serve 
+In the default project template, the `Startup` class also registers a static files middleware. DotVVM doesn't need it itself, however in 99% cases you want to use OWIN to serve 
 static files like images to the user.
 
 ### DotvvmStartup.cs

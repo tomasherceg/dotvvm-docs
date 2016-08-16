@@ -43,7 +43,7 @@ and `<style>` elements in which the curly braces have special meaning.
 It is not possible to use the binding in the attribute value when another content is there:
 
 ```DOTHTML
-<!-- this does not work - the binding must be whole attribute value !!! -->
+<!-- this does not work - the whole attribute value has to be a binding! -->
 <element property="something {value: bindingExpression}" />
 ```
 

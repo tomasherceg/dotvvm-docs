@@ -76,7 +76,7 @@ The template renders the `Name` property as a text in the page. Then, it renders
 Notice that we use **_parent.DeleteTask**, because the `DeleteTask` method is not declared in the `Task` class, but in the `MyViewModel` class.
  
 That's because the `<dot:Repeater>` control switches the [binding context](/docs/tutorials/basics-binding-context/latest/{branch}). 
-All bindings in the `<ItemTemplate>` are evaluated in the context of current item from the `Tasks` collection.
+All bindings in the `<ItemTemplate>` are evaluated in the context of the current item from the `Tasks` collection.
  
 ### Binding Context Variables
  

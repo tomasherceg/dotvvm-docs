@@ -47,7 +47,7 @@ This will display the `*` character when the field contains invalid value. The `
 
 The `Validator` control has several properties you can combine as you need:
 
-* `HideWhenValid` - set to **true** if you need the control to remain visible even when the field is valid.
+* `HideWhenValid` - set to **false** if you need the control to remain visible even when the field is valid.
 
 * `InvalidCssClass` - the CSS class specified in this property will be set to the control when the field is not valid. 
 

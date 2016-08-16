@@ -4,7 +4,7 @@ Every page needs to be registered in the route table. DotVVM doesn't allow to vi
 
 Routes are configured in the `DotvvmStartup` class in the `Configure` method.
 
-### Registering Routes Ony By One
+### Registering Routes One By One
 
 ```CSHARP
 config.RouteTable.Add("Page", "page", "Views/page.dothtml", new { });

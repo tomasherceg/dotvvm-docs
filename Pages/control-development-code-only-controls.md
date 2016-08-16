@@ -76,12 +76,12 @@ There are also methods `RenderBeginTag("input")`, `RenderEndTag()`, `WriteText("
 The `AddAttribute` method is called before rendering the tag and it also has a third argument called `append`. 
 If you call `AddAttribute("class", "blue")` and then `AddAttribute("class", "red", true)`, the class will be appended. 
 
-The `HtmlWriter` knows that values in the `class` HTML attribute are separated by space, value in the `style` attribute by semicolon etc. You can also specify 
+The `HtmlWriter` knows that values in the `class` HTML attribute are separated by spaces, values in the `style` attribute by semicolons etc. You can also specify 
 your own separator character as the fourth argument.
 
 ### Rendering HTML
 
-Let's continue with the **TextBox** class. We don't want to render begin and end tag, but the self closing one. Also, the control
+Let's continue with the **TextBox** class. We don't want to render begin and end tags, but the self closing one. Also, the control
 cannot specify any children, so we should override the **RenderContents** method to not render anything.
 
 ```CSHARP
@@ -136,22 +136,22 @@ However, we should support two scenarios:
 ```
 
 In the first case, we need to render `data-bind="value: FirstName"`, in the second case we need to render `value="Test"`.
-We can solve this by simple if:
+We can solve this by a simple if:
 
 ```CSHARP
 protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequestContext context)
 {
-	var textBinding = GetValueBinding(TextProperty);
+    var textBinding = GetValueBinding(TextProperty);
     if (textBinding != null) 
-	{
-		// the property contains binding - this will render data-bind="value: expression"
-		writer.AddKnockoutDataBind("value", this, TextProperty);
-	}
-	else 
-	{
-		// render the value in the HTML
-		writer.AddAttribute("value", Text);
-	}
+    {
+        // the property contains binding - this will render data-bind="value: expression"
+        writer.AddKnockoutDataBind("value", this, TextProperty);
+    }
+    else 
+    {
+        // render the value in the HTML
+        writer.AddAttribute("value", Text);
+    }
 
     writer.AddAttribute("type", "text");
     
@@ -160,17 +160,17 @@ protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequest
 ```
 
 Because this pattern is quite usual an in most controls you would have written the `if` statement checking the presence
-of binding and rendering the appropriate output, there is an overload of `AddKnockoutDataBind` function with fourth argument.
-It is a function which is called when the specified property doesn't contain a binding.
+of binding and rendering the appropriate output, there is an overload of the `AddKnockoutDataBind` method with four arguments.
+It allows you to specify a function which is called when the specified property doesn't contain a binding.
 
 So we could simplify the function above like this:
 
 ```CSHARP
 protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequestContext context)
 {
-	writer.AddKnockoutDataBind("value", this, TextProperty, () => {
-		writer.AddAttribute("value", Text);
-	});
+    writer.AddKnockoutDataBind("value", this, TextProperty, () => {
+        writer.AddAttribute("value", Text);
+    });
 
     writer.AddAttribute("type", "text");
     

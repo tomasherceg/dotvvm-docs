@@ -1,16 +1,16 @@
 ## Javascript and CSS Resource Management
 
-**DotVVM** has built-in mechanism for managing reasources. It supports javascript files, inline javascript snippets and CSS files.
+**DotVVM** has a built-in mechanism for managing reasources. It supports javascript files, inline javascript snippets and CSS files.
 
 The resources are named and stored in a global repository in [DotVVM configuration](/docs/tutorials/basics-configuration/{branch}). 
 
-Each resources can also specify its dependencies. Thanks to this, DotVVM can include all required resources in the page in correct order.
+Each resource can also specify its dependencies. Thanks to this, DotVVM can include all required resources in the page in the correct order.
 
 
 ### Resource Repository
 
 All resources are registered in resource respository found in the `DotvvmConfiguration.Resources` collection. 
-You can register new resource using `Register` method, or you can replace existing resource with your own one. Typically, you want to
+You can register a new resource with the `Register` method, or you can replace existing resource with your own one. Typically, you want to
 do this in the `DotvvmStartup.cs` file.
 
 ```CSHARP

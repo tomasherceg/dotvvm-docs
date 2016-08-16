@@ -31,13 +31,13 @@ Always validate that the values are correct and that the user has appropriate pe
 The binding in the page looks like this:
 
 ```DOTHTML
-<dot:Button Text="Something" Click="{staticCommand: MyMethod(Name)}" />
+<dot:Button Text="Something" Click="{staticCommand: MyClass.MyMethod(Name)}" />
 ```
 
 Also, you may want to use the method result to update some viewmodel property.
 
 ```DOTHTML
-<dot:Button Text="Something" Click="{staticCommand: SomeProperty = MyMethod(Name)}" />
+<dot:Button Text="Something" Click="{staticCommand: SomeProperty = MyClass.MyMethod(Name)}" />
 ```
 
 <br />
