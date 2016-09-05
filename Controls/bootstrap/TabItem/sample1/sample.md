@@ -4,4 +4,4 @@ Header and main content of each `TabItem` is defined in it`s `HeaderTemplate` an
 
 The `IsActive` property controls whether the tab will be defaultly selected.
 
-`TabItems` are items of [TabControl](/docs/controls/bootstrap/TabControl) and not work outside it.
+`TabItems` are items of [TabControl](/docs/controls/bootstrap/TabControl/{branch}) and not work outside it.

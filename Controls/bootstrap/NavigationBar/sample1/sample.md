@@ -5,4 +5,4 @@ The `NavigationItem` control has `NavigateUrl` property which specifies target U
 
 `IsSelected` and `IsDisabled` properties define whether the control gets the active or disabled CSS class respectively.
 
-NOTE: More about [NavigationItem](/docs/controls/bootstrap/NavigationItem)
+NOTE: More about [NavigationItem](/docs/controls/bootstrap/NavigationItem/{branch})

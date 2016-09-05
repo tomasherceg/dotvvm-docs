@@ -1,6 +1,6 @@
 ### Sample 1: Basic TabControl
 
-Each tab is represented by [TabItem](/docs/controls/bootstrap/TabItem).
+Each tab is represented by [TabItem](/docs/controls/bootstrap/TabItem/{branch}).
 
 Header and main content of each `TabItem` is defined in it`s `HeaderTemplate` and `ContentTemplate` properties.  
 
