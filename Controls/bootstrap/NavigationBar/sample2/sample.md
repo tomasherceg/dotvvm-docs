@@ -1,3 +1,3 @@
-### Sample 2: Type and IsJustified Properties
+### Sample 2: NavigationBar Appearance
 
-The `Type` and `IsJustified` properties modify the visual appearance of the navigation bar.
+The `Type` and `IsJustified` properties can modify the visual appearance of the navigation bar.

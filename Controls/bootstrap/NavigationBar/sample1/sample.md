@@ -1,8 +1,7 @@
 ### Sample 1: Basic Usage
 
-The `NavigationItem` control has `NavigateUrl` property which specifies target URL.
-`Text` property defines the contents of the item. You can also place contents inside the control.
+The `NavigationItem` control has the `NavigateUrl` property which specifies target URL, or the `Click` property which invokes a command on the viewmodel.
 
-`IsSelected` and `IsDisabled` properties define whether the control gets the active or disabled CSS class respectively.
+The `Text` property defines the contents of the item. Alternatively, you can also place the contents inside the control.
 
-NOTE: More about [NavigationItem](/docs/controls/bootstrap/NavigationItem/{branch})
+The `IsSelected` and `IsDisabled` properties define whether the control gets the active or disabled CSS classes.
