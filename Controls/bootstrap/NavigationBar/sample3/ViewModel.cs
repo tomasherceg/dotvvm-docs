@@ -11,10 +11,10 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.NavigationBar.sample3
         {
             return new[]
             {
-                new NavigationItem() {  IsDisabled = false, IsSelected = false, NavigateUrl = "https://www.google.com/", Text = "Google"},
-                new NavigationItem() {  IsDisabled = false, IsSelected = false, NavigateUrl = "http://www.w3schools.com/html/", Text = "W3Schools"},
-                new NavigationItem() {  IsDisabled = false, IsSelected = true, NavigateUrl = "https://www.microsoft.com/en-us/", Text = "Microsoft"},
-                new NavigationItem() {  IsDisabled = false, IsSelected = false, NavigateUrl = "https://github.com/riganti/dotvvm", Text = "DotVVM Github"}
+                new NavigationItem() { NavigateUrl = "https://www.google.com/", Text = "Google" },
+                new NavigationItem() { NavigateUrl = "http://www.w3schools.com/html/", Text = "W3Schools" },
+                new NavigationItem() { IsSelected = true, NavigateUrl = "https://www.microsoft.com/en-us/", Text = "Microsoft" },
+                new NavigationItem() { IsDisabled = true, NavigateUrl = "https://github.com/riganti/dotvvm", Text = "DotVVM Github" }
             }.AsQueryable();
         }
 
@@ -37,6 +37,5 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.NavigationBar.sample3
         public string NavigateUrl { get; set; }
         public bool IsSelected { get; set; }
         public bool IsDisabled { get; set; }
-
     }
 }
