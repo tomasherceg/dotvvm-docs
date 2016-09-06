@@ -36,7 +36,7 @@ DotVVM already includes the following built-in resources.
 
 * **dotvvm.debug** - a helper that displays exception details from the commands.
 
-* **dotvvm.fileUpload-css** - a CSS styles for the [FileUpload](/docs/controls/FileUpload/{branch}) control.
+* **dotvvm.fileUpload-css** - a CSS styles for the [FileUpload](/docs/controls/builtin/FileUpload/{branch}) control.
 
 * **knockout** - Knockout JS 3.5.0 (custom modified version)
 
@@ -52,7 +52,7 @@ however only a subset of the number and datetime formats are supported.
 
 ### Requesting Resources
 
-In the page, you can use the [RequiredResource](/docs/controls/builtin/RequiredResource/{branch}) control to manually link a resource.
+In the page, you can use the RequiredResource control to manually link a resource.
 
 ```DOTHTML
 <dot:RequiredResource Name="bootstrap" />
@@ -60,7 +60,7 @@ In the page, you can use the [RequiredResource](/docs/controls/builtin/RequiredR
 
 By default, the `StyleResource`s are placed in the `head` section, the `ScriptResource`s are placed at the end of the `body` element.
 
-Also, each control in the page can request any resources, so it can work properly. For example, if you add the [FileUpload](/docs/controls/FileUpload/{branch}) control in the page,
+Also, each control in the page can request any resources, so it can work properly. For example, if you add the [FileUpload](/docs/controls/builtin/FileUpload/{branch}) control in the page,
 the control will call `DotvvmRequestContext.AddRequiredResource` method to tell the DotVVM resource manager, that it needs some specific resource.
 
 When the page is about to be rendered, DotVVM resource manager will get all required resources, sort them to satisfy the dependency constraints, 
