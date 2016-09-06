@@ -75,7 +75,7 @@ The template renders the `Name` property as a text in the page. Then, it renders
 
 Notice that we use **_parent.DeleteTask**, because the `DeleteTask` method is not declared in the `Task` class, but in the `MyViewModel` class.
  
-That's because the `<dot:Repeater>` control switches the [binding context](/docs/tutorials/basics-binding-context/latest/{branch}). 
+That's because the `<dot:Repeater>` control switches the [binding context](/docs/tutorials/basics-binding-context/{branch}). 
 All bindings in the `<ItemTemplate>` are evaluated in the context of the current item from the `Tasks` collection.
  
 ### Binding Context Variables
@@ -83,7 +83,7 @@ All bindings in the `<ItemTemplate>` are evaluated in the context of the current
 You can use the following reserved names in **command** and **value** expressions:
  
 * `_root` goes to the top-level ViewModel object.
-* `_parent` goes to the parent [binding context](/docs/tutorials/basics-binding-context/latest/{branch}).
+* `_parent` goes to the parent [binding context](/docs/tutorials/basics-binding-context/{branch}).
 * `_parent{#number}` goes to the parent #number times
 * `_this` goes to the current context. It is useful only if you want to bind directly to the ViewModel object (e.g. if you want to 
 display a collection of strings, or pass current binding context to a method): `{value: _this}`
