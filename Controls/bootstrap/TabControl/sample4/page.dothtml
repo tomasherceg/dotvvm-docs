@@ -13,4 +13,5 @@
         </ContentTemplate>
     </bs:TabItem>
 </bs:TabControl>
-{{value: CountOfChanges}}
+
+{{value: NumberOfChanges}}

@@ -1,7 +1,8 @@
 ### Sample 1: TabItem Control
 
-Header and main content of each `TabItem` is defined in it`s `HeaderTemplate` and `ContentTemplate` properties.  
+Use the `<bs:TabItem>` controls inside the [TabControl](/docs/controls/bootstrap/TabControl/{branch}) control.
 
-The `IsActive` property controls whether the tab will be defaultly selected.
+The header and content of each `TabItem` is defined using the `HeaderTemplate` and `ContentTemplate` properties.  
 
-`TabItems` are items of [TabControl](/docs/controls/bootstrap/TabControl/{branch}) and not work outside it.
+The `IsActive` property specifies whether the tab is currently selected or not.
+

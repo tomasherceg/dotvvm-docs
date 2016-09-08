@@ -1,8 +1,7 @@
 ### Sample 1: Basic TabControl
 
-Each tab is represented by [TabItem](/docs/controls/bootstrap/TabItem/{branch}).
+Each tab is represented by the [TabItem](/docs/controls/bootstrap/TabItem/{branch}) control.
 
-Header and main content of each `TabItem` is defined in it`s `HeaderTemplate` and `ContentTemplate` properties.  
+The header and content of each `TabItem` is defined using the `HeaderTemplate` and `ContentTemplate` properties.  
 
-The `IsActive` property controls whether the tab will be defaultly selected.   
-When no tab has `IsActive` property set to true, than the first tab will be set as active.
+The `IsActive` property specifies whether the tab is currently selected or not.

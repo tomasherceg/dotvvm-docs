@@ -1,5 +1,5 @@
 ﻿<bs:TabControl>
-  <bs:TabItem>
+  <bs:TabItem IsActive="true">
     <HeaderTemplate>Tab 1</HeaderTemplate>
     <ContentTemplate>
       <p>First tab</p>

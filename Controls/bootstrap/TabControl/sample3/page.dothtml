@@ -1,4 +1,5 @@
-﻿<bs:TabControl DataSource="{value: Tabs}" IsActiveBinding="{value: IsActive}" >
+﻿<bs:TabControl DataSource="{value: Tabs}" 
+               IsActiveBinding="{value: IsActive}" >
   <HeaderTemplate>Tab {{value: Name}}</HeaderTemplate>
   <ContentTemplate>
     <p>{{value: Description}}</p>
