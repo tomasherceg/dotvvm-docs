@@ -1,3 +1,3 @@
-Adds Bootstrap Tooltip to inner element or control.
+Adds the Bootstrap Tooltip to an element or control.
 
 <http://getbootstrap.com/javascript/#tooltips>

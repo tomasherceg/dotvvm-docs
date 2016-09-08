@@ -1,5 +1,5 @@
 ### Sample 1: Tooltip Usage
 
-The Tooltip control has `Title` property that is holding text used in pop-up box similar to Bootstrap usage.
+The Tooltip control has the `Title` property which holds the text used in the Tooltip.
 
-Position of tooltip can be changed with `Position` property.
+The position of the tooltip can be set using the `Position` property.
