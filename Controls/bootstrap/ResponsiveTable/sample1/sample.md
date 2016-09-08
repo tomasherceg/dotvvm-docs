@@ -1,3 +1,3 @@
 ### Sample 1: Basic ResponsiveTable
 
-To create responsive table place table inside the control.
+To make the table responsive, just place the table inside the control.
