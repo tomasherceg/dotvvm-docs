@@ -1,3 +1,2 @@
-Renders a Boostrap Column. Use this control inside the [Row](/docs/controls/bootstrap/Row/{branch}). 
-
+Renders a Boostrap Column. Use this control inside the Row.
 <http://getbootstrap.com/css/#grid>

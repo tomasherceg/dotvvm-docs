@@ -1,3 +1,3 @@
-Extends the builtin [Label](/docs/controls/builtin/Label/{branch}) control to allow applying Bootstrap CSS classes.
+Extends the builtin [Literal](docs/controls/builtin/Literal/{branch}) control to allow applying Bootstrap CSS classes.
 
 <http://getbootstrap.com/components/#labels>

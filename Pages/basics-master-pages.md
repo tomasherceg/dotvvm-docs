@@ -59,7 +59,7 @@ Finally, write your HTML code. On a place where you need to embed something from
 
 Most master pages need only one or two of them, however you can use as many `ContentPlaceHolder`s as you need.
 
-> The [DotVVM Pro for Visual Studio 2015](/products/dotvvm-pro-for-vs-2015) has the IntelliSense for the `ContentPlaceHolderId` property and much more. 
+> The [DotVVM Pro for Visual Studio 2015](/landing/dotvvm-for-visual-studio-extension) has the IntelliSense for the `ContentPlaceHolderId` property and much more. 
 
 
 ### How to Create the Content Page

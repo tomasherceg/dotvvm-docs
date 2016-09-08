@@ -32,7 +32,7 @@ For more information, read the [Built-in Control Reference](/docs/controls/built
 
 #### Other
 + [InlineScript](/docs/controls/builtin/InlineScript/{branch}) - includes an inline javascript script in the page
-+ [RequiredResource](/docs/controls/builtin/RequiredResource/{branch}) - includes a script or style resource in the page
++ [RequiredResource](/docs/tutorials/basics-javascript-and-css/{branch}) - includes a script or style resource in the page
 + [UpdateProgress](/docs/controls/builtin/UpdateProgress/{branch}) - displays specified content during the postback
 
 &nbsp;

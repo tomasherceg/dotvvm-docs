@@ -29,7 +29,7 @@ The `DotvvmStartup` class must implement the `IDotvvmStartup` interface and cont
 
 + **Custom Controls** (see more in the [Control Development](/docs/tutorials/control-development-introduction/{branch}) chapter)
 
-Please note that the [DotVVM Pro for Visual Studio 2015](/products/dotvvm-pro-for-vs-2015) executes the `Configure` method during the project build process so it can
+Please note that the [DotVVM Pro for Visual Studio 2015](/landing/dotvvm-for-visual-studio-extension) executes the `Configure` method during the project build process so it can
 do IntelliSense for custom controls, route names etc. 
 
 >Avoid registering any other things than routes, custom resources and custom controls in the `Configure` method as it might be executed many times 
