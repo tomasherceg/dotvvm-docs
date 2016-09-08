@@ -1,5 +1,5 @@
 ### Sample 1: Well Usage
 
-`Well` control creates `div` with Bootstrap `well` class.
+Place the contents inside the `<bs:Well>` control.
 
-For specifying type of the `Well` you can use `Type` property.
+To specify the size of the `Well`, you can use the `Type` property.
