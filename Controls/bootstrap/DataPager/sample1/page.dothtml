@@ -3,6 +3,6 @@
     <dot:GridViewTextColumn ValueBinding="{value: Id}" HeaderText="ID" />
     <dot:GridViewTextColumn ValueBinding="{value: Name}" HeaderText="Name" />
   </Columns>
-</dot:GridView>
+</bs:GridView>
 
 <bs:DataPager DataSet="{value: Customers}" Size="Large" />
