@@ -1,5 +1,5 @@
 ### Sample 1: Basic Panel
 
-Contents of the panel can be defined in the contents of the control or alternatively in `ContentTemplate` property, with bootstrap class `panel-body` automatically created.
+The contents of the panel can be defined using the `ContentTemplate` property, or by specifying the content just inside the `<bs:Panel>` control.
 
-It is possible to change contextual color of Panel using the `Type` property.
+You can change the contextual color of the Panel using the `Type` property.

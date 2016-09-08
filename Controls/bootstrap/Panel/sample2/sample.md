@@ -1,6 +1,8 @@
 ### Sample 2: Panel Templates
 
-Header part of the `Panel` can be customized in `HeaderTemplate` which creates content in `<div>` with bootstrap class `panel-heading`.
-Similarly `FooterTemplate` serves for customizing footer of the panel(class `panel-footer`). 
+The Header part of the `Panel` can be customized using the `HeaderTemplate` property.
 
-If you need to add more content without padding, use the `AdditionalContentTemplate` property.
+Similarly, the `FooterTemplate` property allows to customize the footer of the panel. 
+
+If you need to add additional content which should have zero padding, like a [ListGroup](/docs/controls/bootstrap/ListGroup/{branch}) 
+or [Table](/docs/controls/bootstrap/Table/{branch}), use the `AdditionalContentTemplate` property.
