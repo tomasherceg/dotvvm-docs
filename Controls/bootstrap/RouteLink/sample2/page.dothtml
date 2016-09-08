@@ -1,0 +1,23 @@
+﻿<bs:RouteLink RouteName="RouteLink_sample1"
+           Text="Default"
+           Type="Default" />
+
+<bs:RouteLink RouteName="RouteLink_sample1"
+           Text="Primary"
+           Type="Primary" />
+
+<bs:RouteLink RouteName="RouteLink_sample1"
+           Text="Success"
+           Type="Success" />
+
+<bs:RouteLink RouteName="RouteLink_sample1"
+           Text="Info"
+           Type="Info" />
+
+<bs:RouteLink RouteName="RouteLink_sample1"
+           Text="Warning"
+           Type="Warning" />
+
+<bs:RouteLink RouteName="RouteLink_sample1"
+           Text="Danger"
+           Type="Danger" />

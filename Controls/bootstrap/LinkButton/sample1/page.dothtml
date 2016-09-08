@@ -1,0 +1,14 @@
+﻿<bs:LinkButton Click="{command: DoSomething()}" 
+               Text="Button" />
+
+<bs:LinkButton Click="{command: DoSomething()}" 
+               Text="Button" 
+               Size="Large" />
+
+<bs:LinkButton Click="{command: DoSomething()}" 
+               Text="Button" 
+               Size="Small" />
+
+<bs:LinkButton Click="{command: DoSomething()}" 
+               Text="Button" 
+               Size="ExtraSmall" />

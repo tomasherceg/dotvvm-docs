@@ -1,0 +1,23 @@
+﻿<bs:LinkButton Click="{command: DoSomething()}"
+               Text="Default"
+               Type="Default" />
+
+<bs:LinkButton Click="{command: DoSomething()}"
+               Text="Primary"
+               Type="Primary" />
+
+<bs:LinkButton Click="{command: DoSomething()}"
+               Text="Success"
+               Type="Success" />
+               
+<bs:LinkButton Click="{command: DoSomething()}"
+               Text="Info"
+               Type="Info" />
+
+<bs:LinkButton Click="{command: DoSomething()}"
+               Text="Warning"
+               Type="Warning" />
+
+<bs:LinkButton Click="{command: DoSomething()}"
+               Text="Danger"
+               Type="Danger" />
