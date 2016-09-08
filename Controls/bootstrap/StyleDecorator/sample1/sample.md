@@ -1,3 +1,3 @@
-### Sample 1: StyleDecorator - Text colors
+### Sample 1: StyleDecorator - Text Colors
 
-`StyleDecorator` control has `TextColor` property for setting text color of inner element using Bootstrap colors.
+The `StyleDecorator` control has the `TextColor` property for setting the text color of inner element using Bootstrap colors.
