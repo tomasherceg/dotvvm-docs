@@ -1,6 +1,6 @@
 ### Sample 1: Label Types
 
-The `Type` affects which color will be used on the label.
+The `Type` property affects which color will be used on the label.
 
 The available types are:
 
