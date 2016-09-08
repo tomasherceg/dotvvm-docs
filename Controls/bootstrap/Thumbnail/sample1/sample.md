@@ -1,6 +1,7 @@
 ### Sample 1: Thumbnail
 
-The `Thumbnail` control has the same properties for working with image as [Image](/docs/controls/bootstrap/Image/{branch})  control.  
-Additionaly it has `NavigateUrl` property which specifies URL of the page where the link goes to.
+The `Thumbnail` control has the same properties of the displayed image as the [Image](/docs/controls/bootstrap/Image/{branch}) control.  
 
-The `CaptionTemplate` property of the `Thumbnail` control contains content for the caption used for thumbnail.
+Additionaly, it has the `NavigateUrl` property which specifies the URL where the hyperlink navigates to.
+
+The `CaptionTemplate` property of the `Thumbnail` control allows to customize the caption of the thumbnail.
