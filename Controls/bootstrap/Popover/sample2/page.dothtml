@@ -1,7 +1,15 @@
-﻿<bs:Popover Title="Title" Content="Content" Placement="Top">Text</bs:Popover>
+﻿<bs:Popover Title="Title" Content="Content text" Placement="Bottom">
+    <bs:Button Text="Bottom" Type="Info" />
+</bs:Popover>
 
-<bs:Popover Title="Title" Placement="Bottom">Text</bs:Popover>
+<bs:Popover Title="Title" Content="Content text" Placement="Left">
+    <bs:Button Text="Left" Type="Success" />
+</bs:Popover>
 
-<bs:Popover Content="Content" Placement="Left">Text</bs:Popover>
+<bs:Popover Title="Title" Content="Content text" Placement="Right">
+    <bs:Button Text="Right" Type="Danger" />
+</bs:Popover>
 
-<bs:Popover Title="Title" Content="Content" Placement="Right">Text</bs:Popover>
+<bs:Popover Title="Title" Content="Content text" Placement="Top">
+    <bs:Button Text="Top" Type="Warning" />
+</bs:Popover>

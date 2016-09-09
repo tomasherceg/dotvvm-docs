@@ -2,7 +2,7 @@
     <a>Simplest link with Popover</a>
 </bs:Popover>
 
-<bs:Popover Title="Title text" Content="Content text"">
+<bs:Popover Title="Title text" Content="Content text">
     <div style="display: block; width: 220px">
         simple div
     </div>
