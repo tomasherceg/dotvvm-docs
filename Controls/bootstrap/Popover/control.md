@@ -1,3 +1,3 @@
-Renders the Bootstrap button with Popover widget.
+Adds Popover functionality to child control.
 
 <http://getbootstrap.com/javascript/#popovers>

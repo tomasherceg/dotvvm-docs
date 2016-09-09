@@ -1,3 +1,5 @@
 ### Sample 1: Basic Popover
 
-The `Popover` control has the `Title` property and `Content` properties which define the title and the contents of the popover dialog.
+The `Popover` control has the `Title` and `Content` properties that define the title and the contents of the popover dialog respectively.
+
+NOTE: You can use also use Popover on html elements such as div, but you have to give it display: block style.
