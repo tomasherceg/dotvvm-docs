@@ -1,3 +1,3 @@
-Renders dialog box/popup window displayed on top of the current page using bootstrap.
+Renders a modal dialog popup displayed on top of the current page using Bootstrap Modal widget.
 
 <http://getbootstrap.com/javascript/#modals>

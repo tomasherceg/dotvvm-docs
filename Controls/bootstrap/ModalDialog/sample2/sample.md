@@ -1,6 +1,5 @@
-### Sample 2: ModalDialog - Bindings
+### Sample 2: ModalDialog Sizing and Static Commands
 
-`IsDisplayed` property controls visibility of modal, meaning you can have modal visible on start or open it with simple checkbox.
-The `ModalDialog` control has `Size` property for changing size of modal window.
+You can use the [static commands](/docs/tutorials/basics-static-command-binding/{branch}) to control the `IsDisplayed` property.
 
-All contents in templates tags can be binded as well as `HeaderText` property.
+No communication with the server is required in this mode because you only work with the viewmodel property.

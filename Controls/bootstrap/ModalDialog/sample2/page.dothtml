@@ -1,13 +1,12 @@
-<bs:Button Text="Open modal" data-toggle="modal" data-target="#myModal" />
+<bs:Button Text="Open Dialog" Click="{staticCommand: Displayed = true}" />
 
-<bs:CheckBox Checked="{value: Displayed}"></bs:CheckBox> 
-  
-<bs:ModalDialog HeaderText="{value: Title}" IsDisplayed="{value: Displayed}" Size="Small" ID="myModal">
+<bs:ModalDialog HeaderText="My Dialog" 
+    IsDisplayed="{value: Displayed}" 
+	Size="Small">
 	<ContentTemplate>
-		{{value: Body}}
+		This is the dialog.
 	</ContentTemplate>
 	<FooterTemplate>
-		{{value: Footer}}
-		<bs:Button Text="Close" />
+		<bs:Button Text="Close Dialog" Click="{staticCommand: Displayed = false}" />
 	</FooterTemplate>
 </bs:ModalDialog>
