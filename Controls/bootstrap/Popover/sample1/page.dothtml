@@ -3,7 +3,7 @@
 </bs:Popover>
 
 <bs:Popover Title="Title text" Content="Content text">
-    <div style="display: block; width: 220px">
+    <div style="width: 220px">
         simple div
     </div>
 </bs:Popover>

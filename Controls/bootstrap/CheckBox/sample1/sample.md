@@ -1,4 +1,5 @@
 ### Sample 1: Inline CheckBoxes
 
-Setting **boolean** property ```IsInline``` to `true` will put CheckBoxes side by side.  
-When are checkBoxes placed inside ```ButtonGroup``` control they are put side by side automaticaly, so setting ```Inline``` property is redundant.
+The `IsInline` property allows to render checkboxes on one row.
+
+If the `CheckBox`es are placed inside the [ButtonGroup](/docs/controls/bootstrap/ButtonGroup) control, they are set to inline by default so you don't have to change anything.

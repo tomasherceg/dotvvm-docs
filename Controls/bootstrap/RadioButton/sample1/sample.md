@@ -1,7 +1,5 @@
-### Sample 1: Basic RadioButton
+### Sample 1: Inline RadioButtons
 
-The `RadioButton` control has `Text` property for specifying label of radio button. Label content can also be put inside `<bs:RadioButton>` element.
+The `IsInline` property allows to render checkboxes on one row.
 
-`CheckedItem` property points to a property in the viewmodel which holds value of checked radio button. Values of `RadioButtons` are specified with `CheckedValue` property.
-
-For creating group of `RadioButtons` use `GroupName` property. 
+If the `RadioButton`s are placed inside the [ButtonGroup](/docs/controls/bootstrap/ButtonGroup) control, they are set to inline by default so you don't have to change anything.

@@ -1,5 +1,5 @@
-### Sample 2: CheckBox with changed type.
-**TYPE PROPERTY CAN BE USED ONLY IF CHECKBOX IS PLACED INSIDE ```ButtonGroup``` CONTROL!**
+### Sample 2: CheckBox in ButtonGroup
 
-By changing **BootstrapColor** property ```Type``` you can change color of the CheckBox.  
-Available **BootstrapColor**s are: *Default*, *Primary*, *Success*, *Info*, *Warning* and *Danger* .
+You can change the color of the `CheckBox` using the `Type` property.
+
+This property works only inside the [ButtonGroup](/docs/controls/bootstrap/ButtonGroup/{branch}) control.  

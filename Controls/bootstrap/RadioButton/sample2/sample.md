@@ -1,5 +1,5 @@
-### Sample 2: RadioButton Types and ButtonGroups
+### Sample 2: RadioButton in ButtonGroup
 
-**TYPE PROPERTY CAN BE USED ONLY IF RADIOBUTTON IS PLACED INSIDE [ButtonGroup](/docs/controls/bootstrap/ButtonGroup/{branch}). CONTROL!**
+You can change the color of the `RadioButton` using the `Type` property.
 
-By changing `BootstrapColor` property `Type` you can change color of the RadioButton.  
+This property works only inside the [ButtonGroup](/docs/controls/bootstrap/ButtonGroup/{branch}) control.  
