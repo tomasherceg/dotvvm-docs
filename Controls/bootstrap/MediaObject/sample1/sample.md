@@ -1,8 +1,8 @@
 ### Sample 1: Basic Media Object
 
-The `MediaObject` control has `HeaderText` and `Description` bindable properties for displaying header text and description respectively. Control uses default bootstrap template for displaying media body including header and description.
-`ImageUrl` property displays image in  `MediaObject` using default template.
+The `MediaObject` control has the `HeaderText` and `Description` properties which specify the header text and description of the media object. 
 
-Additionally `AlternateText` property sets alternate text for image.
+The `ImageUrl` and `AlternateText` property sets the URL and the `alt` text of the image.
+
 
 

@@ -1,13 +1,12 @@
 ﻿<bs:MediaList>
 
-    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top"
-                    AlternateText="TEST">
+    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top" AlternateText="TEST">
 
         <ContentTemplate>
             <h4>Media object in list</h4>
             <p>Description in template</p>
-            <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top"
-                            AlternateText="TEST">
+
+            <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top" AlternateText="TEST">
                 <ContentTemplate>
                     <h4>Child</h4>
                     <p>Description of a child</p>
@@ -25,7 +24,6 @@
 
     </bs:MediaObject>
 
-    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top"
-                    AlternateText="TEST" />
+    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top" AlternateText="TEST" />
 
 </bs:MediaList>

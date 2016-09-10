@@ -1,2 +1,4 @@
-﻿<bs:MediaObject ImageUrl="~/Images/person.png"  Header="Basic Image" Description="Simple Description"/>
+﻿<bs:MediaObject ImageUrl="~/Images/person.png" 
+  HeaderText="Basic Image" 
+  Description="Simple Description" />
 

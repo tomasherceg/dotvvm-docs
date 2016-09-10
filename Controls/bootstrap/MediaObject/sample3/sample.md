@@ -1,5 +1,7 @@
 ### Sample 3: MediaList and Nested MediaObjects
 
-`MediaList` control creates `<ul>` base for media lists similar to bootstrap. `MediaObject` in `MediaList` will be automatically created with `li` tag.
+By default, the `MediaObject` renders the `<div>` element, so you can use it independently.
 
-Additionally it is possible to render nested `MediaList` controls.
+However, if you place the `MediaObject` in the [MediaList](/docs/controls/bootstrap/MediaList/{branch}) control, it will be automatically detect this and render as `<li>` element.
+
+The `MediaObject` controls can be nested.

@@ -1,7 +1,3 @@
 ### Sample 1: MediaList
 
-`MediaList` control creates `<ul>` base for media lists similar to bootstrap.
-
-`MediaObject` inside media list will be rendered with `li` tag.
-
-NOTE: More about [MediaObject](/docs/controls/bootstrap/MediaObject/{branch}).
+If you want to render a list of [MediaObject](/docs/controls/bootstrap/MediaObject/{branch})s, use this control and place the media objects inside.

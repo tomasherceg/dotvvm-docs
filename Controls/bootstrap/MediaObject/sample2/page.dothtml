@@ -7,5 +7,3 @@
     <p>Description defined in content template.</p>
   </ContentTemplate>
 </bs:MediaObject>
-
-<bs:MediaObject HeaderText="{value: HeaderText}" Description="{value: Description}" ImageUrl="~/Images/person.png"/>

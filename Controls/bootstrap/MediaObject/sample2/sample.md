@@ -1,6 +1,7 @@
 ### Sample 2: Media Object Templates
 
-`MediaObject` control have support for custom templates both for media and for body. `ImageTemplate` property defines content that will be used instead of image(`ImageUrl`), for example iframe.
-`ContentTemplate` defines additional content with media, for examle header, notes etc.
+The `MediaObject` control supports templating for media content and body. 
 
-Example also shows bindings for `HeaderText` and `Description`. 
+You can use the `ImageTemplate` property to define any content for the media section.
+
+Also, instead of `HeaderText` and `Description`, you can use the `ContentTemplate` to specify your own content.
