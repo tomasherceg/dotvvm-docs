@@ -1,0 +1,10 @@
+﻿<bs:Popover Title="Title" Content="Content text">
+    <PopoverTemplate>
+        <div class="popover" role="tooltip">
+            <div class="arrow"></div>
+            <div class="popover-title" style="color: orchid; font-weight: bold; font-size: larger;"></div>
+            <div class="popover-content" style="color: forestgreen;"></div>
+        </div>
+    </PopoverTemplate>
+    <bs:Button Text="Text" Type="Default" />
+</bs:Popover>

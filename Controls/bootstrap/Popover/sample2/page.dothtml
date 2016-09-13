@@ -1,4 +1,8 @@
-﻿<bs:Popover Title="Title" Content="Content text" Placement="Bottom">
+﻿<bs:Popover Title="Title" Content="Content text" Placement="Left" AutoPlacement="true">
+    <bs:Button Text="Text" Type="Success" />
+</bs:Popover>
+
+<bs:Popover Title="Title" Content="Content text" Placement="Bottom">
     <bs:Button Text="Bottom" Type="Info" />
 </bs:Popover>
 
