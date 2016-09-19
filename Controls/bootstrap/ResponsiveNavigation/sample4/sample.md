@@ -1,6 +1,6 @@
-### Sample 4: Other elements than NavigationItems in ResponsiveNavigation
+### Sample 4: DropDownButton and Form Controls in ResponsiveNavigation
 
-You can also put other elements than NavigationItems into ResponsiveNavigation.
-Just make sure to put them inside  `LeftAlignedItemsTemplate` or `RightAlignedItemsTemplate`.
+You can also use other control inside the `ResponsiveNavigation` control.
+You have to place them in the  `LeftAlignedItemsTemplate` or `RightAlignedItemsTemplate` elements.
 
-When you want to use `<bs:Form>` inside ResponsiveNavigation don't set Label. When Label is set the ResponsiveNavigation would not render correctly.
+There are some limitations of the Bootstrap navbar. For example, we don't recommend to use the `Label` properties on the `<bs:Form>` because it won't render correctly.

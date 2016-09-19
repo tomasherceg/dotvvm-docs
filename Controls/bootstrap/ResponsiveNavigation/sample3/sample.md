@@ -1,8 +1,7 @@
-### Sample 3: Fixed ResponsiveNavigation and alignation of Items
+### Sample 3: Fixed ResponsiveNavigation and Alignment
 
-The ResponsiveNavigation has `FixedTo` property that controls if ResponsiveNavigation would be fixed to *Top* or *Bottom* of the screen (or fixed to *Nothing*).
+The `ResponsiveNavigation` has also the `FixedTo` property which controls whether the navbar is fixed to *Top* or *Bottom* of the screen, or fixed to *Nothing* (which is the default value).
 
-Items Inside ResponsiveNavigation can be aligned to left or right by putting items into `LeftAlignedItemsTemplate` or `RightAlignedItemsTemplate`.   
-When you are using other items than `<bs:NavigationItem>` (DropDownButton,...) you **HAVE TO** put them in `LeftAlignedItemsTemplate` or `RightAlignedItemsTemplate`.    
-
-When using only  `<bs:NavigationItem>` that you want Left aligned you don't have to place them into those templates, those items will be aligned to the left automatically when placed outside those templates.
+The items inside the `ResponsiveNavigation` can also be aligned to the left or right side by placing the items into the `LeftAlignedItemsTemplate` and `RightAlignedItemsTemplate` properties.   
+If you need to use other items than [NavigationItem](/docs/controls/bootstrap/NavigationItsm/{branch}) (e.g. the [DropDownButton](/docs/controls/bootstrap/DropDownButton/{branch}), 
+you have to place them in the `LeftAlignedItemsTemplate` or `RightAlignedItemsTemplate` element.

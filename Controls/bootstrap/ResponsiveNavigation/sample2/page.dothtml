@@ -1,4 +1,9 @@
-﻿<bs:ResponsiveNavigation HeaderImageUrl="~/Images/person.png" HeaderText="Alt text for image" HeaderLinkUrl="http://www.dotvvm.com" IsInverted="true" IsStaticTop="true">
-  <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
-  <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3 Schools" />
+﻿<bs:ResponsiveNavigation 
+        HeaderImageUrl="~/Images/person.png" 
+        HeaderText="Alt text for image" 
+        HeaderLinkUrl="http://www.dotvvm.com" 
+        IsInverted="true" 
+        IsStaticTop="true">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" />
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3 Schools" />
 </bs:ResponsiveNavigation>

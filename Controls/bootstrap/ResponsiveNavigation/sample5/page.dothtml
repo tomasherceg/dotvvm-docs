@@ -1,4 +1,6 @@
-﻿<bs:ResponsiveNavigation HeaderText="If this menu cannot fit screen it will collapse to button." IsResponsivelyCollapsing="true" data-ui="allow-collapsing-to-button">
+﻿<bs:ResponsiveNavigation 
+    HeaderText="If this menu cannot fit screen it will collapse to button." 
+    IsResponsivelyCollapsing="true">
   <CollapseButtonTemplate>
     <bs:GlyphIcon Icon="Arrow_down" />
   </CollapseButtonTemplate>

@@ -1,5 +1,6 @@
 ### Sample 1: Basic Usage
 
-Each link in Responsive navigation is represented by NavigationItem. The `HeaderText` property stores text that will be placed in the Header section of ResponsiveNavigation control. If the `HeaderLinkUrl` property is set than the header section of ResponsiveNavigation will link to the selected URL.
+Each menu item in the `ResponsiveNavigation` control is represented by the [NavigationItem](/docs/controls/bootstrap/NavigationItem/{branch}) control. 
 
-NOTE: For more information about NavigationItems see [NavigationItem documentation](/docs/controls/bootstrap/NavigationItem/{branch}).
+The `HeaderText` property specifies the text that will be placed in the logo section of the navbar. 
+If the `HeaderLinkUrl` property is set, the header will be rendered as a hyperlink for that URL.

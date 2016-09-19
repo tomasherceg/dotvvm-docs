@@ -1,9 +1,11 @@
-### Sample 6: ResponsiveNavigation with items loaded from data source
+### Sample 6: ResponsiveNavigation Data-Binding
 
-The ResponsiveNavigation has several properties which you can use to load items from ViewModel.
+The `ResponsiveNavigation` can be also used with the `DataSource` property to generate the menu items from the collection.
 
-To load items from collection, use `DataSource` property.  
-Source of displayed text must be configured in `TextBinding` *string* propery.  
-Source of item url must be set in `NavigateUrlBinding` property.  
-When you want to control enabled status of items loaded form DataSource you can do so by  `IsDisabledBinding` *bool* property.
-To style loaded items as selected use `IsSelectedBinding` *bool* property.
+The `TextBinding` property specifies which property of the collection items will be used as the text of the menu item.
+
+The `NavigateUrlBinding` property specifies which property will be used as the URL of the hyperlink.
+
+You can also use the `IsDisabledBinding` to specify which property controls whether the menu item is disabled or enabled.
+
+Also, there is the `IsSelectedBinding` property which controls whether the menu item is selected.

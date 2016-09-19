@@ -1,6 +1,8 @@
 ### Sample 2: Advanced ResponsiveNavigation
 
-If the `HeaderImageUrl` is set, than the header section will contain that image and `HeaderText` will be used as alternate text for this image.
+If the `HeaderImageUrl` is set, the header section will render the image and the value of the `HeaderText` property will be used for the alternate text of the image.
 
-The `IsInverted` property controls style of ResponsiveNavigation.
-The `IsStaticTop` property controls if the ResponsiveNavigation is full-width navbar that scrolls away with the page. It removes the left, right and top border so that it looks better at the top of the page if set to *true*.
+The `IsInverted` property can swithc the navbar in the inverse colors.
+
+The `IsStaticTop` property controls whether the `ResponsiveNavigation` is full-width navbar that scrolls away with the page. 
+It also removes the left, right and top border to make it look better at the top of the page.
