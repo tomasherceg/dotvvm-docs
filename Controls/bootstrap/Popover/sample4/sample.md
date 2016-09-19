@@ -1,6 +1,6 @@
-### Sample 4: Popover animation, delay and container
+### Sample 4: Popover Animation, Delay and Container
 
-The `Popover` control uses by default a CSS fade transition. It is possible to not apply it with the `Animation` property set to *false*.
+The `Popover` control uses by default a CSS fade transition. It is possible to disable it using the `EnableAnimation` property.
 
 The `Delay` property is used to delay showing and hiding of the popover (value represents number of milliseconds).
 

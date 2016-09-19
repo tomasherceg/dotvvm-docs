@@ -1,3 +1,3 @@
 ### Sample 5: Allowing HTML in Title and Content
 
-Properties `Title` and `Content` can also contain valid HTML. For correct rendering the `AllowHtmlInTitleAndContent` property needs to be set to *true*.
+The `Title` and `Content` properties can also contain HTML. You can allow HTML in these properties using the `AllowHtmlInTitleAndContent` property.

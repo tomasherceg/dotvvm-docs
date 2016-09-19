@@ -1,4 +1,4 @@
-﻿<bs:Popover Title="Title" Content="Content text" Animation="false">
+﻿<bs:Popover Title="Title" Content="Content text" EnableAnimation="false">
     <bs:Button Text="Text" Type="Danger" />
 </bs:Popover>
 
