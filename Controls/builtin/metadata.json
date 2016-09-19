@@ -944,7 +944,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "GridView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List`1",
+        "PropertyTypeName": "List<Decorator>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -989,7 +989,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "GridView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List`1",
+        "PropertyTypeName": "List<GridViewColumn>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -1019,7 +1019,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "GridView",
         "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Action`1",
+        "PropertyTypeName": "Action<String>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
@@ -1049,7 +1049,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "GridView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List`1",
+        "PropertyTypeName": "List<Decorator>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -1211,7 +1211,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1271,7 +1271,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1400,7 +1400,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1460,7 +1460,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1604,7 +1604,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1664,7 +1664,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1838,7 +1838,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -1913,7 +1913,7 @@
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
