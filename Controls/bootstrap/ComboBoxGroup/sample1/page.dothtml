@@ -1,0 +1,2 @@
+﻿<bs:ComboBoxGroup LabelText="Animals" DataSource="{value: Animals}" SelectedValue="{value: SelectedAnimal}" />
+<span>Selected: {{value: SelectedAnimal}}</span>

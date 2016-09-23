@@ -1,0 +1,1 @@
+Represents a group of Label and ComboBox in the Form control.

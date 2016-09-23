@@ -1,0 +1,13 @@
+﻿<span>Selected: {{value: SelectedAnimal}}</span>
+
+<bs:ComboBoxGroup LabelText="Enabled" DataSource="{value: Animals}" SelectedValue="{value: SelectedAnimal}" Enabled="{value: TrueValue}" />
+
+<bs:ComboBoxGroup LabelText="Disabled" DataSource="{value: Animals}" SelectedValue="{value: SelectedAnimal}" Enabled="{value: FalseValue}" />
+
+<bs:ComboBoxGroup LabelText="Visible" DataSource="{value: Animals}" SelectedValue="{value: SelectedAnimal}" Visible="{value: TrueValue}" />
+
+<bs:ComboBoxGroup LabelText="Invisible" DataSource="{value: Animals}" SelectedValue="{value: SelectedAnimal}" Visible="{value: FalseValue}" />
+
+<bs:ComboBoxGroup LabelText="Animals" DataSource="{value: Animals}" SelectedValue="{value: SelectedAnimal2}" EmptyItemText="Select..." />
+
+<span>Selected: {{value: SelectedAnimal2}}</span>

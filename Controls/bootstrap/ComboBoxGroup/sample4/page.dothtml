@@ -1,0 +1,4 @@
+﻿<bs:ComboBoxGroup EmptyItemText="Select..." LabelText="Select prime number" DataSource="{value: Numbers}" 
+                  SelectedValue="{value: SelectedNumber}" SelectionChanged="{command: SelectionChanged()}" />
+
+<span>{{value: Result}}</span>
