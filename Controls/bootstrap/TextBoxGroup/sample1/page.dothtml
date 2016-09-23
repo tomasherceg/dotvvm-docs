@@ -1,0 +1,5 @@
+﻿<bs:TextBoxGroup LabelText="Static label" Text="Static value" />
+
+<bs:TextBoxGroup LabelText="{value: LabelText}" Text="{value: ValueText}" />
+
+<bs:TextBoxGroup LabelText="No value" />

@@ -1,0 +1,7 @@
+﻿<bs:TextBoxGroup LabelText="Label" Text="Enabled textbox" Enabled="true" />
+
+<bs:TextBoxGroup LabelText="Label" Text="Disabled textbox" Enabled="false" />
+
+<bs:TextBoxGroup LabelText="Label" Text="Visible textbox" Visible="{value: TrueValue}" />
+
+<bs:TextBoxGroup LabelText="Label" Text="Invisible textbox" Visible="{value: FalseValue}" />
