@@ -45,7 +45,7 @@ attribute or as an child element, is decided by the developer of the control. Th
 and it will tell you which controls and properties are available.
 
 If you want to apply any other HTML attribute to a control, you can do it on most of the controls. Notice the **style** attribute applied to the 
-**Repeater** contron in our example. The most common use case for this is adding a **class** attribute to some control.
+**Repeater** control in our example. The most common use case for this is adding a **class** attribute to some control.
 
 
 
