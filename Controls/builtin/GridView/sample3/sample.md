@@ -6,7 +6,7 @@
 
 #### Required Properties
 
-The most important property is the `ItemTemplate` which defines the content of each table cell.
+The most important property is the `ContentTemplate` which defines the content of each table cell.
 
 You can also customize the header cell using the `HeaderText` property, or the `HeaderTemplate` template.
 
