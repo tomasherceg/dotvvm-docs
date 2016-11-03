@@ -17,6 +17,12 @@ Currently, the following attributes are evaluated on the client side:
 However, all rules including those that cannot be translated to javascript, are still executed on the server side, 
 and the validation errors will be displayed to the user in case the validation fails.
 
+It's also possible to use only server side validation by turning client side validation off in the [configuration](/docs/tutorials/basics-configuration/{branch}).
+This allows that all validations will be checked even if one of the client side supported validations fails.
+```CSHARP
+config.ClientSideValidation = false;
+```
+
 Apply the validation attributes on viewmodel properties. Optionally, you can set the `ErrorMessage` parameter directly, or use the 
 other parameters of the `Required` attribute to get localized error message from the resource file.
 
