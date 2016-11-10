@@ -1,0 +1,1 @@
+Allows to display different content to users who have a specific claim.

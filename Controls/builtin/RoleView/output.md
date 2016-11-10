@@ -1,5 +1,5 @@
-The control renders the `<div>` element containing the contents of the `IsMemberTemplate` or `IsNotMemberTemplate` property.
-You can change the tag name using the `WrapperTagName` property, or you can disable the wrapper tag completely using the `RenderWrapperTag` property.
+The control renders the contents of the `IsMemberTemplate` or `IsNotMemberTemplate` property. Optionally you can enable wrapper tag rendering using
+the `RenderWrapperTag` property. The tag name can be changed using the `WrapperTagName` property.
 
 ```DOTHTML
 <div>

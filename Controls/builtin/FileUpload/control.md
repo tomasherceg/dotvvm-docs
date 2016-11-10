@@ -38,15 +38,21 @@ var storage = Context.Configuration.ServiceLocator.GetService<IUploadedFileStora
 
 foreach (var file in myUploadedFilesCollection.Files)
 {
-  // get the stream of the uploaded file and do whatever you need to do
-  var stream = storage.GetFile(file.FileId);
+  if (file.Allowed)
+  {
+    // get the stream of the uploaded file and do whatever you need to do
+    var stream = storage.GetFile(file.FileId);
 
-  // OR you can just move the file from the temporary storage somewhere else
-  var targetPath = Path.Combine(uploadPath, file.FileId + ".bin");
-  storage.SaveAs(file.FileId, targetPath);
-  
-  // it is a good idea to delete the file from the temporary storage 
-  // it is not required, the file would be deleted automatically after the timeout set in the DotvvmStartup.cs
-  storage.DeleteFile(file.FileId);
+    // OR you can just move the file from the temporary storage somewhere else
+    var targetPath = Path.Combine(uploadPath, file.FileId + ".bin");
+    storage.SaveAs(file.FileId, targetPath);
+    
+    // it is a good idea to delete the file from the temporary storage 
+    // it is not required, the file would be deleted automatically after the timeout set in the DotvvmStartup.cs
+    storage.DeleteFile(file.FileId);
+  }
 }
 ```
+
+A file is not `Allowed` when it's type does not match the `AllowedFileTypes` definition or when it's size exceeds the `MaxFileSize`. See also
+the `FileTypeAllowed` and `MaxSizeExceeded` properties. You can use them to find out why the file is not allowed.

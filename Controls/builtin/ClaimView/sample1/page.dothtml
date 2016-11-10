@@ -1,0 +1,8 @@
+<dot:ClaimView Claim="Permission" Values="CanAddUsers" HideForAnonymousUsers="false">
+    <HasClaimTemplate>
+        I can add new users.
+    </HasClaimTemplate>
+    <HasNotClaimTemplate>
+        I can't add new users.
+    </HasNotClaimTemplate>
+</dot:ClaimView>

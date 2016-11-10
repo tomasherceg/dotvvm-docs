@@ -1,0 +1,12 @@
+<dot:EnvironmentView Environments="Production,Development">
+    Production or Development environment.
+</dot:EnvironmentView>
+
+<dot:EnvironmentView Environments="Staging">
+    <IsEnvironmentTemplate>
+        Staging environment.
+    </IsEnvironmentTemplate>
+    <IsNotEnvironmentTemplate>
+        Other environment.
+    </IsNotEnvironmentTemplate>
+</dot:EnvironmentView>
