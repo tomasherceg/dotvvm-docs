@@ -6,5 +6,5 @@ The `IsMemberTemplate` defines the content displayed to the users who are member
 
 The `IsNotMemberTemplate` defines the content displayed to other users.
 
-By default, the control is hidden completely to the users who are not authenticated. If you want to display the `IsNotMemberTemplate` even to the 
-non-authenticated users, set the `HideToNonAuthenticatedUsers` property to `false`. 
+By default, the control is hidden completely to the users who are not authenticated. If you want to display the `IsNotMemberTemplate`
+even to the anonymous users, set the `HideForAnonymousUsers` property to `false`.

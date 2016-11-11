@@ -2499,10 +2499,10 @@
             Gets or sets the content displayed to the users which are not in any of the roles specified by the Roles property.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.RoleView.HideNonAuthenticatedUsers">
+        <member name="P:DotVVM.Framework.Controls.RoleView.HideForAnonymousUsers">
             <summary>
-            Gets or sets whether the control will be hidden completely to users which are not authenticated.
-            If set to false, the IsNotMemberTemplate will be rendered to non-authenticated users.
+            Gets or sets whether the control will be hidden completely to anonymous users. If set to <c>false</c>,
+            the <see cref="P:DotVVM.Framework.Controls.RoleView.IsNotMemberTemplate" /> will be rendered to anonymous users.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.RouteLink">
