@@ -177,3 +177,70 @@ protected override void AddAttributesToRender(IHtmlWriter writer, IDotvvmRequest
     base.AddAttributesToRender(writer, context);
 }
 ```
+### Creating controls by building control tree
+
+Alternative to using `writer` for creating the HTML is building control tree from existing controls.
+
+This is especially handy when you need to compose complex control from already existing ones.
+
+This approach results in cleaner code, but it can be slower than using a `writer` (creating a div using `new HtmlGenericControl ("div")` is slower than using `writer.RenderBeginTag("div")` because `HtmlGenericControl` has some properties that you don’t need (e.q `Visible`,`Enabled`, etc)).
+
+#### Let's implement TextBox with Label.
+This control will be composed from two existing controls (`TextBox` and `Literal`) placed in a div.
+
+##### Wraper tag
+A tag that will be used for wrapper is specified in the constructor.
+
+```CSHARP
+public class TextBoxWithLabel : HtmlGenericControl
+{
+    public TextBoxWithLabel() : base("div")
+    {
+    }
+}
+```
+###### Properties
+Next step is to create required properties `Text` and `LabelText`.
+
+Both of them are `Required`, `Text` cannot contain hard coded values and `LabelText` cannot contain binding.
+
+You can modify the behavior of properties by using `MarkupOptions`.
+
+```CSHARP
+[MarkupOptions(AllowHardCodedValue = false)]
+public string Text
+{
+    get { return (string)GetValue(TextProperty); }
+    set { SetValue(TextProperty, value); }
+}
+public static readonly DotvvmProperty TextProperty
+    = DotvvmProperty.Register<string, TextBoxWithLabel>(c => c.Text, null);
+
+[MarkupOptions(AllowBinding = false)]
+public string LabelText
+{
+    get { return (string)GetValue(LabelTextProperty); }
+    set { SetValue(LabelTextProperty, value); }
+}
+public static readonly DotvvmProperty LabelTextProperty
+    = DotvvmProperty.Register<string, TextBoxWithLabel>(c => c.LabelText, null);
+```
+###### Building control tree
+Now only thing left to do is to build control tree.
+
+This has to be done before `OnPreRender` is called (i. e. in `OnInit` or `OnLoad` methods) because doing this later can couse *`illegal command invocation`*.
+
+```CSHARP
+protected override void OnLoad(IDotvvmRequestContext context)
+{
+    var textBox = new TextBox();
+    textBox.SetBinding(TextBox.TextProperty, GetValueBinding(TextProperty));
+
+    var label = new Literal(LabelText);
+
+    Children.Add(label);
+    Children.Add(textBox);
+
+    base.OnLoad(context);
+}
+```
