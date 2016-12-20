@@ -11,7 +11,7 @@ You can attach a postback handler to any control using the `PostBack.Handlers` p
 ```DOTHTML
 <dot:Button Text="Submit" Click="{command: Submit()}">
     <PostBack.Handlers>
-        <dot:ConfirmPostBackHandler Message="Are you really want to submit the form?" />
+        <dot:ConfirmPostBackHandler Message="Do you really want to submit the form?" />
     </PostBack.Handlers>
 </dot:Button>
 ```
