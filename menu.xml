@@ -5,6 +5,7 @@
 		<DocPageMenuItem RouteName="dotnet-451" PageName="Create a new project (ASP.NET 4.5.1)" />
 		<DocPageMenuItem RouteName="dnx" PageName="Create a new project (ASP.NET Core)" />
 		<DocPageMenuItem RouteName="existing-app" PageName="Add DotVVM to existing app" />
+		<DocPageMenuItem RouteName="upgrade-from-1.0" PageName="Upgrading from DotVVM 1.0" />
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="basics" PageName="Basics">
 		<DocPageMenuItem RouteName="project-structure" PageName="DotVVM Project Contents" />

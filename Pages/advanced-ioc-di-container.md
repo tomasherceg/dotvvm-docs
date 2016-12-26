@@ -23,15 +23,15 @@ First, you have to create your own `ViewModelLoader`. We recommend to inherit fr
 ```CSHARP
 using System;
 using Castle.Windsor;
-using DotVVM.Framework.Runtime;
+using DotVVM.Framework.ViewModel.Serialization;
 
-namespace DotvvmWeb.Installers
+namespace Riganti.IS.Web.Installers
 {
     public class WindsorViewModelLoader : DefaultViewModelLoader
     {
         private readonly WindsorContainer container;
 
-        public WindsorViewModelLoader(WindsorContainer container)
+        public WindsorViewModelLoader(WindsorContainer container, IServiceProvider serviceProvider) : base(serviceProvider)
         {
             this.container = container;
         }
