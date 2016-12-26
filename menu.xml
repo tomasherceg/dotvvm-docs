@@ -3,7 +3,7 @@
 	<DocPageMenuItem RouteName="introduction" PageName="Introduction" />
 	<DocPageMenuItem RouteName="how-to-start" PageName="How To Start">
 		<DocPageMenuItem RouteName="dotnet-451" PageName="Create a new project (ASP.NET 4.5.1)" />
-		<DocPageMenuItem RouteName="dnx" PageName="Create a new project (.NET Core and DNX)" />
+		<DocPageMenuItem RouteName="dnx" PageName="Create a new project (ASP.NET Core)" />
 		<DocPageMenuItem RouteName="existing-app" PageName="Add DotVVM to existing app" />
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="basics" PageName="Basics">
