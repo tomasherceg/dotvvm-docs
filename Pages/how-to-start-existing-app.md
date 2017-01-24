@@ -6,22 +6,18 @@ DotVVM is yet another OWIN / ASP.NET Core middleware that can be added in the re
 
 ### Installing the Nuget Package (OWIN)
 
-If you use classic .NET Framework project, you are most probably using **OWIN** to compose your web application.
+To add **DotVVM** in an existing ASP.NET project, simply install **DotVVM** Nuget package using Package Manager Console:
 
-To add **DotVVM** in an existing ASP.NET project with OWIN, simply install `DotVVM.Owin` Nuget package using Package Manager Console:
+    Install-Package DotVVM -Pre
 
-    Install-Package DotVVM.Owin -Pre
+The package will add a reference to **DotVVM.Framework** and **DotVVM.Core** libraries to the project.
 
-The package will reference **DotVVM.Framework** and **DotVVM.Framework.Hosting.Owin** libraries in the project.
+#### Initialization
 
+The next thing you have to do, is to register the DotVVM middleware to the OWIN pipeline. In your OWIN startup class, you have to register the DotVVM middleware. 
 
-### Initialization
-
-The next thing you have to do, is to register the DotVVM middleware. In your Owin startup class, you have to add the 
-DotVVM middleware. If you are using some authentication middlewares, remember that these should be registered first.
-
-If you don't have an Owin startup class in your projects, right click the project in the Solution Explorer window and 
-add new _OWIN Startup Class_ in the project. It should look like this. 
+If you don't have an OWIN startup class in your projects, right click the project in the __Solution Explorer__ window and 
+add a new _OWIN Startup Class_ in the project. It should look like this:
 
 ```CSHARP
 using System.Web.Hosting;
@@ -49,7 +45,7 @@ namespace DotvvmDemo
 
 ### Installing the Nuget Package (ASP.NET Core)
 
-If you use .NET Core, or the new ASP.NET Core stack, you need ASP.NET Core version of DotVVM.
+If you use the new ASP.NET Core stack, you need the ASP.NET Core version of DotVVM.
 
 To add **DotVVM** in an existing ASP.NET Core project, simply install `DotVVM.AspNetCore` Nuget package using Package Manager Console:
 
@@ -58,7 +54,7 @@ To add **DotVVM** in an existing ASP.NET Core project, simply install `DotVVM.As
 The package will reference **DotVVM.Framework** and **DotVVM.Framework.Hosting.AspNetCore** libraries in the project.
 
 
-### Initialization
+#### Initialization
 
 You have to do two things in the `Startup` class:
 
@@ -99,8 +95,8 @@ namespace DotvvmDemo
     {
         public void Configure(DotvvmConfiguration config, string applicationPath)
         {
-#if DEBUG
-            config.Debug = true;
+#if !DEBUG
+            config.Debug = false;
 #endif
 
             // register your routes, controls and resources here
@@ -108,3 +104,7 @@ namespace DotvvmDemo
     }
 }
 ```
+
+
+> Please note that in **DotVVM 1.0**, the NuGet package name is `DotVVM`. This package contains the OWIN hosting infrastructure.
+> If you use **[DotVVM 1.1 or higher](/docs/tutorials/how-to-start-existing-app/1-1)**, you need to install either `DotVVM.Owin` or `DotVVM.AspNetCore` package, depending on the project type you are using. The `DotVVM` package contains the framework classes only. 
