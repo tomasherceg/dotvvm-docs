@@ -1,7 +1,5 @@
-## Create a new project (DNX)
+## Create a New Project (ASP.NET Core)
 
-**DotVVM** is going to support the DNX and new .NET Core however we are not ready for the complete switch yet.
-After version 1.0 is out, we'll start with the .NET Core version.
+**DotVVM 1.0** doesn't support ASP.NET Core platform.
 
-
-If you can't wait, you can [help us](https://github.com/riganti/dotvvm).
+To use ASP.NET Core, please use [DotVVM 1.1](/docs/tutorials/how-to-start-dnx/1-1) or newer.

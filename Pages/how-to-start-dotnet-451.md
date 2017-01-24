@@ -1,10 +1,15 @@
-## Create a new project (ASP.NET 4.5.1)
+## Create a New Project (ASP.NET 4.5)
 
-Creating a new **DotVVM** project is really simple. First, download and install the [DotVVM for Visual Studio 2015](https://www.dotvvm.com/landing/dotvvm-for-visual-studio-extension) extension.
+Creating a new **DotVVM** project is really simple. 
 
-After the installation completes, just run the **Visual Studio 2015** and click the **Start New Project** link.
-You should see the **ASP.NET DotVVM Project** in the **Web** category.
+First, download and install the [DotVVM for Visual Studio](https://www.dotvvm.com/landing/dotvvm-for-visual-studio-extension) extension.
 
-<img src="{imageDir}how-to-start-dotnet-451_img1.png" alt="Creating a new ASP.NET DotVVM Project" />
+After the installation completes, run the **Visual Studio** and click the **Start New Project** link.
+
+You should see the **DotVVM Web Application (OWIN on .NET Framework)** in the **Web** category.
+
+<img src="{imageDir}how-to-start-dotnet-451_img1.png" alt="Creating a new DotVVM OWIN Project" />
+
+After you confirm the selection, **Visual Studio** will create the project and install all required NuGet packages.
 
 
