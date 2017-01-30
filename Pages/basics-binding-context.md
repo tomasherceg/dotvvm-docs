@@ -1,19 +1,31 @@
 ﻿## Binding Context
 
-Each HTML element or DotVVM control has the `DataContext` property. Using this property, you can change the context in which the binding is evaluated.
+In **DotVVM**, each HTML element or DotVVM control has the `DataContext` property. Using this property, you can change the context in which data bindings are evaluated.
+
+Let's have the following view and viewmodel:
+
+<div>
+<ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active">
+        <a href="#view" role="tab" data-toggle="tab">page.dothtml</a>
+    </li>        
+    <li role="presentation">
+        <a href="#viewmodel" role="tab" data-toggle="tab">AddressViewModel.cs</a>
+    </li>
+</ul>
+<div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="view">
 
 ```DOTHTML
-@viewModel AddressViewModel, DotvvmDemo
+	@viewModel AddressViewModel, DotvvmDemo
 
-<div DataContext="{value: Customer}">
-	{{value: Name}}
-</div>
+	<div DataContext="{value: Customer}">
+		{{value: Name}}
+	</div>
 ```
 
-The `DataContext` property in the sample means that all bindings inside the **div** element will be evaluated in the context of the 
-`Customer` property of the viewmodel. 
-
-If you didn't use the `DataContext` binding, the binding inside the **div** would have to be `{value: Customer.Name}`.
+</div>
+<div role="tabpanel" class="tab-pane" id="viewmodel">
 
 ```CSHARP
 public class AddressViewModel {	
@@ -25,18 +37,40 @@ public class Customer {
 }
 ```
 
-There is also one helpful feature. If the `Customer` in the viewmodel is null, the **div** element is hidden and the bindings 
-inside are not evaluated (so you won't get any exceptions). If you don't want to hide the **div** element, just initialize the `Customer` property 
-with some non-null value.
+</div>
+</div>
+</div>
+
+The `DataContext` property will make all bindings on the `<div>` element and all bindings inside this element to be evaluated in the context of the 
+`Customer` property of the viewmodel. 
+
+If the `DataContext` binding is not present, the binding inside the `<div>` would have to be `{{value: Customer.Name}}`.
+
+### Null DataContext
+
+There is also one helpful feature. If the `DataContext` of any element is `null`, the element is removed from the DOM and the bindings inside this element
+are not evaluated at all. 
+
+When you set some value in the `DataContext` property, the element re-appears in the DOM.
+
+If you don't want the `<div>` element to hide, the `DataContext` property must point to some property which is not `null`.
 
 <br>
 
 ### Binding Context Variables
  
-You can use the following reserved names in **command** and **value** expressions:
- 
-* `_root` goes to the top-level ViewModel object.
-* `_parent` goes to the parent binding context.
-* `_parent{#number}` goes to the parent #number times
-* `_this` references the current context. It is useful only if you want to bind directly to the ViewModel object (e.g. if you want to 
-display a collection of strings, or pass current binding context to a method): `{value: _this}`
+Inside elements that change the `DataContext` property, you can use the following binding context variables to navigate the viewmodel hierarchy.
+
+* `_root` accesses the top-level viewmodel (the viewmodel of the page).
+* `_parent` accesses the parent binding context.
+* `_parent2` accesses the parent's parent binding context and so on...
+* `_this` references the current context. It is useful when you need to pass the current `DataContext` e.g. as an argument to a method.
+
+For example, the following binding calls the `DeleteAddress` method in the page viewmodel and passes the current binding context as an argument.
+
+```DOTHTML
+<dot:Button Click="{command: _root.DeleteAddress(_this)}" />
+```
+
+In DotVVM 1.1 and newer versions, there is also a binding context variable `_control` which can access the properties of the user control. 
+See the [Markup Controls](/docs/tutorials/control-development-markup-controls) chapter for more info.
