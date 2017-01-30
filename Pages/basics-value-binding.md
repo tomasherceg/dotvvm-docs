@@ -1,8 +1,10 @@
 ﻿## Value Binding
 
-This binding allows you to bind a property in the ViewModel with some control's property in the DOTHTML file, or just render it as a text.
+The **value binding** is the most frequently used binding in DotVVM.
+
+It allows you to bind a property in the viewmodel to a property of a control in the DOTHTML file, or just render the value as a text.
  
-Let's have the following ViewModel:
+Let's have the following viewmodel:
 
 ```CSHARP
 public class MyViewModel {
@@ -12,49 +14,49 @@ public class MyViewModel {
 }
 ```
 
-In the DOTHTML markup, you can bind the property for example to the hyperlink:
+In the DOTHTML markup, we can bind the property to the hyperlink's `href` attribute:
 
 ```DOTHTML
 <a href="{value: Url}">Go To URL</a>
 ```
 
 If you run the page and view the page source code, you'll see that DotVVM translated the binding into a Knockout JS expression. DotVVM uses this 
-popular framework to do the data-binding.
+popular JavaScript framework to perform the data binding.
  
-This is the HTML that is rendered to the client:
+This is the HTML that will be rendered and sent to the browser:
 
 ```DOTHTML
 <a data-bind="attr: { 'href': Url }">Go To URL</a>
 ```
 
-The word **value** indicates the type of the binding - value binding in this case. **Url** is an expression that will be evaluated in the client's browser.
-The expression can only use public properties, access collection elements and use several supported operators. 
-You cannot, for example, call functions from the value binding.
+The word `value` represents the type of the data binding. 
 
-### Supported Expressions
+The `Url` is an expression that will be evaluated in the client's browser. The expression can use the public properties from the viewmodel, 
+access elements of collections and use supported operators. 
+
+You cannot, for example, call methods from the value bindings.
+
+### Expressions Supported in Value Bindings
 
 * `SomeProperty`
-
 * `SomeProperty.OtherProperty`
-
 * `SomeCollection[6]`
-
 * `SomeCollection[6].OtherProperty`
-
 * `SomeProperty >= 0`
-
 * `SomeProperty ? "active" : ""`
-
 * `SomeProperty != OtherProperty`
 
-If you use the `ICollection.Count` and `Array.Length` property, they are correctly translated to javascript - 
-they simply call `length` on the javascript array.
+If you use the `ICollection.Count` or `Array.Length` property, they will be translated to JavaScript to use the `length` property on the JavaScript array.
 
-_You don't have to be afraid of null values - if a part of the expression evaluates to null, the rest is not evaluated and the result of the evaluation is null. Internally, we treat every `.` as `.?` in C# 6._
+### Null Handling in Value Bindings
+
+You don't have to be afraid of `null` values. If some part of the expression evaluates to null, the whole expression will return null. 
+
+Internally, DotVVM treats every `.` as `.?` in C# 6.
 
 ### Double and Single Quotes
 
-Because the bindings can be used in HTML attributes which are often wrapped in double quotes, DotVVM allows to use single quotes (apostrophes) for strings as well.
+Because the bindings in HTML attributes are often wrapped in double quotes, DotVVM allows to use single quotes (apostrophes) for strings as well.
 
 ```DOTHTML
 <a class="{value: Active ? 'active' : 'not-active' }"></a>
@@ -62,8 +64,9 @@ Because the bindings can be used in HTML attributes which are often wrapped in d
 
 ### Enums
 
-If you have a property of enum type in your viewmodel, you may need to work with that value in the binding. Please note that enum values are converted to
-string on the client side, so you can compare the value with strings.
+If you have a property of an enum type in your viewmodel, you may need to work with that value in the binding. 
+
+In DotVVM, the enum values are converted to strings on the client side, so you can compare the value with strings.
 
 ```CSHARP
 public class MyViewModel {
