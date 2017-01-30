@@ -1,49 +1,57 @@
 ## Binding Syntax
 
-One of the most interesting and powerful things in **DotVVM** is the data binding. The magic of writing "javascript apps" in C#
-is the ability to translate binding expressions to javascript. 
+One of the most useful things in **DotVVM** is the **data binding**. The magic of writing "rich client-side apps" without using JavaScript
+is the ability of DotVVM to translate binding expressions to JavaScript. 
 
-All data bindings are **strongly typed** and compiled before the page is loaded the first time. Currently, dynamic types are not supported. 
-Therefore, each master page has to specify the viewmodel class or an interface, because we have to be able to compile those bindings and 
-map them to a correct type.
+All data bindings are **strongly typed** and compiled right before the page is accessed for the first time. Dynamic types are not supported yet.
+
+Therefore, each master page has to specify the `@viewModel` directive so the binding compiler can verify the correctness of the expression and compile it.
 
 There are several types of data binding in **DotVVM**. 
 
-* `{value: Property}` - picks the value of a specified property from the viewmodel.
-* `{command: Function()}` - executes the specified function in the viewmodel.
+* `{value: Property}` - accesses the value of a specified property from the viewmodel.
+* `{command: Function()}` - executes the specified method in the viewmodel. 
+* `{staticCommand: Function()}` - executes a static method in the viewmodel.
 * `{resource: ResourceFile.ResourceKey}` - gets the resource entry value from the specified RESX file.
 
-There are also _controlCommand_ and _controlProperty_ bindings. They are intended to be used by control developers and they are described
-in the [Markup Controls](/docs/tutorials/control-development-markup-only-controls/{branch}) section.
+There are also the `controlCommand` and `controlProperty` bindings. They are used when writing your own user controls.
+You can find more about them in the [Markup Controls](/docs/tutorials/control-development-markup-only-controls/{branch}) section.
 
-> The [DotVVM Pro for Visual Studio 2015](/landing/dotvvm-for-visual-studio-extension) has the IntelliSense for expressions in all types of bindings. 
-
-
+> The commercial version of [DotVVM for Visual Studio](/landing/dotvvm-for-visual-studio-extension) shows the IntelliSense for expressions in all types 
+of bindings. 
 
 ### Usage
 
-We can use data binding almost everywhere in the DOTHTML. The databinding transfers the data between the View (DOTHTML markup) and the ViewModel. 
+We can use a data binding expression almost everywhere in DOTHTML. 
 
-The databinding uses the following syntax:
+The binding expression is enclosed in curly braces and has two parts:
+
+* Binding type - e.g. `value`, `command` etc.
+* Binding expression - a C#-like expression (with some restrictions and some enhancements).
+
+For example, to bind some value from the viewmodel to a HTML attribute, you can use this syntax:
  
 ```DOTHTML
-<element property="{value: bindingExpression}" />
+<a href="{value: Url}">...</a>
 ```
 
-There are several binding types, the most common are **value** and **command** bindings. The binding expression is a piece of code in a language 
-similar to C# (with some restrictions and some enhancements).
-
-If you want to use the binding in the page text, you have to use double curly braces. This is because of `<script>` 
-and `<style>` elements in which the curly braces have special meaning.
+If you want to render the value as a text, you have to use double curly braces. That is because of the `<script>` and `<style>` elements.
+The curly braces have special meaning inside these elements.
 
 ```DOTHTML
-...some text {{value: bindingExpression}} some text...
+<p>Hello {{value: YourName}}!</p>
 ```
 
-It is not possible to use the binding in the attribute value when another content is there:
+It is not possible to use the binding expression in the HTML attribute value in combination with another content:
 
 ```DOTHTML
-<!-- this does not work - the whole attribute value has to be a binding! -->
-<element property="something {value: bindingExpression}" />
+<!-- This does not work - the whole attribute value has to be a data binding! -->
+<a class="tab {value: AdditionalLinkClass}">...</a>
 ```
 
+However, you can use expressions inside the binding, so you can combine the values easily:
+
+```DOTHTML
+<!-- This works - the whole attribute is a data binding! -->
+<a class="{value: "tab " + AdditionalLinkClass}">...</a>
+```

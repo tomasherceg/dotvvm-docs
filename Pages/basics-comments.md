@@ -1,30 +1,39 @@
 ## Comments
 
-You can have client-side or server-side comments in your `.dothtml` files
+Sometimes, you need to comment something out of the display. 
 
- Client-side comment - will appear in generated html files
+In DotVVM, there are two types of comments.
+
+### Client-side Comment
+
+The **client-side comments** have the same syntax and rules as the HTML comment.
 
 ```DOTHTML
- <!-- client comment -->
+<p>
+    <!-- The client-side comment is rendered to the HTML output. -->
+</p>
 ```
 
- Server-side comment - won't appear in generated html files
+DotVVM keeps these comments as they are, so they are rendered and sent to the browser.
+
+They are not displayed to the user, but anyone can read them when looking at the page source or using the developer tools in the browser. 
+
+### Server-side Comment
+
+To remove a fragment of code from the rendered output, use the **server-side comments**.
 
 ```DOTHTML
-<%-- server comment --%>
+<p>
+    <%-- This server-side comment is removed from the HTML output. --%>
+</p>
 ```
 
- You can also put server-side comments between attributes
+You can also use server-side comments inside tags, like this:
 
 ```DOTHTML
-<dot:GridView DataSource="{value: Source}" <%-- server comment in attributes--%> class="table">
-    <Columns>
-        <dot:GridViewTemplateColumn HeaderText="" CssClass="center button-column">
-            <ContentTemplate>
-                <dot:LinkButton Click="{command:  _root.Click}" <%-- server comment in attributes--%> class="button">
-                </dot:LinkButton>
-            </ContentTemplate>
-        </dot:GridViewTemplateColumn>
-    </Columns>
+<dot:GridView DataSource="{value: Source}" <%-- server comment in attributes --%> class="table">
+    ...
 </dot:GridView>
 ```
+
+> If you want to comment parts of the markup with controls, it is better to use the server-side comment, so the commented code cannot be read by the user.
