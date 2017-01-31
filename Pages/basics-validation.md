@@ -14,7 +14,7 @@ Currently, the following attributes are evaluated on the client side:
 + `RegularExpression`
 + `Range`
 
-However, all rules including those that cannot be translated to javascript, are still executed on the server side, 
+However, all rules including those that can be translated to javascript, are still executed on the server side, 
 and the validation errors will be displayed to the user in case the validation fails.
 
 It's also possible to use only server side validation by turning client side validation off in the [configuration](/docs/tutorials/basics-configuration/{branch}).
@@ -53,11 +53,11 @@ This will display the `*` character when the field contains invalid value. The `
 
 The `Validator` control has several properties you can combine as you need:
 
-* `HideWhenValid` - set to **false** if you need the control to remain visible even when the field is valid.
+* `HideWhenValid` - set to **false** if you need this control to remain visible even when the field is valid.
 
-* `InvalidCssClass` - the CSS class specified in this property will be set to the control when the field is not valid. 
+* `InvalidCssClass` - the CSS class specified in this property will be set to this control when the field is not valid. 
 
-* `ShowErrorMessageText` - the text of the error message will be displayed inside the control.
+* `ShowErrorMessageText` - the text of the error message will be displayed inside this control.
 
 * `SetToolTipText` - the text of the error message will be set as the `title` attribute of the element.
 
