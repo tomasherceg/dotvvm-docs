@@ -69,7 +69,9 @@ Inside elements that change the `DataContext` property, you can use the followin
 For example, the following binding calls the `DeleteAddress` method in the page viewmodel and passes the current binding context as an argument.
 
 ```DOTHTML
-<dot:Button Click="{command: _root.DeleteAddress(_this)}" />
+<div DataContext="{value: Company}">
+	<dot:Button Click="{command: _root.DeleteAddress(_this)}" />
+</div>
 ```
 
 In DotVVM 1.1 and newer versions, there is also a binding context variable `_control` which can access the properties of the user control. 
