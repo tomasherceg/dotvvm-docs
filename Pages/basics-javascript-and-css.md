@@ -1,6 +1,6 @@
 ## Javascript and CSS Resource Management
 
-**DotVVM** has a built-in mechanism for managing reasources. It supports javascript files, inline javascript snippets and CSS files by default and is extensible.
+**DotVVM** has a built-in mechanism for managing resources. It supports javascript files, inline javascript snippets and CSS files by default and is extensible.
 
 The resources are named and stored in a global repository in [DotVVM configuration](/docs/tutorials/basics-configuration/{branch}). 
 
