@@ -45,6 +45,11 @@ from the server to client or from client to the server. Typically, there is no n
 
 In DotVVM, you can configure what data is transferred using the `[Bind(direction)]` attribute. 
 
+```CSHARP
+[Bind(ServerToClient)]
+public string SingleDirectionProperty { get; set; }
+```
+
 The direction is an enumeration with the following options - `Both`, `ServerToClient`, `ClientToServer` and `None`.
 
 * **Both** is the default value - the property is transferred in both ways.
