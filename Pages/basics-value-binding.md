@@ -43,7 +43,8 @@ You cannot, for example, call methods from the value bindings.
 * `SomeCollection[6]`
 * `SomeCollection[6].OtherProperty`
 * `SomeProperty >= 0`
-* `SomeProperty ? "active" : ""`
+* `SomeProperty + 1`
+* `SomeProperty ? "some string" : "other string"`
 * `SomeProperty != OtherProperty`
 
 If you use the `ICollection.Count` or `Array.Length` property, they will be translated to JavaScript to use the `length` property on the JavaScript array.
