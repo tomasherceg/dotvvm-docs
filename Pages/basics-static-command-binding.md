@@ -8,7 +8,7 @@ The problem is that the viewmodel can be too large and it wouldn't be efficient 
 It is really not an issue on pages with simple UI because the viewmodel would be small. Also, DotVVM allows to configure which properties will be 
 transferred from the client to the server and back (see the `Bind` attribute in the [ViewModels](/docs/tutorials/basics-viewmodels/{branch}) page.
 
-Hwoever, in complicated pages with modal dialogs and complex viewmodel, it may not be a wise solution to send the whole viewmodel to the server over and over.
+However, in complicated pages with modal dialogs and complex viewmodel, it may not be a wise solution to send the whole viewmodel to the server over and over.
 That's why DotVVM contains the **static command binding**.
 
 ### Calling a Static Method
