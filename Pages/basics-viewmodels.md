@@ -1,61 +1,74 @@
 ## ViewModels
 
-In **DotVVM**, the **viewmodel** can be any JSON-serializable class. The viewmodel represents the state of the page and contains commands which
-can be invoked from the UI. Theoretically, if you serialize the viewmodel and later you deserialize it and apply to the DOTHTML view, the page should be
-in exactly same state. 
+In **DotVVM**, the **viewmodel** can be any JSON-serializable class. The viewmodel does two important things:
 
-The viewmodel contains the _properties_ used in the bindings and _methods_ that can be called from the page (e.g. by clicking a button).
++ It represents the state of the page (values in all form fields, options for ComboBoxes etc.).
+
++ It defines commands which can be invoked by the user (e.g. button clicks). 
+
+```CSHARP
+public class CalculatorViewModel 
+{
+    // The state of the page is represented by public properties.
+    // If you serialize the viewmodel, you should have all the information to be able to restore the page in the exactly same state later.
+
+    public int Number1 { get; set; }
+
+    public int Number2 { get; set; }
+
+    public int Result { get; set; }
+
+
+    // The commands that can be invoked from the page are public methods.
+    // They can modify the state of the viewmodel.
+
+    public void Calculate() 
+    {
+        Result = Number1 + Number2;
+    }
+}
+```
+
+### ViewModel Limitations
+
+The state part of the viewmodel is done using public properties. Please note that the **viewmodel must be JSON-serializable**. 
+
+Therefore, a "DotVVM-friendly" viewmodel can contain properties of these types:
+
+* `string`, `Guid`, `bool`, `int` and other numeric types and `DateTime`, including nullable ones (e.g. `decimal?`)
+
+* enum
+
+* another DotVVM-friendly object
+
+* collections (array, `List<T>`) of DotVVM-friendly objects, enums or primitive types
+
+> Please note that the `TimeSpan` and `DateTimeOffset` are not supported in the current version. 
 
 ### Recommendations for ViewModels
 
-+ The viewmodel is a C# class that derives from `DotvvmViewModelBase`. 
++ The properties in viewmodel and all child objects should have plain `{ get; set; }`. There should be no logic in getters, setters or the constructor of the class. The getters and setters are called by the serializatin mechanism and you never know the order in thich setters are invoked.
 
-+ Viewmodel contains properties of primitive types (string, int, double...), collections (List&lt;T&gt; or array) or 
-other objects that comply with this paragraph. Everything must be JSON-serializable.
++ The viewmodel commands are part of the presentation layer. They shouldn't communicate with the database, send e-mails etc. 
+In general, the viewmodel methods should only gather data from the viewmodel, call some method from the business layer to do  the real job and after it's finished, update the viewmodel with the results. 
 
-+ The properties in viewmodel and all objects it contains, should have plain `{ get; set; }`. There should be no logic in getters, setters 
-or the constructor of the class.
+> Please don't use Entity Framework `DbContext` directly in the viewmodel. These things should be in lower layer than in the presentation one. Look at the [samples](/docs/samples) to see how to architect the application in the layers.
 
-+ It contains several methods that can be called from the UI. These methods shouldn't do anything complicated. If there is 
-some complex stuff that needs to be done, the method will use some other class to do the job. 
-In general, the viewmodel methods should only gather data from the viewmodel, call a method that does the real job and after it's finished, 
-update the viewmodel properties with results of the called method. 
+> We also don't recommend exposing Entity Framework entities as viewmodel properties. Remember that the viewmodel is serialized, so the user can see all the columns including various IDs which may be private. 
 
-Please don't put code that retrieves the data or updates records in the database, sends e-mails or does anything complicated 
-directly in the viewmodel. You'll end with one big mess which will be difficult to maintain.
-See the [samples](/docs/samples) to see how to architect the application in the layers.
+> Also, you may end with errors because of the lazy loading, which might "expand" the entities and cause big data transfers, or fail on cyclic references which are not supported in JSON.  
 
-> Don't use Entity Framework entities directly in your viewmodel. They'll cause issues during the serialization because JSON serializer doesn't support
-cyclic references, and the lazy loading on entity properties can cause transferring much more data than necessary. <br> 
-If you are using Entity Framework, create [Data Transfer Objects](https://en.wikipedia.org/wiki/Data_transfer_object) and use them in your viewmodel instead. 
+> If you are using Entity Framework, create [Data Transfer Objects](https://en.wikipedia.org/wiki/Data_transfer_object) and use them in your viewmodel instead. You can use libraries like [AutoMapper](http://automapper.org/) to make the mapping between entities and DTOs really easy.
 
 
 ### DotvvmViewModelBase
 
-If the viewmodel derives from the `DotvvmViewModelBase`, it can override the `Init`, `Load` and `PreRender` methods. The lifecycle 
-of the request looks like this. On the left side, you can see what's going on when the client access the page first time 
-(the GET request). On the right side you can see what happens during the postback (when the user clicks a button).
+We recommend to inherit all viewmodels from `DotvvmViewModelBase`. It is not required - any class can be the viewmodel. 
 
-<p><img src="{imageDir}basics-viewmodels-img1.png" alt="Dotvvm Page Lifecycle" /></p>
+But the `DotvvmViewModelBase` class gives you several useful mechanisms that you may need (e.g. the `Context` property). If you cannot use it, consider using the `IDotvvmViewModel` interface to be able to get the `Context` property and the viewmodel events.
 
-## Binding Directions
+If the viewmodel derives from the `DotvvmViewModelBase`, you can override the `Init`, `Load` and `PreRender` methods. 
 
-When using the [command bindings](/docs/tutorials/basics-command-binding/{branch}), you may need to customize which properties are transferred 
-from the server to client or from client to the server. Typically, there is no need to transfer the whole viewmodel in both directions. 
+In the following diagram, you can see the lifecycle of the HTTP request. The left side shows what's going on when the client access the page first time (the HTTP GET request). The right side shows what happens during the postback (e.g. when the user clicks a button to call a method in the viewmodel).
 
-In DotVVM, you can configure what data is transferred using the `[Bind(direction)]` attribute. 
-
-```CSHARP
-[Bind(Direction.ServerToClient)]
-public string SingleDirectionProperty { get; set; }
-```
-
-The direction is an enumeration with the following options - `Both`, `ServerToClient`, `ClientToServer` and `None`.
-
-* **Both** is the default value - the property is transferred in both ways.
-
-* **ServerToClient** - the changes of the property on the client side are not transferred to the server.
-
-* **ClientToServer** - the server only reads the value of the property set by the client.
-
-* **None** - the property is not serialized in any way.
+<p><img src="{imageDir}basics-viewmodels-img1.png" alt="DotVVM Page Lifecycle" /></p>

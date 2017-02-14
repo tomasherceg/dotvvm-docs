@@ -19,6 +19,7 @@
 		<DocPageMenuItem RouteName="resource-binding" PageName="Resource Binding" />
 		<DocPageMenuItem RouteName="binding-context" PageName="Binding Context" />
 		<DocPageMenuItem RouteName="viewmodels" PageName="ViewModels" />
+		<DocPageMenuItem RouteName="binding-direction" PageName="Binding Direction" />
         <DocPageMenuItem RouteName="request-context" PageName="Request Context" />
 		<DocPageMenuItem RouteName="viewmodel-protection" PageName="ViewModel Protection" />
 		<DocPageMenuItem RouteName="built-in-controls" PageName="Built-in Controls" />
