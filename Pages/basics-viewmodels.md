@@ -72,25 +72,3 @@ If the viewmodel derives from the `DotvvmViewModelBase`, you can override the `I
 In the following diagram, you can see the lifecycle of the HTTP request. The left side shows what's going on when the client access the page first time (the HTTP GET request). The right side shows what happens during the postback (e.g. when the user clicks a button to call a method in the viewmodel).
 
 <p><img src="{imageDir}basics-viewmodels-img1.png" alt="DotVVM Page Lifecycle" /></p>
-
-## Binding Directions
-
-When using the [command bindings](/docs/tutorials/basics-command-binding/{branch}), you may need to customize which properties are transferred 
-from the server to client or from client to the server. Typically, there is no need to transfer the whole viewmodel in both directions. 
-
-In DotVVM, you can configure what data is transferred using the `[Bind(direction)]` attribute. 
-
-```CSHARP
-[Bind(Direction.ServerToClient)]
-public string SingleDirectionProperty { get; set; }
-```
-
-The direction is an enumeration with the following options - `Both`, `ServerToClient`, `ClientToServer` and `None`.
-
-* **Both** is the default value - the property is transferred in both ways.
-
-* **ServerToClient** - the changes of the property on the client side are not transferred to the server.
-
-* **ClientToServer** - the server only reads the value of the property set by the client.
-
-* **None** - the property is not serialized in any way.
