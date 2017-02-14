@@ -49,7 +49,7 @@ namespace DotvvmDemo.ViewModels
 If you want to allow the users to sign in using Facebook or other third party authentication provider,
 you'll need to do several things.
 
-If you want to redirect the the Facebook, you can use this code.
+If you want to redirect to the Facebook, you can use this code.
 Notice, that after `Authentication.Challenge` call, which sets the HTTP code to 403, we need to call
 `Context.InterruptRequest()`. This interrupts the execution of this method and prevents DotVVM to do 
 additional stuff that would come after this method. The next OWIN middleware will take the request
