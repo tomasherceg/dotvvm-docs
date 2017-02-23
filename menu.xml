@@ -23,6 +23,7 @@
         <DocPageMenuItem RouteName="request-context" PageName="Request Context" />
 		<DocPageMenuItem RouteName="viewmodel-protection" PageName="ViewModel Protection" />
 		<DocPageMenuItem RouteName="built-in-controls" PageName="Built-in Controls" />
+		<DocPageMenuItem RouteName="control-properties-and-attributes" PageName="Control Properties and Attributes" />
         <DocPageMenuItem RouteName="configuration" PageName="Configuration" />
 		<DocPageMenuItem RouteName="validation" PageName="Validation" />
 		<DocPageMenuItem RouteName="globalization" PageName="Globalization" />
