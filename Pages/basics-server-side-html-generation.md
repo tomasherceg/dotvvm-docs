@@ -1,30 +1,87 @@
 ## Server-Side HTML Generation and SEO
 
-**DotVVM** uses javascript libraries to do the job, but don't worry. It won't make your site SEO-unfriendly.
-You only have to be little careful and use server rendering where appropriate.
+DotVVM uses Knockout JS to create the MVVM experience, but that doesn't have to make your site SEO-unfriendly. The important controls support a server-side rendering which can make the data in the page indexable.
 
 ### Server-Side Rendering
 
-Most controls and all HTML elements can specify the `RenderSettings.Mode` property. 
+You can use the `RenderSettings.Mode` property on HTML elements and most of the DotVVM controls.
 
-In the `Client` mode (default), the bindings are translated to the Knockout expressions and evaluated on the client.
+The default value for this property is `Client`, which means that all bindings are translated to the Knockout JS `data-bind` expressions and thus evaluated on the client.
 
-In the `Server` mode, all value bindings in text (e.g. `<p RenderSettings.Mode="Server">{{value: Text}}</p>`), [Literal](/docs/controls/builtin/Literal/{branch})s
-and [HtmlLiteral](/docs/controls/builtin/HtmlLiteral/{branch})s are rendered directly in the HTML.
+When you switch the mode to the `Server`, the following situations will be rendered on the server side:
 
-Also, the [Repeater](/docs/controls/builtin/Repeater/{branch}) and [GridView](/docs/controls/builtin/GridView/{branch}) controls will render 
-each row directly into the HTML output, not just render a template which is instantiated by the javascript code. The `RenderSettings.Mode` propety is inherited to the child elements.
+* All value bindings used directly in text will be evaluated on the server and rendered directly in the page.
 
-> Even if you use Server mode for everything, the application won't be fully functional if the client has the javascript disabled. 
-> The page texts and content can be displayed without javascript if the whole page renders in the server mode. But even in the server side mode, you won't be 
-> able to do a postback without javascript enabled and many things won't work (e.g. the `Visible` property, validation etc.).
+```DOTHTML
+<p RenderSettings.Mode="Server">{{value: Text}}</p>
+```
+will be rendered to
+```DOTHTML
+<p>Hello World!</p>
+```
 
+* [Literal](/docs/controls/builtin/Literal/{branch}) and [HtmlLiteral](/docs/controls/builtin/HtmlLiteral/{branch}) bindings will be also rendered directly in the HTML:
 
+```DOTHTML
+<dot:Literal Text="{value: Text}" RenderSettings.Mode="Server" />
+```
+will be rendered to
+```DOTHTML
+Hello World!
+```
+
+* The [Repeater](/docs/controls/builtin/Repeater/{branch}) and [GridView](/docs/controls/builtin/GridView/{branch}) controls will render each row directly into the HTML output. In the default rendering mode they just render a template which is copied on the client-side by the JavaScript code using the Knockout JS `foreach` binding. 
+
+```DOTHTML
+<!-- Repeater in client side rendering -->
+<tbody data-bind="foreach: Rows">
+    <!-- this template is copied for each row on the client side -->
+    <tr>    
+        <td><span data-bind="text: Name"></span></td>
+    </tr>
+</tbody>
+```
+
+```DOTHTML
+<!-- Repeater in server side rendering -->
+<tbody data-bind="foreach: Rows">
+    <tr>
+        <td>Row 1</td>
+    </tr>
+    <tr>
+        <td>Row 2</td>
+    </tr>
+    <tr>
+        <td>Row 3</td>
+    </tr>
+</tbody>
+```
+
+The `RenderSettings.Mode` propety is inherited to the child elements.
+
+### Restrictions
+
+The principles mentioned above indicate that some combinations of client-side and server-side rendering won't work properly.
+
+For example, if you use client rendering on a `Repeater` control, and then use server rendering inside its `ItemTemplate`, it won't work properly because the template with hard-coded value would be copied and the bindings won't work properly.
+
+In the typical app scenarios you need to set the server rendering on `Repeater` or `GridView` controls, or on the page-level.
+
+```DOTHTML
+<dot:Content ContentPlaceHolderID="MainContent" RenderSettings.Mode="Server">
+    
+</dot:Content>
+```
+
+Remember that the goal of server-side rendering is not to create an application that works without the JavaScript. The JavaScript part is still there and most of the things (like buttons and postbacks) require JavaScript to be enabled in the client's browser.
+
+The server rendering only expands text content, `Literal`s and controls that render collections. The rest of the functionality (including e.g. the `Visible` property) is still done using JavaScript and Knockout JS bindings.
 
 ### PostBack.Update property
 
-If you render some text or table directly in the HTML, sometimes you may need to regenerate and replace the HTML code during the postback.  
-That's why we have the `PostBack.Update` property.
+When you render something directly in the HTML, the value won't react to the changes made to the viewmodel property any more.
+
+Sometimes you may need to regenerate and replace the HTML during the postback. That's why we have the `PostBack.Update` property in DotVVM.
 
 ```DOTHTML
 <div PostBack.Update="true">
@@ -32,5 +89,8 @@ That's why we have the `PostBack.Update` property.
 </div>
 ```
 
-If the `PostBack.Update` is used, the HTML code rendered by the control is sent to the client on every postback and the content is 
-replaced in the page. You'll need to use this property when you use server-side rendering.
+If the `PostBack.Update` is used, the control is rendered on every postback and the HTML is sent as part of the response.
+
+The content is then replaced in the page. 
+
+Typically, you use this property in combination with the server-side rendering.
