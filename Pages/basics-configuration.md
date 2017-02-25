@@ -1,27 +1,8 @@
-## DotVVM Configuration
+## Configuration
 
-Most of the stuff in DotVVM is configured using the C# code. In the default project template, there are 2 files - `Startup.cs` and `DotvvmStartup.cs`. 
+DotVVM uses C# code to configure its features and settings. 
 
-### Startup.cs
-
-The `Startup.cs` is the OWIN startup class. DotVVM is just an OWIN middleware and you can easily combine it with ASP.NET MVC or any other OWIN framework.
-All you have to do is to register the DotVVM middleware in the `IAppBuilder` object.
-
-```CSHARP
-var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath);
-```
-
-This extension method initializes the DotVVM middleware (actually, we have more than one). The `DotvvmStartup` type parameter represents the class which contains
-DotVVM settings. 
-
-This call returns the `DotvvmConfiguration` object, but the configuration of DotVVM should be mostly in the `DotvvmStartup.cs`.
-
-In the default project template, the `Startup` class also registers a static files middleware. DotVVM doesn't need it itself, however in 99% cases you want to use OWIN to serve 
-static files like images to the user.
-
-### DotvvmStartup.cs
-
-The `DotvvmStartup` class must implement the `IDotvvmStartup` interface and contains the `Configure` method. In this method you need to configure:
+The typical DotVVM app needs to configure the following things:
 
 + **Routes** (see more information in the [Routing](/docs/tutorials/basics-routing/{branch}) chapter)
 
@@ -29,10 +10,78 @@ The `DotvvmStartup` class must implement the `IDotvvmStartup` interface and cont
 
 + **Custom Controls** (see more in the [Control Development](/docs/tutorials/control-development-introduction/{branch}) chapter)
 
-Please note that the [DotVVM Pro for Visual Studio 2015](/landing/dotvvm-for-visual-studio-extension) executes the `Configure` method during the project build process so it can
-do IntelliSense for custom controls, route names etc. 
++ **Services** that handle [File Uploads](/docs/controls/builtin/FileUpload/{branch}), [Returned Files](/docs/tutorials/advanced-returning-files/{branch}) or [Dependency Injection](/docs/tutorials/advanced-ioc-di-container/{branch})
 
->Avoid registering any other things than routes, custom resources and custom controls in the `Configure` method as it might be executed many times 
->when you have the project open in Visual Studio.
+In the default project template, there are 2 files - `Startup.cs` and `DotvvmStartup.cs`. 
 
-If you need to register or initialize anything else (e.g. initialize the database, create default users), do it in the `Startup.cs` instead.
+In `Startup.cs`, we configure DotVVM services and register DotVVM middlewares. In `DotvvmStartup.cs`, we configure routes, resources and controls.
+
+
+### Startup.cs
+
+The `Startup.cs` contains the OWIN startup class. DotVVM is just an OWIN middleware and you can easily combine it with ASP.NET MVC or any other OWIN middlewares in one application. All you have to do is to register the DotVVM middleware in the `IAppBuilder` object.
+
+```CSHARP
+var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath);
+
+// register DotVVM services here
+// config.ServiceLocator...
+```
+
+This extension method initializes the middlewares required by DotVVM. The `DotvvmStartup` type parameter of the `UseDotVVM` represents the class which contains DotVVM configuration.
+
+> In DotVVM 1.1, the registration of services has changed and DotVVM uses the `IServiceCollection` interface instead of DotVVM `ServiceLocator` object.
+
+### DotvvmStartup.cs
+
+The `DotvvmStartup` class must implement the `IDotvvmStartup` interface and contains the `Configure` method. There should be only one class implementing the `IDotvvmStartup` interface in the assembly.
+
+This class configures resources, controls and routes. The default project template prepares this class in the following structure. 
+We have also included examples of how to configure a route, custom control namespace and script resource.
+
+```CSHARP
+public class DotvvmStartup : IDotvvmStartup
+{
+    // For more information about this class, visit https://dotvvm.com/docs/tutorials/basics-project-structure
+    public void Configure(DotvvmConfiguration config, string applicationPath)
+    {
+        ConfigureRoutes(config, applicationPath);
+        ConfigureControls(config, applicationPath);
+        ConfigureResources(config, applicationPath);
+    }
+
+    private void ConfigureRoutes(DotvvmConfiguration config, string applicationPath)
+    {
+        config.RouteTable.Add("Default", "", "Views/default.dothtml");
+
+        // Uncomment the following line to auto-register all dothtml files in the Views folder
+        // config.RouteTable.AutoDiscoverRoutes(new DefaultRouteStrategy(config));    
+    }
+
+    private void ConfigureControls(DotvvmConfiguration config, string applicationPath)
+    {
+        // register code-only controls and markup controls
+        config.Markup.AddCodeControls("cc", typeof(MyCustomControl));
+    }
+
+    private void ConfigureResources(DotvvmConfiguration config, string applicationPath)
+    {
+        // register custom resources and adjust paths to the built-in resources
+        config.Resources.Register("myscript", new ScriptResource()
+        {
+            Location = new LocalFileResourceLocation("~/wwwroot/Scripts/myscript.js")
+        });
+    }
+}
+```
+
+Please note that the [Visual Studio Extension](/landing/dotvvm-for-visual-studio-extension) executes the `Configure` method of the `DotvvmStartup` class during the project build process so the IntelliSense can suggest custom controls, route and resource names.
+
+> Avoid registering any other things than routes, custom resources and custom controls in the `Configure` method.
+> This method is executed during the project build in Visual Studio, so please don't launch rockets in it.
+
+If you need to register or initialize anything else (e.g. initialize the database, create default users), do it in the `Startup.cs`, or anywhere else.
+
+### Static Files
+
+In the default project template, the `Startup` class also registers a static files middleware. DotVVM doesn't need it itself, however in 99% cases you want to use it to serve static files like images to the user.
