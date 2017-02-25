@@ -82,6 +82,20 @@ Please note that the [Visual Studio Extension](/landing/dotvvm-for-visual-studio
 
 If you need to register or initialize anything else (e.g. initialize the database, create default users), do it in the `Startup.cs`, or anywhere else.
 
+### Debug Mode
+
+The `DotvvmConfiguration` object contains the `Debug` property which should be turned in the development environment, and turned off in production.
+
+In the `Debug` mode, DotVVM displays an error page for all unhandled exceptions that occur, it uses non-minified versions of scripts (where applicable) and reports validation errors using a red popup that appears in the top right corner of the page. 
+
+The typical setup that is present in default DotVVM project, looks like this:
+
+```CSHARP
+#if !DEBUG
+dotvvmConfiguration.Debug = false;
+#endif
+```
+
 ### Static Files
 
 In the default project template, the `Startup` class also registers a static files middleware. DotVVM doesn't need it itself, however in 99% cases you want to use it to serve static files like images to the user.

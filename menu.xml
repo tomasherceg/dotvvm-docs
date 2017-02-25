@@ -26,7 +26,11 @@
 		<DocPageMenuItem RouteName="control-properties-and-attributes" PageName="Control Properties and Attributes" />
         <DocPageMenuItem RouteName="configuration" PageName="Configuration" />
 		<DocPageMenuItem RouteName="validation" PageName="Validation" />
+		<DocPageMenuItem RouteName="validator-controls" PageName="Validator Controls" />
+		<DocPageMenuItem RouteName="validation-target" PageName="Validation Target" />
+		<DocPageMenuItem RouteName="client-side-validation" PageName="Client-Side Validation" />
 		<DocPageMenuItem RouteName="globalization" PageName="Globalization" />
+		<DocPageMenuItem RouteName="formatting-dates-and-numbers" PageName="Formatting Dates and Numbers" />
 		<DocPageMenuItem RouteName="javascript-and-css" PageName="Javascript and CSS Resource Management" />
 		<DocPageMenuItem RouteName="server-side-html-generation" PageName="SEO and server-side HTML generation" />
 		<DocPageMenuItem RouteName="single-page-applications-spa" PageName="Single Page Applications (SPA)" />
