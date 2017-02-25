@@ -69,7 +69,7 @@ public class DotvvmStartup : IDotvvmStartup
         // register custom resources and adjust paths to the built-in resources
         config.Resources.Register("myscript", new ScriptResource()
         {
-            Location = new LocalFileResourceLocation("~/wwwroot/Scripts/myscript.js")
+            Url = "~/wwwroot/Scripts/myscript.js"
         });
     }
 }
