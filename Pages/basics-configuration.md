@@ -61,7 +61,7 @@ public class DotvvmStartup : IDotvvmStartup
     private void ConfigureControls(DotvvmConfiguration config, string applicationPath)
     {
         // register code-only controls and markup controls
-        config.Markup.AddCodeControls("cc", typeof(MyCustomControl));
+        config.Markup.AddCodeControl("cc", typeof(MyCustomControl));
     }
 
     private void ConfigureResources(DotvvmConfiguration config, string applicationPath)
