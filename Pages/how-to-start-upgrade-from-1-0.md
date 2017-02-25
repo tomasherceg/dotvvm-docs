@@ -103,3 +103,56 @@ following interfaces:
 ### 8. Rename the HideNonAuthenticatedUsers to HideForAnonymousUsers on RoleView
 
 If you are using the `<dot:RoleView>` control, please rename the `HideNonAuthenticatedUsers` to `HideForAnonymousUsers` property which makes better sense.
+
+
+### 9. Resource Registrations Changed
+
+To support advanced scenarios, we had to change the way how resources are registered.
+
+The `ScriptResource` and `StylesheetResource` classes don't have the `Url` property any more, they got the `Location` property instead. Additionally, the `Location` is not a `string`, but it can be of the following classes:
+
+* `UrlResourceLocation` specifies just the URL where the resource can be found. You can use either absolute URL (e.g. to point to some CDN), a relative URL to your server, or even a data URI. DotVVM will render the `<script>` or `<link>` element with the exact URL you have specified.
+
+* `LocalFileResourceLocation` expects the app-relative filesystem path to the script or stylesheet file. This path should not start with `/` - it would point to the root of the filesystem. DotVVM will render the `<script>` or `<link>` element which points to a DotVVM resource handler (`~/dotvvmResource/checksum/resourceName`) that will serve the resource. This is useful for bundling or advanced scenarios.
+
+* `EmbeddedResourceLocation` can extract the embedded resource from an assembly. This is very useful if you need to pack some DotVVM controls in a library and embed the resources in the DLL file.
+
+Also, we have dropped the following properties from the `ScriptResource` class:
+
+* `CdnUrl` is replaced with `LocationFallback` property and supports multiple fallback locations.
+
+* `EmbeddedResourceAssembly` property which switched the resource to the embedded resource mode, was replaced with the `EmbeddedResourceLocation` object.
+
+* `GlobalObjectName` was moved to `LocationFallback.JavascriptCondition`.
+
+In basic scenarios, you just need to replace the `Url` with `Location` and wrap the string URL in the `UrlResourceLocation`:
+
+```CSHARP
+config.Resources.Register("bootstrap", new ScriptResource()
+{
+    // Url = "~/Scripts/bootstrap.min.js",
+    Location =new UrlResourceLocation("~/Scripts/bootstrap.min.js"),
+    
+    Dependencies = new[] { "bootstrap-css", "jquery" }
+});
+```
+
+If you have used the embedded resources, you should use the following way of working with `CdnUrl`, `GlobalObjectName` and `EmbeddedResourceAssembly`:
+
+```CSHARP
+configuration.Resources.Register(ResourceConstants.JQueryResourceName,
+    new ScriptResource()
+    {
+        // CdnUrl = "https://code.jquery.com/jquery-2.1.1.min.js",
+        // Url = "DotVVM.Framework.Resources.Scripts.jquery-2.1.1.min.js",
+        // EmbeddedResourceAssembly = typeof (DotvvmConfiguration).Assembly.GetName().Name,
+        // GlobalObjectName = "window.jQuery"
+
+        Location = new UrlResourceLocation("https://code.jquery.com/jquery-2.1.1.min.js"))
+        {
+            LocationFallback = new ResourceLocationFallback(
+                "window.jQuery",
+                new EmbeddedResourceLocation(typeof(DotvvmConfiguration).GetTypeInfo().Assembly, "DotVVM.Framework.Resources.Scripts.jquery-2.1.1.min.js"))
+        }
+    });
+```

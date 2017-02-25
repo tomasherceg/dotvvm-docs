@@ -34,6 +34,7 @@
 		<DocPageMenuItem RouteName="globalization" PageName="Globalization" />
 		<DocPageMenuItem RouteName="formatting-dates-and-numbers" PageName="Formatting Dates and Numbers" />
 		<DocPageMenuItem RouteName="javascript-and-css" PageName="Javascript and CSS Resources" />
+		<DocPageMenuItem RouteName="using-resources" PageName="Using Resources" />
 		<DocPageMenuItem RouteName="server-side-html-generation" PageName="SEO and server-side HTML generation" />
 		<DocPageMenuItem RouteName="single-page-applications-spa" PageName="Single Page Applications (SPA)" />
 		<DocPageMenuItem RouteName="postback-handlers" PageName="Postback Handlers" />
@@ -45,6 +46,7 @@
 		<DocPageMenuItem RouteName="exception-filters" PageName="Exception Filters" />
 		<DocPageMenuItem RouteName="filter-registration" PageName="Filter Registration" />
 		<DocPageMenuItem RouteName="ioc-di-container" PageName="IoC/DI Containers" />
+		<DocPageMenuItem RouteName="bundling-minification" PageName="Bundling and Minification" />
 		<DocPageMenuItem RouteName="testing-viewmodels" PageName="Testing ViewModels" />
         <DocPageMenuItem RouteName="custom-presenters" PageName="Custom Presenters" />
         <DocPageMenuItem RouteName="route-autodiscovery" PageName="Auto-Discovering Routes" />
