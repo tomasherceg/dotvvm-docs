@@ -32,6 +32,7 @@
 		<DocPageMenuItem RouteName="globalization" PageName="Globalization" />
 		<DocPageMenuItem RouteName="formatting-dates-and-numbers" PageName="Formatting Dates and Numbers" />
 		<DocPageMenuItem RouteName="javascript-and-css" PageName="Javascript and CSS Resource Management" />
+		<DocPageMenuItem RouteName="using-resources" PageName="Using Resources" />
 		<DocPageMenuItem RouteName="server-side-html-generation" PageName="SEO and server-side HTML generation" />
 		<DocPageMenuItem RouteName="single-page-applications-spa" PageName="Single Page Applications (SPA)" />
 		<DocPageMenuItem RouteName="postback-handlers" PageName="Postback Handlers" />
