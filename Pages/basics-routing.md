@@ -17,7 +17,7 @@ config.RouteTable.Add("Page", "my/page/url", "Views/page.dothtml", new { });
 
 + The first argument is the **name of the route**. You'll need it when you do redirects or generate a hyperlink that navigates the user to this page. This name is not displayed anywhere, it is only a string constant which identifies the route in your code.
 
-+ The second argument is the **route URL**. It can contain route parameters (e.g. `"/product-detail/{ProductId}"`) which you can retrieve in the viewmodel when the page is loaded. 
++ The second argument is the **route URL**. It can contain route parameters (e.g. `"product-detail/{ProductId}"`) which you can retrieve in the viewmodel when the page is loaded. For default page, you can use the `""` as the route URL. 
 
 + The third argument is **the location of the `.dothtml` file** which will be used to handle the request.
 Because the file is in the **Views** folder, we must pass the app-relative path - `Views/page.dothtml`.
