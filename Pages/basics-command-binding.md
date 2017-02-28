@@ -38,7 +38,7 @@ on the server are applied and displayed in the page.
 ### Method Signature
 
 If the method called from the command binding has some arguments, you have to specify them in the command binding. 
-You can use any expressions that are supported in the [Value Bindings](/docs/tutorials/basics-balue-binding/{branch}).
+You can use any expressions that are supported in the [Value Bindings](/docs/tutorials/basics-value-binding/{branch}).
 
 The method must be `public` and should be `void`, or return `Task` if you plan to make it asynchronous.
 In some cases, this can significantly improve the performance of the app because the web server can reuse waiting threads to process other HTTP requests.
