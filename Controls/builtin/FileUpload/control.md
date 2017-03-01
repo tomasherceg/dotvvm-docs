@@ -38,7 +38,7 @@ var storage = Context.Configuration.ServiceLocator.GetService<IUploadedFileStora
 
 foreach (var file in myUploadedFilesCollection.Files)
 {
-  if (file.Allowed)
+  if (file.IsAllowed)
   {
     // get the stream of the uploaded file and do whatever you need to do
     var stream = storage.GetFile(file.FileId);
@@ -54,5 +54,5 @@ foreach (var file in myUploadedFilesCollection.Files)
 }
 ```
 
-A file is not `Allowed` when it's type does not match the `AllowedFileTypes` definition or when it's size exceeds the `MaxFileSize`. See also
-the `FileTypeAllowed` and `MaxSizeExceeded` properties. You can use them to find out why the file is not allowed.
+A file is not allowed when it's type does not match the `AllowedFileTypes` definition or when it's size exceeds the `MaxFileSize`. See also
+the `IsFileTypeAllowed` and `IsMaxSizeExceeded` properties. You can use them to find out why the file is not allowed.
