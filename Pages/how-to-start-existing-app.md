@@ -62,6 +62,7 @@ namespace DotvvmDemo
         }        
     }
 }
+```
 
 > Please note that in **DotVVM 1.0**, the NuGet package name is `DotVVM`. This package contains the OWIN hosting infrastructure.
 > If you use **[DotVVM 1.1 or higher](/docs/tutorials/how-to-start-existing-app/1-1)**, you need to install either `DotVVM.Owin` or `DotVVM.AspNetCore` package, depending on the project type you are using. The `DotVVM` package contains the framework classes only. 
