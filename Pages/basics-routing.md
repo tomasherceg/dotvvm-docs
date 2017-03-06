@@ -69,7 +69,7 @@ config.RouteTable.Add("AdminCustomer", "admin/customer/{Id?}", "Views/admin/cust
 In that case, we need to check, whether the parameter is present in the URL:
 
 ```CSHARP
-if (Context.Parameters.ContainsKey("Id")) 
+if (!Context.Parameters.ContainsKey("Id")) 
 {
     // new customer
 }
