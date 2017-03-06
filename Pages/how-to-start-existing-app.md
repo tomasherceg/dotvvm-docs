@@ -8,7 +8,7 @@ DotVVM is yet another OWIN / ASP.NET Core middleware that can be added in the re
 
 To add **DotVVM** in an existing ASP.NET project, simply install **DotVVM** Nuget package using Package Manager Console:
 
-    Install-Package DotVVM -Pre
+    Install-Package DotVVM.Owin
 
 The package will add a reference to **DotVVM.Framework** and **DotVVM.Core** libraries to the project.
 
@@ -49,7 +49,7 @@ If you use the new ASP.NET Core stack, you need the ASP.NET Core version of DotV
 
 To add **DotVVM** in an existing ASP.NET Core project, simply install `DotVVM.AspNetCore` Nuget package using Package Manager Console:
 
-    Install-Package DotVVM.AspNetCore -Pre
+    Install-Package DotVVM.AspNetCore
 
 The package will reference **DotVVM.Framework** and **DotVVM.Framework.Hosting.AspNetCore** libraries in the project.
 
