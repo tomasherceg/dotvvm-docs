@@ -21,7 +21,7 @@ This property is available in **DotVVM 1.1** and newer. In the previous version,
 
 + `GetOwinContext()` is an extension method which you can use in the OWIN version. It returns the real `OwinContext`. This method is available in **DotVVM 1.1** and newer.
 
-* `GetAspNetCoreContext()` is an extension method which you can use in the ASP.NET Core version to access the ASP.NET Core  `HttpContext`. This method is available in **DotVVM 1.1** and newer.
++ `GetAspNetCoreContext()` is an extension method which you can use in the ASP.NET Core version to access the ASP.NET Core  `HttpContext`. This method is available in **DotVVM 1.1** and newer.
 
 + `RedirectToUrl` and `RedirectPermanentToUrl` methods redirect the user to the specified URL. 
 The request execution is interrupted by this call.

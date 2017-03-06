@@ -1,6 +1,6 @@
 ## Class Attribute
 
-The `class` attribute in HTML can reference multiple CSS classes separated by a space (e.g. `<a class="btn btn-default">`.
+The `class` attribute in HTML can reference multiple CSS classes separated by a space (e.g. `<a class="btn btn-default">`).
 
 If the CSS classes on some element depend on the viewmodel properties, you can use [value binding](/docs/tutorials/basics-value-binding/{branch}) expressions to calculate the `class` attribute value.
 
@@ -9,7 +9,7 @@ However, when you need to combine multiple CSS classes, the expression gets quit
 The expression would look like this:
 
 ```DOTHTML
-<div class="{value: (IsBold ? 'bold ' : ' ') + (IsItalic ? 'italic ' : ' ') + (IsUnderline ? 'underline ' : ' ')">
+<div class="{value: (IsBold ? 'bold ' : ' ') + (IsItalic ? 'italic ' : ' ') + (IsUnderline ? 'underline ' : ' ')}">
 </div>
 ```
 

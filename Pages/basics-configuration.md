@@ -19,7 +19,9 @@ In `Startup.cs`, we configure DotVVM services and register DotVVM middlewares. I
 
 ### Startup.cs in OWIN
 
-In OWIN, the `Startup.cs` contains the OWIN startup class. DotVVM is just an OWIN middleware and you can easily combine it with ASP.NET MVC or any other OWIN middlewares in one application. All you have to do is to register the DotVVM middleware in the `IAppBuilder` object.
+In OWIN, the `Startup.cs` contains the OWIN startup class. DotVVM is just an OWIN middleware and you can easily combine it with ASP.NET MVC or any other OWIN middlewares in one application. 
+
+All you have to do is to register the DotVVM middleware in the `IAppBuilder` object.
 
 ```CSHARP
 var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath, options => {
@@ -49,7 +51,7 @@ services.AddDotVVM(options =>
 In the `Configure` method we have to register the DotVVM middleware.
 
 ```CSHARP
-var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath);
+var config = app.UseDotVVM<DotvvmStartup>();
 ```
 
 This extension method initializes the middlewares required by DotVVM. The `DotvvmStartup` type parameter of the `UseDotVVM` represents the class which contains DotVVM configuration.
@@ -108,13 +110,15 @@ If you need to register or initialize anything else (e.g. initialize the databas
 
 The `DotvvmConfiguration` object contains the `Debug` property which should be turned in the development environment, and turned off in production.
 
-In the `Debug` mode, DotVVM displays an error page for all unhandled exceptions that occur, it uses non-minified versions of scripts (where applicable) and reports validation errors using a red popup that appears in the top right corner of the page. 
+In the `Debug` mode, DotVVM displays an error page for all unhandled exceptions that occur, it uses non-minified versions of scripts (where applicable) and reports validation errors using a red popup that appears in the top right corner of the page.
 
-The typical setup that is present in default DotVVM project, looks like this:
+The property is automatically set in ASP.NET Core based on [IHostingEnvironment.IsDevelopment()](https://docs.microsoft.com/en-us/aspnet/core/api/microsoft.aspnetcore.hosting.hostingenvironmentextensions#Microsoft_AspNetCore_Hosting_HostingEnvironmentExtensions_IsDevelopment_Microsoft_AspNetCore_Hosting_IHostingEnvironment_). In OWIN you need to set the value yourself. 
+
+The typical setup that is present in default DotVVM OWIN project, looks like this:
 
 ```CSHARP
 #if !DEBUG
-dotvvmConfiguration.Debug = false;
+config.Debug = false;
 #endif
 ```
 

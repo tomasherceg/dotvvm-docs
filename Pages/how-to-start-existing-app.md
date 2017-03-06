@@ -74,10 +74,8 @@ services.AddDotVVM(options =>
 Second, add the following code snippet in the `Configure` method. If you are using some authentication middlewares, remember that these should be registered first.
 
 ```CSHARP
-var config = app.UseDotVVM<DotvvmStartup>(env.ContentRootPath);
+var config = app.UseDotVVM<DotvvmStartup>();
 ```
-
-
 
 ### DotvvmStartup class (both OWIN and ASP.NET Core)
 
@@ -105,6 +103,7 @@ namespace DotvvmDemo
 }
 ```
 
+The `Debug` property is automatically set in ASP.NET Core based on [IHostingEnvironment.IsDevelopment()](https://docs.microsoft.com/en-us/aspnet/core/api/microsoft.aspnetcore.hosting.hostingenvironmentextensions#Microsoft_AspNetCore_Hosting_HostingEnvironmentExtensions_IsDevelopment_Microsoft_AspNetCore_Hosting_IHostingEnvironment_). In OWIN you need to handle that yourself.
 
 > Please note that in **DotVVM 1.0**, the NuGet package name is `DotVVM`. This package contains the OWIN hosting infrastructure.
 > If you use **[DotVVM 1.1 or higher](/docs/tutorials/how-to-start-existing-app/1-1)**, you need to install either `DotVVM.Owin` or `DotVVM.AspNetCore` package, depending on the project type you are using. The `DotVVM` package contains the framework classes only. 
