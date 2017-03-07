@@ -12,8 +12,7 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
 
     public class ViewModel : DotvvmViewModelBase
     {
-
-        private static IQueryable<CustomerData> GetData()
+        private static IQueryable<CustomerData> FakeDb()
         {
             return new[]
             {
@@ -36,31 +35,26 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
             }.AsQueryable();
         }
 
-        public List<CustomerData> Customers { get; set; }
-
-        public string SelectedSortColumn { get; set; }
-
-        public override Task PreRender()
+        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
-            // fill customers
-            if (SelectedSortColumn == "Name")
-            {
-                Customers = GetData().OrderBy(c => c.Name).ToList();
-            }
-            else if (SelectedSortColumn == "BirthDate")
-            {
-                Customers = GetData().OrderBy(c => c.BirthDate).ToList();
-            }
-            else
-            {
-                Customers = GetData().ToList();
-            }
-
-            return base.PreRender();
+            var queryable = FakeDb();
+            // NOTE: Apply Pagign and Sorting options.
+            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
         }
+
+        public GridViewDataSet<CustomerData> Customers { get; set; }
+
+        public override Task Init()
+        {
+            Customers = new GridViewDataSet<CustomerData>()
+            {
+                OnLoadingData = GetData
+            };
+        }
+
         public void SortCustomers(string column)
         {
-            SelectedSortColumn = column;
+            Customers.SetSortExpression(column);
         }
 
     }

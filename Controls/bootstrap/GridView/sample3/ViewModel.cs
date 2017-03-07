@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using DotVVM.Framework.ViewModel;
+using DotVVM.Framework.Controls.Bootstrap;
 using DotVVM.Framework.Controls;
 using System.Threading.Tasks;
-using DotVVM.Framework.Controls.Bootstrap;
 
-namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample1
+namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
 {
 
     public class ViewModel : DotvvmViewModelBase
     {
 
-        private static IQueryable<CustomerData> FakeDb()
+        private static IQueryable<CustomerData> GetData()
         {
             return new[]
             {
@@ -36,26 +36,31 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample1
             }.AsQueryable();
         }
 
-        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
-        {
-            var queryable = FakeDb();
-            // NOTE: Apply Pagign and Sorting options.
-            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
-        }
+        public List<CustomerData> Customers { get; set; }
 
-        public GridViewDataSet<CustomerData> Customers { get; set; }
+        public string SelectedSortColumn { get; set; }
 
-        public override Task Init()
+        public override Task PreRender()
         {
-            Customers = new GridViewDataSet<CustomerData>()
+            // fill customers
+            if (SelectedSortColumn == "Name")
             {
-                OnLoadingData = GetData
-            };
-        }
+                Customers = GetData().OrderBy(c => c.Name).ToList();
+            }
+            else if (SelectedSortColumn == "BirthDate")
+            {
+                Customers = GetData().OrderBy(c => c.BirthDate).ToList();
+            }
+            else
+            {
+                Customers = GetData().ToList();
+            }
 
+            return base.PreRender();
+        }
         public void SortCustomers(string column)
         {
-            Customers.SetSortExpression(column);
+            SelectedSortColumn = column;
         }
 
     }

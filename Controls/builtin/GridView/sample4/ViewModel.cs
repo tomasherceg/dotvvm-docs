@@ -6,31 +6,38 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample4
 {
     public class ViewModel : DotvvmViewModelBase
     {
-        public Customer[] Customers { get; set; } = {
-            new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"),new Customer(2,"Raine Damian"),
-            new Customer(3, "Gerrard Petra"), new Customer(4, "Clement Ernie"), new Customer(5, "Rod Fred")
-        };
+        private static IQueryable<Customer> FakeDb()
+        {
+            return new[]
+            {
+                new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"),new Customer(2,"Raine Damian"),
+                new Customer(3, "Gerrard Petra"), new Customer(4, "Clement Ernie"), new Customer(5, "Rod Fred")
+            }.AsQueryable();
+        }
 
-        public string SelectedSortColumn { get; set; }
+
+        // NOTE: Method for load data from IQueryable
+        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
+        {
+            var queryable = FakeDb();
+            // NOTE: Apply Pagign and Sorting options.
+            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
+        }
+
+        public override Task Init()
+        {
+            Customers = new GridViewDataSet<Customer>()
+            {
+                OnLoadingData = GetData
+            };
+            return base.Init();
+        }
 
         public void Sort(string column)
         {
             SelectedSortColumn = column;
         }
 
-        public override Task PreRender()
-        {
-            switch (SelectedSortColumn)
-            {
-                case "Name":
-                    Customers = Customers.OrderBy(c => c.Name).ToArray();
-                    break;
-                case "Id":
-                    Customers = Customers.OrderBy(c => c.Id).ToArray();
-                    break;
-            }
-            return base.PreRender();
-        }
     }
 
     public class Customer

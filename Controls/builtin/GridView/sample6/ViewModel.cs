@@ -10,53 +10,52 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample6
 {
     public class ViewModel : DotvvmViewModelBase
     {
-
-        public GridViewDataSet<Customer> Customers { get; set; } = new GridViewDataSet<Customer>()
+        private static IQueryable<Customer> FakeDb()
         {
-            PrimaryKeyPropertyName = "Id"
-        };
-
-        public override Task PreRender()
-        {
-            if (!Context.IsPostBack)
+            return new[]
             {
-                // fill the dataset for the first time
-                Refresh();
-            }
-            return base.PreRender();
+                new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"),new Customer(2,"Raine Damian"),
+                new Customer(3, "Gerrard Petra"), new Customer(4, "Clement Ernie"), new Customer(5, "Rod Fred")
+            }.AsQueryable();
         }
 
-        private void Refresh()
+        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
-            // TODO: load data from the database
-            Customers.Items = new List<Customer>()
+            var queryable = FakeDb();
+            // NOTE: Apply Pagign and Sorting options.
+            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
+        }
+
+        public override Task Init()
+        {
+            Customers = new GridViewDataSet<Customer>()
             {
-                new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"), new Customer(2, "Raine Damian"),
-                new Customer(3, "Gerrard Petra"), new Customer(4, "Clement Ernie"), new Customer(5, "Rod Fred")
+                OnLoadingData = GetData,
+                RowEditOptions.PrimaryKeyPropertyName = "Id"
             };
-            Customers.TotalItemsCount = Customers.Items.Count;
+            return base.Init();
         }
 
         public void Edit(Customer customer)
         {
-            Customers.EditRowId = customer.Id;
+            Customers.RowEditOptions.EditRowId = customer.Id;
         }
 
         public void Update(Customer customer)
         {
             // TODO: save changes to the database
-            Customers.EditRowId = null;
+            Customers.RowEditOptions.EditRowId = null;
 
             // uncomment this line - it's here only for the sample to work without database
-            //Refresh();
+            //Customers.RequestRefresh(forceRefresh: true);
         }
 
         public void CancelEdit()
         {
-            Customers.EditRowId = null;
+            Customers.RowEditOptions.EditRowId = null;
 
             // uncomment this line - it's here only for the sample to work without database
-            //Refresh();
+            //Customers.RequestRefresh(forceRefresh: true);
         }
 
 

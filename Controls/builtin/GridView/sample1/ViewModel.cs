@@ -8,7 +8,7 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample1
 {
     public class ViewModel : DotvvmViewModelBase
     {
-        private static IQueryable<Customer> GetData()
+        private static IQueryable<Customer> FakeDb()
         {
             return new[]
             {
@@ -21,26 +21,23 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample1
             }.AsQueryable();
         }
 
+        // NOTE: Method for load data from IQueryable
+        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
+        {
+            var queryable = FakeDb();
+            // NOTE: Apply Pagign and Sorting options.
+            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
+        }
+
         public GridViewDataSet<Customer> Customers { get; set; }
 
-        public override Task PreRender()
+        public override Task Init()
         {
-            // fill data set from IQueryable
-            Customers.LoadFromQueryable(GetData());
-
-            // NOTE: You can also fill the DataSet manually.
-            // Just set the Items, PageSize, PageIndex 
-            // and TotalItemsCount properties
-
-            return base.PreRender();
+            // NOTE: You can also create the DataSet with factory.
+            // Just call static Create with delegate and pagesize.
+            Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
+            return base.Init();
         }
-
-        public ViewModel()
-        {
-            // creates new GridViewDataSet and sets PageSize
-            Customers = new GridViewDataSet<Customer>() { PageSize = 4 };
-        }
-
     }
 
 
