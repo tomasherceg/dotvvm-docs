@@ -141,7 +141,7 @@ The last thing is to tell our DatePicker control that it requires the "myDatePic
 protected override void OnPreRenderComplete(IDotvvmRequestContext context)
 {
     context.ResourceManager.AddRequiredResource("myDatePicker");
-    base.OnInit(context);
+    base.OnPreRenderComplete(context);
 }
 ```
 
