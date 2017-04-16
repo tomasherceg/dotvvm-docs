@@ -6,16 +6,18 @@ with the authentication.
 **DotVVM** doesn't implement any specific authentication features, however it 
 can use advantage of the common ASP.NET authentication system. The fact, whether
 the user is authenticated and in which role he is, is determined by the 
-`OwinContext.User` property. It's the same as in other ASP.NET frameworks.
+`HttpContext.User` property. It's the same as in other ASP.NET technologies.
+
+In OWIN, you can use the `Microsoft.Owin.Security.*` NuGet packages to configure the cookie authentication or different authentication mechanisms, like Open ID.
+
+In ASP.NET Core, you can use the `Microsoft.AspNetCore.Authentication.*` NuGet packages for the same thing.
 
 
 ### Restricting Access to ViewModels and ViewModel Methods
 
-**DotVVM** contains the `[Authorize]` attribute. You can apply it on the whole 
-viewmodel, or on a specific viewmodel method, which is referenced by a command binding.
+In **DotVVM**, you can use the `[Authorize]` attribute from the `DotVVM.Framework.Runtime.Filters` namespace. You can use it to decorate the viewmodel class, or a specific viewmodel method referenced by a command binding.
 
->Only the method called directly from a command binding, and the class where that method is declared, 
-> are checked for the Authorize attribute. If you call the method from C# code, the attribute is ignored.
+> Only the method called from a command binding and the page viewmodel class are checked for the Authorize attribute. If you call the method from C# code, the attribute is not checked automatically.
 
 ```CSHARP
 using System;
@@ -54,9 +56,13 @@ namespace DotvvmDemo.ViewModels
             // Only the users with the Admin role will be able
             // to call this method from the command binding.
         }
+
+        // Please note that if you call the DeleteUser from your own code, the Authorize attribute will not be checked.
     }
 }
 ```
 
-If you use the `Microsoft.Owin.Security` package for the authentication, you should read 
-[Using OWIN Security for Authentication](/docs/tutorials/advanced-owin-security/{branch}) chapter. 
+You can find more details about the authentication providers in the following chapters:
+
+* [Using OWIN Security for Authentication](/docs/tutorials/advanced-owin-security/{branch})
+* [Using Microsoft ASP.NET Core Authentication](/docs/tutorials/advanced-aspnetcore-authentication/{branch}) 

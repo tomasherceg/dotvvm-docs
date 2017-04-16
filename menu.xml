@@ -42,6 +42,7 @@
 	<DocPageMenuItem RouteName="advanced" PageName="Advanced Topics">
 		<DocPageMenuItem RouteName="authentication-authorization" PageName="Authentication and Authorization" />
 		<DocPageMenuItem RouteName="owin-security" PageName="Using OWIN Security for Authentication" />
+		<DocPageMenuItem RouteName="aspnetcore-authentication" PageName="ASP.NET Core Authentication" />
 		<DocPageMenuItem RouteName="action-filters" PageName="Action Filters" />
 		<DocPageMenuItem RouteName="exception-filters" PageName="Exception Filters" />
 		<DocPageMenuItem RouteName="filter-registration" PageName="Filter Registration" />
