@@ -1,5 +1,8 @@
 ## Using Owin Security for Authentication
 
+> This section is applicable if your application uses OWIN and classic .NET Framework. 
+> For ASP.NET Core stack, visit the [Using Microsoft ASP.NET Core Authentication](/docs/tutorials/advanced-aspnetcore-authentication/{branch}).
+
 Let's see how to use the OWIN Security framework. To set up the standard cookie authentication, 
 just add this snippet in the `Startup.cs` file.
 

@@ -1,19 +1,19 @@
 ## Exception Filters
 
-If you want to handle exceptions only, we also have a base class `ExceptionFilterAttribute`.
-It derives from `ActionFilterAttribute`, however it adds the `OnCommandException` method. Also, there is a method called `OnPageException`. 
+> The API of action filters has been changed in DotVVM 1.1. See the [Upgrading from DotVVM 1.0](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) page for more information. 
 
-The `OnCommandException` is called when the error occurs when the command is executed. A command is a method in the viewmodel triggered 
-by the `{command: ...}` or `{controlCommand: ...}` bindings.
+If you want to handle exceptions, there is a class called `ExceptionFilterAttribute`.
+It derives from the `ActionFilterAttribute` and it adds the `OnCommandExceptionAsync` method. 
 
-The `OnPageException` is called when any other exception that occur when the page is being processed. It catches the exceptions in 
-the `Init`, `Load` and `PreRender` in the viewmodel. 
+The `OnCommandExceptionAsync` is called whenever an error occurs in a method triggered by the `{command: ...}` or `{staticCommand: ...}` bindings.
+
+The `ActionFilterAttribute` class then defines the `OnPageExceptionAsync` method. This method is called when any other exception occurs when the page is being processed. In most cases, it catches the exceptions in the `Init`, `Load` and `PreRender` in the viewmodel, and the exceptions that occur during the rendering or serialization phases. 
 
 ```CSHARP
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Runtime.Filters;
 
@@ -21,16 +21,20 @@ namespace DotvvmDemo
 {
     public class ErrorLoggingActionFilter : ExceptionFilterAttribute
     {
-        protected override void OnCommandException(IDotvvmRequestContext context, ActionInfo actionInfo, Exception exception)
+        protected override Task OnCommandExceptionAsync(IDotvvmRequestContext context, ActionInfo actionInfo, Exception exception)
         {
             // Log exceptions from commands in the viewmodel
 			LogService.LogException(exception.ToString());
+
+            return base.OnCommandExceptionAsync(context, actionInfo, exception);
         }
         
-        protected override void OnPageException(IDotvvmRequestContext context, Exception exception)
+        protected override Task OnPageExceptionAsync(IDotvvmRequestContext context, Exception exception)
         {
             // Log other exceptions that occur during the page execution
 			LogService.LogException(exception.ToString());
+
+            return base.OnPageExceptionAsync(context, exception);
         }              
     }
 }
@@ -40,7 +44,7 @@ namespace DotvvmDemo
 
 ### Command Exception Handling
 
-In many apps, the commands sometimes end with an exception. However you don't want to show the error page to the user.  Instead, you need to 
+In many apps, the commands sometimes end with an exception. However you don't want to show the error page to the user in this case. Instead, you need to 
 log the exception and display an error message to the user.
 
 You can use something like this:
@@ -49,14 +53,15 @@ You can use something like this:
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Runtime.Filters;
+
 namespace DotvvmDemo
 {
     public class ErrorHandlingActionFilter : ExceptionFilterAttribute
     {
-        protected override void OnCommandException(IDotvvmRequestContext context, ActionInfo actionInfo, Exception exception)
+        protected override Task OnCommandExceptionAsync(IDotvvmRequestContext context, ActionInfo actionInfo, Exception exception)
         {
 			// AppViewModelBase declares the ErrorMessage property to display error messages
 			// If it is set, the master page will display the error message alert.
@@ -67,13 +72,15 @@ namespace DotvvmDemo
 				// We need the request to end normally, not with an error
                 context.IsCommandExceptionHandled = true;
             }
+
+            return base.OnCommandExceptionAsync(context, actionInfo, exception);
         }       
     }
 }
 ```
 
 The `AppViewModelBase` is a base class for all viewmodels in the application and has the `ErrorMessage` property. If the request execution should 
-continue without error, we need to set `context.IsCommandExceptionHandled` to `true`.
+continue like there was no error, we need to set `context.IsCommandExceptionHandled` to `true`.
 
 <br />
 
@@ -81,20 +88,21 @@ continue without error, we need to set `context.IsCommandExceptionHandled` to `t
 
 If the exception occurs during the `Init`, `Load` and `PreRender` phase, you often need to redirect the user to an error page. 
 
-You can do it in the `OnPageException` method like this:
+You can do it in the `OnPageExceptionAsync` method like this:
 
 ```CSHARP
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using System.Threading.Tasks;
 using DotVVM.Framework.Hosting;
 using DotVVM.Framework.Runtime.Filters;
+
 namespace DotvvmDemo
 {
     public class ErrorHandlingActionFilter : ExceptionFilterAttribute
     {
-        protected override void OnPageException(IDotvvmRequestContext context, Exception exception)
+        protected override Task OnPageExceptionAsync(IDotvvmRequestContext context, Exception exception)
         {
             // Suppress the default DotVVM error page
 			context.IsPageExceptionHandled = true;
@@ -103,6 +111,8 @@ namespace DotvvmDemo
             
             // Redirect to the /error500 page 
             context.RedirectToUrl("/error500");
+
+            return base.OnPageExceptionAsync(context, exception);
         }       
     }
 }

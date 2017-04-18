@@ -1,80 +1,80 @@
 ## Filters
 
+> The API of action filters has been changed in DotVVM 1.1. See the [Upgrading from DotVVM 1.0](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) page for more information. 
+
 In large apps and sites, you need to do apply global actions e.g. for each button click
 on a specific page, section or even on all pages in the app.
 
-You might need to do global exception handling and logging, or you just need to check
-`ModelState.IsValid` on each postback.
+You might need to do global exception handling and logging, or to switch the culture based on a value from cookies etc
 
 In **DotVVM**, we have a concept of filters for this purpose. If you know Action Filters
-in ASP.NET MVC or ASP.NET Web API, it is the same concept.
+in ASP.NET MVC or ASP.NET Web API, it is the same.
 
 
 ### Action Filters
 
-If you want to apply a common logic to one or more viewmodels, viewmodel commands or 
-a whole application, you have to create a class that derives from `ActionFilterAttribute`.
+If you want to apply a common logic to one or more viewmodels, viewmodel commands or a whole application, you have to create a class that derives from `ActionFilterAttribute`.
 
-You have 4 methods you can override in this class:
+You can then override any of the method listed below.
 
-+ **OnViewModelCreated** - this method is called after the viewmodel was created. 
-You can use it to set additional viewmodel properties.
++ **Page-level Events**
+    - `OnPageLoadingAsync` is executed immediately after the URL is mapped to a specific route and the viewmodel instance is created.
+    - `OnPageLoadedAsync` is executed after the response is rendered completely.
+    - `OnPageExceptionAsync` is executed when an unhandler exception occurs during the HTTP request processing.
 
-+ **OnCommandExecuting** - this method is called right before the method referenced in
-the command binding is invoked. This method is only invoked during the postback.
++ **ViewModel-level Events**
+    - `OnViewModelCreatedAsync` is executed when the viewmodel instance is created.
+    - `OnViewModelSerializingAsync` is executed before the viemwodel is serialized to JSON and sent to the client.
+    - `OnViewModelDeserializedAsync` is executed on postbacks, after the viewmodel from the client was deserialized.
 
-+ **OnCommandExecuted** - this method is called right after the method referenced in
-the command binding was finished. This method is only invoked during the postback.
++ **Comment-level Events**
+    - `OnCommandExecutingAsync` is executed on postbacks, before the command referenced from a command binding is called.
+    - `OnCommandExecutedAsync` is executed on postbacks, after the command referenced from a command binding is called.
 
-+ **OnResponseRendering** - this method is called right before the viewmodel is serialized
-and the response is rendered.
+There is also a class called `ExceptionFilterAttribute` which adds another event:
 
+- `OnCommandException` is executed on postbacks, when the command referenced from a command binding throws an exception.
+
+If you only need to target specific events, you don't need to inherit from these attributes. You can implement the `IPageActionFilter`, `ICommandActionFilter` or `IViewModelActionFilter` interface instead.
 
 
 ### Model Validation using Filters
 
-If you want to perform the model validation before every command, it is not difficult.
-**DotVVM** already include such filter and includes it for all requests by default, but here is how it's implemented:
+If you want to perform the model validation before every command, it is not difficult. Actually, **DotVVM** already include 
+such filter and registers it for all requests by default. 
+
+Here is how it's implemented:
 
 ```CSHARP
-using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Threading.Tasks;
 using DotVVM.Framework.Hosting;
-using DotVVM.Framework.ViewModel;
+using DotVVM.Framework.ViewModel.Validation;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DotVVM.Framework.Runtime.Filters
 {
-
     /// <summary>
     /// Runs the model validation and returns the errors if the viewModel is not valid.
     /// </summary>
     public class ModelValidationFilterAttribute : ActionFilterAttribute
     {
 
-        private ViewModelValidator viewModelValidator = new ViewModelValidator();
-
-        /// <summary>
-        /// Called before the command is executed.
-        /// </summary>
-        protected internal override void OnCommandExecuting(IDotvvmRequestContext context, ActionInfo actionInfo)
+        protected internal override Task OnCommandExecutingAsync(IDotvvmRequestContext context, ActionInfo actionInfo)
         {
             if (!string.IsNullOrEmpty(context.ModelState.ValidationTargetPath))
             {
-                // perform the validation
-                context.ModelState.Errors.AddRange(viewModelValidator.ValidateViewModel(context.ModelState.ValidationTarget));
-
-                // return the model state when error occurs
+                var validator = context.Services.GetService<IViewModelValidator>();
+                context.ModelState.Errors.AddRange(validator.ValidateViewModel(context.ModelState.ValidationTarget));
                 context.FailOnInvalidModelState();
             }
 
-            base.OnCommandExecuting(context, actionInfo);
+            return Task.FromResult(0);
         }
     }
 }
 ```
 
-In the `OnCommandExecuting` method we have to check whether the `ValidationTargetPath` is set or not. If not, then
+In the `OnCommandExecutingAsync` method we have to check whether the `ValidationTargetPath` is set or not. If not, then
 the validation was disabled on the control which fired the postback.
 
 We need to perform the validation and call `FailOnInvalidModelState`, which throws an exception and return
