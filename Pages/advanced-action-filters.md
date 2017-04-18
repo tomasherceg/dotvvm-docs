@@ -1,5 +1,7 @@
 ## Filters
 
+> The API of action filters has been changed in DotVVM 1.1. See the [Upgrading from DotVVM 1.0](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) page for more information.
+
 In large apps and sites, you need to do apply global actions e.g. for each button click
 on a specific page, section or even on all pages in the app.
 
@@ -17,24 +19,24 @@ a whole application, you have to create a class that derives from `ActionFilterA
 
 You have 4 methods you can override in this class:
 
-+ **OnViewModelCreated** - this method is called after the viewmodel was created. 
++ `OnViewModelCreated` - this method is called after the viewmodel was created. 
 You can use it to set additional viewmodel properties.
 
-+ **OnCommandExecuting** - this method is called right before the method referenced in
++ `OnCommandExecuting` - this method is called right before the method referenced in
 the command binding is invoked. This method is only invoked during the postback.
 
-+ **OnCommandExecuted** - this method is called right after the method referenced in
++ `OnCommandExecuted` - this method is called right after the method referenced in
 the command binding was finished. This method is only invoked during the postback.
 
-+ **OnResponseRendering** - this method is called right before the viewmodel is serialized
++ `OnResponseRendering` - this method is called right before the viewmodel is serialized
 and the response is rendered.
 
 
 
 ### Model Validation using Filters
 
-If you want to perform the model validation before every command, it is not difficult.
-**DotVVM** already include such filter and includes it for all requests by default, but here is how it's implemented:
+If you want to perform the model validation before every command, it is not difficult. Actually, **DotVVM** already include 
+such filter and registers it for all requests by default. 
 
 ```CSHARP
 using System;

@@ -1,13 +1,13 @@
 ## Exception Filters
 
-If you want to handle exceptions only, we also have a base class `ExceptionFilterAttribute`.
-It derives from `ActionFilterAttribute`, however it adds the `OnCommandException` method. Also, there is a method called `OnPageException`. 
+> The API of action filters has been changed in DotVVM 1.1. See the [Upgrading from DotVVM 1.0](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) page for more information. 
 
-The `OnCommandException` is called when the error occurs when the command is executed. A command is a method in the viewmodel triggered 
-by the `{command: ...}` or `{controlCommand: ...}` bindings.
+If you want to handle exceptions, there is a class called `ExceptionFilterAttribute`.
+It derives from the `ActionFilterAttribute` and it adds the `OnCommandException` method. 
 
-The `OnPageException` is called when any other exception that occur when the page is being processed. It catches the exceptions in 
-the `Init`, `Load` and `PreRender` in the viewmodel. 
+The `OnCommandException` is called whenever an error occurs in a method triggered by the `{command: ...}` or `{staticCommand: ...}` bindings.
+
+The `ActionFilterAttribute` class then defines the `OnPageException` method. This method is called when any other exception occurs when the page is being processed. In most cases, it catches the exceptions in the `Init`, `Load` and `PreRender` in the viewmodel, and the exceptions that occur during the rendering or serialization phases. 
 
 ```CSHARP
 using System;
@@ -40,7 +40,7 @@ namespace DotvvmDemo
 
 ### Command Exception Handling
 
-In many apps, the commands sometimes end with an exception. However you don't want to show the error page to the user.  Instead, you need to 
+In many apps, the commands sometimes end with an exception. However you don't want to show the error page to the user in this case. Instead, you need to 
 log the exception and display an error message to the user.
 
 You can use something like this:
@@ -73,7 +73,7 @@ namespace DotvvmDemo
 ```
 
 The `AppViewModelBase` is a base class for all viewmodels in the application and has the `ErrorMessage` property. If the request execution should 
-continue without error, we need to set `context.IsCommandExceptionHandled` to `true`.
+continue like there was no error, we need to set `context.IsCommandExceptionHandled` to `true`.
 
 <br />
 
