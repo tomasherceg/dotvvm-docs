@@ -103,39 +103,4 @@ app.UseFacebookAuthentication(new FacebookAuthenticationOptions()
 
 In order to use Azure Active Directory as the identity provider, you can use the Open ID Connect middleware using the `Microsoft.Owin.Security.OpenIdConnect` package.
 
-```CSHARP
-app.SetDefaultSignInAsAuthenticationType(DefaultAuthenticationTypes.ApplicationCookie);
-
-var authority = new Uri("https://login.microsoftonline.com/common/");
-app.UseOpenIdConnectAuthentication(new OpenIdConnectAuthenticationOptions
-    {
-        ClientId = "<<CLIENT_ID>>",
-        Authority = authority.ToString(),
-        MetadataAddress = new Uri(authority, ".well-known/openid-configuration").ToString(),
-        Notifications = new OpenIdConnectAuthenticationNotifications
-        {
-            AuthenticationFailed = context =>
-            {
-                context.HandleResponse();
-                DotvvmAuthenticationHelper.ApplyRedirectResponse(context.OwinContext, "/error");
-                return Task.FromResult(0);
-            },
-            RedirectToIdentityProvider = context =>
-            {
-                context.ProtocolMessage.RedirectUri = "<<REDIRECT_URI>>";
-                context.ProtocolMessage.PostLogoutRedirectUri = context.Request.Uri.ToString();
-                return Task.FromResult(0);
-            },
-            SecurityTokenValidated = context =>
-            {
-                HttpContext.Current.GetOwinContext().Request.User = new ClaimsPrincipal(context.AuthenticationTicket.Identity);
-                
-                // here you can e.g. load the user ID from the database and save it as a claim in the identity object 
-
-                return Task.FromResult(0);
-            }
-        }
-    });
-``` 
-
-You need to combine this provider with e.g. the cookie authentication provider to store the identity in the cookie.
+For the details, visit the [DotVVM with Azure AD Authentication Sample](https://github.com/riganti/dotvvm-samples-azuread-auth).
