@@ -1,7 +1,7 @@
 ## Returning Files
 
 Sometimes you want to generate a file and let the user download it, e.g. export data in GridView in an Excel file. Normally, you just redirect user to some URL
-and if the Content-Type and Content-Disposition headers indicate that it is a file for downloading, the browser will start downloading the file.  
+and if the `Content-Type` and `Content-Disposition` headers indicate that it is a file for downloading, the browser will offer the user to download the file.  
 
 However, if you need to generate the file in a response to a button click, it is not so easy. Postbacks in DotVVM are done by AJAX and browsers cannot treat 
 the response of an AJAX call as a file download. You would have to write a custom OWIN middleware or a [custom presenter](/docs/tutorials/advanced-custom-presenters/{branch})
@@ -13,20 +13,28 @@ deliver it to the client using the `Context.ReturnFile` method.
 
 ### Registering the IReturnedFileStorage
 
-Because you generate the file in the viewmodel and browser needs to do an additional request to retrieve the file, you need some kind of a storage for temporary files.
+Because you generate the file in the viewmodel and the browser needs to do an additional HTTP request to retrieve the file, you need some kind of a storage for temporary files.
 In DotVVM, there is the `IReturnedFileStorage` interface which handles files returned from the viewmodel.
 
-All we have to do is to register it in the `Startup.cs` file:
+All we have to do is to register it in the `Startup.cs` file. If you create a new DotVVM project, you will find the following line there:
 
 ```CSHARP
-config.ServiceLocator.RegisterSingleton<IReturnedFileStorage>(
-    () => new FileSystemReturnedFileStorage(Path.Combine(applicationPhysicalPath, "App_Data\\Temp"), TimeSpan.FromMinutes(30)));
+app.UseDotVVM<DotvvmStartup>(applicationPath, options =>    
+    options.AddDefaultTempStorages("temp");
+);
 ``` 
 
-This code snippet register an implementation of the `IReturnedFileStorage` service. We are using the `FileSystemReturnedFileStorage` which stores the temporary files
-in the `App_Data\temp` folder and there is 30 minutes timeout in which the file must be retrieved. Otherwise the storage can remove it to free some disk space.
+> Please note that the configuration of DotVVM services has changed in DotVVM 1.1. 
 
-Of course you can implement your own mechanism of returned file storage. 
+This registers storages for uploaded and returned files that store the files in local filesystem. You can find more information about uploading files in the [FileUpload](/docs/controls/builtin/FileUpload/{branch}) documentation.
+
+If you want to register only the returned file storage, you can use `options.AddReturnedFileStorage`.
+
+If you decide to write your own storage (e.g. use Azure blob storage, in-memory file store etc, you can create a custom class that implement `IReturnedFileStorage` and register it on your own:
+
+```CSHARP
+options.Services.AddSingleton<IReturnedFileStorage, MyCustomReturnedFileStorage>();
+```
 
 ### Using context.ReturnFile
 

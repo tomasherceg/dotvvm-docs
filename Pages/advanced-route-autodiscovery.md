@@ -61,3 +61,22 @@ public class MyRouteStrategy : DefaultRouteStrategy
 
 }
 ```
+
+One of the interesting scenarios is building your own naming conventions. For example, if the page name ends with `List`, it won't have any route parameters. If it ends with `Detail`, it will have one route parameter called `id`.
+
+```CSHARP
+public class MyRouteStrategy : DefaultRouteStrategy
+{
+
+    protected override string GetRouteUrl(RouteStrategyMarkupFileInfo file)
+    {
+        var url = base.GetRouteUrl(file);
+        if (url.EndsWith("detail", StringComparison.CurrentCultureIgnoreCase)) 
+        {
+            // add "id" parameter to the route
+            return url + "/{id}";
+        }
+    }
+
+}
+```
