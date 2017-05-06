@@ -1,6 +1,7 @@
 ## Custom Presenters
 
 In most applications, you have several situations where you need to generate some XML, JSON or other type of a content (RSS feed etc.), or just compose the HTTP response yourself. 
+
 In OWIN, you can write your own middleware which handles the communication, or you can use another framework for that (e.g. ASP.NET Web API for REST interfaces).
 
 But sometimes you need to integrate with various DotVVM services (e.g. routing), or you just don't want to introduce additional libraries in your project.
