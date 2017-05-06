@@ -1,31 +1,46 @@
 ## IoC/DI Containers
 
-Dependency Injection is quite popular these days. In **DotVVM**, you can 
-simply inject your dependencies and services into viewmodels.
+Dependency Injection is used widely in many large applications. **DotVVM** allows you to have your services injected in the viewmodel constructor or properties.
 
-You may have noticed the `ServiceLocator` property in the `DotvvmConfiguration` class.
-This collection is used for resolving **DotVVM-related** services.
+```CSHARP
+public class CustomersViewModel 
+{
+    // the parameters will be injected automatically by the DI container
+    public CustomersViewModel(CustomerService customerService, ILogging log) 
+    {
+        ...        
+    }
 
-One of the services resolved through this mechanism is `IViewModelLoader` component.
-This component is responsible for creating and initializing the instance of a viewmodel
-for a particular view.
+    // this service can be injected too
+    [Bind(Direction.None)]
+    public IAdditionalService AdditionalService { get; set; }
+}
+```
 
-By default, **DotVVM** just reads the `@viewModel` directive and creates an instance 
-of the class. But we can simply create a mechanism which replace the default behavior
-and use the container to resolve the viewmodel of the specified type.
+Basically, if you need any services in your viewmodel, you can request them in the constructor as parameters, or you can declare a public property in the viewmodel. In that case, don't forget to use the `[Bind(Direction.None)]` attribute to tell the serializer that it should not care about this property.
 
-### Creating a ViewModelLoader
+### Enabling the Dependency Injection
 
-First, you have to create your own `ViewModelLoader`. We recommend to inherit from
-`DefaultViewModelLoader` and override the `CreateViewModelInstance` method because the 
-`DefaultViewModelLoader` already resolves the type from the `@viewModel` directive.
+> The way of handling dependency injection has been changed in DotVVM 1.1 and the dependency injection is based on the `Microsoft.Extensions.DependencyInjection` library. 
+
+Because there is no dependency injection mechanism built in .NET Framework and an external libraries have to be used for this purpose, you have to perform additional configuration steps to enable the dependency injection.
+
+The `DotvvmConfiguration` object contains a property called `ServiceLocator`. This property contains a class that manages internal services of DotVVM, e.g. view compiler, viewmodel serializer etc.
+
+One of the internal services is the viewmodel loader represented by the `IViewModelLoader` interface. This class is responsible for locating of the class specified by the `@viewModel` directive in the page and creating an instance of the viewmodel. 
+
+DotVVM uses the `DefaultViewModelLoader` class which locates the class and calls its default constructor. If you need to plug a dependency injection container in, you can create a class that inherits `DefaultViewModelLoader` and override the `CreateViewModelInstance`.
+
+### Custom ViewModelLoader for Castle Windsor
+
+**Castle Windsor** is one of the favorite IoC/DI containers in .NET. Here is how to create the viewmodel loader using this container. Notice that we call `container.Resolve` in the `CreateViewModelInstance` and `container.Release` in the `DisposeViewModel`.
 
 ```CSHARP
 using System;
 using Castle.Windsor;
-using DotVVM.Framework.Runtime;
+using DotVVM.Framework.ViewModel.Serialization;
 
-namespace DotvvmWeb.Installers
+namespace DotvvmDemo.Web
 {
     public class WindsorViewModelLoader : DefaultViewModelLoader
     {
@@ -50,16 +65,11 @@ namespace DotvvmWeb.Installers
 }
 ```
 
-This sample uses **Castle Windsor** container, however it will be very similar with
-any other DI container.
+If you use another container, the implementation will be very similar. Don't forget to tell the container to release the instances in the `DisposeViewModel` method. This method is called when the HTTP request ends and DotVVM no longer needs the viewmodel object.
 
-There is also a `DisposeViewModel` method which calls `Release` on the viewmodel.
-This will tell the container that the instance and its dependencies are no longer needed
-and can be safely released. This is because some containers track all instances they have created
-which can cause memory leaks. 
+Some containers do this by initiating a "scope" in the `CreateViewModelInstance` method and disposing the scope in the `DisposeViewModel` method.
 
-
-### Registering Custom ViewModel Loader
+### Registering Custom ViewModelLoader
 
 The last thing is to replace the default viewmodel loader with the one you have just created.
 We should do this in the `Startup.cs` class:
@@ -67,3 +77,5 @@ We should do this in the `Startup.cs` class:
 ```CSHARP
 dotvvmConfiguration.ServiceLocator.RegisterSingleton<IViewModelLoader>(() => new WindsorViewModelLoader(container));
 ```
+
+> Please note that the `ServiceLocator` property is no longer used in DotVVM 1.1.
