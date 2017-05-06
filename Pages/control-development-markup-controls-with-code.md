@@ -1,11 +1,10 @@
 ## Markup Controls with Code
 
-Sometimes you need to parameterize the markup control in the page where you use it. 
-For example, you don't need to display the Phone field in the Billing address, and you want also the control from the last sample
-to generate the fieldset and legend tags itself.
+Sometimes you need to pass some parameters in the markup control.
 
-You can create a markup control using the _Add > New Item_ in the Solution Explorer context menu and after you choose the name of the control,
-click on the checkbox which generates the code behind file for you.
+For example, you don't need to display the *Phone* field in the Billing address, and you want also the control from the last sample to generate the `fieldset` and `legend` tags itself, so the control needs to know the text you need to display in the `legend` element.
+
+You can create a markup control using the _Add > New Item_ in the _Solution Explorer_ context menu and after you choose the name of the control, click on the checkbox which generates the _code behind file_ for you.
 
 <p><img src="{imageDir}control-development-markup-controls-with-code-1.png" alt="Creating the DOTCONTROL with code" /></p>
 
@@ -18,18 +17,20 @@ public class AddressEditor : DotvvmMarkupControl
 }
 ```
 
-Now we want to add two properties into the control. The first one is `Title`, which will appear inside the **legend** tag.
-The second would be `DisplayPhoneNumber` property which will hide the Phone field. 
+### Declaring Control Properties
 
-The properties in a **DotVVM** control cannot be simple C# properties with default getter and setter. To make data-binding work,
-you have to expose those properties as a `DotvvmProperty` object which contains metadata about the property. It is quite similar 
-to dependency properties in WPF.
+Now we want to add two properties into the control. The first one is `Title`, which will appear inside the `legend` tag.
+The second is `DisplayPhoneNumber` property which will show or hide the Phone field. 
 
-We have prepared an easy-to-use code snippet in the Visual Studio extension, so to declare a property you only need to type
-`dotprop` and press Tab. The property declaration will be generated for you.
+The properties in a **DotVVM** control cannot be simple C# properties with default getter and setter. The reason is that the properties can contain data-bindings. If you declare for example a `int` property, it is not possible to store data-binding inside.
 
-So, type in `dotprop` and change the name to `Title`, the type to `string`, the containing class to `AddressEditor` and
-the default value to `"Address"`:
+To make data-binding work, you have to expose those properties as `DotvvmProperty` objects which contains metadata about the property. It is similar to dependency properties in WPF.
+
+[DotVVM for Visual Studio](https://www.dotvvm.com/landing/dotvvm-for-visual-studio) contains an easy-to-use code snippet, so you only need to type `dotprop` and press Tab. The property declaration will be generated for you.
+
+> If you are using Resharper and type `dotprop`, it will not see the code snippet and it will match the `DotvvmProperty` class instead. If this happens, press Escape before pressing Tab and the snippet will work.
+
+After you invoke the `dotprop` code snippet, you can change the name to `Title`, the type to `string`, the containing class to `AddressEditor` and the default value to `"Address"`:
 
 ```CSHARP
 public string Title
@@ -41,7 +42,7 @@ public static readonly DotvvmProperty TitleProperty
         = DotvvmProperty.Register<string, AddressEditor>(c => c.Title, "Address");
 ```
 
-Then create a second property `DisplayPhoneNumber` of type `bool` with default value `true`.
+The second property called `DisplayPhoneNumber` of type `bool` with default value `true` will look like this:
 
 ```CSHARP
 public bool DisplayPhoneNumber
@@ -55,9 +56,11 @@ public static readonly DotvvmProperty DisplayPhoneNumberProperty
 
 ### ControlProperty Binding
 
-Now, you can get the value of these properties using the `{controlProperty: Title}` binding. 
-Also, the markup control has to declare the `@baseType` directive to specify the code behind.
-After you apply these changes, the DOTCONTROL file will look like this:
+Now, you can access the value of these properties using the `{controlProperty: Title}` binding in the markup. 
+
+Notice that the markup control must declare the `@baseType` directive that specifies the code behind class.
+
+The `.dotcontrol` file will look like this:
 
 ```DOTHTML
 @viewModel DotvvmDemo.Model.IAddress, DotvvmDemo
@@ -81,29 +84,51 @@ After you apply these changes, the DOTCONTROL file will look like this:
 In the page, we can now use the control like this:
 
 ```DOTHTML
-    <cc:AddressEditor DataContext="{value: BillingAddress}" Title="Billing Address" DisplayPhoneNumber="false" />
-    <cc:AddressEditor DataContext="{value: DeliveryAddress}" Title="Delivery Address" />
+    <cc:AddressEditor DataContext="{value: BillingAddress}" 
+                      Title="Billing Address" 
+                      DisplayPhoneNumber="false" />
+
+    <cc:AddressEditor DataContext="{value: DeliveryAddress}" 
+                      Title="Delivery Address" />
 ```
 
-It will work even if you put a binding into the Title and DisplayPhoneNumber properties.
+Note that you can also put a data-binding as a value of the `Title` and `DisplayPhoneNumber` properties.
 
-_Careful: Don't try to set a value of a property from code and then reference it using `controlProperty` binding. It won't work.
-The `controlProperty` only propagates the value or a binding which was set to that property in the markup file where the control is used._
+### Important fact about control properties
 
+The properties of markup controls do not store the value. They are only references to the value or the data-binding specified on the place where the control is used.
+
+If you set a value of the `Title` property from the code-behind, there are 3 situations that can happen:
+
+1. In the page, the `Title` property is not set: `<cc:AddressEditor DataContext="{value: DeliveryAddress}" />`.
+
+The value will not be stored anywhere and the `Title` will have its default value on the next postback.
+
+2. In the page, the `Title` property is set to a static value: `<cc:AddressEditor DataContext="{value: DeliveryAddress}" Title="Delivery Address" />`.
+
+The value will not be stored anywhere and the `Title` will have the value `"Delivery Address"` on the next postback.
+
+3. In the page, the `Title` property is bound to some property in the viewmodel: `<cc:AddressEditor DataContext="{value: DeliveryAddress}" Title="{value: DeliveryAddressTitle}" />`.
+
+Only in this case the value will be persisted. If you set the `Title` property from the code-behind, the value will be written into the `DeliveryAddressTitle` property in the viewmodel and you will find it there on the next postback.
+
+> If you need to persist any state information in the markup control, it must be done by data-binding to some viewmodwl property.
 
 ### ControlCommand Binding
 
-Now let's add a button which will fill the fields in the `AddressEditor` with the address the user had on his last order.
-Yes, we could put this function to the viewmodel, however in that case the `IAddress` interface could be implemented by many
-classes and we would have to add the implementation of `ClearAddress` to all those classes.
+If you need to add custom logic in the markup control, you can declare a method (e.g. `ClearAddress`) in the code behind file and invoke it using `controlCommand: ClearAddress()` binding.
 
-Instead, we can use the `controlCommand` binding and implement this logic in our control. Add this to the markup control:
+Alternatively, we could have this method in the viewmodel, but in that case the `IAddress` interface would have to declare this method and all classes that implement the interface would have to implementat also the `ClearAddress` method. 
+
+In this case, the `ClearAddress` can be declared in the code behind file because it does the same thing in all of the implementations.
+
+We can add a button in the `AddressEditor.dotcontrol` file:
 
 ```DOTHTML
 <dot:Button Text="Clear Address" Click="{controlCommand: ClearAddress()}" />
 ````
 
-And then, add this method to the `AddressEditor` class:
+And then, add this method to the `AddressEditor` code behind class:
 
 ```CSHARP
 public void ClearAddress() 
@@ -115,21 +140,23 @@ public void ClearAddress()
 }
 ```
 
+Notice that you can access the binding context using the `DataContext` property. We can safely cast it to `IAddress` because the `@viewModel` directive of the control specifies that the binding context must implement this interface. 
+
 
 ### Updating the ViewModel Properties
 
-Data-binding in **DotVVM** can do one more thing - update the source property. Forget the address editor and imagine we have a
-`NumericUpDown` control which has one textbox and two buttons. The buttons increase or decrease the value of a number
-inside the textbox.
+Data-binding in **DotVVM** can do one more thing - update the source property. 
 
-In the page, the control is used like this:
+Imagine we have a `NumericUpDown` control which has one textbox and two buttons. The buttons increase or decrease the value of a number inside the textbox.
+
+In the page, the control can be used like this:
 
 ```DOTHTML
 <cc:NumericUpDown Value="{value: MyNumber}" />
 ```
 
-The buttons in the control are using `controlCommand` binding to call function `Up` and `Down` in the code behind class of the control.
-The **Up** method looks like this:
+The buttons in the control are using `controlCommand` bindings to call the `Up` and `Down` methods.
+The `Up` method looks like this:
 
 ```CSHARP
 public void Up()
@@ -138,6 +165,4 @@ public void Up()
 }
 ```
 
-Notice that we are changing a value of a property which has a data-binding in the page. DotVVM can update the value in the viewmodel 
-because the `Value` is not a standard property. It is a DotVVM property and in the setter it calls the `SetValue` function. This function checks
-the value and if it finds a binding there, it tries to update the corresponding property in the viewmodel.
+Because the `Value` property is bound to a property in the viewmodel, DotVVM will update the `MyNumber` property too. 
