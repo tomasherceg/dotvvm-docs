@@ -1,7 +1,16 @@
 ## Adding DotVVM in Existing Web App
 
-**DotVVM** can be easily combined with other ASP.NET frameworks, like SignalR, Web API or MVC. 
+**DotVVM** can be easily combined with other ASP.NET frameworks, like ASP.NET Web Forms, SignalR, ASP.NET Web API or ASP.NET MVC.
+
 DotVVM is yet another OWIN / ASP.NET Core middleware that can be added in the request processing pipeline.
+
+### Sample Integration Projects
+
+We have prepared the following sample projects that combine DotVVM with other frameworks in one application:
+
+* [DotVVM with ASP.NET Web Forms](https://github.com/riganti/dotvvm-samples-combo-with-webforms)
+* [DotVVM with ASP.NET MVC](https://github.com/riganti/dotvvm-samples-combo-with-mvc)
+* [DotVVM with Nancy Fx](https://github.com/riganti/dotvvm-samples-combo-with-nancy)
 
 
 ### Installing the Nuget Package (OWIN)
@@ -41,7 +50,6 @@ namespace DotvvmDemo
 ```
 
 <br />
-
 
 ### Installing the Nuget Package (ASP.NET Core)
 
