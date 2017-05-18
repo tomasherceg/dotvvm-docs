@@ -1,0 +1,30 @@
+<bp:GridView DataSource="{value: Orders}"
+             InlineEditing="true">
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+                               HeaderText="Order ID" />
+        <bp:GridViewComboBoxColumn ValueBinding="{value: DeliveryType}"
+                                   DataSource="{value: _parent.DeliveryTypes}"
+                                   HeaderText="Delivery type" />
+        <bp:GridViewTemplateColumn HeaderText="Date">
+            <ContentTemplate>
+                <dot:Literal Text="{value: CreatedDate}"
+                             FormatString="dd.MM.yyyy hh:mm" />
+            </ContentTemplate>
+            <EditTemplate>
+                <bp:DateTimePicker SelectedDate="{value: CreatedDate}"
+                                   FormatString="dd.MM.yyyy hh:mm"
+                                   Mode="DateTime" />
+            </EditTemplate>
+        </bp:GridViewTemplateColumn>
+        <bp:GridViewCheckBoxColumn ValueBinding="{value: IsPaid}"
+                                   HeaderText="Is Paid?" />
+        <bp:GridViewTemplateColumn>
+            <ContentTemplate>
+                <bp:Button Text="Edit"
+                           Click="{command: _root.Orders.RowEditOptions.EditRowId = Id}" />
+            </ContentTemplate>
+            <EditTemplate></EditTemplate>
+        </bp:GridViewTemplateColumn>
+    </Columns>
+</bp:GridView>

@@ -1,0 +1,2 @@
+<bp:Calendar SelectedDate="{value: SelectedDate}"
+             DisplayMode="Extended" />

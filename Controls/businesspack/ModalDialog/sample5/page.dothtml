@@ -1,0 +1,8 @@
+<bp:ModalDialog IsDisplayed="{value: IsModalDisplayed}"
+                InitialPositionLeft="50"
+                InitialPositionTop="50">
+    <p>I have custom position.</p>
+</bp:ModalDialog>
+
+<bp:Button Text="Show Modal Dialog with custom position"
+           Click="{command: IsModalDisplayed = true}" />

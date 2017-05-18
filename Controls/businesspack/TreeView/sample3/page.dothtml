@@ -1,0 +1,12 @@
+<bp:TreeView DataSource="{value: Files}"
+             SelectedValues="{value: SelectedFiles}"
+             CheckBoxMode="VisibleOnLeafs"
+             AutoCheckChildren="false"
+             ItemHasChildrenBinding="{value: HasItems}"
+             ItemChildrenBinding="{value: Items}"
+             Changed="{command: SelectionChanged()}"
+             ItemKeyBinding="{value: Name}">
+    <p>{{value: Name}}</p>
+</bp:TreeView>
+
+<p>You've selected: {{value: Summary}}</p>

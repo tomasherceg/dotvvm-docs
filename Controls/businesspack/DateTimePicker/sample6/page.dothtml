@@ -1,0 +1,4 @@
+<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
+                   SelectionCompleted="{command: SelectionCompleted()}" />
+
+<p>Date has been changed {{value: DateSelectionsCount}} times.</p>

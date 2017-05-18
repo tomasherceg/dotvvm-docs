@@ -1,0 +1,23 @@
+<%-- Custom content with header and footer text --%>
+<bp:ModalDialog HeaderText="This is header"
+                FooterText="This is footer."
+                IsDisplayed="{value: IsModal1Displayed}">
+    <p>Display modal dialog content here.</p>
+</bp:ModalDialog>
+<bp:Button Text="Show Modal Dialog"
+           Click="{command: IsModal1Displayed = true}" />
+
+<%-- Custom content with header and footer template --%>
+<bp:ModalDialog IsDisplayed="{value: IsModal2Displayed}">
+    <HeaderTemplate>
+        <h3>This is header</h3>
+    </HeaderTemplate>
+    <ContentTemplate>
+        <p>Display modal dialog content here.</p>
+    </ContentTemplate>
+    <FooterTemplate>
+        <i>This is footer.</i>
+    </FooterTemplate>
+</bp:ModalDialog>
+<bp:Button Text="Show templated Modal Dialog"
+           Click="{command: IsModal2Displayed = true}" />

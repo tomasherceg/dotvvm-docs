@@ -1,0 +1,13 @@
+<bp:GridView DataSource="{value: Customers}"
+             DisplayFooter="true">
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}"
+                               FooterCssClass="gridview-footer">
+            <FooterTemplate>
+                <p>Total orders: {{value: TotalOrders}}</p>
+            </FooterTemplate>
+        </bp:GridViewTextColumn>
+    </Columns>
+</bp:GridView>

@@ -1,0 +1,5 @@
+<bp:ColorPicker SelectedRgbaColor="{value: Color}"
+                ToggleIconCssClass="toggle"
+                UnselectIconCssClass="unselect"
+                EditorSwitchIconCssClass="switch"
+                Placeholder="Select color" />

@@ -1,0 +1,7 @@
+<bp:TextView Text="{value: ContactInfo}"
+             RenderSettings.Mode="Client" />
+
+<br />
+
+<bp:TextView Text="{value: ContactInfo}"
+             RenderSettings.Mode="Server" />

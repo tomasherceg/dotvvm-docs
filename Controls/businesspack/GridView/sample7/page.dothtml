@@ -1,0 +1,37 @@
+<bp:GridView DataSource="{value: Customers}"
+             InlineInserting="true"
+             InlineInsertRowPlacement="Bottom">
+    <EditRowDecorators>
+        <dot:Decorator style="background-color: darkseagreen" />
+    </EditRowDecorators>
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+                               HeaderText="ID"
+                               IsEditable="false" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+                               HeaderText="Name" />
+        <bp:GridViewTemplateColumn HeaderText="Birthdate">
+            <ContentTemplate>
+                <dot:Literal Text="{value: BirthDate}"
+                             FormatString="dd.MM.yyyy" />
+            </ContentTemplate>
+            <EditTemplate>
+                <bp:DateTimePicker SelectedDate="{value: BirthDate}"
+                                   FormatString="dd.MM.yyyy"
+                                   Mode="Date" />
+            </EditTemplate>
+        </bp:GridViewTemplateColumn>
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+    </Columns>
+</bp:GridView>
+
+<br />
+<bp:Button Text="Add"
+           Click="{command: InsertNewCustomer()}"
+           Visible="{value: !IsInserting}" />
+<bp:Button Text="Save"
+           Click="{command: SaveNewCustomer()}"
+           Visible="{value: IsInserting}" />
+<bp:Button Text="Cancel"
+           Click="{command: CancelInsertNewCustomer()}"
+           Visible="{value: IsInserting}" />

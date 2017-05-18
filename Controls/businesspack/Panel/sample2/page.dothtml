@@ -1,0 +1,16 @@
+<bp:Panel HeaderText="Tabs Panel">
+    <ContentTemplate>
+        <bp:TabControl>
+            <bp:TabItem HeaderText="Tab 1">
+                <ContentTemplate>
+                    This is Tab 1.
+                </ContentTemplate>
+            </bp:TabItem>
+            <bp:TabItem HeaderText="Tab 2">
+                <ContentTemplate>
+                    This is Tab 2.
+                </ContentTemplate>
+            </bp:TabItem>
+        </bp:TabControl>
+    </ContentTemplate>
+</bp:Panel>

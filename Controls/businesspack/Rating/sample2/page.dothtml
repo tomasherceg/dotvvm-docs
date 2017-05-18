@@ -1,0 +1,4 @@
+<bp:Rating Value="{value: Rating}"
+           MaxValue="5"
+           AllowHalfPoints="false"
+           AllowPreviewOnHover="false" />

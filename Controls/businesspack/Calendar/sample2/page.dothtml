@@ -1,0 +1,5 @@
+<bp:Calendar SelectedDate="{value: SelectedDate}"
+             MinDate="{value: MinimumDate}"
+             MaxDate="{value: MaximumDate}" />
+
+<p>Selected date: {{value: SelectedDate}}</p>

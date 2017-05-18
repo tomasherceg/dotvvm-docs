@@ -1,0 +1,4 @@
+<bp:RangeCalendar SelectedStartDate="{value: StartDate}"
+                  SelectedEndDate="{value: EndDate}" />
+
+<p>Selected date range: {{value: StartDate}} - {{value: EndDate}}</p>

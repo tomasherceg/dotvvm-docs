@@ -1,0 +1,5 @@
+<bp:Rating Value="{value: Rating}"
+           MaxValue="5"
+           Changed="{command: RatingChanged()}" />
+
+<p>Rating has changed {{value: ChangeCount}} times.</p>

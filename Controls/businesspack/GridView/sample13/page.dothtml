@@ -1,0 +1,17 @@
+<bp:GridView DataSource="{value: Customers}">
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
+        <bp:GridViewTextColumn ValueBinding="{value: BirthDate}"
+                               FormatString="dd.MM.yyyy" />
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+        <bp:GridViewTemplateColumn>
+            <ContentTemplate>
+                <bp:Button Text="Print name"
+                           Click="{command: _parent.PrintCustomer(_this)}" />
+            </ContentTemplate>
+        </bp:GridViewTemplateColumn>
+    </Columns>
+</bp:GridView>
+
+<p>Print output: {{value: PrintedCustomer.Name}}</p>

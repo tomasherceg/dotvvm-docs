@@ -1,0 +1,32 @@
+<%-- Hardcoded tabs --%>
+<bp:TabControl>
+    <bp:TabItem HeaderText="Tab 1">
+        <ContentTemplate>
+            <p>Tab 1 description</p>
+        </ContentTemplate>
+    </bp:TabItem>
+    <bp:TabItem>
+        <HeaderTemplate>
+            <i>Tab 2</i>
+        </HeaderTemplate>
+        <ContentTemplate>
+            <p>Tab 2 description</p>
+        </ContentTemplate>
+    </bp:TabItem>
+</bp:TabControl>
+
+<%-- Templated tabs --%>
+<bp:TabControl DataSource="{value: Countries}">
+    <HeaderTemplate>
+        {{value: Name}}
+    </HeaderTemplate>
+    <ContentTemplate>
+        <ul>
+            <dot:Repeater DataSource="{value: Cities}">
+                <ItemTemplate>
+                    <li>{{value: _this}}</li>
+                </ItemTemplate>
+            </dot:Repeater>
+        </ul>
+    </ContentTemplate>
+</bp:TabControl>

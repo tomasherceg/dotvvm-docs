@@ -1,0 +1,2 @@
+<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
+                   DisplayMode="Extended" />

@@ -1,0 +1,7 @@
+<bp:ImageCrop ImageUrl="{value: ImagePath}"
+              Operations="{value: ImageOperations}"
+              ResetIconCssClass="refresh"
+              RotateLeftIconCssClass="rotate-left"
+              RotateRightIconCssClass="rotate-right"
+              ZoomInIconCssClass="plus"
+              ZoomOutIconCssClass="minus" />

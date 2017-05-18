@@ -1,0 +1,5 @@
+<bp:Slider SelectedValue="{value: Value}"
+           MinValue="0"
+           MaxValue="100" />
+
+<p>Selected value: {{value: Value}}</p>

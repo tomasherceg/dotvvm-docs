@@ -1,0 +1,17 @@
+<bp:AutoComplete Text="{value: City1}"
+                 DataSource="{value: Suggestions}"
+                 UpdateTextOnInput="false"
+                 Changed="{command: City1Changed()}"
+                 Placeholder="City 1" />
+
+<p>City 1: {{value: City1}}, has changed {{value: City1ChangeCount}} times.</p>
+
+<br />
+
+<bp:AutoComplete Text="{value: City2}"
+                 DataSource="{value: Suggestions}"
+                 UpdateTextOnInput="true"
+                 Changed="{command: City2Changed()}"
+                 Placeholder="City 2" />
+
+<p>City 2: {{value: City2}}, has changed {{value: City2ChangeCount}} times.</p>

@@ -1,0 +1,7 @@
+<bp:ComboBox DataSource="{value: Countries}"
+             SelectedValue="{value: SelectedCountry}"
+             Text="{value: Text}"
+             LoadItems="{staticCommand: LoadCountries(Text)}"
+             Placeholder="Please select Country" />
+
+<p>Selected Country: {{value: SelectedCountry}}</p>

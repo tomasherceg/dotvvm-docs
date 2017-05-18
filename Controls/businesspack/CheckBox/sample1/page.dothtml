@@ -1,0 +1,2 @@
+<bp:CheckBox Text="CheckBox"
+             Checked="{value: IsChecked}" />

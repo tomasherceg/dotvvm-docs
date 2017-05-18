@@ -1,0 +1,4 @@
+<bp:NumericUpDown Value="{value: Value}"
+                  MinValue="0.5"
+                  MaxValue="5"
+                  Step="0.5" />

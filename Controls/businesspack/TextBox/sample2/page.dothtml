@@ -1,0 +1,12 @@
+<form>
+    <bp:TextBox Text="{value: Email}"
+                Type="Email"
+                Validation.Target="{value: Email}"
+                placeholder="Email" />
+    <bp:TextBox Text="{value: Password}"
+                Type="Password"
+                placeholder="Password" />
+
+    <bp:Button Text="Login"
+               IsSubmitButton="true" />
+</form>

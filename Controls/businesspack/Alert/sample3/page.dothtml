@@ -1,0 +1,4 @@
+<bp:Alert Type="Info"
+          AnimationDuration="0.5"
+          AllowDismiss="true"
+          Text="This alert is animated." />

@@ -1,0 +1,22 @@
+<%-- Simple text header and footer --%>
+<bp:Panel HeaderText="This is Header"
+          FooterText="This is Footer">
+    <ContentTemplate>
+        This is content
+    </ContentTemplate>
+</bp:Panel>
+
+<br />
+
+<%-- Templated header and footer --%>
+<bp:Panel>
+    <HeaderTemplate>
+        <h3>This is Header</h3>
+    </HeaderTemplate>
+    <ContentTemplate>
+        This is content
+    </ContentTemplate>
+    <FooterTemplate>
+        <i>This is footer</i>
+    </FooterTemplate>
+</bp:Panel>

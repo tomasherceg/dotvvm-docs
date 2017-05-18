@@ -1,0 +1,7 @@
+<bp:Window IsDisplayed="{value: IsWindowDisplayed}"
+           WindowState="{value: State}">
+    <p>Display window content here.</p>
+</bp:Window>
+
+<bp:Button Text="Display Window"
+           Click="{command: IsWindowDisplayed = true}" />

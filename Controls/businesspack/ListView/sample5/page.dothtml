@@ -1,0 +1,11 @@
+<bp:ListView DataSource="{value: Cities}"
+             SelectedValues="{value: SelectedCityIds}"
+             ItemValueBinding="{value: Id}"
+             ItemKeyBinding="{value: Id}"
+             Changed="{command: SelectionChanged()}">
+    <RowTemplate>
+        <p>{{value: Name}}, {{value: Country}}</p>
+    </RowTemplate>
+</bp:ListView>
+
+<p>Selected Ids: {{value: Summary}}</p>

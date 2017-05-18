@@ -1,0 +1,5 @@
+<bp:TextBox Text="{value: Date}"
+            FormatString="dd.MM.yyyy"
+            ValueType="DateTime" />
+
+<p>You've entered date: {{value: Date}}</p>

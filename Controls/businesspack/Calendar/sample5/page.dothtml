@@ -1,0 +1,4 @@
+<bp:Calendar SelectedDate="{value: SelectedDate}"
+             SelectionCompleted="{command: SelectionCompleted()}" />
+
+<p>Date selection has changed {{value: DateSelectionsCount}} times.</p>

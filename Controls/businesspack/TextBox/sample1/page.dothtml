@@ -1,0 +1,1 @@
+<bp:TextBox Text="{value: Text}" />

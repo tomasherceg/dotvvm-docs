@@ -1,0 +1,6 @@
+<bp:ListView DataSource="{value: Fruit}"
+             SelectedValues="{value: SelectedFruit}">
+    <RowTemplate>
+        <p>{{value: _this}}</p>
+    </RowTemplate>
+</bp:ListView>

@@ -1,0 +1,6 @@
+<bp:RangeCalendar SelectedStartDate="{value: StartDate}"
+                  SelectedEndDate="{value: EndDate}"
+                  MinDate="{value: MinimumDate}"
+                  MaxDate="{value: MaximumDate}" />
+
+<p>Selected date range: {{value: MinimumDate}} - {{value: MaximumDate}}</p>

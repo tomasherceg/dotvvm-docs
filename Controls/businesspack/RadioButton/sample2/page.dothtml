@@ -1,0 +1,5 @@
+<bp:RadioButton CheckedItem="{value: Color}" CheckedValue="#fff" Text="White" />
+<bp:RadioButton CheckedItem="{value: Color}" CheckedValue="#666" Text="Gray" />
+<bp:RadioButton CheckedItem="{value: Color}" CheckedValue="#000" Text="Black" />
+
+<p>Selected Color: {{value: Color}}</p>

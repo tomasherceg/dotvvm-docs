@@ -1,0 +1,13 @@
+<bp:GridView DataSource="{value: Customers}">
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
+        <bp:GridViewTextColumn ValueBinding="{value: BirthDate}"
+                               FormatString="dd.MM.yyyy" />
+        <bp:GridViewTemplateColumn>
+            <ContentTemplate>
+                <b>{{value: Orders}}</b>
+            </ContentTemplate>
+        </bp:GridViewTemplateColumn>
+    </Columns>
+</bp:GridView>

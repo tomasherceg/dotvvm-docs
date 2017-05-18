@@ -1,0 +1,9 @@
+<bp:ComboBox DataSource="{value: Cities}"
+             SelectedValue="{value: SelectedCity}"
+             ItemTextBinding="{value: Name}"
+             ItemKeyBinding="{value: Id}"
+             Placeholder="Select city">
+    <ItemTemplate>
+        <p>{{value: Name}}, {{value: Country}}</p>
+    </ItemTemplate>
+</bp:ComboBox>

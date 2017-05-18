@@ -1,0 +1,8 @@
+<bp:MultiSelect DataSource="{value: Countries}"
+                SelectedValues="{value: SelectedCountries}"
+                ItemValueBinding="{value: Id}"
+                ItemTextBinding="{value: Name}"
+                Placeholder="Select multiple countries"
+                Changed="{command: PrintSummary()}" />
+
+<p>Selected Countries: {{value: Summary}}</p>

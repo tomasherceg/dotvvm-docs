@@ -1,0 +1,13 @@
+<bp:ModalDialog IsDisplayed="{value: IsLongAnimationModalDisplayed}"
+                AnimationDuration="1.5">
+    <p>My animations are slow.</p>
+</bp:ModalDialog>
+<bp:Button Text="Show Modal Dialog with long animations"
+           Click="{command: IsLongAnimationModalDisplayed = true}" />
+
+<bp:ModalDialog IsDisplayed="{value: IsNoAnimationModalDisplayed}"
+                AnimationDuration="0">
+    <p>I have no animation.</p>
+</bp:ModalDialog>
+<bp:Button Text="Show Modal Dialog without animations"
+           Click="{command: IsNoAnimationModalDisplayed = true}" />

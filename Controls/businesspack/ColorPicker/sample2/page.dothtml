@@ -1,0 +1,12 @@
+<p>Custom and predefined colors</p>
+<bp:ColorPicker SelectedRgbaColor="{value: Color}"
+                PredefinedColors="{value: MyColors}"
+                Placeholder="Select color" />
+
+<br />
+
+<p>Only predefined colors</p>
+<bp:ColorPicker SelectedRgbaColor="{value: Color}"
+                PredefinedColors="{value: MyColors}"
+                AllowCustomColors="false"
+                Placeholder="Select color" />

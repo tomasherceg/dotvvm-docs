@@ -1,0 +1,9 @@
+<h3>Select extra ingredients for your pizza:</h3>
+
+<bp:CheckBox Text="Corn (0.5$)" CheckedValue="{value: 0.5}" CheckedItems="{value: Extras}" Changed="{command: UpdatePrice()}" />
+<bp:CheckBox Text="Jalapeño (0.75$)" CheckedValue="{value: 0.75}" CheckedItems="{value: Extras}" Changed="{command: UpdatePrice()}" />
+<bp:CheckBox Text="Bacon (1$)" CheckedValue="{value: 1}" CheckedItems="{value: Extras}" Changed="{command: UpdatePrice()}" />
+
+<br />
+
+<p>Total Price: {{value: Price}}$</p>

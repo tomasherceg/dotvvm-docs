@@ -1,0 +1,5 @@
+<bp:RadioButtonList DataSource="{value: Countries}"
+                    SelectedValue="{value: SelectedCountry}"
+                    Changed="{command: SelectionChanged()}" />
+
+<p>You've changed country {{value: CountryChangeCount}} times.</p>

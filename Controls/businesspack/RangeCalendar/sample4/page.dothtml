@@ -1,0 +1,3 @@
+<bp:RangeCalendar SelectedStartDate="{value: StartDate}"
+                  SelectedEndDate="{value: EndDate}"
+                  DisplayMode="Extended" />

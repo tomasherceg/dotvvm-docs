@@ -1,0 +1,31 @@
+<bp:GridView DataSource="{value: Customers}"
+             InlineEditing="true">
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+                               HeaderText="ID"
+                               IsEditable="false" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+                               HeaderText="Name" />
+        <bp:GridViewTemplateColumn HeaderText="Birthdate">
+            <ContentTemplate>
+                <dot:Literal Text="{value: BirthDate}"
+                             FormatString="dd.MM.yyyy" />
+            </ContentTemplate>
+            <EditTemplate>
+                <bp:DateTimePicker SelectedDate="{value: BirthDate}"
+                                   FormatString="dd.MM.yyyy"
+                                   Mode="Date" />
+            </EditTemplate>
+        </bp:GridViewTemplateColumn>
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+        <bp:GridViewTemplateColumn>
+            <ContentTemplate>
+                <dot:Button Text="Edit" Click="{command: _parent.EditCustomer(_this)}"></dot:Button>
+            </ContentTemplate>
+            <EditTemplate>
+                <dot:Button Text="Save" Click="{command: _parent.UpdateCustomer(_this)}"></dot:Button>
+                <dot:Button Text="Cancel" Click="{command: _parent.CancelEditCustomer()}"></dot:Button>
+            </EditTemplate>
+        </bp:GridViewTemplateColumn>
+    </Columns>
+</bp:GridView>

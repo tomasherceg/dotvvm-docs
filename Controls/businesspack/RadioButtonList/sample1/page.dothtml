@@ -1,0 +1,4 @@
+<bp:RadioButtonList DataSource="{value: Countries}"
+                    SelectedValue="{value: SelectedCountry}" />
+
+<p>Selected country: {{value: SelectedCountry}}</p>

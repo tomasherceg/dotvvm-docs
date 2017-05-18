@@ -1,0 +1,24 @@
+<bp:TabControl DataSource="{value: Countries}"
+               ItemIsActiveBinding="{value: IsChecked}">
+    <HeaderTemplate>
+        {{value: Name}}
+    </HeaderTemplate>
+    <ContentTemplate>
+        <ul>
+            <dot:Repeater DataSource="{value: Cities}">
+                <ItemTemplate>
+                    <li>{{value: _this}}</li>
+                </ItemTemplate>
+            </dot:Repeater>
+        </ul>
+    </ContentTemplate>
+</bp:TabControl>
+
+<br />
+
+<dot:Repeater DataSource="{value: Countries}">
+    <ItemTemplate>
+        {{value: Name}} Tab {{value:  IsChecked ? "is" : "is not"}} selected.
+        <br />
+    </ItemTemplate>
+</dot:Repeater>

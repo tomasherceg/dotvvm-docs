@@ -1,0 +1,39 @@
+<bp:GridView DataSource="{value: Customers}"
+             InlineEditing="true">
+    <RowDecorators>
+        <%-- Set different css class for even and odd rows --%>
+        <dot:Decorator class="{value: Id % 2 == 0 ? 'even-row' : 'odd-row'}" />
+        <%-- Set background color warning for customer without any orders --%>
+        <dot:Decorator style="{value: Orders == 0 ? 'background-color: palevioletred !important;' : ''}" />
+    </RowDecorators>
+    <EditRowDecorators>
+        <%-- Set css class for edit row scenario --%>
+        <dot:Decorator class="edit-row" />
+    </EditRowDecorators>
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+        <bp:GridViewTemplateColumn>
+            <ContentTemplate>
+                <bp:Button Text="Edit"
+                           Click="{command: _root.Customers.RowEditOptions.EditRowId = Id}" />
+            </ContentTemplate>
+            <EditTemplate></EditTemplate>
+        </bp:GridViewTemplateColumn>
+    </Columns>
+</bp:GridView>
+
+<style type="text/css">
+    .even-row {
+        background-color: aquamarine !important;
+    }
+
+    .odd-row {
+        background-color: azure !important;
+    }
+
+    .edit-row {
+        background-color: yellow !important;
+    }
+</style>

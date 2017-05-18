@@ -1,0 +1,4 @@
+<bp:MultiSelect DataSource="{value: Countries}"
+                SelectedValues="{value: SelectedCountries}"
+                AllowNewItems="true"
+                Placeholder="Select or type multiple countries" />

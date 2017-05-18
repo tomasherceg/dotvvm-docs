@@ -1,0 +1,17 @@
+<bp:GridView DataSource="{value: Customers}"
+             FilterPlacement="HeaderRow">
+    <Columns>
+        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+                               HeaderText="Id"
+                               AllowSorting="true"
+                               SortAscendingHeaderCssClass="sort-asc-custom"
+                               SortDescendingHeaderCssClass="sort-desc-custom" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+                               HeaderText="Name"
+                               AllowSorting="true"
+                               SortExpression="LastName" />
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}"
+                               HeaderText="Orders"
+                               AllowSorting="true" />
+    </Columns>
+</bp:GridView>

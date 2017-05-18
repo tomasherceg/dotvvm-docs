@@ -1,0 +1,25 @@
+<%-- Custom content with header and footer text --%>
+<bp:Window HeaderText="This is header"
+           FooterText="This is footer."
+           IsDisplayed="{value: IsWindow1Displayed}">
+    <p>Display window content here.</p>
+</bp:Window>
+
+<bp:Button Text="Show Window"
+           Click="{command: IsWindow1Displayed = true}" />
+
+<%-- Custom content with header and footer template --%>
+<bp:Window IsDisplayed="{value: IsWindow2Displayed}">
+    <HeaderTemplate>
+        <h3>This is header</h3>
+    </HeaderTemplate>
+    <ContentTemplate>
+        <p>Display window content here.</p>
+    </ContentTemplate>
+    <FooterTemplate>
+        <i>This is footer.</i>
+    </FooterTemplate>
+</bp:Window>
+
+<bp:Button Text="Show templated Window"
+           Click="{command: IsWindow2Displayed = true}" />

@@ -1,0 +1,7 @@
+<bp:RangeSlider SelectedStartValue="{value: MinimumPrice}"
+                SelectedEndValue="{value: MaximumPrice}"
+                Changed="{command: PriceRangeChanged()}"
+                MinValue="0"
+                MaxValue="100" />
+
+<p>Selected price range: {{value: PriceRangeString}}</p>

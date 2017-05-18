@@ -1,0 +1,4 @@
+<bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
+                        SelectedEndDate="{value: EndDate}"
+                        MinDate="{value: MinimumDate}"
+                        MaxDate="{value: MaximumDate}" />

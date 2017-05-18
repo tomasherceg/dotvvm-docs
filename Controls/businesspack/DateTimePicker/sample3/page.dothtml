@@ -1,0 +1,8 @@
+<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
+                   Mode="Date" />
+
+<bp:DateTimePicker SelectedDate="{value: SelectedTime}"
+                   Mode="Time" />
+
+<bp:DateTimePicker SelectedDate="{value: SelectedDateTime}"
+                   Mode="DateTime" />

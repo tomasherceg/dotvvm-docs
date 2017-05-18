@@ -1,0 +1,5 @@
+<bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
+                        SelectedEndDate="{value: EndDate}"
+                        SelectionCompleted="{command: SelectionCompleted()}" />
+
+<p>Date range has been changed {{value: DateSelectionsCount}} times.</p>

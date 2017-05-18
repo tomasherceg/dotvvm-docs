@@ -1,0 +1,4 @@
+<bp:CheckBoxList DataSource="{value: Countries}"
+                 ItemCheckedBinding="{value: IsChecked}"
+                 ItemTextBinding="{value: Name}"
+                 ItemKeyBinding="{value: Id}" />

@@ -1,0 +1,4 @@
+<bp:Button ButtonTagName="button">
+    <img src="~/Resources/Images/dotvvm.png" />
+    <p>Custom Button with Image<p />
+</bp:Button>

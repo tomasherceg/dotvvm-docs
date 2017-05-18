@@ -1,0 +1,4 @@
+<bp:NumericUpDown Value="{value: Value}"
+                  Changed="{command: ValueChanged()}" />
+
+<p>Numeric value has changed {{value: ChangeCount}} times.</p>

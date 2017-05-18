@@ -1,0 +1,9 @@
+<bp:Window IsDisplayed="{value: IsWindowDisplayed}"
+           MinWidth="200" MinHeight="100"
+           Width="300" Height="150"
+           AllowResize="true">
+    <p>Display window content here.</p>
+</bp:Window>
+
+<bp:Button Text="Display Window"
+           Click="{command: IsWindowDisplayed = true}" />

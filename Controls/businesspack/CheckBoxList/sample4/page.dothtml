@@ -1,0 +1,5 @@
+<bp:CheckBoxList DataSource="{value: Countries}"
+                 SelectedValues="{value: SelectedCountries}"
+                 Changed="{command: SelectionChanged()}" />
+
+<p>You've selected {{value: SelectedCountriesCount}} countries.</p>

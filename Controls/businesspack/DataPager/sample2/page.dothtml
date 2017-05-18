@@ -1,0 +1,16 @@
+<dot:Repeater DataSource="{value: Countries}"
+              WrapperTagName="ul">
+    <ItemTemplate>
+        <li>Item {{value: Name}}</li>
+    </ItemTemplate>
+</dot:Repeater>
+
+<bp:DataPager DataSet="{value: Countries}"
+              PageSize="{value: PageSize}"
+              HideWhenOnlyOnePage="true" />
+
+<br />
+<bp:Button Text="Add countries"
+           Click="{command: AddCountries(5)}" />
+<bp:Button Text="Remove countries"
+           Click="{command: AddCountries(-5)}" />

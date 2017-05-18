@@ -1,0 +1,6 @@
+<bp:Slider SelectedValue="{value: Price}"
+           Changed="{command: PriceChanged()}"
+           MinValue="0"
+           MaxValue="100" />
+
+<p>Selected price: {{value: PriceString}}</p>

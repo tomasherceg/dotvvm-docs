@@ -1,0 +1,5 @@
+<bp:ModalDialog IsDisplayed="{value: IsModalDisplayed}">
+    <p>Hello!</p>
+</bp:ModalDialog>
+<bp:Button Text="Show Modal Dialog"
+           Click="{command: IsModalDisplayed = true}" />

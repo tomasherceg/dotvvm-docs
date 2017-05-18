@@ -1,0 +1,4 @@
+<bp:NumericUpDown Value="{value: Value}"
+                  FormatString="C"
+                  Step="{value: 0.1}"
+                  MinValue="0" />

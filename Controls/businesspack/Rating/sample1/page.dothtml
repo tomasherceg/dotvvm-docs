@@ -1,0 +1,2 @@
+<bp:Rating Value="{value: Rating}"
+           MaxValue="5" />

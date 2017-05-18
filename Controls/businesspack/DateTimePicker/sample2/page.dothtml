@@ -1,0 +1,3 @@
+<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
+                   MinDate="{value: MinimumDate}"
+                   MaxDate="{value: MaximumDate}" />

@@ -1,0 +1,10 @@
+<bp:TreeView DataSource="{value: Files}"
+             SelectedValues="{value: SelectedFileNames}"
+             ItemValueBinding="{value: Name}"
+             CheckBoxMode="VisibleOnLeafs"
+             AutoCheckChildren="false"
+             ItemHasChildrenBinding="{value: HasItems}"
+             ItemChildrenBinding="{value: Items}"
+             ItemKeyBinding="{value: Name}">
+    <p>{{value: Name}}</p>
+</bp:TreeView>

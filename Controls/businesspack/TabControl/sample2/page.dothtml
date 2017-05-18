@@ -1,0 +1,19 @@
+<bp:TabControl ActiveTabIndex="{value: SelectedTabIndex}"
+               ActiveTabChanged="{command: TabChanged()}">
+    <bp:TabItem HeaderText="Tab 1">
+        <ContentTemplate>
+            <p>Tab 1 description</p>
+            <bp:Button Text="Go to Tab 2"
+                       Click="{command: SelectedTabIndex = 1}" />
+        </ContentTemplate>
+    </bp:TabItem>
+    <bp:TabItem HeaderText="Tab 2">
+        <ContentTemplate>
+            <p>Tab 2 description</p>
+            <bp:Button Text="Go to Tab 1"
+                       Click="{command: SelectedTabIndex = 0}" />
+        </ContentTemplate>
+    </bp:TabItem>
+</bp:TabControl>
+
+<p>Active tab has changed {{value: ChangeCount}} times.</p>

@@ -1,0 +1,6 @@
+<bp:RadioButtonList DataSource="{value: Countries}"
+                    SelectedValue="{value: SelectedCountry}"
+                    ItemKeyBinding="{value: Id}"
+                    ItemTextBinding="{value: Name}" />
+
+<p>Selected country: {{value: SelectedCountry.Name}}</p>

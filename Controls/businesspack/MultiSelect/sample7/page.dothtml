@@ -1,0 +1,5 @@
+<bp:MultiSelect DataSource="{value: Countries}"
+                SelectedValues="{value: SelectedCountries}"
+                Text="{value: Text}"
+                LoadItems="{staticCommand: LoadCountries(Text)}"
+                Placeholder="Search and select multiple countries" />

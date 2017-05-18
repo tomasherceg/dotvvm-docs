@@ -1,0 +1,9 @@
+<p>Show button is enabled only when Hide button is visible.</p>
+
+<bp:Button Text="Show Button"
+           Enabled="{value: IsEnabled}"
+           Click="{command: ShowButton()}" />
+
+<bp:Button Text="Hide Button"
+           Visible="{value: IsVisible}"
+           Click="{command: HideButton()}" />

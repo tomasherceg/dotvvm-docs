@@ -1,0 +1,3 @@
+<bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
+                        SelectedEndDate="{value: EndDate}"
+                        HidePopupOnSelectionComplete="true" />

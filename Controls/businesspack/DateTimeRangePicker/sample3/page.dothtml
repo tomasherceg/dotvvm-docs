@@ -1,0 +1,11 @@
+<bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
+                        SelectedEndDate="{value: EndDate}"
+                        Mode="Date" />
+
+<bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
+                        SelectedEndDate="{value: EndDate}"
+                        Mode="Time" />
+
+<bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
+                        SelectedEndDate="{value: EndDate}"
+                        Mode="DateTime" />

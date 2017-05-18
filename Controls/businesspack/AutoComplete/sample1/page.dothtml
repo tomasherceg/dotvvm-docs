@@ -1,0 +1,3 @@
+<bp:AutoComplete Text="{value: City}"
+                 DataSource="{value: Suggestions}"
+                 Placeholder="City" />

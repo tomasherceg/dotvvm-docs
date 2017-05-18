@@ -1,0 +1,8 @@
+<p>Press CTRL + Shift + S to Save</p>
+<bp:CommandShortcut Ctrl="true"
+                    Shift="true"
+                    Alt="false"
+                    Key="S"
+                    Command="{command: Save()}" />
+
+<p>Last save: {{value: LastSave}}</p>

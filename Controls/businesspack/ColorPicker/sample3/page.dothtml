@@ -1,0 +1,5 @@
+<bp:ColorPicker SelectedRgbaColor="{value: Color}"
+                AllowAlphaChannel="true"
+                Placeholder="Select color" />
+
+<p>R: {{value: Color.Red}}, G: {{value: Color.Green}}, B: {{value: Color.Blue}}, A: {{value: Color.Alpha}}</p>

@@ -1,0 +1,3 @@
+<bp:Calendar SelectedDate="{value: SelectedDate}" />
+
+<p>Selected date: {{value: SelectedDate}}</p>

@@ -1,0 +1,10 @@
+<bp:TextView>
+    John Doe
+    Baker Street 82
+    www.bakerbacon.com
+</bp:TextView>
+
+<br />
+
+<bp:TextView Text="{value: ContactInfo}" />
+<bp:TextView Text="{value: Paragraphs}" />

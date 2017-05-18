@@ -1,0 +1,2 @@
+<bp:CheckBoxList DataSource="{value: Countries}"
+                 SelectedValues="{value: SelectedCountries}" />

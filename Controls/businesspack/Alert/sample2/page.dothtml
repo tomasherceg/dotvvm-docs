@@ -1,0 +1,7 @@
+<bp:Alert Type="Warning"
+          AllowDismiss="true"
+          Text="This alert can be dismissed." />
+
+<bp:Alert Type="Danger"
+          AutoHideTimeout="5"
+          Text="This alert will be dismissed after 5 seconds." />
