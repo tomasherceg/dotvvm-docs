@@ -1,0 +1,5 @@
+<bp:DropDownList DataSource="{value: Countries}"
+             SelectedValue="{value: SelectedCountry}"
+             Placeholder="Please select Country" />
+
+<p>Selected Country: {{value: SelectedCountry}}</p>

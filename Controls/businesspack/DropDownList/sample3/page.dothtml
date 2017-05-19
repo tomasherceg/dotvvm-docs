@@ -1,0 +1,7 @@
+<bp:DropDownList DataSource="{value: Countries}"
+             SelectedValue="{value: SelectedCountryId}"
+             ItemTextBinding="{value: Name}"
+             ItemValueBinding="{value: Id}"
+             Placeholder="Please select Country" />
+
+<p>Selected Country ID: {{value: SelectedCountryId}}</p>
