@@ -1,0 +1,1 @@
+Renders a Gregorian-style calendar control which lets the user to select a date, time or date and time values.

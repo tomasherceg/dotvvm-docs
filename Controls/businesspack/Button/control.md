@@ -1,0 +1,1 @@
+Inherits the build-in [Button](/docs/controls/builtin/Button/{branch}) control with a *DotVVM Business Pack* visual style.
