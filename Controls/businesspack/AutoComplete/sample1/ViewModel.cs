@@ -10,7 +10,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.AutoComplete.sample1
             "Atlantic City",
             "Boston",
             "Chicago",
-            "Dalas",
+            "Dallas",
             "New York",
             "Washington D.C.",
             "Miami",

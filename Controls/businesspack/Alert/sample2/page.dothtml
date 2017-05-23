@@ -3,5 +3,6 @@
           Text="This alert can be dismissed." />
 
 <bp:Alert Type="Danger"
-          AutoHideTimeout="5"
-          Text="This alert will be dismissed after 5 seconds." />
+          AllowDismiss="true"
+          DismissIconCssClass="fa fa-delete"
+          Text="This alert can be dismissed and uses a custom dismiss icon." />

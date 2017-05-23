@@ -14,8 +14,12 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.DataPager.sample2
 
         public override Task Init()
         {
-            Countries = new GridViewDataSet<Country> {
-                OnLoadingData = GetData
+            Countries = new GridViewDataSet<Country>
+            {
+                OnLoadingData = GetData,
+                PagingOptions = {
+                    PageSize = PageSize
+                },
             };
             Countries.SetSortExpression(nameof(Country.Id));
 

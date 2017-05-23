@@ -1,5 +1,6 @@
 <bp:Alert Type="Warning"
           IsDisplayed="{value: IsDisplayed}"
+          AllowDismiss="true"
           Text="Warning" />
 
 <bp:CheckBox Text="Is warning displayed"
