@@ -1,11 +1,7 @@
-<bp:Alert Type="Success"
-          Text="Success alert" />
+<bp:Alert Type="Success" Text="Plain text success alert" />
 
-<bp:Alert Type="Info"
-          Text="Info alert" />
-
-<bp:Alert Type="Warning"
-          Text="Warning alert" />
-
-<bp:Alert Type="Danger"
-          Text="Danger alert" />
+<bp:Alert Type="Danger">
+    Danger alert with <a href="#">hyperlinks</a>
+    <br />
+    and custom content
+</bp:Alert>
