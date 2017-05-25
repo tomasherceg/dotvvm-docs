@@ -1,1 +1,3 @@
-### Sample 5
+### Sample 5: Changed Event
+
+The `Changed` event specifies the command in the viewmodel that is triggered whenever the user changes the value in the control.
