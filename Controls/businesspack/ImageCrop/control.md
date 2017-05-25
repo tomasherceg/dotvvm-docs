@@ -1,0 +1,1 @@
+A control which lets the user to make basic edits (like cropping, resizing or rotating) with a specified image.
