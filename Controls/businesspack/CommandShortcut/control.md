@@ -1,0 +1,1 @@
+An invisible control which allows to trigger a command in the viewmodel for a key shortcut.
