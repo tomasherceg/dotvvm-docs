@@ -1,3 +1,5 @@
 <bp:DateTimePicker SelectedDate="{value: SelectedDate}"
                    FormatString="dd MMM yyyy"
                    Mode="Date" />
+
+<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

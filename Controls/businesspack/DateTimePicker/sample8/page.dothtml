@@ -1,2 +1,0 @@
-<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
-                   HidePopupOnSelectionComplete="false" />

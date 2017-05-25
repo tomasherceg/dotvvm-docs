@@ -1,6 +1,6 @@
 using System;
 
-namespace DotvvmWeb.Views.Docs.Controls.businesspack.DateTimePicker.sample8
+namespace DotvvmWeb.Views.Docs.Controls.businesspack.DateTimePicker.sample7
 {
     public class ViewModel
     {
