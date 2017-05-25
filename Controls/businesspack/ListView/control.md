@@ -1,0 +1,1 @@
+Renders a list of items and allows the user to select one or more items.
