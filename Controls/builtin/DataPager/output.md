@@ -1,5 +1,6 @@
 This control renders an unordered list with hyperlinks in list items.
-The First, Previous, Next and Last link contents can be templated using the `FirstPageTemplate`, `PreviousPageTemplate`, `NextPageTemplate` and `LastPageTemplate`.
+
+The First, Previous, Next and Last link contents can be templated using the `FirstPageTemplate`, `PreviousPageTemplate`, `NextPageTemplate` and `LastPageTemplate` properties.
 
 ```DOTHTML
 <ul>
