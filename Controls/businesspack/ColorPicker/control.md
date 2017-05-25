@@ -1,0 +1,1 @@
+Allows the user to pick a color using a color palette.
