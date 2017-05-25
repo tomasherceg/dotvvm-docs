@@ -1,7 +1,6 @@
 {
   "files": [
     { "name": "page.dothtml" },
-    { "name": "ViewModel.cs" },
-    { "name": "Country.cs" }
+    { "name": "ViewModel.cs" }
   ]
 }

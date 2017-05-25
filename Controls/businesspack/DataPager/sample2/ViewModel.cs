@@ -1,51 +1,63 @@
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.Framework.Controls;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.DataPager.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
-        public int ItemsCount { get; set; } = 5;
-        public int PageSize { get; set; } = 5;
+        private static IQueryable<Customer> FakeDb()
+        {
+            return new[]
+            {
+                new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"), new Customer(2, "Raine Damian"),
+                new Customer(3, "Gerrard Petra"), new Customer(4, "Clement Ernie"), new Customer(5, "Rod Fred"),
+                new Customer(6, "Oliver Carr"), new Customer(7, "Jackson James"), new Customer(8, "Dexter Nicholson"),
+                new Customer(9, "Jamie Rees"), new Customer(10, "Jackson Ross"), new Customer(11, "Alonso Sims"),
+                new Customer(12, "Zander Britt"), new Customer(13, "Isaias Ford"), new Customer(14, "Braden Huffman"),
+                new Customer(15, "Frederick Simpson"), new Customer(16, "Charlie Andrews"), new Customer(17, "Reuben Byrne")
+            }.AsQueryable();
+        }
 
-        public GridViewDataSet<Country> Countries { get; set; }
+        // NOTE: Method for load data from IQueryable
+        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
+        {
+            var queryable = FakeDb();
+            // NOTE: Apply Pagign and Sorting options.
+            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
+        }
+
+        public GridViewDataSet<Customer> Customers { get; set; }
 
         public override Task Init()
         {
-            Countries = new GridViewDataSet<Country>
-            {
-                OnLoadingData = GetData,
-                PagingOptions = {
-                    PageSize = PageSize
-                },
-            };
-            Countries.SetSortExpression(nameof(Country.Id));
-
+            // NOTE: You can also create the DataSet with factory.
+            // Just call static Create with delegate and pagesize.
+            Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
             return base.Init();
         }
 
-        public void AddCountries(int count)
+    }
+
+
+    public class Customer
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+
+        public Customer()
         {
-            ItemsCount = ItemsCount + count;
-            Countries.RequestRefresh(true);
+            // NOTE: This default constructor is required. 
+            // Remember that the viewmodel is JSON-serialized
+            // which requires all objects to have a public 
+            // parameterless constructor
         }
 
-        public GridViewDataSetLoadedData<Country> GetData(IGridViewDataSetLoadOptions gridViewDataSetOptions)
+        public Customer(int id, string name)
         {
-            var queryable = GetQueryable(ItemsCount);
-            return queryable.GetDataFromQueryable(gridViewDataSetOptions);
-        }
-
-        private IQueryable<Country> GetQueryable(int size)
-        {
-            var numbers = new List<Country>();
-            for (var i = 0; i < size; i++)
-            {
-                numbers.Add(new Country { Id = i + 1, Name = $"Country {i + 1}" });
-            }
-            return numbers.AsQueryable();
+            Id = id;
+            Name = name;
         }
     }
 }
