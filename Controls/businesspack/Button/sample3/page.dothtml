@@ -1,8 +1,12 @@
 <bp:Button Text="Button"
            ButtonTagName="button" />
 
+<br />
+
 <bp:Button Text="Input Button"
            ButtonTagName="input" />
+
+<br />
 
 <bp:Button Text="Submit Button"
            IsSubmitButton="true" />

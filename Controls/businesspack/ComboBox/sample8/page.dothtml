@@ -7,3 +7,5 @@
         <p>{{value: Name}}, {{value: Country}}</p>
     </ItemTemplate>
 </bp:ComboBox>
+
+<p>Selected City: {{value: SelectedCity.Name}}, {{value: SelectedCity.Country}}</p>

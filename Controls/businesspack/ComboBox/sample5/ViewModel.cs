@@ -18,7 +18,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample5
         public void CountryChanged()
         {
             SelectedCity = null;
-            Cities = SelectedCountry.Cities;
+            Cities = SelectedCountry?.Cities ?? new List<string>();
         }
     }
 }
