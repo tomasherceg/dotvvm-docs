@@ -1,0 +1,4 @@
+<p>Clicks count: {{value: ClicksCount}}</p>
+
+<bp:Button Text="Click me!"
+           Click="{command: Click()}" />
