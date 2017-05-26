@@ -1,9 +1,6 @@
 <bp:GridView DataSource="{value: Customers}"
              InlineInserting="true"
              InlineInsertRowPlacement="Bottom">
-    <EditRowDecorators>
-        <dot:Decorator style="background-color: darkseagreen" />
-    </EditRowDecorators>
     <Columns>
         <bp:GridViewTextColumn ValueBinding="{value: Id}"
                                HeaderText="ID"
@@ -15,11 +12,11 @@
                 <dot:Literal Text="{value: BirthDate}"
                              FormatString="dd.MM.yyyy" />
             </ContentTemplate>
-            <EditTemplate>
+            <InsertTemplate>
                 <bp:DateTimePicker SelectedDate="{value: BirthDate}"
                                    FormatString="dd.MM.yyyy"
                                    Mode="Date" />
-            </EditTemplate>
+            </InsertTemplate>
         </bp:GridViewTemplateColumn>
         <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
     </Columns>

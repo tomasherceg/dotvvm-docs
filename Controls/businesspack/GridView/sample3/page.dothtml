@@ -1,9 +1,9 @@
 <bp:GridView DataSource="{value: Customers}"
              DisplayFooter="true">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}"
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" HeaderText="ID" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" HeaderText="Name" />
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}" HeaderText="Orders" 
                                FooterCssClass="gridview-footer">
             <FooterTemplate>
                 <p>Total orders: {{value: TotalOrders}}</p>

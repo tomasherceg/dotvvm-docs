@@ -1,10 +1,10 @@
 <bp:GridView DataSource="{value: Customers}">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
-        <bp:GridViewTextColumn ValueBinding="{value: BirthDate}"
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" HeaderText="ID" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" HeaderText="Name" />
+        <bp:GridViewTextColumn ValueBinding="{value: BirthDate}" HeaderText="Birth Date" 
                                FormatString="dd.MM.yyyy" />
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Orders}" HeaderText="Orders" />
     </Columns>
 </bp:GridView>
 

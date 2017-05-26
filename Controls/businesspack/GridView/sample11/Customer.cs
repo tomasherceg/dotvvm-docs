@@ -1,7 +1,7 @@
 using System;
 using System.Linq;
 
-namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample13
+namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample11
 {
     public class Customer
     {

@@ -20,11 +20,11 @@
         <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
         <bp:GridViewTemplateColumn>
             <ContentTemplate>
-                <dot:Button Text="Edit" Click="{command: _parent.EditCustomer(_this)}"></dot:Button>
+                <dot:Button Text="Edit" Click="{command: _parent.EditCustomer(_this)}"/>
             </ContentTemplate>
             <EditTemplate>
-                <dot:Button Text="Save" Click="{command: _parent.UpdateCustomer(_this)}"></dot:Button>
-                <dot:Button Text="Cancel" Click="{command: _parent.CancelEditCustomer()}"></dot:Button>
+                <dot:Button Text="Save" Click="{command: _parent.UpdateCustomer(_this)}"/>
+                <dot:Button Text="Cancel" Click="{command: _parent.CancelEditCustomer()}"/>
             </EditTemplate>
         </bp:GridViewTemplateColumn>
     </Columns>
