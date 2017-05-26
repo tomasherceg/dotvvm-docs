@@ -7,3 +7,5 @@
         <span>{{value: Name}}, {{value: Country}}</span>
     </ItemTemplate>
 </bp:DropDownList>
+
+<p>Selected City: {{value: SelectedCity.Name}}, {{value: SelectedCity.Country}}</p>

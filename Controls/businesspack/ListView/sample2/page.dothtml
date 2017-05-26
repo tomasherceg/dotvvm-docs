@@ -1,5 +1,4 @@
 <p>Hold CTRL and select up to 3 items.</p>
-
 <bp:ListView DataSource="{value: Fruit}"
              SelectedValues="{value: SelectedFruit}"
              MaxSelectedValues="3">

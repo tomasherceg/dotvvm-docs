@@ -1,12 +1,13 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using DotVVM.BusinessPack.DocSamples.Samples;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.DataPager.sample1
 {
-    public class ViewModel : DotvvmViewModelBase
+    public class ViewModel
     {
         private static IQueryable<Customer> FakeDb()
         {

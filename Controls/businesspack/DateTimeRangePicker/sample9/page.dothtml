@@ -1,5 +1,5 @@
 <bp:DateTimeRangePicker SelectedStartDate="{value: StartDate}"
                         SelectedEndDate="{value: EndDate}"
-                        DisplayMode="Extended" />
+                        SeparatorText="till" />
 
 <p>Selected dates: <dot:Literal Text="{value: StartDate}" FormatString="g" /> - <dot:Literal Text="{value: EndDate}" FormatString="g" /></p>

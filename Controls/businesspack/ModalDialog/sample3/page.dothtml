@@ -1,13 +1,6 @@
 <bp:ModalDialog IsDisplayed="{value: IsModalDisplayed}"
-                CloseOnOutsideClick="true">
-    <p>Click outside of the modal to close.</p>
-</bp:ModalDialog>
-<bp:Button Text="Show Modal Dialog with close on outside click"
-           Click="{command: IsModalDisplayed = true}" />
-
-<bp:ModalDialog IsDisplayed="{value: IsCancelOnOutsideClickModalDisplayed}"
                 CloseOnOutsideClick="false">
-    <p>This modal won't be closed on outside click.</p>
+    <p>Now you cannot click outside of the dialog to close it.</p>
 </bp:ModalDialog>
-<bp:Button Text="Show Modal Dialog without close on outside click"
-           Click="{command: IsCancelOnOutsideClickModalDisplayed = true}" />
+<bp:Button Text="Show Modal"
+           Click="{command: IsModalDisplayed = true}" />

@@ -1,6 +1,6 @@
 <bp:ModalDialog IsDisplayed="{value: IsCustomSizeModalVisible}"
-                Width="800"
-                Height="300">
+                Width="800px"
+                Height="300px">
     <p>I have custom size.</p>
 </bp:ModalDialog>
 <bp:Button Text="Show Modal Dialog with custom size"
