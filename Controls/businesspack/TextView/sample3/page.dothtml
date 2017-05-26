@@ -1,4 +1,4 @@
-<bp:TextView OpenLinksInNewWindow="true">
+<bp:TextView HyperlinkTarget="_blank">
     email@email.com
     www.website.com
     http://website.com

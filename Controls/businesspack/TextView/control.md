@@ -1,0 +1,1 @@
+This control can render long texts and convert them into HTML. It can detect URLs and e-mail addresses and generate hyperlinks for them. It also preserves line endings and HTML encodes the content so it is safe to render as HTML.
