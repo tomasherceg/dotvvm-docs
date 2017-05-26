@@ -1,0 +1,1 @@
+A text field which allows to enter numeric values and to increase or decrease them by the specified step.
