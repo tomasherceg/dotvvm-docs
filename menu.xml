@@ -66,7 +66,7 @@
 	<DocPageMenuItem RouteName="commercial" PageName="Commercial Products">
 		<DocPageMenuItem RouteName="dotvvm-private-nuget-feed" PageName="DotVVM Private NuGet Feed" />
 		<DocPageMenuItem RouteName="bootstrap-for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
-		<DocPageMenuItem RouteName="business-pack" PageName="Installing DotVVM Business Pack" />
+		<DocPageMenuItem RouteName="business-pack-install" PageName="Installing DotVVM Business Pack" />
 		<DocPageMenuItem RouteName="business-pack-theme-editor" PageName="DotVVM Business Pack Theme Editor" />
 		<DocPageMenuItem RouteName="troubleshooting-dotvvm-for-visual-studio" PageName="Troubleshooting DotVVM for Visual Studio" />
 	</DocPageMenuItem>
