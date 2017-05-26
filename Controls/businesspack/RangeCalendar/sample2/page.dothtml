@@ -3,4 +3,4 @@
                   MinDate="{value: MinimumDate}"
                   MaxDate="{value: MaximumDate}" />
 
-<p>Selected date range: {{value: MinimumDate}} - {{value: MaximumDate}}</p>
+<p>Selected dates: <dot:Literal Text="{value: StartDate}" FormatString="g" /> - <dot:Literal Text="{value: EndDate}" FormatString="g" /></p>
