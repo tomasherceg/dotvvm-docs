@@ -1,9 +1,9 @@
 <bp:TreeView DataSource="{value: Files}"
+             ExpandIconCssClass="{resource: IconType.FaCaretRight}"
+             CollapseIconCssClass="{resource: IconType.FaCaretUp}"
              SelectedValues="{value: SelectedFiles}"
-             CheckBoxMode="Visible"
-             AutoCheckChildren="true"
+             ItemKeyBinding="{value: Name}"
              ItemHasChildrenBinding="{value: HasItems}"
-             ItemChildrenBinding="{value: Items}"
-             ItemKeyBinding="{value: Name}">
+             ItemChildrenBinding="{value: Items}">
     <p>{{value: Name}}</p>
 </bp:TreeView>

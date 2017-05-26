@@ -1,0 +1,1 @@
+Renders a hierarchical structure of items and allows to select one or more of them.
