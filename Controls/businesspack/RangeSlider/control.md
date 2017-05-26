@@ -1,0 +1,1 @@
+Renders a slider with a numeric scale which allows the user to select two values.
