@@ -1,0 +1,2 @@
+Renders a list of [RadioButton](/docs/controls/businesspack/RadioButton/{branch}) controls and lets the user to select multiple values.
+The values are stored in a collection bound to the `SelectedValues` property of the control.

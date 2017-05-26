@@ -9,5 +9,12 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.RadioButtonList.sample5
         };
 
         public string SelectedCountry { get; set; }
+
+
+        public List<string> FavoriteColors { get; set; } = new List<string> {
+            "red", "green", "blue", "yellow", "white", "black"
+        };
+
+        public string SelectedColor { get; set; }
     }
 }

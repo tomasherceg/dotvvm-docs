@@ -1,3 +1,7 @@
 <bp:RadioButtonList DataSource="{value: Countries}"
                     SelectedValue="{value: SelectedCountry}"
                     GroupName="CountriesGroup" />
+
+<bp:RadioButtonList DataSource="{value: FavoriteColors}"
+                    SelectedValue="{value: SelectedColor}"
+                    GroupName="ColorsGroup" />

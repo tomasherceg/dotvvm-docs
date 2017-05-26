@@ -2,14 +2,8 @@
                     SelectedValue="{value: SelectedCountry}"
                     ItemKeyBinding="{value: Id}"
                     ItemTextBinding="{value: Name}"
-                    ItemEnabledBinding="{value: IsEnabled}"
-                    Enabled="{value: IsControlEnabled}" />
+                    ItemEnabledBinding="{value: IsEnabled}" />
 
 <br />
-<bp:CheckBox Checked="{value: IsControlEnabled}"
-             Text="Enable control" />
-
-<br />
-<bp:CheckBox Checked="{value: IsItemEnabled}"
-             Changed="{command: Countries[2].IsEnabled = IsItemEnabled }"
+<bp:CheckBox Checked="{value: Countries[2].IsEnabled}"
              Text="Enable United States" />
