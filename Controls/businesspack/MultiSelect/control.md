@@ -1,0 +1,1 @@
+The *Business Pack* `MultiSelect` control is a text field which suggests items to select and supports multiple selected items.
