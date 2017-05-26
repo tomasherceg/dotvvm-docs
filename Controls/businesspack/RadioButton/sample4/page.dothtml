@@ -1,0 +1,47 @@
+<h3>Fruits</h3>
+<p>
+    <bp:RadioButton CheckedItem="{value: PriceWithoutTax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 1}" 
+                    Text="Apple" />
+
+    <bp:RadioButton CheckedItem="{value: PriceWithoutTax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 3}" 
+                    Text="Lemon" />
+
+    <bp:RadioButton CheckedItem="{value: PriceWithoutTax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 6}" 
+                    Text="Orange" />
+
+    <bp:RadioButton CheckedItem="{value: PriceWithoutTax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 5}" 
+                    Text="Pinapple" />
+</p>
+
+<h3>Tax</h3>
+<p>
+    <bp:RadioButton CheckedItem="{value: Tax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 5}" 
+                    Text="Reasonable" />
+
+    <bp:RadioButton CheckedItem="{value: Tax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 10}" 
+                    Text="Still quite reasonable" />
+
+    <bp:RadioButton CheckedItem="{value: Tax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 20}" 
+                    Text="European" />
+
+    <bp:RadioButton CheckedItem="{value: Tax}" 
+                    Changed="{command: UpdatePrice()}"
+                    CheckedValue="{value: 40}" 
+                    Text="European in 10 years" />
+</p>
+
+<p>Total price: ${{value: Price}}</p>

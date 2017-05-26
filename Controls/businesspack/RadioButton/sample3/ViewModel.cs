@@ -2,12 +2,13 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.RadioButton.sample3
 {
     public class ViewModel
     {
-        public bool Help { get; set; }
-        public int ChangesCount { get; set; }
+        public bool Value { get; set; }
 
-        public void Change()
+        public int NumberOfChanges { get; set; } = 0;
+
+        public void OnChanged()
         {
-            ChangesCount++;
+            NumberOfChanges++;
         }
     }
 }
