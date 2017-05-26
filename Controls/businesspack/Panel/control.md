@@ -1,0 +1,1 @@
+Renders a box with header, main content and footer.
