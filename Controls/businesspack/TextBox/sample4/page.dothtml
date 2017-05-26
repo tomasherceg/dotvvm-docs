@@ -1,13 +1,10 @@
-<bp:TextBox Text="{value: Text1}"
-            UpdateTextAfterKeydown="false"
-            Changed="{command: Text1Changed()}"
-            Placeholder="Text 1" />
+<p>
+    <bp:CheckBox Checked="{value: IsCompany}"
+                 Text="The customer is a company." />
+</p>
 
-<p>Text 1: {{value: Text1}}, has changed {{value: Text1ChangeCount}} times.</p>
-
-<bp:TextBox Text="{value: Text2}"
-            UpdateTextAfterKeydown="true"
-            Changed="{command: Text2Changed()}"
-            Placeholder="Text 2" />
-
-<p>Text 2: {{value: Text2}}, has changed {{value: Text2ChangeCount}} times.</p>
+<p>
+    Company Number:
+    <bp:TextBox Text="{value: CompanyNumber}"
+                Enabled="{value: IsCompany}" />
+</p>

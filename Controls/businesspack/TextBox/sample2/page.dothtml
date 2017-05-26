@@ -1,12 +1,8 @@
-<form>
-    <bp:TextBox Text="{value: Email}"
-                Type="Email"
-                Validation.Target="{value: Email}"
-                placeholder="Email" />
-    <bp:TextBox Text="{value: Password}"
-                Type="Password"
-                placeholder="Password" />
+<!-- normal textbox -->
+<bp:TextBox Text="{value: Text}" Type="Normal" />
 
-    <bp:Button Text="Login"
-               IsSubmitButton="true" />
-</form>
+<!-- password textbox -->
+<bp:TextBox Text="{value: Password}" Type="Password" />
+
+<!-- textarea -->
+<bp:TextBox Text="{value: Message}" Type="MultiLine" />

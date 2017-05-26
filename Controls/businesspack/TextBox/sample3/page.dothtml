@@ -1,5 +1,5 @@
-<bp:TextBox Text="{value: Date}"
-            FormatString="dd.MM.yyyy"
-            ValueType="DateTime" />
+<bp:TextBox Text="{value: Text}"
+            UpdateTextAfterKeydown="true"
+            Changed="{command: TextToUpperCase()}" />
 
-<p>You've entered date: {{value: Date}}</p>
+{{value: Text}}

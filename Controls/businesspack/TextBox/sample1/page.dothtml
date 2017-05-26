@@ -1,1 +1,3 @@
-<bp:TextBox Text="{value: Text}" />
+<bp:TextBox Text="{value: Name}" />
+
+<bp:TextBox Text="static text" />
