@@ -1,0 +1,1 @@
+Displays several stars (or any other symbols) and lets the user to select a some of them.
