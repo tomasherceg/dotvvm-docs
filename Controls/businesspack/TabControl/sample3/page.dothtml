@@ -18,7 +18,7 @@
 
 <dot:Repeater DataSource="{value: Countries}">
     <ItemTemplate>
-        {{value: Name}} Tab {{value:  IsChecked ? "is" : "is not"}} selected.
+        {{value: Name}} Tab {{value: IsSelected ? "is" : "is not"}} selected.
         <br />
     </ItemTemplate>
 </dot:Repeater>

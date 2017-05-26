@@ -1,0 +1,1 @@
+Renders a container with tabs that are defined in the markup, or generated from a collection in the viewmodel.

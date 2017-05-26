@@ -8,6 +8,6 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.TabControl.sample3
         public string Name { get; set; }
         public List<string> Cities { get; set; } = new List<string>();
         public bool IsEnabled { get; set; } = true;
-        public bool IsChecked { get; set; }
+        public bool IsSelected { get; set; }
     }
 }
