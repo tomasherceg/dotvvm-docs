@@ -17,6 +17,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample5
                 OnLoadingData = GetData
             };
             Customers.SetSortExpression(nameof(Customer.Id));
+            Customers.PagingOptions.PageSize = PageSize;
 
             return base.Init();
         }

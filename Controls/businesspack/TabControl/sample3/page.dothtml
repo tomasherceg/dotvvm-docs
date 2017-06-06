@@ -1,5 +1,5 @@
 <bp:TabControl DataSource="{value: Countries}"
-               ItemIsActiveBinding="{value: IsChecked}">
+               ItemIsActiveBinding="{value: IsSelected}">
     <HeaderTemplate>
         {{value: Name}}
     </HeaderTemplate>

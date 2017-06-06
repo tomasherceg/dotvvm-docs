@@ -1,11 +1,14 @@
 <bp:GridView RenderSettings.Mode="Server"
              DataSource="{value: Customers}">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}" />
+        <bp:GridViewTextColumn ValueBinding="{value: Id}" 
+                               HeaderText="Customer ID" />
+        <bp:GridViewTextColumn ValueBinding="{value: Name}" 
+                               HeaderText="Name" />
         <bp:GridViewTextColumn ValueBinding="{value: BirthDate}"
-                               FormatString="dd.MM.yyyy" />
-        <bp:GridViewTemplateColumn>
+                               FormatString="dd.MM.yyyy"
+                               HeaderText="Birthdate"/>
+        <bp:GridViewTemplateColumn HeaderText="# of orders">
             <ContentTemplate>
                 <b>{{value: Orders}}</b>
             </ContentTemplate>
