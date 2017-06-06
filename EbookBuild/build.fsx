@@ -34,9 +34,9 @@ let titleTxt version = sprintf """
                        ...
                        """ version
 
-let epubPandoc = sprintf "~/.local/bin/pandoc -s -o %s.epub -f markdown+smart --table-of-contents --epub-stylesheet=epub-stylesheet.css --webtex %s"
-let htmlPandoc = sprintf "~/.local/bin/pandoc -s -o %s.html -f markdown+smart --table-of-contents --css=epub-stylesheet.css --webtex %s"
-let pdfPandoc = sprintf "~/.local/bin/pandoc -s --table-of-contents --toc-depth 1 -H template.tex -f markdown-raw_tex+smart  -V documentclass=report -o %s.pdf %s"
+let epubPandoc = sprintf "pandoc -s -o %s.epub -f markdown --smart --table-of-contents --epub-stylesheet=epub-stylesheet.css --webtex %s"
+let htmlPandoc = sprintf "pandoc -s -o %s.html -f markdown --smart --table-of-contents --css=epub-stylesheet.css --webtex %s"
+let pdfPandoc = sprintf "pandoc -s --table-of-contents --toc-depth 1 -H template.tex -f markdown-raw_tex --smart  -V documentclass=report -o %s.pdf %s"
 
 let replaceMarkdownFragments str =
     let imgReplacer (m:Match) = "![" + m.Groups.["alt"].Captures.[0].ToString() + "](../Pages/" + m.Groups.["src"].Captures.[0].ToString() + ")"
