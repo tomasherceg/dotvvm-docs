@@ -124,7 +124,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ShowDefaultTypeIcon",
@@ -184,7 +184,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Success"
       },
       {
         "Name": "AnimationDuration",
@@ -236,7 +236,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Alert",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -328,7 +328,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Text"
       },
       {
         "Name": "ID",
@@ -388,7 +388,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemTextBinding",
@@ -485,7 +485,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "AutoComplete",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -592,7 +592,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Text",
@@ -622,7 +622,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "input"
       },
       {
         "Name": "ClientID",
@@ -674,7 +674,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Button",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -706,7 +706,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "DateTime"
       },
       {
         "Name": "SelectionCompleted",
@@ -751,7 +751,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Standard"
       },
       {
         "Name": "Enabled",
@@ -841,7 +841,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ExcludedDays",
@@ -923,7 +923,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Calendar",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -955,7 +955,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "DateTime"
       },
       {
         "Name": "SelectionCompleted",
@@ -1000,7 +1000,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Standard"
       },
       {
         "Name": "Enabled",
@@ -1090,7 +1090,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ExcludedDays",
@@ -1157,7 +1157,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "CalendarControlBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -1189,7 +1189,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "DateTime"
       },
       {
         "Name": "SelectionCompleted",
@@ -1234,7 +1234,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Standard"
       },
       {
         "Name": "Enabled",
@@ -1324,7 +1324,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ExcludedDays",
@@ -1421,7 +1421,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "RangeCalendar",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -1498,7 +1498,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Items",
@@ -1580,7 +1580,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Carousel",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -1672,7 +1672,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "IsActive",
@@ -1724,7 +1724,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "CarouselItem",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -1891,7 +1891,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemEnabledBinding",
@@ -1958,7 +1958,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "CheckableControlListBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -2140,7 +2140,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemEnabledBinding",
@@ -2222,7 +2222,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "CheckBoxList",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -2374,7 +2374,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "CheckedValue",
@@ -2441,7 +2441,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "CheckBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -2503,7 +2503,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -2692,7 +2692,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Placeholder",
@@ -2789,7 +2789,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ColorPicker",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -2933,7 +2933,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ComboBox",
         "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Func<String>",
+        "PropertyTypeName": "Func<String,Task<IEnumerable>>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
@@ -2986,7 +2986,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Enabled",
@@ -3113,7 +3113,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ComboBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -3175,7 +3175,7 @@
           "MappingMode": 1,
           "Required": true
         },
-        "DefaultValue": 0
+        "DefaultValue": "0"
       },
       {
         "Name": "Shift",
@@ -3265,7 +3265,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Alt",
@@ -3317,7 +3317,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "CommandShortcut",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -3469,7 +3469,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -3551,7 +3551,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DataPager",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -3583,7 +3583,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "DateTime"
       },
       {
         "Name": "SelectionCompleted",
@@ -3628,7 +3628,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Standard"
       },
       {
         "Name": "Enabled",
@@ -3733,7 +3733,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ExcludedDays",
@@ -3830,7 +3830,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DateTimePicker",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -3862,7 +3862,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "DateTime"
       },
       {
         "Name": "SelectionCompleted",
@@ -3907,7 +3907,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Standard"
       },
       {
         "Name": "Enabled",
@@ -4012,7 +4012,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ExcludedDays",
@@ -4094,7 +4094,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DateTimePopup",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -4126,7 +4126,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "DateTime"
       },
       {
         "Name": "SelectedEndDate",
@@ -4186,7 +4186,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Standard"
       },
       {
         "Name": "Enabled",
@@ -4306,7 +4306,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ExcludedDays",
@@ -4403,7 +4403,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DateTimeRangePicker",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -4480,7 +4480,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -4517,7 +4517,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DecoratorBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -4639,7 +4639,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -4706,7 +4706,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DraggableList",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -4873,7 +4873,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemTextBinding",
@@ -5000,7 +5000,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DropDownList",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5122,7 +5122,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -5152,7 +5152,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Text"
       },
       {
         "Name": "Visible",
@@ -5174,7 +5174,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "EditableLiteral",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5206,7 +5206,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Empty"
       },
       {
         "Name": "InnerText",
@@ -5266,7 +5266,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -5303,7 +5303,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "FAIcon",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5485,7 +5485,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -5567,7 +5567,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "FileUpload",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5689,7 +5689,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -5741,7 +5741,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "FilterBuilder",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5833,7 +5833,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -5885,7 +5885,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "GridViewKeyboardActionsDecorator",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5962,7 +5962,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -5999,7 +5999,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DefaultGridViewRowClickDecorator",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -6076,7 +6076,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -6158,7 +6158,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "GridViewUserSettingsContainer",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -6235,7 +6235,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -6317,7 +6317,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "GridViewUserSettingsControlBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -6394,7 +6394,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -6476,7 +6476,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "GridViewUserSettingsWindow",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -6628,7 +6628,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "RowDecorators",
@@ -6703,7 +6703,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Top"
       },
       {
         "Name": "ClientID",
@@ -6763,7 +6763,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "HeaderRow"
       },
       {
         "Name": "FreezeHeaderRow",
@@ -6815,7 +6815,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "GridView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -7072,7 +7072,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": "4c20164e-37eb-40aa-9d99-0b72690f35cc"
+        "DefaultValue": "66a0505b-cb6c-44eb-addd-946d76d6c7c8"
       },
       {
         "Name": "ValueBinding",
@@ -7366,7 +7366,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": "4c20164e-37eb-40aa-9d99-0b72690f35cc"
+        "DefaultValue": "66a0505b-cb6c-44eb-addd-946d76d6c7c8"
       },
       {
         "Name": "AllowSorting",
@@ -7675,7 +7675,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": "4c20164e-37eb-40aa-9d99-0b72690f35cc"
+        "DefaultValue": "66a0505b-cb6c-44eb-addd-946d76d6c7c8"
       },
       {
         "Name": "AllowSorting",
@@ -7999,7 +7999,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": "4c20164e-37eb-40aa-9d99-0b72690f35cc"
+        "DefaultValue": "66a0505b-cb6c-44eb-addd-946d76d6c7c8"
       },
       {
         "Name": "AllowSorting",
@@ -8263,7 +8263,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Text"
       },
       {
         "Name": "HeaderCssClass",
@@ -8308,7 +8308,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": "4c20164e-37eb-40aa-9d99-0b72690f35cc"
+        "DefaultValue": "66a0505b-cb6c-44eb-addd-946d76d6c7c8"
       },
       {
         "Name": "AllowSorting",
@@ -8422,7 +8422,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemChildrenBinding",
@@ -8489,7 +8489,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "HierarchyItemsControlBase`2",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -8566,7 +8566,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemChildrenBinding",
@@ -8633,7 +8633,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "HierarchyItemsControlBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -8755,7 +8755,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemChildrenBinding",
@@ -8837,7 +8837,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "HierarchyRepeater",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -8914,7 +8914,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -8951,7 +8951,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "HtmlControlBase`2",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -9028,7 +9028,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -9065,7 +9065,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "HtmlControlBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -9277,7 +9277,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "RotateLeftIconCssClass",
@@ -9389,7 +9389,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ImageCrop",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -9466,7 +9466,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -9518,7 +9518,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ItemsControlBase`2",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -9595,7 +9595,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -9647,7 +9647,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ItemsControlBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -9724,7 +9724,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -9806,7 +9806,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ItemsEditorBase`2",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -9928,7 +9928,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Changed",
@@ -10033,7 +10033,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "List"
       },
       {
         "Name": "DataSource",
@@ -10070,7 +10070,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ListView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -10109,7 +10109,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "MaskedTextBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<Char>",
+        "PropertyTypeName": "Dictionary<Char,MaskDefinitionItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
@@ -10207,14 +10207,14 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "AdditionalDefinitions",
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "MaskedTextBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<Char>",
+        "PropertyTypeName": "Dictionary<Char,MaskDefinitionItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
@@ -10289,7 +10289,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "MaskedTextBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -10546,7 +10546,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "AllowResize",
@@ -10673,7 +10673,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DialogBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -10780,7 +10780,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Text",
@@ -10810,7 +10810,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "input"
       },
       {
         "Name": "ClientID",
@@ -10862,7 +10862,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DialogButtonBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -10969,7 +10969,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Text",
@@ -10999,7 +10999,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "input"
       },
       {
         "Name": "ClientID",
@@ -11051,7 +11051,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DialogCloseButton",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -11158,7 +11158,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Text",
@@ -11188,7 +11188,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "input"
       },
       {
         "Name": "ClientID",
@@ -11240,7 +11240,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "DialogMaximizeButton",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -11497,7 +11497,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "AllowResize",
@@ -11624,7 +11624,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "ModalDialog",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -11896,7 +11896,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Normal"
       },
       {
         "Name": "ClientIDMode",
@@ -11911,7 +11911,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "AllowResize",
@@ -12038,7 +12038,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Window",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -12190,7 +12190,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemKeyBinding",
@@ -12302,7 +12302,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "MultiSelect",
         "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Func<String>",
+        "PropertyTypeName": "Func<String,Task<IEnumerable>>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
@@ -12362,7 +12362,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "MultiSelect",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -12514,7 +12514,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -12611,7 +12611,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "NumericUpDown",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -12733,7 +12733,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -12800,7 +12800,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Panel",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -12967,7 +12967,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemEnabledBinding",
@@ -13064,7 +13064,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "RadioButtonList",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -13216,7 +13216,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "CheckedValue",
@@ -13298,7 +13298,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "RadioButton",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -13465,7 +13465,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -13547,7 +13547,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Rating",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -13669,7 +13669,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -13721,7 +13721,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "RichTextBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -13798,7 +13798,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -13880,7 +13880,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "SelectorBase`2",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14002,7 +14002,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Changed",
@@ -14099,7 +14099,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "RangeSlider",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14221,7 +14221,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Changed",
@@ -14303,7 +14303,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "Slider",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14410,7 +14410,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "Changed",
@@ -14492,7 +14492,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "SliderBase",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14599,7 +14599,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ItemIsActiveBinding",
@@ -14711,7 +14711,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "TabControl",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14833,7 +14833,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "HeaderTemplate",
@@ -14885,7 +14885,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "TabItem",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14917,7 +14917,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Normal"
       },
       {
         "Name": "InnerText",
@@ -15022,7 +15022,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -15082,7 +15082,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 0
+        "DefaultValue": "Text"
       },
       {
         "Name": "Visible",
@@ -15104,7 +15104,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "TextBox",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -15196,7 +15196,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "ClientID",
@@ -15248,7 +15248,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "TextView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -15325,7 +15325,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 2
+        "DefaultValue": "Hidden"
       },
       {
         "Name": "ExpandIconCssClass",
@@ -15445,7 +15445,7 @@
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": 1
+        "DefaultValue": "Static"
       },
       {
         "Name": "SelectedValues",
@@ -15557,7 +15557,7 @@
         "DeclaringTypeNamespace": "DotVVM.BusinessPack.Controls",
         "DeclaringTypeName": "TreeView",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String>",
+        "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
