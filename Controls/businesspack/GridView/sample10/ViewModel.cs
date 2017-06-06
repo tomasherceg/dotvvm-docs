@@ -20,6 +20,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample10
             Customers.SetSortExpression(nameof(Customer.Id));
 
             UserSettings = new GridViewUserSettings {
+                EnableUserSettings = true,
                 ColumnsSettings = new List<GridViewColumnSetting> {
                     new GridViewColumnSetting {
                         ColumnName = "CustomerId",
