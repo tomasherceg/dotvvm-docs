@@ -62,7 +62,7 @@ It would be difficult to do these checkes in validation attributes or in the `IV
 
 The `Context` in DotVVM contains the `ModelState` object which contains a list of validation errors. You can add your own errors to the collection.
 
-If you need to report the errors to the user, you can use the `Context.FailOnInvalidModelState()` which interrupts execution of the current HTTP request and returns the validation errors to the user. The user'w browser will show the validator controls.
+If you need to report the errors to the user, you can use the `Context.FailOnInvalidModelState()` which interrupts execution of the current HTTP request and returns the validation errors to the user. The user's browser will show the validator controls.
 
 In the following sample you can see, that we validate the `EmailAddress` property using the validation attributes. When these checks pass, the `Subscribe` method can be called. If the registration of the user fails (we use a custom exeption to indicate the problem), you can add a validation error to the `Context.ModelState.Errors` collection and return the validation errors to the user.
 
