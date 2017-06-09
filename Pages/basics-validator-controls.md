@@ -35,7 +35,7 @@ The `Validator` control has several properties that let you set how the error is
 ### Validator Attached Properties
 
 In many cases, you may need to apply the `Validator` properties on any other element, for example the `<div>`.
-If the property is not valid and you need to apply a CSS class to a `div`, you can use the followin syntax:
+If the property is not valid and you need to apply a CSS class to a `div`, you can use the following syntax:
 
 ```DOTHTML
 <div Validator.InvalidCssClass="has-error" Validator.Value="{value: FirstName}">
