@@ -1,0 +1,23 @@
+{
+  "files": [
+    {
+      "name": "master.dotmaster",
+      "replacements": [
+        {
+          "pattern": "RouteName=\"(SampleA)\"",
+          "replacement": "%SampleUniqueName%_SampleA"
+        }
+      ]
+    },
+    {
+      "name": "SampleA.dothtml",
+      "registerRoute": true,
+      "routeName": "SampleA",
+      "routeUrl": ""
+    },
+    {
+      "name": "DotvvmStartup.cs",
+      "doNotExport": true
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<dot:ContentPlaceHolder ID="Main" />
+
+<menu>
+  <li>
+    <dot:RouteLink target="_blank" RouteName="SampleA" Text="Sample A"/>
+  </li>
+</menu>
