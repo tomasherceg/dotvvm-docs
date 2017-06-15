@@ -74,6 +74,8 @@ var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, 
 });
 ```
 
+You will need to import the `Microsoft.Extensions.DependencyInjection` namespace to do so.
+
 Also, you can only register services in the `UseDotVVM` method by passing a method to the `options` parameter. 
 
 If you try to add services in the `IServiceProvider` later, it may fail because the object denies changes to its configuration after the first service is resolved.

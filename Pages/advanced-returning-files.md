@@ -42,8 +42,7 @@ The usage is pretty easy then. You just call `Context.ReturnFile` in your viewmo
 a special URL that returns the file to him. The ID of the file is a random Guid so it's not possible to retrieve a file that was generated for someone else.
 
 ```CSHARP
-var header = new HeaderDictionary(new Dictionary<string, string[]>());
-Context.ReturnFile(file, "export.pdf", "application/pdf", headers);
+Context.ReturnFile(file, "export.pdf", "application/pdf");
 ```
 
 The method accepts a byte array or a stream, the file name, the MIME type and a dictionary with additional response headers.

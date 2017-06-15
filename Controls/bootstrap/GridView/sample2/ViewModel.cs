@@ -35,7 +35,7 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
             }.AsQueryable();
         }
 
-        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
+        private GridViewDataSetLoadedData<CustomerData> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
             var queryable = FakeDb();
             // NOTE: Apply Pagign and Sorting options.
@@ -50,6 +50,8 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
             {
                 OnLoadingData = GetData
             };
+
+            return base.Init();
         }
 
         public void SortCustomers(string column)
@@ -69,5 +71,4 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
 
         public BootstrapColor Color { get; set; }
     }
-
 }
