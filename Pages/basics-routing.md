@@ -1,6 +1,6 @@
 ﻿## Routing
 
-Every page in **DotVVM** needs to be registered in the **route table**. DotVVM doesn't allow to visit the page by just putting its path in the URL. 
+Every page in **DotVVM** needs to be registered in the **route table**. DotVVM doesn't allow visiting a page just by putting its path in the URL. 
 
 The routes are configured in the `DotvvmStartup` class in the `Configure` method.
 
@@ -46,7 +46,7 @@ config.RouteTable.Add("AdminCustomer", "admin/customer/{Id}", "Views/admin/custo
 
 Notice that the route contains the parameter `{Id}`. Also, the fourth argument says that if the parameter is not present, its value is `0`. 
 
-In the viewmodel of the page, we can then access the value of the route parameter using the followin code:
+In the viewmodel of the page, we can then access the value of the route parameter using the following code:
 
 ```CSHARP
 var customerId = Convert.ToInt32(Context.Parameters["Id"]);
