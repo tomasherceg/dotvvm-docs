@@ -17,7 +17,7 @@ public string SecretValue { get; set; }
 ```
 
 If you use the setting above, the value will not appear in the viewmodel directly. Instead, it will be stored in the
-`$encryptedValues` entry of the viewmodel. This entry is encrypted and signed, so noone should be able to read. If the signature doesn't match, DotVVM will throw an exception and refuse to process the request. 
+`$encryptedValues` entry of the viewmodel. This entry is encrypted and signed, so no one should be able to read it. If the signature doesn't match, DotVVM will throw an exception and refuse to process the request. 
 
 > Properties marked with the encryption turned on cannot be used in the `value` bindings.   
 
@@ -48,4 +48,4 @@ In ASP.NET Core version, the encryption and signing uses the `app.AddDataProtect
 
 DotVVM uses the URL and current user identity to derive an encryption key. It means that also the URL and user identity is protected by default. If anyone captures a viewmodel with encrypted values, he won't be able to use the encrypted values to make a postback under a different user identity or to a different URL.
 
-> To improve the security, we strongly encourage you to put primary keys of data displayed on the page (e.g. the ID of currently displayed order) to the URL. If they are stored in the viewmodel, you should sign or encrypt them to prevent the viewmodel being used to modify another record.
+> To improve the security, we strongly encourage you to include primary keys of data displayed on the page (e.g. the ID of currently displayed order) in the URL. If they are stored in the viewmodel, you should sign or encrypt them to prevent the viewmodel being used to modify another record.
