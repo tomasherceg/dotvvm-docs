@@ -4,17 +4,17 @@
 
 **DotVVM** supports this service and tracks some additional telemetry which it collects during the processing of a HTTP request.
 
-<img src="{imageDir}application-insights_img1.png" alt="DotVVM metrics in Microsoft Azure portal" />
+<img src="{imageDir}advanced-application-insights_img1.png" alt="DotVVM metrics in Microsoft Azure portal" />
 
 You can display the collected **DotVVM** telemetry by editing any chart in Server request tab. You can also choose which metrics you want to track in the metrics tab under Custom drop down menu. You can also aggregate the data.
 
 It is also possible to filter this data by the name of the operation:
 
-<img src="{imageDir}application-insights_img2.png" alt="Filter metrics in Microsoft Azure portal" />
+<img src="{imageDir}advanced-application-insights_img2.png" alt="Filter metrics in Microsoft Azure portal" />
 
 Additionally, you can analyze exceptions that were thrown in your web application:
 
-<img src="{imageDir}application-insights_img3.png" alt="Exceptions in Microsoft Azure portal" />
+<img src="{imageDir}advanced-application-insights_img3.png" alt="Exceptions in Microsoft Azure portal" />
 
 ## Getting started
 
