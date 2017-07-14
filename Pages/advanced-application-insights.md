@@ -1,4 +1,4 @@
-# Application Insights
+## Application Insights
 
 [Application Insights](https://azure.microsoft.com/en-us/services/application-insights/) is a service for web developers which helps to monitor a live web application. It automatically collects issues and telemetry of the application and sends them to the Microsoft Azure portal where the information can be analyzed.
 
@@ -16,7 +16,9 @@ Additionally, you can analyze exceptions that were thrown in your web applicatio
 
 <img src="{imageDir}advanced-application-insights_img3.png" alt="Exceptions in Microsoft Azure portal" class="img-responsive" />
 
-## Getting started
+<br />
+
+### Getting started
 
 In order to view telemetry data in Microsoft Azure portal you need to create a Microsoft Azure resource. This can be done either through
 IDE or manually.
@@ -26,7 +28,7 @@ IDE or manually.
 
 <br />
 
-### ASP.NET Core
+#### ASP.NET Core
 
 You can add *Application Insights* to an ASP.NET Core project using the Visual Studio Solution Explorer window, or manually.
 
@@ -54,7 +56,7 @@ services.AddDotVVM(options =>
 
 <br />
 
-### OWIN
+#### OWIN
 
 First, you need to add Application Insights into your ASP.NET project. You can do this in the Visual Studio Solution Explorer.
 
