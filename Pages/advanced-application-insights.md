@@ -28,6 +28,12 @@ IDE or manually.
 >The process of creating a new Microsoft Azure resource is described in
 [Create an Application Insights resource](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-create-new-resource) page.
 
+In both ASP.NET Core and Owin, you can use the `ApplicationInsightJavascript` control, which renders the Application Insight javascript snippet to do the tracing on client side. According to the [official documentation](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-javascript), it should be placed just before `</head>` tag:
+```HTML
+<dot:ApplicationInsightJavascript />
+```
+Owin version additionally contains the `EnableAuthSnippet` property. In ASP.NET Core web apps, this value is taken from `ApplicationInsightsServiceOptions`.
+
 <br />
 
 #### ASP.NET Core
@@ -44,7 +50,7 @@ To install Application Insights in your ASP.NET Core project manually, you need 
 Now run the following command in the Package Manager Console window:
 
 ```
-Install-Package DotVVM.Tracing.ApplicationInsights
+Install-Package DotVVM.Tracing.ApplicationInsights.AspNetCore
 ```
 
 And finally, register the DotVVM tracking reporter in the `ConfigureServices` method this way:
@@ -75,7 +81,7 @@ Then, follow the steps from the [Application Insights OWIN extensions documentat
 After you have updated the `ApplicationInsights.config` file, run the following command in the Package Manager Console window:
 
 ```
-Install-Package DotVVM.Tracing.ApplicationInsights
+Install-Package DotVVM.Tracing.ApplicationInsights.Owin
 ```
 
 And finally, register the DotVVM tracking reporter in the `ConfigureServices` method this way:
