@@ -11,11 +11,11 @@ and any other custom timings you want to add. It helps you debug issues and opti
 
 You can display the collected **DotVVM** metrics by adding the MiniProfiler Widget to a dothtml page:
 
-<img src="advanced-miniprofiler-widget.png" alt="DotVVM metrics in MiniProfiler" class="img-responsive" /> 
+<img src="{imageDir}advanced-miniprofiler-widget.png" alt="DotVVM metrics in MiniProfiler" class="img-responsive" /> 
 
 It is also possible to view the data traced in previous HTTP requests:
 
-<img src="advanced-miniprofiler-page.png" alt="List of traced HTTP requests with details" class="img-responsive" />
+<img src="{imageDir}advanced-miniprofiler-page.png" alt="List of traced HTTP requests with details" class="img-responsive" />
 
 > MiniProfiler is capable of profiling other 3rd party services, e.g. Entity Framework and Redis.
 
