@@ -48,6 +48,7 @@
 		<DocPageMenuItem RouteName="exception-filters" PageName="Exception Filters" />
 		<DocPageMenuItem RouteName="filter-registration" PageName="Filter Registration" />
         <DocPageMenuItem RouteName="application-insights" PageName="Using Application Insights" />
+		<DocPageMenuItem RouteName="miniprofiler" PageName="Using MiniProfiler" />
 		<DocPageMenuItem RouteName="ioc-di-container" PageName="IoC/DI Containers" />
 		<DocPageMenuItem RouteName="bundling-minification" PageName="Bundling and Minification" />
 		<DocPageMenuItem RouteName="testing-viewmodels" PageName="Testing ViewModels" />
