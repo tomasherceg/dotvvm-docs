@@ -7,7 +7,7 @@ _In the `ListGroup` control, you have to use the [ListGroupItem](/docs/controls/
 <br />
 
 If you set the `NavigateUrl` property or you use the `RouteName` and `Param-*` properties,
-the item behaves like a hyperlink. For more information abou `RouteName` properties see the
+the item behaves like a hyperlink. For more information about `RouteName` properties see the
 [RouteLink](/docs/controls/builtin/RouteLink/{branch}) control - the usage is the same.
 
 If you set the `Click` command, the specified method in the viewmodel will be 

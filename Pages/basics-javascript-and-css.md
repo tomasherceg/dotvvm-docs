@@ -22,7 +22,7 @@ We have the following types of resources:
 
 > The resource registration has changed in DotVVM 1.1. Visit the [Upgrading to DotVVM 1.1](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) for more details.
 
-All resources are registered in resource respository found in the `config.Resources` collection.
+All resources are registered in resource repository found in the `config.Resources` collection.
 
 You can register a new resource with the `Register` method. This method can also replace existing resources if they exists.
 The resources should be registered in the `DotvvmStartup.cs` file.

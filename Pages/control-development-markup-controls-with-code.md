@@ -112,13 +112,13 @@ The value will not be stored anywhere and the `Title` will have the value `"Deli
 
 Only in this case the value will be persisted. If you set the `Title` property from the code-behind, the value will be written into the `DeliveryAddressTitle` property in the viewmodel and you will find it there on the next postback.
 
-> If you need to persist any state information in the markup control, it must be done by data-binding to some viewmodwl property.
+> If you need to persist any state information in the markup control, it must be done by data-binding to some viewmodel property.
 
 ### ControlCommand Binding
 
 If you need to add custom logic in the markup control, you can declare a method (e.g. `ClearAddress`) in the code behind file and invoke it using `controlCommand: ClearAddress()` binding.
 
-Alternatively, we could have this method in the viewmodel, but in that case the `IAddress` interface would have to declare this method and all classes that implement the interface would have to implementat also the `ClearAddress` method. 
+Alternatively, we could have this method in the viewmodel, but in that case the `IAddress` interface would have to declare this method and all classes that implement the interface would have to implement also the `ClearAddress` method. 
 
 In this case, the `ClearAddress` can be declared in the code behind file because it does the same thing in all of the implementations.
 

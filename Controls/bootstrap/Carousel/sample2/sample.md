@@ -2,7 +2,7 @@
 
 The `Carousel` control has the following properties:
 
-* The `RenderSideControls` property speciefies whether the left and right controls which switch the slides will be rendered.
+* The `RenderSideControls` property specifies whether the left and right controls which switch the slides will be rendered.
 
 * The `EnableAnimation` property specifies whether the transitions between slides are animated or not.
 

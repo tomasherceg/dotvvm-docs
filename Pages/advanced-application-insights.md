@@ -28,11 +28,11 @@ IDE or manually.
 >The process of creating a new Microsoft Azure resource is described in
 [Create an Application Insights resource](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-create-new-resource) page.
 
-In both ASP.NET Core and Owin, you can use the `ApplicationInsightJavascript` control, which renders the Application Insight javascript snippet to do the tracing on client side. According to the [official documentation](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-javascript), it should be placed just before `</head>` tag:
+In both ASP.NET Core and OWIN, you can use the `ApplicationInsightJavascript` control, which renders the Application Insight javascript snippet to do the tracing on client side. According to the [official documentation](https://docs.microsoft.com/en-us/azure/application-insights/app-insights-javascript), it should be placed just before `</head>` tag:
 ```HTML
 <dot:ApplicationInsightJavascript />
 ```
-Owin version additionally contains the `EnableAuthSnippet` property. In ASP.NET Core web apps, this value is taken from `ApplicationInsightsServiceOptions`.
+OWIN version additionally contains the `EnableAuthSnippet` property. In ASP.NET Core web apps, this value is taken from `ApplicationInsightsServiceOptions`.
 
 <br />
 

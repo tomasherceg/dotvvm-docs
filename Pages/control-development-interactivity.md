@@ -1,6 +1,6 @@
 ## Adding interactivity using custom Knockout binding handlers
 
-In the previous tutorial, we have writen a simple [TextBox](/docs/controls/builtin/TextBox/{branch}) control. But today, we have many controls that include a javascript part.
+In the previous tutorial, we have written a simple [TextBox](/docs/controls/builtin/TextBox/{branch}) control. But today, we have many controls that include a javascript part.
 Let's write a DatePicker control using [this Bootstrap DatePicker plugin](http://www.eyecon.ro/bootstrap-datepicker).
 
 To use the plugin, you need to do several things:

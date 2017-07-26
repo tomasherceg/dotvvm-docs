@@ -47,7 +47,7 @@ Therefore, a "DotVVM-friendly" viewmodel can contain properties of these types:
 
 ### Recommendations for ViewModels
 
-+ The properties in viewmodel and all child objects should have plain `{ get; set; }`. There should be no logic in getters, setters or the constructor of the class. The getters and setters are called by the serializatin mechanism and you never know the order in thich setters are invoked.
++ The properties in viewmodel and all child objects should have plain `{ get; set; }`. There should be no logic in getters, setters or the constructor of the class. The getters and setters are called by the serialization mechanism and you never know the order in which setters are invoked.
 
 + The viewmodel commands are part of the presentation layer. They shouldn't communicate with the database, send e-mails etc. 
 In general, the viewmodel methods should only gather data from the viewmodel, call some method from the business layer to do  the real job and after it's finished, update the viewmodel with the results. 

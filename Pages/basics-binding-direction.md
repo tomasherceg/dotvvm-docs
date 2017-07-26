@@ -15,6 +15,8 @@ The `Direction` is an enumeration with the following options:
 
 * `Both` is the default setting. The property value is transferred in both ways. Use this setting e.g. for values the user enters in the form controls, e.g. [TextBox](/docs/controls/builtin/TextBox/{branch}).
 
+* `None` the property value is **not** transferred either from the server to the client nor from the client to the server.
+
 * `ServerToClient` transfers the value from the server to the client. This is useful e.g. for a property representing the list of items in the [ComboBox](/docs/controls/builtin/ComboBox/{branch}) when the collection of items can be changed depending on the other form fields.
 
 * `ServerToClientFirstRequest` transfers the value from the server to the client on the initial page load, not during postbacks. This is useful e.g. for a property representing the list of items in the [ComboBox](/docs/controls/builtin/ComboBox/{branch}) when the collection is static and cannot be changed. It is transferred only once.

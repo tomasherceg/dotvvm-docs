@@ -4,7 +4,7 @@ This kind of controls is useful when you need to render a piece of HTML and/or y
 
 Building code-only controls is more difficult, but they can do much more things. All controls built-in DotVVM are implemented as code-only controls. 
 
-If you want to learn about how to write contols in DotVVM, we encourage you to look in the [GitHub](https://github.com/riganti/dotvvm) repository how the built-in controls are implemented.
+If you want to learn about how to write controls in DotVVM, we encourage you to look in the [GitHub](https://github.com/riganti/dotvvm) repository how the built-in controls are implemented.
 
 ### Control Registration
 
@@ -217,7 +217,7 @@ public class TextBoxWithLabel : HtmlGenericControl
 
 Next, let's add the `Text` and `LabelText` properties.
 
-Both of them are required. We can indicate this by using the `MarkupOptions` attribute. The attribute can also specify whether the property can contain a data-binding or a hard-coded value or both. By defualt, it can contain both of them.
+Both of them are required. We can indicate this by using the `MarkupOptions` attribute. The attribute can also specify whether the property can contain a data-binding or a hard-coded value or both. By default, it can contain both of them.
 
 ```CSHARP
 [MarkupOptions(AllowHardCodedValue = false)]

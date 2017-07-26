@@ -3,20 +3,20 @@ You can define, what tag the *Repeater* renders, using the `WrapperTagName`. The
 ```DOTHTML
 <dot:Repeater DataSource="{value: Items}">
     <ItemTemplate>
-	    <p>{{value: Name}}</p>
-	</ItemTemplate>
+        <p>{{value: Name}}</p>
+    </ItemTemplate>
 </dot:Repeater>
 
 <!-- Client rendering mode -->
 <div data-bind="foreach: ...">
-	<p><span data-bind="..."></span></p>
+    <p><span data-bind="..."></span></p>
 </div>
 
 <!-- Server rendering mode -->
 <div>
-	<p>Jim Hacker</p>
-	<p>Humphrey Appleby</p>
-	<p>Bernard Woolley</p>
+    <p>Jim Hacker</p>
+    <p>Humphrey Appleby</p>
+    <p>Bernard Woolley</p>
 </div>
 ```
 

@@ -57,7 +57,7 @@ Hello World!
 </tbody>
 ```
 
-The `RenderSettings.Mode` propety is inherited to the child elements.
+The `RenderSettings.Mode` property is inherited to the child elements.
 
 ### Restrictions
 

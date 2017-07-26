@@ -65,7 +65,7 @@ dotvvm.events.init.subscribe(function () {
 	
 	return {
 	    execute: function(callback) {
-	    	// do whathever you need and if you need to do the postback, invoke the 'callback()' function
+	    	// do whatever you need and if you need to do the postback, invoke the 'callback()' function
 	    	if (confirm(message)) {
 	    	    callback();
 		}

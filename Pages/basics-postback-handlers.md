@@ -1,7 +1,7 @@
 ## Postback Handlers
 
 Imagine you have a button in your page which removes some data. In many cases, you need to display a confirmation dialog before the data are deleted.
-This is a situation when shall use a feature called **postback handler**.
+This is a situation when you shall use a feature called **postback handler**.
 
 In general, the postback handler is a mechanism which allows to intercept postbacks on any control and execute your own custom logic before the postback
 is actually sent to the server. It is even possible to cancel the postback at all.

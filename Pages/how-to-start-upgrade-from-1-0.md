@@ -2,7 +2,7 @@
 
 Because **DotVVM 1.1** brought support for ASP.NET Core, we had to do many fundamental changes inside the framework, and there are several breaking changes.
 
-If your app is built on **DotVVM 1.0**, you need to take the foolowing steps to upgrade to **DotVVM 1.1 on OWIN**.
+If your app is built on **DotVVM 1.0**, you need to take the following steps to upgrade to **DotVVM 1.1 on OWIN**.
 
 
 

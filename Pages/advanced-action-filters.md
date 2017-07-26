@@ -20,7 +20,7 @@ You can then override any of the method listed below.
 + **Page-level Events**
     - `OnPageLoadingAsync` is executed immediately after the URL is mapped to a specific route and the viewmodel instance is created.
     - `OnPageLoadedAsync` is executed after the response is rendered completely.
-    - `OnPageExceptionAsync` is executed when an unhandler exception occurs during the HTTP request processing.
+    - `OnPageExceptionAsync` is executed when an unhandled exception occurs during the HTTP request processing.
 
 + **ViewModel-level Events**
     - `OnViewModelCreatedAsync` is executed when the viewmodel instance is created.

@@ -58,7 +58,7 @@ By default, the validation is triggered automatically on all postbacks. When all
 
 You can perform additional validation checks in the command method itself and report additional validation errors to the user. 
 This is used to perform validations that require access to SQL database, e.g. make sure that an e-mail address is not registered yet. 
-It would be difficult to do these checkes in validation attributes or in the `IValidatableObject` implementation.
+It would be difficult to do these checks in validation attributes or in the `IValidatableObject` implementation.
 
 The `Context` in DotVVM contains the `ModelState` object which contains a list of validation errors. You can add your own errors to the collection.
 
