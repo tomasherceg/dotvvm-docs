@@ -12,7 +12,7 @@ Please note that this class doesn't do the bundling automatically. You need to c
 
 ```CSHARP
 var bundling = new BundlingResourceProcessor();
-bundles.RegisterBundle(dotvvmConfiguration.Resources.FindNamedResource("myBundle"), "script1", "script2");
+bundling.RegisterBundle(dotvvmConfiguration.Resources.FindNamedResource("myBundle"), "script1", "script2");
 dotvvmConfiguration.Resources.DefaultResourceProcessors.Add(bundling);
 ```
 
