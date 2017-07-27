@@ -27,7 +27,7 @@ You can then override any of the method listed below.
     - `OnViewModelSerializingAsync` is executed before the viemwodel is serialized to JSON and sent to the client.
     - `OnViewModelDeserializedAsync` is executed on postbacks, after the viewmodel from the client was deserialized.
 
-+ **Comment-level Events**
++ **Command-level Events**
     - `OnCommandExecutingAsync` is executed on postbacks, before the command referenced from a command binding is called.
     - `OnCommandExecutedAsync` is executed on postbacks, after the command referenced from a command binding is called.
 
