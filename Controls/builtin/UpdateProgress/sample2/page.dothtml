@@ -1,0 +1,13 @@
+@viewModel DotvvmWeb.Views.Docs.Controls.builtin.UpdateProgress.sample2.ViewModel, DotvvmWeb
+
+<!-- the calculation is longer than 1000 ms so the content in UpdateProgress will appear after 1000 ms -->
+<dot:Button Text="Perform long calculation" Click="{command: LongCalculation()}" />
+
+<!-- the calculation is shorter than 1000 ms so the content in UpdateProgress will not appear -->
+<dot:Button Text="Perform short calculation" Click="{command: ShortCalculation()}" />
+
+<p>{{value: Result}}</p>
+
+<dot:UpdateProgress Delay="1000">
+	<h4>Calculating...</h4>
+</dot:UpdateProgress>
