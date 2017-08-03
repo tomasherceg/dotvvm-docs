@@ -24,7 +24,7 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions()
 
 ### Login Page with OWIN Cookie Authentication
 
-In the login page, you need to verify the user credentials and create the `ClaimsIdentity` object that represents the logged user's identity. Then, you need to pass the identity to the `OwinContext.Authentication.SignIn` method:
+In the login page, you need to verify the user credentials and create the `ClaimsIdentity` object that represents the logged user's identity. Then, you need to pass the identity to the `GetAuthentication.SignIn` method:
 
 ```CSHARP
 public class LoginViewModel : DotvvmViewModelBase
@@ -38,7 +38,7 @@ public class LoginViewModel : DotvvmViewModelBase
         {
             // the CreateIdentity is your own method which creates the IIdentity representing the user
             var identity = CreateIdentity(UserName);
-            Context.OwinContext.Authentication.SignIn(identity);
+            Context.GetAuthentication.SignIn(identity);
             Context.RedirectToUrl("/signedIn");
         }
     }
@@ -80,7 +80,7 @@ public void LoginWithFacebook()
     {
         RedirectUri = "http://myapp.com/Register"
     };
-    Context.OwinContext.Authentication.Challenge(properties, "Facebook");
+    Context.GetAuthentication.Challenge(properties, "Facebook");
     Context.InterruptRequest();
 }
 ```

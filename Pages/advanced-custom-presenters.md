@@ -19,7 +19,7 @@ The main advantage of custom presenter over the middleware is that you can use D
 
         public Task ProcessRequest(DotvvmRequestContext context)
         {
-            context.OwinContext.Response.ContentType = "application/rss+xml";
+            context.GetOwinContext().Response.ContentType = "application/rss+xml";
 
             // load data
             var articles = ...;
@@ -40,7 +40,7 @@ The main advantage of custom presenter over the middleware is that you can use D
             var feed = new SyndicationFeed("Sample RSS Feed", "DotVVM Sample", new Uri("https://www.dotvvm.com"), items);
 
             // write the XML to the output
-            var writer = XmlWriter.Create(context.OwinContext.Response.Body, new XmlWriterSettings() { Indent = true });
+            var writer = XmlWriter.Create(context.GetOwinContext().Response.Body, new XmlWriterSettings() { Indent = true });
             feed.SaveAsRss20(writer);
             writer.Flush();
 
