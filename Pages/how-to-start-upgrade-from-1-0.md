@@ -22,7 +22,8 @@ and manipulate with the response.
 Because the API changed on ASP.NET Core, we have added the `HttpContext` property which provides a unified API for OWIN and ASP.NET Core. 
 However, there are some differences and there are not all features available in the original `OwinContext` property.
 
-If you want to get the real OWIN context, you can call the `GetOwinContext()` extension method and get the same API.
+If you want to get the real OWIN context, you can call the `GetOwinContext()` extension method and get the same API. The `GetOwinContext()` method is
+in the `Dotvvm.Framework.Hosting` namespace.
 
 
 
@@ -49,7 +50,7 @@ public class WindsorViewModelLoader : DefaultViewModelLoader
 {
     private readonly WindsorContainer container;
 
-    public WindsorViewModelLoader(WindsorContainer container, IServiceProvider serviceProvider) : base(serviceProvider)
+    public WindsorViewModelLoader(WindsorContainer container)
     {
         this.container = container;
     }
@@ -69,9 +70,11 @@ If you registered custom services in the `DotvvmConfiguration.ServiceLocator`, y
 ```CSHARP
 var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, options: options =>
 {
-    options.Services.AddSingleton<IViewModelLoader>(serviceProvider => new WindsorViewModelLoader(container, serviceProvider));    
+    options.Services.AddSingleton<IViewModelLoader>(serviceProvider => new WindsorViewModelLoader(container));
 });
 ```
+
+You will need to import the `Microsoft.Extensions.DependencyInjection` namespace to do so.
 
 Also, you can only register services in the `UseDotVVM` method by passing a method to the `options` parameter. 
 

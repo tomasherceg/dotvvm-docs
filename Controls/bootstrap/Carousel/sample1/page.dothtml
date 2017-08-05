@@ -1,23 +1,21 @@
 <div style="height: 428px; width: 640px;">
 
-
     <bs:Carousel>
-    <SlidesTemplate>
+        <SlidesTemplate>
         
-        <bs:CarouselItem IsActive="true">
-        <bs:Image ImageUrl="~/Images/LA.jpg" />
-        </bs:CarouselItem>
+            <bs:CarouselItem IsActive="true">
+                <bs:Image ImageUrl="~/Images/LA.jpg" />
+            </bs:CarouselItem>
         
-        <bs:CarouselItem>
-        <bs:Image ImageUrl="~/Images/NY.jpg" />
-        </bs:CarouselItem>
+            <bs:CarouselItem>
+                <bs:Image ImageUrl="~/Images/NY.jpg" />
+            </bs:CarouselItem>
         
-        <bs:CarouselItem>
-        <bs:Image ImageUrl="~/Images/Miami.jpg" />
-        </bs:CarouselItem>
+            <bs:CarouselItem>
+                <bs:Image ImageUrl="~/Images/Miami.jpg" />
+            </bs:CarouselItem>
     
-    </SlidesTemplate>
+        </SlidesTemplate>
     </bs:Carousel>
-
 
 </div>
