@@ -39,3 +39,25 @@ The `.dotcontrol` file can look like this:
 
 You can see that the control requires a binding context of type `IAddress`. It can be used on any place where the `DataContext` implements this interface.
 
+### Markup Controls WrapperTag
+
+Markup controls are wrapped inside a `div` tag by default. You can specify the tag you want to use by adding `@wrapperTag` directive. Additionally if you don't want to use any wrapper tag you can add the `@noWrapperTag` directive.
+
+```DOTHTML
+@viewModel DotvvmDemo.Model.IAddress, DotvvmDemo
+@wrapperTag table
+
+<tr>
+    <td>Street: </td>
+    <td><dot:TextBox Text="{value: Street}" /></td>
+</tr>
+...
+<tr>
+    <td>Country: </td>
+    <td><dot:ComboBox DataSource="{value: Countries}" SelectedValue="{value: CountryId}" DisplayMember="Name" ValueMember="Id" /></td>
+</tr>
+```
+
+This will render the control inside the `table` tag.
+
+>The `@noWrapperTag` cannot be used when the control is used with properties.
