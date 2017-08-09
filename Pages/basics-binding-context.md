@@ -28,12 +28,12 @@ Let's have the following view and viewmodel:
 <div role="tabpanel" class="tab-pane" id="viewmodel">
 
 ```CSHARP
-public class AddressViewModel {	
-	public Customer Customer { get; set; }	
+public class AddressViewModel {
+	public Customer Customer { get; set; }
 }
 
 public class Customer {
-	public string Name { get; set; }	
+	public string Name { get; set; }
 }
 ```
 
@@ -41,15 +41,15 @@ public class Customer {
 </div>
 </div>
 
-The `DataContext` property will make all bindings on the `<div>` element and all bindings inside this element to be evaluated in the context of the 
-`Customer` property of the viewmodel. 
+The `DataContext` property will make all bindings on the `<div>` element and all bindings inside this element to be evaluated in the context of the
+`Customer` property of the viewmodel.
 
 If the `DataContext` binding is not present, the binding inside the `<div>` would have to be `{{value: Customer.Name}}`.
 
 ### Null DataContext
 
 There is also one helpful feature. If the `DataContext` of any element is `null`, the element is removed from the DOM and the bindings inside this element
-are not evaluated at all. 
+are not evaluated at all.
 
 When you set some value in the `DataContext` property, the element re-appears in the DOM.
 
@@ -58,7 +58,7 @@ If you don't want the `<div>` element to hide, the `DataContext` property must p
 <br>
 
 ### Binding Context Variables
- 
+
 Inside elements that change the `DataContext` property, you can use the following binding context variables to navigate the viewmodel hierarchy.
 
 * `_root` accesses the top-level viewmodel (the viewmodel of the page).
@@ -74,5 +74,19 @@ For example, the following binding calls the `DeleteAddress` method in the page 
 </div>
 ```
 
-In DotVVM 1.1 and newer versions, there is also a binding context variable `_control` which can access the properties of the user control. 
+
+Additionally you can use the `_collection` binding context variable to access the current item index and other properties in the `ItemTemplate` of a `Repeater` or similar data-bind control. You can use the following properties:
+
+* `_collection.Index`
+* `_collection.IsFirst`
+* `_collection.IsOdd`
+* `_collection.IsEven`
+
+```DOTHTML
+<dot:Repeater DataSource="{value: Items}">
+  <p>{{value: _collection.Index}}</p>
+</dot:Repeater>
+```
+
+In DotVVM 1.1 and newer versions, there is also a binding context variable `_control` which can access the properties of the user control.
 See the [Markup Controls](/docs/tutorials/control-development-markup-controls) chapter for more info.
