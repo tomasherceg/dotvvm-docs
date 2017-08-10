@@ -15,7 +15,9 @@ app.UseCookieAuthentication(new CookieAuthenticationOptions {
         OnRedirectToAccessDenied = c => DotvvmAuthenticationHelper.ApplyStatusCodeResponse(c.HttpContext, 403),
         OnRedirectToLogin = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
         OnRedirectToLogout = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri)
-    }
+    },
+    AutomaticAuthenticate = true,
+    AutomaticChallenge = true
 });
 ```
 
