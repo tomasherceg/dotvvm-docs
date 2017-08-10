@@ -55,14 +55,22 @@ services.AddDotVVM(options =>
 3. As the last step, you need to add the MiniProfiler middleware before `app.UseDotVVM<DotvvmStartup>()`:
 
 ```CSHARP
-app.UseMiniProfiler(new MiniProfilerOptions
+public void Configure(IApplicationBuilder app, IMemoryCache cache)
 {
-    // Path to use for profiler URLs
-    RouteBasePath = "~/profiler",
+    ...
 
-    // (Optional) Control storage
-    Storage = new MemoryCacheStorage(cache, TimeSpan.FromMinutes(60)),
-});
+    app.UseMiniProfiler(new MiniProfilerOptions
+    {
+        // Path to use for profiler URLs
+        RouteBasePath = "~/profiler",
+
+        // (Optional) Control storage
+        Storage = new MemoryCacheStorage(cache, TimeSpan.FromMinutes(60)),
+    });
+    
+    app.UseDotVVM<DotvvmStartup>();
+    ...
+}
 ```
 
 * To see it in action, you can simply navigate to `~/profiler/results-index` and view profiled HTTP requests.
