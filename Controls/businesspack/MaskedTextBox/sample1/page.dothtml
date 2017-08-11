@@ -1,0 +1,4 @@
+ <bp:MaskedTextBox Mask="#99/99/9999"
+					  Placeholder="#mm/dd/yyyy"
+					  Text="{value: Text}"
+					  IsTextValid="{value: IsValid}"/>

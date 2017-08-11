@@ -1,0 +1,5 @@
+ <bp:MaskedTextBox Mask="aA9-11-22"
+                      Placeholder="aA9-11-22"
+                      Text="{value: Text}"
+                      IsTextValid="{value: IsValid}"
+                      AdditionalDefinitions="{value: AdditionalDefinitions}"/>

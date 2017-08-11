@@ -1,0 +1,1 @@
+MaskedTextBox allowes you to force users to type text exactly according to `Mask`. Mask will be composed from definition chars and hardcoded chars. All definitions chars are verified against javascript regEx on client side, and .Net Regex on server side. You are free to use default `Definitions` or mix them with `AdditionalDefinitions`, or simply use your own `Definitions`.
