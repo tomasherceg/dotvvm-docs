@@ -23,10 +23,10 @@ This property is available in **DotVVM 1.1** and newer. In the previous version,
 
 + `GetAspNetCoreContext()` is an extension method which you can use in the ASP.NET Core version to access the ASP.NET Core  `HttpContext`. This method is available in **DotVVM 1.1** and newer.
 
-+ `RedirectToUrl` and `RedirectPermanentToUrl` methods redirect the user to the specified URL. 
++ `RedirectToUrl` and `RedirectToUrlPermanent` methods redirect the user to the specified URL. 
 The request execution is interrupted by this call.
 
-+ `RedirectToRoute` and `RedirectPermanentToRoute` methods redirect the user to the specified route and allows to supply route parameters. 
++ `RedirectToRoute` and `RedirectToRoutePermanent` methods redirect the user to the specified route and allows to supply route parameters. 
 The request execution is interrupted by this call. 
 
 + `InterruptExecution` interrupts the execution of the HTTP request by DotVVM and pass it to the next OWIN middleware.  
