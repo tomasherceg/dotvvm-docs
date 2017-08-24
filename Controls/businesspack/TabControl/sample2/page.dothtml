@@ -1,17 +1,17 @@
-<bp:TabControl ActiveTabIndex="{value: SelectedTabIndex}"
+<bp:TabControl ActiveTabKey="{value: ActiveTabKey}"
                ActiveTabChanged="{command: TabChanged()}">
     <bp:TabItem HeaderText="Tab 1">
         <ContentTemplate>
             <p>Tab 1 description</p>
             <bp:Button Text="Go to Tab 2"
-                       Click="{command: SelectedTabIndex = 1}" />
+                       Click="{command: ActiveTabKey = "Other"}" />
         </ContentTemplate>
     </bp:TabItem>
-    <bp:TabItem HeaderText="Tab 2">
+    <bp:TabItem Key="Other" HeaderText="Tab 2">
         <ContentTemplate>
             <p>Tab 2 description</p>
             <bp:Button Text="Go to Tab 1"
-                       Click="{command: SelectedTabIndex = 0}" />
+                       Click="{command: ActiveTabKey = "Tab 1"}" />
         </ContentTemplate>
     </bp:TabItem>
 </bp:TabControl>

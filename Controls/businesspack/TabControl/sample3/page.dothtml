@@ -1,9 +1,8 @@
 <bp:TabControl DataSource="{value: Countries}"
-               ItemIsActiveBinding="{value: IsSelected}">
-    <HeaderTemplate>
-        {{value: Name}}
-    </HeaderTemplate>
-    <ContentTemplate>
+               TabIsActiveBinding="{value: IsSelected}"
+               TabHeaderTextBinding="{value: Name}"
+               TabKeyBinding="{value: Id}">
+    <TabContentTemplate>
         <ul>
             <dot:Repeater DataSource="{value: Cities}">
                 <ItemTemplate>
@@ -11,7 +10,7 @@
                 </ItemTemplate>
             </dot:Repeater>
         </ul>
-    </ContentTemplate>
+    </TabContentTemplate>
 </bp:TabControl>
 
 <br />
