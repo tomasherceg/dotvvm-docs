@@ -191,14 +191,41 @@
             Gets or sets the highest date that can be selected by user.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.ExcludedDays">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.Restrictions">
             <summary>
-            Gets or sets days (or parts of them) which will be excluded from selection.
+            Gets or sets days a collection of rules specifying which date time intervals can't be selected.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.ExcludedRanges">
+        <member name="T:DotVVM.BusinessPack.Controls.CalendarRestrictionBase">
             <summary>
-            Gets or sets DateTime ranges which will be excluded from selection.
+            The base class for restriction rules specifying which date time intervals can't be slected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarRestrictionBase.Type">
+            <summary>
+            Gets the type of the restriction rule.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.CalendarRestrictionBaseJsonConverter">
+            <summary>
+            Converts JSON to one of possible <see cref="T:DotVVM.BusinessPack.Controls.CalendarRestrictionBase" /> implementations based on
+            <see cref="P:DotVVM.BusinessPack.Controls.CalendarRestrictionBase.Type" /> property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarRestrictionBaseJsonConverter.CanWrite">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.CalendarRestrictionBaseJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.CalendarRestrictionBaseJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.CalendarRestrictionBaseJsonConverter.CanConvert(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.DayOfWeekRestriction">
+            <summary>
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.RangeCalendar">
@@ -676,27 +703,27 @@
             Gets or sets the date selected by user.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.DateTimePopup">
+        <member name="T:DotVVM.BusinessPack.Controls.DateTimePickerBase">
             <summary>
             Base class for controls which use date time picker popup.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DateTimePopup.FormatString">
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.FormatString">
             <summary>
             Gets or sets the format string that will be used to display the date.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DateTimePopup.ClosePopupOnSelectionComplete">
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.ClosePopupOnSelectionComplete">
             <summary>
             Gets or sets whether the popup should be hidden when the user completes the selection.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DateTimePopup.CreateInputPart">
+        <member name="M:DotVVM.BusinessPack.Controls.DateTimePickerBase.CreateInputPart">
             <summary>
             Creates left part (part when input is) of the date time picker control.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DateTimePopup.CreateIconPart">
+        <member name="M:DotVVM.BusinessPack.Controls.DateTimePickerBase.CreateIconPart">
             <summary>
             Creates right part (part when icon is) of the date time picker control.
             </summary>
@@ -2300,9 +2327,9 @@
             Renders a TextBox control that allows to specify mask to enforce a specific value format.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Enabled">
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.#ctor">
             <summary>
-            Gets or sets a value indicating whether the control is enabled and can be modified.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> class.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text">
@@ -2312,38 +2339,221 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Mask">
             <summary>
-            Get or set the mask the text is validated against.
+            Get or set the mask to validate the text against.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Definitions">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Patterns">
             <summary>
-            Gets or sets the mask patterns used to validate the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text"/>. Setting this property will override the default patterns.
+            Gets or sets the patterns used to validate the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text" />. Setting this property will override the
+            default patterns (<see cref="M:DotVVM.BusinessPack.Controls.MaskPattern.CreateDefaultPatterns" />).
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.AdditionalDefinitions">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.AdditionalPatterns">
             <summary>
-            Get or set the additional mask patterns. Setting this property will not override the default patterns.
+            Get or set the additional patterns. Setting this property will not override the default patterns.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.IsMaskedTextBoxValidOnServer(System.String,System.String)">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Enabled">
             <summary>
-            Validate textToValidate, by mask with default definitions.
+            Gets or sets a value indicating whether the control is enabled and can be modified.
             </summary>
-            <param name="mask">Mask with definitions, e.g. 999/999/999.</param>
-            <param name="textToValidate">Text which will be validated.</param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.IsMaskedTextBoxValidOnServer(System.String,System.String,System.Collections.Generic.Dictionary{System.Char,DotVVM.BusinessPack.Controls.MaskDefinitionItem})">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Changed">
             <summary>
-            Validate textToValidate, by mask with definitions.
+            Gets or sets the command that will be triggered when the text is changed.
             </summary>
-            <param name="mask">Mask with definitions, e.g. 999/999/999.</param>
-            <param name="textToValidate">Text which will be validated.</param>
-            <param name="definitions">Definitions with which will be validated textToValidate param.</param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.CreateDefaultMaskDefinitions">
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.OnLoad(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.IsTextValid">
             <summary>
-            Create default definitions for Mask validators.
+            Returns whether the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text" /> matches the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Mask" />.
             </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.CreateValidationError">
+            <summary>
+            Creates a validation error in case the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text" /> is not valid on postback.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.GetControlBinding">
+            <summary>
+            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's client-side binding.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.MaskedValueAttribute">
+            <summary>
+            Validates whether a value matches the specified mak using the default patterns.
+            </summary>
+            <remarks>
+            The default patterns are:
+            <list type="table">
+                <item>
+                    <term>0</term>
+                    <description>Digit. Accepts any digit between 0 and 9.</description>
+                </item>
+                <item>
+                    <term>9</term>
+                    <description>Digit or space. Accepts any digit between 0 and 9 or space.</description>
+                </item>
+                <item>
+                    <term>#</term>
+                    <description>Digit or space. Identical to Rule 9. In addition, allows the + (plus) and - (minus) signs.</description>
+                </item>
+                <item>
+                    <term>L</term>
+                    <description>
+                    Letter. Restricts the input to a-z and A-Z letters. This rule is equivalent to
+                    [a-zA-Z] in regular expressions.
+                    </description>
+                </item>
+                <item>
+                    <term>?</term>
+                    <description>
+                    Letter or space. Restricts the input to letters a-z and A-Z. This rule is equivalent to
+                    [a-zA-Z]|\s in regular expressions.
+                    </description>
+                </item>
+                <item>
+                    <term>&amp;</term>
+                    <description>
+                    Character. Accepts any character except a space. The rule is equivalent to \S in regular
+                    expressions.
+                    </description>
+                </item>
+                <item>
+                    <term>C</term>
+                    <description>Character or space. Accepts any character. The rule is equivalent to . in regular expressions.</description>
+                </item>
+                <item>
+                    <term>A</term>
+                    <description>Alphanumeric. Accepts letters and digits only.</description>
+                </item>
+                <item>
+                    <term>a</term>
+                    <description>Alphanumeric or space. Accepts only letters, digits, and space.</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.MaskedValueAttribute" /> class.
+            </summary>
+            <param name="mask">The mask to validate a value against.</param>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedValueAttribute.Mask">
+            <summary>
+            Gets the mask to validate a value against.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.IsValid(System.Object)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.FormatErrorMessage(System.String)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.EnsureErrorMessage">
+            <summary>
+            Ensures that the <see cref="P:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage" /> property has a value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.MaskPattern">
+            <summary>
+            The <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> mask pattern.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskPattern.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> class.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskPattern.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> class.
+            </summary>
+            <param name="regex">The regex pattern compatible with JavaScript and .NET.</param>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.MaskPattern.ServerRegex">
+            <summary>
+            Gets or sets the server-side (.NET) regex.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.MaskPattern.ClientRegex">
+            <summary>
+            Gets or sets the client-side (JavaScript) regex.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskPattern.CreateDefaultPatterns">
+            <summary>
+            Creates default patterns for the Mask validator.
+            </summary>
+            <remarks>
+            The default patterns are:
+            <list type="table">
+                <item>
+                    <term>0</term>
+                    <description>Digit. Accepts any digit between 0 and 9.</description>
+                </item>
+                <item>
+                    <term>9</term>
+                    <description>Digit or space. Accepts any digit between 0 and 9 or space.</description>
+                </item>
+                <item>
+                    <term>#</term>
+                    <description>Digit or space. Identical to Rule 9. In addition, allows the + (plus) and - (minus) signs.</description>
+                </item>
+                <item>
+                    <term>L</term>
+                    <description>
+                    Letter. Restricts the input to a-z and A-Z letters. This rule is equivalent to 
+                    [a-zA-Z] in regular expressions.
+                    </description>
+                </item>
+                <item>
+                    <term>?</term>
+                    <description>
+                    Letter or space. Restricts the input to letters a-z and A-Z. This rule is equivalent to
+                    [a-zA-Z]|\s in regular expressions.
+                    </description>
+                </item>
+                <item>
+                    <term>&amp;</term>
+                    <description>
+                    Character. Accepts any character except a space. The rule is equivalent to \S in regular
+                    expressions.
+                    </description>
+                </item>
+                <item>
+                    <term>C</term>
+                    <description>Character or space. Accepts any character. The rule is equivalent to . in regular expressions.</description>
+                </item>
+                <item>
+                    <term>A</term>
+                    <description>Alphanumeric. Accepts letters and digits only.</description>
+                </item>
+                <item>
+                    <term>a</term>
+                    <description>Alphanumeric or space. Accepts only letters, digits, and space.</description>
+                </item>
+            </list>
+            </remarks>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.MaskValidator">
+            <summary>
+            Validates whether a value matches the specified mak using the default patterns
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskValidator.IsTextValid(System.String,System.String,System.Collections.Generic.Dictionary{System.Char,DotVVM.BusinessPack.Controls.MaskPattern})">
+            <summary>
+            Returns whether the text matches the <paramref name="mask" /> using the given patterns.
+            </summary>
+            <param name="mask">The mask to validate the text against.</param>
+            <param name="text">The text to validate against the mask.</param>
+            <param name="patterns">A dictionary of validation patterns.</param>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.DialogBase">
             <summary>
