@@ -1,7 +1,5 @@
 Allows the user to upload one or multiple files asynchronously.
 
-&nbsp;
-
 #### Upload Configuration
 
 The upload works on the background and starts immediately when the user selects the files. To make file uploading work, 
@@ -18,24 +16,19 @@ app.UseDotVVM<DotvvmStartup>(appPath, options: o => o.AddUploadedFileStorage("Ap
 services.AddDotVVM(o => o.AddUploadedFileStorage("App_Data/Temp"));
 ```
 
-&nbsp;
-
 #### Using the Control
 
-Then, you need to bind the **FileUpload** control to an **UploadedFilesCollection**. It is a collection which will hold references to the files 
+Then, you need to bind the **FileUpload** control to an **UploadData** object. It holds references to the files 
 the user has selected and uploaded.
 
-This collection has a handy property `IsBusy` of **boolean** which indicated whether the file upload is still in progress. You can use it e.g. on
-the button's `Enabled` property to disallow the user to continue until the upload is finished.
-
-&nbsp;
+It has a handy property `IsBusy` of **boolean** which indicates whether the file upload is still in progress. You can use it e.g. on the button's `Enabled` property to disallow the user to continue until the upload is finished.
 
 #### Retrieving the Stored Files
 
-The **UploadedFilesCollection** holds only unique IDs of uploaded files. To get the file, you have to retrieve it using the **UploadedFileStorage** object.
+The **UploadData** object holds only unique IDs of uploaded files. To get the file, you have to retrieve it using the **UploadedFileStorage** object.
 
 ```CSHARP
-foreach (var file in UploadedFiles.Files)
+foreach (var file in UploadData.Files)
 {
   if (file.Allowed)
   {

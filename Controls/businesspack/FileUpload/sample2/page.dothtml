@@ -1,0 +1,4 @@
+<bp:FileUpload Data="{value: Upload}"
+               UploadCompleted="{command: ProcessFile()}" />
+
+{{value: Message}}

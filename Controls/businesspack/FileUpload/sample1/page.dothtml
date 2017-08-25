@@ -1,0 +1,2 @@
+<bp:FileUpload Data="{value: Upload}" 
+               AllowMultipleFiles="true" />

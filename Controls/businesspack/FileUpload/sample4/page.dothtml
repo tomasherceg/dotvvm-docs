@@ -1,0 +1,11 @@
+<bp:FileUpload Data="{value: Upload}">
+    <DropTemplate>
+        Drop files here!
+    </DropTemplate>
+    <!-- build a custom UI here -->
+    <dot:Repeater DataSource="{value: Upload.Files}">
+        <div>
+            {{value: FileName}}
+        </div>
+    </dot:Repeater>
+</bp:FileUpload>
