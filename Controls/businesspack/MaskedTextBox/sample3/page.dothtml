@@ -1,5 +1,4 @@
- <bp:MaskedTextBox Mask="aA9-cc-nn"
-                      Placeholder="aA9-cc-nn"
-                      Text="{value: Text}"
-                      IsTextValid="{value: IsValid}"
-                      Definitions="{value: Definitions}"/>
+ <bp:MaskedTextBox Mask="LL0-cc-nn"
+                   Placeholder="LL0-cc-nn"
+                   Text="{value: Text}"
+                   Patterns="{value: Patterns}" />

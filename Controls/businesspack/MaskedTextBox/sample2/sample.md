@@ -1,6 +1,4 @@
-### Sample 2: AdditionalDefinitions
+### Sample 2: Additional Patterns
 
-The `AdditionalDefinitions` property expects `Dictionary<char, MaskDefinitionItem>`, where the key is definition char and `MaskDefinitionItem` contains property JavaScriptRegEx and CSharpRegex.
-
-`AdditionalDefinitions` add definitions ('1' => [0-1],'2' => \d) to `Definitions`. In this case `Definitions` contain default definitions plus `AdditionalDefinitions`.
-
+The `AdditionalPatterns` property expects `Dictionary<char, MaskPattern>`, where the key is text character and `MaskPattern` defines regular expressions for client and server.
+It appends your custom patterns to the default patterns.

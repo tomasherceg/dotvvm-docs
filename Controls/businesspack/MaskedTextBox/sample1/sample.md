@@ -6,13 +6,16 @@ The `Mask` property expects some string input, which defines the data for the co
 
 The `Placeholder` property works as placeholder on input element.
 
-The `IsTextValid` property informs if the MaskedTextBox is valid. If `Text` is empty, the value is true (empty `Text` is valid).
+#### Default Patterns
 
-#### Default Definitions
+If you do not set the `Patterns` property, like in this example, MaskedTextBox uses the default patterns:
 
-If you do not use binding on property `Definitions`, like in this example, MaskedTextBox uses default `Definitions` from these definitions chars:
-	'9' => \d
-	'a' => [A-Za-z]
-	'A' => [A-Za-z]
-	'w' => [a-zA-Z0-9]
-
+ - 0 - Digit. Accepts any digit between 0 and 9.
+ - 9 - Digit or space. Accepts any digit between 0 and 9 or space.
+ - \# - Digit or space. Identical to Rule 9. In addition, allows the + (plus) and - (minus) signs.
+ - L - Letter. Restricts the input to a-z and A-Z letters. This rule is equivalent to [a-zA-Z] in regular expressions.
+ - ? - Letter or space. Restricts the input to letters a-z and A-Z. This rule is equivalent to [a-zA-Z]|\s in regular expressions.
+ - & - Character. Accepts any character except a space. The rule is equivalent to \S in regular expressions.
+ - C - Character or space. Accepts any character. The rule is equivalent to . in regular expressions.
+ - A - Alphanumeric. Accepts letters and digits only.
+ - a - Alphanumeric or space. Accepts only letters, digits, and space.

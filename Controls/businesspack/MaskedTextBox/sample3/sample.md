@@ -1,7 +1,5 @@
-### Sample 3: Replace Definitions
+### Sample 3: Custom Patterns
 
-The `Definitions` property expects `Dictionary<char, MaskDefinitionItem>`, where the key is definition char and `MaskDefinitionItem` contains property `JavaScriptRegEx` and `CSharpRegEx`.
+The `Patterns` property expects `Dictionary<char, MaskPattern>`, where the key is text character and `MaskPattern` defines regular expressions for client and server.
 
-Sometimes you do not want default definitions, becasue you do not need these chars as hardcoded chars. If you have `Definitions` binding, it will replace default definitions and you are free to use only your own definitions.
-In this case `Definitions` contains only these definition chars ('c' => \w,'n' => \d).
-
+Unlike the `AdditionalPatterns` property, this one will replace the default patterns.
