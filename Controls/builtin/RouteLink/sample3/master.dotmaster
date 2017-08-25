@@ -1,0 +1,7 @@
+<dot:ContentPlaceHolder ID="Main" />
+
+<menu>
+  <li>
+    <dot:RouteLink RouteName="SampleA" Text="Sample A" UrlSuffix="?Param=test1#hash" Query-Id="test2"/>
+  </li>
+</menu>
