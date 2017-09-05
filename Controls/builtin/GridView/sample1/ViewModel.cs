@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
@@ -39,7 +38,6 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample1
             return base.Init();
         }
     }
-
 
     public class Customer
     {

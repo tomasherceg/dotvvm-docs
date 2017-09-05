@@ -38,10 +38,8 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample2
             Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
             return base.Init();
         }
-
     }
-
-
+    
     public class Customer
     {
         public int Id { get; set; }

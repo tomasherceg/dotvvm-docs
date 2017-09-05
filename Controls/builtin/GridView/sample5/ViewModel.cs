@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
-using DotVVM.Framework.ViewModel;
+﻿using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample5
 {
@@ -19,6 +17,7 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample5
         }
 
     }
+    
     public class Customer
     {
         public int Id { get; set; }
