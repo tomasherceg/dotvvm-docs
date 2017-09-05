@@ -26,6 +26,8 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample4
 
         public GridViewDataSet<Customer> Customers { get; set; }
 
+        public string SelectedSortColumn { get; set; }
+
         public override Task Init()
         {
             Customers = new GridViewDataSet<Customer>()
