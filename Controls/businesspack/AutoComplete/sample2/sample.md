@@ -1,7 +1,5 @@
-### Sample 2: Changed Event
+### Sample 2: Working with Objects
 
-The `Changed` event can be used to trigger a command in the viewmodel when the value in the control changes.
+When the `DataSource` collection is bound to a collection of objects, you may use the `ItemTextBinding` to specify from which property to extract text when an object is selected from the list of suggestions.
 
-By default, the `Changed` event is triggered only when the control loses its focus provided the value has been changed. 
-
-However, you can use the `UpdateTextOnInput` property to make the control trigger the event whenever the text inside changes.
+To display custom content in the list items, you can use the `ItemTemplate` property to declare a custom template for the list items.

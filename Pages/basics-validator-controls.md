@@ -8,8 +8,10 @@ To show all errors in the viewmodel, you can use the [ValidationSummary](/docs/c
 <dot:ValidationSummary />
 ```
 
-Because of performance reasons, the `ValidationSummary` control displays only the errors from the current viewmodel and doesn't browse the child objects.
-If you want to include the errors from child objects, you can set its `IncludeErrorsFromChildren` to `true`.
+Because of performance reasons, the `ValidationSummary` control displays only the errors attached to its `Validation.Target`'s properties and doesn't recurse any further.
+If you want the `ValidationSummary` to show all the errors from its `Validation.Target`'s descendant objects, you can set its `IncludeErrorsFromChildren` property to `true`.
+
+And if your desire is to show the errors attached to the `Validation.Target` object itself, set `IncludeErrorsFromTarget` to `true`;
 
 ### Validator Control
 

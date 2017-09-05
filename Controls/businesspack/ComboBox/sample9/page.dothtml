@@ -1,0 +1,5 @@
+<bp:ComboBox DataSource="{value: Countries}"
+             SelectedValue="{value: SelectedCountry}"
+             ToggleIconCssClass="toggle"
+             UnselectIconCssClass="unselect"
+             Placeholder="Please select Country" />

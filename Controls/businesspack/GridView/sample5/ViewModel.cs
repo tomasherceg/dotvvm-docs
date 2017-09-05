@@ -9,11 +9,11 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample5
     public class ViewModel
     {
         public int PageSize { get; set; } = 5;
-        public GridViewDataSet<Customer> Customers { get; set; }
+        public BusinessPackDataSet<Customer> Customers { get; set; }
 
         public override Task Init()
         {
-            Customers = new GridViewDataSet<Customer> {
+            Customers = new BusinessPackDataSet<Customer> {
                 OnLoadingData = GetData
             };
             Customers.SetSortExpression(nameof(Customer.Id));

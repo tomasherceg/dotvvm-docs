@@ -8,7 +8,7 @@ This repository contains the [DotVVM documentation](https://www.dotvvm.com/docs)
 
 Currently, we don't have any tool to preview changes made to the documentation. Just edit some files, or create new documentation pages or control samples, and submit the pull request. We'll review and finish it ourselves before it gets published.
 
-Please, always do your changes against the `latest` branch. We'll merge the changes in all other branches where they should appear. 
+Please, always do your changes against the `1.1` branch. We'll merge the changes in all other branches where they should appear. 
 
 <br />
 

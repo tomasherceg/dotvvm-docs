@@ -1,0 +1,6 @@
+<bp:AutoComplete Text="{value: City}"
+                 DataSource="{value: Suggestions}"
+                 UpdateTextOnInput="false"
+                 Changed="{command: CityChanged()}" />
+
+<p>City {{value: City}} has been changed {{value: CityChangeCount}} times.</p>
