@@ -74,7 +74,7 @@ public class LoginViewModel : DotvvmViewModelBase
         {
             // the CreateIdentity is your own method which creates the IIdentity representing the user
             var identity = CreateIdentity(UserName);
-            await Context.GetAuthentication().SignInAsync("Cookie", new ClaimsPrincipal(identity));
+            await Context.GetAuthentication().SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
             Context.RedirectToRoute("Default");        
         }
     }
