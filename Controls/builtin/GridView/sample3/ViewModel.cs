@@ -37,10 +37,7 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample3
             Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
             return base.Init();
         }
-
-
     }
-
 
     public class Customer
     {

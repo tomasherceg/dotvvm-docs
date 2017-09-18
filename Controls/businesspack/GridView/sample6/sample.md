@@ -6,4 +6,4 @@ Every column has the `IsEditable` property which specifies whether the column ca
 
 The columns also have the `EditTemplate` property which can be used to define a custom edit template for the cell.
 
-The object that is currently being edited, is identified by the `gridViewDataSet.RowEditOptions.EditRowId` property which contains the primary key of the edited object. The name of the property which is a primary key, is stored in `gridViewDataSet.RowEditOptions.PrimaryKeyPropertyName`.
+The object that is currently being edited, is identified by the `Customers.RowEditOptions.EditRowId` property which contains the primary key of the edited object. The name of the property which is a primary key, is stored in `Customers.RowEditOptions.PrimaryKeyPropertyName`.

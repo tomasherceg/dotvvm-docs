@@ -1,5 +1,8 @@
-### Sample 4: Extended Mode
+### Sample 4: Restrictions
 
-If you need select both date and time, you can set the `DisplayMode` property to the `Extended` mode which will display the time selection area below the calendar.
+If you require more granular control over what dates can be selected, you can use the `Restrictions` property. We currently support the following types of restrictions:
 
-This mode is allowed only when the `Mode` property is `DateTime`.
+- **DayOfWeekRestriction** - Allows to disable selection of a specific day of week. You can also specify the time interval you need to disable using the `StartTime` and `EndTime` properties.
+- **DateRangeRestriction** - Allows to disable a secific range of dates (one day, one month, etc.). You just need to set the `StartDate` and `EndDate` properties.
+
+Restrictions can be combined with `MinDate` and `MaxDate` properties and are verified both on client-side and server-side.

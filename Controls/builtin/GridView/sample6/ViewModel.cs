@@ -1,8 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using System.Web.Configuration;
-using System.Web.UI.WebControls;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
 
@@ -26,12 +23,14 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample6
             return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
         }
 
+        public GridViewDataSet<Customer> Customers { get; set; }
+
         public override Task Init()
         {
             Customers = new GridViewDataSet<Customer>()
             {
                 OnLoadingData = GetData,
-                RowEditOptions.PrimaryKeyPropertyName = "Id"
+                RowEditOptions = new RowEditOptions() { PrimaryKeyPropertyName = "Id" }
             };
             return base.Init();
         }
@@ -57,8 +56,6 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample6
             // uncomment this line - it's here only for the sample to work without database
             //Customers.RequestRefresh(forceRefresh: true);
         }
-
-
     }
 
     public class Customer

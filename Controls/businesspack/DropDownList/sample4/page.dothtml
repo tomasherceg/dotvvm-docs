@@ -3,6 +3,9 @@
              ItemValueBinding="{value: Id}"
              ItemTextBinding="{value: Name}"
              Placeholder="Please select Country">
+    <SelectedValueTemplate>
+        <span>{{value: Name}}</span>
+    </SelectedValueTemplate>
     <ItemTemplate>
         <span>{{value: Id}}. {{value: Name}}</span>
     </ItemTemplate>

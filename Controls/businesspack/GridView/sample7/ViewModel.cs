@@ -10,11 +10,11 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample7
     public class ViewModel
     {
         public bool IsInserting { get; set; }
-        public BpGridViewDataSet<Customer> Customers { get; set; }
+        public BusinessPackDataSet<Customer> Customers { get; set; }
 
         public override Task Init()
         {
-            Customers = new BpGridViewDataSet<Customer> {
+            Customers = new BusinessPackDataSet<Customer> {
                 OnLoadingData = GetData,
                 RowEditOptions = new RowEditOptions {
                     PrimaryKeyPropertyName = nameof(Customer.Id)

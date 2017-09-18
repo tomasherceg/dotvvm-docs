@@ -3,5 +3,9 @@
           AllowDismiss="true"
           Text="Warning" />
 
+<bp:Alert Type="Danger"
+          AllowDismiss="true"
+          Text="{value: ErrorMessage}" />
+
 <bp:CheckBox Text="Is warning displayed"
              Checked="{value: IsDisplayed}" />

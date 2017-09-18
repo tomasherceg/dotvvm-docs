@@ -1,0 +1,7 @@
+﻿<bp:FileUpload Data="{value: Upload}" />
+
+<p>
+  <bp:Button Text="Save Files" 
+              Click="{command: Process()}"
+              Enabled="{value: !Files.IsBusy}" />
+</p>

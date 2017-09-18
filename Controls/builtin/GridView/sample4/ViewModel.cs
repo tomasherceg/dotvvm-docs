@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
+using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample4
@@ -15,7 +16,6 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample4
             }.AsQueryable();
         }
 
-
         // NOTE: Method for load data from IQueryable
         private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
@@ -23,6 +23,10 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample4
             // NOTE: Apply Pagign and Sorting options.
             return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
         }
+
+        public GridViewDataSet<Customer> Customers { get; set; }
+
+        public string SelectedSortColumn { get; set; }
 
         public override Task Init()
         {
@@ -37,7 +41,6 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample4
         {
             SelectedSortColumn = column;
         }
-
     }
 
     public class Customer

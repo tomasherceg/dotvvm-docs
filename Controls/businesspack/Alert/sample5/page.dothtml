@@ -1,0 +1,3 @@
+﻿<bp:Alert Text="{value: AlertText}" Type="{value: AlertType}" />
+
+<bp:Button Text="Do Something" Click="{command: DoSomething()}" />

@@ -1,6 +1,6 @@
 <bp:Alert Type="Success" Text="Plain text success alert" />
 
-<bp:Alert Type="Danger">
+<bp:Alert Type="Danger" ShowDefaultTypeIcon="false">
     Danger alert with <a href="#">hyperlinks</a>
     <br />
     and custom content

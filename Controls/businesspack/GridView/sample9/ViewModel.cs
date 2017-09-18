@@ -8,11 +8,11 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample9
 {
     public class ViewModel
     {
-        public GridViewDataSet<Customer> Customers { get; set; }
+        public BusinessPackDataSet<Customer> Customers { get; set; }
 
         public override Task Init()
         {
-            Customers = new GridViewDataSet<Customer> {
+            Customers = new BusinessPackDataSet<Customer> {
                 OnLoadingData = GetData,
                 RowEditOptions = new RowEditOptions {
                     PrimaryKeyPropertyName = nameof(Customer.Id),

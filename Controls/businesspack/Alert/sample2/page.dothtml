@@ -1,8 +1,13 @@
 <bp:Alert Type="Warning"
           AllowDismiss="true"
+          Dismissed="{command: Dismissed()}"
           Text="This alert can be dismissed." />
 
 <bp:Alert Type="Danger"
           AllowDismiss="true"
           DismissIconCssClass="fa fa-delete"
           Text="This alert can be dismissed and uses a custom dismiss icon." />
+          
+<bp:Alert Type="Info"
+          AutoHideTimeout="5"
+          Text="This alert will hide automatically." />

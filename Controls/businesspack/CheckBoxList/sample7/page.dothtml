@@ -1,0 +1,11 @@
+<bp:CheckBoxList DataSource="{value: Countries}"
+                 ItemCheckedBinding="{value: IsChecked}"
+                 ItemTextBinding="{value: Name}"
+                 ItemKeyBinding="{value: Id}">
+    <EmptyDataTemplate>
+        You must fill the DataSource before you can select countries.
+    </EmptyDataTemplate>
+    <ItemTemplate>
+        <span>{{value: Id}}. {{value: Name}}</span>
+    </ItemTemplate>
+</bp:CheckBoxList>
