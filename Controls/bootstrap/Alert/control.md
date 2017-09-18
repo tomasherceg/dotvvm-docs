@@ -1,3 +1,3 @@
 Displays contextual feedback messages for users.
 
-<http://getbootstrap.com/javascript/#alerts>
+<https://getbootstrap.com/docs/3.3/javascript/#alerts>

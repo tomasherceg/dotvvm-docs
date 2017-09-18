@@ -1,3 +1,3 @@
 Renders a group of Bootstrap buttons.
 
-<http://getbootstrap.com/components/#btn-groups>
+<https://getbootstrap.com/docs/3.3/components/#btn-groups>

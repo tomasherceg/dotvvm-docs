@@ -1,3 +1,3 @@
 Extends the builtin [Literal](docs/controls/builtin/Literal/{branch}) control and allows to apply the Bootstrap classes.
 
-<http://getbootstrap.com/components/#labels>
+<https://getbootstrap.com/docs/3.3/components/#labels>

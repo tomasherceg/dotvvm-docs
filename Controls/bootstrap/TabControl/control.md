@@ -1,3 +1,3 @@
 Renders the Bootstrap Tabs widget.
 
-<http://getbootstrap.com/javascript/#tabs>
+<https://getbootstrap.com/docs/3.3/javascript/#tabs>

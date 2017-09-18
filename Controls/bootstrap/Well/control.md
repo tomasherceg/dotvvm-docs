@@ -1,3 +1,3 @@
 Renders the Bootstrap Well widget.
 
-<http://getbootstrap.com/components/#wells>
+<https://getbootstrap.com/docs/3.3/components/#wells>

@@ -1,3 +1,3 @@
 Renders Bootstrap Media Object.
 
-<http://getbootstrap.com/components/#media>
+<https://getbootstrap.com/docs/3.3/components/#media>

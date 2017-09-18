@@ -1,3 +1,3 @@
 Adds a Bootstrap Popover functionality to a control.
 
-<http://getbootstrap.com/javascript/#popovers>
+<https://getbootstrap.com/docs/3.3/javascript/#popovers>
