@@ -72,7 +72,9 @@ configuration.Resources.Register(ResourceConstants.JQueryResourceName,
 	new ScriptResource()
 	{
 		Location = new UrlResourceLocation("https://code.jquery.com/jquery-2.1.1.min.js"),
-		LocationFallback = new ResourceLocationFallback("window.jQuery", new EmbeddedResourceLocation(typeof(DotvvmConfiguration).GetType().Assembly, "DotVVM.Framework.Resources.Scripts.jquery-2.1.1.min.js"))
+		LocationFallback = new ResourceLocationFallback("window.jQuery", new EmbeddedResourceLocation(typeof(DotvvmConfiguration).GetType().Assembly, "DotVVM.Framework.Resources.Scripts.jquery-2.1.1.min.js")),
+		VerifyResourceIntegrity = true
 	});
 ```
 
+If the `VerifyResourceIntegrity` property on the `ScriptResource` is set to true, then it will use the `LocationFallback` to automatically compute the subresource integrity hash, for an extra guarantee that the remote resource being downloaded is the one intended.
