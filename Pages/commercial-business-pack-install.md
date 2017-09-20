@@ -1,6 +1,6 @@
 ## Installing DotVVM Business Pack
 
-To use the [Business Pack](/landing/landing/business-pack) controls, you have use the [DotVVM Private Nuget Feed](/docs/tutorials/commercial-dotvvm-private-nuget-feed/{branch}).
+To use the [Business Pack](/landing/business-pack) controls, you have use the [DotVVM Private Nuget Feed](/docs/tutorials/commercial-dotvvm-private-nuget-feed/{branch}).
 
 1. Install the `DotVVM.BusinessPack` package from the DotVVM Private Nuget Feed.
 
