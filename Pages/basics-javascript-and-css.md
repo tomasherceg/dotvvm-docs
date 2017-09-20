@@ -69,14 +69,10 @@ If the resource could not be loaded from the CDN, it would fall back to the `Alt
 
 ```CSHARP
 configuration.Resources.Register(ResourceConstants.JQueryResourceName,
-    new ScriptResource() 
-    {
-        Location = new UrlResourceLocation("https://code.jquery.com/jquery-2.1.1.min.js"))
-        {
-            LocationFallback = new ResourceLocationFallback(
-                "window.jQuery",
-                new EmbeddedResourceLocation(typeof(DotvvmConfiguration).GetTypeInfo().Assembly, "DotVVM.Framework.Resources.Scripts.jquery-2.1.1.min.js"))
-        }
-    });
+	new ScriptResource()
+	{
+		Location = new UrlResourceLocation("https://code.jquery.com/jquery-2.1.1.min.js"),
+		LocationFallback = new ResourceLocationFallback("window.jQuery", new EmbeddedResourceLocation(typeof(DotvvmConfiguration).GetType().Assembly, "DotVVM.Framework.Resources.Scripts.jquery-2.1.1.min.js"))
+	});
 ```
 
