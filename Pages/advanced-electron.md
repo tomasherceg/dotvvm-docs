@@ -8,8 +8,8 @@ Integration with Electron is open source on github. You can check [here](https:/
 
 Required : **Node.js** 
 
-You can use our **dotnet new template** for creating a new project. You can download template [here](https://github.com/riganti/dotvvm-electron/tree/master/_template).
-Or if  you want setup manually, you must install this packages.
+You can use our [**dotnet new template**](https://github.com/riganti/dotvvm-electron/tree/master/_template) for creating a new project.
+Or if  you want to setup manually, you must install this packages.
 1. Install nuget package
 ```
 Install-Package DotVVM.Framework.Integration.Electron
@@ -24,7 +24,7 @@ Install-Package DotVVM.Framework.Integration.Electron
   ```
 ___
 
-In your main.js/index.js, which you have defined in your package.json like main, use dotvvm-electron module like:
+In your main.js/index.js, which you have defined in your **package.json** like main script, use dotvvm-electron module:
   ```
 var dotvvmElectron = require('dotvvm-electron'); 
 dotvvmElectron.run(__dirname);
