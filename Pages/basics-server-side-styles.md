@@ -25,10 +25,9 @@ config.Styles.Register<ButtonBase>(b => !b.HasProperty(ButtonBase.ClickProperty)
 The styles are applied during the compilation of a view. The `StyleMatchContext` has methods for checking data contexts, ancestors and other properties of the object. You can even check whether the view the object is included in is in a specific directory:
 
 ```CSHARP
-// Hide all GridViews in repeaters whose data context is of type AccountInfo in views that are in the /Views/Logs/ directory
-	config.Styles.Register<GridView>(c => c.HasAncestor<Repeater>() && c.HasDataContext<AccountInfo>()
-			&& c.HasViewInDirectory("~/Views/Logs/"))
-		.SetDotvvmProperty(GridView.VisibleProperty, false);
+config.Styles.Register<GridView>(c => c.HasAncestor<Repeater>() && c.HasDataContext<AccountInfo>()
+		&& c.HasViewInDirectory("~/Views/Logs/"))
+	.SetDotvvmProperty(GridView.VisibleProperty, false);
 ```
 
 The `Register` method returns an instance of `StyleBuilder` that lets you modify the control. You can set default values of attributes and properties or override them completely. These method calls can also be chained.
