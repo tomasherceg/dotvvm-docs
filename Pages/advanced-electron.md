@@ -17,7 +17,7 @@ Or if  you want to setup manually, you must install this packages.
 Install-Package DotVVM.Framework.Integration.Electron
 ```
 
-For use electron in your DotVVM project you need this extensions method.
+For use electron in your DotVVM project you need call this extensions method.
 ```
 services.AddElectronIntegration()
 ```
