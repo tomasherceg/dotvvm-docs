@@ -17,9 +17,12 @@ Or if  you want to setup manually, you must install this packages.
 Install-Package DotVVM.Framework.Integration.Electron
 ```
 
-Register classes by use extension method from package DotVVM.Framework.Integration.Electron to your IoC Container.
+For use electron in your DotVVM project you need this extensions method.
 ```
-services.AddNeco();
+services.AddElectronIntegration()
+```
+```
+app.UseElectronIntegration();
 ```
 
 2. In your package.json set dependency to **dotvvm-electron** module
@@ -38,9 +41,33 @@ dotvvmElectron.run(__dirname);
   ```
 In node.js is [__dirname](https://nodejs.org/docs/latest/api/modules.html#modules_dirname) global object.
 
-  ### Usage
+  ### Sample
 ___
 
+In your ViewModel you have created **ElectronService** (by DI/Manually), which is main class for comunication with electron.
 
 
+**Sample** - Open MessageBox
 
+In your ViewModel you have method something like ShowMessageBox, if you click on button you want call this method and open message box.
+
+```
+ public async Task ShowMessageBox()
+    {
+        var options = new ShowMessageBoxOptions
+        {
+            Title = "New MessageBox"
+        };
+        await _electronService.Dialog.ShowMessageBox(options);
+    }
+```
+View.dotvvm
+```
+<dot:Button Text="Show MessageBox" Click="{command: ShowMessageBox()}" />
+```
+
+
+All availible modules and method you can find on our [Github repository](https://github.com/riganti/dotvvm-electron).
+
+
+More samples you can find on our [Github repository](https://github.com/riganti/dotvvm-electron).
