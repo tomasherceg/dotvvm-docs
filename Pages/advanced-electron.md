@@ -36,14 +36,28 @@ app.UseElectronIntegration();
   }
   ```
 
-  In your main.js/index.js, which you have defined in your **package.json** like main script, use dotvvm-electron module:
+  In your main.js/index.js file, which you have defined in your **package.json** as a main/startup script, use dotvvm-electron module:
   ```JS
 var dotvvmElectron = require('dotvvm-electron'); 
-dotvvmElectron.run(__dirname);
+dotvvmElectron.run(__dirname, {
+    relativeWebAppPath: 'webapp/dist/app',
+});
   ```
-In node.js the [__dirname](https://nodejs.org/docs/latest/api/modules.html#modules_dirname) is global object containing directory name of the current module.
 
-  ### Sample
+  ```dotvvmElectron.run(__dirname [, options])```
+
++ ```__dirname``` String - In node.js the [__dirname](https://nodejs.org/docs/latest/api/modules.html#modules_dirname) is global object containing directory name of the current module.
+
++ ```options``` Object (optional)
+  
+  * ```relativeWebAppPath``` String (optional) - A relative path to standalone web app **without extension** (extension will be added according to the operating system)
+  * ```indexPagePath``` String (optional) - a URL path of the first loaded page
+  * ```browserWindowOptions``` [Object](https://electron.atom.io/docs/api/browser-window/#new-browserwindowoptions) (optional) - options passed to new **Browser Window**
+  * ```browserWindowCreated``` Function (optional) - function called after creating a **Browser Window**
+    * ```browserWindow``` [Object](https://electron.atom.io/docs/api/browser-window/)
+  
+
+### Sample
 ___
 
 First, you have to resolve object **ElectronService** in ViewModel. ElectronService contains all available modules. Modules names corresponds with modules in [Electron API](https://electron.atom.io/docs/api/).
