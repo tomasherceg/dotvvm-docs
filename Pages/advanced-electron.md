@@ -19,7 +19,7 @@ Install-Package DotVVM.Framework.Integration.Electron
 
 2. Add required services with extension method **AddElectronIntegration** in **ConfigureServices** method in your Startup class.
 ```CSHARP
-services.AddElectronIntegration()
+services.AddElectronIntegration();
 ```
 
 3. To wire up WebSocket communication with electron you need to add extension method **UseElectronIntegration** in **Configure** method.
