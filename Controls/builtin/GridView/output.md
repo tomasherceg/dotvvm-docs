@@ -1,4 +1,4 @@
-The control render a classic HTML table:
+The control renders a classic HTML table:
 
 ```DOTHTML
 <table>
