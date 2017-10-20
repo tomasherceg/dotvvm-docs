@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.Framework.Controls;
+using DotVVM.Framework.ViewModel;
+
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public bool ShowHeaderWhenNoData { get; set; }
         public BusinessPackDataSet<Customer> Customers { get; set; }

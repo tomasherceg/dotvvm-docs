@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.AutoComplete.sample1
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string City { get; set; }
 

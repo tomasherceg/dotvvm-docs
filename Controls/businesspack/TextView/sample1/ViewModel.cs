@@ -1,6 +1,8 @@
+using DotVVM.Framework.ViewModel;
+
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.TextView.sample1
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string ContactInfo { get; set; } = "John Doe\nBaker Street 82\njohn.doe@company.com\nwww.bakerbacon.com";
 

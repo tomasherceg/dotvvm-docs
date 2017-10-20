@@ -4,7 +4,7 @@ using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.MultiSelect.sample7
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string Text { get; set; }
         public List<string> Countries { get; set; } = new List<string>();

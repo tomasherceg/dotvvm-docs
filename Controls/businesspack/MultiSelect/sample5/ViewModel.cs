@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.MultiSelect.sample5
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public int SelectedCountriesCount { get; set; }
 
