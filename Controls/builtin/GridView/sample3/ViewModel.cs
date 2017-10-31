@@ -24,7 +24,7 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample3
         private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
             var queryable = FakeDb();
-            // NOTE: Apply Pagign and Sorting options.
+            // NOTE: Apply Paging and Sorting options.
             return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
         }
 

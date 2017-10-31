@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample4
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public int? SelectedCountryId { get; set; }
 

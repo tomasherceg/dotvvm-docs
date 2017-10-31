@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.RadioButtonList.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public List<Country> Countries { get; set; } = new List<Country> {
             new Country { Id = 1, Name = "Czech Republic" },

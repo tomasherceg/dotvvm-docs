@@ -4,10 +4,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.BusinessPack.Controls;
 using DotVVM.Framework.Controls;
+using DotVVM.Framework.ViewModel;
+
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample10
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public GridViewUserSettings UserSettings { get; set; }
         public BusinessPackDataSet<Customer> Customers { get; set; }

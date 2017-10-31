@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.ListView.sample5
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string Summary { get; set; }
 

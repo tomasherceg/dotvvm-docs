@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.RadioButtonList.sample6
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public bool IsControlEnabled { get; set; }
         public bool IsItemEnabled { get; set; }
