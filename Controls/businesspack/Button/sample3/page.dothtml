@@ -1,5 +1,6 @@
 <bp:Button Text="Button"
-           ButtonTagName="button" />
+           ButtonTagName="button"
+           Type="Info" />
 
 <br />
 
@@ -9,4 +10,5 @@
 <br />
 
 <bp:Button Text="Submit Button"
-           IsSubmitButton="true" />
+           IsSubmitButton="true"
+           Type="Primary" />
