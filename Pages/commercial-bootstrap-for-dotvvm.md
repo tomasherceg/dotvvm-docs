@@ -35,12 +35,19 @@ Bootstrap scripts or styles in the page. If you turn the resource management off
 
 
 #### Option 1: Let DotVVM Include the Bootstrap Files in the Page
+**Step 1**: If you don't have Bootstrap scripts and styles in your project,
 
-**Step 1**: If you don't have Bootstrap scripts and styles in your project, install the `Bootstrap` package from the official Nuget feed.
-
+##### for .NET Framework
+install the `Bootstrap` package from the official Nuget feed.
 ```
 Install-Package Bootstrap
 ```
+##### for .NET Core
+install the `Bootstrap` package from the Bower.
+```
+bower install bootstrap
+```
+Default installation location is in `wwwroot\lib\bootstrap`. You have to change the default paths in `AddBootstrapConfiguration`, see below
 
 **Step 2**: **Bootstrap for DotVVM** assumes the Bootstrap JS and CSS files are on the following path in your project:
 
