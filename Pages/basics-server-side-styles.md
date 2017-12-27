@@ -19,7 +19,7 @@ It is also possible to set a condition under which the styles will be applied. T
 ```CSHARP
 //this will hide every control derived from ButtonBase that does not have the Click property
 config.Styles.Register<ButtonBase>(b => !b.HasProperty(ButtonBase.ClickProperty), allowDerived: true)
-    .SetAttribute("style", "display:none;");
+    .SetAttribute("style", "display:none;", StyleOverrideOptions.Overwrite);
 ```    
 
 `Register` method returns an instance of `StyleBuilder` that lets you modify the control. You can set default values of attributes and properties or override them completely.
@@ -27,15 +27,20 @@ config.Styles.Register<ButtonBase>(b => !b.HasProperty(ButtonBase.ClickProperty)
 ```CSHARP
 //this will change class on all buttons that do not have any
 config.Styles.Register<Button>()
-  .SetAttribute("class", "ButtonClass");
+  .SetAttribute("class", "single-class");
 
-//this will override class of all textboxes
+//this will overwrite class of all textboxes
 config.Styles.Register<TextBox>()
-  .SetAttribute("class", "TextBoxClass", append: true);
+  .SetAttribute("class", "overwritten", StyleOverrideOptions.Overwrite);
 
-//this will override the text of all buttons
+//this will append class of all literals
+config.Styles.Register<Literal>()
+  .SetAttribute("class", "appended", StyleOverrideOptions.Append);
+
+//this will overwrite the text of all buttons
 config.Styles.Register<Button>()
   .SetDotvvmProperty(Button.TextProperty, "Button");
 ```
 
->`SetAttribute` has the default value of append `true` while `SetDotvvmProperty` has `false`
+>`SetAttribute` has the default value of StyleOverrideOptions `Ignore` while `SetDotvvmProperty` has `Overwrite`. Option `Append` is allowed only for attributes which supports multiple values, such as class, style. 
+
