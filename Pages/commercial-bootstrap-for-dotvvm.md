@@ -38,9 +38,9 @@ Bootstrap scripts or styles in the page. If you turn the resource management off
 **Step 1**: If you don't have Bootstrap scripts and styles in your project,
 
 ##### for .NET Framework
-install the `Bootstrap` package from the official Nuget feed.
+install the `Bootstrap` version 3 package from the official Nuget feed.
 ```
-Install-Package Bootstrap
+Install-Package Bootstrap -Version 3.3.7 
 ```
 ##### for .NET Core
 install the `Bootstrap` package from the Bower.
