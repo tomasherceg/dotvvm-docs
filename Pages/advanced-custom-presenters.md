@@ -17,7 +17,7 @@ The main advantage of custom presenter over the middleware is that you can use D
     {
         ...
 
-        public Task ProcessRequest(DotvvmRequestContext context)
+        public Task ProcessRequest(IDotvvmRequestContext context)
         {
             context.GetOwinContext().Response.ContentType = "application/rss+xml";
 
