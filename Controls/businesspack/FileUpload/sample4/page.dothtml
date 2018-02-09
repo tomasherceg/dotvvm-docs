@@ -8,4 +8,5 @@
             {{value: FileName}}
         </div>
     </dot:Repeater>
+    <bp:Button class="bp-select-files" Text="Upload" /> 
 </bp:FileUpload>
