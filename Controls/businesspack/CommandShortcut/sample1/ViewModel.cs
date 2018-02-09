@@ -1,8 +1,9 @@
 using System;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.CommandShortcut.sample1
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string LastSave { get; set; } = "Not saved yet.";
 

@@ -6,7 +6,7 @@ using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.DataPager.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         private static IQueryable<Customer> FakeDb()
         {

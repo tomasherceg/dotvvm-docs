@@ -2,10 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.Framework.Controls;
+using DotVVM.Framework.ViewModel;
+
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample3
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public int TotalOrders => Customers.Items.Sum(c => c.Orders);
 

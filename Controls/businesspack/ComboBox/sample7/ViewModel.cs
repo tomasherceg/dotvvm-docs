@@ -4,7 +4,7 @@ using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample7
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string Text { get; set; }
 

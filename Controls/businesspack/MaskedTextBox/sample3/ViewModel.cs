@@ -1,8 +1,9 @@
 using System;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.MaskedTextBox.sample3
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string Text { get; set; }
 

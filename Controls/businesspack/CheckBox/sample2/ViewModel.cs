@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.CheckBox.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public List<double> Extras { get; set; } = new List<double>();
         public double Price { get; set; }

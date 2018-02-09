@@ -1,6 +1,8 @@
+using DotVVM.Framework.ViewModel;
+
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.Button.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public bool IsEnabled { get; set; }
         public bool IsVisible { get; set; } = true;

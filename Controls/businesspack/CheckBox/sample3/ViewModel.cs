@@ -1,6 +1,8 @@
-﻿namespace DotvvmWeb.Views.Docs.Controls.businesspack.CheckBox.sample3
+﻿using DotVVM.Framework.ViewModel;
+
+namespace DotvvmWeb.Views.Docs.Controls.businesspack.CheckBox.sample3
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public bool Value { get; set; }
 

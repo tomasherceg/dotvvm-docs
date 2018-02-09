@@ -1,11 +1,9 @@
 Depending on the `ButtonTagName` property, the control renders one of these HTML elements:
 
 ```DOTHTML
-<input type="submit" onclick="dotvvm.postBack(...);" value="Text" />
+<input type="submit" value="Text" />
 ```
 
 ```DOTHTML
-<button type="submit" onclick="dotvvm.postBack(...);">
-	Text
-</button>
+<button type="submit">Text</button>
 ```
