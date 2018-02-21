@@ -78,7 +78,7 @@ public void Configure(IApplicationBuilder app, IMemoryCache cache)
 > To see more information about the MiniProfiler configuration in ASP.NET Core project see the
 [MiniProfiler for ASP.NET Core Documentation](http://miniprofiler.com/dotnet/AspDotNetCore) page.
 
-> We have a [sample application](https://github.com/riganti/dotvvm/tree/master/src/DotVVM.Samples.MiniProfiler.AspNetCore) to show how MiniProfiler can be used with ASP.NET Core.
+> We have a [sample application](https://github.com/riganti/dotvvm-tracing/tree/master/samples/DotVVM.Samples.MiniProfiler.AspNetCore) to show how MiniProfiler can be used with ASP.NET Core.
 
 <br />
 
@@ -107,4 +107,5 @@ You can change MiniProfiler default setting as you would do without DotVVM integ
 ```CSHARP
 StackExchange.Profiling.MiniProfiler.Settings.RouteBasePath = "~/profiler";
 ```
-            
+
+> We have a [sample application](https://github.com/riganti/dotvvm-tracing/tree/master/samples/DotVVM.Samples.MiniProfiler.Owin) to show how MiniProfiler can be used with Owin. 
