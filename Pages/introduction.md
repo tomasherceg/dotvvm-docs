@@ -14,7 +14,7 @@ Also, there is no need to learn many javascript libraries, frameworks and tools.
 
 **DotVVM** is a framework that helps you write modern websites in the MVVM fashion.
 
-**dot** represents **.NET Framework** and **VVM** stands for **MVVM - Model View ViewModel pattern**.
+**Dot** represents **.NET Framework** and **VVM** stands for **MVVM - Model View ViewModel pattern**.
 
 
 
