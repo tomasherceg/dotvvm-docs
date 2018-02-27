@@ -9,7 +9,7 @@ and any other custom timings you want to add. It helps you debug issues and opti
 
 **DotVVM** supports this library and tracks some additional metrics which it collects during the processing of an HTTP request.
 
-You can display the collected **DotVVM** metrics by adding the MiniProfiler Widget to a dothtml page:
+You can display the collected **DotVVM** metrics by adding the MiniProfiler Widget to a DOTHTML page:
 
 <img src="{imageDir}advanced-miniprofiler-widget.png" alt="DotVVM metrics in MiniProfiler" class="img-responsive" /> 
 
@@ -17,17 +17,25 @@ It is also possible to view the data traced in previous HTTP requests:
 
 <img src="{imageDir}advanced-miniprofiler-page.png" alt="List of traced HTTP requests with details" class="img-responsive" />
 
-> MiniProfiler is capable of profiling other 3rd party services, e.g. Entity Framework and Redis.
+> MiniProfiler is capable of profiling other 3rd party services, e.g. Entity Framework, Entity Framework Core and Redis.
 
 ### Getting Started
 
 MiniProfiler installation and configuration differs for [ASP.NET Core](#AspNetCore) and [OWIN](#Owin). You can find the details for extended configuration 
-in the [MiniProfiler documentation](http://miniprofiler.com/dotnet/).
+in the **[MiniProfiler documentation](http://miniprofiler.com/dotnet/)**.
 
 For both ASP.NET Core and OWIN, you can use the `MiniProfilerWidget`, which is a DotVVM control with many options like `MaxTraces`, `Position`, `StartHidden` etc.:
 
 ```DOTHTML
     <dot:MiniProfilerWidget Position="Right" ShowTrivial="true" StartHidden="true" />
+```
+
+You can easily profile your code. It can look like this (check [Profile Code](https://miniprofiler.com/dotnet/HowTo/ProfileCode) section in MiniProfiler documentation):
+```CSHARP
+using (MiniProfiler.Current.Step("GetOrder"))
+{
+    return orderRepository.Get();
+}
 ```
 
 <br />
@@ -73,21 +81,17 @@ public void Configure(IApplicationBuilder app, IMemoryCache cache)
 }
 ```
 
-* To see it in action, you can simply navigate to `~/profiler/results-index` and view profiled HTTP requests.
+To see it in action, you can simply navigate to `~/profiler/results-index` and view profiled HTTP requests.
 
-> To see more information about the MiniProfiler configuration in ASP.NET Core project see the
-[MiniProfiler for ASP.NET Core Documentation](http://miniprofiler.com/dotnet/AspDotNetCore) page.
-
-> We have a [sample application](https://github.com/riganti/dotvvm-tracing/tree/master/samples/DotVVM.Samples.MiniProfiler.AspNetCore) to show how MiniProfiler can be used with ASP.NET Core.
+> We have a [sample application](https://github.com/riganti/dotvvm-tracing/tree/master/samples/DotVVM.Samples.MiniProfiler.AspNetCore) to show how MiniProfiler can be used with **ASP.NET Core**.
 
 <br />
 
-#### <a name="Owin"></a>Getting Started on OWIN
+#### <a name="Owin"></a>OWIN
 
-1. Either use the NuGet UI to install `MiniProfiler` and `DotVVM.Tracing.MiniProfiler.Owin`, or use the following commands in the _Package Manager Console_ window:
+1. Either use the NuGet UI to install `DotVVM.Tracing.MiniProfiler.Owin`, or use the following commands in the _Package Manager Console_ window:
 
 ```
-Install-Package MiniProfiler
 Install-Package DotVVM.Tracing.MiniProfiler.Owin
 ```
 
@@ -100,12 +104,13 @@ var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, 
 });
 ```
 
-* To see it in action, you can simply navigate to `~/mini-profiler-resources/results-index` and view profiled HTTP requests.
+To see it in action, you can simply navigate to `~/mini-profiler-resources/results-index` and view profiled HTTP requests.
 
 You can change MiniProfiler default setting as you would do without DotVVM integration, for example:
 
 ```CSHARP
 StackExchange.Profiling.MiniProfiler.Settings.RouteBasePath = "~/profiler";
+StackExchange.Profiling.MiniProfiler.Settings.Results_List_Authorize = (r) => true;
 ```
 
-> We have a [sample application](https://github.com/riganti/dotvvm-tracing/tree/master/samples/DotVVM.Samples.MiniProfiler.Owin) to show how MiniProfiler can be used with Owin. 
+> We have a [sample application](https://github.com/riganti/dotvvm-tracing/tree/master/samples/DotVVM.Samples.MiniProfiler.Owin) to show how MiniProfiler can be used with **Owin**. 
