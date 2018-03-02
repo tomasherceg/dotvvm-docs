@@ -59,7 +59,7 @@ You can use the `Validator.HideWhenValid`, `Validator.InvalidCssClass`, `Validat
         Last Name: <dot:TextBox Text="{value: LastName}" />
     </div>
 
-</div>
+</form>
 ```
 
 If you want to set the `Validation.InvalidCssClass` property globally, you can apply it on the `<body>` element in the master page. 
