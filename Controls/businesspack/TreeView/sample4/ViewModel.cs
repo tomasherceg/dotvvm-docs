@@ -10,6 +10,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.TreeView.sample4
         public List<TreeItem> Files { get; set; } = new List<TreeItem> {
             new TreeItem {
                 Name = "Documents",
+                IsExpanded = true,
                 Items = new List<TreeItem> {
                     new TreeItem {
                         Name = "Invoices",

@@ -3,6 +3,7 @@
              ItemValueBinding="{value: Name}"
              CheckBoxMode="VisibleOnLeafs"
              AutoCheckChildren="false"
+             ItemIsExpandedBinding="{value: IsExpanded}"
              ItemHasChildrenBinding="{value: HasItems}"
              ItemChildrenBinding="{value: Items}"
              ItemKeyBinding="{value: Name}">
