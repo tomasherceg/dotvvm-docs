@@ -66,11 +66,20 @@
 		<DocPageMenuItem RouteName="creating-custom-postback-handlers" PageName="Creating Custom Postback Handlers" />
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="commercial" PageName="Commercial Products">
-		<DocPageMenuItem RouteName="dotvvm-private-nuget-feed" PageName="DotVVM Private NuGet Feed" />
-		<DocPageMenuItem RouteName="bootstrap-for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
-		<DocPageMenuItem RouteName="business-pack-install" PageName="Installing DotVVM Business Pack" />
-		<DocPageMenuItem RouteName="business-pack-theme-editor" PageName="DotVVM Business Pack Theme Editor" />
-		<DocPageMenuItem RouteName="troubleshooting-dotvvm-for-visual-studio" PageName="Troubleshooting DotVVM for Visual Studio" />
+		<DocPageMenuItem RouteName="" PageName="DotVVM for Visual Studio">
+			<DocPageMenuItem RouteName="dotvvm-private-nuget-feed" PageName="DotVVM Private NuGet Feed" />
+			<DocPageMenuItem RouteName="troubleshooting-dotvvm-for-visual-studio" PageName="Troubleshooting DotVVM for Visual Studio" />
+			<DocPageMenuItem RouteName="dotvvm-for-visual-studio-release-notes" PageName="Release Notes" />
+		</DocPageMenuItem>
+		<DocPageMenuItem RouteName="bootstrap" PageName="Bootstrap">
+			<DocPageMenuItem RouteName="for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
+			<DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
+		</DocPageMenuItem>
+		<DocPageMenuItem RouteName="business-pack" PageName="Business Pack">
+			<DocPageMenuItem RouteName="install" PageName="Installing DotVVM Business Pack" />
+			<DocPageMenuItem RouteName="theme-editor" PageName="DotVVM Business Pack Theme Editor" />
+			<DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
+		</DocPageMenuItem>
 	</DocPageMenuItem>
 	<DocPageMenuItem RouteName="troubleshooting" PageName="Troubleshooting">
 		<DocPageMenuItem RouteName="dotvvm-compiler-not-found" PageName="DotVVM Compiler Not Found" />
