@@ -15,9 +15,10 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample7
         [AllowStaticCommand]
         public IEnumerable<Country> LoadCountries(string searchText)
         {
-            yield return new Country {
+            yield return new Country
+            {
                 Name = searchText
-            }
+            };
         }
     }
 }
