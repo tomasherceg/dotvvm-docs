@@ -76,7 +76,7 @@
 			<DocPageMenuItem RouteName="for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
 			<DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
 		</DocPageMenuItem>
-		<DocPageMenuItem RouteName="business-pack" PageName="Business Pack">
+		<DocPageMenuItem RouteName="business-pack" PageName="BusinessPack">
 			<DocPageMenuItem RouteName="install" PageName="Installing DotVVM Business Pack" />
 			<DocPageMenuItem RouteName="theme-editor" PageName="DotVVM Business Pack Theme Editor" />
 			<DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
