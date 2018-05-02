@@ -6,7 +6,7 @@
     <DocPageMenuItem RouteName="dnx" PageName="Create a new project (ASP.NET Core)" />
     <DocPageMenuItem RouteName="command-line" PageName="Create a new project (Command Line)" />
     <DocPageMenuItem RouteName="existing-app" PageName="Add DotVVM to existing project" />
-    <DocPageMenuItem RouteName="upgrade-from-1-0" PageName="Upgrading from DotVVM 1.0" />
+    <DocPageMenuItem RouteName="upgrade-from-1-0" PageName="Upgrading to DotVVM 1.1" />
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="basics" PageName="Basics">
     <DocPageMenuItem RouteName="project-structure" PageName="DotVVM Project Contents" />
@@ -42,7 +42,7 @@
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="advanced" PageName="Advanced Topics">
     <DocPageMenuItem RouteName="authentication-authorization" PageName="Authentication and Authorization" />
-    <DocPageMenuItem RouteName="owin-security" PageName="Using OWIN Security for Authentication" />
+    <DocPageMenuItem RouteName="owin-security" PageName="OWIN Security Authentication" />
     <DocPageMenuItem RouteName="aspnetcore-authentication" PageName="ASP.NET Core Authentication" />
     <DocPageMenuItem RouteName="action-filters" PageName="Action Filters" />
     <DocPageMenuItem RouteName="exception-filters" PageName="Exception Filters" />

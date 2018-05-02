@@ -36,7 +36,7 @@ You can invoke it by calling `dotnet dotvvm ...`. You can use one of the followi
         <th>Options</th>
     </tr>
     <tr>
-        <td>Create Page</td>
+        <td>Add Page</td>
         <td><code>dotnet dotvvm ap</code></td>
         <td><code>dotnet dotvvm add page</code></td>
         <td>
@@ -47,7 +47,7 @@ You can invoke it by calling `dotnet dotvvm ...`. You can use one of the followi
         </td>
     </tr>
     <tr>
-        <td>Create Master Page</td>
+        <td>Add Master Page</td>
         <td><code>dotnet dotvvm am</code></td>
         <td><code>dotnet dotvvm add master</code></td>
         <td>
@@ -57,7 +57,7 @@ You can invoke it by calling `dotnet dotvvm ...`. You can use one of the followi
         </td>
     </tr>
     <tr>
-        <td>Create Markup Control</td>
+        <td>Add Markup Control</td>
         <td><code>dotnet dotvvm ac</code></td>
         <td><code>dotnet dotvvm add control</code></td>
         <td>
