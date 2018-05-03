@@ -10,7 +10,7 @@ The `DotvvmRequestContext` object contains the following properties and methods:
 + `ModelState` property represents the state of the [model validation](/docs/tutorials/basics-validation/{branch}). You can report validation errors to the 
 UI using this object's `AddModelError` method, or you can use the `IsValid` property to determine whether there are any validation errors in the page.
 
-+ The `FailOnInvalidViewModel` method checks the validity of the viewmodel and throws an exception if the viewmodel is not valid. The request execution is interrupted and the validation errors are displayed in the client's browser (e.g. in the [ValidationSummary](/docs/controls/builtin/ValidationSummary/{branch}) control).
++ The `FailOnInvalidModelState` method checks the validity of the viewmodel and throws an exception if the viewmodel is not valid. The request execution is interrupted and the validation errors are displayed in the client's browser (e.g. in the [ValidationSummary](/docs/controls/builtin/ValidationSummary/{branch}) control).
 
 + `Parameters` property is a dictionary which contains values of the [route parameters](/docs/tutorials/basics-routing/{branch}).
 
@@ -31,6 +31,8 @@ The request execution is interrupted by this call.
 
 + `InterruptExecution` interrupts the execution of the HTTP request by DotVVM and pass it to the next OWIN middleware.  
 
-+ `ChangeCurrentCulture` changes the culture of the thread that executes the request.
-
 + `ReturnFile` function is used when you need to [return a file](/docs/tutorials/advanced-returning-files/{branch}) which will be downloaded by the user.
+
+> In **DotVVM 2.0**, the methods from `DotvvmRequestContext` were changed to extension methods. The usage and their meaning remains the same.
+
+> In **DotVVM 2.0**, the methods which return and change current culture were made obsolete as they don't work correctly in asynchronous calls. See [Globalization](/docs/tutorials/basics-globalization/{branch}) for more information.
