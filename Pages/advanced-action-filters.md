@@ -1,6 +1,6 @@
 ## Filters
 
-> The API of action filters has been changed in DotVVM 1.1. See the [Upgrading from DotVVM 1.0](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) page for more information. 
+> The API of action filters has been changed in DotVVM 2.0. See the [Upgrading to DotVVM 2.0](/docs/tutorials/how-to-start-upgrade-to-2-0/2-0) page for more information. 
 
 In large apps and sites, you need to do apply global actions e.g. for each button click
 on a specific page, section or even on all pages in the app.
