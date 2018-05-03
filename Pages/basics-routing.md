@@ -82,6 +82,41 @@ else
 }
 ```
 
+### Route Groups
+
+If you have several similar routes, you can register them as a group:
+
+```CSHARP
+config.RouteTable.AddGroup("Admin", "admin", "Views/Admin", table =>
+{
+    table.Add("Customers", "customers", "Customers.dothtml");
+    table.Add("Customer", "customer/{id}", "Customer.dothtml");
+});
+```
+
+The `AddGroup` method allows specify a common prefix for all the routes. The routes will be registered according to the following table:
+
+<table class="table table-condensed" style="font-family: monospace">
+    <tr>
+        <th>Route Name</th>
+        <th>Route URL</th>
+        <th>Location</th>
+    </tr>
+    <tr>
+        <td>Admin_Customers</td>
+        <td>admin/customers</td>
+        <td>Views/Admin/Customers.dothtml</td>
+    </tr>
+    <tr>
+        <td>Admin_Customer</td>
+        <td>admin/customer/{id}</td>
+        <td>Views/Admin/Customer.dothtml</td>
+    </tr>
+</table>
+
+As you can see, the route name, route URL and `dothtml` file location are composed from the `AddGroup` method parameters and the parameters of the particular route. Notice that the `_` character is added between the group name and route name. Route URL and file location are treated like paths and joined by `/`.
+
+
 <a id="ref-constraints"></a>
 
 ### Route Constraints
@@ -119,4 +154,4 @@ These custom constraints can be registered using this syntax in the `DotvvmStart
 ```CSHARP
 config.RouteConstraints.Add("customConstraint", new MyRouteConstraint());
 ```
-
+ 
