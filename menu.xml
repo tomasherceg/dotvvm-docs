@@ -56,6 +56,7 @@
     <DocPageMenuItem RouteName="bundling-minification" PageName="Bundling and Minification" />
     <DocPageMenuItem RouteName="testing-viewmodels" PageName="Testing ViewModels" />
     <DocPageMenuItem RouteName="custom-presenters" PageName="Custom Presenters" />
+    <DocPageMenuItem RouteName="localization-presenters" PageName="Localization Presenters" />
     <DocPageMenuItem RouteName="route-autodiscovery" PageName="Auto-Discovering Routes" />
     <DocPageMenuItem RouteName="returning-files" PageName="Returning Files from ViewModels" />
     <DocPageMenuItem RouteName="using-session-or-http-context-cookies" PageName="Using Session or HttpContext Cookies" />

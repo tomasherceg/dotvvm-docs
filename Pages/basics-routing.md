@@ -28,6 +28,8 @@ You can pass an anonymous object with property names that correspond with the ro
 If you need to register a route which should not be treated as `.dothtml` file, e.g. if you need a handler that serves files, generates RSS feeds or anything like that, you can
 declare a [custom presenter](/docs/tutorials/advanced-custom-presenters/{branch}) and specify a method, that creates an instance of it, as the fifth parameter.
 
+The presenters can also be used in localized applications to detect the user language preferences and switching the culture of the HTTP request. See [Localization Presenter](/docs/tutorials/advanced-localization-presenter/{branch}) for more information.
+
 > If you have a larger project, you may want to use conventions to [auto-discover routes](/docs/tutorials/advanced-route-autodiscovery/{branch}) instead of registering them one by one.  
 
 ### Route Parameters
