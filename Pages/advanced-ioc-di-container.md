@@ -11,7 +11,7 @@ public class CustomersViewModel
         ...        
     }
 
-    // this service can be injected too
+    // this service can be injected too if the container supports property injection
     [Bind(Direction.None)]
     public IAdditionalService AdditionalService { get; set; }
 }
@@ -23,3 +23,9 @@ DotVVM uses the `Microsoft.Extensions.DependencyInjection` library to configure 
 
 * [IoC/DI Containers (OWIN)](/docs/tutorials/advanced-ioc-di-container-owin/{branch})
 * [IoC/DI Containers (ASP.NET Core)](/docs/tutorials/advanced-ioc-di-container-aspnetcore/{branch})
+
+### Static Command Services
+
+DotVVM 2.0 added the [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}). 
+
+All services injected using `@service` directive must be registered in the `IServiceCollection` so DotVVM can resolve them. 
