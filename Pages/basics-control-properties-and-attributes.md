@@ -5,9 +5,10 @@ You can use most of these properties on HTML elements too.
 
 + `DataContext` - changes the [binding context](/docs/tutorials/basics-binding-context/{branch}) for the content of the control / element.
 + `Visible` - hides the control / element in the page (using CSS `display: none`).
++ `IncludedInPage` - allows to remove the control / element from DOM when set to `false`.
 + `ID` - specifies an ID of the control. 
 
-#### Control IDs
+### Control IDs
 
 Because the control can appear in the page multiple times (e.g. when it is inside the `Repeater` control), the real `id` of the HTML element might be different. Typically, DotVVM will add some prefix to it to make sure it is unique in the page.
 Sometimes, the ID is even calculated on the client side dynamically. 
@@ -30,3 +31,27 @@ This produces the following HTML:
 ```
 
 You can see that the `class` attribute has been added to the output, and the `placeholder` attribute was translated to Knockout JS `attr` binding.
+
+### Form Controls
+
+DotVVM also adds a property `FormControls.Enabled` which can enabled or disable all form controls in the element. The controls may override this property by setting their own `Enabled` property. 
+
+```DOTHTML
+<dot:CheckBox Text="Unlock form" Checked="{value: IsFormUnlocked}" />
+
+<form FormConttrols.Enabled="{value: IsFormUnlocked}">
+    <div>
+        First Name: 
+        <dot:TextBox Text="{value: FirstName}" />
+    </div>
+    <div>
+        Last Name: 
+        <dot:TextBox Text="{value: LastName}" />
+    </div>
+    <div>
+        Age:
+        <dot:TextBox Text="{value: Age}" Enabled="{value: IsAgeUnlocked}" />
+        <dot:CheckBox Text="Unlock field" Checked="{value: IsAgeUnlocked}" />
+    </div>
+</form>
+```
