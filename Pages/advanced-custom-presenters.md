@@ -53,7 +53,15 @@ The main advantage of custom presenter over the middleware is that you can use D
 Finally, you have to register the presenter in the `DotvvmStartup.cs` file:
 
 ```CSHARP
-config.RouteTable.Add("Rss", "feeds/rss", null, null, () => new RssPresenter());
+config.RouteTable.Add("t", "u", typeof(RssPresenter));
+```
+
+The `RssPresenter` must be registered in the `IServiceCollection`. See [IoC/DI Containers](/docs/tutorials/advanced-ioc-di-container/{branch}) for more information.
+
+Alternatively, you can register your own factory method that will be used to create the instance of the presenter. In that case, the presented doesn't need to be registered in `IServiceCollection`:
+
+```CSHARP
+config.RouteTable.Add("t", "u", serviceProvider => new RssPresenter());
 ```
 
 ### Action Filters
