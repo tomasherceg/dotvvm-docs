@@ -1,10 +1,10 @@
 ## Custom Presenters
 
-In most applications, you have several situations where you need to generate some XML, JSON or other type of a content (RSS feed etc.), or just compose the HTTP response yourself. 
+In most applications, there is several situations where you need to generate some XML, JSON or other type of a content (RSS feed etc.), or just compose the HTTP response yourself. 
 
 In both OWIN and ASP.NET Core, you can write your own middleware which handles the communication, or you can use another framework for that (e.g. ASP.NET Web API for REST interfaces).
 
-But sometimes you need to integrate with various DotVVM services (e.g. routing), or you just don't want to introduce additional libraries in your project.
+But sometimes you need to integrate with various DotVVM services (e.g. file uploads, routing), or you just don't want to introduce additional libraries in your project.
 That's the situation when you need a custom presenter. It is a lightweight alternative to OWIN middleware which lets you to handle the HTTP request yourself, and flawlessly 
 integrates with DotVVM routing.
 
@@ -55,3 +55,7 @@ Finally, you have to register the presenter in the `DotvvmStartup.cs` file:
 ```CSHARP
 config.RouteTable.Add("Rss", "feeds/rss", null, null, () => new RssPresenter());
 ```
+
+### Action Filters
+
+You can apply [Action Filters](/docs/tutorials/advanced-action-filters/{branch}) or the [Authorize attribute](/docs/tutorials/advanced-authentication-authorization/{branch}) on the presenter class.
