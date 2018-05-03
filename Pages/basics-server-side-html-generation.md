@@ -1,14 +1,14 @@
 ## Server-Side HTML Generation and SEO
 
-DotVVM uses Knockout JS to create the MVVM experience, but that doesn't have to make your site SEO-unfriendly. The important controls support a server-side rendering which can make the data in the page indexable.
+DotVVM uses Knockout JS to create the MVVM experience, but that doesn't have to make your site SEO-unfriendly. The important DotVVM controls support server-side rendering which can make the data in the page indexable even if the search engine doesn't evaluate scripts.
 
 ### Server-Side Rendering
 
 You can use the `RenderSettings.Mode` property on HTML elements and most of the DotVVM controls.
 
-The default value for this property is `Client`, which means that all bindings are translated to the Knockout JS `data-bind` expressions and thus evaluated on the client.
+The default value for this property is `Client`, which means that all value bindings are translated to the Knockout JS `data-bind` expressions and thus evaluated on the client.
 
-When you switch the mode to the `Server`, the following situations will be rendered on the server side:
+When you switch the mode to the `Server`, the following samples will be rendered on the server side instead of generating Knockout JS code:
 
 * All value bindings used directly in text will be evaluated on the server and rendered directly in the page.
 
@@ -20,6 +20,8 @@ will be rendered to
 <p>Hello World!</p>
 ```
 
+> Note that [Resource Binding](/docs/tutorials/basics-resource-binding/{branch}) has the same effect: `{{resource: Text}}` would produce the same output.
+
 * [Literal](/docs/controls/builtin/Literal/{branch}) and [HtmlLiteral](/docs/controls/builtin/HtmlLiteral/{branch}) bindings will be also rendered directly in the HTML:
 
 ```DOTHTML
@@ -29,6 +31,8 @@ will be rendered to
 ```DOTHTML
 Hello World!
 ```
+
+> Note that [Resource Binding](/docs/tutorials/basics-resource-binding/{branch}) has the same effect: `{{resource: Text}}` would produce the same output.
 
 * The [Repeater](/docs/controls/builtin/Repeater/{branch}) and [GridView](/docs/controls/builtin/GridView/{branch}) controls will render each row directly into the HTML output. In the default rendering mode they just render a template which is copied on the client-side by the JavaScript code using the Knockout JS `foreach` binding. 
 
