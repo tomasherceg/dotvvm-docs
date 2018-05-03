@@ -1,6 +1,6 @@
 ## Built-in Controls
 
-Currently, **DotVVM** contains about 25 built-in controls.
+**DotVVM** contains about 25 built-in controls for various purposes.
 For more information, read the [Built-in Control Reference](/docs/controls/builtin/Button/{branch}).
 
 ### Built-in Controls
