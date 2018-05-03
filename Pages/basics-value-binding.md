@@ -47,7 +47,22 @@ You cannot, for example, call methods from the value bindings.
 * `SomeProperty ? "some string" : "other string"`
 * `SomeProperty != OtherProperty`
 
-If you use the `ICollection.Count` or `Array.Length` property, they will be translated to JavaScript to use the `length` property on the JavaScript array.
+### .NET Methods Supported in Value Bindings
+
+DotVVM can translate several .NET methods on basic types or collections to JavaScript, so you can safely use them in value bindings.  
+
+* `ICollection.Count` and `Array.Length`
+* `String.Length`
+* `Object.ToString()` and `Convert.ToString()`
+* `Enums.GetNames<TEnum>()`
+* `Nullable<T>.HasValue` and `Nullable<T>.Value`
+* `String.Format(format, arg1 [, arg2, [ arg3]])` and `String.Format(format, argumentArray)`
+* `DateTime.ToString()` and `DateTime.ToString(format)`
+* <code><em>numericType</em>.ToString()</code> and <code><em>numericType</em>.ToString(format)</code>
+* `Task<T>.Result`
+* `Api.RefreshOnChange`, `Api.RefreshOnEvent`, `Api.PushEvent` (see [REST API bindings](/docs/pages/basics-rest-api-bindings/{branch}) for more information)
+
+> It is possible to register custom translators for any .NET API. See [Providing Custom JavaScript Translators](/docs/pages/control-development/providing-custom-javascript-translators/{branch}) for more information.  
 
 ### Null Handling in Value Bindings
 
