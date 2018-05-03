@@ -72,3 +72,5 @@ If the viewmodel derives from the `DotvvmViewModelBase`, you can override the `I
 In the following diagram, you can see the lifecycle of the HTTP request. The left side shows what's going on when the client access the page first time (the HTTP GET request). The right side shows what happens during the postback (e.g. when the user clicks a button to call a method in the viewmodel).
 
 <p><img src="{imageDir}basics-viewmodels-img1.png" alt="DotVVM Page Lifecycle" /></p>
+
+> Sending the entire viewmodel to the server and back may be inefficient in many real-world scenarios. DotVVM offers different ways of calling methods on the server which don't require presence of the viewmodel. See [Optimizing PostBacks](/docs/tutorials/basics-optimizing-postbacks/{branch}) page for more info.
