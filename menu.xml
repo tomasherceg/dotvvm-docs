@@ -6,6 +6,8 @@
     <DocPageMenuItem RouteName="dnx" PageName="Create a new project (ASP.NET Core)" />
     <DocPageMenuItem RouteName="command-line" PageName="Create a new project (Command Line)" />
     <DocPageMenuItem RouteName="existing-app" PageName="Add DotVVM to existing project" />
+    <DocPageMenuItem RouteName="existing-app-owin" PageName="Add DotVVM to existing project (OWIN)" />
+    <DocPageMenuItem RouteName="existing-app-aspnetcore" PageName="Add DotVVM to existing project (ASP.NET Core)" />
     <DocPageMenuItem RouteName="upgrade-from-1-0" PageName="Upgrading from DotVVM 1.0" />
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="basics" PageName="Basics">
