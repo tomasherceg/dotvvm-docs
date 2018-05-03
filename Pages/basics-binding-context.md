@@ -57,9 +57,9 @@ If you don't want the `<div>` element to hide, the `DataContext` property must p
 
 <br>
 
-### Binding Context Variables
+### Scope Context Variables
 
-Inside elements that change the `DataContext` property, you can use the following binding context variables to navigate the viewmodel hierarchy.
+You can use the following binding context variables to navigate the `DataContext` hierarchy in elements that change the `DataContext` property.
 
 * `_root` accesses the top-level viewmodel (the viewmodel of the page).
 * `_parent` accesses the parent binding context.
@@ -74,8 +74,13 @@ For example, the following binding calls the `DeleteAddress` method in the page 
 </div>
 ```
 
+### Control Context Variable
 
-Additionally you can use the `_collection` binding context variable to access the current item index and other properties in the `ItemTemplate` of a `Repeater` or similar data-bind control. You can use the following properties:
+The `_control` binding context variable can be used in user control files (`*.dotcontrol`) to access properties of the user control. See the [Markup Controls](/docs/tutorials/control-development-markup-controls) chapter for more info.
+
+### Collection Context Variable
+
+Additionally, you can use the `_collection` binding context variable to access the current item index and other properties in the `ItemTemplate` of a `Repeater`, `GridView` or similar data-bound control. The variable defines the following properties:
 
 * `_collection.Index`
 * `_collection.IsFirst`
@@ -84,9 +89,6 @@ Additionally you can use the `_collection` binding context variable to access th
 
 ```DOTHTML
 <dot:Repeater DataSource="{value: Items}">
-  <p>{{value: _collection.Index}}</p>
+  <p>Item {{value: _collection.Index}}</p>
 </dot:Repeater>
 ```
-
-In DotVVM 1.1 and newer versions, there is also a binding context variable `_control` which can access the properties of the user control.
-See the [Markup Controls](/docs/tutorials/control-development-markup-controls) chapter for more info.
