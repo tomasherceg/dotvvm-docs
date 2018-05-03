@@ -25,11 +25,12 @@ DotVVM uses the same format string syntax you know from C# with the following li
 ### Editing Formatted Values
 
 You can enforce the date or number format in the [TextBox](/docs/controls/builtin/TextBox/{branch}) control using the `FormatString` property. 
-To make sure the format string is interpreted correctly, it is strongly recommended to add also the `ValueType="Number"` or `ValueType="DateTime"`. 
+
+> In **DotVVM 1.1**, you had to specify either `ValueType="Number"` or `ValueType="DateTime"` to make the formatting work. In **DotVVM 2.0**, this property was made obsolete and is not needed. 
 
 ```DOTHTML
-<dot:TextBox Text="{value: BirthDate}" ValueType="DateTime" FormatString="d" />
-<dot:TextBox Text="{value: TotalPrice}" ValueType="Number" FormatString="n2" />
+<dot:TextBox Text="{value: BirthDate}" FormatString="d" />
+<dot:TextBox Text="{value: TotalPrice}" FormatString="n2" />
 ```
 
 ### Validation Numeric and Date Values
@@ -39,7 +40,7 @@ If the property is of a non-nullable type, it will get the default value on the 
 
 You can use the `Required` attribute to validate numeric and DateTime values. If the value cannot be parsed, the client-side `Required` validator reports an error because it sees the `null` value in the property.
 
-If you need to make the value optional, but it has to be in a correct format in case it is entered, you can use the `DotvvmEnforceClientFormat` attribute. 
+If you need to make the value optional, but need to enforce the correct format, you can use the `DotvvmEnforceClientFormat` attribute. This attribute works on the client-side only.  
 If the field is empty or the format is correct, the property is valid. But if the value cannot be parsed, the validation reports an error.
 
 ```CSHARP
