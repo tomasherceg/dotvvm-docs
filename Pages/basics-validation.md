@@ -45,7 +45,7 @@ public class AppointmentData : IValidatableObject
         {
             yield return new ValidationResult(
                 "The begin date of the appointment must be lower than the end date.",
-                new[] { nameof(BeginDate) }     // path of the property
+                PropertyPath.Build<AppointmentData>(d => d.BeginDate)     // path of the property
             );
         }
     }
@@ -64,7 +64,7 @@ The `Context` in DotVVM contains the `ModelState` object which contains a list o
 
 If you need to report the errors to the user, you can use the `Context.FailOnInvalidModelState()` which interrupts execution of the current HTTP request and returns the validation errors to the user. The user's browser will show the validator controls.
 
-In the following sample you can see, that we validate the `EmailAddress` property using the validation attributes. When these checks pass, the `Subscribe` method can be called. If the registration of the user fails (we use a custom exception to indicate the problem), you can add a validation error to the `Context.ModelState.Errors` collection and return the validation errors to the user.
+In the following sample you can see, that we validate the `EmailAddress` property using the validation attributes. When these checks pass, the `Subscribe` method can be called. If the registration of the user fails (we use a custom exception to indicate the problem), you can add a validation error to the `Context.ModelState.Errors` collection and return the validation errors to the user. You can use a useful extension method `AddModelError`.
 
 ```CSHARP
 public class RegisterViewModel : DotvvmViewModelBase 
@@ -84,11 +84,7 @@ public class RegisterViewModel : DotvvmViewModelBase
         catch (EmailAddressAlreadyRegisteredException) 
         {
             // add the error to the list of validation errors
-            Context.ModelState.Errors.Add(new ViewModelValidationError() 
-            {
-                PropertyPath = nameof(EmailAddress),
-                ErrorMessage = "The e-mail address is already registered!"
-            });
+            this.AddModelError(v => v.EmailAddress, "The e-mail address is already registered!");
 
             // interrupt request execution and report the validation errors
             Context.FailOnInvalidModelState();
