@@ -41,7 +41,7 @@ DotVVM also adds a property `FormControls.Enabled` which can enabled or disable 
 ```DOTHTML
 <dot:CheckBox Text="Unlock form" Checked="{value: IsFormUnlocked}" />
 
-<form FormConttrols.Enabled="{value: IsFormUnlocked}">
+<form FormControls.Enabled="{value: IsFormUnlocked}">
     <div>
         First Name: 
         <dot:TextBox Text="{value: FirstName}" />
