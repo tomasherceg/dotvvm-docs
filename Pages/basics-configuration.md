@@ -24,12 +24,10 @@ In OWIN, the `Startup.cs` contains the OWIN startup class. DotVVM is just an OWI
 All you have to do is to register the DotVVM middleware in the `IAppBuilder` object.
 
 ```CSHARP
-var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath, options => {
-    // configure DotVVM services (e.g. dependency injection) here
-
-    options.AddDefaultTempStorages("temp");     // register default file upload and returned file storages
-});
+var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath);
 ```
+
+> The configuration of DotVVM services has been changed in **DotVVM 2.0** - it was moved to `DotvvmStartup.cs` file. 
 
 This extension method initializes the middlewares required by DotVVM. The `DotvvmStartup` type parameter of the `UseDotVVM` represents the class which contains DotVVM configuration.
 
@@ -40,12 +38,7 @@ In ASP.NET Core, the registration of frameworks is splitted to the registration 
 In the `ConfigureServices` method, we should register DotVVM services:
 
 ```CSHARP
-services.AddDotVVM(options =>
-{
-    // configure DotVVM services (e.g. dependency injection) here
-
-    options.AddDefaultTempStorages("temp");     // register default file upload and returned file storages
-});
+services.AddDotVVM();
 ```
 
 In the `Configure` method we have to register the DotVVM middleware.
@@ -56,6 +49,8 @@ var config = app.UseDotVVM<DotvvmStartup>();
 
 This extension method initializes the middlewares required by DotVVM. The `DotvvmStartup` type parameter of the `UseDotVVM` represents the class which contains DotVVM configuration.
 
+> The configuration of DotVVM services has been changed in **DotVVM 2.0** - it was moved to `DotvvmStartup.cs` file. 
+
 ### DotvvmStartup.cs
 
 The `DotvvmStartup` class must implement the `IDotvvmStartup` interface and contains the `Configure` method. There should be only one class implementing the `IDotvvmStartup` interface in the assembly.
@@ -63,9 +58,17 @@ The `DotvvmStartup` class must implement the `IDotvvmStartup` interface and cont
 This class configures resources, controls and routes. The default project template prepares this class in the following structure. 
 We have also included examples of how to configure a route, custom control namespace and script resource.
 
+`DotvvmStartup` also typically implements `IDotvvmServiceConfigurator` and declares the `ConfigureServices` method that is responsible for registering DotVVM-related services.
+
 ```CSHARP
-public class DotvvmStartup : IDotvvmStartup
+public class DotvvmStartup : IDotvvmStartup, IDotvvmServiceConfigurator
 {
+    public void ConfigureServices(IDotvvmServiceCollection services)
+    {
+        // configure all DotVVM-related services
+        services.AddDefaultTempStorages("Temp");
+    }
+
     // For more information about this class, visit https://dotvvm.com/docs/tutorials/basics-project-structure
     public void Configure(DotvvmConfiguration config, string applicationPath)
     {
@@ -99,7 +102,7 @@ public class DotvvmStartup : IDotvvmStartup
 }
 ```
 
-Please note that the [Visual Studio Extension](/landing/dotvvm-for-visual-studio-extension) executes the `Configure` method of the `DotvvmStartup` class during the project build process so the IntelliSense can suggest custom controls, route and resource names.
+Please note that the [Visual Studio Extension](/landing/dotvvm-for-visual-studio-extension) executes the `Configure` and `ConfigureServices` methods in the `DotvvmStartup` class during the project build process so the IntelliSense can suggest custom controls, route and resource names.
 
 > Avoid registering any other things than routes, custom resources and custom controls in the `Configure` method.
 > This method is executed during the project build in Visual Studio, so please don't launch rockets in it.
@@ -117,9 +120,17 @@ The property is automatically set in ASP.NET Core based on [IHostingEnvironment.
 The typical setup that is present in default DotVVM OWIN project, looks like this:
 
 ```CSHARP
-#if !DEBUG
-config.Debug = false;
+private bool IsDebug()
+{
+#if DEBUG
+    return true;
 #endif
+    return false;
+}
+
+...
+
+app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, debug: IsDebug());
 ```
 
 ### Static Files
