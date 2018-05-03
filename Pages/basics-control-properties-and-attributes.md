@@ -32,6 +32,8 @@ This produces the following HTML:
 
 You can see that the `class` attribute has been added to the output, and the `placeholder` attribute was translated to Knockout JS `attr` binding.
 
+> DotVVM allows to compose multiple CSS classes or inline styles on one element. See [Class Attribute](/docs/tutorials/basic-class-attribute/{branch}) for more information.
+
 ### Form Controls
 
 DotVVM also adds a property `FormControls.Enabled` which can enabled or disable all form controls in the element. The controls may override this property by setting their own `Enabled` property. 
