@@ -54,4 +54,4 @@ If you use the `[Bind(Direction.IfInPostBackPath)]` on the `Users` property in t
 
 > Please be careful when using non-default binding directions. Some properties of the viewmodel might not be initialized and may contain null values!
 
-> If you want to minimize the amount of data being transferred, consider using [Static Commands](/docs/tutorials/basics-static-command-binding) whenever it is possible.
+> Sending the entire viewmodel to the server and back may be inefficient in many real-world scenarios. DotVVM offers different ways of calling methods on the server which don't require presence of the viewmodel. See [Optimizing PostBacks](/docs/tutorials/basics-optimizing-postbacks/{branch}) page for more info.
