@@ -70,7 +70,7 @@ public class DotvvmStartup : IDotvvmStartup, IDotvvmServicesConfigurator
 
 **DotVVM 1.1** was including jQuery in the page in Debug mode, because it was required by `dotvvm.debug.js` helper library. The need for jQuery in this helper was removed with **DotVVM 2.0**, so `jQuery` resource is not registered in the DotVVM configuration.
 
-If you application uses jQuery and if it is not included with another library (like [Bootstrap for DotVVM]() or [DotVVM Business Pack]()), add the following code into `ConfigureResources` method in `DotvvmStartup.cs`:
+If you application uses jQuery and if it is not included with another library (like [Bootstrap for DotVVM](/docs/tutorials/commercial-bootstrap-for-dotvvm/{branch}) or [DotVVM Business Pack](/docs/tutorials/commercial-business-pack-install/{branch})), add the following code into `ConfigureResources` method in `DotvvmStartup.cs`:
 
 ```CSHARP
 config.Resources.Register("jquery", new ScriptResource()
