@@ -156,7 +156,7 @@ There are several things in **DotVVM 2.0** which were marked as obsolete. Althou
 
 ### 1. ValueType property on TextBox, Literal and GridViewTextColumn
 
-The `ValueType` property was needed whenever you worked with date or numeric values in `TextBox`, `Literal` or `GridViewTextColumn` controls. In **DotVVM 2.0**, this property was made obsolete and is not used by the framework.
+The `ValueType` property was needed whenever you worked with date or numeric values in `TextBox`, `Literal` or `GridViewTextColumn` controls. In **DotVVM 2.0**, this property was made obsolete and is not used by the framework - the type of the data-bound value is inferred automatically.
 
 <br />
 
