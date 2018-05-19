@@ -116,7 +116,9 @@ config.RouteTable.Add("Rss", "export/rss", typeof(RssPresenter));
 
 <br />
 
-### 5. Custom PostBack Handlers
+<a name="postback-handlers"></a>
+
+### 5. Custom PostBack Handlers 
 
 We have rearchitected the way how [custom postback handlers](/docs/tutorials/control-development-creating-custom-postback-handlers/{branch}) are implemented. 
 
