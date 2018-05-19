@@ -39,6 +39,7 @@
     <DocPageMenuItem RouteName="server-side-html-generation" PageName="SEO and server-side HTML generation" />
     <DocPageMenuItem RouteName="single-page-applications-spa" PageName="Single Page Applications (SPA)" />
     <DocPageMenuItem RouteName="postback-handlers" PageName="Postback Handlers" />
+    <DocPageMenuItem RouteName="optimizing-postbacks" PageName="Optimizing PostBacks" />
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="advanced" PageName="Advanced Topics">
     <DocPageMenuItem RouteName="authentication-authorization" PageName="Authentication and Authorization" />
