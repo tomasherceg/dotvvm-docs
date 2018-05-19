@@ -85,6 +85,8 @@ dotnet dotvvm add control Controls/MyControl.dotcontrol -c
 
 ### Working with REST API Binding clients
 
+> This feature is new in **DotVVM 2.0**.
+
 The DotVVM Command Line tool can also be used to add and update [REST API Bindings](/docs/tutorials/basics-rest-api-bindings/{branch}) clients. 
 
 <table class="table table-bordered">
