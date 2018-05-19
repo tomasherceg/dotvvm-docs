@@ -1,13 +1,13 @@
 ## Exception Filters
 
-> The API of action filters has been changed in DotVVM 1.1. See the [Upgrading from DotVVM 1.0](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) page for more information. 
+> The API of action filters has been changed in DotVVM 2.0. See the [Upgrading to DotVVM 2.0](/docs/tutorials/how-to-start-upgrade-to-2-0/2-0#action-filters) page for more information.  
 
 If you want to handle exceptions, there is a class called `ExceptionFilterAttribute`.
 It derives from the `ActionFilterAttribute` and it adds the `OnCommandExceptionAsync` method. 
 
-The `OnCommandExceptionAsync` is called whenever an error occurs in a method triggered by the `{command: ...}` or `{staticCommand: ...}` bindings.
+The `OnCommandExceptionAsync` is called whenever an error occurs in a method triggered by the [Command Binding](/docs/tutorials/basics-command-binding/{branch}) or [Static Command Binding](/docs/tutorials/basics-static-command-binding/{branch}).
 
-The `ActionFilterAttribute` class then defines the `OnPageExceptionAsync` method. This method is called when any other exception occurs when the page is being processed. In most cases, it catches the exceptions in the `Init`, `Load` and `PreRender` in the viewmodel, and the exceptions that occur during the rendering or serialization phases. 
+The `ActionFilterAttribute` class then defines the `OnPageExceptionAsync` and `OnPresenterExceptionAsync` methods. These methods are called when any other exception occurs when the page or presenter is being processed. In most cases, it catches the exceptions in the `Init`, `Load` and `PreRender` in the viewmodel, and the exceptions that occur during the rendering or serialization phases. 
 
 ```CSHARP
 using System;
@@ -35,7 +35,15 @@ namespace DotvvmDemo
 			LogService.LogException(exception.ToString());
 
             return base.OnPageExceptionAsync(context, exception);
-        }              
+        } 
+
+        protected override Task OnPresenterExceptionAsync(IDotvvmRequestContext context, Exception exception)
+        {
+            // Log other exceptions that occur during the page or custom presenter execution
+			LogService.LogException(exception.ToString());
+
+            return base.OnPresenterExceptionAsync(context, exception);
+        }               
     }
 }
 ```
@@ -44,10 +52,9 @@ namespace DotvvmDemo
 
 ### Command Exception Handling
 
-In many apps, the commands sometimes end with an exception. However you don't want to show the error page to the user in this case. Instead, you need to 
-log the exception and display an error message to the user.
+In many apps, the commands sometimes end with an exception. However, you don't always want to show the error page to the user. You want to log the exception and display an error message to the user.
 
-You can use something like this:
+In such cases you can use something like this:
 
 ```CSHARP
 using System;
