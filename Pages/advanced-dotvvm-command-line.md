@@ -9,7 +9,7 @@ When you create DotVVM project (ASP.NET Core) using [DotVVM for Visual Studio](h
   </PropertyGroup>
   ...
   <ItemGroup>
-    <DotNetCliToolReference Include="DotVVM.CommandLine" Version="2.0.0" />
+    <DotNetCliToolReference Include="DotVVM.CommandLine" Version="1.1.0" />
   </ItemGroup>
 </Project>
 ```
