@@ -184,7 +184,7 @@ The `ValueType` property was needed whenever you worked with date or numeric val
 
 The `DisplayMember` property was replaced by `ItemTextBinding`, the `ValueMember` was replaced with `ItemValueBinding`.
 
-```CSHARP
+```DOTHTML
 <!-- DotVVM 1.1 -->
 <dot:ComboBox DataSource="{value: People}" 
               DisplayMember="FullName" 
