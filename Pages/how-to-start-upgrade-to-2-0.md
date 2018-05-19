@@ -116,9 +116,39 @@ config.RouteTable.Add("Rss", "export/rss", typeof(RssPresenter));
 
 <br />
 
+<a name="action-filters"></a>
+
+### 5. Action Filters
+
+If you have implemented custom action or exception filters and used `OnPageLoadingAsync` or `OnPageLoadedAsync` methods, they were removed and the behavior was changed.
+
+These methods were originally called for DotVVM pages and also custom presenters, and because of a bug in the pipeline, they were called twice for DotVVM pages. 
+
+We have split these methods to **presenter-level** and **page-level** events:
+
++ **Presenter-level Events** (applicable to DotVVM pages and custom presenters)
+    - `OnPresenterExecutingAsync` is executed immediately after the URL is mapped to a specific route and presenter is resolved. This method is called also for DotVVM pages as they are handled by `DotvvmPresenter` class.
+    - `OnPresenterExecutedAsync` is executed immediately after the presenter completes processing of the request. This method is called also for DotVVM pages as they are handled by `DotvvmPresenter` class.
+
++ **Page-level Events** (applicable to DotVVM pages)
+    - `OnPageInitializedAsync` is executed after the page control tree is built and viewmodel instance is initialized.
+    - `OnPageRenderedAsync` is executed after the response is rendered completely and before the viewmodel instance is disposed.
+
+If you need to handle these events for both DotVVM pages and custom presenters, override the **presenter-level methods**.
+
+If you only need to handle these events for DotVVM pages, override the **page-level methods**.
+
+#### 5.1 Exception Filters
+
+There is a new method `OnPresenterExceptionAsync` which is called when an unhandled exception is thrown from a custom presenter or a DotVVM page (which is processed using `DotvvmPresenter`).
+
+If you have a custom exception filter and need to handle exceptions from presenters, you may want to override this exception to log the errors. 
+
+<br />
+
 <a name="postback-handlers"></a>
 
-### 5. Custom PostBack Handlers 
+### 6. Custom PostBack Handlers 
 
 We have rearchitected the way how [custom postback handlers](/docs/tutorials/control-development-creating-custom-postback-handlers/{branch}) are implemented. 
 
