@@ -26,6 +26,9 @@ Because of changes in __DotVVM Compiler__ (a tool which provides metadata for Vi
 In `Startup.cs` file, remove the lambda method in `UseDotVVM` call:
 
 ```CSHARP
+// OWIN
+// ==========================================================
+
 // DotVVM 1.1
 var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath, options => 
 {
@@ -35,6 +38,21 @@ var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath, options =>
 
 // DotVVM 2.0
 var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath);
+```
+
+```CSHARP
+// ASP.NET Core
+// ==========================================================
+
+// DotVVM 1.1
+var config = app.UseDotVVM<DotvvmStartup>(options => 
+{
+    // copy the body of the lamda and remove it
+    options.AddDefaultTempStorages("Temp");
+});
+
+// DotVVM 2.0
+var config = app.UseDotVVM<DotvvmStartup>();
 ```
 
 Add `ConfigureServices` method in `DotvvmStartup.cs` and place contents of the lambda inside:
