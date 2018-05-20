@@ -45,6 +45,7 @@
     <DocPageMenuItem RouteName="optimizing-postbacks" PageName="Optimizing PostBacks" />
     <DocPageMenuItem RouteName="static-command-services" PageName="Static Command Services" />
     <DocPageMenuItem RouteName="rest-api-bindings" PageName="REST API Bindings" />
+    <DocPageMenuItem RouteName="rest-api-bindings-building-own-api" PageName="REST API Bindings: Building own API" />
     <DocPageMenuItem RouteName="postback-concurrency-mode" PageName="PostBack Concurrency Mode" />
     <DocPageMenuItem RouteName="dotvvm-contrib-controls" PageName="DotVVM Contrib Controls" />
     <DocPageMenuItem RouteName="dotvvm-dynamic-data" PageName="DotVVM Dynamic Data" />
