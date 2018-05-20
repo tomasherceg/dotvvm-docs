@@ -66,6 +66,7 @@ You can use the variable registered in `DotvvmStartup.cs` in value bindings to l
 <dot:ComboBox DataSource="{value: _myApi.GetCountries()}" SelectedValue="{value: CountryId}" ItemTextBinding="{value: name}" ItemValueBinding="{value: id}" />
 ```
 
+<!-- 
 #### Using GridViewDataSet
 
 REST API bindings support the `GridViewDataSet<T>` object which can be used to perform sorting and paging. It must be supported on the REST API side - see [Building own REST API for REST API Bindings](/docs/tutorials/basics-rest-api-bindings-building-own-api/{branch}) for more information.
@@ -110,7 +111,7 @@ public GridViewDataSet<Company> GetCompanies([FromQuery, AsObject(typeof(ISortin
     dataSet.LoadFromQueryable(companiesService.GetAllCompaniesQueryable());
     return dataSet;
 }
-```
+``` -->
 
 ### Invoking actions on REST API
 

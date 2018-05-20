@@ -93,7 +93,7 @@ services.Configure<DotvvmApiOptions>(opt =>
 });
 ```
 
-Some DotVVM types, such as `GridViewDataSet`, `SortingOptions` or `PagingOptions` are registered as known types by default. This makes building APIs with paging and sorting easier.
+<!-- Some DotVVM types, such as `GridViewDataSet`, `SortingOptions` or `PagingOptions` are registered as known types by default. This makes building APIs with paging and sorting easier.
 
 ### Working with GridViewDataSet
 
@@ -130,5 +130,5 @@ Because this would be uncomfortable to consume from the page, there is the `[AsO
 ```
 public GridViewDataSet<Company> GetCompanies(ISortingOptions sortingOptions, IPagingOptions pagingOptions);
 ```
-
+ -->
 
