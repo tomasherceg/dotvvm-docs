@@ -6,14 +6,14 @@ Any control in DotVVM may specify the `PostBack.Concurrency` property. This prop
 
 The property can have the following values: 
 
-* `None`
+* `Default`
 * `Deny`
 * `Queue`
 
-### None: Default behavior
+### Default behavior
 
 ```DOTHTML
-<dot:Button Text="Test" Click="{command: Test()}" PostBack.Concurrency="None" />
+<dot:Button Text="Test" Click="{command: Test()}" PostBack.Concurrency="Default" />
 ``` 
 
 This setting keeps the default behavior of postbacks. For both [Command Binding](/docs/tutorials/basics-command-binidng/{branch}) and [Static Command Binding](/docs/tutorials/basics-static-command-binidng/{branch}), starting a new postback is allowed while another postback is waiting for response. 
