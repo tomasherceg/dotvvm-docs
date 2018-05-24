@@ -53,13 +53,13 @@ Now run the following command in the Package Manager Console window:
 Install-Package DotVVM.Tracing.ApplicationInsights.AspNetCore
 ```
 
-And finally, register the DotVVM tracking reporter in the `ConfigureServices` method this way:
+And finally, register the DotVVM tracking reporter in the `IDotvvmServiceConfigurator` this way:
 
 ```CSHARP
-services.AddDotVVM(options =>
+public void ConfigureServices(IDotvvmServiceCollection options)
 {
     options.AddApplicationInsightsTracing();
-});
+}
 ```
 
 <br />
@@ -84,13 +84,13 @@ After you have updated the `ApplicationInsights.config` file, run the following 
 Install-Package DotVVM.Tracing.ApplicationInsights.Owin
 ```
 
-And finally, register the DotVVM tracking reporter in the `ConfigureServices` method this way:
+And finally, register the DotVVM tracking reporter in the `IDotvvmServiceConfigurator` this way:
 
 ```CSHARP
-var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, options: options =>
+public void ConfigureServices(IDotvvmServiceCollection options)
 {
     options.AddApplicationInsightsTracing();
-});
+}
 ```
 
 Thanks to this, you will be able to see more detailed metrics for DotVVM requests.
