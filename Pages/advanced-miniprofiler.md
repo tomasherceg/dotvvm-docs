@@ -34,7 +34,7 @@ For both ASP.NET Core and OWIN, you can use the `MiniProfilerWidget`, which is a
 
 #### <a name="AspNetCore"></a>ASP.NET Core
 
-> Be aware that MiniProfiler for ASP.NET Core is currently in alpha pre-release version.
+> Be aware that MiniProfiler for ASP.NET Core is currently in beta pre-release version.
 
 1. Run the following commands in the _Package Manager Console_ window:
 
@@ -43,32 +43,40 @@ Install-Package MiniProfiler.AspNetCore -IncludePrerelease
 Install-Package DotVVM.Tracing.MiniProfiler.AspNetCore
 ```
 
-2. Next, you can register the MiniProfiler integration into DotVVM request tracing in the `ConfigureServices` method this way:
+2. Next, you can register the MiniProfiler integration into DotVVM request tracing in the `IDotvvmServiceConfigurator` this way:
 
 ```CSHARP
-services.AddDotVVM(options =>
+public void ConfigureServices(IDotvvmServiceCollection options)
 {
     options.AddMiniProfilerEventTracing();
-});
+}
 ```
 
-3. As the last step, you need to add the MiniProfiler middleware before `app.UseDotVVM<DotvvmStartup>()`:
+3. As the last step, you need to add the MiniProfiler services in the `ConfigureServices` method and the Miniprofiler middleware before `app.UseDotVVM<DotvvmStartup>()`:
 
 ```CSHARP
+public void ConfigureServices(IServiceCollection services)
+{
+    ...
+
+    services.AddMemoryCache();
+
+    services.AddMiniProfiler(options =>
+    {
+        options.RouteBasePath = "/profiler";
+    });
+
+    ...
+}
+
 public void Configure(IApplicationBuilder app, IMemoryCache cache)
 {
     ...
 
-    app.UseMiniProfiler(new MiniProfilerOptions
-    {
-        // Path to use for profiler URLs
-        RouteBasePath = "~/profiler",
+    app.UseMiniProfiler();
 
-        // (Optional) Control storage
-        Storage = new MemoryCacheStorage(cache, TimeSpan.FromMinutes(60)),
-    });
-    
     app.UseDotVVM<DotvvmStartup>();
+
     ...
 }
 ```
@@ -91,13 +99,13 @@ Install-Package MiniProfiler
 Install-Package DotVVM.Tracing.MiniProfiler.Owin
 ```
 
-2. Register the DotVVM request tracing in the `ConfigureServices` method this way:
+2. Next, you can register the MiniProfiler integration into DotVVM request tracing in the `IDotvvmServiceConfigurator` this way:
 
 ```CSHARP
-var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, options: options =>
+public void ConfigureServices(IDotvvmServiceCollection options)
 {
     options.AddMiniProfilerEventTracing();
-});
+}
 ```
 
 * To see it in action, you can simply navigate to `~/mini-profiler-resources/results-index` and view profiled HTTP requests.
