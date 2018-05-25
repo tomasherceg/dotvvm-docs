@@ -196,7 +196,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -414,7 +414,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -600,7 +600,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -802,7 +802,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -1036,7 +1036,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -1286,7 +1286,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -1552,7 +1552,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -1722,7 +1722,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -2072,7 +2072,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -2428,7 +2428,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -2566,7 +2566,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -2820,7 +2820,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -3006,7 +3006,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -3224,7 +3224,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -3506,7 +3506,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -3788,7 +3788,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -5080,7 +5080,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -5536,7 +5536,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -5722,7 +5722,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -5988,7 +5988,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -6174,7 +6174,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -6424,7 +6424,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -6674,7 +6674,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -6812,7 +6812,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -7210,7 +7210,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -7444,7 +7444,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -7784,7 +7784,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -7986,7 +7986,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -8236,7 +8236,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -8486,7 +8486,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -8720,7 +8720,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": true
@@ -8890,7 +8890,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -9108,7 +9108,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -9358,7 +9358,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -9634,7 +9634,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -9804,7 +9804,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
@@ -10022,7 +10022,7 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
+        "IsBasicProperty": true
       }
     ],
     "IsAbstract": false
