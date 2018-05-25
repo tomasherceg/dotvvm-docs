@@ -1,0 +1,3 @@
+<dot:Button Click="{command: Calculate()}" Text="Sample Button" />
+
+<dot:Literal Text="{value: CurrentValue}"></dot:Literal>

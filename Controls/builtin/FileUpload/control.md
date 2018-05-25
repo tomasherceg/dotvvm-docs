@@ -8,13 +8,13 @@ The upload works on the background and starts immediately when the user selects 
 you have to specify where the temporary files will be uploaded.
 
 The recommended strategy is to store the uploaded files in your application directory or in the temp directory (if your app have the appropriate permissions).
-To define this, you have to register the **FileUploadStorage** in your **DotvvmStartup.cs** file.
+To define this, you have to register the **UploadedFileStorage** in the `IDotvvmServiceConfigurator`.
 
 ```CSHARP
-var uploadPath = Path.Combine(applicationPath, "App_Data\\UploadTemp");
-config.ServiceLocator.RegisterSingleton<IUploadedFileStorage>(
-    () => new FileSystemUploadedFileStorage(uploadPath, TimeSpan.FromMinutes(30))
-);
+public void ConfigureServices(IDotvvmServiceCollection options)
+{
+    options.AddUploadedFileStorage("App_Data/Temp");
+}
 ```
 
 &nbsp;
@@ -34,9 +34,7 @@ the button's `Enabled` property to disallow the user to continue until the uploa
 The **UploadedFilesCollection** holds only unique IDs of uploaded files. To get the file, you have to retrieve it using the **UploadedFileStorage** object.
 
 ```CSHARP
-var storage = Context.Configuration.ServiceLocator.GetService<IUploadedFileStorage>();
-
-foreach (var file in myUploadedFilesCollection.Files)
+foreach (var file in UploadedFiles.Files)
 {
   if (file.Allowed)
   {
@@ -54,5 +52,4 @@ foreach (var file in myUploadedFilesCollection.Files)
 }
 ```
 
-A file is not `Allowed` when it's type does not match the `AllowedFileTypes` definition or when it's size exceeds the `MaxFileSize`. See also
-the `FileTypeAllowed` and `MaxSizeExceeded` properties. You can use them to find out why the file is not allowed.
+A file is not `Allowed` when it's type does not match the `AllowedFileTypes` definition or when it's size exceeds the `MaxFileSize`. See also the `FileTypeAllowed` and `MaxSizeExceeded` properties. You can use them to find out why the file is not allowed. But please note that these value are sent from client-side and can't be trusted in security critical scenarios.

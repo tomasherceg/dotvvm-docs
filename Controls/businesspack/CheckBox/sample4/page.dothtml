@@ -1,0 +1,29 @@
+﻿<h3>Additional ingredients for your pizza!</h3>
+<p>
+    <bp:CheckBox CheckedItems="{value: Extra}" 
+                  Changed="{command: UpdatePrice()}" 
+                  CheckedValue="{value: 0.5}" Text="Jalapeño" />
+    <br />
+
+    <bp:CheckBox CheckedItems="{value: Extra}" 
+                  Changed="{command: UpdatePrice()}" 
+                  CheckedValue="{value: 0.45}" Text="Egg" />
+    <br />
+
+    <bp:CheckBox CheckedItems="{value: Extra}" 
+                  Changed="{command: UpdatePrice()}" 
+                  CheckedValue="{value: 0.75}" Text="Tuna" />
+    <br />
+
+    <bp:CheckBox CheckedItems="{value: Extra}" 
+                  Changed="{command: UpdatePrice()}" 
+                  CheckedValue="{value: 0.2}" Text="Garlic" />
+    <br />
+
+    <bp:CheckBox CheckedItems="{value: Extra}" 
+                  Changed="{command: UpdatePrice()}" 
+                  CheckedValue="{value: 0.8}" Text="Magic Mushrooms" />
+</p>
+
+<p>Total price: ${{value: Price}}</p>
+

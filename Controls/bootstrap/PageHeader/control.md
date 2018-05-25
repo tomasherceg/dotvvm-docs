@@ -1,3 +1,3 @@
 Renders Bootstrap Page Header.
 
-<http://getbootstrap.com/components/#page-header>
+<https://getbootstrap.com/docs/3.3/components/#page-header>

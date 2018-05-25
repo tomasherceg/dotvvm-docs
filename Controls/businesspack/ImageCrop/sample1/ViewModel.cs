@@ -1,9 +1,11 @@
 using DotVVM.BusinessPack.Controls;
 using DotVVM.Framework.Utils;
+using DotVVM.Framework.ViewModel;
+
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.ImageCrop.sample1
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public string ImagePath { get; set; } = "/Resources/Images/picture.jpg";
         public string Result { get; set; }

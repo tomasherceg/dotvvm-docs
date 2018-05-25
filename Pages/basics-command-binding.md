@@ -43,6 +43,22 @@ You can use any expressions that are supported in the [Value Bindings](/docs/tut
 The method must be `public` and should be `void`, or return `Task` if you plan to make it asynchronous.
 In some cases, this can significantly improve the performance of the app because the web server can reuse waiting threads to process other HTTP requests.
 
+```CSHARP
+public class MyViewModel {
+     
+    public void SynchronousCommand() {
+        ...
+    }
+   
+    public async Task AsynchronousCommand() {
+        await ...
+    }
+}
+```
+
+> You should always use `async Task` instead of `async void` in asynchronous commands - it would probably end with an exception. 
+
+
 ### Supported Expressions
 
 The following items are examples of what can be used in the **command** binding.

@@ -17,9 +17,9 @@ First, you need to create a class that inherits from the `PostBackHandler` class
 ```CSHARP
 public class ConfirmPostBackHandler : PostBackHandler
 {
-    protected internal override string ClientHandlerName => "confirm";
+    protected override string ClientHandlerName => "confirm";
 
-    protected internal override Dictionary<string, string> GetHandlerOptionClientExpressions()
+    protected override Dictionary<string, string> GetHandlerOptionClientExpressions()
     {
         return new Dictionary<string, string>()
         {

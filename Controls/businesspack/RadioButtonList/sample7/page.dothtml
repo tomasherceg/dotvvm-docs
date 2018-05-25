@@ -1,0 +1,11 @@
+<bp:RadioButtonList DataSource="{value: Countries}"
+                 SelectedValue="{value: SelectedCountry}"
+                 ItemTextBinding="{value: Name}"
+                 ItemKeyBinding="{value: Id}">
+    <EmptyDataTemplate>
+        You must fill the DataSource before you can select country.
+    </EmptyDataTemplate>
+    <ItemTemplate>
+        <span>{{value: Id}}. {{value: Name}}</span>
+    </ItemTemplate>
+</bp:RadioButtonList>

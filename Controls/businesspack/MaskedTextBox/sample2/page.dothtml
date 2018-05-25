@@ -1,0 +1,4 @@
+ <bp:MaskedTextBox Mask="LL0-11-22"
+                   Placeholder="LL0-11-22"
+                   Text="{value: Text}"
+                   AdditionalPatterns="{value: AdditionalPatterns}" />

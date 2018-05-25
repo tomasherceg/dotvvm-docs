@@ -23,7 +23,7 @@ public void NormalTest()
 
 ### Mocking the Context
 
-**DotVVM** injects the `DotvvmRequestContext` object in the viewmodels. If your viewmodel uses some features of this object, you need to mock this object to provide all services to the tested method.
+**DotVVM** injects the `IDotvvmRequestContext` object in the viewmodels. If your viewmodel uses some features of this object, you need to mock this object to provide all services to the tested method.
 
 DotVVM contains a prepared mock class `TestDotvvmRequestContext`. You can set all properties you need
 (`Configuration`, `Route`, `Parameters`, `Query`, `HttpContext`, `ModelState`, `ResourceManager` etc., but they are all optional).

@@ -1,0 +1,4 @@
+<bp:ColorPicker SelectedColor="{value: Color}"
+                Placeholder="Select color" />
+
+<p>Color: {{value: Color}}</p>

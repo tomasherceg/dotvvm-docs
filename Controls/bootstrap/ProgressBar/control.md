@@ -1,3 +1,3 @@
 Renders Bootstrap Progress Bar widget.
 
-<http://getbootstrap.com/components/#progress>
+<https://getbootstrap.com/docs/3.3/components/#progress>

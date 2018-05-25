@@ -1,0 +1,3 @@
+<bp:MaskedTextBox Mask="00/00/0000"
+                  Placeholder="mm/dd/yyyy"
+                  Text="{value: Text}" />

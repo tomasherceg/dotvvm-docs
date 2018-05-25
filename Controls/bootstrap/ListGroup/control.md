@@ -1,3 +1,3 @@
 Renders a Bootstrap list group of items, links or buttons.
 
-<http://getbootstrap.com/components/#list-group>
+<https://getbootstrap.com/docs/3.3/components/#list-group>

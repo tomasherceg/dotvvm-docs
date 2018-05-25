@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.DropDownList.sample5
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public Country SelectedCountry { get; set; }
         public string SelectedCity { get; set; }

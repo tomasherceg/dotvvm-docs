@@ -1,3 +1,3 @@
 Renders a Bootstrap breadcrumb navigation control with data-binding support.
 
-<http://getbootstrap.com/components/#breadcrumbs>
+<https://getbootstrap.com/docs/3.3/components/#breadcrumbs>

@@ -5,4 +5,4 @@ If the validation target contains another child objects, the validation errors f
 This is because of performance reasons.
 
 However, using the `IncludeErrorsFromChildren` property, you can tell the control to display validation errors event from the 
-child objects. Just be careful because there will be a performance penalty if you use this feature on large and compilcated viewmodels.
+child objects. Just be careful because there will be a performance penalty if you use this feature on large and complicated viewmodels.

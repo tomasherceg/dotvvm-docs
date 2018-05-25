@@ -1,14 +1,16 @@
 using System.Collections.Generic;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.TreeView.sample4
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public List<string> SelectedFileNames { get; set; } = new List<string>();
 
         public List<TreeItem> Files { get; set; } = new List<TreeItem> {
             new TreeItem {
                 Name = "Documents",
+                IsExpanded = true,
                 Items = new List<TreeItem> {
                     new TreeItem {
                         Name = "Invoices",

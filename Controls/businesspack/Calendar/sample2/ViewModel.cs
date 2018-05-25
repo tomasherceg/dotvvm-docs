@@ -1,8 +1,9 @@
 using System;
+using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.Calendar.sample2
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
         public DateTime SelectedDate { get; set; } = DateTime.Now;
         public DateTime MinimumDate { get; set; } = DateTime.Now.AddDays(-5);

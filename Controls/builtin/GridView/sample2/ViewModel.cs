@@ -25,7 +25,7 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample2
         private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
             var queryable = FakeDb();
-            // NOTE: Apply Pagign and Sorting options.
+            // NOTE: Apply Paging and Sorting options.
             return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
         }
 
@@ -38,10 +38,8 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample2
             Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
             return base.Init();
         }
-
     }
-
-
+    
     public class Customer
     {
         public int Id { get; set; }

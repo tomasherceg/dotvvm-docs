@@ -1,3 +1,3 @@
 Renders a button with a drop-down menu with the data-binding support.
 
-<http://getbootstrap.com/components/#dropdowns>
+<https://getbootstrap.com/docs/3.3/components/#dropdowns>

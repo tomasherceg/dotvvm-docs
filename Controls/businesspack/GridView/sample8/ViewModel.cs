@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.Framework.Controls;
+using DotVVM.Framework.ViewModel;
+
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample8
 {
-    public class ViewModel
+    public class ViewModel : DotvvmViewModelBase
     {
-        public GridViewDataSet<Order> Orders { get; set; }
+        public BusinessPackDataSet<Order> Orders { get; set; }
         public List<string> DeliveryTypes { get; set; } = new List<string> { "Post office", "Home" };
 
         public override Task Init()
         {
-            Orders = new GridViewDataSet<Order> {
+            Orders = new BusinessPackDataSet<Order> {
                 OnLoadingData = GetData,
                 RowEditOptions = new RowEditOptions {
                     PrimaryKeyPropertyName = nameof(Customer.Id),

@@ -4,7 +4,7 @@
         <bp:GridViewTextColumn ValueBinding="{value: Id}"
                                HeaderText="Order ID" />
         <bp:GridViewComboBoxColumn ValueBinding="{value: DeliveryType}"
-                                   DataSource="{value: _parent.DeliveryTypes}"
+                                   DataSourceBinding="{value: _parent.DeliveryTypes}"
                                    HeaderText="Delivery type" />
         <bp:GridViewTemplateColumn HeaderText="Date">
             <ContentTemplate>

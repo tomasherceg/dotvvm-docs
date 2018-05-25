@@ -1,6 +1,6 @@
-<bp:AutoComplete Text="{value: City}"
-                 DataSource="{value: Suggestions}"
-                 UpdateTextOnInput="false"
-                 Changed="{command: CityChanged()}" />
-
-<p>City {{value: City}} has been changed {{value: CityChangeCount}} times.</p>
+<bp:AutoComplete Text="{value: Country}"
+                 DataSource="{value: Countries}"
+                 ItemTextBinding="{value: Name}"
+                 Placeholder="Country">
+    <span>{{value: Id}}. {{value: Name}}</span>
+</bp:AutoComplete>

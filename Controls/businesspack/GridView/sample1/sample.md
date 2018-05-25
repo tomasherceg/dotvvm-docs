@@ -1,6 +1,6 @@
 ### Sample 1: Basic Usage
 
-The `DataSource` property expects either `IEnumerable` or `GridViewDataSet` objects and defines the data for the control.
+The `DataSource` property expects `BusinessPackDataSet` object and defines the data for the control.
 
 The `Columns` collection specifies all columns in the control.
 

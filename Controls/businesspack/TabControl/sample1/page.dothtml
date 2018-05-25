@@ -17,10 +17,10 @@
 
 <%-- Templated tabs --%>
 <bp:TabControl DataSource="{value: Countries}">
-    <HeaderTemplate>
+    <TabHeaderTemplate>
         {{value: Name}}
-    </HeaderTemplate>
-    <ContentTemplate>
+    </TabHeaderTemplate>
+    <TabContentTemplate>
         <ul>
             <dot:Repeater DataSource="{value: Cities}">
                 <ItemTemplate>
@@ -28,5 +28,5 @@
                 </ItemTemplate>
             </dot:Repeater>
         </ul>
-    </ContentTemplate>
+    </TabContentTemplate>
 </bp:TabControl>

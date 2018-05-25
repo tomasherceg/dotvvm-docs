@@ -1,3 +1,3 @@
 Renders a Bootstrap carousel widget.
 
-<http://getbootstrap.com/javascript/#carousel>
+<https://getbootstrap.com/docs/3.3/javascript/#carousel>

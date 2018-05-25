@@ -4,7 +4,10 @@
         <bp:GridViewTextColumn ValueBinding="{value: Id}"
                                HeaderText="Customer ID" />
         <bp:GridViewTextColumn ValueBinding="{value: Name}"
-                               HeaderText="Name"
-                               HeaderCssClass="gridview-header-highlight" />
+                               HeaderCssClass="gridview-header-highlight">
+            <HeaderTemplate>
+                <i>Name</i>
+            </HeaderTemplate>
+        </bp:GridViewTextColumn>
     </Columns>
 </bp:GridView>

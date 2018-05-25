@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
@@ -25,7 +24,7 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample1
         private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
         {
             var queryable = FakeDb();
-            // NOTE: Apply Pagign and Sorting options.
+            // NOTE: Apply Paging and Sorting options.
             return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
         }
 
@@ -39,7 +38,6 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.sample1
             return base.Init();
         }
     }
-
 
     public class Customer
     {

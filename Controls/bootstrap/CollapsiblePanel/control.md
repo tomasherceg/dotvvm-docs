@@ -1,3 +1,3 @@
 A Bootstrap collapsible panel.
 
-<http://getbootstrap.com/javascript/#collapse>
+<https://getbootstrap.com/docs/3.3/javascript/#collapse>

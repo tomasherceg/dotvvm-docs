@@ -1,3 +1,3 @@
 Renders a Bootstrap glyph icon.
 
-<http://getbootstrap.com/components/#glyphicons>
+<https://getbootstrap.com/docs/3.3/components/#glyphicons>

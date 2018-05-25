@@ -1,3 +1,3 @@
 Renders a Boostrap badge component.
 
-<http://getbootstrap.com/components/#badges>
+<https://getbootstrap.com/docs/3.3/components/#badges>

@@ -3,22 +3,55 @@
 > This section is applicable if your application uses OWIN and classic .NET Framework. 
 > For OWIN stack, visit the [Using OWIN Security for Authentication](/docs/tutorials/advanced-owin-security/{branch}).
 
-Let's see how to work with authentication in ASP.NET Core. 
+> The authentication API has changed in **ASP.NET Core 2.0**. In **DotVVM 1.1.6** and newer, you need to use the new API to configure the authentication.
+
 To set up the standard cookie authentication, just add this snippet in the `Startup.cs` file.
 
 ```CSHARP
-app.UseCookieAuthentication(new CookieAuthenticationOptions {
-    LoginPath = new PathString("/ComplexSamples/Auth/Login"),
-    AuthenticationScheme = "Cookie",
-    Events = new CookieAuthenticationEvents {
-        OnRedirectToReturnUrl = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
-        OnRedirectToAccessDenied = c => DotvvmAuthenticationHelper.ApplyStatusCodeResponse(c.HttpContext, 403),
-        OnRedirectToLogin = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
-        OnRedirectToLogout = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri)
-    },
-    AutomaticAuthenticate = true,
-    AutomaticChallenge = true
-});
+// ASP.NET Core 2.0 (DotVVM 1.1.6 and newer)
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddAuthentication(sharedOptions =>
+    {
+        sharedOptions.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
+    })
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options => {
+        options.Events = new CookieAuthenticationEvents
+        {
+            OnRedirectToReturnUrl = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
+            OnRedirectToAccessDenied = c => DotvvmAuthenticationHelper.ApplyStatusCodeResponse(c.HttpContext, 403),
+            OnRedirectToLogin = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
+            OnRedirectToLogout = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri)
+        };
+        options.LoginPath = new PathString("/login");
+    });
+	// ...
+}
+
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    app.UseAuthentication();
+    // ...
+}
+
+
+
+// ASP.NET Core 1.x (DotVVM 1.1.5 and older)
+public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+{
+    app.UseCookieAuthentication(new CookieAuthenticationOptions 
+    {
+        LoginPath = new PathString("/login"),
+        AuthenticationScheme = CookieAuthenticationDefaults.AuthenticationScheme,
+        Events = new CookieAuthenticationEvents {
+            OnRedirectToReturnUrl = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
+            OnRedirectToAccessDenied = c => DotvvmAuthenticationHelper.ApplyStatusCodeResponse(c.HttpContext, 403),
+            OnRedirectToLogin = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
+            OnRedirectToLogout = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri)
+        },
+        AutomaticAuthenticate = true
+    });
+}
 ```
 
 > Please note that authentication middlewares should be always registered **before DotVVM**. The authentication middleware needs to determine the current user (e.g. by parsing the authentication token from the cookie) before DotVVM takes control of the HTTP request. 
@@ -41,7 +74,7 @@ public class LoginViewModel : DotvvmViewModelBase
         {
             // the CreateIdentity is your own method which creates the IIdentity representing the user
             var identity = CreateIdentity(UserName);
-            await Context.GetAuthentication().SignInAsync("Cookie", new ClaimsPrincipal(identity));
+            await Context.GetAuthentication().SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, new ClaimsPrincipal(identity));
             Context.RedirectToRoute("Default");        
         }
     }

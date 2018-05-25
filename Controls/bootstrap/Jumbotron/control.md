@@ -1,3 +1,3 @@
 Renders the Bootstrap jumbotron widget.
 
-<http://getbootstrap.com/components/#jumbotron>
+<https://getbootstrap.com/docs/3.3/components/#jumbotron>

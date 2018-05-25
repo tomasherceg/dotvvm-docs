@@ -9,6 +9,11 @@
             Renders a contextual feedback message for users.
             </summary>
         </member>
+        <member name="M:DotVVM.BusinessPack.Controls.Alert.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.Alert" /> class.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.Alert.Text">
             <summary>
             Gets or sets the text displayed inside the Alert box.
@@ -32,16 +37,16 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Alert.AutoHideTimeout">
             <summary>
-            Gets or sets after how many seconds is the Alert message automatically hidden. 
-            If the value is equal to 0, Alert is not AutoHide
-            The default values is 0 seconds.
+            Gets or sets after how many seconds is the Alert message automatically
+            hidden. If the value is equal to 0, Alert is not auto-hidden.
+            The default value is 0 seconds.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Alert.AnimationDuration">
             <summary>
-            Gets or sets how long will the show and hide animations run (in seconds).
-            If the value is equal to 0, Alert is not animated
-            The default is 0.2 seconds.
+            Gets or sets how long will the show and hide animations run
+            (in seconds). If the value is equal to 0, alert is not animated.
+            The default value is 0.25 seconds.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Alert.IsDisplayed">
@@ -52,22 +57,16 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Alert.Dismissed">
             <summary>
-            Gets or sets the command triggered when the Alert message is dismissed by the user.
+            Gets or sets the command triggered when the Alert message is dismissed by user.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.Alert.IsTypeIconDisplayed">
+        <member name="P:DotVVM.BusinessPack.Controls.Alert.ShowDefaultTypeIcon">
             <summary>
             Gets or sets the value indicating whether the type icon is displayed.
+            It's displayed by default.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.AlertTypeExtensions.ToClassName(DotVVM.BusinessPack.Controls.AlertType,DotVVM.BusinessPack.Controls.IAlertTheme)">
-            <summary>
-            Returns a "bp-alert-*" class name.
-            </summary>
-            <param name="type">The type of Alert message.</param>
-            <param name="theme">The Alert theme.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.AlertTypeExtensions.ToFaIconTape(DotVVM.BusinessPack.Controls.AlertType)">
+        <member name="M:DotVVM.BusinessPack.Controls.AlertTypeExtensions.ToClassName(DotVVM.BusinessPack.Controls.AlertType)">
             <summary>
             Returns a "bp-alert-*" class name.
             </summary>
@@ -85,7 +84,7 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.AutoComplete.Text">
             <summary>
-            Gets or sets the text value entered by the user.
+            Gets or sets the text value entered by user.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.AutoComplete.Type">
@@ -96,24 +95,77 @@
         <member name="P:DotVVM.BusinessPack.Controls.AutoComplete.UpdateTextOnInput">
             <summary>
             Gets or sets whether the <see cref="P:DotVVM.BusinessPack.Controls.AutoComplete.Text" /> property will be updated whenever the value is changed.
-            By default, the value is <c>false</c> and the property is updated when the control loses its focus.
+            By default, the value is <c>false</c> and the property is updated when the control loses focus.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.AutoCompleteTypeExtensions.ToInputType(DotVVM.BusinessPack.Controls.AutoCompleteType)">
+        <member name="T:DotVVM.BusinessPack.Controls.BindableObjectBase">
             <summary>
-            Returns a value for &lt;input [type]&gt; attribute.
+            The base class for BusinessPack bindable objects.
             </summary>
-            <param name="type">The type of AutoComplete input.</param>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.BindableObjectBase.HtmlFactory">
+            <summary>
+            Gets the factory used to build HTML structure.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.BindableObjectBase.CanGetValue(DotVVM.Framework.Binding.DotvvmProperty)">
+            <summary>
+            Returns whether it's safe to get a value of the given property.
+            </summary>
+            <param name="property">The DotVVM property.</param>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.BindableObjectBase.GetValueOrDefault(DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
+            <summary>
+            Returns a value of the given property. Or a default value when
+            the current value is <c>null</c>.
+            </summary>
+            <param name="property">The property to get the value of.</param>
+            <param name="inherit">Indicates whether to return inherited values.</param>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.BusinessPack">
             <summary>
             Contains BusinessPack's attached properties.
             </summary>
         </member>
-        <member name="F:DotVVM.BusinessPack.Controls.BusinessPack.ThemeProperty">
+        <member name="T:DotVVM.BusinessPack.Controls.Button">
             <summary>
-            Sets the <see cref="T:DotVVM.BusinessPack.BusinessPackTheme" /> to be used when rendering the component and its children.
+            Renders the HTML button that is able to trigger a postback.
             </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.Button.Type">
+            <summary>
+            Gets or sets the type (color) of the Button.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.Button.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.Button.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.Button.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.Button.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.Button.CanGetValue(DotVVM.Framework.Binding.DotvvmProperty)">
+            <summary>
+            Returns whether it's safe to get a value of the given property.
+            </summary>
+            <param name="property">The DotVVM property.</param>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.ButtonTypeExtensions.ToClassName(DotVVM.BusinessPack.Controls.ButtonType)">
+            <summary>
+            Returns a "bp-button-*" class name.
+            </summary>
+            <param name="type">The type of Button.</param>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.Calendar">
             <summary>
@@ -122,47 +174,42 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Calendar.SelectedDate">
             <summary>
-            Gets or sets the date selected in the control.
+            Gets or sets the date selected by user.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.CalendarControlBase">
+        <member name="T:DotVVM.BusinessPack.Controls.CalendarBase">
             <summary>
             Base class for controls which use date time picker popup.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.SelectionCompleted">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.SelectionCompleted">
             <summary>
             Gets or sets the command that is called when the user successfully selects or unselects a value.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.Enabled">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.Enabled">
             <summary>
-            Gets or sets whether the control is enabled.
+            Gets or sets whether the control is enabled and can be modified.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.DisplayMode">
-            <summary>
-            Gets or Sets Display mode of calendar.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.Mode">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.Mode">
             <summary>
             Gets or sets whether you want the user to pick only date, only time, or both date and time.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.MinDate">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.MinDate">
             <summary>
-            Gets or sets the lowest selectable date.
+            Gets or sets the lowest date that can be selected by user.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.MaxDate">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.MaxDate">
             <summary>
-            Gets or sets the highest selectable date.
+            Gets or sets the highest date that can be selected by user.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CalendarControlBase.Restrictions">
+        <member name="P:DotVVM.BusinessPack.Controls.CalendarBase.Restrictions">
             <summary>
-            Gets or sets a collection of selection restrictions.
+            Gets or sets days a collection of rules specifying which date time intervals can't be selected.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.RangeCalendar">
@@ -172,27 +219,12 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.RangeCalendar.SelectedStartDate">
             <summary>
-            Gets or sets the start date of the date range.
+            Gets or sets the start of date-time range selected by user.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.RangeCalendar.SelectedEndDate">
             <summary>
-            Gets or sets the end date of the date range.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.Carousel.AllowAnimation">
-            <summary>
-            Gets or sets whether the transitions between the slides should be animated or not.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.Carousel.AutoSlideInterval">
-            <summary>
-            Gets or sets interval (in seconds) of changing slides.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.Carousel.Items">
-            <summary>
-            Gets or sets carousel slides.
+            Gets or sets the end of date-time range selected by user. It's always greater than the <see cref="P:DotVVM.BusinessPack.Controls.RangeCalendar.SelectedStartDate" />.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.CheckableControlListBase">
@@ -208,6 +240,11 @@
         <member name="P:DotVVM.BusinessPack.Controls.CheckableControlListBase.EmptyDataTemplate">
             <summary>
             Gets or sets the template which will be displayed when the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> is empty.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.CheckableControlListBase.ItemTemplate">
+            <summary>
+            Gets or sets the template used to render each item in the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.CheckableControlListBase.ItemKeyBinding">
@@ -266,16 +303,16 @@
             in the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.CreateCheckable">
+        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.CreateClientCheckable">
             <summary>
             Returns an <see cref="T:DotVVM.Utils.HtmlElements.IHtmlContainer" /> representing a checkable control rendered on client-side.
             It usually consists of an &lt;input&gt; and &lt;label&gt;.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.CreateCheckable(System.Object[],System.String,System.Int32)">
+        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.CreateServerCheckable(System.Object[],System.String,System.Int32)">
             <summary>
-            Returns a <see cref="T:DotVVM.Framework.Controls.DataItemContainer" /> representing a checkable control built from the specified
-            <paramref name="dataSource" /> item. It usually consists of an &lt;input&gt; and &lt;label&gt;.
+            Returns a <see cref="T:DotVVM.Framework.Controls.DataItemContainer" /> representing a checkable control rendered on server-side.
+            It usually consists of an &lt;input&gt; and &lt;label&gt;.
             </summary>
             <param name="dataSource">An array of items.</param>
             <param name="dataSourceExpression">The expression to access <paramref name="dataSource" /> on client-side.</param>
@@ -293,27 +330,19 @@
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.CreateTextSpan">
             <summary>
-            Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> rendering the text of a <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item
-            on client-side.
+            Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> rendering the text of an item.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.CreateTextSpan(DotVVM.Framework.Controls.DataItemContainer)">
+        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.GetItemTemplate">
             <summary>
-            Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> rendering the text of the given <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item.
+            Returns the <see cref="P:DotVVM.BusinessPack.Controls.CheckableControlListBase.ItemTemplate" /> when it is not <c>null</c>. Otherwise returns a default
+            template rendering contents of a property specified by <see cref="P:DotVVM.BusinessPack.Controls.CheckableControlListBase.ItemTextBinding" />.
             </summary>
-            <param name="dataItem">The <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item.</param>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.GetControlBinding">
             <summary>
             Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's client-side binding.
             </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.CheckableControlListBase.GetItemText(DotVVM.Framework.Controls.DataItemContainer)">
-            <summary>
-            Returns the text of the given <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item.
-            See also <seealso cref="P:DotVVM.BusinessPack.Controls.CheckableControlListBase.ItemTextBinding" /> property.
-            </summary>
-            <param name="dataItem">The <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item.</param>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.CheckBoxList">
             <summary>
@@ -338,19 +367,28 @@
         <member name="P:DotVVM.BusinessPack.Controls.CheckBox.RenderEmptyLabel">
             <summary>
             Gets or sets whether to render an empty &lt;label&gt; element when the <see cref="P:DotVVM.Framework.Controls.CheckableControlBase.Text" /> is
-            empty.
-            It allows to use custom CheckBox themes. The default value is <c>true</c>.
+            empty. It allows to use custom CheckBox themes. The default value is <c>true</c>.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CheckBox.Theme">
+        <member name="P:DotVVM.BusinessPack.Controls.CheckBox.TabIndex">
             <summary>
-            Gets the theme for this control. It can be changed using the <see cref="F:DotVVM.BusinessPack.Controls.BusinessPack.ThemeProperty" />.
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.CheckBox.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
             </summary>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.CheckBox.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.CheckBox.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.CheckBox.AddAttributesToInput(DotVVM.Framework.Controls.IHtmlWriter)">
             <inheritdoc />
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.CheckBox.RenderBeginTag(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -387,6 +425,18 @@
             Gets or sets the text displayed when color is not selected.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.SelectedColor">
             <summary>
             Gets or sets the HEX color selected by user.
@@ -395,6 +445,12 @@
         <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.SelectedRgbaColor">
             <summary>
             Gets or sets the RGBA color selected by user.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.AllowUnselect">
+            <summary>
+            Gets or sets whether the selected color can be unselected.
+            The default value is <c>true</c>.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.AllowCustomColors">
@@ -411,7 +467,7 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.PredefinedColors">
             <summary>
-            Gets or sets a list of predefined HEX colors the user can select from.
+            Gets or sets an enumeration of predefined HEX colors the user can select from.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ColorPicker.ToggleIconCssClass">
@@ -462,6 +518,12 @@
             Gets or sets the value of the item selected by user.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ComboBox.AllowUnselect">
+            <summary>
+            Gets or sets whether the selected value can be unselected.
+            The default value is <c>true</c>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.ComboBox.ToggleIconCssClass">
             <summary>
             Gets or sets the CSS class for the icon displayed on the toggle button.
@@ -474,9 +536,16 @@
             The default value is <see cref="F:DotVVM.BusinessPack.Controls.IconType.FaClose" />.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ComboBox.LoadItemsMode">
+            <summary>
+            Gets or sets how are items returned by the <see cref="P:DotVVM.BusinessPack.Controls.ComboBox.LoadItems"/> command. 
+            They can either be merged with existing items in the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />; or they can replace them.
+            The default value is <see cref="F:DotVVM.BusinessPack.Controls.LoadItemsMode.Merge"/>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.ComboBox.LoadItems">
             <summary>
-            Gets or sets a function used to load additional items from server. For example, it is used 
+            Gets or sets a function used to load additional items from server. For example, it is used
             to search for items on server-side.
             </summary>
         </member>
@@ -487,32 +556,42 @@
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.CommandShortcut">
             <summary>
-            An invisible control that triggers a command for a specific combination of keys.
+            Renders a control that triggers a command for a specific combination of keys.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Command">
+        <member name="M:DotVVM.BusinessPack.Controls.CommandShortcut.#ctor">
             <summary>
-            Gets or sets the command that will be triggered when the button is clicked.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.CommandShortcut" /> class.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Key">
             <summary>
-            Gets or sets the key to be pressed.
+            Gets or sets the shortcut key to be pressed.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Ctrl">
             <summary>
-            Gets or sets whether the Control key must be pressed together with the key specified by the Key property.
+            Gets or sets whether the <c>Control</c> key must be pressed together with the <see cref="P:DotVVM.BusinessPack.Controls.CommandShortcut.Key" />.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Alt">
             <summary>
-            Gets or sets whether the Alt key must be pressed together with the key specified by the Key property.
+            Gets or sets whether the <c>Alt</c> key must be pressed together with the <see cref="P:DotVVM.BusinessPack.Controls.CommandShortcut.Key" />.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Shift">
             <summary>
-            Gets or sets whether the Shift key must be pressed together with the key specified by the Key property.
+            Gets or sets whether the <c>Shift</c> key must be pressed together with the <see cref="P:DotVVM.BusinessPack.Controls.CommandShortcut.Key" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Enabled">
+            <summary>
+            Gets or sets whether the <see cref="P:DotVVM.BusinessPack.Controls.CommandShortcut.Command" /> is triggered when the shortcut is pressed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.CommandShortcut.Command">
+            <summary>
+            Gets or sets the command triggered when the shortcut is pressed.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.ControlBindingGroup">
@@ -567,7 +646,7 @@
             Indicates whether the command can execute when ViewModel is updating.
             </param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ControlBindingGroup.AddCommandReturningPromise(DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
+        <member name="M:DotVVM.BusinessPack.Controls.ControlBindingGroup.AddCommandReturningPromise(DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Binding.DotvvmProperty,System.Boolean,System.Boolean)">
             <summary>
             Adds a DotVVM <paramref name="property" /> command binding returning <c>DotvvmPromise</c>.
             </summary>
@@ -576,8 +655,11 @@
             <param name="isOnChange">
             Indicates whether the command can execute when ViewModel is updating.
             </param>
+            <param name="replaceData">
+            A value indicating whether to replace <c>$data</c> with custom argument.
+            </param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ControlBindingGroup.AddCommandReturningPromise(System.String,DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
+        <member name="M:DotVVM.BusinessPack.Controls.ControlBindingGroup.AddCommandReturningPromise(System.String,DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Binding.DotvvmProperty,System.Boolean,System.Boolean)">
             <summary>
             Adds a DotVVM <paramref name="property" /> command binding returning <c>DotvvmPromise</c>.
             </summary>
@@ -587,13 +669,9 @@
             <param name="isOnChange">
             Indicates whether the command can execute when ViewModel is updating.
             </param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ControlBindingGroup.AddTheme``1(DotVVM.BusinessPack.Themes.ITheme{``0})">
-            <summary>
-            Adds a BusinessPack theme binding expression.
-            </summary>
-            <typeparam name="TControl">The type of the BusinessPack control.</typeparam>
-            <param name="theme">The theme to serialize.</param>
+            <param name="replaceData">
+            A value indicating whether to replace <c>$data</c> with custom argument.
+            </param>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.ControlBindingGroup.AddValue``1(DotVVM.Framework.Binding.DotvvmProperty,``0)">
             <summary>
@@ -615,8 +693,8 @@
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.DataPager">
             <summary>
-            Renders the pagination control which can be integrated with the GridViewDataSet object to provide the pageOptions
-            capabilities.
+            Renders the pagination control which can be integrated with the GridViewDataSet
+            object to provide the pageOptions capabilities.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.DateTimePicker">
@@ -627,36 +705,53 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DateTimePicker.SelectedDate">
             <summary>
-            Gets or sets the date selected in the control.
+            Gets or sets the date selected by user.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DateTimePicker.CreateInputPart">
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePicker.Placeholder">
             <summary>
-            Creates input.
+            Gets or sets the text displayed when the <see cref="P:DotVVM.BusinessPack.Controls.DateTimePicker.SelectedDate" /> is empty.
             </summary>
-            <returns></returns>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.DateTimePopup">
+        <member name="T:DotVVM.BusinessPack.Controls.DateTimePickerBase">
             <summary>
             Base class for controls which use date time picker popup.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DateTimePopup.FormatString">
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.TabIndex">
             <summary>
-            Gets or sets format string that will be used to display the date.
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DateTimePopup.HidePopupOnSelectionComplete">
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.FormatString">
+            <summary>
+            Gets or sets the format string that will be used to display the date.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.UseFormatStringAsPlaceholder">
+            <summary>
+            Gets or sets whether to use <see cref="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.FormatString" /> as a placeholder when
+            placeholder property is not set. It is enabled by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimePickerBase.ClosePopupOnSelectionComplete">
             <summary>
             Gets or sets whether the popup should be hidden when the user completes the selection.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DateTimePopup.CreateInputPart">
+        <member name="M:DotVVM.BusinessPack.Controls.DateTimePickerBase.CreateInputPart">
             <summary>
             Creates left part (part when input is) of the date time picker control.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DateTimePopup.CreateIconPart">
+        <member name="M:DotVVM.BusinessPack.Controls.DateTimePickerBase.CreateIconPart">
             <summary>
             Creates right part (part when icon is) of the date time picker control.
             </summary>
@@ -669,22 +764,33 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.SelectedStartDate">
             <summary>
-            Gets or sets the start date of the date range.
+            Gets or sets the start of date-time range selected by user.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.StartDatePlaceholder">
+            <summary>
+            Gets or sets the text displayed when the <see cref="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.SelectedStartDate" /> is empty.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.SelectedEndDate">
             <summary>
-            Gets or sets the end date of the date range.
+            Gets or sets the end of date-time range selected by user. It's always greater than the <see cref="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.SelectedStartDate" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.EndDatePlaceholder">
+            <summary>
+            Gets or sets the text displayed when the <see cref="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.SelectedEndDate" /> is empty.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DateTimeRangePicker.SeparatorText">
             <summary>
             Gets or sets the string which is used to separate the inputs.
+            The default value is " - ".
             </summary>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.DateTimeRangePicker.CreateInputPart">
             <summary>
-            Creates two inputs separated bz separator.
+            Creates two inputs separated by separator.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.DecoratorBase">
@@ -695,6 +801,12 @@
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.DecoratorBase.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.DecoratorBase.CanGetValue(DotVVM.Framework.Binding.DotvvmProperty)">
+            <summary>
+            Returns whether it's safe to get a value of the given property.
+            </summary>
+            <param name="property">The DotVVM property.</param>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.DotvvmBindableObjectExtensions.SetClientValueBinding``2(``0,System.Linq.Expressions.Expression{System.Func{``0,``1}},System.String)">
             <summary>
@@ -738,32 +850,6 @@
             </summary>
             <param name="property">The DotVVM property.</param>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.DraggableList">
-            <summary>
-            A list of items with drag &amp; drop support.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DraggableList.ItemDropped">
-            <summary>
-            Gets or sets the command that will be triggered when the item is dropped.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DraggableList.MaxItemsCount">
-            <summary>
-            Gets or sets the maximum number of items that can be added in the collection.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DraggableList.GroupName">
-            <summary>
-            Gets or sets the name of the group of the draggable items. If you have multiple DraggableList controls with the same GroupName, 
-            the items can be moved between these lists.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DraggableList.ItemTemplate">
-            <summary>
-            Gets or sets the template for the items in the collection.
-            </summary>
-        </member>
         <member name="T:DotVVM.BusinessPack.Controls.DropDownList">
             <summary>
             Renders a DropDownList control similar to HTML &lt;select&gt; element.
@@ -784,6 +870,12 @@
             Gets or sets the template for the item selected by user.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.DropDownList.AllowUnselect">
+            <summary>
+            Gets or sets whether the selected value can be unselected.
+            The default value is <c>true</c>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.DropDownList.ToggleIconCssClass">
             <summary>
             Gets or sets the CSS class for the icon displayed on the toggle button.
@@ -794,31 +886,6 @@
             <summary>
             Gets or sets the CSS class for the icon displayed on the unselect button.
             The default value is <see cref="F:DotVVM.BusinessPack.Controls.IconType.FaClose" />.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.EditableLiteral">
-            <summary>
-            Renders a EditableLiteral control which can be edited by mouse click
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.EditableLiteral.Text">
-            <summary>
-            Gets or sets the text displayed in the control.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.EditableLiteral.FormatString">
-            <summary>
-            Gets or sets the format string that will be applied to numeric or date-time values.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.EditableLiteral.ValueType">
-            <summary>
-            Gets or sets the type of value being formatted - Number or DateTime.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.EditableLiteral.RenderSpanElement">
-            <summary>
-            Gets or sets whether the literal should render the wrapper span HTML element.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.FAIcon">
@@ -839,7 +906,8 @@
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.FileUpload">
             <summary>
-            Renders a FileUpload control supporting HTML 5 upload features (drag &amp; drop, directory upload, image previews, etc.).
+            Renders a FileUpload control supporting HTML 5 upload features (drag &amp; drop, directory upload, 
+            image previews, etc.).
             </summary>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.FileUpload.#ctor">
@@ -884,6 +952,11 @@
             value is "or drag them here.".
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.FileUpload.GenericErrorText">
+            <summary>
+            Gets or sets the text displayed when a generic / unknown error occurs. The default value is "Upload has failed.".
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.FileUpload.DeleteIconCssClass">
             <summary>
             Gets or sets the CSS class for the icon displayed on the button used to delete uploaded files.
@@ -900,21 +973,14 @@
             Gets or sets a value indicating whether the control is enabled and can be modified.
             </summary>
         </member>
+        <member name="M:DotVVM.BusinessPack.Controls.FileUpload.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
         <member name="M:DotVVM.BusinessPack.Controls.FileUpload.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.FileUpload.RenderContents(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.IUploadFile.FileName">
-            <summary>
-            Gets or sets the name of the file.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.IUploadFile.PreviewUrl">
-            <summary>
-            Gets or sets the URL of an image file preview.
-            </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.UploadData">
             <summary>
@@ -936,17 +1002,13 @@
             Gets or sets whether a file is currently being uploaded.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.UploadData.UploadedFiles">
+        <member name="P:DotVVM.BusinessPack.Controls.UploadData.Files">
             <summary>
-            Gets or sets the list of successfully uploaded files.
+            Gets or sets the list of files selected to be uploaded. Use <see cref="P:DotVVM.BusinessPack.Controls.UploadFile.IsUploaded" /> property
+            to find files that have already been uploaded.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.UploadData.UploadingFiles">
-            <summary>
-            Gets or sets the list of files being uploaded.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.UploadData.Error">
+        <member name="P:DotVVM.BusinessPack.Controls.UploadData.ErrorMessage">
             <summary>
             Gets or sets the error message when something goes wrong.
             </summary>
@@ -956,198 +1018,60 @@
             Clears the file upload data.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.UploadingFile">
+        <member name="T:DotVVM.BusinessPack.Controls.UploadFile">
             <summary>
-            Represents a file being uploaded.
+            The file selected by user to be uploaded.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.UploadingFile.FileName">
-            <summary>
-            Gets or sets the name of the file.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.UploadingFile.PreviewUrl">
+        <member name="P:DotVVM.BusinessPack.Controls.UploadFile.PreviewUrl">
             <summary>
             Gets or sets the URL of an image file preview.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.Filter">
+        <member name="P:DotVVM.BusinessPack.Controls.UploadFile.IsUploaded">
             <summary>
-            The base class for filter conditions and groups.
+            Gets or sets whether the file is uploaded.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.Filter.Type">
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor">
             <summary>
-            Gets the type of the filter. It's required to properly deserialize filters
-            from JSON (see <see cref="T:DotVVM.BusinessPack.Controls.FilterJsonConverter" />).
+            Renders a control allowing users to edit GridView settings (show / hide columns, etc.).
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.FilterableField">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.#ctor">
             <summary>
-            Defines a field that can be used to build complex filters.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor" /> class.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterableField.Name">
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.UserSettings">
             <summary>
-            Gets or sets the name matching the field in database.
+            Gets or sets the <see cref="T:DotVVM.BusinessPack.Controls.GridViewUserSettings" /> instance to edit.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterableField.DisplayText">
-            <summary>
-            Gets or sets the name displayed to users in <see cref="T:DotVVM.BusinessPack.Controls.FilterBuilder" /> control.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterableField.DataType">
-            <summary>
-            Gets or sets the data type to determine the set of operators to use.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.FilterBuilder">
-            <summary>
-            Renders a FilterBuilder control allowing to build complex data filters.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterBuilder.Fields">
-            <summary>
-            Gets or sets an enumeration of filterable fields (properties).
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterBuilder.Filter">
-            <summary>
-            Gets or sets the data filter built using the provided <see cref="P:DotVVM.BusinessPack.Controls.FilterBuilder.Fields" />.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterBuilder.HierarchyDepth">
-            <summary>
-            Gets or sets the maximum depth of filter hierarchy. The default value is 0 which means infinite hierarchy.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterBuilder.Changed">
-            <summary>
-            Gets or sets the command that will be triggered when the filter is changed.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterBuilderExtensions.Where``1(System.Collections.Generic.IEnumerable{``0},DotVVM.BusinessPack.Controls.Filter)">
-            <summary>
-            Filters a sequence of values based on the given filter.
-            </summary>
-            <typeparam name="TSource">The type of elements of source.</typeparam>
-            <param name="source">An enumeration to filter.</param>
-            <param name="filter">The filter to match against each element.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterBuilderExtensions.Where``1(System.Linq.IQueryable{``0},DotVVM.BusinessPack.Controls.Filter)">
-            <summary>
-            Filters a sequence of values based on the given filter.
-            </summary>
-            <typeparam name="TSource">The type of elements of source.</typeparam>
-            <param name="source">An enumeration to filter.</param>
-            <param name="filter">The filter to match against each element.</param>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.FilterCondition">
-            <summary>
-            The condition to match against filtered objects.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterCondition.Field">
-            <summary>
-            Gets or sets name of the field.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterCondition.Operator">
-            <summary>
-            Gets or sets the binary operator to apply.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterCondition.Value">
-            <summary>
-            Gets or sets the value to match.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.FilterGroup">
-            <summary>
-            The group containing nested conditions and groups.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterGroup.Logic">
-            <summary>
-            Gets or sets the logic applied on filters in this group.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterGroup.Filters">
-            <summary>
-            Gets or sets the list of nested conditions and groups.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterGroup.Empty">
-            <summary>
-            Returns whether the group contains any conditions or not.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.FilterJsonConverter">
-            <summary>
-            Converts JSON to one of possible <see cref="T:DotVVM.BusinessPack.Controls.Filter" /> implementations based on <see cref="P:DotVVM.BusinessPack.Controls.Filter.Type" /> property.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.FilterJsonConverter.CanWrite">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.RenderContents(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterJsonConverter.CanConvert(System.Type)">
-            <inheritdoc />
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.FilterPredicateBuilder`1">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.CreateColumnList">
             <summary>
-            Builds a predicate expression from an <see cref="T:DotVVM.BusinessPack.Controls.Filter" />.
-            </summary>
-            <typeparam name="T">The type of filtered objects.</typeparam>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.FilterPredicateBuilder`1.BuildPredicate(DotVVM.BusinessPack.Controls.Filter)">
-            <summary>
-            Builds a predicate expression from the given <see cref="T:DotVVM.BusinessPack.Controls.Filter" />.
-            </summary>
-            <param name="filter">The filter to match objects of type <typeparamref name="T" />.</param>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.GridViewKeyboardActionsDecorator">
-            <summary>
-            Adds keyboard navigation functionality over clickable-row grid view.<br/>
-            It uses <see cref="T:DotVVM.BusinessPack.Controls.DefaultGridViewRowClickDecorator"/> if no Decorator in GridView's RowDecorators has command binding for Events.Click property.<br/>
-            <br/>
-            Supported actions:<br/>
-            - Up arrow key - selects previous row<br/>
-            - Down arrow key - selects next row<br/>
-            - Page Up key - selects first row<br/>
-            - Page Down key - selects last row
+            Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> rendering list of checkable columns.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewKeyboardActionsDecorator.Enabled">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.CreateColumnItem">
             <summary>
-            Gets or sets value indicating whether keyboard action can be performed.
+            Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> rendering a checkable column.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewKeyboardActionsDecorator.SelectedRowElementSelector">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.CreateColumnCheckBox">
             <summary>
-            Gets or sets selector for selected row element. Actions are performed relative to this element.<br/>
-            See https://api.jquery.com/category/selectors/ for more information about selectors.
+            Returns a <see cref="T:DotVVM.BusinessPack.Controls.CheckBox" /> used to show or hide columns.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.DefaultGridViewRowClickDecorator">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewUserSettingsEditor.GetControlBinding">
             <summary>
-            Decorator for GridView clickable rows.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewUserSettingsControlBase.UserSettings">
-            <summary>
-            Gets or sets UserSettings.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewUserSettingsControlBase.IsDisplayed">
-            <summary>
-            Gets or sets visibility of  UserSettings control.
+            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's binding.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.GridView">
@@ -1180,6 +1104,11 @@
             Gets or sets a list of decorators that will be applied on each row which is in edit mode.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridView.InsertRowDecorators">
+            <summary>
+            Gets or sets a list of decorators that will be applied on insert row.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridView.SortChanged">
             <summary>
             Gets or sets the command that will be triggered when the user changed the sort order.
@@ -1196,36 +1125,81 @@
             DataSource.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridView.DisplayFooter">
+        <member name="P:DotVVM.BusinessPack.Controls.GridView.ShowFooter">
             <summary>
             Gets or sets whether the footer should be displayed or not
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridView.InlineInserting">
             <summary>
-            Gets or sets whether the insert row should be rendered in the Grid. If so, you have to use a BpGridViewDataSet as
+            Gets or sets whether the insert row should be rendered in the Grid. If so, you have to use a BusinessPackDataSet as
             the DataSource.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridView.InlineInsertRowPlacement">
             <summary>
-            Gets or sets whether the insert row should be rendered in the Grid. If so, you have to use a BpGridViewDataSet as
+            Gets or sets whether the insert row should be rendered in the Grid. If so, you have to use a BusinessPackDataSet as
             the DataSource.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridView.UserSettings">
             <summary>
-            Gets or sets GridViewUserSettings.
+            Gets or sets the user's GridView settings. It can be used to persist column visibility, order, width, etc.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridView.AllowReorderColumns">
             <summary>
-            Gets or sets enabling or disabling dragging columns.
+            Gets or sets whether it is allowed to change order of GridView columns.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridView.FreezeHeaderRow">
             <summary>
-            Gets or sets locking header of table.
+            Gets or sets whether the header row is freezed and is always visible.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn">
+            <summary>
+            The GridView column rendering a text value that can be edited in the <see cref="T:DotVVM.BusinessPack.Controls.AutoComplete" /> control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.Placeholder">
+            <summary>
+            Gets or sets the text displayed when text is empty.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.DataSourceBinding">
+            <summary>
+            Gets or sets the source collection for <see cref="T:DotVVM.BusinessPack.Controls.ComboBox" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.ItemTemplate">
+            <summary>
+            Gets or sets the template used to render each item in the <see cref="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.DataSourceBinding" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.ItemTextBinding">
+            <summary>
+            Gets or sets the binding which retrieves the text from a <see cref="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.DataSourceBinding" /> item.
+            It retrieves the whole item by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the text is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewAutoCompleteColumn.CreateAutoComplete">
+            <summary>
+            Creates an <see cref="T:DotVVM.BusinessPack.Controls.AutoComplete" /> control used to edit column's value.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn">
@@ -1238,36 +1212,575 @@
             Gets or sets a binding which retrieves the value to display from the current data item.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the value is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.GetSortExpression">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.DetermineColumnName(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewCheckBoxColumn.CraeteCheckBox(System.Boolean)">
+            <summary>
+            Creates a <see cref="T:DotVVM.BusinessPack.Controls.CheckBox" /> control used to view or edit column's value.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.Visible">
             <summary>
-            Gets or sets whether the control is visible.
+            Gets or sets whether this column is visible.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.ColumnName">
             <summary>
-            Gets or sets a unique column name that is used to persist user settings (width, column visibility).
-            You don't need to specify the column name unless you use GridViewUserSettings and you are in a template column, or you have changed the column binding.
-            For GridViewTextColumn and other built-in columns, the column name is determined automatically using the ValueBinding property.
+            Gets or sets the unique name of the column. It's used to persist user's settings (visibility, order, width, etc.).
+            </summary>
+            <remarks>
+            You always need to set the name of the <see cref="T:DotVVM.BusinessPack.Controls.GridViewTemplateColumn"/>. For other types of columns we try to infer the name based on their properties.
+            </remarks>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.HeaderText">
+            <summary>
+            Gets or sets the text of the column header. This property cannot be
+            combined with the <see cref="P:DotVVM.BusinessPack.Controls.GridViewColumn.HeaderTemplate" /> property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.HeaderTemplate">
+            <summary>
+            Gets or sets a template for the column header. This property cannot be
+            combined with the <see cref="P:DotVVM.BusinessPack.Controls.GridViewColumn.HeaderText" /> property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.FilterTemplate">
+            <summary>
+            Gets or sets the template used to render "filter" UI displayed in the header or a separate row.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.SortExpression">
+            <summary>
+            Gets or sets the expression used to sort the underlying data source.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.SortAscendingHeaderCssClass">
+            <summary>
+            Gets or sets the CSS class used when the data are sorted by this column in ascending order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.SortDescendingHeaderCssClass">
+            <summary>
+            Gets or sets the CSS class used when the data are sorted by this column in ascending order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.AllowSorting">
+            <summary>
+            Gets or sets whether data can be sorted by this column.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.CssClass">
+            <summary>
+            Gets or sets the CSS class used for cells in this column.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.InsertCssClass">
+            <summary>
+            Gets or sets the CSS class used for cell in this column in the insert row.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.EditCssClass">
+            <summary>
+            Gets or sets the CSS class used for cells in this column that are in edit mode.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.IsEditable">
+            <summary>
+            Gets or sets whether the value displayed in this column can be edited.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.HeaderCssClass">
+            <summary>
+            Gets or sets the CSS class used for the header cell.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.Width">
+            <summary>
+            Gets or sets the width of this column (all CSS values are supported).
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.FooterTemplate">
+            <summary>
+            Gets or sets a template for the column footer.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.FooterCssClass">
+            <summary>
+            Gets or sets the CSS class used for the footer cell.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewColumn.HtmlFactory">
+            <summary>
+            Gets the factory used to build control's HTML structure.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn">
             <summary>
-            A GridView column which renders a bool value and can edit it in the CheckBox control.
+            The GridView column rendering a value that can be edited by selecting an item from
+            the <see cref="T:DotVVM.BusinessPack.Controls.ComboBox" /> control.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.DataSource">
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.Placeholder">
             <summary>
-            Gets or sets the source collection for combobox.
+            Gets or sets the text displayed when item is not selected (or when text is empty).
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.ValueBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.DataSourceBinding">
             <summary>
-            Gets or sets a binding which retrieves the value to display from the current data item.
+            Gets or sets the source collection for <see cref="T:DotVVM.BusinessPack.Controls.ComboBox" />.
             </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.TextBinding">
+            <summary>
+            Gets or sets a binding which retrieves the text to display.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.ItemTemplate">
+            <summary>
+            Gets or sets the template used to render each item in the <see cref="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.DataSourceBinding" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.ItemKeyBinding">
+            <summary>
+            Gets or sets the binding which retrieves the unique key of a <see cref="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.DataSourceBinding" /> item.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.ItemTextBinding">
+            <summary>
+            Gets or sets the binding which retrieves the text from a <see cref="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.DataSourceBinding" /> item.
+            It retrieves the whole item by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.ItemValueBinding">
+            <summary>
+            Gets or sets the binding which retrieves a value from a <see cref="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.DataSourceBinding" /> property.
+            It retrieves the whole item by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.LoadItemsMode">
+            <summary>
+            Gets or sets how are items returned by the <see cref="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.LoadItemsBinding" /> command.
+            They can either be merged with existing items in the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />; or they can replace them.
+            The default value is <see cref="F:DotVVM.BusinessPack.Controls.LoadItemsMode.Merge" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.LoadItemsBinding">
+            <summary>
+            Gets or sets a function used to load additional items from server. For example, it is used
+            to search for items on server-side.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.AllowNewItem">
+            <summary>
+            Gets or sets whether it is allowed to create new items from the text entered in ComboBox.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the value is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewComboBoxColumn.CreateComboBox">
+            <summary>
+            Creates a <see cref="T:DotVVM.BusinessPack.Controls.ComboBox" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn">
+            <summary>
+            The GridView column rendering a value that can be edited by selecting a date from
+            the <see cref="T:DotVVM.BusinessPack.Controls.DateTimePicker" /> control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.Mode">
+            <summary>
+            Gets or sets whether you want the user to pick only date, only time, or both date and time.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.Placeholder">
+            <summary>
+            Gets or sets the text displayed when date is not selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.FormatString">
+            <summary>
+            Gets or sets the format string that will be used to display the date.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.UseFormatStringAsPlaceholder">
+            <summary>
+            Gets or sets whether to use <see cref="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.FormatString" /> as a placeholder when
+            placeholder property is not set. It is enabled by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.RestrictionsBinding">
+            <summary>
+            Gets or sets days a collection of rules specifying which date time intervals can't be selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.MinDateBinding">
+            <summary>
+            Gets or sets the lowest date that can be selected by user.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.MaxDateBinding">
+            <summary>
+            Gets or sets the highest date that can be selected by user.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.SelectionCompletedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the value is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimePickerColumn.CreateDateTimePicker">
+            <summary>
+            Creates a <see cref="T:DotVVM.BusinessPack.Controls.DateTimePicker" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn">
+            <summary>
+            The GridView column rendering a date range that can be edited by selecting dates from
+            the <see cref="T:DotVVM.BusinessPack.Controls.DateTimeRangePicker" /> control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.Mode">
+            <summary>
+            Gets or sets whether you want the user to pick only date, only time, or both date and time.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.SeparatorText">
+            <summary>
+            Gets or sets the string which is used to separate the start and end values.
+            The default value is " - ".
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.FormatString">
+            <summary>
+            Gets or sets the format string that will be used to display the date.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.UseFormatStringAsPlaceholder">
+            <summary>
+            Gets or sets whether to use <see cref="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.FormatString" /> as a placeholder when
+            placeholder property is not set. It is enabled by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.StartValueBinding">
+            <summary>
+            Gets or sets a binding which retrieves the start date selected in DateTimeRangePicker.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.StartValuePlaceholder">
+            <summary>
+            Gets or sets the text displayed when the start date is not selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.EndValueBinding">
+            <summary>
+            Gets or sets a binding which retrieves the end date selected in DateTimeRangePicker.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.EndValuePlaceholder">
+            <summary>
+            Gets or sets the text displayed when the end date is not selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.RestrictionsBinding">
+            <summary>
+            Gets or sets days a collection of rules specifying which date time intervals can't be selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.MinDateBinding">
+            <summary>
+            Gets or sets the lowest date that can be selected by user.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.MaxDateBinding">
+            <summary>
+            Gets or sets the highest date that can be selected by user.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.SelectionCompletedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the value is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.GetSortExpression">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.DetermineColumnName(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.CreateDateTimeRangePicker">
+            <summary>
+            Creates a <see cref="T:DotVVM.BusinessPack.Controls.DateTimeRangePicker" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDateTimeRangePickerColumn.CreateSeparator">
+            <summary>
+            Returns an <see cref="T:DotVVM.Utils.HtmlElements.IHtmlElement" /> representing a text separating start and end values.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn">
+            <summary>
+            The GridView column rendering a value that can be edited by selecting an item from
+            the <see cref="T:DotVVM.BusinessPack.Controls.DropDownList" /> control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.Placeholder">
+            <summary>
+            Gets or sets the text displayed when item is not selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.DataSourceBinding">
+            <summary>
+            Gets or sets the source collection for <see cref="T:DotVVM.BusinessPack.Controls.ComboBox" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.TextBinding">
+            <summary>
+            Gets or sets a binding which retrieves the text value to be displayed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.ItemTemplate">
+            <summary>
+            Gets or sets the template used to render each item in the <see cref="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.DataSourceBinding" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.ItemKeyBinding">
+            <summary>
+            Gets or sets the binding which retrieves the unique key of a <see cref="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.DataSourceBinding" /> item.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.ItemTextBinding">
+            <summary>
+            Gets or sets the binding which retrieves the text from a <see cref="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.DataSourceBinding" /> item.
+            It retrieves the whole item by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.ItemValueBinding">
+            <summary>
+            Gets or sets the binding which retrieves a value from a <see cref="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.DataSourceBinding" /> property.
+            It retrieves the whole item by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the value is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewDropDownListColumn.CreateDropDownList">
+            <summary>
+            Creates a <see cref="T:DotVVM.BusinessPack.Controls.DropDownList" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn">
+            <summary>
+            The GridView column rendering a text value that can be edited in the <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.Placeholder">
+            <summary>
+            Gets or sets the text displayed when text is empty.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.Mask">
+            <summary>
+            Get or set the mask to validate the text against.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.PatternsBinding">
+            <summary>
+            Gets or sets the patterns used to validate the value. Setting this property will override the
+            default patterns (<see cref="M:DotVVM.BusinessPack.Controls.MaskPattern.CreateDefaultPatterns" />).
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.AdditionalPatternsBinding">
+            <summary>
+            Get or set the additional patterns. Setting this property will not override the default patterns.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the text is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewMaskedTextColumn.CreateMaskedTextBox">
+            <summary>
+            Creates an <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewNumericColumn">
+            <summary>
+            The GridView column rendering a number that can be edited using the <see cref="T:DotVVM.BusinessPack.Controls.NumericUpDown" /> control.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.GridViewNumericColumn" /> class.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.Placeholder">
+            <summary>
+            Gets or sets the text displayed when the value is empty.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.FormatString">
+            <summary>
+            Gets or sets the format string that will be used to display the date.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.UseFormatStringAsPlaceholder">
+            <summary>
+            Gets or sets whether to use <see cref="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.FormatString" /> as a placeholder when
+            <see cref="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.Placeholder" /> property is not set. It is enabled by default.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.ValueBinding">
+            <summary>
+            Gets or sets a binding which retrieves the value of the column.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.MinValue">
+            <summary>
+            Gets or sets the minimum the value must be greater than or equal to.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.MaxValue">
+            <summary>
+            Gets or sets the maximum the value must be less than or equal to.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.Step">
+            <summary>
+            Gets or sets a value used to increment or decrement the value.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewNumericColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the text is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.GetSortExpression">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.DetermineColumnName(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewNumericColumn.CreateNumericUpDown">
+            <summary>
+            Creates a <see cref="T:DotVVM.BusinessPack.Controls.NumericUpDown" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewTemplateColumn">
+            <summary>
+            The GridView column using templates to render its contents.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewTemplateColumn.ContentTemplate">
+            <summary>
+            Gets or sets the template for the cell content.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewTemplateColumn.EditTemplate">
+            <summary>
+            Gets or sets the template for the edit-mode content.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewTemplateColumn.InsertTemplate">
+            <summary>
+            Gets or sets the template for the insert row content.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTemplateColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTemplateColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTemplateColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.GridViewTextColumn">
             <summary>
-            A GridView column which renders a text value (with formatting support) and can edit it in the TextBox control.
+            The GridView column rendering a text value that can be edited in the <see cref="T:DotVVM.BusinessPack.Controls.TextBox" /> control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewTextColumn.Placeholder">
+            <summary>
+            Gets or sets the text displayed when text is empty.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.GridViewTextColumn.FormatString">
@@ -1280,38 +1793,39 @@
             Gets or sets the type of value being formatted - Number or DateTime.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.GridViewTextColumn.ValueBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewTextColumn.ChangedBinding">
             <summary>
-            Gets or sets a binding which retrieves the value to display from the current data item.
+            Gets or sets the command that will be triggered when the text is changed.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2">
-            <summary>
-            The base class for BusinessPack controls operating on a hierarchical collection.
-            It registers BusinessPack resources in OnInit phase.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2" /> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2" /> class.
-            </summary>
-            <param name="tagName">The name of the wrapping tag.</param>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2.Theme">
-            <summary>
-            Gets the <typeparamref name="TTheme" /> for this control. It can be changed
-            using the <see cref="F:DotVVM.BusinessPack.Controls.BusinessPack.ThemeProperty" />.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTextColumn.CreateControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
             <inheritdoc />
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase`2.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTextColumn.CreateEditControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTextColumn.CreateInsertControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Utils.HtmlElements.HtmlElement)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewTextColumn.CreateTextBox">
+            <summary>
+            Creates an <see cref="T:DotVVM.BusinessPack.Controls.TextBox" /> control used to edit column's value.
+            </summary>
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.GridViewValueColumn">
+            <summary>
+            The base class for GridView columns bound to a value.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.GridViewValueColumn.ValueBinding">
+            <summary>
+            Gets or sets a binding which retrieves the value of the column.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewValueColumn.GetSortExpression">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.GridViewValueColumn.DetermineColumnName(System.Int32)">
             <inheritdoc />
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase">
@@ -1361,15 +1875,14 @@
             Returns an <c>if</c> comment checking whether <c>$data</c> contains any items.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateLevel">
+        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateClientLevel">
             <summary>
             Returns an <see cref="T:DotVVM.Utils.HtmlElements.IHtmlContainer" /> representing a hierarchy level rendered on client-side.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateLevel(System.Object[],System.String)">
+        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateServerLevel(System.Object[],System.String)">
             <summary>
-            Returns an <see cref="T:DotVVM.Utils.HtmlElements.IHtmlContainer" /> representing a hierarchy level built from the given
-            <paramref name="dataSource" />.
+            Returns an <see cref="T:DotVVM.Utils.HtmlElements.IHtmlContainer" /> representing a hierarchy level rendered on server-side.
             </summary>
             <param name="dataSource">An array of hierarchy items.</param>
             <param name="dataSourceExpression">The expression to access <paramref name="dataSource" /> on client-side.</param>
@@ -1380,15 +1893,14 @@
             By default it returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlContents" /> container.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateItem">
+        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateClientItem">
             <summary>
             Returns a <see cref="T:DotVVM.Framework.Controls.DataItemContainer" /> representing a hierarchy item rendered on client-side.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateItem(System.Object[],System.String,System.Int32)">
+        <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.CreateServerItem(System.Object[],System.String,System.Int32)">
             <summary>
-            Returns a <see cref="T:DotVVM.Framework.Controls.DataItemContainer" /> representing a hierarchy item retrieved from
-            the given <paramref name="dataSource" />.
+            Returns a <see cref="T:DotVVM.Framework.Controls.DataItemContainer" /> representing a hierarchy item rendered on server-side.
             </summary>
             <param name="dataSource">An array of hierarchy items.</param>
             <param name="dataSourceExpression">The expression to access <paramref name="dataSource" /> on client-side.</param>
@@ -1424,66 +1936,8 @@
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.HierarchyItemsControlBase.GetControlBinding">
             <summary>
-            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's client-side binding.
+            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's binding.
             </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.HierarchyRepeater">
-            <summary>
-            Repeats a template for each item in the hierarchical DataSource collection.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HierarchyRepeater.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.HierarchyRepeater" /> class.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.HierarchyRepeater.ItemTemplate">
-            <summary>
-            Gets or sets the template for each HierarchyRepeater item.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.HierarchyRepeater.EmptyDataTemplate">
-            <summary>
-            Gets or sets the template which will be displayed when the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> is empty.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.HierarchyRepeater.LevelTagName">
-            <summary>
-            Gets or sets the name of the tag that wraps each hierarchy level (eg. <c>ul</c>).
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.HierarchyRepeater.ItemTagName">
-            <summary>
-            Gets or sets the name of the tag that wraps each hierarchy item (eg. <c>li</c>).
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.HtmlControlBase`2">
-            <summary>
-            The base class for BusinessPack controls. It registers BusinessPack resources in OnInit phase.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase`2.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.HtmlControlBase`2" /> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase`2.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.HtmlControlBase`2" /> class.
-            </summary>
-            <param name="tagName">The name of the wrapping tag.</param>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.HtmlControlBase`2.Theme">
-            <summary>
-            Gets the <typeparamref name="TTheme"/> for this control. It can be changed 
-            using the <see cref="F:DotVVM.BusinessPack.Controls.BusinessPack.ThemeProperty"/>.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase`2.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase`2.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <inheritdoc />
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.HtmlControlBase">
             <summary>
@@ -1514,8 +1968,7 @@
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase.ValidateControl(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
-            Validates the control and its properties. Unlike the <c>ControlUsageValidator</c> this method is executed at runtime. 
-            It can be used to validate property values.
+            Validates the control and its properties. Unlike the <c>ControlUsageValidator</c> this method is executed at runtime.
             </summary>
             <param name="context">The DotVVM request context.</param>
         </member>
@@ -1524,6 +1977,20 @@
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase.AddVisibleAttributeOrBinding(DotVVM.Framework.Controls.IHtmlWriter)">
             <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase.CanGetValue(DotVVM.Framework.Binding.DotvvmProperty)">
+            <summary>
+            Returns whether it's safe to get a value of the given property.
+            </summary>
+            <param name="property">The DotVVM property.</param>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase.GetValueOrDefault(DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
+            <summary>
+            Returns a value of the given property. Or a default value when
+            the current value is <c>null</c>.
+            </summary>
+            <param name="property">The property to get the value of.</param>
+            <param name="inherit">Indicates whether to return inherited values.</param>
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.HtmlControlBase.IsInitiallyVisible">
             <summary>
@@ -1586,133 +2053,18 @@
             <param name="writer">The HTML writer.</param>
             <param name="bindingGroup">The group of Knockout bindings.</param>
         </member>
+        <member name="M:DotVVM.BusinessPack.Controls.HtmlWriterExtensions.AddControlKnockoutDataBind(DotVVM.Framework.Controls.IHtmlWriter,System.Type,DotVVM.BusinessPack.Controls.ControlBindingGroup)">
+            <summary>
+            Adds the BusinessPack control binding to the next HTML element that is being rendered.
+            </summary>
+            <param name="writer">The HTML writer.</param>
+            <param name="controlType">The type of the control.</param>
+            <param name="bindingGroup">The group of Knockout bindings.</param>
+        </member>
         <member name="T:DotVVM.BusinessPack.Controls.IconType">
             <summary>
             Defines CSS classes of all supported icons (FAIcon).
             </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.CropRectangle">
-            <summary>
-            A rectangle specifying how to crop an image.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CropRectangle.Left">
-            <summary>
-            Gets or sets the x-coordinate of the left edge of the rectangle.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CropRectangle.Top">
-            <summary>
-            Gets or sets the y-coordinate of the top edge of the rectangle.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CropRectangle.Width">
-            <summary>
-            Gets or sets the width of the crop rectangle (Left + Width = Right).
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.CropRectangle.Height">
-            <summary>
-            Gets or sets the height of crop rectangle (Top + Height = Bottom).
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.DefaultImageFactory">
-            <summary>
-            The default image factory based on System.Drawing / GDI+.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Load(System.IO.Stream)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Apply(DotVVM.BusinessPack.Controls.ImageOperations)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Resize(System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Rotate(System.Int32)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Crop(DotVVM.BusinessPack.Controls.CropRectangle)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Round(System.Int32)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Save(System.IO.Stream,DotVVM.BusinessPack.Controls.ImageFormat)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.DefaultImageFactory.Dispose">
-            <summary>
-            Releases resources used by the current image.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.IImageFactory">
-            <summary>
-            The factory providing basic image editing operations (eg, resize, rotate, crop).
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Load(System.IO.Stream)">
-            <summary>
-            Loads the image to process from stream. The image must be loaded before other methods can be called.
-            </summary>
-            <param name="input">The stream containing the image data. It will not be disposed.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="input" /> is <c>null</c>.
-            </exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Apply(DotVVM.BusinessPack.Controls.ImageOperations)">
-            <summary>
-            Applies the specified operations to the current image.
-            </summary>
-            <param name="operations">An object defining image operations to apply.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="operations" /> is <c>null</c>.
-            </exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Resize(System.Nullable{System.Int32},System.Nullable{System.Int32})">
-            <summary>
-            Resizes the current image to the specified dimensions.
-            </summary>
-            <param name="width">The width of the resized image. If the value is <c>null</c>, it is computed automatically.</param>
-            <param name="height">The height of the resized image. If the value is <c>null</c>, it is computed automatically.</param>
-            <exception cref="T:System.ArgumentException">
-            <paramref name="width" /> and <paramref name="height" /> are both <c>null</c>.
-            </exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Rotate(System.Int32)">
-            <summary>
-            Rotates the current image by the given angle.
-            </summary>
-            <param name="degrees">The rotation angle.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Crop(DotVVM.BusinessPack.Controls.CropRectangle)">
-            <summary>
-            Crops the current image to the given coordinates.
-            </summary>
-            <param name="rectangle">The rectangle specifying how to crop the image.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="rectangle" /> is <c>null</c>.
-            </exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Round(System.Int32)">
-            <summary>
-            Rounds corners of the current image by the given radius.
-            </summary>
-            <param name="radius">The percentage specifying how to round the image corners.</param>
-            <exception cref="T:System.ArgumentOutOfRangeException">
-            <paramref name="radius" /> is less than zero or greater than 50.
-            </exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.IImageFactory.Save(System.IO.Stream,DotVVM.BusinessPack.Controls.ImageFormat)">
-            <summary>
-            Saves the current image to stream. The position will be set to the end of stream after the image is saved.
-            </summary>
-            <param name="output">The stream to save the image data to.</param>
-            <param name="format">The result image format.</param>
-            <exception cref="T:System.ArgumentNullException">
-            <paramref name="output" /> is <c>null</c>.
-            </exception>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.ImageCrop">
             <summary>
@@ -1736,20 +2088,20 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropWidth">
             <summary>
-            Gets or sets the forced width of the cropped image. If the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropHeight" /> property is not set, it is
-            computed automatically (see the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.AspectRatio" />).
+            Gets or sets the forced width of the cropped image. If the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropHeight" /> property is not set,
+            it is computed automatically (see the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.AspectRatio" />).
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropHeight">
             <summary>
-            Gets or sets the forced height of the cropped image. If the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropWidth" /> property is not set, it is
-            computed automatically (see the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.AspectRatio" />).
+            Gets or sets the forced height of the cropped image. If the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropWidth" /> property is not set,
+            it is computed automatically (see the <see cref="P:DotVVM.BusinessPack.Controls.ImageCrop.AspectRatio" />).
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ImageCrop.ForcedCropRadius">
             <summary>
             Gets or sets the forced radius of the image corners. The value must be
-            between 0 and 50 (both inclusive). It is not set by default.
+            between 0 and 50 % (both inclusive). It is not set by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ImageCrop.AspectRatio">
@@ -1804,97 +2156,6 @@
             Gets or sets the command that will be triggered when the image attributes are changed.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ImageFactoryExtensions.Load(DotVVM.BusinessPack.Controls.IImageFactory,System.String)">
-            <summary>
-            Loads the image to process from file. The image must be loaded before other methods can be called.
-            </summary>
-            <param name="factory">The image factory.</param>
-            <param name="path">The absolute path to the image file.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ImageFactoryExtensions.Load(DotVVM.BusinessPack.Controls.IImageFactory,System.Byte[])">
-            <summary>
-            Loads the image to process from buffer. The image must be loaded before other methods can be called.
-            </summary>
-            <param name="factory">The image factory.</param>
-            <param name="bytes">The buffer containing the image data.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ImageFactoryExtensions.Crop(DotVVM.BusinessPack.Controls.IImageFactory,System.Int32,System.Int32,System.Int32,System.Int32)">
-            <summary>
-            Crops the current image to the given coordinates.
-            </summary>
-            <param name="factory">The image factory.</param>
-            <param name="left">The x-coordinate of the left edge of the rectangle.</param>
-            <param name="top">The y-coordinate of the top edge of the rectangle.</param>
-            <param name="width">The width of the crop rectangle (Left + Width = Right).</param>
-            <param name="height">The height of crop rectangle (Top + Height = Bottom).</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ImageFactoryExtensions.Save(DotVVM.BusinessPack.Controls.IImageFactory,System.String,DotVVM.BusinessPack.Controls.ImageFormat)">
-            <summary>
-            Saves the current image to file.
-            </summary>
-            <param name="factory">The image factory.</param>
-            <param name="path">The absolute path to the image file.</param>
-            <param name="format">The result image format.</param>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.ImageOperations">
-            <summary>
-            Defines operations applied of an image being cropped.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ImageOperations.Resize">
-            <summary>
-            Gets or sets the width of the resized image. The image is resized before it is cropped.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ImageOperations.Rotate">
-            <summary>
-            Gets or sets the degrees indicating image rotation. The image is rotated before it is cropped.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ImageOperations.Crop">
-            <summary>
-            Gets or sets the rectangle specifying how to crop the image.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ImageOperations.Round">
-            <summary>
-            Gets or sets a percentage indicating how to round the image corners. The image is rounded after it is cropped.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ImageOperations.ToString">
-            <summary>
-            Returns a string representation of image operations.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.ItemsControlBase`2">
-            <summary>
-            The base class for BusinessPack controls operating on a collection.
-            It registers BusinessPack resources in OnInit phase.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase`2.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ItemsControlBase`2" /> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase`2.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ItemsControlBase`2" /> class.
-            </summary>
-            <param name="tagName">The name of the wrapping tag.</param>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ItemsControlBase`2.Theme">
-            <summary>
-            Gets the <typeparamref name="TTheme" /> for this control. It can be changed
-            using the <see cref="F:DotVVM.BusinessPack.Controls.BusinessPack.ThemeProperty" />.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase`2.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <inheritdoc />
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase`2.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <inheritdoc />
-        </member>
         <member name="T:DotVVM.BusinessPack.Controls.ItemsControlBase">
             <summary>
             The base class for BusinessPack controls operating on a collection.
@@ -1943,78 +2204,104 @@
             </summary>
             <param name="dataSource">The data source to retrieve items from.</param>
         </member>
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase.CanGetValue(DotVVM.Framework.Binding.DotvvmProperty)">
+            <summary>
+            Returns whether it's safe to get a value of the given property.
+            </summary>
+            <param name="property">The DotVVM property.</param>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase.GetValueOrDefault(DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
+            <summary>
+            Returns a value of the given property. Or a default value when
+            the current value is <c>null</c>.
+            </summary>
+            <param name="property">The property to get the value of.</param>
+            <param name="inherit">Indicates whether to return inherited values.</param>
+        </member>
         <member name="M:DotVVM.BusinessPack.Controls.ItemsControlBase.IsInitiallyVisible">
             <summary>
             Returns whether the control is initially visible. If the result is <c>false</c>
             the control is rendered with <c>display: none;</c> style.
             </summary>
         </member>
-        <member name="T:DotVVM.BusinessPack.Controls.ItemsEditorBase`2">
+        <member name="T:DotVVM.BusinessPack.Controls.ItemsEditorBase">
             <summary>
             The base class for BusinessPack controls like AutoComplete, ComboBox and MultiSelect. It registers
             BusinessPack resources in OnInit phase.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.#ctor">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ItemsEditorBase`2" /> class.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ItemsEditorBase" /> class.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.#ctor(System.String)">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ItemsEditorBase`2" /> class.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ItemsEditorBase" /> class.
             </summary>
             <param name="tagName">The name of the wrapping tag.</param>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.Placeholder">
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.Placeholder">
             <summary>
             Gets or sets the text displayed when no item is selected (or when text is empty).
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.ItemTemplate">
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.ItemTemplate">
             <summary>
-            Gets or sets the template for each item.
+            Gets or sets the template used to render each item in the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.ItemTextBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.ItemTextBinding">
             <summary>
             Gets or sets the binding which retrieves the text from a <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item.
             It retrieves the whole item by default.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.Enabled">
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.Enabled">
             <summary>
             Gets or sets whether the control is enabled and can be modified.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.Changed">
+        <member name="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.Changed">
             <summary>
             Gets or sets the command that will be triggered when the text (or value) is changed.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.CreateInput">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.CreateInput">
             <summary>
             Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> representing an input where user can type text.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.CreateSearchResults">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.CreateSearchResults">
             <summary>
             Returns an <see cref="T:DotVVM.Utils.HtmlElements.HtmlElement" /> representing a popup containing search results.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.CreateSearchResultItem">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.CreateSearchResultItem">
             <summary>
             Returns a <see cref="T:DotVVM.Framework.Controls.DataItemContainer" /> representing a result rendered inside
-            the <see cref="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.CreateSearchResults" /> popup.
+            the <see cref="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.CreateSearchResults" /> popup.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.GetItemTemplate">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.GetItemTemplate">
             <summary>
-            Returns the <see cref="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.ItemTemplate" /> when it is not <c>null</c>. Otherwise returns a default
-            template rendering contents of a property specified by <see cref="P:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.ItemTextBinding" />.
+            Returns the <see cref="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.ItemTemplate" /> when it is not <c>null</c>. Otherwise returns a default
+            template rendering contents of a property specified by <see cref="P:DotVVM.BusinessPack.Controls.ItemsEditorBase.ItemTextBinding" />.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase`2.GetControlBinding">
+        <member name="M:DotVVM.BusinessPack.Controls.ItemsEditorBase.GetControlBinding">
             <summary>
             Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's client-side binding.
             </summary>
@@ -2027,6 +2314,18 @@
         <member name="M:DotVVM.BusinessPack.Controls.ListView.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.ListView" /> class.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ListView.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.ListView.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.ListView.DisplayMode">
@@ -2088,59 +2387,78 @@
             Renders a TextBox control that allows to specify mask to enforce a specific value format.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Enabled">
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.#ctor">
             <summary>
-            Gets or sets a value indicating whether the control is enabled.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.MaskedTextBox" /> class.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text">
             <summary>
-            Get or set text in input, based on mask.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Mask">
-            <summary>
-            Get or set the mask for the input element.
+            Get or set the text entered by user.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Placeholder">
             <summary>
-            Get or set the placeholder in the input element.
+            Gets or sets the text displayed when the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text"/> is empty.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.IsTextValid">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.TabIndex">
             <summary>
-            Gets a value indicating whether the text in the MaskedTextBox is valid.
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Definitions">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.AutoFocus">
             <summary>
-            With binding override the default definitions according to which is MaskedTextBox validated.
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.AdditionalDefinitions">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Mask">
             <summary>
-            Get or set the additional definitions which is added to Definitions.
+            Get or set the mask to validate the text against.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.IsMaskedTextBoxValidOnServer(System.String,System.String)">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Patterns">
             <summary>
-            Validate textToValidate, by mask with default definitions.
+            Gets or sets the patterns used to validate the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text" />. Setting this property will override the
+            default patterns (<see cref="M:DotVVM.BusinessPack.Controls.MaskPattern.CreateDefaultPatterns" />).
             </summary>
-            <param name="mask">Mask with definitions, e.g. 999/999/999.</param>
-            <param name="textToValidate">Text which will be validated.</param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.IsMaskedTextBoxValidOnServer(System.String,System.String,System.Collections.Generic.Dictionary{System.Char,DotVVM.BusinessPack.Controls.MaskDefinitionItem})">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.AdditionalPatterns">
             <summary>
-            Validate textToValidate, by mask with definitions.
+            Get or set the additional patterns. Setting this property will not override the default patterns.
             </summary>
-            <param name="mask">Mask with definitions, e.g. 999/999/999.</param>
-            <param name="textToValidate">Text which will be validated.</param>
-            <param name="definitions">Definitions with which will be validated textToValidate param.</param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.MaskedValueAttribute.CreateDefaultMaskDefinitions">
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Enabled">
             <summary>
-            Create default definitions for Mask validators.
+            Gets or sets a value indicating whether the control is enabled and can be modified.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Changed">
+            <summary>
+            Gets or sets the command that will be triggered when the text is changed.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.OnLoad(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.IsTextValid">
+            <summary>
+            Returns whether the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text" /> matches the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Mask" />.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.CreateValidationError">
+            <summary>
+            Creates a validation error in case the <see cref="P:DotVVM.BusinessPack.Controls.MaskedTextBox.Text" /> is not valid on postback.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.MaskedTextBox.GetControlBinding">
+            <summary>
+            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's client-side binding.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.DialogBase">
@@ -2155,67 +2473,78 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.IsDisplayed">
             <summary>
-            Gets or sets whether dialog is displayed.
+            Gets or sets the value indicating whether the dialog is visible.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.Width">
             <summary>
             Gets or sets the width of the dialog. The value uses the CSS syntax, e.g. 640px or 80%.
+            The default value is 640px.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.MinWidth">
             <summary>
-            Gets or sets the minimum width of the dialog. The value uses the CSS syntax, e.g. 640px or 80%.
+            Gets or sets the minimum width of the dialog in pixels. The default value is 250.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.Height">
             <summary>
             Gets or sets the height of the dialog. The value uses the CSS syntax, e.g. 640px or 80%.
+            It is not set by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.MinHeight">
             <summary>
-            Gets or sets the minimum height of dialog. The value uses the CSS syntax, e.g. 640px or 80%.
+            Gets or sets the minimum height of dialog in pixels. The default value is 150.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.AnimationDuration">
             <summary>
-            Gets or sets duration of open and close animations in seconds when set to 0 than no animation is used.
+            Gets or sets how long will the open and close animations run
+            (in seconds). If the value is equal to 0, dialog is not animated.
+            The default value is 0.25 seconds.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.AllowResize">
             <summary>
-            Gets or sets whether the resizing is enabled.
+            Gets or sets whether user is allowed to resize the dialog. 
+            It's enabled by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.InitialPositionLeft">
             <summary>
             Gets or sets initial position from left border. The value uses the CSS syntax, e.g. 200px or 10%.
+            It is not set by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.InitialPositionTop">
             <summary>
             Gets or sets initial position from top border. The value uses the CSS syntax, e.g. 200px or 10%.
+            It is not set by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.CloseOnOutsideClick">
             <summary>
-            Gets or sets whether dialog will be closed on outside click.
+            Gets or sets whether dialog will be closed when user clicks outside the dialog. 
+            It's enabled by default.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DialogBase.CloseOnEscapePress">
+        <member name="P:DotVVM.BusinessPack.Controls.DialogBase.CloseOnEscape">
             <summary>
-            Gets or sets whether dialog will be closed on escape press.
+            Gets or sets whether dialog will be closed when user hits the Escape key.
+            It's enabled by default.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.DialogBase.UseBackdrop">
+        <member name="P:DotVVM.BusinessPack.Controls.DialogBase.ShowOverlay">
             <summary>
-            Gets or sets whether dialog will be closed on outside click.
+            Gets or sets whether an overlay is displayed under the dialog. 
+            It's enabled by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.DeathZoneSize">
             <summary>
             Gets or sets size (in px) of zone around the dialog borders where modal cannot be moved or resized into.
+            The default size is 10px.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.DialogBase.ContentTemplate">
@@ -2272,7 +2601,8 @@
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Window.AllowMove">
             <summary>
-            Gets or sets a value indicating whether moving of the window is allowed.
+            Gets or sets whether user is allowed to change position of the window. 
+            It's enabled by default.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.MultiSelect">
@@ -2306,6 +2636,13 @@
             The default value is <see cref="F:DotVVM.BusinessPack.Controls.IconType.FaClose" />.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.MultiSelect.LoadItemsMode">
+            <summary>
+            Gets or sets how are items returned by the <see cref="P:DotVVM.BusinessPack.Controls.MultiSelect.LoadItems"/> command processed. 
+            They can either be merged with existing items in the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />; or they can replace them.
+            The default value is <see cref="F:DotVVM.BusinessPack.Controls.LoadItemsMode.Merge"/>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.MultiSelect.LoadItems">
             <summary>
             Gets or sets a function used to load additional items from server. For example, it is used
@@ -2332,9 +2669,32 @@
             Gets or sets the value displayed in the control.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.NumericUpDown.Placeholder">
+            <summary>
+            Gets or sets the text displayed when the <see cref="P:DotVVM.BusinessPack.Controls.NumericUpDown.Value"/> is empty.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.NumericUpDown.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.NumericUpDown.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.NumericUpDown.FormatString">
             <summary>
             Gets or sets format string used to display the <see cref="P:DotVVM.BusinessPack.Controls.NumericUpDown.Value" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.NumericUpDown.UseFormatStringAsPlaceholder">
+            <summary>
+            Gets or sets whether to use <see cref="P:DotVVM.BusinessPack.Controls.NumericUpDown.FormatString" /> as a placeholder when
+            <see cref="P:DotVVM.BusinessPack.Controls.NumericUpDown.Placeholder"/> property is not set. It is enabled by default.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.NumericUpDown.MinValue">
@@ -2424,21 +2784,31 @@
             Renders the HTML radio button.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.RadioButton.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.RadioButton.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.RadioButton.RenderEmptyLabel">
             <summary>
             Gets or sets whether to render an empty &lt;label&gt; element when the <see cref="P:DotVVM.Framework.Controls.CheckableControlBase.Text" /> is empty.
             It allows to use custom RadioButton themes. The default value is <c>true</c>.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RadioButton.Theme">
-            <summary>
-            Gets the theme for this control. It can be changed using the <see cref="F:DotVVM.BusinessPack.Controls.BusinessPack.ThemeProperty" />.
-            </summary>
-        </member>
         <member name="M:DotVVM.BusinessPack.Controls.RadioButton.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <inheritdoc />
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.RadioButton.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.RadioButton.AddAttributesToInput(DotVVM.Framework.Controls.IHtmlWriter)">
             <inheritdoc />
         </member>
         <member name="M:DotVVM.BusinessPack.Controls.RadioButton.RenderBeginTag(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -2464,9 +2834,6 @@
             <summary>
             Gets or sets whether to display a preview of the selected value when user hovers over the control.
             </summary>
-            <remarks>
-            This property must not be true if server rendering is enabled.
-            </remarks>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.Rating.AllowHalfPoints">
             <summary>
@@ -2522,199 +2889,42 @@
             </summary>
             <param name="resourceManager">The resource manager.</param>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.ResourceManagerExtensions.AddBusinessPackRequiredResources``1(DotVVM.Framework.ResourceManagement.ResourceManager,DotVVM.BusinessPack.Themes.ITheme{``0})">
-            <summary>
-            Adds the resources required by the <typeparamref name="TControl" /> component.
-            </summary>
-            <param name="resourceManager">The resource manager.</param>
-            <param name="theme">The theme for <typeparamref name="TControl" />.</param>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.RgbaColor">
-            <summary>
-            Represents an RGBA (red, green, blue, alpha) color.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.#ctor(System.Byte,System.Byte,System.Byte,System.Double)">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> class.
-            </summary>
-            <param name="red">The red channel.</param>
-            <param name="green">The green channel.</param>
-            <param name="blue">The blue channel.</param>
-            <param name="alpha">The alpha channel.</param>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RgbaColor.Red">
-            <summary>
-            Gets or sets the red channel.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RgbaColor.Green">
-            <summary>
-            Gets or sets the green channel.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RgbaColor.Blue">
-            <summary>
-            Gets or sets the blue channel.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RgbaColor.Alpha">
-            <summary>
-            Gets or sets the alpha channel.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.ParseHexColor(System.String)">
-            <summary>
-            Converts the #RRGGBBAA HEX color to its <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> equivalent.
-            </summary>
-            <param name="value">A string containing HEX color.</param>
-            <exception cref="T:System.ArgumentNullException">The <paramref name="value" /> is <c>null</c>.</exception>
-            <exception cref="T:System.FormatException">The <paramref name="value" /> doesn't contain a valid HEX color value.</exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.ParseHexColor(System.String,System.Boolean)">
-            <summary>
-            Converts the #RRGGBBAA HEX color to its <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> equivalent.
-            </summary>
-            <param name="value">A string containing HEX color.</param>
-            <param name="allowAlphaChannel">Indicates whether HEX colors with alpha channel are allowed.</param>
-            <exception cref="T:System.ArgumentNullException">The <paramref name="value" /> is <c>null</c>.</exception>
-            <exception cref="T:System.FormatException">The <paramref name="value" /> doesn't contain a valid HEX color value.</exception>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.TryParseHexColor(System.String,DotVVM.BusinessPack.Controls.RgbaColor@)">
-            <summary>
-            Converts the #RRGGBBAA HEX color to its <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> equivalent.
-            A return value indicates whether the conversion succeeded.
-            </summary>
-            <param name="value">A string containing HEX color.</param>
-            <param name="result">
-            When this method returns, contains the <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> equivalent of the HEX color contained in
-            the <paramref name="value" />, if the conversion succeeded, or <c>null</c> if the conversion failed.
-            </param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.TryParseHexColor(System.String,System.Boolean,DotVVM.BusinessPack.Controls.RgbaColor@)">
-            <summary>
-            Converts the #RRGGBBAA HEX color to its <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> equivalent.
-            A return value indicates whether the conversion succeeded.
-            </summary>
-            <param name="value">A string containing HEX color.</param>
-            <param name="allowAlphaChannel">Indicates whether HEX colors with alpha channel are allowed.</param>
-            <param name="result">
-            When this method returns, contains the <see cref="T:DotVVM.BusinessPack.Controls.RgbaColor" /> equivalent of the HEX color contained in
-            the <paramref name="value" />, if the conversion succeeded, or <c>null</c> if the conversion failed.
-            </param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.op_Equality(DotVVM.BusinessPack.Controls.RgbaColor,DotVVM.BusinessPack.Controls.RgbaColor)">
-            <summary>
-            Returns whether the two RGBA colors are equal.
-            </summary>
-            <param name="color1">The first color to compare.</param>
-            <param name="color2">The second color to compare.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.op_Inequality(DotVVM.BusinessPack.Controls.RgbaColor,DotVVM.BusinessPack.Controls.RgbaColor)">
-            <summary>
-            Returns whether the two RGBA colors are not equal.
-            </summary>
-            <param name="color1">The first color to compare.</param>
-            <param name="color2">The second color to compare.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.Equals(DotVVM.BusinessPack.Controls.RgbaColor)">
-            <summary>
-            Returns whether this RGBA color is equal to the other color.
-            </summary>
-            <param name="other">The other RGBA color.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.Equals(System.Object)">
-            <summary>
-            Returns whether this RGBA color is equal to the other object.
-            </summary>
-            <param name="obj">The other object.</param>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.GetHashCode">
-            <summary>
-            Returns the hash code for this instance.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.ToHexColor">
-            <summary>
-            Returns this RGBA color converted to #RRGGBBAA color value.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.ToCssColor">
-            <summary>
-            Returns this RGBA color converted to CSS color value.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RgbaColor.ToString">
-            <summary>
-            Returns a string representation of this RGBA color.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.RichTextBox">
-            <summary>
-            Renders a RichTextBox control similar to HTML &lt;textarea&gt; element with rich text editing capabilities.
-            </summary>
-        </member>
-        <member name="M:DotVVM.BusinessPack.Controls.RichTextBox.#ctor">
-            <summary>
-            Initializes a new instance of hte <see cref="T:DotVVM.BusinessPack.Controls.RichTextBox" /> class.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RichTextBox.Html">
-            <summary>
-            Gets or sets the HTML content of the editor.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RichTextBox.Placeholder">
-            <summary>
-            Gets or sets the text displayed when text is empty.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RichTextBox.Changed">
-            <summary>
-            Gets or sets the command that will be triggered when the control text (or value) is changed.
-            </summary>
-        </member>
-        <member name="P:DotVVM.BusinessPack.Controls.RichTextBox.Enabled">
-            <summary>
-            Gets or sets a value indicating whether the editor's content can be modified.
-            </summary>
-        </member>
-        <member name="T:DotVVM.BusinessPack.Controls.SelectorBase`2">
+        <member name="T:DotVVM.BusinessPack.Controls.SelectorBase">
             <summary>
             The base class for BusinessPack controls selecting on or multiple values from DataSource.
             It registers BusinessPack resources in OnInit phase.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.SelectorBase`2.#ctor">
+        <member name="M:DotVVM.BusinessPack.Controls.SelectorBase.#ctor">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.SelectorBase`2" /> class.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.SelectorBase" /> class.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.SelectorBase`2.#ctor(System.String)">
+        <member name="M:DotVVM.BusinessPack.Controls.SelectorBase.#ctor(System.String)">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.SelectorBase`2" /> class.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.SelectorBase" /> class.
             </summary>
             <param name="tagName">The name of the wrapping tag.</param>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.SelectorBase`2.ItemKeyBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.SelectorBase.ItemKeyBinding">
             <summary>
             Gets or sets the binding which retrieves the unique key of a <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.SelectorBase`2.ItemValueBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.SelectorBase.ItemValueBinding">
             <summary>
             Gets or sets the binding which retrieves a value from a <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> property.
             It retrieves the whole item by default.
             </summary>
         </member>
-        <member name="M:DotVVM.BusinessPack.Controls.SelectorBase`2.GetControlBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.SelectorBase.ItemEnabledBinding">
             <summary>
-            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's client-side binding.
+            Gets or sets the binding indicating whether a <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> item can be selected.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.SelectorBase.GetControlBinding">
+            <summary>
+            Returns <see cref="T:DotVVM.BusinessPack.Controls.ControlBindingGroup" /> containing values for control's binding.
             </summary>
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.RangeSlider">
@@ -2747,6 +2957,23 @@
             A base class for Slider controls.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.SliderBase.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.SliderBase.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.SliderBase.Enabled">
+            <summary>
+            Gets or sets whether the slider is enabled.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.SliderBase.Step">
             <summary>
             Gets or sets the minimum step for increasing or decreasing the value.
@@ -2772,62 +2999,170 @@
             Renders a collection of tabs with specific contents.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.TabControl.Items">
+        <member name="M:DotVVM.BusinessPack.Controls.TabControl.#ctor">
             <summary>
-            Gets or sets list of tab items.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.TabControl" /> class.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.TabControl.HeaderTemplate">
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.Tabs">
             <summary>
-            Gets or sets template for tab headers. This property is used when the tabs are generated from a collection bound to the DataSource property.
+            Gets or sets a collection of tabs rendered inside.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.TabControl.ContentTemplate">
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.ActiveTabKey">
             <summary>
-            Gets or sets template for tab contents from DataSource. This property is used when the tabs are generated from a collection bound to the DataSource property.
+            Gets or sets the key of a tab that is currently active.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.TabControl.ItemIsActiveBinding">
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabHeaderTemplate">
             <summary>
-            Gets or sets a binding expression for a DataSource collection item which determines whether the tab should be active or not.
-            Only one of the tabs should be open at the same time.
+            Gets or sets the template for headers of tabs. This property is used when tabs
+            are loaded from the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> property.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.TabControl.ActiveTabIndex">
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabContentTemplate">
             <summary>
-            Gets or sets a zero-based index of a tab that is currently active.
+            Gets or sets the template rendering contents of tabs. This property is used when tabs
+            are loaded from the <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> property.
             </summary>
-            
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabKeyBinding">
+            <summary>
+            Gets or sets the binding which retrieves the unique key of a tab from <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabHeaderTextBinding">
+            <summary>
+            Gets or sets the binding which retrieves the text of the header a tab from <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabIsActiveBinding">
+            <summary>
+            Gets or sets the binding which determines whether a tab from <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />
+            is active or not. Only one tab can be active at the same time.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabEnabledBinding">
+            <summary>
+            Gets or sets the binding which retrieves whether a tab from <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" />
+            is enabled and can be activated.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabControl.TabVisibleBinding">
+            <summary>
+            Gets or sets the binding which retrieves whether a tab from
+            <see cref="P:DotVVM.Framework.Controls.ItemsControl.DataSource" /> is visible.
+            </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.TabControl.ActiveTabChanged">
             <summary>
-            Gets or sets the command that will be triggered when the selected tab is changed.
+            Gets or sets the command that will be triggered when the active tab is changed.
             </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabControl.OnLoad(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabControl.OnPreRender(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabControl.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabControl.RenderContents(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.TabItem">
             <summary>
-            Represents a tab item used inside the TabControl.
+            Represents a tab rendered inside the <see cref="T:DotVVM.BusinessPack.Controls.TabControl" />.
             </summary>
         </member>
-        <member name="P:DotVVM.BusinessPack.Controls.TabItem.IsActive">
+        <member name="M:DotVVM.BusinessPack.Controls.TabItem.#ctor">
             <summary>
-            Gets or sets a value indicating whether the tab item is active.
+            Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.TabItem" /> class.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabItem.Key">
+            <summary>
+            Gets or sets a unique key identifying this <see cref="T:DotVVM.BusinessPack.Controls.TabControl" /> item.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.TabItem.HeaderText">
             <summary>
-            Gets or sets the text of the header part of the tab item. This property cannot be combined with the HeaderTemplate property.
+            Gets or sets the text of the header of the tab. This property cannot be
+            combined with the <see cref="P:DotVVM.BusinessPack.Controls.TabItem.HeaderTemplate" /> property.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.TabItem.HeaderTemplate">
             <summary>
-            Gets or sets a template for the header of the tab item. This property cannot be combined with the HeaderText property.
+            Gets or sets a template for the header of the tab. This property cannot be
+            combined with the <see cref="P:DotVVM.BusinessPack.Controls.TabItem.HeaderText" /> property.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.TabItem.ContentTemplate">
             <summary>
-            Gets or sets a template for the contents of the tab item.
+            Gets or sets a template rendering contents of the tab.
             </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabItem.Enabled">
+            <summary>
+            Gets or sets whether the tab is enabled and can be activated.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabItem.GetHeaderTemplate">
+            <summary>
+            Returns an <see cref="T:DotVVM.Framework.Controls.ITemplate" /> rendering header of the tab.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabItem.OnLoad(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabItem.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.TabItemJsonConverter">
+            <summary>
+            Converts <see cref="T:DotVVM.BusinessPack.Controls.TabItem" /> to it's JSON representation.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TabItemJsonConverter.CanRead">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabItemJsonConverter.WriteJson(Newtonsoft.Json.JsonWriter,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabItemJsonConverter.ReadJson(Newtonsoft.Json.JsonReader,System.Type,System.Object,Newtonsoft.Json.JsonSerializer)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TabItemJsonConverter.CanConvert(System.Type)">
+            <inheritdoc />
+        </member>
+        <member name="T:DotVVM.BusinessPack.Controls.TextBox">
+            <summary>
+            Renders a HTML text input control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TextBox.Placeholder">
+            <summary>
+            Gets or sets the text displayed when the <see cref="!:TextBox.Text"/> is empty.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TextBox.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TextBox.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
+            </summary>
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TextBox.OnInit(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.BusinessPack.Controls.TextBox.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc />
         </member>
         <member name="T:DotVVM.BusinessPack.Controls.TextView">
             <summary>
@@ -2853,6 +3188,18 @@
         <member name="M:DotVVM.BusinessPack.Controls.TreeView.#ctor">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.BusinessPack.Controls.TreeView" /> class.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TreeView.TabIndex">
+            <summary>
+            Gets or sets the order in which the control is reachable in sequential keyboard navigation.
+            The default value is <c>0</c> which means the document order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TreeView.AutoFocus">
+            <summary>
+            Gets or sets whether the control should have focus when page loads or when a dialog is opened.
+            The default value is <c>false</c>.
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Controls.TreeView.SelectedValues">
@@ -2910,6 +3257,11 @@
             The default value is <c>true</c>.
             </summary>
         </member>
+        <member name="P:DotVVM.BusinessPack.Controls.TreeView.LoadChildren">
+            <summary>
+            Gets or sets a function used to load descendants of an item being expanded.
+            </summary>
+        </member>
         <member name="P:DotVVM.BusinessPack.Controls.TreeView.Changed">
             <summary>
             Gets or sets the command that will be triggered when the selected values are changed.
@@ -2939,6 +3291,11 @@
         <member name="P:DotVVM.BusinessPack.Localization.FileUpload_DragFilesHereText">
             <summary>
               Looks up a localized string similar to or drag them here..
+            </summary>
+        </member>
+        <member name="P:DotVVM.BusinessPack.Localization.FileUpload_GenericErrorText">
+            <summary>
+              Looks up a localized string similar to Upload has failed..
             </summary>
         </member>
         <member name="P:DotVVM.BusinessPack.Localization.FileUpload_UploadButtonText">
