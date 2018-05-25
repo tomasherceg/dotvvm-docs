@@ -4,6 +4,263 @@
         <name>DotVVM.Framework</name>
     </assembly>
     <members>
+        <member name="T:DotVVM.Framework.Binding.BindingCompilationRequirementsAttribute">
+            <summary>
+            Specifies requirements that binding has to satisfy in order to succesfully Initialize (and compile).
+            Can be applied on binding class, bound property or instance (as property).
+            Attribute can be applied multiple times - all values are combined before compilation.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Binding.BindingCompilationRequirementsAttribute.Required">
+            <summary>
+            Properties that have to created in order to Initialize.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Binding.BindingCompilationRequirementsAttribute.Optional">
+            <summary>
+            Properties that will be computed, if possible.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Binding.BindingCompilationRequirementsAttribute.Excluded">
+            <summary>
+            Properties that does not have to be there - overwrites previous specification of Required or Optional.
+            For example may be usefull for property that may contain value binding, but does not need a Javascript translation
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingCompilationService.InitializeBinding(DotVVM.Framework.Binding.Expressions.IBinding,System.Collections.Generic.IEnumerable{DotVVM.Framework.Binding.BindingCompilationRequirementsAttribute})">
+            <summary>
+            Resolves required and optional properties
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingFactory.CreateBinding(DotVVM.Framework.Binding.BindingCompilationService,System.Type,System.Object[])">
+            <summary>
+            Creates the binding by calling .ctor(BindingCompilationService service, object[] properties), does not wrap exceptions to TargetInvocationException.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetKnockoutBindingExpression(DotVVM.Framework.Binding.Expressions.IValueBinding,DotVVM.Framework.Controls.DotvvmBindableObject,System.Boolean)">
+            <summary>
+            Gets the javascript translation of the binding adjusted to the `currentControl`s DataContext
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetParametrizedKnockoutExpression(DotVVM.Framework.Binding.Expressions.IValueBinding,DotVVM.Framework.Controls.DotvvmBindableObject,System.Boolean)">
+            <summary>
+            Gets the javascript translation of the binding adjusted to the `currentControl`s DataContext, returned value is ParametrizedCode, so it can be further adjusted
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.FormatKnockoutScript(DotVVM.Framework.Compilation.Javascript.ParametrizedCode,DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Binding.Expressions.IBinding)">
+            <summary>
+            Adjusts the knockout expression to `currentControl`s DataContext like it was translated in `currentBinding`s context
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetDataContextPathFragment(DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Gets Internal.PathFragmentProperty or DataContext.KnockoutExpression
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.FindDataContextTarget(DotVVM.Framework.Binding.Expressions.IBinding,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Finds expected context control of the `binding` and returns (parent index of the correct DataContext, control in the corrent context)
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.ExecUpdateDelegate(DotVVM.Framework.Binding.Expressions.BindingUpdateDelegate,DotVVM.Framework.Controls.DotvvmBindableObject,System.Object)">
+            <summary>
+            Prepares DataContext hierarchy argument and executes update delegate.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.ExecUpdateDelegate``1(DotVVM.Framework.Binding.Expressions.BindingUpdateDelegate{``0},DotVVM.Framework.Controls.DotvvmBindableObject,``0)">
+            <summary>
+            Prepares DataContext hierarchy argument and executes update delegate.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.ExecDelegate(DotVVM.Framework.Binding.Expressions.BindingDelegate,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Prepares DataContext hierarchy argument and executes update delegate.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.ExecDelegate``1(DotVVM.Framework.Binding.Expressions.BindingDelegate{``0},DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Prepares DataContext hierarchy argument and executes update delegate.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetDataContexts(DotVVM.Framework.Controls.DotvvmBindableObject,System.Int32)">
+            <summary>
+            Gets all data context on the path to root. Maximum count can be specified by `count`
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.Evaluate(DotVVM.Framework.Binding.Expressions.IStaticValueBinding,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Finds expected DataContext target in control.Ancestors() and evaluates the `binding.BindingDelegate`.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.Evaluate``1(DotVVM.Framework.Binding.Expressions.IStaticValueBinding{``0},DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Finds expected DataContext target in control.Ancestors() and evaluates the `binding.BindingDelegate`.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.UpdateSource(DotVVM.Framework.Binding.Expressions.IUpdatableValueBinding,System.Object,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Writes the value to binding - binded viewModel property is updated. May throw an exception when binding does not support assignment.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.UpdateSource``1(DotVVM.Framework.Binding.Expressions.IUpdatableValueBinding{``0},``0,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Writes the value to binding - binded viewModel property is updated. May throw an exception when binding does not support assignment.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetCommandDelegate(DotVVM.Framework.Binding.Expressions.ICommandBinding,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Finds expected DataContext and gets the delegate from command binding.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetCommandDelegate``1(DotVVM.Framework.Binding.Expressions.ICommandBinding{``0},DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Finds expected DataContext and gets the delegate from command binding.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.Evaluate(DotVVM.Framework.Binding.Expressions.ICommandBinding,DotVVM.Framework.Controls.DotvvmBindableObject,System.Object[])">
+            <summary>
+            Finds expected DataContext, gets the delegate from command binding and evaluates it with `args`
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.GetParametrizedCommandJavascript(DotVVM.Framework.Binding.Expressions.ICommandBinding,DotVVM.Framework.Controls.DotvvmBindableObject)">
+            <summary>
+            Gets DataContext-adjusted javascript that can be used for command invocation.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.DeriveBinding``1(``0,DotVVM.Framework.Compilation.ControlTree.DataContextStack,System.Linq.Expressions.Expression,System.Object[])">
+            <summary>
+            Creates new `TBinding` with the original DataContextStack, LocationInfo, AdditionalResolvers and BindingCompilationService. 
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.DeriveBinding``1(``0,System.Object[])">
+            <summary>
+            Creates new `TBinding` with the original DataContextStack, LocationInfo, AdditionalResolvers and BindingCompilationService. 
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.Cache``2(System.Func{``0,``1})">
+            <summary>
+            Caches all function evaluations in the closure based on parameter. TParam should be immutable, as it is used as Dictionary key.
+            It thread-safe.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.BindingHelper.AnnotateStandardContextParams(System.Linq.Expressions.Expression,DotVVM.Framework.Compilation.ControlTree.DataContextStack)">
+            <summary>
+            Annotates `_this`, `_parent`, `_root` parameters with BindingParameterAnnotation indicating their DataContext
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.KnockoutExpressionBindingProperty">
+            <summary>
+            Contains evaluatable Javascript in knockout binding, knockout context parameters are represented as symbolic parameters in the ParametrizedCode
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Binding.Properties.KnockoutExpressionBindingProperty.Code">
+            <summary>
+            Knockout binding expression. May return observable.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Binding.Properties.KnockoutExpressionBindingProperty.UnwrappedCode">
+            <summary>
+            Knockout binding expression. Always unwraps the observable.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Binding.Properties.KnockoutExpressionBindingProperty.WrappedCode">
+            Knockout binding expression. Always returns an observable.
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.SimplePathExpressionBindingProperty">
+            <summary>
+            Contains string that identifies the translated binding.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.OriginalStringBindingProperty">
+            <summary>
+            Contains original binding string, as it was typed in dothtml file. (it is trimmed)
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.ResultTypeBindingProperty">
+            <summary>
+            Contains binding's result type.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.IdBindingProperty">
+            <summary>
+            Contains unique id of binding in its DataContext and the page
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.CommandJavascriptBindingProperty">
+            <summary>
+            Contains JS code, that will invoke the command. May contain symbolic parameters from `JavascriptTranslator` and `CommandBindingExpression`
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.StaticCommandJavascriptProperty">
+            <summary>
+            Contains JS code, that will invoke the static command. May contain symbolic parameters from `JavascriptTranslator` and `CommandBindingExpression`
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.StaticCommandJsAstProperty">
+            <summary>
+            Contains JS code, that will invoke the static command. May contain symbolic parameters from `JavascriptTranslator` and `CommandBindingExpression`
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.ParsedExpressionBindingProperty">
+            <summary>
+            Contains <see cref="T:System.Linq.Expressions.Expression"/> instance that represents code as it was written in markup with minimal processing.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.CastedExpressionBindingProperty">
+            <summary>
+            Contains <see cref="T:System.Linq.Expressions.Expression"/> instance that represents code converted to be evaluated as binding (type conversions applied, ...). 
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.KnockoutJsExpressionBindingProperty">
+            <summary>
+            Contains raw translated JS AST that came from JavascriptTranslator. Specifically it has type annotations on it and does not include observable unwraps and null-checks.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.ActionFiltersBindingProperty">
+            <summary>
+            Contains action filters that should be invoked before the binding invocation.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.ExpectedTypeBindingProperty">
+            <summary>
+            Contains expected type of the binding - typically type of the bound property.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.LocationInfoBindingProperty">
+            <summary>
+            Contains debug information about original binding location.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.IsMutableBindingProperty">
+            <summary>
+            Determines whether binding properties can be assigned after initialization. Runtime-used binding should never be mutable.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.AssignedPropertyBindingProperty">
+            <summary>
+            Contains the property where the binding is assigned.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.BindingErrorReporterProperty">
+            <summary>
+            Contains (mutable) list of error that are produced during the binding lifetime.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.DataSourceAccessBinding">
+            <summary>
+            Contains a binding that unwraps <see cref="P:DotVVM.Framework.Controls.IBaseGridViewDataSet.Items"/>
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.DataSourceCurrentElementBinding">
+            <summary>
+            Contains a binding that accesses $index-th element in the collection. Uses the <see cref="T:DotVVM.Framework.Compilation.ControlTree.CurrentCollectionIndexExtensionParameter"/>.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Binding.Properties.DataSourceLengthBinding">
+            <summary>
+            Contains a binding that gets the collection's Length or Count
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Binding.DotvvmProperty">
             <summary>
             Represents a property of DotVVM controls.
@@ -114,29 +371,43 @@
             Resolves all properties of specified type.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.DotvvmProperty.OnControlInitialized(DotVVM.Framework.Controls.DotvvmBindableObject)">
+        <member name="T:DotVVM.Framework.Binding.DotvvmPropertyWithFallback">
             <summary>
-            Called when a control of the property type is created and initialized.
+            The DotvvmProperty that fallbacks to another DotvvmProperty's value.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.DotvvmProperty.OnControlRendering(DotVVM.Framework.Controls.DotvvmBindableObject)">
+        <member name="P:DotVVM.Framework.Binding.DotvvmPropertyWithFallback.FallbackProperty">
             <summary>
-            Called right before the page is rendered.
+            Gets the property which value will be used as a follback when this property is not set.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.BindingExpression.#ctor(DotVVM.Framework.Binding.Expressions.CompiledBindingExpression)">
+        <member name="M:DotVVM.Framework.Binding.DotvvmPropertyWithFallback.GetValue(DotVVM.Framework.Controls.DotvvmBindableObject,System.Boolean)">
+            <inheritdoc />
+        </member>
+        <member name="M:DotVVM.Framework.Binding.DotvvmPropertyWithFallback.IsSet(DotVVM.Framework.Controls.DotvvmBindableObject,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Binding.Expressions.BindingExpression"/> class.
+            Gets whether the value of the property is set
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.BindingExpression.#ctor">
+        <member name="M:DotVVM.Framework.Binding.DotvvmPropertyWithFallback.Register``2(System.Linq.Expressions.Expression{System.Func{``1,System.Object}},DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Binding.Expressions.BindingExpression"/> class.
+            Registers a new DotVVM property which fallbacks to the <paramref name="fallbackProperty" /> when not set.
             </summary>
+            <param name="propertyAccessor">The expression pointing to instance property.</param>
+            <param name="fallbackProperty">The property which value will be used as a follback when the new property is not set.</param>
+            <param name="isValueInherited">Indicates whether the value can be inherited from the parent controls.</param>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.BindingExpression.GetDataContexts(DotVVM.Framework.Controls.DotvvmBindableObject,System.Boolean)">
+        <member name="M:DotVVM.Framework.Binding.DotvvmPropertyWithFallback.Register``2(System.String,DotVVM.Framework.Binding.DotvvmProperty,System.Boolean)">
             <summary>
-            Gets all data context on the path to root
+            Registers a new DotVVM property which fallbacks to the <paramref name="fallbackProperty" /> when not set.
+            </summary>
+            <param name="propertyName">The name of the property.</param>
+            <param name="fallbackProperty">The property which value will be used as a follback when the new property is not set.</param>
+            <param name="isValueInherited">Indicates whether the value can be inherited from the parent controls.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Binding.Expressions.BindingExpression.AddNullResolvers">
+            <summary>
+            For performance reasons, derived bindings can set BindingResolverCollection to null to prevent runtime computation of the property which is somewhat costy
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Binding.Expressions.Command">
@@ -144,50 +415,26 @@
             Represents typical command binding delegate, quivalent to Func&lt;Task&gt;
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.CommandBindingExpression.Evaluate(DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Binding.DotvvmProperty,System.Object[])">
-            <summary>
-            Evaluates the binding.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ResourceBindingExpression.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Binding.Expressions.ResourceBindingExpression"/> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ResourceBindingExpression.#ctor(DotVVM.Framework.Binding.Expressions.CompiledBindingExpression)">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Binding.Expressions.ResourceBindingExpression"/> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ResourceBindingExpression.Evaluate(DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Binding.DotvvmProperty)">
-            <summary>
-            Evaluates the binding.
-            </summary>
+        <member name="M:DotVVM.Framework.Binding.Expressions.CommandBindingExpression.CreateJsPostbackInvocation(System.String,System.Nullable{System.Boolean})">
+            <param name="needsCommandArgs">Whether the Javascript will contain commandArgs (true - it will be required, false - the symbolic parameter will not be available, null - it will be optional)</param>
         </member>
         <member name="T:DotVVM.Framework.Binding.Expressions.ValueBindingExpression">
             <summary>
             A binding that gets the value from a viewmodel property.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ValueBindingExpression.#ctor">
+        <member name="P:DotVVM.Framework.Compilation.BindingParserOptions.ImportNamespaces">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Binding.Expressions.ValueBindingExpression"/> class.
+            Additional namespace imports that will be added to imports defined in Dotvvm page just before the binding is resolved
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ValueBindingExpression.#ctor(DotVVM.Framework.Binding.Expressions.CompiledBindingExpression)">
+        <member name="P:DotVVM.Framework.Compilation.BindingParserOptions.ExtensionParameters">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Binding.Expressions.ValueBindingExpression"/> class.
+            Additional export parameters that will be added to export parameters defined in Dotvvm page just before the binding is resolved
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ValueBindingExpression.Evaluate(DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Binding.DotvvmProperty)">
-            <summary>
-            Evaluates the binding.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Binding.Expressions.ValueBindingExpression.UpdateSource(System.Object,DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Binding.DotvvmProperty)">
-            <summary>
-            Updates the viewModel with the new value.
-            </summary>
+        <member name="M:DotVVM.Framework.Compilation.Binding.StaticCommandBindingCompiler.ReplaceCommandArgs(System.Linq.Expressions.Expression)">
+            Replaces delegate arguments with commandArgs reference
         </member>
         <member name="M:DotVVM.Framework.Compilation.Binding.TypeConversion.Convert(System.Linq.Expressions.Expression@,System.Linq.Expressions.Expression@)">
             <summary>
@@ -217,6 +464,14 @@
             Tries to perform implicit numeric conversion
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.Compilation.Binding.TypeConversion.MagicLambdaConversion(System.Linq.Expressions.Expression,System.Type)">
+            This is a strange conversion that wraps the entire expression into a Lambda
+            and makes an invokable delegate from a normal expression.
+            It also replaces special ExtensionParameters attached to the expression for lambda parameters
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Binding.TypeConversion.TaskConversion(System.Linq.Expressions.Expression,System.Type)">
+            Performs conversions by wrapping or unwrapping results to/from <see cref="T:System.Threading.Tasks.Task" />
+        </member>
         <member name="M:DotVVM.Framework.Compilation.CompiledAssemblyCache.TryResolveAssembly(System.Object,System.ResolveEventArgs)">
             <summary>
             Tries to resolve compiled assembly.
@@ -242,7 +497,7 @@
             Default DotVVM control resolver.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlResolverBase.#ctor(DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlResolverBase.#ctor(DotVVM.Framework.Configuration.DotvvmMarkupConfiguration)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Compilation.ControlTree.ControlResolverBase"/> class.
             </summary>
@@ -317,7 +572,7 @@
             Resolves the control tree.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.ResolveRootContent(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlRootNode,DotVVM.Framework.Compilation.ControlTree.IAbstractTreeRoot,DotVVM.Framework.Compilation.ControlTree.IControlResolverMetadata)">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.ResolveRootContent(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlRootNode,DotVVM.Framework.Compilation.ControlTree.IAbstractContentNode,DotVVM.Framework.Compilation.ControlTree.IControlResolverMetadata)">
             <summary>
             Resolves the content of the root node.
             </summary>
@@ -337,12 +592,12 @@
             Processes the HTML element that represents a new object.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.ProcessBinding(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlBindingNode,DotVVM.Framework.Compilation.ControlTree.IDataContextStack)">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.ProcessBinding(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlBindingNode,DotVVM.Framework.Compilation.ControlTree.IDataContextStack,DotVVM.Framework.Compilation.ControlTree.IPropertyDescriptor)">
             <summary>
             Processes the binding node.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.ProcessAttribute(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlAttributeNode,DotVVM.Framework.Compilation.ControlTree.IAbstractControl,DotVVM.Framework.Compilation.ControlTree.IDataContextStack)">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.ProcessAttribute(DotVVM.Framework.Compilation.ControlTree.IPropertyDescriptor,DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlAttributeNode,DotVVM.Framework.Compilation.ControlTree.IAbstractControl,DotVVM.Framework.Compilation.ControlTree.IDataContextStack)">
             <summary>
             Processes the attribute node.
             </summary>
@@ -383,11 +638,6 @@
             Gets the default type of the wrapper for the view.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.EnsureContentAllowed(DotVVM.Framework.Compilation.ControlTree.IControlResolverMetadata,DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlNode)">
-            <summary>
-            Checks that the element can have inner contents.
-            </summary>
-        </member>
         <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.GetDataContextChange(DotVVM.Framework.Compilation.ControlTree.IDataContextStack,DotVVM.Framework.Compilation.ControlTree.IAbstractControl,DotVVM.Framework.Compilation.ControlTree.IPropertyDescriptor)">
             <summary>
             Gets the data context change behavior for the specified control property.
@@ -398,7 +648,7 @@
             Creates the IControlType identification of the control.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.CreateDataContextTypeStack(DotVVM.Framework.Compilation.ControlTree.ITypeDescriptor,DotVVM.Framework.Compilation.ControlTree.ITypeDescriptor,DotVVM.Framework.Compilation.ControlTree.IDataContextStack,System.Collections.Generic.IReadOnlyList{DotVVM.Framework.Compilation.NamespaceImport})">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.CreateDataContextTypeStack(DotVVM.Framework.Compilation.ControlTree.ITypeDescriptor,DotVVM.Framework.Compilation.ControlTree.IDataContextStack,System.Collections.Generic.IReadOnlyList{DotVVM.Framework.Compilation.NamespaceImport},System.Collections.Generic.IReadOnlyList{DotVVM.Framework.Compilation.ControlTree.BindingExtensionParameter})">
             <summary>
             Creates the data context type stack object.
             </summary>
@@ -408,9 +658,19 @@
             Converts the value to the property type.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.CompileBinding(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlBindingNode,DotVVM.Framework.Compilation.BindingParserOptions,DotVVM.Framework.Compilation.ControlTree.IDataContextStack)">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.ControlTreeResolverBase.CompileBinding(DotVVM.Framework.Compilation.Parser.Dothtml.Parser.DothtmlBindingNode,DotVVM.Framework.Compilation.BindingParserOptions,DotVVM.Framework.Compilation.ControlTree.IDataContextStack,DotVVM.Framework.Compilation.ControlTree.IPropertyDescriptor)">
             <summary>
             Compiles the binding.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.ControlTree.DataContextStack">
+            <summary>
+            Represents compile-time DataContext info - Type of current DataContext, it's parent and other available parameters
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.DataContextStack.GetCurrentExtensionParameters">
+            <summary>
+            Gets all extension parameter available in current context and their definition offset
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Compilation.ControlTree.DefaultControlResolver.InvokeStaticConstructorsOnAllControls">
@@ -443,7 +703,7 @@
             A runtime implementation of the control tree resolver.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlTree.DefaultControlTreeResolver.#ctor(DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.Compilation.ControlTree.DefaultControlTreeResolver.#ctor(DotVVM.Framework.Compilation.ControlTree.IControlResolver,DotVVM.Framework.Compilation.ControlTree.IAbstractTreeBuilder,DotVVM.Framework.Compilation.IBindingExpressionBuilder)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Compilation.ControlTree.DefaultControlTreeResolver"/> class.
             </summary>
@@ -483,9 +743,14 @@
             Gets property groups available on this control (list is ordered - longer prefix goes first)
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ControlType.#ctor(System.Type,System.Type,System.String,System.Type)">
+        <member name="M:DotVVM.Framework.Compilation.ControlType.#ctor(System.Type,System.String,System.Type)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Compilation.ControlType"/> class.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.DataContextPropertyAssigningVisitor">
+            <summary>
+            Assigns <see cref="!:Internal.DataContextTypeProperty" /> to all controls that have different datacontext that their parent
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Compilation.DefaultAttributeValueMerger">
@@ -616,6 +881,16 @@
             Gets type of result control
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Compilation.ControlBuilderDescriptor.DataContextType">
+            <summary>
+            Gets required data context for the control
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.ControlBuilderDescriptor.ControlType">
+            <summary>
+            Gets type of result control
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Compilation.IViewCompiler">
             <summary>
             Gets the Dothtml view and compiles it into a function.
@@ -631,10 +906,267 @@
             Compiles the view to a syntax tree and adds it to the compilation
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.Javascript.JavascriptTranslator.NeedsParens(System.Linq.Expressions.Expression,System.Linq.Expressions.Expression)">
+        <member name="T:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable">
+            <summary>
+            Provides an interface to handle annotations in an object.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable.Annotations">
+            <summary>
+            Gets all annotations stored on this IAnnotatable.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable.Annotation``1">
+            <summary>
+            Gets the first annotation of the specified type.
+            Returns null if no matching annotation exists.
+            </summary>
+            <typeparam name='T'>
+            The type of the annotation.
+            </typeparam>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable.Annotation(System.Type)">
+            <summary>
+            Gets the first annotation of the specified type.
+            Returns null if no matching annotation exists.
+            </summary>
+            <param name='type'>
+            The type of the annotation.
+            </param>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable.AddAnnotation``1(``0)">
+            <summary>
+            Adds an annotation to this instance.
+            </summary>
+            <param name='annotation'>
+            The annotation to add.
+            </param>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable.RemoveAnnotations``1">
+            <summary>
+            Removes all annotations of the specified type.
+            </summary>
+            <typeparam name='T'>
+            The type of the annotations to remove.
+            </typeparam>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.IAnnotatable.RemoveAnnotations(System.Type)">
+            <summary>
+            Removes all annotations of the specified type.
+            </summary>
+            <param name='type'>
+            The type of the annotations to remove.
+            </param>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.Ast.AbstractAnnotatable">
+            <summary>
+            Base class used to implement the IAnnotatable interface.
+            This implementation is thread-safe.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.AbstractAnnotatable.CloneAnnotations">
+            <summary>
+            Clones all annotations.
+            This method is intended to be called by Clone() implementations in derived classes.
+            <code>
+            var copy = (AstNode)MemberwiseClone();
+            copy.CloneAnnotations();
+            </code>
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.AbstractAnnotatable.Annotations">
+            <summary>
+            Gets all annotations stored on this node.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsAstHelpers.GetLeafResultNodes(DotVVM.Framework.Compilation.Javascript.Ast.JsExpression)">
+            <summary>
+            Gets nodes for the expression that can be result.
+            for `a + b` return `a +b`
+            for `a ? b : c` returns `b` and `c`
+            for `a || b` returns `a` and `b`
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsAstHelpers.EnsureObservableWrapped(DotVVM.Framework.Compilation.Javascript.Ast.JsExpression)">
+            Wraps the expression in `dotvvm.evaluator.wrapObservable` if needed
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.JsLiteral.LiteralValue">
+            <summary>
+            Javascript (JSON) representation of the object.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.Ancestors">
+            <summary>
+            Gets the ancestors of this node (excluding this node itself)
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.AncestorsAndSelf">
+            <summary>
+            Gets the ancestors of this node (including this node itself)
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.Descendants">
+            <summary>
+            Gets all descendants of this node (excluding this node itself) in pre-order.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.DescendantsAndSelf">
+            <summary>
+            Gets all descendants of this node (including this node itself) in pre-order.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.GetChildByRole``1(DotVVM.Framework.Compilation.Javascript.Ast.JsTreeRole{``0})">
+            <summary>
+            Gets the first child with the specified role.
+            Returns the role's null object if the child is not found.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.AddChildUnsafe(DotVVM.Framework.Compilation.Javascript.Ast.JsNode,DotVVM.Framework.Compilation.Javascript.Ast.JsTreeRole)">
+            <summary>
+            Adds a child without performing any safety checks.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.Remove">
+            <summary>
+            Removes this node from its parent.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.ReplaceWith(DotVVM.Framework.Compilation.Javascript.Ast.JsNode)">
+            <summary>
+            Replaces this node with the new node.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.Clone">
+            <summary>
+            Clones the whole subtree starting at this AST node.
+            </summary>
+            <remarks>Annotations are copied over to the new nodes; and any annotations implementing ICloneable will be cloned.</remarks>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.GetNextNode(System.Func{DotVVM.Framework.Compilation.Javascript.Ast.JsNode,System.Boolean})">
+            <summary>
+            Gets the next node which fullfills a given predicate
+            </summary>
+            <returns>The next node.</returns>
+            <param name="pred">The predicate.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.GetPrevNode(System.Func{DotVVM.Framework.Compilation.Javascript.Ast.JsNode,System.Boolean})">
+            <summary>
+            Gets the previous node which fullfills a given predicate
+            </summary>
+            <returns>The next node.</returns>
+            <param name="pred">The predicate.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.GetNextSibling(System.Func{DotVVM.Framework.Compilation.Javascript.Ast.JsNode,System.Boolean})">
+            <summary>
+            Gets the next sibling which fullfills a given predicate
+            </summary>
+            <returns>The next node.</returns>
+            <param name="pred">The predicate.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNode.GetPrevSibling(System.Func{DotVVM.Framework.Compilation.Javascript.Ast.JsNode,System.Boolean})">
+            <summary>
+            Gets the next sibling which fullfills a given predicate
+            </summary>
+            <returns>The next node.</returns>
+            <param name="pred">The predicate.</param>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.Ast.JsNodeCollection`1">
+            <summary>
+            Represents the children of an JsNode that have a specific role.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNodeCollection`1.FirstOrNullObject(System.Func{`0,System.Boolean})">
+            <summary>
+            Returns the first element for which the predicate returns true,
+            or the null node (JsNode with IsNull=true) if no such object is found.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNodeCollection`1.LastOrNullObject(System.Func{`0,System.Boolean})">
+            <summary>
+            Returns the last element for which the predicate returns true,
+            or the null node (JsNode with IsNull=true) if no such object is found.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.Ast.JsNodeCollection`1.AcceptVisitor(DotVVM.Framework.Compilation.Javascript.Ast.IJsNodeVisitor)">
+            <summary>
+            Applies the <paramref name="visitor"/> to all nodes in this collection.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.LazyTranslatedExpression">
+            Represents an Linq.Expression that is being translated to JsAst.
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.JavascriptTranslator.FormatKnockoutScript(DotVVM.Framework.Compilation.Javascript.Ast.JsExpression,System.Boolean,System.Int32)">
+            <summary>
+            Get's Javascript code that can be executed inside knockout data-bind attribute.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.JavascriptTranslator.FormatKnockoutScript(DotVVM.Framework.Compilation.Javascript.ParametrizedCode,System.Boolean,System.Int32)">
+            <summary>
+            Get's Javascript code that can be executed inside knockout data-bind attribute.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.JavascriptTranslator.FormatKnockoutScript(DotVVM.Framework.Compilation.Javascript.ParametrizedCode,DotVVM.Framework.Compilation.Javascript.ParametrizedCode,DotVVM.Framework.Compilation.Javascript.ParametrizedCode)">
+            <summary>
+            Get's Javascript code that can be executed inside knockout data-bind attribute.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.JsParensFixingVisitor.NeedsParens(DotVVM.Framework.Compilation.Javascript.Ast.JsExpression)">
             <summary>
             Determines if the expression will have to be parenthised when called from parent expression
             </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.ParametrizedCode">
+            <summary>
+            Represents a piece of Javascript code that may contain unresolved symbolic parameters.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.ParametrizedCode.ToString(System.Func{DotVVM.Framework.Compilation.Javascript.CodeSymbolicParameter,DotVVM.Framework.Compilation.Javascript.CodeParameterAssignment})">
+            <summary>
+            Converts this to string and assigns all parameters using `parameterAsssignment`. If there is any missing, exception is thrown.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.ParametrizedCode.AssignParameters(System.Func{DotVVM.Framework.Compilation.Javascript.CodeSymbolicParameter,DotVVM.Framework.Compilation.Javascript.CodeParameterAssignment})">
+            <summary>
+            Assigns parameters and return new ParametrizedCode. If parameter is not assigned, it is copied to the resulting parameter. Assigner can also replace parameter by script that contains another parameters.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.ParametrizedCode.CopyTo(DotVVM.Framework.Compilation.Javascript.ParametrizedCode.Builder)">
+            <summary>
+            Writes this code incusing parameters to the ParametrizedCode.Builder
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.ParametrizedCode.Builder">
+            <summary>
+            Builder class with reasonably fast Add operation. Use Build method to convert it to immutable ParametrizedCode
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.CodeParameterInfo">
+            <summary>
+            Represents an symbolic parameter in the ParametrizedCode.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Compilation.Javascript.CodeParameterInfo.DefaultAssignment">
+            Optional default value
+        </member>
+        <member name="F:DotVVM.Framework.Compilation.Javascript.CodeParameterInfo.OperatorPrecedence">
+            <summary>
+            Operator precedence of the top expression to make sure that the parameter is correctly parenthised.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Compilation.Javascript.CodeParameterInfo.IsSafeMemberAccess">
+            <summary>
+            If the parameter would be available as global, can it be ommited?
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Compilation.Javascript.CodeSymbolicParameter">
+            (Base) class for symbolic parameter descriptors.
+            This is mainly a marker class, the parameters are compared by reference equality, but this contains some optional features (default and description).
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.SideEffectAnalyzer.GetPossibleMutations(DotVVM.Framework.Compilation.Javascript.Ast.JsNode[])">
+            Returns a <see cref="T:DotVVM.Framework.Compilation.Javascript.ExpressionMutationList" /> that contains all possible mutations done by the specified JsNodes
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Javascript.SideEffectAnalyzer.MayReorder(DotVVM.Framework.Compilation.Javascript.Ast.JsNode,System.Collections.Generic.IEnumerable{DotVVM.Framework.Compilation.Javascript.Ast.JsNode})">
+            Checks if the specified <see cref="T:DotVVM.Framework.Compilation.Javascript.Ast.JsNode" /> has any dependencies on the specified mutated variables and if thus if it can be reordered.
         </member>
         <member name="T:DotVVM.Framework.Compilation.Parser.BeginWithLastTokenOfTypeTokenError`2">
             <summary>
@@ -858,6 +1390,78 @@
             Returns the current char and advances to the next one.
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasAncestor``1">
+            <summary>
+            Determines whether the control has an ancestor of the given type.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasAncestor(System.Type)">
+            <summary>
+            Determines whether the control has an ancestor of the <paramref name="parentType"/> type.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasAncestorsOrdered(System.Collections.Generic.IEnumerable{System.Type})">
+            <summary>
+            Determines whether the control's ancestors types correspond to those in <paramref name="parentTypes"/>.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasAncestorsOrdered(System.Type[])">
+            <summary>
+            Determines whether the control's ancestors types correspond to those given.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasParent``1">
+            <summary>
+            Determines whether the control's parent's type is <typeparamref name="T"/>.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasProperty(DotVVM.Framework.Binding.DotvvmProperty)">
+            <summary>
+            Determines whether the control has the given <see cref="T:DotVVM.Framework.Binding.DotvvmProperty"/>.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasHtmlAttribute(System.String)">
+            <summary>
+            Determines whether the control has an HTML attribute of the specified name.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.DataContext">
+            <summary>
+            Gets the DataContext of the control.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasDataContext``1">
+            <summary>
+            Determines whether the control has DataContext of the given type.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasRootDataContext``1">
+            <summary>
+            Determines whether the control is in a page with a ViewModel of the given type.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleMatchContext.HasViewInDirectory(System.String)">
+            <summary>
+            Determines whether the control is in a page whose View is in the given directory.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleRepository.Register``1(System.Func{DotVVM.Framework.Compilation.Styles.StyleMatchContext,System.Boolean},System.Boolean)">
+            <summary>
+            Registers a server-side style for <typeparamref name="T"/> that is applied upon compilation.
+            </summary>
+            <typeparam name="T">All objects of this type will have the style applied to them unless <paramref name="matcher"/> is specified.</typeparam>
+            <param name="matcher">If this function returns true, the style will be applied, otherwise not.</param>
+            <param name="allowDerived">Also allow classes that are derived from <typeparamref name="T"/>.</param>
+            <returns>A <see cref="T:DotVVM.Framework.Compilation.Styles.StyleBuilder`1"/> that can be used to style the control.</returns>
+        </member>
+        <member name="M:DotVVM.Framework.Compilation.Styles.StyleRepository.Register(System.String,System.Func{DotVVM.Framework.Compilation.Styles.StyleMatchContext,System.Boolean})">
+            <summary>
+            Registers a server-side style for a HTML tag that is applied upon compilation.
+            </summary>
+            <param name="tagName">The HTML tag the style is applied to.</param>
+            <param name="matcher">If this function returns true, the style will be applied, otherwise not.</param>
+            <returns>A <see cref="T:DotVVM.Framework.Compilation.Styles.StyleBuilder`1"/> that can be used to style the control.</returns>
+        </member>
         <member name="M:DotVVM.Framework.Compilation.ViewCompilingVisitor.VisitControl(DotVVM.Framework.Compilation.ControlTree.Resolved.ResolvedControl)">
             <summary>
             Processes the node.
@@ -873,7 +1477,7 @@
             Processes the HTML element that represents a new object.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Compilation.ViewCompilingVisitor.ProcessBinding(DotVVM.Framework.Compilation.ControlTree.Resolved.ResolvedBinding,System.Type)">
+        <member name="M:DotVVM.Framework.Compilation.ViewCompilingVisitor.ProcessBinding(DotVVM.Framework.Compilation.ControlTree.Resolved.ResolvedBinding)">
             <summary>
             Emits binding contructor and returns variable name
             </summary>
@@ -930,9 +1534,20 @@
             Gets or sets whether the client side validation rules should be enabled.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Configuration.DotvvmConfiguration.UseHistoryApiSpaNavigation">
+            <summary>
+            Gets or sets whether navigation in the SPA pages should use History API. Default value is <c>true</c>.
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Configuration.DotvvmConfiguration.Debug">
             <summary>
             Gets or sets whether the application should run in debug mode.
+            For ASP.NET Core checkout <see cref="!:https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments" >https://docs.microsoft.com/en-us/aspnet/core/fundamentals/environments</see>   
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Configuration.DotvvmConfiguration.Freeze">
+            <summary>
+            Prevent from changes.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Configuration.DotvvmConfiguration.AllowBindingDebugging">
@@ -997,7 +1612,7 @@
             Gets or sets list of namespaces imported in bindings
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Configuration.DotvvmMarkupConfiguration.#ctor">
+        <member name="M:DotVVM.Framework.Configuration.DotvvmMarkupConfiguration.#ctor(System.Lazy{DotVVM.Framework.Compilation.Javascript.JavascriptTranslatorConfiguration})">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Configuration.DotvvmMarkupConfiguration"/> class.
             </summary>
@@ -1056,6 +1671,18 @@
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Configuration.DotvvmSecurityConfiguration"/> class.
             </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Configuration.IDotvvmServiceConfigurator">
+            <summary>
+            Represents configuration point for all DotVVM services. This interface is intended for marking services to be run by compiler. 
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Configuration.IDotvvmServiceConfigurator.ConfigureServices(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection)">
+            <summary>
+            Configures all services related with DotVVM to ServiceCollection.
+            Warning: Configure only DotVVM services. This method is used by DotVVM.Compiler which runs this method during compilation time.
+            </summary>
+            <remarks>The name "opations" was chosen because of easier migration.</remarks>
         </member>
         <member name="T:DotVVM.Framework.Controls.AuthenticatedView">
             <summary>
@@ -1234,6 +1861,11 @@
         <member name="T:DotVVM.Framework.Controls.ComboBox">
             <summary>
             Renders the HTML drop-down list.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.ComboBox.EmptyItemText">
+            <summary>
+            Text displayed when no value is selected.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.ConfigurableHtmlControl">
@@ -1436,10 +2068,12 @@
             Gets all bindings set on the control (excluding BindingProperties).
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.DotvvmBindableObject.GetAllAncestors">
+        <member name="M:DotVVM.Framework.Controls.DotvvmBindableObject.GetAllAncestors(System.Boolean,System.Boolean)">
             <summary>
             Gets all ancestors of this control starting with the parent.
             </summary>
+            <param name="incudingThis">Returns also the caller control</param>
+            <param name="onlyWhenInChildren">Only enumerate until the parent has this control in <see cref="P:DotVVM.Framework.Controls.DotvvmControl.Children" />. Note that it may have a non-trivial performance penalty</param>
         </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmBindableObject.GetRoot">
             <summary>
@@ -1476,10 +2110,23 @@
             Gets or sets the unique control ID.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.DotvvmControl.ClientID">
+            <summary>
+            Gets id of the control that will be written in 'id' attribute
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Controls.DotvvmControl.ClientIDMode">
             <summary>
             Gets or sets the client ID generation algorithm.
             </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.DotvvmControl.IncludeInPage">
+            <summary>
+            Gets or sets whether the control is included in the DOM of the page.
+            </summary>
+            <remarks>
+            Essentially wraps Knockout's 'if' binding.
+            </remarks>
         </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmControl.#ctor">
             <summary>
@@ -1504,6 +2151,11 @@
         <member name="M:DotVVM.Framework.Controls.DotvvmControl.Render(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
             Renders the control into the specified writer.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.DotvvmControl.AddDotvvmUniqueIdAttribute">
+            <summary>
+            Adds 'data-dotvvm-id' attribute with generated unique id to the control. You can find control by this id using FindControlByUniqueId method.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmControl.RenderControl(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -1566,7 +2218,7 @@
             Gets the naming container of the current control.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.DotvvmControl.IsNamingContainer(DotVVM.Framework.Controls.DotvvmControl)">
+        <member name="M:DotVVM.Framework.Controls.DotvvmControl.IsNamingContainer(DotVVM.Framework.Controls.DotvvmBindableObject)">
             <summary>
             Determines whether the specified control is a naming container.
             </summary>
@@ -1598,7 +2250,7 @@
         </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmControl.GetDotvvmUniqueId">
             <summary>
-            Gets the client ID of the control. Returns null if the ID cannot be calculated.
+            Gets the internal unique ID of the control. Returns either string or IValueBinding.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmControl.CreateClientId">
@@ -1636,6 +2288,13 @@
             Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1" />.
             </summary>
             <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+            <exception cref="T:System.InvalidOperationException"></exception>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.DotvvmControlCollection.Add(System.Collections.Generic.IEnumerable{DotVVM.Framework.Controls.DotvvmControl})">
+            <summary>
+            Adds items to the <see cref="T:System.Collections.Generic.ICollection`1" />.
+            </summary>
+            <param name="items">An enumeration of objects to add to the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
             <exception cref="T:System.InvalidOperationException"></exception>
         </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmControlCollection.Clear">
@@ -1692,6 +2351,13 @@
             <param name="index">The zero-based index at which <paramref name="item" /> should be inserted.</param>
             <param name="item">The object to insert into the <see cref="T:System.Collections.Generic.IList`1" />.</param>
         </member>
+        <member name="M:DotVVM.Framework.Controls.DotvvmControlCollection.Insert(System.Int32,System.Collections.Generic.IEnumerable{DotVVM.Framework.Controls.DotvvmControl})">
+            <summary>
+            Inserts items to the <see cref="T:System.Collections.Generic.IList`1" /> at the specified index.
+            </summary>
+            <param name="index">The zero-based index at which <paramref name="items" /> should be inserted.</param>
+            <param name="items">An enumeration of objects to insert into the <see cref="T:System.Collections.Generic.IList`1" />.</param>
+        </member>
         <member name="M:DotVVM.Framework.Controls.DotvvmControlCollection.RemoveAt(System.Int32)">
             <summary>
             Removes the <see cref="T:System.Collections.Generic.IList`1" /> item at the specified index.
@@ -1710,7 +2376,7 @@
             Sets the parent to the specified control.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.DotvvmControlCollection.InvokeMissedPageLifeCycleEvents(DotVVM.Framework.Controls.LifeCycleEventType)">
+        <member name="M:DotVVM.Framework.Controls.DotvvmControlCollection.InvokeMissedPageLifeCycleEvents(DotVVM.Framework.Controls.LifeCycleEventType,System.Boolean)">
             <summary>
             Invokes missed page life cycle events on the control.
             </summary>
@@ -1737,7 +2403,7 @@
         </member>
         <member name="T:DotVVM.Framework.Controls.EmptyData">
             <summary>
-            Content of this control is displayed iff DataSource is empty or null
+            Content of this control is displayed if and only if DataSource is empty or null
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.EmptyData.WrapperTagName">
@@ -1824,7 +2490,7 @@
         </member>
         <member name="T:DotVVM.Framework.Controls.GridView">
             <summary>
-            A multi-purpose grid control with advanced binding and templating options and sorting support.
+            A multi-purpose grid control with advanced binding, templating options and sorting support.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.GridView.FilterPlacement">
@@ -1844,12 +2510,12 @@
         </member>
         <member name="P:DotVVM.Framework.Controls.GridView.RowDecorators">
             <summary>
-            Gets or sets a list of decorators that will be applied on each row which is not in the ediit mode.
+            Gets or sets a list of decorators that will be applied on each row which is not in the edit mode.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.GridView.EditRowDecorators">
             <summary>
-            Gets or sets a list of decorators that will be applied on each row which is in edit mode.
+            Gets or sets a list of decorators that will be applied on each row in edit mode.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.GridView.SortChanged">
@@ -1897,6 +2563,11 @@
             Gets or sets the format string that will be applied to numeric or date-time values.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.GridViewTextColumn.ChangedBinding">
+            <summary>
+            Gets or sets the command that will be triggered when the control text is changed.
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Controls.GridViewTextColumn.ValueType">
             <summary>
             Gets or sets the type of value being formatted - Number or DateTime.
@@ -1912,9 +2583,14 @@
             A control that represents plain HTML tag.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.TagName">
+        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.#ctor(System.Boolean)">
             <summary>
-            Gets the tag name.
+            Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.HtmlGenericControl"/> class.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.HtmlGenericControl"/> class.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.Attributes">
@@ -1922,24 +2598,24 @@
             Gets the attributes.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.InnerText">
+            <summary>
+            Gets or sets the inner text of the HTML element.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.TagName">
+            <summary>
+            Gets the tag name.
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.Visible">
             <summary>
             Gets or sets whether the control is visible.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.InnerText">
+        <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.RendersHtmlTag">
             <summary>
-            Gets or sets the inner text of the HTML element. 
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.HtmlGenericControl"/> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.#ctor(System.String)">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.HtmlGenericControl"/> class.
+            Gets a value whether this control renders a HTML tag.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -1947,34 +2623,29 @@
             Adds all attributes that should be added to the control begin tag.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.CheckInnerTextUsage">
-            <summary>
-            Checks the inner text property usage.
-            </summary>
-        </member>
         <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.AddVisibleAttributeOrBinding(DotVVM.Framework.Controls.IHtmlWriter)">
             <summary>
             Adds the corresponding attribute or binding for the Visible property.
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.EnsureNoAttributesSet">
+            <summary>
+            Verifies that the control hasn't any HTML attributes, css classes or Visible or DataContext bindings set.
+            </summary>
+        </member>
         <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.RenderBeginTag(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
-            Renders the control begin tag.
+            Renders the control begin tag if <see cref="P:DotVVM.Framework.Controls.HtmlGenericControl.RendersHtmlTag" /> == true.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.RenderEndTag(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
-            Renders the control end tag.
+            Renders the control end tag if <see cref="P:DotVVM.Framework.Controls.HtmlGenericControl.RendersHtmlTag" /> == true. Also renders required resource i before the end tag, if it is a `head` or `body` element
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.EnsureNoAttributesSet">
+        <member name="M:DotVVM.Framework.Controls.HtmlGenericControl.CheckInnerTextUsage">
             <summary>
-            Verifies that the control hasn't any HTML attributes or Visible or DataContext bindings set.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.HtmlGenericControl.RendersHtmlTag">
-            <summary>
-            Gets a value whether this control renders a HTML tag.
+            Checks the inner text property usage.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.HtmlLiteral">
@@ -2054,6 +2725,11 @@
             <summary>
             Renders the begin tag without end char.
             </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.HtmlWriter.AssertIsValidHtmlName(System.String)">
+            Throws an exception if the specified string can't be a valid html name.
+            The point is not to validate according to specification, but to make XSS attacks
+            impossibe - it disables html control characters, but won't throw on digit at the start of the name.
         </member>
         <member name="M:DotVVM.Framework.Controls.HtmlWriter.RenderEndTag">
             <summary>
@@ -2154,14 +2830,9 @@
             This method is typically used from <see cref="T:DotVVM.Framework.Controls.IHtmlAttributeTransformer"/> implementations.
             </summary>
         </member>
-        <member name="T:DotVVM.Framework.Controls.Infrastructure.BodyResourceLinks">
+        <member name="T:DotVVM.Framework.Controls.BodyResourceLinks">
             <summary>
-            Renders the script elements and the serialized viewmodel. This control must be on every page just before the end of body element.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Controls.Infrastructure.BodyResourceLinks.RenderControl(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Renders the control into the specified writer.
+            Renders the resource links with RenderPosition = Body and the serialized viewmodel. This control must be on every page, usually just before the end of body element.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Infrastructure.DotvvmView">
@@ -2179,14 +2850,9 @@
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.Infrastructure.DotvvmView"/> class.
             </summary>
         </member>
-        <member name="T:DotVVM.Framework.Controls.Infrastructure.HeadResourceLinks">
+        <member name="T:DotVVM.Framework.Controls.HeadResourceLinks">
             <summary>
-            Renders the stylesheet links. This control must be on every page just before the end of head element.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Controls.Infrastructure.HeadResourceLinks.RenderControl(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Renders the control into the specified writer.
+            Renders the resource links with RenderPosition = Head. This control must be on every page, usually just before the end of head element.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.InlineScript">
@@ -2203,6 +2869,17 @@
             <summary>
             Contains properties that are intended for internal use.
             </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Controls.Internal.DataContextTypeProperty">
+            <summary>
+            Gets compile-time DataContextStack
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Controls.InternalPropertyExtensions.GetDataContextType(DotVVM.Framework.Controls.DotvvmBindableObject)">
+            Gets an expected data context type (usually determined by the compiler)
+        </member>
+        <member name="M:DotVVM.Framework.Controls.InternalPropertyExtensions.SetDataContextType(DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Compilation.ControlTree.DataContextStack)">
+            Sets an expected data context type
         </member>
         <member name="T:DotVVM.Framework.Controls.ITemplate">
             <summary>
@@ -2239,7 +2916,7 @@
             Gets the data source binding.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.KnockoutHelper.GetPostBackHandlersScript(DotVVM.Framework.Controls.DotvvmControl,System.String)">
+        <member name="M:DotVVM.Framework.Controls.KnockoutHelper.GetPostBackHandlersScript(DotVVM.Framework.Controls.DotvvmBindableObject,System.String,System.String[])">
             <summary>
             Generates a list of postback update handlers.
             </summary>
@@ -2334,12 +3011,12 @@
             Gets or sets whether the literal should render the wrapper span HTML element.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.Literal.#ctor">
+        <member name="M:DotVVM.Framework.Controls.Literal.#ctor(System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.Literal"/> class.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.Literal.#ctor(System.String)">
+        <member name="M:DotVVM.Framework.Controls.Literal.#ctor(System.String,System.Boolean)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.Literal"/> class.
             </summary>
@@ -2434,9 +3111,9 @@
             Gets the key of the handler registered in the dotvvm.extensions.postBackHandlers javascript object.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.PostBackHandler.GetHandlerOptionClientExpressions">
+        <member name="M:DotVVM.Framework.Controls.PostBackHandler.GetHandlerOptions">
             <summary>
-            Gets an array of javascript expressions which will be passes to the handler as parameters.
+            Gets an array of objects or bindings that will be passed to the postback handler as parameters.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.RadioButton">
@@ -2464,24 +3141,29 @@
             Repeats a template for each item in the DataSource collection.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Repeater.ItemTemplate">
-            <summary>
-            Gets or sets the template for each Repeater item.
-            </summary>
-        </member>
         <member name="P:DotVVM.Framework.Controls.Repeater.EmptyDataTemplate">
             <summary>
             Gets or sets the template which will be displayed when the DataSource is empty.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.Repeater.WrapperTagName">
+        <member name="P:DotVVM.Framework.Controls.Repeater.ItemTemplate">
             <summary>
-            Gets or sets the name of the tag that wraps the Repeater.
+            Gets or sets the template for each Repeater item.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Repeater.RenderWrapperTag">
             <summary>
             Gets or sets whether the control should render a wrapper element.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Repeater.SeparatorTemplate">
+            <summary>
+            Gets or sets the template containing the elements that separate items.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Repeater.WrapperTagName">
+            <summary>
+            Gets or sets the name of the tag that wraps the Repeater.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.Repeater.OnLoad(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -2494,29 +3176,24 @@
             Occurs after the page commands are executed.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Controls.Repeater.DataBind(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Performs the data-binding and builds the controls inside the <see cref="T:DotVVM.Framework.Controls.Repeater"/>.
-            </summary>
-        </member>
         <member name="M:DotVVM.Framework.Controls.Repeater.RenderContents(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
             Renders the contents inside the control begin and end tags.
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.Controls.Repeater.SetChildren(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Performs the data-binding and builds the controls inside the <see cref="T:DotVVM.Framework.Controls.Repeater"/>.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.RequiredResource">
             <summary>
-            Declares a resource that will be rendered in the <see cref="T:DotVVM.Framework.Controls.Infrastructure.BodyResourceLinks" /> control later.
+            Declares a resource that will be rendered in the <see cref="T:DotVVM.Framework.Controls.BodyResourceLinks" /> control later.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.RequiredResource.Name">
             <summary>
             Gets or sets the name of the resource.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Controls.RequiredResource.OnPreRenderComplete(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Called right before the rendering shall occur.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.RoleView">
@@ -2610,9 +3287,24 @@
             Gets or sets the name of property in the DataSource collection that will be passed to the SelectedValue property when the item is selected.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.SelectorBase.ItemTextBinding">
+            <summary>
+            The expression of DataSource item that will be displayed in the control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.SelectorBase.ItemValueBinding">
+            <summary>
+            The expression of DataSource item that will be passed to the SelectedValue property when the item is selected.
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Controls.SelectorBase.SelectionChanged">
             <summary>
             Gets or sets the command that will be triggered when the selection is changed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.SelectorBase.ItemTitleBinding">
+            <summary>
+            The expression of DataSource item that will be placed into html title attribute.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.SpaContentPlaceHolder">
@@ -2631,6 +3323,12 @@
             If this property is not set, the URL of the first page using the SpaContentPlaceHolder will stay before the hash mark.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.SpaContentPlaceHolder.UseHistoryApi">
+            <summary>
+            Gets or sets whether navigation in the SPA pages should use History API.
+            If this property is not set, settings from <see cref="T:DotVVM.Framework.Configuration.DotvvmConfiguration">DotvvmConfiguration</see> is used.
+            </summary>
+        </member>
         <member name="F:DotVVM.Framework.Controls.TableUtils.ColumnVisibleProperty">
             <summary>
             Hides entire column in the table. Should be applied to the header.
@@ -2640,16 +3338,6 @@
         <member name="T:DotVVM.Framework.Controls.TextBox">
             <summary>
             Renders a HTML text input control.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.TextBox.Text">
-            <summary>
-            Gets or sets the text in the control.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Controls.TextBox.ValueType">
-            <summary>
-            Gets or sets the type of value being formatted - Number or DateTime.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.TextBox.Enabled">
@@ -2662,6 +3350,21 @@
             Gets or sets a format of presentation of value to client.
             </summary>
         </member>
+        <member name="P:DotVVM.Framework.Controls.TextBox.Changed">
+            <summary>
+            Gets or sets the command that will be triggered when the control text is changed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.TextBox.SelectAllOnFocus">
+            <summary>
+            Gets or sets whether all text inside the TextBox becomes selected when the element gets focused.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.TextBox.Text">
+            <summary>
+            Gets or sets the text in the control.
+            </summary>
+        </member>
         <member name="P:DotVVM.Framework.Controls.TextBox.Type">
             <summary>
             Gets or sets the mode of the text field.
@@ -2669,12 +3372,13 @@
         </member>
         <member name="P:DotVVM.Framework.Controls.TextBox.UpdateTextAfterKeydown">
             <summary>
-            Gets or sets whether the viewmodel property will be updated after the key is pressed. By default, the viewmodel is updated after the control loses its focus.
+            Gets or sets whether the viewmodel property will be updated after the key is pressed. 
+            By default, the viewmodel is updated after the control loses its focus.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Controls.TextBox.Changed">
+        <member name="P:DotVVM.Framework.Controls.TextBox.ValueType">
             <summary>
-            Gets or sets the command that will be triggered when the control text is changed.
+            Gets or sets the type of value being formatted - Number or DateTime.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Controls.TextBox.AddAttributesToRender(DotVVM.Framework.Controls.IHtmlWriter,DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -2695,6 +3399,11 @@
         <member name="T:DotVVM.Framework.Controls.UpdateProgress">
             <summary>
             Container for content that will be displayed for the time the page is doing a postback.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.UpdateProgress.Delay">
+            <summary>
+            Gets or sets the delay (in ms) after which the content inside UpdateProgress control is shown
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.ValidationSummary">
@@ -2762,7 +3471,12 @@
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Controls.Validator"/> class.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.DefaultMarkupFileLoader.GetMarkupFileVirtualPath(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+        <member name="M:DotVVM.Framework.Hosting.AggregateMarkupFileLoader.GetMarkup(DotVVM.Framework.Configuration.DotvvmConfiguration,System.String)">
+            <summary>
+            Gets the markup file for the specified virtual path.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Hosting.AggregateMarkupFileLoader.GetMarkupFileVirtualPath(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
             Gets the markup file virtual path from the current request URL.
             </summary>
@@ -2772,14 +3486,9 @@
             Gets the markup file for the specified virtual path.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.DefaultStopwatch.#ctor">
+        <member name="M:DotVVM.Framework.Hosting.DefaultMarkupFileLoader.GetMarkupFileVirtualPath(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Hosting.DefaultStopwatch" /> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DefaultStopwatch.GetElapsedMiliseconds">
-            <summary>
-            Returns elapsed miliseconds in the stopwatch.
+            Gets the markup file virtual path from the current request URL.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Hosting.DotvvmInterruptRequestExecutionException">
@@ -2787,7 +3496,7 @@
             An exception which is used to interrupt the request processing pipeline because the response has already been generated.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmPresenter.#ctor(DotVVM.Framework.Configuration.DotvvmConfiguration,DotVVM.Framework.Runtime.IDotvvmViewBuilder,DotVVM.Framework.ViewModel.Serialization.IViewModelLoader,DotVVM.Framework.ViewModel.Serialization.IViewModelSerializer,DotVVM.Framework.Runtime.IOutputRenderer,DotVVM.Framework.Security.ICsrfProtector,DotVVM.Framework.Hosting.IStopwatch,DotVVM.Framework.Runtime.IViewModelParameterBinder)">
+        <member name="M:DotVVM.Framework.Hosting.DotvvmPresenter.#ctor(DotVVM.Framework.Configuration.DotvvmConfiguration,DotVVM.Framework.Runtime.IDotvvmViewBuilder,DotVVM.Framework.ViewModel.Serialization.IViewModelLoader,DotVVM.Framework.ViewModel.Serialization.IViewModelSerializer,DotVVM.Framework.Runtime.IOutputRenderer,DotVVM.Framework.Security.ICsrfProtector,DotVVM.Framework.Runtime.IViewModelParameterBinder)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Hosting.DotvvmPresenter" /> class.
             </summary>
@@ -2803,9 +3512,29 @@
             <param name="context"></param>
             <returns></returns>
         </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.HttpContext">
+        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.Route">
             <summary>
-            Gets the underlying object for this HTTP request.
+            Gets the route that was used for this request.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.IsPostBack">
+            <summary>
+            Determines whether this HTTP request is a postback or a classic GET request.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ViewModel">
+            <summary>
+            Gets the view model object for the current HTTP request.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.View">
+            <summary>
+            Gets the top-level control representing the whole view for the current request.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.Parameters">
+            <summary>
+            Gets the values of parameters specified in the <see cref="P:Route" /> property.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.Presenter">
@@ -2818,34 +3547,9 @@
             Gets the global configuration of DotVVM.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.Route">
-            <summary>
-            Gets the route that was used for this request.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.IsPostBack">
-            <summary>
-            Determines whether this HTTP request is a postback or a classic GET request.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.Parameters">
-            <summary>
-            Gets the values of parameters specified in the <see cref="P:Route" /> property.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ResourceManager">
+        <member name="F:DotVVM.Framework.Hosting.DotvvmRequestContext._resourceManager">
             <summary>
             Gets the resource manager that is responsible for rendering script and stylesheet resources.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ViewModel">
-            <summary>
-            Gets the view model object for the current HTTP request.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.View">
-            <summary>
-            Gets the top-level control representing the whole view for the current request.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ModelState">
@@ -2860,19 +3564,19 @@
         </member>
         <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.IsCommandExceptionHandled">
             <summary>
-            Gets or sets the value indiciating whether the exception that occured in the command execution was handled. 
+            Gets or sets the value indicating whether the exception that occurred in the command execution was handled. 
             This property is typically set from the exception filter's OnCommandException method.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.IsPageExceptionHandled">
             <summary>
-            Gets or sets the value indiciating whether the exception that occured during the page execution was handled and that the OnPageExceptionHandled will not be called on the next action filters. 
+            Gets or sets the value indicating whether the exception that occurred during the page execution was handled and that the OnPageExceptionHandled will not be called on the next action filters. 
             This property is typically set from the action filter's OnPageExceptionHandled method.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.CommandException">
             <summary>
-            Gets or sets the exception that occured when the command was executed.
+            Gets or sets the exception that occurred when the command was executed.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ResultIdFragment">
@@ -2890,108 +3594,27 @@
             Gets a value indicating whether this HTTP request is made from single page application and only the SpaContentPlaceHolder content will be rendered.
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Hosting.DotvvmRequestContext.RequestTracers">
-            <summary>
-            Gets a list of tracers for current HTTP request
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.GetSpaContentPlaceHolderUniqueId">
-            <summary>
-            Gets the unique id of the SpaContentPlaceHolder that should be loaded.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.#ctor">
-            <summary>
-            Initializes a new instance of the <see cref="T:DotVVM.Framework.Hosting.DotvvmRequestContext"/> class.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.ChangeCurrentCulture(System.String)">
-            <summary>
-            Changes the current culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.ChangeCurrentCulture(System.String,System.String)">
-            <summary>
-            Changes the current culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.GetCurrentUICulture">
-            <summary>
-            Gets the current UI culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.GetCurrentCulture">
-            <summary>
-            Gets the current culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.InterruptRequest">
-            <summary>
-            Interrupts the execution of the current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.RedirectToUrl(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Returns the redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.RedirectToRoute(System.String,System.Object,System.Boolean,System.Boolean,System.String)">
-            <summary>
-            Returns the redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.RedirectToUrlPermanent(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Returns the permanent redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.RedirectToRoutePermanent(System.String,System.Object,System.Boolean,System.Boolean)">
-            <summary>
-            Returns the permanent redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.SetRedirectResponse(DotVVM.Framework.Hosting.IHttpContext,System.String,System.Int32,System.Boolean,System.Boolean)">
-            <summary>
-            Renders the redirect response.
-            </summary>
-        </member>
         <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.GetCurrent(DotVVM.Framework.Hosting.IHttpContext)">
             <summary>
             Gets the current DotVVM context.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.FailOnInvalidModelState">
+        <member name="M:DotVVM.Framework.Hosting.EmbeddedMarkupFileLoader.GetMarkup(DotVVM.Framework.Configuration.DotvvmConfiguration,System.String)">
             <summary>
-            Ends the request execution when the <see cref="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ModelState"/> is not valid and displays the validation errors in <see cref="T:DotVVM.Framework.Controls.ValidationSummary"/> control.
-            If it is, it does nothing.
+            Gets the markup file for the specified virtual path.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.GetSerializedViewModel">
+        <member name="M:DotVVM.Framework.Hosting.EmbeddedMarkupFileLoader.GetMarkupFileVirtualPath(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
-            Gets the serialized view model.
+            Gets the markup file virtual path from the current request URL.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.TranslateVirtualPath(System.String)">
+        <member name="M:DotVVM.Framework.Hosting.ErrorPages.ErrorFormatter.AddInfoCollectionLoader``1(System.Func{``0,System.Collections.Generic.IEnumerable{DotVVM.Framework.Hosting.ErrorPages.ExceptionAdditionalInfo}})">
             <summary>
-            Translates the virtual path (~/something) to the domain relative path (/virtualDirectory/something). 
-            For example, when the app is configured to run in a virtual directory '/virtDir', the URL '~/myPage.dothtml' will be translated to '/virtDir/myPage.dothtml'.
+            Adds a function to InfoCollectionLoader that returns a collection of ExceptionAdditionalInfo
             </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.TranslateVirtualPath(System.String,DotVVM.Framework.Hosting.IHttpContext)">
-            <summary>
-            Translates the virtual path (~/something) to the domain relative path (/virtualDirectory/something). 
-            For example, when the app is configured to run in a virtual directory '/virtDir', the URL '~/myPage.dothtml' will be translated to '/virtDir/myPage.dothtml'.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.ReturnFile(System.Byte[],System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
-            <summary>
-            Redirects the client to the specified file.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.DotvvmRequestContext.ReturnFile(System.IO.Stream,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
-            <summary>
-            Redirects the client to the specified file.
-            </summary>
+            <typeparam name="T">type of the exception</typeparam>
+            <param name="func">function that returns a collection of ExceptionAdditionalInfo</param>
         </member>
         <member name="M:DotVVM.Framework.Hosting.IDotvvmPresenter.ProcessRequest(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
@@ -3006,11 +3629,6 @@
         <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.CsrfToken">
             <summary>
             Csrf protection token.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.GetSpaContentPlaceHolderUniqueId">
-            <summary>
-            Gets the unique id of the SpaContentPlaceHolder that should be loaded.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.ViewModel">
@@ -3065,19 +3683,19 @@
         </member>
         <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.IsCommandExceptionHandled">
             <summary>
-            Gets or sets the value indiciating whether the exception that occured in the command execution was handled. 
+            Gets or sets the value indicating whether the exception that occurred in the command execution was handled. 
             This property is typically set from the exception filter.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.IsPageExceptionHandled">
             <summary>
-            Gets or sets the value indiciating whether the exception that occured in the command execution was handled. 
+            Gets or sets the value indicating whether the exception that occurred in the command execution was handled. 
             This property is typically set from the action filter's OnPageExceptionHandled method.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.CommandException">
             <summary>
-            Gets or sets the exception that occured when the command was executed.
+            Gets or sets the exception that occurred when the command was executed.
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.IsSpaRequest">
@@ -3095,91 +3713,6 @@
             Gets or sets new url fragment (the part after #) to be set on client. Use this to refer to element Ids on the page
             </summary>
         </member>
-        <member name="P:DotVVM.Framework.Hosting.IDotvvmRequestContext.RequestTracers">
-            <summary>
-            Gets a list of tracers for current HTTP request
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.ChangeCurrentCulture(System.String)">
-            <summary>
-            Changes the current culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.ChangeCurrentCulture(System.String,System.String)">
-            <summary>
-            Changes the current culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.GetCurrentUICulture">
-            <summary>
-            Returns current UI culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.GetCurrentCulture">
-            <summary>
-            Returns current culture of this HTTP request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.InterruptRequest">
-            <summary>
-            Interrupts the execution of the current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.GetSerializedViewModel">
-            <summary>
-            Gets the serialized view model.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.RedirectToUrl(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Returns the redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.RedirectToRoute(System.String,System.Object,System.Boolean,System.Boolean,System.String)">
-            <summary>
-            Returns the redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.RedirectToUrlPermanent(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Returns the permanent redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.RedirectToRoutePermanent(System.String,System.Object,System.Boolean,System.Boolean)">
-            <summary>
-            Returns the permanent redirect response and interrupts the execution of current request.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.FailOnInvalidModelState">
-            <summary>
-            Ends the request execution when the <see cref="P:DotVVM.Framework.Hosting.DotvvmRequestContext.ModelState"/> is not valid and displays the validation errors in <see cref="T:DotVVM.Framework.Controls.ValidationSummary"/> control.
-            If it is, it does nothing.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.TranslateVirtualPath(System.String)">
-            <summary>
-            Translates the virtual path (~/something) to the domain relative path (/virtualDirectory/something). 
-            For example, when the app is configured to run in a virtual directory '/virtDir', the URL '~/myPage.dothtml' will be translated to '/virtDir/myPage.dothtml'.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.ReturnFile(System.Byte[],System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
-            <summary>
-            Sends data stream to client.
-            </summary>
-            <param name="bytes">Data to be sent.</param>
-            <param name="fileName">Name of file.</param>
-            <param name="mimeType">MIME type.</param>
-            <param name="additionalHeaders">Additional headers.</param>
-        </member>
-        <member name="M:DotVVM.Framework.Hosting.IDotvvmRequestContext.ReturnFile(System.IO.Stream,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
-            <summary>
-            Sends data stream to client.
-            </summary>
-            <param name="stream">Data to be sent.</param>
-            <param name="fileName">Name of file.</param>
-            <param name="mimeType">MIME type.</param>
-            <param name="additionalHeaders">Additional headers.</param>
-        </member>
         <member name="M:DotVVM.Framework.Hosting.IEnvironmentNameProvider.GetEnvironmentName(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
             <summary>
             Returns the name of the hosting environment (eg. Development, Production).
@@ -3195,9 +3728,28 @@
             Gets the markup file for the specified virtual path.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Hosting.IStopwatch.GetElapsedMiliseconds">
+        <member name="T:DotVVM.Framework.Hosting.LocalizablePresenter">
             <summary>
-            Returns elapsed miliseconds in the stopwatch.
+            A DotVVM Presenter that reads culture by <see cref="F:DotVVM.Framework.Hosting.LocalizablePresenter.getCulture" />,
+            sets the thread culture and invokes the default dotvvm presenter (obtained from IServiceProvider)
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Hosting.LocalizablePresenter.BasedOnParameter(System.String,System.Boolean)">
+            <summary>Creates a <see cref="T:DotVVM.Framework.Hosting.LocalizablePresenter" /> factory that read the culture from route parameter.</summary>
+            <param name="name">Name of the route parameter</param>
+            <param name="redirectWhenNotFound">If the culture is invalid, it will perform redirect to a url with default culture specified.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Hosting.LocalizablePresenter.BasedOnQuery(System.String,System.Boolean)">
+            <summary>
+            Creates a <see cref="T:DotVVM.Framework.Hosting.LocalizablePresenter" /> factory that read the culture from request query string parameter.
+            </summary>
+            <param name="name">Name of the query string parameter</param>
+            <param name="redirectWhenNotFound">If the culture is invalid, it will perform redirect to a url with default culture specified.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Hosting.LocalizablePresenter.WithRedirectOnFailure(System.Action{DotVVM.Framework.Hosting.IDotvvmRequestContext},System.Func{DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Globalization.CultureInfo})">
+            <summary>
+            Wraps cultureGetter with error handling. It calls the doRedirect on errors,
+            and expects it to throw and exception (probably <see cref="T:DotVVM.Framework.Hosting.DotvvmInterruptRequestExecutionException"/>)
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Hosting.Middlewares.DotvvmFileUploadMiddleware.StoreFile(DotVVM.Framework.Hosting.IHttpContext,Microsoft.AspNet.WebUtilities.MultipartSection,DotVVM.Framework.Storage.IUploadedFileStorage)">
@@ -3439,7 +3991,7 @@
             Holds all required resources and render them to the page in correct order.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.ResourceManagement.ResourceManager.#ctor(DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.ResourceManagement.ResourceManager.#ctor(DotVVM.Framework.ResourceManagement.DotvvmResourceRepository)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.ResourceManagement.ResourceManager"/> class.
             </summary>
@@ -3453,6 +4005,9 @@
             <summary>
             Adds the resource and checks name conflicts.
             </summary>
+        </member>
+        <member name="M:DotVVM.Framework.ResourceManagement.ResourceManager.IsAlreadyRendered(DotVVM.Framework.ResourceManagement.ResourceRenderPosition)">
+            Checks whether the resource position is already rendered.
         </member>
         <member name="M:DotVVM.Framework.ResourceManagement.ResourceManager.AddRequiredScriptFile(System.String,System.String,System.String[])">
             <summary>
@@ -3494,9 +4049,9 @@
             Finds the resource in required resources or in the resources registered in the configuration file.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.ResourceManagement.ResourceRepositoryJsonConverter.GetResourceCollectionNames">
+        <member name="M:DotVVM.Framework.ResourceManagement.ResourceRepositoryJsonConverter.GetResourceTypeNames">
             <summary>
-            Finds all types derived from ResourceBase and creates a dictionary of their names, full names and names in <see cref="T:DotVVM.Framework.ResourceManagement.ResourceConfigurationCollectionNameAttribute"/>
+            Finds all types derived from IResource and creates a dictionary of their names, full names and names in <see cref="T:DotVVM.Framework.ResourceManagement.ResourceConfigurationCollectionNameAttribute"/>
             </summary>
         </member>
         <member name="T:DotVVM.Framework.ResourceManagement.ScriptResource">
@@ -3559,7 +4114,7 @@
         </member>
         <member name="P:DotVVM.Framework.Resources.Controls.FileUpload_UploadErrorMessageText">
             <summary>
-               Looks up a localized string similar to Error occured..
+               Looks up a localized string similar to Error occurred..
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Resources.DothtmlTokenizerErrors">
@@ -3683,6 +4238,11 @@
             Discovers all markup files for which the route should be created.
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.Routing.DefaultRouteStrategy.BuildRoutes(DotVVM.Framework.Routing.RouteStrategyMarkupFileInfo)">
+            <summary>
+            Builds a set of routes for the specified markup file.
+            </summary>
+        </member>
         <member name="M:DotVVM.Framework.Routing.DefaultRouteStrategy.BuildRoute(DotVVM.Framework.Routing.RouteStrategyMarkupFileInfo)">
             <summary>
             Builds a route for the specified markup file.
@@ -3693,17 +4253,17 @@
             Gets the names of the route parameters in the order in which they appear in the URL.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.#ctor(System.String,System.String,System.Object,System.Func{DotVVM.Framework.Hosting.IDotvvmPresenter},DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.#ctor(System.String,System.String,System.Object,System.Func{System.IServiceProvider,DotVVM.Framework.Hosting.IDotvvmPresenter},DotVVM.Framework.Configuration.DotvvmConfiguration)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Routing.DotvvmRoute"/> class.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Func{DotVVM.Framework.Hosting.DotvvmPresenter},DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.#ctor(System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Func{System.IServiceProvider,DotVVM.Framework.Hosting.IDotvvmPresenter},DotVVM.Framework.Configuration.DotvvmConfiguration)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Routing.DotvvmRoute"/> class.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.#ctor(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Func{DotVVM.Framework.Hosting.DotvvmPresenter},DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.#ctor(System.String,System.String,System.String,System.Collections.Generic.IDictionary{System.String,System.Object},System.Func{System.IServiceProvider,DotVVM.Framework.Hosting.IDotvvmPresenter},DotVVM.Framework.Configuration.DotvvmConfiguration)">
             <summary>
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Routing.DotvvmRoute"/> class.
             </summary>
@@ -3723,7 +4283,7 @@
             Builds the URL core from the parameters.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.GetPresenter">
+        <member name="M:DotVVM.Framework.Routing.DotvvmRoute.GetPresenter(System.IServiceProvider)">
             <summary>
             Processes the request.
             </summary>
@@ -3735,7 +4295,17 @@
         </member>
         <member name="F:DotVVM.Framework.Routing.DotvvmRouteTable.dictionary">
             <summary>
-            Dictionary for faster checking of duplicate entries when adding. 
+            Dictionary for faster checking of duplicate entries when adding.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Routing.DotvvmRouteTable.routeTableGroups">
+            <summary>
+            Dictionary for groups of RouteTables.
+            </summary>
+        </member>
+        <member name="F:DotVVM.Framework.Routing.DotvvmRouteTable.group">
+            <summary>
+            Contains information about the group of this RouteTable.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.#ctor(DotVVM.Framework.Configuration.DotvvmConfiguration)">
@@ -3743,12 +4313,28 @@
             Initializes a new instance of the <see cref="T:DotVVM.Framework.Routing.DotvvmRouteTable"/> class.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.GetDefaultPresenter">
+        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.GetGroup(System.String)">
+            <summary>
+            Returns RouteTable of specific group name.
+            </summary>
+            <param name="groupName">Name of the group</param>
+            <returns></returns>
+        </member>
+        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.AddGroup(System.String,System.String,System.String,System.Action{DotVVM.Framework.Routing.DotvvmRouteTable})">
+            <summary>
+            Adds a group of routes
+            </summary>
+            <param name="groupName">Name of the group</param>
+            <param name="urlPrefix">Url prefix of added routes</param>
+            <param name="virtualPathPrefix">Virtual path prefix of added routes</param>
+            <param name="content">Contains routes to be added</param>
+        </member>
+        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.GetDefaultPresenter(System.IServiceProvider)">
             <summary>
             Creates the default presenter factory.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.Add(System.String,System.String,System.String,System.Object,System.Func{DotVVM.Framework.Hosting.IDotvvmPresenter})">
+        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.Add(System.String,System.String,System.String,System.Object,System.Func{System.IServiceProvider,DotVVM.Framework.Hosting.IDotvvmPresenter})">
             <summary>
             Adds the specified route name.
             </summary>
@@ -3756,7 +4342,24 @@
             <param name="url">The URL.</param>
             <param name="virtualPath">The virtual path of the Dothtml file.</param>
             <param name="defaultValues">The default values.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.Add(System.String,System.String,System.Func{System.IServiceProvider,DotVVM.Framework.Hosting.IDotvvmPresenter},System.Object)">
+            <summary>
+            Adds the specified route name.
+            </summary>
+            <param name="routeName">Name of the route.</param>
+            <param name="url">The URL.</param>
+            <param name="defaultValues">The default values.</param>
             <param name="presenterFactory">The presenter factory.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.Add(System.String,System.String,System.Type,System.Object)">
+            <summary>
+            Adds the specified route name.
+            </summary>
+            <param name="routeName">Name of the route.</param>
+            <param name="url">The URL.</param>
+            <param name="presenterType">The presenter factory.</param>
+            <param name="defaultValues">The default values.</param>
         </member>
         <member name="M:DotVVM.Framework.Routing.DotvvmRouteTable.Add(System.String,DotVVM.Framework.Routing.RouteBase)">
             <summary>
@@ -3849,9 +4452,9 @@
             Adds or updates the parameter collection with the specified values from the other parameter collection.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Routing.RouteBase.GetPresenter">
+        <member name="M:DotVVM.Framework.Routing.RouteBase.GetPresenter(System.IServiceProvider)">
             <summary>
-            Processes the request.
+            Returns a presenter that processes the request.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Routing.RouteHelper.AutoDiscoverRoutes(DotVVM.Framework.Routing.DotvvmRouteTable,DotVVM.Framework.Routing.IRoutingStrategy)">
@@ -3860,6 +4463,11 @@
             </summary>
             <param name="strategy">A strategy that provides list of routes.</param>
             <param name="table">A table of DotVVM routes by specified name.</param>
+        </member>
+        <member name="M:DotVVM.Framework.Routing.UrlHelper.BuildUrlSuffix(System.String,System.Object)">
+            <summary>
+            Returns url suffix from a string value and query string parameters
+            </summary>
         </member>
         <member name="T:DotVVM.Framework.Runtime.AttributeViewModelParameterBinder">
             <summary>
@@ -3896,12 +4504,12 @@
             Finds the command to execute in the viewmodel using the path and command expression.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.Commands.CommandResolver.GetFunction(DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String[],System.String)">
+        <member name="M:DotVVM.Framework.Runtime.Commands.CommandResolver.GetFunction(DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String[],System.String,System.Object[])">
             <summary>
             Resolves the command called on the DotvvmControl.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.Commands.CommandResolver.GetFunction(DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String[],System.String)">
+        <member name="M:DotVVM.Framework.Runtime.Commands.CommandResolver.GetFunction(DotVVM.Framework.Controls.DotvvmControl,DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String[],System.String,System.Object[])">
             <summary>
             Resolves the command called on the ViewModel.
             </summary>
@@ -3915,6 +4523,18 @@
             <summary>
             Validates the command.
             </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Commands.EventValidator.FindCommandBinding(System.String[],System.String,DotVVM.Framework.Controls.DotvvmBindableObject,DotVVM.Framework.Controls.DotvvmBindableObject,System.String,System.Boolean)">
+            <summary>
+            Finds the binding of the specified type on the specified viewmodel path.
+            </summary>
+            <param name="path">DataContext path of the binding</param>
+            <param name="commandId">Id of the binding</param>
+            <param name="viewRootControl">ViewRootControl of the binding</param>
+            <param name="targetControl">Target control of the binding, null if not finding control command binding</param>
+            <param name="validationTargetPath">Validation path of the binding</param>
+            <param name="findControl">Determinate whether finding control command binding or not</param>
+            <returns></returns>
         </member>
         <member name="M:DotVVM.Framework.Runtime.Commands.EventValidator.FindCommandBinding(System.String[],System.String,DotVVM.Framework.Controls.DotvvmBindableObject,System.String)">
             <summary>
@@ -3931,7 +4551,7 @@
             Finds the binding of the specified type on the specified viewmodel path.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.Commands.EventValidator.EventValidationException">
+        <member name="M:DotVVM.Framework.Runtime.Commands.EventValidator.EventValidationException(System.String,System.Collections.Generic.Dictionary{System.String,DotVVM.Framework.Runtime.Commands.CandidateBindings})">
             <summary>
             Throws the event validation exception.
             </summary>
@@ -3977,7 +4597,7 @@
             Determines whether the page is nested in master page.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.DefaultDotvvmViewBuilder.FillsDefaultDirectives(DotVVM.Framework.Controls.Infrastructure.DotvvmView,DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:DotVVM.Framework.Runtime.DefaultDotvvmViewBuilder.FillsDefaultDirectives(DotVVM.Framework.Controls.Infrastructure.DotvvmView)">
             <summary>
             Fills default directives if specific directives are not set
             </summary>
@@ -3997,14 +4617,9 @@
             Checks that the content page does not contain invalid content.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.DefaultOutputRenderer.EmbedResourceLinks(DotVVM.Framework.Controls.Infrastructure.DotvvmView)">
-            <summary>
-            Embeds the resource links in the page.
-            </summary>
-        </member>
         <member name="T:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute">
             <summary>
-            Allows to add custom logic before and after a command is executed on a ViewModel.
+            Allows to add custom logic into different phases of a request processing, e.g.: before and after a command is executed on a ViewModel.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnViewModelCreatedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -4037,15 +4652,20 @@
             Called when an exception occurs during the processing of the page events.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPageLoadingAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Called before page is processed.
-            </summary>
+        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPresenterExecutingAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc cref="M:DotVVM.Framework.Runtime.Filters.IPresenterActionFilter.OnPresenterExecutingAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)"/>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPageLoadedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Called after page is processed and ready to be sent to client.
-            </summary>
+        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPresenterExecutedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc cref="M:DotVVM.Framework.Runtime.Filters.IPresenterActionFilter.OnPresenterExecutedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)"/>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPresenterExceptionAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Exception)">
+            <inheritdoc cref="M:DotVVM.Framework.Runtime.Filters.IPresenterActionFilter.OnPresenterExceptionAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Exception)"/>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPageInitializedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc cref="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageInitializedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)"/>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.ActionFilterAttribute.OnPageRenderedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <inheritdoc cref="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageRenderedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)"/>
         </member>
         <member name="T:DotVVM.Framework.Runtime.Filters.ExceptionFilterAttribute">
             <summary>
@@ -4067,19 +4687,34 @@
             Called after the command is executed.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageLoadingAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Called before page is processed.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageLoadedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
-            <summary>
-            Called after page is processed and ready to be sent to client.
-            </summary>
-        </member>
         <member name="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageExceptionAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Exception)">
             <summary>
             Called when an exception occurs during the processing of the page.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageInitializedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Called after page is initialized, just after the ViewModel instance is created
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.IPageActionFilter.OnPageRenderedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Called after page is rendered and ready to be sent to client.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.IPresenterActionFilter.OnPresenterExecutingAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Called before presenter starts processing HTTP request.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.IPresenterActionFilter.OnPresenterExecutedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Called after presenter completes processing HTTP request.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.Runtime.Filters.IPresenterActionFilter.OnPresenterExceptionAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Exception)">
+            <summary>
+            Called when an exception occurs during the processing of the request.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Runtime.Filters.IViewModelActionFilter.OnViewModelCreatedAsync(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
@@ -4186,11 +4821,6 @@
         <member name="M:DotVVM.Framework.Storage.FileSystemUploadedFileStorage.Dispose">
             <summary>
             Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.Storage.IReturnedFileStorage.StoreFile(System.Byte[],DotVVM.Framework.Storage.ReturnedFileMetadata)">
-            <summary>
-            Stores the file and returns its unique ID.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.Storage.IReturnedFileStorage.StoreFile(System.IO.Stream,DotVVM.Framework.Storage.ReturnedFileMetadata)">
@@ -4372,6 +5002,9 @@
             Gets the property name from lambda expression, e.g. 'a => a.FirstName'
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.Utils.ReflectionUtils.GetAllMembers(System.Type,System.Reflection.BindingFlags)">
+            <summary> Gets all members from the type, including inherited classes, implemented interfaces and interfaces inherited by the interface </summary>
+        </member>
         <member name="M:DotVVM.Framework.Utils.ReflectionUtils.GetCodeBasePath(System.Reflection.Assembly)">
             <summary>
             Gets filesystem path of assembly CodeBase
@@ -4408,68 +5041,6 @@
         <member name="T:DotVVM.Framework.ViewModel.FromRouteAttribute">
             <summary>
             Binds the viewmodel property from the route parameter.
-            </summary>
-        </member>
-        <member name="T:DotVVM.Framework.ViewModel.ProtectAttribute">
-            <summary>
-            Defines the protection mode of the property in ViewModel.
-            </summary>
-        </member>
-        <member name="T:DotVVM.Framework.ViewModel.ProtectMode">
-            <summary>
-            An enumeration of possible view model data protection modes.
-            </summary>
-        </member>
-        <member name="F:DotVVM.Framework.ViewModel.ProtectMode.None">
-            <summary>
-            The property value is sent to the client unencrypted and it is not signed. It can be modified on the client with no restrictions.
-            </summary>
-        </member>
-        <member name="F:DotVVM.Framework.ViewModel.ProtectMode.SignData">
-            <summary>
-            The property value is sent to the client unencrypted, but it is also signed. If it is modified on the client, the server will throw an exception during postback.
-            </summary>
-        </member>
-        <member name="F:DotVVM.Framework.ViewModel.ProtectMode.EncryptData">
-            <summary>
-            The property value is encrypted before it is sent to the client.
-            </summary>
-        </member>
-        <member name="T:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase">
-            <summary>
-            A converter that helps with using DateTime on server side and string on client side.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase.DateTimeFormats">
-            <summary>
-            Gets an array of allowed format strings. The first one will be used when the value is serialized and sent to the client.
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase.FormatProvider">
-            <summary>
-            Gets the format provider that will perform the formatting. 
-            </summary>
-        </member>
-        <member name="P:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase.DateTimeStyles">
-            <summary>
-            Gets the date time style flags.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase.TryConvertFromString(System.String,System.DateTime@)">
-            <summary>
-            Tries the convert the value from string and returns whether the attempt was successful.
-            </summary>
-            <param name="value">A value to convert.</param>
-            <param name="result">The result value in case the conversion was successful.</param>
-        </member>
-        <member name="M:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase.ProvideEmptyValue(System.Type)">
-            <summary>
-            Provides a value that should be used when the value couldn't be parsed from string.
-            </summary>
-        </member>
-        <member name="M:DotVVM.Framework.ViewModel.Serialization.DateTimeFormatJsonConverterBase.ConvertToString(System.Object)">
-            <summary>
-            Converts the value to a string representation before sending it to the client.
             </summary>
         </member>
         <member name="M:DotVVM.Framework.ViewModel.Serialization.DefaultViewModelLoader.InitializeViewModel(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Framework.Controls.Infrastructure.DotvvmView)">
@@ -4525,14 +5096,36 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:DotVVM.Framework.ViewModel.Serialization.DefaultViewModelSerializer.ResolveCommand(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Framework.Controls.Infrastructure.DotvvmView,System.String,DotVVM.Framework.Runtime.Filters.ActionInfo@)">
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.DefaultViewModelSerializer.ResolveCommand(DotVVM.Framework.Hosting.IDotvvmRequestContext,DotVVM.Framework.Controls.Infrastructure.DotvvmView)">
             <summary>
             Resolves the command for the specified post data.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.ViewModel.Serialization.DefaultViewModelSerializer.AddPostBackUpdatedControls(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.DefaultViewModelSerializer.AddPostBackUpdatedControls(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Collections.Generic.IEnumerable{System.ValueTuple{System.String,System.String}})">
             <summary>
             Adds the post back updated controls.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.EncryptedValuesWriter.Nest(System.Int32)">
+            <summary>
+            Indicates that serializer should nest to a inner object.
+            Adds a new property to current object, and pushes the state to the stack.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.EncryptedValuesWriter.End">
+            <summary>
+            Indicates that object has ended.
+            Pops state from the stack.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.EncryptedValuesWriter.ClearEmptyNest">
+            <summary>
+            Ensure that the subtree is empty (did not contain any protected value) and clear it.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.EncryptedValuesWriter.WriteValue(System.Int32,System.Object)">
+            <summary>
+            Write a value to the object.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.ViewModel.Serialization.FormatJsonConverterBase`1">
@@ -4577,7 +5170,7 @@
             Writes the JSON representation of the object.
             </summary>
         </member>
-        <member name="M:DotVVM.Framework.ViewModel.Serialization.ViewModelJsonConverter.Populate(Newtonsoft.Json.Linq.JObject,Newtonsoft.Json.JsonSerializer,System.Object)">
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.ViewModelJsonConverter.Populate(Newtonsoft.Json.JsonReader,Newtonsoft.Json.JsonSerializer,System.Object)">
             <summary>
             Populates the specified JObject.
             </summary>
@@ -4627,6 +5220,9 @@
             Creates the reader factory.
             </summary>
         </member>
+        <member name="M:DotVVM.Framework.ViewModel.Serialization.ViewModelSerializationMap.RequiredTypeField">
+            Gets if this object require $type to be serialized.
+        </member>
         <member name="M:DotVVM.Framework.ViewModel.Serialization.ViewModelSerializationMap.CreateWriterFactory">
             <summary>
             Creates the writer factory.
@@ -4650,6 +5246,11 @@
         <member name="M:DotVVM.Framework.ViewModel.Serialization.ViewModelSerializationMapper.GetProperties(System.Type)">
             <summary>
             Gets the properties of the specified type.
+            </summary>
+        </member>
+        <member name="M:DotVVM.Framework.ViewModel.Validation.PropertyPath.BuildPath``1(System.Linq.Expressions.Expression{System.Func{``0,System.Object}},DotVVM.Framework.Configuration.DotvvmConfiguration)">
+            <summary>
+            Builds a <see cref="P:DotVVM.Framework.ViewModel.Validation.ViewModelValidationError.PropertyPath"/> from a LINQ expression
             </summary>
         </member>
         <member name="P:DotVVM.Framework.ViewModel.Validation.ViewModelValidationError.PropertyPath">
@@ -4683,82 +5284,76 @@
             Combines the path.
             </summary>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddDefaultTempStorages(Microsoft.Extensions.DependencyInjection.IDotvvmOptions,System.String)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddDefaultTempStorages(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection,System.String)">
             <summary>
             Adds file system temporary file storages to the application. See <see cref="T:DotVVM.Framework.Storage.IUploadedFileStorage" />
             and <see cref="T:DotVVM.Framework.Storage.IReturnedFileStorage" /> for more details.
             </summary>
-            <param name="options">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions" /> instance.</param>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection" /> instance.</param>
             <param name="tempPath">The absolute or relative path to directory where to store temporary files.</param>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddDefaultTempStorages(Microsoft.Extensions.DependencyInjection.IDotvvmOptions,System.String,System.TimeSpan)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddDefaultTempStorages(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection,System.String,System.TimeSpan)">
             <summary>
             Adds file system temporary file storages to the application. See <see cref="T:DotVVM.Framework.Storage.IUploadedFileStorage" />
             and <see cref="T:DotVVM.Framework.Storage.IReturnedFileStorage" /> for more details.
             </summary>
-            <param name="options">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions" /> instance.</param>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection" /> instance.</param>
             <param name="tempPath">The absolute or relative path to directory where to store temporary files.</param>
             <param name="autoDeleteInterval">The interval to delete the temporary files after.</param>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddUploadedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmOptions,System.String)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddUploadedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection,System.String)">
             <summary>
             Adds file system uploaded file storage to the application. See <see cref="T:DotVVM.Framework.Storage.IUploadedFileStorage" /> for more details.
             </summary>
-            <param name="options">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions" /> instance.</param>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection" /> instance.</param>
             <param name="tempPath">The absolute or relative path to directory where to store temporary files.</param>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddUploadedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmOptions,System.String,System.TimeSpan)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddUploadedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection,System.String,System.TimeSpan)">
             <summary>
             Adds file system uploaded file storage to the application. See <see cref="T:DotVVM.Framework.Storage.IUploadedFileStorage" /> for more details.
             </summary>
-            <param name="options">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions" /> instance.</param>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection" /> instance.</param>
             <param name="tempPath">The absolute or relative path to directory where to store temporary files.</param>
             <param name="autoDeleteInterval">The interval to delete the temporary files after.</param>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddReturnedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmOptions,System.String)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddReturnedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection,System.String)">
             <summary>
             Adds file system returned file storage to the application. See <see cref="T:DotVVM.Framework.Storage.IReturnedFileStorage" /> for more details.
             </summary>
-            <param name="options">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions" /> instance.</param>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection" /> instance.</param>
             <param name="tempPath">The absolute or relative path to directory where to store temporary files.</param>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddReturnedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmOptions,System.String,System.TimeSpan)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmBuilderExtensions.AddReturnedFileStorage(Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection,System.String,System.TimeSpan)">
             <summary>
             Adds file system returned file storage to the application. See <see cref="T:DotVVM.Framework.Storage.IReturnedFileStorage" /> for more details.
             </summary>
-            <param name="options">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions" /> instance.</param>
+            <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection" /> instance.</param>
             <param name="tempPath">The absolute or relative path to directory where to store temporary files.</param>
             <param name="autoDeleteInterval">The interval to delete the temporary files after.</param>
         </member>
-        <member name="T:Microsoft.Extensions.DependencyInjection.DotvvmOptions">
+        <member name="T:Microsoft.Extensions.DependencyInjection.DotvvmServiceCollection">
             <summary>
             Allows fine grained configuration of DotVVM services.
             </summary>
         </member>
-        <member name="P:Microsoft.Extensions.DependencyInjection.DotvvmOptions.Services">
+        <member name="P:Microsoft.Extensions.DependencyInjection.DotvvmServiceCollection.Services">
             <inheritdoc />
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmOptions.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmServiceCollection.#ctor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
-            Initializes a new instance of the <see cref="T:Microsoft.Extensions.DependencyInjection.DotvvmOptions" /> class.
+            Initializes a new instance of the <see cref="T:Microsoft.Extensions.DependencyInjection.DotvvmServiceCollection" /> class.
             </summary>
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
         </member>
-        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmServiceCollectionExtensions.RegisterDotVVMServices(Microsoft.Extensions.DependencyInjection.IServiceCollection,DotVVM.Framework.Configuration.DotvvmConfiguration)">
+        <member name="M:Microsoft.Extensions.DependencyInjection.DotvvmServiceCollectionExtensions.RegisterDotVVMServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
             <summary>
             Adds essential DotVVM services to the specified <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" />.
             </summary>
             <param name="services">The <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> to add services to.</param>
-            <param name="configuration">The DotVVM configuration to use. A default one will be used if the value is <c>null</c>.</param>
         </member>
-        <member name="T:Microsoft.Extensions.DependencyInjection.IDotvvmOptions">
+        <member name="T:Microsoft.Extensions.DependencyInjection.IDotvvmServiceCollection">
             <summary>
             An interface for configuring DotVVM services.
-            </summary>
-        </member>
-        <member name="P:Microsoft.Extensions.DependencyInjection.IDotvvmOptions.Services">
-            <summary>
-            Gets the <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection" /> where DotVVM services are configured.
             </summary>
         </member>
         <member name="P:Microsoft.AspNet.WebUtilities.MultipartReader.HeaderLengthLimit">
@@ -4780,6 +5375,89 @@
             <summary>
             The position where the body starts in the total multipart body.
             This may not be available if the total multipart body is not seekable.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.GetSpaContentPlaceHolderUniqueId(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Gets the unique id of the SpaContentPlaceHolder that should be loaded.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.ChangeCurrentCulture(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String)">
+            <summary>
+            Changes the current culture of this HTTP request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.ChangeCurrentCulture(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String,System.String)">
+            <summary>
+            Changes the current culture of this HTTP request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.GetCurrentUICulture(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Gets the current UI culture of this HTTP request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.GetCurrentCulture(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Gets the current culture of this HTTP request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.InterruptRequest(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Interrupts the execution of the current request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.RedirectToUrl(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Returns the redirect response and interrupts the execution of current request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.RedirectToRoute(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String,System.Object,System.Boolean,System.Boolean,System.String,System.Object)">
+            <summary>
+            Returns the redirect response and interrupts the execution of current request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.RedirectToUrlPermanent(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Returns the permanent redirect response and interrupts the execution of current request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.RedirectToRoutePermanent(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String,System.Object,System.Boolean,System.Boolean)">
+            <summary>
+            Returns the permanent redirect response and interrupts the execution of current request.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.FailOnInvalidModelState(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Ends the request execution when the <see cref="T:DotVVM.Framework.Hosting.ModelState"/> is not valid and displays the validation errors in <see cref="T:DotVVM.Framework.Controls.ValidationSummary"/> control.
+            If it is valid, it does nothing.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.GetSerializedViewModel(DotVVM.Framework.Hosting.IDotvvmRequestContext)">
+            <summary>
+            Gets the serialized view model.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.TranslateVirtualPath(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.String)">
+            <summary>
+            Translates the virtual path (~/something) to the domain relative path (/virtualDirectory/something). 
+            For example, when the app is configured to run in a virtual directory '/virtDir', the URL '~/myPage.dothtml' will be translated to '/virtDir/myPage.dothtml'.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.TranslateVirtualPath(System.String,DotVVM.Framework.Hosting.IHttpContext)">
+            <summary>
+            Translates the virtual path (~/something) to the domain relative path (/virtualDirectory/something). 
+            For example, when the app is configured to run in a virtual directory '/virtDir', the URL '~/myPage.dothtml' will be translated to '/virtDir/myPage.dothtml'.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.ReturnFile(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.Byte[],System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Redirects the client to the specified file.
+            </summary>
+        </member>
+        <member name="M:DotvvmRequestContextExtensions.ReturnFile(DotVVM.Framework.Hosting.IDotvvmRequestContext,System.IO.Stream,System.String,System.String,System.Collections.Generic.IEnumerable{System.Collections.Generic.KeyValuePair{System.String,System.String}})">
+            <summary>
+            Redirects the client to the specified file.
             </summary>
         </member>
     </members>
