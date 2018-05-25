@@ -47,7 +47,7 @@ using (MiniProfiler.Current.Step("GetOrder"))
 1. Run the following commands in the _Package Manager Console_ window:
 
 ```
-Install-Package MiniProfiler.AspNetCore -IncludePrerelease
+Install-Package MiniProfiler.AspNetCore.Mvc -IncludePrerelease
 Install-Package DotVVM.Tracing.MiniProfiler.AspNetCore
 ```
 
