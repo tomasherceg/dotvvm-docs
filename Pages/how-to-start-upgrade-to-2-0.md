@@ -21,7 +21,7 @@ Update-Package DotVVM.Owin
 
 ### 2. Move registration of DotVVM-related services to DotvvmStartup
 
-Because of changes in __DotVVM Compiler__ (a tool which provides metadata for Visual Studio IntelliSense), we had to move registration of DotVVM-related services into `DotvvmStartup` (or other class that implements `IDotvvmServicesConfigurator` interface).
+Because of changes in __DotVVM Compiler__ (a tool which provides metadata for Visual Studio IntelliSense), we had to move registration of DotVVM-related services into `DotvvmStartup` (or other class that implements `IDotvvmServiceConfigurator` interface).
 
 In `Startup.cs` file, remove the lambda method in `UseDotVVM` call:
 
@@ -71,10 +71,10 @@ public class DotvvmStartup : IDotvvmStartup
 }
 ```
 
-And last, make the `DotvvmStartup.cs` class implement `IDotvvmServicesConfigurator`:
+And last, make the `DotvvmStartup.cs` class implement `IDotvvmServiceConfigurator`:
 
 ```CSHARP
-public class DotvvmStartup : IDotvvmStartup, IDotvvmServicesConfigurator
+public class DotvvmStartup : IDotvvmStartup, IDotvvmServiceConfigurator
 {
     ...
 }
