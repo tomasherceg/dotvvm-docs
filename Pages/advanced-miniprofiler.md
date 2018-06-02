@@ -42,12 +42,10 @@ using (MiniProfiler.Current.Step("GetOrder"))
 
 #### <a name="AspNetCore"></a>ASP.NET Core
 
-> Be aware that MiniProfiler for ASP.NET Core is currently in beta pre-release version.
-
 1. Run the following commands in the _Package Manager Console_ window:
 
 ```
-Install-Package MiniProfiler.AspNetCore.Mvc -IncludePrerelease
+Install-Package MiniProfiler.AspNetCore.Mvc
 Install-Package DotVVM.Tracing.MiniProfiler.AspNetCore
 ```
 
@@ -77,7 +75,7 @@ public void ConfigureServices(IServiceCollection services)
     ...
 }
 
-public void Configure(IApplicationBuilder app, IMemoryCache cache)
+public void Configure(IApplicationBuilder app)
 {
     ...
 
