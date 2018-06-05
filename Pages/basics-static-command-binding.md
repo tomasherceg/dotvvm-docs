@@ -10,7 +10,7 @@ transferred from the client to the server and back (see the `Bind` attribute in 
 
 However, it may not be a wise solution to send the whole viewmodel to the server over and over in complicated pages with heavy data grids, modal dialogs or any other UI constructs which require a complex viewmodel. 
 
-That's why DotVVM contains the **static command binding**. See [Optimizing PostBacks](/docs/pages/basics-optimizing-postbacks/{branch}) for more information.
+That's why DotVVM contains the **static command binding**. See [Optimizing PostBacks](/docs/tutorials/basics-optimizing-postbacks/{branch}) for more information.
 
 A **static command** allows to call a method on the server and use its result to update a particular property of the viewmodel. 
 You can pass any arguments to the method and the method can return a result. You can assign the result to any property in the viewmodel.
@@ -19,8 +19,8 @@ Static commands can perform invoke different methods:
 
 * Static method in any class
 * Perform a client-side assignment
-* Call a [REST API method](/docs/pages/basics-rest-api-bindings/{branch})
-* Call a method on a service in the view - [Static Command Services](/docs/pages/basics-static-command-services/{branch})
+* Call a [REST API method](/docs/tutorials/basics-rest-api-bindings/{branch})
+* Call a method on a service in the view - [Static Command Services](/docs/tutorials/basics-static-command-services/{branch})
 
 ### Calling a Static Method
 
@@ -56,7 +56,7 @@ Also, you may want to use the method result to update some viewmodel property.
 
 You need to import the namespace of the `MyClass` using the `@import` directive.
 
-> We recommend to use [Static Command Services](/docs/pages/basics-static-command-services/{branch}) instead of static methods. Static methods have many limitations and do not support dependency injection. 
+> We recommend to use [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}) instead of static methods. Static methods have many limitations and do not support dependency injection. 
 
 ### Client-only Assignments
 
@@ -71,6 +71,6 @@ Only basic expressions are supported here. See the [Value Binding](/docs/tutoria
 
 ### Other Methods
 
-Static command can be used to call [REST API methods](/docs/pages/basics-rest-api-bindings/{branch}) or [Static Command Services](/docs/pages/basics-static-command-services/{branch}).
+Static command can be used to call [REST API methods](/docs/tutorials/basics-rest-api-bindings/{branch}) or [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}).
 
 We recommend to use these methods instead of calling static methods using a static command.

@@ -8,7 +8,7 @@ Consider the following markup:
 <dot:Button Text="{resource: Constant}" />
 ``` 
 
-The binding expression will be evaluated when the button is rendered into HTML, and it will behave the same way as if the text was hard-coded in the markup. In comparison to the [Value Binding](/docs/pages/basics/value-binding/{branch}), the expression is not translated to Knockout JS expression.
+The binding expression will be evaluated when the button is rendered into HTML, and it will behave the same way as if the text was hard-coded in the markup. In comparison to the [Value Binding](/docs/tutorials/basics/value-binding/{branch}), the expression is not translated to Knockout JS expression.
 
 ### Accessing the resources
 
@@ -36,7 +36,7 @@ For example, in a project with the *Resources\Web\Strings1.resx* and *Resources\
 
 The resource binding can be used to call methods, access constants or properties on the server.
 
-This may help with [Server-side Rendering](/docs/pages/basics-server-side-html-generation/{branch}) and SEO (search engine optimization).
+This may help with [Server-side Rendering](/docs/tutorials/basics-server-side-html-generation/{branch}) and SEO (search engine optimization).
 
 The difference between `{{value: FirstName}}` and `{{resource: FirstName}}` is the output HTML.
 
