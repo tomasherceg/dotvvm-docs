@@ -47,8 +47,8 @@
     <DocPageMenuItem RouteName="rest-api-bindings" PageName="REST API Bindings" />
     <DocPageMenuItem RouteName="rest-api-bindings-building-own-api" PageName="REST API Bindings: Building own API" />
     <DocPageMenuItem RouteName="postback-concurrency-mode" PageName="PostBack Concurrency Mode" />
-    <DocPageMenuItem RouteName="dotvvm-contrib-controls" PageName="DotVVM Contrib Controls" />
-    <DocPageMenuItem RouteName="dotvvm-dynamic-data" PageName="DotVVM Dynamic Data" />
+    <!-- <DocPageMenuItem RouteName="dotvvm-contrib-controls" PageName="DotVVM Contrib Controls" /> -->
+    <!-- <DocPageMenuItem RouteName="dotvvm-dynamic-data" PageName="DotVVM Dynamic Data" /> -->
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="advanced" PageName="Advanced Topics">
     <DocPageMenuItem RouteName="authentication-authorization" PageName="Authentication and Authorization" />
@@ -66,14 +66,14 @@
     <DocPageMenuItem RouteName="bundling-minification" PageName="Bundling and Minification" />
     <DocPageMenuItem RouteName="testing-viewmodels" PageName="Testing ViewModels" />
     <DocPageMenuItem RouteName="custom-presenters" PageName="Custom Presenters" />
-    <DocPageMenuItem RouteName="localization-presenters" PageName="Localization Presenters" />
+    <DocPageMenuItem RouteName="localization-presenter" PageName="Localization Presenter" />
     <DocPageMenuItem RouteName="route-autodiscovery" PageName="Auto-Discovering Routes" />
     <DocPageMenuItem RouteName="returning-files" PageName="Returning Files from ViewModels" />
     <DocPageMenuItem RouteName="using-session-or-http-context-cookies" PageName="Using Session or HttpContext Cookies" />
     <DocPageMenuItem RouteName="dotvvm-command-line" PageName="DotVVM Command Line" />
-    <DocPageMenuItem RouteName="javascript-events-and-client-side-viewmodel" PageName="JavaScript Events and Client-side ViewModel" />
-    <DocPageMenuItem RouteName="using-external-javascript-components" PageName="Using external JavaScript components" />
-    <DocPageMenuItem RouteName="server-side-styles" PageName="Server-side Styles" />
+    <!-- <DocPageMenuItem RouteName="javascript-events-and-client-side-viewmodel" PageName="JavaScript Events and Client-side ViewModel" /> -->
+    <!-- <DocPageMenuItem RouteName="using-external-javascript-components" PageName="Using external JavaScript components" /> -->
+    <!-- <DocPageMenuItem RouteName="server-side-styles" PageName="Server-side Styles" /> -->
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="control-development" PageName="Control Development">
     <DocPageMenuItem RouteName="introduction" PageName="Introduction" />
