@@ -156,9 +156,9 @@ If you implemented your own postback handlers, you will need to make the followi
 
 ```CSHARP
 ...
-protected override Dictionary<string, string> GetHandlerOptionClientExpressions()
+protected override Dictionary<string, object> GetHandlerOptions()
 {
-    return new Dictionary<string, string>()
+    return new Dictionary<string, object>()
     {
         ["message"] = GetValueRaw(MessageProperty)      // TranslateValueOrBinding was removed - use GetValueRaw
     };
@@ -227,3 +227,7 @@ The `DisplayMember` property was replaced by `ItemTextBinding`, the `ValueMember
               ItemValueBinding="{value: Id}" 
               SelectedValue="{value: SelectedPerson}" />
 ```
+
+### 3. DotvvmConfiguration now exposes IServiceProvider
+
+The `ServiceLocator` property was replaced by `ServiceProvider` in the `DotvvmConfiguration`.
