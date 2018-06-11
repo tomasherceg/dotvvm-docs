@@ -11,33 +11,26 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample6
         {
             return new[]
             {
-                new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"),new Customer(2,"Raine Damian"),
+                new Customer(0, "Dani Michele"), new Customer(1, "Elissa Malone"), new Customer(2,"Raine Damian"),
                 new Customer(3, "Gerrard Petra"), new Customer(4, "Clement Ernie"), new Customer(5, "Rod Fred")
             }.AsQueryable();
         }
 
-        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
-        {
-            var queryable = FakeDb();
-            // NOTE: Apply Paging and Sorting options.
-            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
-        }
-
-        public GridViewDataSet<Customer> Customers { get; set; }
-
-        public override Task Init()
-        {
-            Customers = new GridViewDataSet<Customer>()
-            {
-                OnLoadingData = GetData,
-                RowEditOptions = new RowEditOptions() { PrimaryKeyPropertyName = "Id" }
-            };
-            return base.Init();
-        }
+        public GridViewDataSet<Customer> Customers { get; set; } = new GridViewDataSet<Customer>() { RowEditOptions = { PrimaryKeyPropertyName = "Id" } };
 
         public void Edit(Customer customer)
         {
             Customers.RowEditOptions.EditRowId = customer.Id;
+        }
+
+        public override Task PreRender()
+        {
+            if (Customers.IsRefreshRequired)
+            {
+                var queryable = FakeDb();
+                Customers.LoadFromQueryable(queryable);
+            }
+            return base.PreRender();
         }
 
         public void Update(Customer customer)

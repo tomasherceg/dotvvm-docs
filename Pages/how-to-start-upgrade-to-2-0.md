@@ -200,6 +200,40 @@ Also note that `dotvvm.postBackHandlers` collection was renamed to `dotvvm.postb
 
 <br />
 
+<a name="gridview"></a>
+
+### 6. Built-in GridView Control 
+
+We have changed the way collection data are loaded into GridViewDataSet. In DotVVM 1.1, you could provide delegate to `GridViewDataSet` which would be used to load data. We have removed the delegate because loading the data could lead to deadlock. 
+
+```CSHARP
+public GridViewDataSet<Customer> Customers { get; set; }
+
+public override Task Init()
+{
+    Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
+    return base.Init();
+}
+```
+
+In DotVVM 2.0, you have to manually load collection to `GridViewDataSet` when it's appropriate:
+
+```CSHARP
+public GridViewDataSet<Customer> Customers { get; set; } = new GridViewDataSet<Customer>() { PagingOptions = { PageSize = 4 } };
+
+public override Task PreRender()
+{
+    if (Customers.IsRefreshRequired)
+    {
+        var queryable = GetData();
+        Customers.LoadFromQueryable(queryable);
+    }
+    return base.PreRender();
+}
+```
+
+<br />
+
 ## Obsolete Constructs
 
 There are several things in **DotVVM 2.0** which were marked as obsolete. Although the features still work, we recommend to fix them soon.
