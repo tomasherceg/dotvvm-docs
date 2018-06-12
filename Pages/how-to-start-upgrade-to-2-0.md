@@ -204,7 +204,7 @@ Also note that `dotvvm.postBackHandlers` collection was renamed to `dotvvm.postb
 
 ### 6. GridView Control 
 
-We have changed the way collection data are loaded into GridViewDataSet. In DotVVM 1.1, you could provide delegate to `GridViewDataSet` which would be used to load data. We have removed the delegate because loading the data could lead to deadlock. 
+We have changed the way collection data are loaded into GridViewDataSet. In DotVVM 1.1, you could provide delegate to `GridViewDataSet` which would be used to load data. We have removed the delegate because loading the data could lead to deadlock.
 
 ```CSHARP
 public GridViewDataSet<Customer> Customers { get; set; }
