@@ -1,4 +1,4 @@
-﻿## Value Binding
+# Value Binding
 
 The **value binding** is the most frequently used binding in DotVVM.
 
@@ -36,7 +36,7 @@ access elements of collections and use supported operators.
 
 You cannot, for example, call methods from the value bindings.
 
-### Expressions Supported in Value Bindings
+## Expressions Supported in Value Bindings
 
 * `SomeProperty`
 * `SomeProperty.OtherProperty`
@@ -47,7 +47,7 @@ You cannot, for example, call methods from the value bindings.
 * `SomeProperty ? "some string" : "other string"`
 * `SomeProperty != OtherProperty`
 
-### .NET Methods Supported in Value Bindings
+## .NET Methods Supported in Value Bindings
 
 DotVVM can translate several .NET methods on basic types or collections to JavaScript, so you can safely use them in value bindings.  
 
@@ -64,13 +64,13 @@ DotVVM can translate several .NET methods on basic types or collections to JavaS
 
 > It is possible to register custom translators for any .NET API. See [Providing Custom JavaScript Translators](/docs/tutorials/control-development-providing-custom-javascript-translators/{branch}) for more information.  
 
-### Null Handling in Value Bindings
+## Null Handling in Value Bindings
 
 You don't have to be afraid of `null` values. If some part of the expression evaluates to null, the whole expression will return null. 
 
 Internally, DotVVM treats every `.` as `.?` in C# 6.
 
-### Double and Single Quotes
+## Double and Single Quotes
 
 Because the bindings in HTML attributes are often wrapped in double quotes, DotVVM allows to use single quotes (apostrophes) for strings as well.
 
@@ -78,7 +78,7 @@ Because the bindings in HTML attributes are often wrapped in double quotes, DotV
 <a class="{value: Active ? 'active' : 'not-active' }"></a>
 ```
 
-### Enums
+## Enums
 
 If you have a property of an enum type in your viewmodel, you may need to work with that value in the binding. 
 

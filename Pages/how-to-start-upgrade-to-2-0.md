@@ -1,8 +1,8 @@
-## Upgrading to DotVVM 2.0
+# Upgrading to DotVVM 2.0
 
 There have been several breaking changes between **DotVVM 1.1** and **DotVVM 2.0**. Perform the following steps to do the upgrade:
 
-### 1. Upgrade DotVVM NuGet packages
+## 1. Upgrade DotVVM NuGet packages
 
 Every DotVVM application uses either `DotVVM.AspNetCore` or `DotVVM.Owin` NuGet package. These packages depend on `DotVVM` and `DotVVM.Core` packages.
 All of these packages must be upgraded to their `2.x` versions. 
@@ -19,7 +19,7 @@ Update-Package DotVVM.Owin
 
 <br />
 
-### 2. Move registration of DotVVM-related services to DotvvmStartup
+## 2. Move registration of DotVVM-related services to DotvvmStartup
 
 Because of changes in __DotVVM Compiler__ (a tool which provides metadata for Visual Studio IntelliSense), we had to move registration of DotVVM-related services into `DotvvmStartup` (or other class that implements `IDotvvmServiceConfigurator` interface).
 
@@ -84,7 +84,7 @@ public class DotvvmStartup : IDotvvmStartup, IDotvvmServiceConfigurator
 
 <br />
 
-### 3. Add jQuery resource if you need it
+## 3. Add jQuery resource if you need it
 
 **DotVVM 1.1** was including jQuery in the page in Debug mode, because it was required by `dotvvm.debug.js` helper library. The need for jQuery in this helper was removed with **DotVVM 2.0**, so `jQuery` resource is not registered in the DotVVM configuration.
 
@@ -100,7 +100,7 @@ config.Resources.Register("jquery", new ScriptResource()
 
 <br />
 
-### 4. Route Registration with Custom Presenters
+## 4. Route Registration with Custom Presenters
 
 We have changed the signature of `RouteTable.Add` method for registering [custom presenters](/docs/tutorials/advanced-custom-presenters/{branch}). Now you can specify only a type of the presenter - in this case, the presenter instance will be retrieved from `IServiceProvider`. 
 
@@ -118,7 +118,7 @@ config.RouteTable.Add("Rss", "export/rss", typeof(RssPresenter));
 
 <a name="action-filters"></a>
 
-### 5. Action Filters
+## 5. Action Filters
 
 If you have implemented custom action or exception filters and used `OnPageLoadingAsync` or `OnPageLoadedAsync` methods, they were removed and the behavior was changed.
 
@@ -138,7 +138,7 @@ If you need to handle these events for both DotVVM pages and custom presenters, 
 
 If you only need to handle these events for DotVVM pages, override the **page-level methods**.
 
-#### 5.1 Exception Filters
+### 5.1 Exception Filters
 
 There is a new method `OnPresenterExceptionAsync` which is called when an unhandled exception is thrown from a custom presenter or a DotVVM page (which is processed using `DotvvmPresenter`).
 
@@ -148,7 +148,7 @@ If you have a custom exception filter and need to handle exceptions from present
 
 <a name="postback-handlers"></a>
 
-### 6. Custom PostBack Handlers 
+## 6. Custom PostBack Handlers 
 
 We have rearchitected the way how [custom postback handlers](/docs/tutorials/control-development-creating-custom-postback-handlers/{branch}) are implemented. 
 
@@ -202,7 +202,7 @@ Also note that `dotvvm.postBackHandlers` collection was renamed to `dotvvm.postb
 
 <a name="gridview"></a>
 
-### 6. GridView Control 
+## 6. GridView Control 
 
 We have changed the way collection data are loaded into GridViewDataSet. In DotVVM 1.1, you could provide delegate to `GridViewDataSet` which would be used to load data. We have removed the delegate because loading the data could lead to deadlock.
 
@@ -235,17 +235,17 @@ public override Task PreRender()
 
 <br />
 
-## Obsolete Constructs
+# Obsolete Constructs
 
 There are several things in **DotVVM 2.0** which were marked as obsolete. Although the features still work, we recommend to fix them soon.
 
-### 1. ValueType property on TextBox, Literal and GridViewTextColumn
+## 1. ValueType property on TextBox, Literal and GridViewTextColumn
 
 The `ValueType` property was needed whenever you worked with date or numeric values in `TextBox`, `Literal` or `GridViewTextColumn` controls. In **DotVVM 2.0**, this property was made obsolete and is not used by the framework - the type of the data-bound value is inferred automatically.
 
 <br />
 
-### 2. ComboBox now supports ItemTextBinding and ItemValueBinding
+## 2. ComboBox now supports ItemTextBinding and ItemValueBinding
 
 The `DisplayMember` property was replaced by `ItemTextBinding`, the `ValueMember` was replaced with `ItemValueBinding`.
 
@@ -263,6 +263,6 @@ The `DisplayMember` property was replaced by `ItemTextBinding`, the `ValueMember
               SelectedValue="{value: SelectedPerson}" />
 ```
 
-### 3. DotvvmConfiguration now exposes IServiceProvider
+## 3. DotvvmConfiguration now exposes IServiceProvider
 
 The `ServiceLocator` property was replaced by `ServiceProvider` in the `DotvvmConfiguration`.

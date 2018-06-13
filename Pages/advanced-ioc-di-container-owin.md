@@ -1,4 +1,4 @@
-## IoC/DI Containers (OWIN)
+# IoC/DI Containers (OWIN)
 
 The `DotvvmStartup` class implements `IDotvvmServiceConfigurator` interface with the following method:
 
@@ -17,7 +17,7 @@ One of the services that is already present in the collection, is the viewmodel 
 
 DotVVM uses the `DefaultViewModelLoader` class which locates the class and calls its default constructor. If you need to plug a dependency injection container in, you can create a class that inherits `DefaultViewModelLoader` and override the `CreateViewModelInstance`.
 
-### Custom ViewModelLoader for Castle Windsor
+## Custom ViewModelLoader for Castle Windsor
 
 **Castle Windsor** is one of the favorite IoC/DI containers in .NET. Here is how to create the viewmodel loader using this container. Notice that we call `container.Resolve` in the `CreateViewModelInstance` and `container.Release` in the `DisposeViewModel`.
 
@@ -55,7 +55,7 @@ If you use another container, the implementation will be very similar. Don't for
 
 Some containers do this by initiating a "scope" in the `CreateViewModelInstance` method and disposing the scope in the `DisposeViewModel` method.
 
-### Registering Custom ViewModelLoader
+## Registering Custom ViewModelLoader
 
 The last thing is to replace the default viewmodel loader with the one you have just created.
 We should do this in the `Startup.cs` class:

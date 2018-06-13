@@ -1,4 +1,4 @@
-## Filters
+# Filters
 
 > The API of action filters has been changed in DotVVM 2.0. See the [Upgrading to DotVVM 2.0](/docs/tutorials/how-to-start-upgrade-to-2-0/2-0#action-filters) page for more information. 
 
@@ -11,7 +11,7 @@ In **DotVVM**, we have a concept of filters for this purpose. If you know Action
 in ASP.NET MVC or ASP.NET Web API, it is the same.
 
 
-### Action Filters
+## Action Filters
 
 If you want to apply a common logic to one or more viewmodels, viewmodel commands or a whole application, you need to create a class that derives from `ActionFilterAttribute`.
 
@@ -43,7 +43,7 @@ There is also a class called `ExceptionFilterAttribute` which adds another event
 If you only need to target specific events, you don't need to inherit from these attributes. You can implement the `IPresenterActionFilter`, `IPageActionFilter`, `ICommandActionFilter` or `IViewModelActionFilter` interface instead.
 
 
-### Example: Model Validation using Filters
+## Example: Model Validation using Filters
 
 If you want to perform the model validation before every command, it is not difficult. Actually, **DotVVM** already include 
 such filter and registers it for all requests by default. 

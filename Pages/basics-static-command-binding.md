@@ -1,4 +1,4 @@
-﻿## Static Command Binding
+# Static Command Binding
 
 If you use the [Command Binding](/docs/tutorials/basics-command-binding/{branch}), the viewmodel must be serialized and sent to the server where the 
 method is executed. 
@@ -22,7 +22,7 @@ Static commands can perform invoke different methods:
 * Call a [REST API method](/docs/tutorials/basics-rest-api-bindings/{branch})
 * Call a method on a service in the view - [Static Command Services](/docs/tutorials/basics-static-command-services/{branch})
 
-### Calling a Static Method
+## Calling a Static Method
 
 First, you have to declare a method in your viewmodel. The method must be `static` and can accept any number of arguments.
 The only requirement is that they must be JSON-serializable. 
@@ -58,7 +58,7 @@ You need to import the namespace of the `MyClass` using the `@import` directive.
 
 > We recommend to use [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}) instead of static methods. Static methods have many limitations and do not support dependency injection. 
 
-### Client-only Assignments
+## Client-only Assignments
 
 You can also use static commands to execute simple operations on the viewmodel without making any communication with the server.
 It is useful e.g. when you need to switch some property to `false` or something like that. 
@@ -69,7 +69,7 @@ It is useful e.g. when you need to switch some property to `false` or something 
 
 Only basic expressions are supported here. See the [Value Binding](/docs/tutorials/basics-value-binding/{branch}) page for more information.
 
-### Other Methods
+## Other Methods
 
 Static command can be used to call [REST API methods](/docs/tutorials/basics-rest-api-bindings/{branch}) or [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}).
 

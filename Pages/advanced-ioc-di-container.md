@@ -1,4 +1,4 @@
-## IoC/DI Containers
+# IoC/DI Containers
 
 Dependency Injection is used widely in many large applications. **DotVVM** allows you to have your services injected in the viewmodel constructor or properties.
 
@@ -24,7 +24,7 @@ DotVVM uses the `Microsoft.Extensions.DependencyInjection` library to configure 
 * [IoC/DI Containers (OWIN)](/docs/tutorials/advanced-ioc-di-container-owin/{branch})
 * [IoC/DI Containers (ASP.NET Core)](/docs/tutorials/advanced-ioc-di-container-aspnetcore/{branch})
 
-### Static Command Services
+## Static Command Services
 
 DotVVM 2.0 added the [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}). 
 

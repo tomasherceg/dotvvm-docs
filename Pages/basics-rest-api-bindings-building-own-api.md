@@ -1,4 +1,4 @@
-## REST API Bindings: Building own API
+# REST API Bindings: Building own API
 
 > This feature is new in **DotVVM 2.0**. See [REST API Bindings](/docs/tutorials/basics-rest-api-bindings/{branch}) for more details about configuration.
 
@@ -6,7 +6,7 @@ If you decide to build the REST API using **ASP.NET Web API** or **ASP.NET MVC C
 
 These NuGet packages work with **Swashbuckle**, a popular library that exposes Swagger JSON metadata. 
 
-### Installing Swashbuckle extensions for DotVVM
+## Installing Swashbuckle extensions for DotVVM
 
 First, make sure you have Swashbuckle installed and configured in your project. 
 
@@ -23,7 +23,7 @@ Install-Package DotVVM.Api.Swashbuckle.AspNetCore
 Install-Package DotVVM.Api.Swashbuckle.Owin
 ```
 
-### Configure Swashbuckle extensions for DotVVM
+## Configure Swashbuckle extensions for DotVVM
 
 To enable DotVVM integration, call the `EnableDotvvmIntegration` extension method in the Swashbuckle configuration.
 
@@ -57,7 +57,7 @@ services.AddSwaggerGen(options => {
 });
 ```
 
-#### Registering known types
+### Registering known types
 
 By default, [DotVVM Command Line](/docs/tutorials/advanced-dotvvm-command-line/{branch}) generates classes for all types used in the REST API (in both C# and TypeScript clients). For example, if the API returns a list of orders, there will be the `Order` class in the generated client.
 
@@ -95,7 +95,7 @@ services.Configure<DotvvmApiOptions>(opt =>
 
 <!-- Some DotVVM types, such as `GridViewDataSet`, `SortingOptions` or `PagingOptions` are registered as known types by default. This makes building APIs with paging and sorting easier.
 
-### Working with GridViewDataSet
+## Working with GridViewDataSet
 
 You can declare API controler methods which return `GridViewDataSet` and accepts `SortingOptions` and `PagingOptions`:
 

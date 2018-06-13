@@ -1,4 +1,4 @@
-## Server-side Styles
+# Server-side Styles
 
 **DotVVM** supports Server-side styles which enable changing the style or attributes of specified controls across the whole application.
 

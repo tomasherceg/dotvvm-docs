@@ -1,4 +1,4 @@
-### Sample 3: Set the url suffix
+## Sample 3: Set the url suffix
 
 You can use the `UrlSuffix` attribute to specify the suffix that will be appended to the end of the generated url.
 

@@ -1,4 +1,4 @@
-﻿## Binding Context
+# Binding Context
 
 In **DotVVM**, each HTML element or DotVVM control has the `DataContext` property. Using this property, you can change the context in which data bindings are evaluated.
 
@@ -46,7 +46,7 @@ The `DataContext` property will make all bindings on the `<div>` element and all
 
 If the `DataContext` binding is not present, the binding inside the `<div>` would have to be `{{value: Customer.Name}}`.
 
-### Null DataContext
+## Null DataContext
 
 There is also one helpful feature. If the `DataContext` of any element is `null`, the element is removed from the DOM and the bindings inside this element
 are not evaluated at all.
@@ -57,7 +57,7 @@ If you don't want the `<div>` element to hide, the `DataContext` property must p
 
 <br>
 
-### Scope Context Variables
+## Scope Context Variables
 
 You can use the following binding context variables to navigate the `DataContext` hierarchy in elements that change the `DataContext` property.
 
@@ -74,11 +74,11 @@ For example, the following binding calls the `DeleteAddress` method in the page 
 </div>
 ```
 
-### Control Context Variable
+## Control Context Variable
 
 The `_control` binding context variable can be used in user control files (`*.dotcontrol`) to access properties of the user control. See the [Markup Controls](/docs/tutorials/control-development-markup-controls) chapter for more info.
 
-### Collection Context Variable
+## Collection Context Variable
 
 Additionally, you can use the `_collection` binding context variable to access the current item index and other properties in the `ItemTemplate` of a `Repeater`, `GridView` or similar data-bound control. The variable defines the following properties:
 

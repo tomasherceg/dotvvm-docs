@@ -1,4 +1,4 @@
-## IoC/DI Containers (ASP.NET Core)
+# IoC/DI Containers (ASP.NET Core)
 
 ASP.NET Core contains a built-in dependency injection mechanism. In the `Startup.cs` file, there is a method called `ConfigureServices` which registers all application services in the `IServiceCollection` parameter. 
 
@@ -6,7 +6,7 @@ The collection is managed by the `Microsoft.Extensions.DependencyInjection` libr
 
 When you call `app.UseDotVVM<DotvvmStartup>(...)`, it registers several internal services which DotVVM uses the `IServiceCollection`, for example the view compiler, viewmodel serializer and so on.  
 
-### Registering Services
+## Registering Services
 
 To register services unrelated to DotVVM infrastructure, you can just call one of the following methods:
 
@@ -31,7 +31,7 @@ public void ConfigureServices(IDotvvmServiceCollection services)
 
 DotVVM will be able to inject these services if they are specified as parameters of the viewmodel constructor. 
 
-### Using Alternative Container
+## Using Alternative Container
 
 Optionally, the `ConfigureServices` method can return its own `IServiceProvider` which will be used instead of the default one. This is useful if you want to use an alternative IoC/DI container. 
 

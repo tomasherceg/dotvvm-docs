@@ -1,4 +1,4 @@
-## Javascript and CSS Resources
+# Javascript and CSS Resources
 
 DotVVM has a built-in mechanism for managing resources. It supports JavaScript files, inline JavaScript snippets and CSS files. It is extensible so it can be used to work with fonts, icons and other kinds of static files.
 
@@ -18,7 +18,7 @@ We have the following types of resources:
 
 * `NullResource` is a special type of resource that doesn't render anything. It is used when some control requests the resource to be included in the page, however you have included the resource itself (e.g. in the master page).
 
-### Resource Repository
+## Resource Repository
 
 > The resource registration has changed in DotVVM 1.1. Visit the [Upgrading to DotVVM 1.1](/docs/tutorials/how-to-start-upgrade-from-1-0/1-1) for more details.
 
@@ -47,7 +47,7 @@ jquery.Location = new UrlResourceLocation("~/Scripts/jquery.2.1.1.min.js");
 jquery.LocationFallback = null;
 ```
 
-### Resource Location
+## Resource Location
 
 Most resources have the `Location` property of type `IResourceLocation` which defines, how the resource file is obtained. You can use one of the following implementations:
 
@@ -59,7 +59,7 @@ Most resources have the `Location` property of type `IResourceLocation` which de
 
 You can of course implement custom resource types and resource location implementations. 
 
-### CDN Fallbacks
+## CDN Fallbacks
 
 If you want to use CDN for script files, it is often a good idea to have a local fallback for the case that CDN is down, or if you are debugging the app without the Internet connection. 
 
@@ -79,7 +79,7 @@ configuration.Resources.Register(ResourceConstants.JQueryResourceName,
 
 If the `VerifyResourceIntegrity` property on the `ScriptResource` is set to true, then it will use the `LocationFallback` to automatically compute the subresource integrity hash, for an extra guarantee that the remote resource being downloaded is the one intended.
 
-### Registering jQuery
+## Registering jQuery
 
 **DotVVM 1.1** was including jQuery in the page in Debug mode, because it was required by `dotvvm.debug.js` helper library. The need for jQuery in this helper was removed with **DotVVM 2.0**, so `jQuery` resource is not registered in the DotVVM configuration.
 
