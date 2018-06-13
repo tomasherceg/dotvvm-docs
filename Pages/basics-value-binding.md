@@ -62,7 +62,7 @@ DotVVM can translate several .NET methods on basic types or collections to JavaS
 * `Task<T>.Result`
 * `Api.RefreshOnChange`, `Api.RefreshOnEvent`, `Api.PushEvent` (see [REST API bindings](/docs/tutorials/basics-rest-api-bindings/{branch}) for more information)
 
-> It is possible to register custom translators for any .NET API. See [Providing Custom JavaScript Translators](/docs/tutorials/control-development/providing-custom-javascript-translators/{branch}) for more information.  
+> It is possible to register custom translators for any .NET API. See [Providing Custom JavaScript Translators](/docs/tutorials/control-development-providing-custom-javascript-translators/{branch}) for more information.  
 
 ### Null Handling in Value Bindings
 
