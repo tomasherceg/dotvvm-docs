@@ -8,7 +8,7 @@ Consider the following markup:
 <dot:Button Text="{resource: Constant}" />
 ``` 
 
-The binding expression will be evaluated when the button is rendered into HTML, and it will behave the same way as if the text was hard-coded in the markup. In comparison to the [Value Binding](/docs/tutorials/basics/value-binding/{branch}), the expression is not translated to Knockout JS expression.
+The binding expression will be evaluated when the button is rendered into HTML, and it will behave the same way as if the text was hard-coded in the markup. In comparison to the [Value Binding](/docs/tutorials/basics-value-binding/{branch}), the expression is not translated to Knockout JS expression.
 
 ### Accessing the resources
 

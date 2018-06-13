@@ -65,7 +65,7 @@ You can perform multiple statements in the static command. Use `;` to separate t
 
 #### 4. REST API Bindings
 
-Another way of ligheting the viewmodels is to use [REST API Bindings](/docs/tutorials/rest-api-bindings/{branch}). This allows to register a REST API as a variable in binding expressions (e.g. `_ordersApi`) and call REST methods on it. The results of the API calls can be used as values for many controls ([GridView](/docs/controls/builtin/GridView/{branch}) for example) and doesn't need to be present in the viewmodel at all.
+Another way of ligheting the viewmodels is to use [REST API Bindings](/docs/tutorials/basics-rest-api-bindings/{branch}). This allows to register a REST API as a variable in binding expressions (e.g. `_ordersApi`) and call REST methods on it. The results of the API calls can be used as values for many controls ([GridView](/docs/controls/builtin/GridView/{branch}) for example) and doesn't need to be present in the viewmodel at all.
 
 Using this approach, you can make a page with a grid of data which will be loaded using REST API. The viewmodel can then contain only the state of the page (current page index, current order and so on), not the data displayed in the page. This can make a significant change in the size of the viewmodel.
 
