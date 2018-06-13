@@ -30,7 +30,9 @@ You can use custom validation attributes (they implement the `IValidationAttribu
 In order to support complex scenarios, the viewmodel can implement the `IValidatableObject` interface and use the `Validate` method to return a list of validation errors:
 
 ```CSHARP
-public class AppointmentData : IValidatableObject
+using DotVVM.Framework.ViewModel.Validation;
+
+public class AppointmentData : DotvvmViewModelBase, IValidatableObject
 {
     [Required]
     public DateTime BeginDate { get; set; }
@@ -43,10 +45,7 @@ public class AppointmentData : IValidatableObject
     {
         if (BeginDate >= EndDate)
         {
-            yield return new ValidationResult(
-                "The begin date of the appointment must be lower than the end date.",
-                PropertyPath.Build<AppointmentData>(d => d.BeginDate)     // path of the property
-            );
+            yield return this.CreateValidationResult(t => t.BeginDate, "The begin date of the appointment must be lower than the end date.");
         }
     }
 }
