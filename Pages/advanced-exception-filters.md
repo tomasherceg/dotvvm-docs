@@ -1,4 +1,4 @@
-## Exception Filters
+# Exception Filters
 
 > The API of action filters has been changed in DotVVM 2.0. See the [Upgrading to DotVVM 2.0](/docs/tutorials/how-to-start-upgrade-to-2-0/2-0#action-filters) page for more information.  
 
@@ -50,7 +50,7 @@ namespace DotvvmDemo
 
 <br />
 
-### Command Exception Handling
+## Command Exception Handling
 
 In many apps, the commands sometimes end with an exception. However, you don't always want to show the error page to the user. You want to log the exception and display an error message to the user.
 
@@ -91,7 +91,7 @@ continue like there was no error, we need to set `context.IsCommandExceptionHand
 
 <br />
 
-### Custom Error Pages
+## Custom Error Pages
 
 If the exception occurs during the `Init`, `Load` and `PreRender` phase, you often need to redirect the user to an error page. 
 

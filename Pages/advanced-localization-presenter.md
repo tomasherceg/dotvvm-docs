@@ -1,4 +1,4 @@
-## Localization Presenter
+# Localization Presenter
 
 > This feature is new in **DotVVM 2.0**.
 

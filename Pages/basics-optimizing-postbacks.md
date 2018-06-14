@@ -1,4 +1,4 @@
-## Optimizing PostBacks
+# Optimizing PostBacks
 
 Most DotVVM applications have been using [Command Binding](/docs/tutorials/basics-command-binding/{branch}) for all actions the user can invoke from the page. This type of binding causes a postback and by default, the entire viewmodel is transferred from the client to the server so the command can be processed. All changes made to the viewmodel on the server are serialized and sent back to the client.
 
@@ -8,13 +8,13 @@ DotVVM offers many solutions to address this issue. We are also working on a dia
 
 Here is a list of tips which can help you to optimize your DotVVM pages:
 
-#### 1. Remove unnecessary data from the viewmodel
+## 1. Remove unnecessary data from the viewmodel
 
 While working with our customers, we have seen many viewmodels containing data that weren't necessary for the view. The typical cause of this issue is reusing objects already present in the application instead of creating a separate ones which would contains only the necessary information.
 
 For example, if you need to display a table of employees where only few columns are needed, create a special class that represents these rows and use it in the viewmodel instead of the original class which may have more properties. These special classes are sometimes called [Data Transfer Objects](https://en.wikipedia.org/wiki/Data_transfer_object). 
 
-#### 2. Use Bind attribute 
+## 2. Use Bind attribute 
 
 Some properties in the viewmodel never change, or can be changed only on the server. Specifying the [Binding Direction](/docs/tutorials/basics-binding-direction/{branch}) for these properties can help to significantly reduce the amount of data being transferred. 
 
@@ -37,7 +37,7 @@ public class CurrencyExchangeViewModel : DotvvmViewModelBase
 }
 ```
 
-#### 3. Static Command 
+## 3. Static Command 
 
 Sometimes, you just need to call a method on the server and update a single property in the viewmodel. In this case, you can use [Static Command Binding](/docs/tutorials/basics-static-command-binding/{branch}) which doesn't need to transfer the viewmodel at all. It just sends the method parameters to the server and optionally assigns the return value of the method to a property in the viewmodel. 
 
@@ -63,13 +63,13 @@ Static commands can be also used to perform local changes in the viewmodel witho
 
 You can perform multiple statements in the static command. Use `;` to separate these commands.
 
-#### 4. REST API Bindings
+## 4. REST API Bindings
 
 Another way of ligheting the viewmodels is to use [REST API Bindings](/docs/tutorials/basics-rest-api-bindings/{branch}). This allows to register a REST API as a variable in binding expressions (e.g. `_ordersApi`) and call REST methods on it. The results of the API calls can be used as values for many controls ([GridView](/docs/controls/builtin/GridView/{branch}) for example) and doesn't need to be present in the viewmodel at all.
 
 Using this approach, you can make a page with a grid of data which will be loaded using REST API. The viewmodel can then contain only the state of the page (current page index, current order and so on), not the data displayed in the page. This can make a significant change in the size of the viewmodel.
 
-#### Future Enhancements
+## Future Enhancements
 
 There are a lot of other ways we plan to include in future versions of DotVVM. 
 

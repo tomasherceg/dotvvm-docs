@@ -1,4 +1,4 @@
-﻿## Routing
+# Routing
 
 Every page in **DotVVM** needs to be registered in the **route table**. DotVVM doesn't allow visiting a page just by putting its path in the URL. 
 
@@ -7,7 +7,7 @@ The routes are configured in the `DotvvmStartup` class in the `Configure` method
 > To separate the configuration options, the default project templates contain  `ConfigureControls`, `ConfigureRoutes` and `ConfigureResources` methods, which are called from the `Configure` method. But you can use any structure you like, the only requirement is that the `Configure` method performs all the configuration actions.
 
 
-### Registering Routes One By One
+## Registering Routes One By One
 
 In simple web apps, you can register each route individually using the following code snippet:
 
@@ -32,7 +32,7 @@ The presenters can also be used in localized applications to detect the user lan
 
 > If you have a larger project, you may want to use conventions to [auto-discover routes](/docs/tutorials/advanced-route-autodiscovery/{branch}) instead of registering them one by one.  
 
-### Route Parameters
+## Route Parameters
 
 Consider the following example. We need to create a page that can create a new customer, or display its details and allow to modify them.
 
@@ -82,7 +82,7 @@ else
 }
 ```
 
-### Route Groups
+## Route Groups
 
 If you have several similar routes, you can register them as a group:
 
@@ -119,7 +119,7 @@ As you can see, the route name, route URL and `dothtml` file location are compos
 
 <a id="ref-constraints"></a>
 
-### Route Constraints
+## Route Constraints
 
 Additionally, we can use the route parameter constraints:
 

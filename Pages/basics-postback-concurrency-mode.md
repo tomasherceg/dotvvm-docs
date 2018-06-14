@@ -1,4 +1,4 @@
-## PostBack Concurrency Mode
+# PostBack Concurrency Mode
 
 > This feature is new in **DotVVM 2.0**. 
 
@@ -10,7 +10,7 @@ The property can have the following values:
 * `Deny`
 * `Queue`
 
-### Default behavior
+## Default behavior
 
 ```DOTHTML
 <dot:Button Text="Test" Click="{command: Test()}" PostBack.Concurrency="Default" />
@@ -24,7 +24,7 @@ For __static command bindings__, all responses are applied to the viewmodel in t
 
 This behavior works for many scenarios and is the only strategy available in **DotVVM 1.x**.
 
-### Deny: One postback at a time
+## Deny: One postback at a time
 
 ```DOTHTML
 <dot:Button Text="Save" Click="{command: Save()}" PostBack.Concurrency="Deny" />
@@ -34,7 +34,7 @@ This setting will not initiate a postback when another one is waiting for respon
 
 This is a good setting for double-postback prevention and should be used on all operations which insert data (save buttons and so on).
 
-### Queue: Wait until other postbacks end
+## Queue: Wait until other postbacks end
 
 ```DOTHTML
 <dot:Button Text="Refresh" Click="{command: Refresh()}" PostBack.Concurrency="Queue" />
@@ -44,7 +44,7 @@ This setting will add postbacks in a queue and dispatch them immediately after t
 
 This is a good setting for low-priority postbacks, long running operations or periodic tasks (refreshing every 15 seconds) which might otherwise interfere with actions made by the user at the same time.
 
-### Concurrency Queues
+## Concurrency Queues
 
 You may need several independent groups of controls which may be used simultaneously. For example, you may need two separate postback queues for some kinds of actions.
 

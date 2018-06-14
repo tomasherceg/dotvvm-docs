@@ -1,4 +1,4 @@
-﻿## Resource Binding
+# Resource Binding
 
 The **resource binding** is used to access resources and constants, or to evaluate any expression on the server. 
 
@@ -10,7 +10,7 @@ Consider the following markup:
 
 The binding expression will be evaluated when the button is rendered into HTML, and it will behave the same way as if the text was hard-coded in the markup. In comparison to the [Value Binding](/docs/tutorials/basics-value-binding/{branch}), the expression is not translated to Knockout JS expression.
 
-### Accessing the resources
+## Accessing the resources
 
 The primary scenario for this binding is to access .NET resource files (RESX). The default syntax is `{resource: FullNamespace.ResourceClass.ResourceKey}`. 
 This will find the appropriate RESX file and use the value with the specified key.
@@ -19,7 +19,7 @@ For example, if you have a project named *MyWebApp* and you have a *Resources\We
 be *MyWebApp.Resources.Web.Strings* (provided you haven't change the default namespace in the project properties). To retrieve the resource, you need
 to use `{resource: MyWebApp.Resources.Web.Strings.SomeResourceKey}`.
 
-### The @import Directive
+## The @import Directive
 
 The syntax with full namespace is long, so you can use the `@import` directive to import namespaces.
 
@@ -32,7 +32,7 @@ For example, in a project with the *Resources\Web\Strings1.resx* and *Resources\
 {{resource: Strings2.SomeResource}}
 ```
 
-### Other Uses
+## Other Uses
 
 The resource binding can be used to call methods, access constants or properties on the server.
 
@@ -66,7 +66,7 @@ Notice that the [Repeater](/docs/controls/builtin/Repeater/{branch}) is switched
 
 The [RouteLink](/docs/controls/builtin/RouteLink/{branch}) control uses `resource` bindings so they are evaluated when the control is rendered and they behave like a hard-coded values on the client-side. It is the only way how to use `RouteLink` if the `RouteName` is parameterized. The `RouteName` property cannot use `value` binding - it would require to have a complete route table distributed on the client which would be a security issue. 
 
-### Notes
+## Notes
 
  The resource bindings are always evaluated on the server. When evaluating, the `CurrentUICulture` of the thread that handles the HTTP request will be used. 
  

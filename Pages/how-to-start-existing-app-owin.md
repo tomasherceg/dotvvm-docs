@@ -1,4 +1,4 @@
-## Adding DotVVM in Existing Web App (OWIN)
+# Adding DotVVM in Existing Web App (OWIN)
 
 To add **DotVVM** in an existing ASP.NET project, simply install **DotVVM.Owin** Nuget package using Package Manager Console:
 
@@ -6,7 +6,7 @@ To add **DotVVM** in an existing ASP.NET project, simply install **DotVVM.Owin**
 
 This command will also reference the dependent packages **DotVVM.Framework** and **DotVVM.Core**.
 
-#### Initialization
+## Initialization
 
 The next thing you have to do, is to register the DotVVM middleware in the OWIN pipeline. In your OWIN startup class, you have to register the DotVVM middleware. 
 
@@ -45,7 +45,7 @@ namespace DotvvmDemo
 }
 ```
 
-### Adding the DotvvmStartup class
+## Adding the DotvvmStartup class
 
 Notice that the code references the `DotvvmStartup` class. It is a class you have to add in your project too. 
 This class contains the configuration of DotVVM itself, e.g. the registration of routes in your app.

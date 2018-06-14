@@ -1,4 +1,4 @@
-## Custom Presenters
+# Custom Presenters
 
 In most applications, there is several situations where you need to generate some XML, JSON or other type of a content (RSS feed etc.), or just compose the HTTP response yourself. 
 
@@ -64,6 +64,6 @@ Alternatively, you can register your own factory method that will be used to cre
 config.RouteTable.Add("t", "u", serviceProvider => new RssPresenter());
 ```
 
-### Action Filters
+## Action Filters
 
 You can apply [Action Filters](/docs/tutorials/advanced-action-filters/{branch}) or the [Authorize attribute](/docs/tutorials/advanced-authentication-authorization/{branch}) on the presenter class.
