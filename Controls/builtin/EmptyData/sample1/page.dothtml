@@ -1,0 +1,3 @@
+<dot:EmptyData DataSource="{value: Customers}">
+  <p class="error">No customers found</p>
+</dot:EmptyData>

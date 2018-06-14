@@ -1,0 +1,1 @@
+Allows to display content if and only if `DataSource` is empty or `null`. The property `EmptyDataTemplate` in the [Repeater](/docs/controls/businesspack/Repeater/{branch}) has similar behaviour but the usage is limited only inside `Repeater`.
