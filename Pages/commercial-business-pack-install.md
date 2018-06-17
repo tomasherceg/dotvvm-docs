@@ -4,10 +4,13 @@ To use the [Business Pack](/landing/business-pack) controls, you have use the [D
 
 1. Install the `DotVVM.BusinessPack` package from the DotVVM Private Nuget Feed.
 
-2. Open your `DotvvmStartup.cs` file and add the following line at the beginning of the `Configure` method.
+2. Open your implementation of `IDotvvmServiceConfigurator` (typically at `DotvvmStartup.cs` file) and add the following line at the beginning of the `ConfigureService` method.
 
 ```CSHARP
-config.AddBusinessPackConfiguration();
+   public void ConfigureServices(IDotvvmServiceCollection options)
+   {
+        options.AddBusinessPack();
+   }
 ``` 
 
 This will register all Business Pack controls under the `<bp:*` tag prefix, and it also registers several Business Pack resources. 
