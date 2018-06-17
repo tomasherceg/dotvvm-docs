@@ -15,7 +15,9 @@ To use the [Business Pack](/landing/business-pack) controls, you have use the [D
 
 This will register all Business Pack controls under the `<bp:*` tag prefix, and it also registers several Business Pack resources. 
 
+> BusinessPack for DotVVM 2.0 is still a preview. When you search for Dotvvm.BusinessPack package, please make sure results includes preview versions.
 <br />
+
 
 ## Theme Editor
 
