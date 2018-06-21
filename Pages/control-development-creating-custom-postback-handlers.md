@@ -33,7 +33,7 @@ public class ConfirmPostBackHandler : PostBackHandler
         set { SetValue(MessageProperty, value); }
     }
     public static readonly DotvvmProperty MessageProperty
-        = DotvvmProperty.Register<string, ConfirmPostBackHandler>(c => c.Message, null);	
+        = DotvvmProperty.Register<string, ConfirmPostBackHandler>(c => c.Message, null);
 }
 ```
 
@@ -59,17 +59,26 @@ You can register a postback handler to be used on the client side using this cod
 
 ```JAVASCRIPT
 dotvvm.events.init.subscribe(function () {
-    dotvvm.postBackHandlers["confirm"] = function ConfirmPostBackHandler(options) {
+    dotvvm.postbackHandlers["confirm"] = function ConfirmPostBackHandler(options) {
 
 	var message = options.message; // you'll get the parameters passed to the handler in the options object
 	
 	return {
 	    execute: function(callback) {
-	    	// do whatever you need and if you need to do the postback, invoke the 'callback()' function
-	    	if (confirm(message)) {
-	    	    callback();
-		}
-	    }
+			return new Promise(function (resolve, reject) {
+	    		// do whatever you need and if you need to do the postback, invoke the 'callback()' function
+				if (confirm(message)) {
+	    	    	callback().then(resolve, reject);
+				} else {
+					// signalize that the postback was cancelled
+					reject({type: "handler", handler: this, message: "The postback was aborted by user."});
+				}
+			});
+	    },
+
+		// optional settings
+		after: ["xxx"],        // you can specify that this handler should be launched after some other handler
+		before: ["xxx"]        // you can specify that this handler should be launched before some other handler
 	};
     };
 });
@@ -79,17 +88,20 @@ If you need to display a div instead of the default Javascript confirmation, you
 
 ```JAVASCRIPT
 dotvvm.events.init.subscribe(function () {
-    dotvvm.postBackHandlers["customConfirm"] = function ConfirmPostBackHandler(options) {
+    dotvvm.postbackHandlers["customConfirm"] = function ConfirmPostBackHandler(options) {
 	    this.execute = function(callback) {
-			// set the message to the confirmation dialog
-			$("#confirm-dialog p.message").text(options.message);
-						
-			// display the confirmation dialog
-		    $("#confirm-dialog").show();
+			return new Promise(function (resolve, reject) {
+				// set the message to the confirmation dialog
+				$("#confirm-dialog p.message").text(options.message);
+							
+				// display the confirmation dialog
+				$("#confirm-dialog").show();
 
-			// do the postback when the OK button is clicked
-			// (unbind first because a previous callback could be attached to the event)
-			$("#confirm-dialog button.ok-button").unbind("click").on("click", callback);
+				// do the postback when the OK button is clicked
+				// (unbind first because a previous callback could be attached to the event)
+				$("#confirm-dialog button.ok-button").unbind("click").on("click", function() { callback().then(resolve, reject) });
+			});
+
 		};
 	};
 });
@@ -115,22 +127,23 @@ many requests. It can look like this:
 
 ```JAVASCRIPT
 dotvvm.events.init.subscribe(function () {
-    dotvvm.postBackHandlers["delay"] = function ConfirmPostBackHandler(options) {
+    dotvvm.postbackHandlers["delay"] = function ConfirmPostBackHandler(options) {
 		this.execute = function(callback, sender) {
-		
-			// increment the counter and remember the state
-			sender.counter = (sender.counter | 0) + 1;
-			var currentCounterState = sender.counter;
-			
-			// wait
-			window.setTimeout(function () {
-			
-				// if the counter hasn't changed, do the postback
-				if (sender.counter === currentCounterState) {
-				    callback();
-				}
+			return new Promise(function (resolve, reject) {
+				// increment the counter and remember the state
+				sender.counter = (sender.counter | 0) + 1;
+				var currentCounterState = sender.counter;
+				
+				// wait
+				window.setTimeout(function () {
+				
+					// if the counter hasn't changed, do the postback
+					if (sender.counter === currentCounterState) {
+						callback().then(resolve, reject);
+					}
 
-			}, options.delay);			
+				}, options.delay);
+			});
 		};
 	};
 });

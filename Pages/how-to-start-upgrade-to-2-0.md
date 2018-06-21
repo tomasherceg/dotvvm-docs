@@ -189,8 +189,8 @@ dotvvm.events.init.subscribe(function () {
                 },
 
                 // optional settings
-                after: "xxx",        // you can specify that this handler should be launched after some other handler
-                before: "xxx"        // you can specify that this handler should be launched before some other handler
+                after: ["xxx"],        // you can specify that this handler should be launched after some other handler
+                before: ["xxx"]        // you can specify that this handler should be launched before some other handler
             };
         };
     });
