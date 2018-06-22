@@ -17,7 +17,7 @@ Update-Package DotVVM.AspNetCore
 Update-Package DotVVM.Owin
 ```
 
-<br />
+
 
 ## 2. Move registration of DotVVM-related services to DotvvmStartup
 
@@ -82,7 +82,7 @@ public class DotvvmStartup : IDotvvmStartup, IDotvvmServiceConfigurator
 
 > This `ConfigureServices` should register only services that are related to DotVVM - uploaded file storage, custom viewmodel loaders, or commercial controls like [DotVVM Business Pack](/docs/tutorials/commercial-business-pack-install/{branch}). All other services should be configured in `Startup.cs` like it was before.
 
-<br />
+
 
 ## 3. Add jQuery resource if you need it
 
@@ -98,7 +98,7 @@ config.Resources.Register("jquery", new ScriptResource()
 });
 ```
 
-<br />
+
 
 ## 4. Route Registration with Custom Presenters
 
@@ -114,7 +114,7 @@ config.RouteTable.Add("Rss", "export/rss", null, () => new RssPresenter());
 config.RouteTable.Add("Rss", "export/rss", typeof(RssPresenter));
 ```
 
-<br />
+
 
 <a name="action-filters"></a>
 
@@ -144,7 +144,7 @@ There is a new method `OnPresenterExceptionAsync` which is called when an unhand
 
 If you have a custom exception filter and need to handle exceptions from presenters, you may want to override this exception to log the errors. 
 
-<br />
+
 
 <a name="postback-handlers"></a>
 
@@ -198,7 +198,7 @@ dotvvm.events.init.subscribe(function () {
 
 Also note that `dotvvm.postBackHandlers` collection was renamed to `dotvvm.postbackHandlers`. 
 
-<br />
+
 
 <a name="gridview"></a>
 
@@ -233,7 +233,7 @@ public override Task PreRender()
 }
 ```
 
-<br />
+
 
 # Obsolete Constructs
 
@@ -243,7 +243,7 @@ There are several things in **DotVVM 2.0** which were marked as obsolete. Althou
 
 The `ValueType` property was needed whenever you worked with date or numeric values in `TextBox`, `Literal` or `GridViewTextColumn` controls. In **DotVVM 2.0**, this property was made obsolete and is not used by the framework - the type of the data-bound value is inferred automatically.
 
-<br />
+
 
 ## 2. ComboBox now supports ItemTextBinding and ItemValueBinding
 
