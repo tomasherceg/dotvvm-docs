@@ -11,12 +11,7 @@ If you want to learn about how to write controls in DotVVM, we encourage you to 
 First, you need to register the code-only control in the `DotvvmStartup.cs` file. 
 
 ```CSHARP
-config.Add(new DotvvmControlConfiguration() 
-{ 
-    TagPrefix = "cc",
-    Namespace = "DotvvmDemo.Controls",
-    Assembly = "DotvvmDemo"
-});
+config.Markup.AddCodeControls("cc", typeof(DotvvmDemo.Controls.Control));
 ```
 
 Using this code snippet, if you use the `<cc:` tag prefix, DotVVM will search for the control in the specified namespace and assembly.
