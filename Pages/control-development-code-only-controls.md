@@ -1,10 +1,10 @@
 # Code-only Controls
 
-This kind of controls is useful when you need to render a piece of HTML and/or you need to support data-binding and manipulate with the viewmodel.
+This kind of controls is useful when you need to render a piece of HTML and/or you need to support data-binding and manipulate the viewmodel.
 
-Building code-only controls is more difficult, but they can do much more things. All controls built-in DotVVM are implemented as code-only controls. 
+Building code-only controls is more difficult, but they can do much more. All built-in DotVVM controls are implemented as code-only controls. 
 
-If you want to learn about how to write controls in DotVVM, we encourage you to look in the [GitHub](https://github.com/riganti/dotvvm) repository how the built-in controls are implemented.
+If you want to learn about how to write controls in DotVVM, we encourage you to look in the [GitHub](https://github.com/riganti/dotvvm) repository to see how the built-in controls are implemented.
 
 ## Control Registration
 
@@ -25,10 +25,10 @@ Using this code snippet, if you use the `<cc:` tag prefix, DotVVM will search fo
 
 ## Basics
 
-All controls in `DotVVM` derive from `DotvvmControl` class. This base class provides only 
+All controls in `DotVVM` derive from the `DotvvmControl` class. This base class provides only 
 basic functionality and _it is not a good base class to inherit directly_ for most purposes. 
 
-The most useful class to be derived from is `HtmlGenericControl`. It is prepared to render one HTML element (which can contain child elements of course). Most built-in controls in **DotVVM** derive from `HtmlGenericControl` class. 
+The most useful class to be derived from is `HtmlGenericControl`. It is prepared to render one HTML element (which can contain child elements of course). Most built-in controls in **DotVVM** derive from the `HtmlGenericControl` class. 
 
 ## Creating Code-only Control
 
@@ -90,7 +90,7 @@ Let's continue with the **TextBox** class. We don't want to render begin and end
 
 It doesn't make sense to allow the `TextBox` to have any content inside. We can decorate the class with the `[ControlMarkupOptions(AllowContent = false)]` attribute to tell DotVVM that there should be no content inside the `<dot:TextBox>` and `</dot:TextBox>` tags. If the user places anything there, DotVVM will display an error page.  
 
-We can override the `RenderBeginTag` method to render the self-closing tag, and the `RenderEndTag` to render nothings. 
+We can override the `RenderBeginTag` method to render the self-closing tag, and the `RenderEndTag` to render nothing. 
 
 Between these two methods, the rendering pipeline calls also the `RenderContents` method which renders the contents between the `<dot:TextBox>` and `</dot:TextBox>` tags, but we won't have anything here thanks to the `ControlMarkupOptions` attribute.
 
@@ -198,7 +198,7 @@ This is especially handy if you need to compose a complex control of already exi
 
 This approach often results in a cleaner code, but rendering the HTML using the `HtmlWriter` is much faster than creating a control for the `<div>` element using `new HtmlGenericControl("div")`.
 
-You need to decide if rendering raw HTML is OK for your case, or if the control is more complex and you need to build a tree of child controls and manipulate with them somehow.  
+You need to decide if rendering raw HTML is OK for your case, or if the control is more complex and you need to build a tree of child controls and manipulate them somehow.  
 
 ## Composite Control
 

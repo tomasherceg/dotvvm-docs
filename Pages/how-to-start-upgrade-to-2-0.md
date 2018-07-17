@@ -32,7 +32,7 @@ In `Startup.cs` file, remove the lambda method in `UseDotVVM` call:
 // DotVVM 1.1
 var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath, options => 
 {
-    // copy the body of the lamda and remove it
+    // copy the body of the lambda and remove it
     options.AddDefaultTempStorages("Temp");
 });
 
@@ -47,7 +47,7 @@ var config = app.UseDotVVM<DotvvmStartup>(ApplicationPhysicalPath);
 // DotVVM 1.1
 var config = app.UseDotVVM<DotvvmStartup>(options => 
 {
-    // copy the body of the lamda and remove it
+    // copy the body of the lambda and remove it
     options.AddDefaultTempStorages("Temp");
 });
 
@@ -64,7 +64,7 @@ public class DotvvmStartup : IDotvvmStartup
 
     public void ConfigureServices(IDotvvmServiceCollection options)
     {
-        // paste the body of the lamda here
+        // paste the body of the lambda here
         options.AddDefaultTempStorages("Temp");
     }
 
