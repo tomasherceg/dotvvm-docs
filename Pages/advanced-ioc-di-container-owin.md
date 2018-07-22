@@ -58,11 +58,49 @@ Some containers do this by initiating a "scope" in the `CreateViewModelInstance`
 ## Registering Custom ViewModelLoader
 
 The last thing is to replace the default viewmodel loader with the one you have just created.
-We should do this in the `Startup.cs` class:
+We should do this in the `DotvvmStartup.cs` class:
 
 ```CSHARP
 public void ConfigureServices(IDotvvmServiceCollection services)
 {
     services.Services.AddSingleton<IViewModelLoader>(serviceProvider => new WindsorViewModelLoader(container));
+}
+```
+
+## Static Command Services
+
+Since registering all components in `IServiceCollection` on DotVVM startup can be problemmatic, you might use a custom `IStaticCommandServiceLoader` to have your service instances resolved directly from your container.
+
+```CSHARP
+using System;
+using Castle.Windsor;
+using DotVVM.Framework.ViewModel.Serialization;
+
+namespace DotvvmDemo.Web
+{
+    public class WindsorStaticCommandServiceLoader : DefaultStaticCommandServiceLoader
+    {
+        private readonly WindsorContainer container;
+
+        public WindsorStaticCommandServiceLoader(WindsorContainer container)
+        {
+            this.container = container;
+        }
+
+        public override object GetStaticCommandService(Type serviceType, IDotvvmRequestContext context)
+        {
+            return container.Resolve(serviceType);
+        }
+
+    }
+}
+```
+
+To register the alternative loader, replace the default one using the following code in `DotvvmStartup.cs`:
+
+```CSHARP
+public void ConfigureServices(IDotvvmServiceCollection services)
+{
+    services.Services.AddSingleton<IStaticCommandServiceLoader>(serviceProvider => new WindsorStaticCommandServiceLoader(container));
 }
 ```

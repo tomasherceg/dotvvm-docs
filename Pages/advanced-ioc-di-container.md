@@ -28,4 +28,4 @@ DotVVM uses the `Microsoft.Extensions.DependencyInjection` library to configure 
 
 DotVVM 2.0 added the [Static Command Services](/docs/tutorials/basics-static-command-services/{branch}). 
 
-All services injected using `@service` directive must be registered in the `IServiceCollection` so DotVVM can resolve them. 
+All services injected using `@service` directive should be registered in the `IServiceCollection` so DotVVM can resolve them.
