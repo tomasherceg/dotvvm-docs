@@ -71,7 +71,7 @@
     <DocPageMenuItem RouteName="returning-files" PageName="Returning Files from ViewModels" />
     <DocPageMenuItem RouteName="using-session-or-http-context-cookies" PageName="Using Session or HttpContext Cookies" />
     <DocPageMenuItem RouteName="dotvvm-command-line" PageName="DotVVM Command Line" />
-    <!-- <DocPageMenuItem RouteName="javascript-events-and-client-side-viewmodel" PageName="JavaScript Events and Client-side ViewModel" /> -->
+    <DocPageMenuItem RouteName="javascript-events-and-client-side-viewmodel" PageName="JavaScript Events and Client-side ViewModel" />
     <!-- <DocPageMenuItem RouteName="using-external-javascript-components" PageName="Using external JavaScript components" /> -->
     <!-- <DocPageMenuItem RouteName="server-side-styles" PageName="Server-side Styles" /> -->
   </DocPageMenuItem>
