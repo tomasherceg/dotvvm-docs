@@ -83,7 +83,7 @@
     <DocPageMenuItem RouteName="code-only-controls" PageName="Code-only Controls" />
     <DocPageMenuItem RouteName="interactivity" PageName="Adding Interactivity Using Custom Knockout Binding Handlers" />
     <DocPageMenuItem RouteName="creating-custom-postback-handlers" PageName="Creating Custom Postback Handlers" />
-    <DocPageMenuItem RouteName="binding-extensibility" PageName="Binding Extensibility" />
+    <DocPageMenuItem RouteName="binding-extensibility" PageName="Binding System Extensibility" />
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="commercial" PageName="Commercial Products">
     <DocPageMenuItem RouteName="" PageName="DotVVM for Visual Studio">

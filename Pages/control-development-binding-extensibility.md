@@ -1,8 +1,8 @@
-## Advanced Binding Features
+# Binding System Extensibility
 
 As of version 2.0, the binding system is pretty powerful, so let's have a look how to exploit that.
 
-### Binding Properties
+## Binding Properties
 
 Each binding is, in fact, a `Dictionary` of its properties - things like the executable delegate, javascript translation, the original string and so on. The property can be looked up by its type using `GetProperty(Type)` method on the `IBinding` instance or you can also use generic extension method `binding.GetProperty<MyBindingProperty>()`. These properties cannot be added manually, they are fixed when the binding is created by the dothtml page compiler, but there is a concept of "property resolver" which can compute a property from the properties that are already present in the binding - in fact almost all properties are resolved using one of these resolved from the base ones:
 * The `KnockoutJsExpressionBindingProperty` (that contain Javascript Syntax Tree of the binding) is computed from `ParsedExpressionBindingProperty` and `DataContextStack`
@@ -11,10 +11,11 @@ Each binding is, in fact, a `Dictionary` of its properties - things like the exe
 
 You may now doubt about runtime performance if the property is parsed every time the property is requested. For that reason, the result is cached in the dictionary, so when resolved, the property behaves like it would be assigned to a constructor. And the binding instance is shared between requests, so it the expression is compiled only once in the application lifetime. Because of that, it's very important that the functions are pure and their result is immutable.
 
-As you can see, these resolvers may form a dependency graph (only an acyclic one), if you are interested, almost all default resolvers are in the [GeneralBidningPropertyResolvers](https://github.com/riganti/dotvvm/blob/master/src/DotVVM.Framework/Compilation/Binding/GeneralBindingPropertyResolvers.cs) class. As you can see, all of them are just a simple functions that take the dependencies as arguments and return the result. The main point of this extensibility, so let's write a custom property and resolver:
+As you can see, these resolvers may form a dependency graph (only an acyclic one), if you are interested, almost all default resolvers are in the [GeneralBindingPropertyResolvers](https://github.com/riganti/dotvvm/blob/master/src/DotVVM.Framework/Compilation/Binding/GeneralBindingPropertyResolvers.cs) class. As you can see, all of them are just simple functions that take the dependencies as arguments and return the result. The main point of this is extensibility, so let's write a custom property and resolver:
 
 It will contain a property used in the binding, for example a PropertyInfo of `Name` for binding `{value: Name}` or `{value: _root.Article.Name}`. First, we have to declare the binding property type:
-```cs
+
+```CSHARP
 public sealed class UsedPropertyBindingProperty {
     public readonly PropertyInfo PropertyInfo;
     public UsedPropertyBindingProperty(PropertyInfo prop) {
@@ -23,7 +24,8 @@ public sealed class UsedPropertyBindingProperty {
 }
 ```
 
-Then you can write the function. It requires the ParsedExpressionBidningProperty which contains the parsed semantic tree of the binding.
+Then you can write the function. It requires the `ParsedExpressionBidningProperty` which contains the parsed semantic tree of the binding.
+
 ```cs
 public class MyResolvers {
     public UsedPropertyBindingProperty GetUsedProperty(ParsedExpressionBindingProperty parsedExpression) {
@@ -58,9 +60,9 @@ services.Configure<BindingCompilationOptions>(o => {
 });
 ```
 
-### Derived binding
+## Derived Bindings
 
-The binding properties allow you to create almost anything from other binding properties - including other bindings. It can, for example, contain a negated expression:
+The binding properties allow you to create almost anything from other binding properties - including other bindings. Derived binding can, for example, contain a negated expression:
 
 ```cs
 public NegatedBindingExpression NegateBinding(ParsedExpressionBindingProperty e, IBinding binding) {
@@ -83,9 +85,9 @@ Note the usage of `DeriveBinding` extension method on the `IBinding` instance - 
 
 This binding property is present by default in the DotVVM Framework, but you can define your own in the same way.
 
-### Post-processing existing properties
+## Post-processing Existing Properties
 
-When you register a resolver with signature like:
+You can register a resolver with signature like:
 
 ```cs
 public ParsedExpressionBindingProperty WrapExpression(ParsedExpressionBindingProperty prop, some other dependencies) {
@@ -133,7 +135,8 @@ public class ResourceBindingExpression<T> : ResourceBindingExpression, IStaticVa
 }
 ```
 
-And it is registered in the collection as:
+And it is registered in the collection like this:
+
 ```cs
 ControlResolverBase.BindingTypes.Add(ParserConstants.ResourceBinding, BindingParserOptions.Create(typeof(ResourceBindingExpression<>)));
 ```
