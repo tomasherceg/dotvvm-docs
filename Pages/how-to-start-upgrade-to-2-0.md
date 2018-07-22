@@ -1,5 +1,16 @@
 # Upgrading to DotVVM 2.0
 
+DotVVM 2.0 brings several new features including:
+
+* [REST API Bindings](/docs/tutorials/basics-rest-api-bindings/2.0)
+* [Static Command Services](/docs/tutorials/basics-static-command-services/2.0)
+* [PostBack Concurrency Modes](/docs/tutorials/basics-postback-concurrency-mode/2.0)
+* [FormControls.Enabled Property](/docs/tutorials/basics-control-properties-and-attributes/2.0)
+* [_collection Context Variable](/docs/tutorials/basics-binding-context/2.0)
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/LiTajcb6tug" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+
 There have been several breaking changes between **DotVVM 1.1** and **DotVVM 2.0**. Perform the following steps to do the upgrade:
 
 ## 1. Upgrade DotVVM NuGet packages
