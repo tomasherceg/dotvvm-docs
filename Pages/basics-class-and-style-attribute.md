@@ -47,11 +47,11 @@ You can even combine the `class-something` properties with the `class` attribute
 
 ## Style Property Group
 
-DotVVM includes a built-in property group with prefix `style-`. It can be used to combine multiple CSS attributes.
+DotVVM includes a built-in property group with prefix `style-`. It can be used to combine multiple CSS properties.
 
-The number of use-cases for the `style-` is rather limited when compared to `class-`, since styling should be done using primarily CSS Classes instead.
+The number of use-cases for the `style-` is rather limited when compared to `class-`, since styling should be done using primarily CSS classes instead.
 
-However, when the `style` attribute is being set dynamically using JavaScript usage of the `Style` property group ensures that current `style` attributes are preserved. This is not the case when using a regular value binding, which replaces the entire `style` attribute with an evaluated value.
+However, when the `style` property is being set dynamically using JavaScript usage of the `Style` property group ensures that current `style` attributes are preserved. This is not the case when using a regular value binding, which replaces the entire `style` attribute with an evaluated value.
 
 ```DOTHTML
 <div style-background-color="{value: Color}"
