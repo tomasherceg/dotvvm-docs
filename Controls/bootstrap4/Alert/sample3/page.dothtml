@@ -1,0 +1,5 @@
+﻿<!-- the alert is somewhere in master page -->
+<bs:Alert Text="{value: AlertText}" Type="{value: AlertType}" />
+
+<!-- content page -->
+<bs:Button Text="Do Something" Click="{command: DoSomething()}"/>
