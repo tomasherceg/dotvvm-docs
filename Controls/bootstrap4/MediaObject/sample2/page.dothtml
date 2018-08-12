@@ -1,0 +1,9 @@
+﻿<bs:MediaObject>
+  <MediaTemplate>
+    <iframe width="300" height="180" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" frameborder="0" allowfullscreen=""></iframe>
+  </MediaTemplate>
+  <ContentTemplate>
+    <h1>Header</h1>
+    <p>Description defined in content template.</p>
+  </ContentTemplate>
+</bs:MediaObject>
