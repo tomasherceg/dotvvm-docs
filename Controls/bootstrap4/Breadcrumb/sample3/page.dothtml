@@ -1,0 +1,5 @@
+﻿<bs:Breadcrumb DataSource="{value: Links}"
+               IsEnabledBinding="{value: IsEnabled}"
+               IsSelectedBinding="{value: IsSelected}"
+               TextBinding="{value: Text}"
+               NavigateUrlBinding="{value: NavigateUrl}" />
