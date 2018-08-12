@@ -1,0 +1,13 @@
+<bs:Image ImageUrl="~/Images/LA.jpg" AlternateText="Los Angeles" />
+<br/>
+<bs:Image ImageUrl="~/Images/LA.jpg" AlternateText="Los Angeles" 
+          Type="Thumbnail" />
+<br/>
+<bs:Image ImageUrl="~/Images/LA.jpg" AlternateText="Los Angeles" 
+          Type="Responsive" />
+<br/>
+<bs:Image ImageUrl="~/Images/LA.jpg" AlternateText="Los Angeles" 
+          Type="Rounded" />
+<br/>
+<bs:Image ImageUrl="~/Images/LA.jpg" AlternateText="Los Angeles" 
+          Type="Circle" />
