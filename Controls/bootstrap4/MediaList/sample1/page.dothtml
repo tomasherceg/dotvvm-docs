@@ -1,0 +1,9 @@
+﻿<bs:MediaList>
+
+  <bs:MediaObject ImageUrl="~/Images/person.png"
+                  AlternateText="TEST" Header="Basic Image" Description="Simple Description" />
+
+  <bs:MediaObject ImageUrl="~/Images/person.png"
+                  AlternateText="TEST" Header="Basic Image" Description="Simple Description" />
+
+</bs:MediaList>
