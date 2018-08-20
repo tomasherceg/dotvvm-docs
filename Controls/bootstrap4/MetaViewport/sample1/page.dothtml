@@ -1,0 +1,8 @@
+﻿<!-- Default meta viewport -->
+<bs:MetaViewport/>
+
+<!-- Custom meta viewport -->
+<bs:MetaViewport Width="320" InitialScale="2" MaximumScale="4" />
+
+<!-- Meta viewport with disabled user scaling -->
+<bs:MetaViewport IsUserScalable="false" />
