@@ -1,4 +1,4 @@
-﻿<bs:Form Type="Inline">
+﻿<bs:Form>
   
   <bs:FormGroup LabelText="TextBox">
     <dot:TextBox Text="{value: Text}" />
@@ -11,12 +11,17 @@
   </bs:FormGroup>
     
   <bs:FormGroup LabelText="CheckBox">
-    <bs:CheckBox Checked="{value: Boolean1}" IsInline="true" />
+    <bs:CheckBox Checked="{value: IsChecked}" />
   </bs:FormGroup>
   
   <bs:FormGroup LabelText="RadioButton">
-    <bs:RadioButton Checked="{value: Boolean2}" CheckedValue="{value: true}" IsInline="true" />
-    <bs:RadioButton Checked="{value: Boolean2}" CheckedValue="{value: false}" IsInline="true" />
+    <bs:RadioButton Checked="{value: Radio}" CheckedValue="{value: true}" />
+    <bs:RadioButton Checked="{value: Radio}" CheckedValue="{value: false}" />
   </bs:FormGroup>
 
 </bs:Form>
+
+Text: {{value: Text}} <br />
+ComboBox: {{value: Item}} <br />
+CheckBox: {{value: IsChecked}} <br />
+RadioButton: {{value: Radio}} <br />
