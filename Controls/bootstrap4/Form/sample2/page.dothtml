@@ -1,0 +1,5 @@
+﻿<bs:Form Type="Vertical">
+  <bs:FormGroup LabelText="E-mail Address">
+    <bs:FormStaticValue>email@example.com</bs:FormStaticValue>
+  </bs:FormGroup>
+</bs:Form>
