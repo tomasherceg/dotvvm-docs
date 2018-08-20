@@ -1,0 +1,5 @@
+<bs:CheckBox Text="CheckBox 1" Checked="{value: Checked1}" IsInline="true" />
+<bs:CheckBox Text="CheckBox 2" Checked="{value: Checked2}" IsInline="true" />
+
+<p>CheckBox 1: {{value: Checked1}}</p>
+<p>CheckBox 2: {{value: Checked2}}</p>
