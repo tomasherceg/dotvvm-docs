@@ -1,0 +1,4 @@
+﻿<bs:RouteLink RouteName="Route"
+              Text="Solid Fill"
+              Type="Primary"
+              IsBlockButton="true" />
