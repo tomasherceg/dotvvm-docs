@@ -1,0 +1,11 @@
+﻿<bs:Form>
+  
+  <bs:FormGroup LabelText="Password">
+    <dot:TextBox ID="password" Text="{value: Password}" Type="Password"/>
+    
+    <bs:HelpText AssociatedControlID="password">
+      A simple help text for Input Password
+    </bs:HelpText>
+  </bs:FormGroup>
+
+</bs:Form>
