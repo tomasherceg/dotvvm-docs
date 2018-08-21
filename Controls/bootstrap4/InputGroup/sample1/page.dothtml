@@ -1,0 +1,23 @@
+﻿<bs:InputGroup>
+  <LeftTemplate>
+    <bs:InputGroupButton Text="Button" Click="{command: UpdateText()}" />
+  </LeftTemplate>
+  <ContentTemplate>
+    <bs:InputGroupTextBox Text="{value: Text}" />
+  </ContentTemplate>
+  <RightTemplate>
+    <bs:InputGroupLiteral>Click the Button on the left.</bs:InputGroupLiteral>
+  </RightTemplate>
+</bs:InputGroup>
+
+<bs:InputGroup Size="Small">
+  <LeftTemplate>
+    <bs:InputGroupCheckBox Checked="{value: Checked}" Changed="{command: UpdateText2()}" />
+  </LeftTemplate>
+  <ContentTemplate>
+    <bs:InputGroupComboBox SelectedValue="{value: Text2}" DataSource="{value: Values}" />
+  </ContentTemplate>
+  <RightTemplate>
+    <bs:InputGroupLiteral>Click the CheckBox on the left.</bs:InputGroupLiteral>
+  </RightTemplate>
+</bs:InputGroup>

@@ -1,0 +1,14 @@
+﻿<bs:InputGroup>
+  <LeftTemplate>
+    <bs:InputGroupRadioButton CheckedItem="{value: Color}" CheckedValue="r" Text="R" />
+    <bs:InputGroupRadioButton CheckedItem="{value: Color}" CheckedValue="g" Text="G" />
+    <bs:InputGroupRadioButton CheckedItem="{value: Color}" CheckedValue="b" Text="B" />
+  </LeftTemplate>
+  <ContentTemplate>
+    <bs:InputGroupTextBox Text="{value: Color}"/>
+  </ContentTemplate>
+  <RightTemplate>
+    <bs:InputGroupButton Text="Button 1" />
+    <bs:InputGroupButton Text="Button 2" />
+  </RightTemplate>
+</bs:InputGroup>
