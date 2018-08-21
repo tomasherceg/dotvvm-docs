@@ -1,0 +1,19 @@
+﻿<bs:NavigationBar VisualState="Pills">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
+</bs:NavigationBar>
+
+<bs:NavigationBar VisualState="Tabs">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
+</bs:NavigationBar>
+
+<bs:NavigationBar IsFilled="true">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
+</bs:NavigationBar>
+
+<bs:NavigationBar IsJustified="true">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
+</bs:NavigationBar>
