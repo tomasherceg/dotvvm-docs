@@ -1,0 +1,8 @@
+﻿<bs:ListGroup ItemType="Link" 
+              DataSource="{value: LinksDataSet}" 
+              IsDisabledBinding="{value: IsDisabled}" 
+              IsSelectedBinding="{value: IsSelected}" 
+              TextBinding="{value: Text}" 
+              BadgeBinding="{value: Badge}" 
+              ColorBinding="{value: Color}" 
+              NavigateUrlBinding="{value: NavigateUrl}" />
