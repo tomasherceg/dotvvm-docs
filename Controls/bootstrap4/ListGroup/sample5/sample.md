@@ -1,3 +1,3 @@
-## Sample 5: Fluid mode
+## Sample 5: Badges
 
-The `IsFluid` property can be used to render the list group without borders to render the list group items edge-to-edge in a parent container.
+The list items can contain [Badge](/docs/controls/bootstrap4/Badge/{branch}) controls. Simply place the badge inside the list item element.

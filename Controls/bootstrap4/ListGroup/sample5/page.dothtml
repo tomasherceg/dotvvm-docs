@@ -1,6 +1,8 @@
-﻿<bs:ListGroup IsFluid="true">
-  <bs:ListGroupItem Text="{value: Text}" />
-  <bs:ListGroupItem Text="Item 2" />
-  <bs:ListGroupItem Text="Item 3" />
-  <bs:ListGroupItem Text="Item 4" />
+﻿<bs:ListGroup>
+  <bs:ListGroupItem Text="{value: Text}">
+    <bs:Badge>10</bs:Badge>
+  </bs:ListGroupItem>
+  <bs:ListGroupItem Text="Item 2">
+    <bs:Badge>2</bs:Badge>
+  </bs:ListGroupItem>
 </bs:ListGroup>
