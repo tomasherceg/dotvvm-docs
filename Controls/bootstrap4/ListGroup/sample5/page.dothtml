@@ -1,8 +1,12 @@
 ﻿<bs:ListGroup>
   <bs:ListGroupItem Text="{value: Text}">
-    <bs:Badge>10</bs:Badge>
+    <Badge>
+      <bs:Badge>10</bs:Badge>
+    </Badge>
   </bs:ListGroupItem>
   <bs:ListGroupItem Text="Item 2">
-    <bs:Badge>2</bs:Badge>
+    <Badge>
+      <bs:Badge>2</bs:Badge>
+    </Badge>
   </bs:ListGroupItem>
 </bs:ListGroup>

@@ -8,6 +8,6 @@ Then you can use the following properties which tell the control what property o
 * `BadgeBinding` specifies the property of the collection elements to be used as list item badge content.
 * `ColorBinding` specifies the property of the collection elements to be used as list item color.
 * `NavigateUrlBinding` specifies the property of the collection elements to be used as list item link URL.
-* `IsDisabledBinding` specifies the property of the collection elements indicating whether the list item is disabled or not.
+* `IsEnabledBinding` specifies the property of the collection elements indicating whether the list item is enabled or not.
 * `IsSelectedBinding` specifies the property of the collection elements indicating whether the list item is active or not.
 * `ClickBinding` specifies a command in the viewmodel to be called when the list item is clicked.
