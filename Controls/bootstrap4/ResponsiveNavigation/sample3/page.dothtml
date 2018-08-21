@@ -1,0 +1,8 @@
+﻿<bs:ResponsiveNavigation HeaderText="Fixed to top">  
+  <LeftAlignedItemsTemplate>
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3 Schools" />
+  </LeftAlignedItemsTemplate>
+  <RightAlignedItemsTemplate>
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" />
+  </RightAlignedItemsTemplate>
+</bs:ResponsiveNavigation>
