@@ -1,0 +1,6 @@
+﻿<bs:StackedProgressBar>
+  <bs:ProgressBar Color="Success" Value="25" />
+  <bs:ProgressBar Color="Info" Value="25" />
+  <bs:ProgressBar Color="Warning" Value="11" />
+  <bs:ProgressBar Color="Danger" Value="14" />
+</bs:StackedProgressBar>
