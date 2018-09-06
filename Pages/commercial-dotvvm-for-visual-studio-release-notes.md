@@ -1,5 +1,10 @@
 # Release notes
 
+## v2.0.117.0
+*Compatible with VS 2017 v15.8.0+*
+* Fixed DotVVM configuration deserialization problems
+
+
 ## v2.0.115.0
 * Fixed Proxy server authentication via NTLM  
 * BusinessPack sample project updated to version 2.0.0-preview11-final
