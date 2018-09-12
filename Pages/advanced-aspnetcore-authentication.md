@@ -3,19 +3,17 @@
 > This section is applicable if your application uses OWIN and classic .NET Framework. 
 > For OWIN stack, visit the [Using OWIN Security for Authentication](/docs/tutorials/advanced-owin-security/{branch}).
 
-> The authentication API has changed in **ASP.NET Core 2.0**. In **DotVVM 1.1.6** and newer, you need to use the new API to configure the authentication.
-
 To set up the standard cookie authentication, just add this snippet in the `Startup.cs` file.
 
 ```CSHARP
-// ASP.NET Core 2.0 (DotVVM 1.1.6 and newer)
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddAuthentication(sharedOptions =>
     {
         sharedOptions.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
     })
-    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options => {
+    .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme, options => 
+    {
         options.Events = new CookieAuthenticationEvents
         {
             OnRedirectToReturnUrl = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
@@ -23,7 +21,7 @@ public void ConfigureServices(IServiceCollection services)
             OnRedirectToLogin = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
             OnRedirectToLogout = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri)
         };
-        options.LoginPath = new PathString("/login");
+        options.LoginPath = "/login";
     });
 	// ...
 }
@@ -32,25 +30,6 @@ public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerF
 {
     app.UseAuthentication();
     // ...
-}
-
-
-
-// ASP.NET Core 1.x (DotVVM 1.1.5 and older)
-public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
-{
-    app.UseCookieAuthentication(new CookieAuthenticationOptions 
-    {
-        LoginPath = new PathString("/login"),
-        AuthenticationScheme = CookieAuthenticationDefaults.AuthenticationScheme,
-        Events = new CookieAuthenticationEvents {
-            OnRedirectToReturnUrl = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
-            OnRedirectToAccessDenied = c => DotvvmAuthenticationHelper.ApplyStatusCodeResponse(c.HttpContext, 403),
-            OnRedirectToLogin = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri),
-            OnRedirectToLogout = c => DotvvmAuthenticationHelper.ApplyRedirectResponse(c.HttpContext, c.RedirectUri)
-        },
-        AutomaticAuthenticate = true
-    });
 }
 ```
 
@@ -94,8 +73,14 @@ public class LoginViewModel : DotvvmViewModelBase
                 // add claims for each user role
                 new Claim(ClaimTypes.Role, "administrator"),
             },
-            "Cookie");
+            CookieAuthenticationDefaults.AuthenticationScheme);
         return identity;
     }
 }
 ```
+
+## Using Azure Active Directory
+
+In order to use Azure Active Directory as the identity provider, you can use the Open ID Connect middleware using the `Microsoft.AspNetCore.Authentication.OpenIdConnect` package.
+
+For the details, visit the [DotVVM with Azure AD Authentication Sample](https://github.com/riganti/dotvvm-samples-azuread-auth).

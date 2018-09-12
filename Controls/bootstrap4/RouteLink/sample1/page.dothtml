@@ -1,0 +1,14 @@
+﻿<bs:RouteLink RouteName="Route"
+              Text="Button" />
+
+<bs:RouteLink RouteName="Route" 
+              Text="Button" 
+              Size="Large" />
+
+<bs:RouteLink RouteName="Route"
+              Text="Button" 
+              Size="Small" />
+
+<bs:RouteLink RouteName="Route"
+              Text="Button" 
+              Size="ExtraSmall" />

@@ -1,0 +1,7 @@
+﻿<bs:Card FooterText="Card Footer">
+  <HeaderTemplate>
+    <h1>Header</h1>
+  </HeaderTemplate>
+
+  <bs:CardBody Text="Body of the card" />
+</bs:Card>

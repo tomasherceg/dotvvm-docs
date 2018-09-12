@@ -1,0 +1,9 @@
+﻿<bs:Button Click="{command: DoSomething()}"
+           Text="Solid Fill"
+           Type="Primary"
+           Shape="SolidFill" />
+
+<bs:Button Click="{command: DoSomething()}"
+           Text="Outline"
+           Type="Primary"
+           Shape="Outline" />

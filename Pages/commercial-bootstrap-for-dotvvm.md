@@ -2,7 +2,7 @@
 
 To use the [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) controls, you have use the [DotVVM Private Nuget Feed](/docs/tutorials/commercial-dotvvm-private-nuget-feed).
 
-1. Install the package from the DotVVM Private Nuget Feed.
+1. Install the `DotVVM.Controls.Bootstrap` package from the DotVVM Private Nuget Feed.
 
 2. Open your `DotvvmStartup.cs` file and add the following line at the beginning of the `Configure` method.
 
@@ -18,11 +18,11 @@ using DotVVM.Framework.Controls.Bootstrap;
 
 This will register all Bootstrap controls under the `<bs:*` tag prefix, and it also registers several Bootstrap resources. 
 
-<br />
+
 
 ## Configuration
 
-The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) package doesn't include the bootstrap CSS and javascript libraries as they are too large and you might have 
+The [Bootstrap for DotVVM](/landing/bootstrap-for-dotvvm) package doesn't include the Bootstrap CSS and JavaScript libraries as they are too large and you might have 
 your own compilation of Bootstrap (e.g. if you use some Bootstrap template).   
 
 There are two ways how to work with Bootstrap resources.
@@ -35,21 +35,28 @@ Bootstrap scripts or styles in the page. If you turn the resource management off
 
 
 ### Option 1: Let DotVVM Include the Bootstrap Files in the Page
+
 **Step 1**: If you don't have Bootstrap scripts and styles in your project,
 
 #### for .NET Framework
-install the `Bootstrap` version 3 package from the official Nuget feed.
+
+Install the `Bootstrap` version 3 package from the official Nuget feed.
+
 ```
 Install-Package Bootstrap -Version 3.3.7 
 ```
+
 #### for .NET Core
-install the `Bootstrap` package from the Bower.
+
+Install the `Bootstrap` package from the Bower.
+
 ```
 bower install bootstrap
 ```
-Default installation location is in `wwwroot\lib\bootstrap`. You have to change the default paths in `AddBootstrapConfiguration`, see below
 
-**Step 2**: **Bootstrap for DotVVM** assumes the Bootstrap JS and CSS files are on the following path in your project:
+Default installation location is in `wwwroot\lib\bootstrap`. You have to change the default paths in `AddBootstrapConfiguration`, see below.
+
+**Step 2**: **Bootstrap for DotVVM** assumes the Bootstrap JS and CSS files are on the following URLs in your project:
 
 * `/Content/bootstrap.min.css`
 * `/Scripts/bootstrap.min.js`
@@ -74,12 +81,12 @@ config.AddBootstrapConfiguration(new DotvvmBootstrapOptions()
 });
 ```
  
-<br />
+
 
 ### Option 2: Include the Bootstrap Files in the Page Yourself
 
 If you have already included the bootstrap script and styles using the `<script>` and `<style>` elements in the page header (e.g. in the master page), you can tell 
-DotVVM that it should not render the default bootstrap resources. Add this in the master page:
+DotVVM that it should not render the default Bootstrap resources. Add this in the `DotvvmStartup.cs`:
 
 ```CSHARP
 config.AddBootstrapConfiguration(new DotvvmBootstrapOptions() 
@@ -97,16 +104,10 @@ config.AddBootstrapConfiguration(new DotvvmBootstrapOptions()
 });
 ```
 
-<br />
-
 ### Is It OK?
 
 To verify that Bootstrap resources are included correctly, press F12 in your web browser. Verify that bootstrap.css or bootstrap.js is not loaded twice, and there are 
 no errors in the developer console, especially some messages which say that some Bootstrap-related resource could not be found.
-
-
-
-<br />
 
 ## Limitations
 

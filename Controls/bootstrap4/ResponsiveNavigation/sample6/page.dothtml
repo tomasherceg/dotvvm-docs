@@ -1,0 +1,6 @@
+﻿<bs:ResponsiveNavigation DataSource="{value: LinksDataSet}" 
+                         IsEnabledBinding="{value: IsDisabled}" 
+						 IsSelectedBinding="{value: IsSelected}"
+					     TextBinding="{value: Text}" 
+						 NavigateUrlBinding="{value: NavigateUrl}">
+</bs:ResponsiveNavigation>

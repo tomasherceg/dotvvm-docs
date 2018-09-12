@@ -1,0 +1,16 @@
+﻿<bs:Accordion>
+  
+  <bs:AccordionItem HeaderText="Card 1"
+                    TitleText="Card 1"
+                    Text="This is first accordion item." 
+                    IsExpanded="true" />
+
+  <bs:AccordionItem HeaderText="Card 2"
+                    TitleText="Card 3"
+                    Text="This is second accordion item." />
+
+  <bs:AccordionItem HeaderText="Card 3"
+                    TitleText="Card 3"
+                    Text="This is third accordion item." />
+  
+</bs:Accordion>

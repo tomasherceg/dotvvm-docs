@@ -1,0 +1,9 @@
+﻿<!-- 16:9 -->
+<bs:ResponsiveEmbed Type="SixteenByNine">
+  <iframe src="https://www.youtube.com/embed/fZsdEiTgv6o" frameborder="0" allowfullscreen=""></iframe>
+</bs:ResponsiveEmbed>
+
+<!-- 4:3 -->
+<bs:ResponsiveEmbed Type="FourByThree">
+  <iframe src="https://www.youtube.com/embed/fZsdEiTgv6o" frameborder="0" allowfullscreen=""></iframe>
+</bs:ResponsiveEmbed>

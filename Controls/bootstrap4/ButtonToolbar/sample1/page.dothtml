@@ -1,0 +1,14 @@
+﻿<bs:ButtonToolbar>
+  <bs:ButtonGroup>
+    <bs:Button Text="Button 1" Type="Primary" />
+    <bs:Button Text="Button 2" Type="Secondary" />
+  </bs:ButtonGroup>
+  <bs:InputGroup>
+    <LeftTemplate>
+      <bs:InputGroupLiteral Text="@" />
+    </LeftTemplate>
+    <ContentTemplate>
+      <bs:InputGroupTextBox Text="" />
+    </ContentTemplate>
+  </bs:InputGroup>
+</bs:ButtonToolbar>

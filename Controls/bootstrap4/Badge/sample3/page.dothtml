@@ -1,0 +1,11 @@
+﻿<bs:Badge Text="NavigateUrl" 
+          NavigateUrl="https://google.com" />
+
+<bs:Badge Text="Click" 
+          Click="{command: ChangeText()}" />
+
+<bs:Badge Text="Route" 
+          RouteName="Badge_Link" 
+          Param-Id="1"
+          Query-Page="10"
+          UrlSuffix="#table" />

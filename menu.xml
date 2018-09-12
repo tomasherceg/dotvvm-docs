@@ -47,6 +47,7 @@
     <DocPageMenuItem RouteName="rest-api-bindings" PageName="REST API Bindings" />
     <DocPageMenuItem RouteName="rest-api-bindings-building-own-api" PageName="REST API Bindings: Building own API" />
     <DocPageMenuItem RouteName="postback-concurrency-mode" PageName="PostBack Concurrency Mode" />
+    <DocPageMenuItem RouteName="server-side-styles" PageName="Server-side Styles" />
     <!-- <DocPageMenuItem RouteName="dotvvm-contrib-controls" PageName="DotVVM Contrib Controls" /> -->
     <!-- <DocPageMenuItem RouteName="dotvvm-dynamic-data" PageName="DotVVM Dynamic Data" /> -->
   </DocPageMenuItem>
@@ -71,7 +72,7 @@
     <DocPageMenuItem RouteName="returning-files" PageName="Returning Files from ViewModels" />
     <DocPageMenuItem RouteName="using-session-or-http-context-cookies" PageName="Using Session or HttpContext Cookies" />
     <DocPageMenuItem RouteName="dotvvm-command-line" PageName="DotVVM Command Line" />
-    <!-- <DocPageMenuItem RouteName="javascript-events-and-client-side-viewmodel" PageName="JavaScript Events and Client-side ViewModel" /> -->
+    <DocPageMenuItem RouteName="javascript-events-and-client-side-viewmodel" PageName="JavaScript Events and Client-side ViewModel" />
     <!-- <DocPageMenuItem RouteName="using-external-javascript-components" PageName="Using external JavaScript components" /> -->
     <!-- <DocPageMenuItem RouteName="server-side-styles" PageName="Server-side Styles" /> -->
   </DocPageMenuItem>
@@ -83,6 +84,7 @@
     <DocPageMenuItem RouteName="code-only-controls" PageName="Code-only Controls" />
     <DocPageMenuItem RouteName="interactivity" PageName="Adding Interactivity Using Custom Knockout Binding Handlers" />
     <DocPageMenuItem RouteName="creating-custom-postback-handlers" PageName="Creating Custom Postback Handlers" />
+    <DocPageMenuItem RouteName="binding-extensibility" PageName="Binding System Extensibility" />
   </DocPageMenuItem>
   <DocPageMenuItem RouteName="commercial" PageName="Commercial Products">
     <DocPageMenuItem RouteName="" PageName="DotVVM for Visual Studio">
@@ -90,8 +92,12 @@
       <DocPageMenuItem RouteName="troubleshooting-dotvvm-for-visual-studio" PageName="Troubleshooting DotVVM for Visual Studio" />
       <DocPageMenuItem RouteName="dotvvm-for-visual-studio-release-notes" PageName="Release Notes" />
     </DocPageMenuItem>
-    <DocPageMenuItem RouteName="bootstrap" PageName="Bootstrap">
+    <DocPageMenuItem RouteName="bootstrap" PageName="Bootstrap 3">
       <DocPageMenuItem RouteName="for-dotvvm" PageName="Installing Bootstrap For DotVVM" />
+      <DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
+    </DocPageMenuItem>
+    <DocPageMenuItem RouteName="bootstrap4" PageName="Bootstrap 4">
+      <DocPageMenuItem RouteName="for-dotvvm" PageName="Installing Bootstrap 4 For DotVVM" />
       <DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
     </DocPageMenuItem>
     <DocPageMenuItem RouteName="business-pack" PageName="BusinessPack">

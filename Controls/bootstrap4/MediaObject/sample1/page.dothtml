@@ -1,0 +1,4 @@
+﻿<bs:MediaObject ImageUrl="~/Images/person.png" 
+                HeaderText="Basic Image" 
+                Description="Simple Description" />
+

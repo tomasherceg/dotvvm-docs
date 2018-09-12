@@ -1,0 +1,11 @@
+﻿<bs:Breadcrumb RenderLinkForSelectedItem="true">
+
+  <bs:BreadcrumbItem NavigateUrl="https://www.google.com/"
+                     Text="Google"/>
+
+  <bs:BreadcrumbItem RouteName="MyRoute"
+                     Param-Id="{value: Test}"
+                     Text="Route link"
+                     IsSelected="true" />
+
+</bs:Breadcrumb>

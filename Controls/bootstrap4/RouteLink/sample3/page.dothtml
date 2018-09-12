@@ -1,0 +1,9 @@
+﻿<bs:RouteLink RouteName="Route"
+              Text="Solid Fill"
+              Type="Primary"
+              Shape="SolidFill" />
+
+<bs:RouteLink RouteName="Route"
+              Text="Outline"
+              Type="Primary"
+              Shape="Outline" />

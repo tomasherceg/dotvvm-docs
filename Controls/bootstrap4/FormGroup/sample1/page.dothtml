@@ -1,0 +1,27 @@
+﻿<bs:Form>
+  
+  <bs:FormGroup LabelText="TextBox">
+    <dot:TextBox Text="{value: Text}" />
+    <!-- the "form-group" CSS class is added automatically to the TextBox control -->
+  </bs:FormGroup>
+  
+  <bs:FormGroup LabelText="ComboBox">
+    <dot:ComboBox DataSource="{value: Items}" SelectedValue="{value: Item}" />
+    <!-- the "form-group" CSS class is added automatically to the ComboBox control -->
+  </bs:FormGroup>
+    
+  <bs:FormGroup LabelText="CheckBox">
+    <bs:CheckBox Checked="{value: IsChecked}" />
+  </bs:FormGroup>
+  
+  <bs:FormGroup LabelText="RadioButton">
+    <bs:RadioButton Checked="{value: Radio}" CheckedValue="{value: true}" />
+    <bs:RadioButton Checked="{value: Radio}" CheckedValue="{value: false}" />
+  </bs:FormGroup>
+
+</bs:Form>
+
+Text: {{value: Text}} <br />
+ComboBox: {{value: Item}} <br />
+CheckBox: {{value: IsChecked}} <br />
+RadioButton: {{value: Radio}} <br />

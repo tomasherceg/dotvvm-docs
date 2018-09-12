@@ -1,0 +1,18 @@
+﻿<bs:Card FooterText="Card Footer">
+  <bs:CardImage ImageUrl="~/Content/Images/img11.jpg" ToolTip="Card Image">
+    <bs:CardBody>
+        <h1>Overlayed body</h1>
+        <p>
+            Another text
+        </p>
+    </bs:CardBody>
+  </bs:CardImage>
+
+  <bs:CardListGroup DataSource="{value: Texts}" TextBinding="{value: _this}" />
+
+  <bs:CardBody>
+      <p>Some buttons</p>
+      <bs:RouteLink RouteName="Card_Advanced" Text="RouteLink" Type="Info" />
+      <bs:Button Click="{command: null}" Text="Button" Type="Danger" />
+  </bs:CardBody>
+</bs:Card>

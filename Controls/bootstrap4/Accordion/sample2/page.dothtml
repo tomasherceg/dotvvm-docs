@@ -1,0 +1,5 @@
+﻿<bs:Accordion ExpandedItemIndex="{value: Index}" 
+              DataSource="{value: Panels}" 
+              TextBinding="{value: Text}" />
+
+<p>Expanded panel index: {{value: Index}}</p>

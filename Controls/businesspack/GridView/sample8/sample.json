@@ -2,7 +2,6 @@
   "files": [
     { "name": "page.dothtml" },
     { "name": "ViewModel.cs" },
-    { "name": "Customer.cs" },
     { "name": "Order.cs" }
   ]
 }

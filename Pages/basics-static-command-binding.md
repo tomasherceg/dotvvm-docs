@@ -38,7 +38,7 @@ public static string MyMethod(string name)
 }
 ```
 
-The method must be marked with the `AllowStaticCommand` attribute. DotVVM needs the methods ot be explicitly allowed for static commands; otherwise, anyone would be able to call any static method (e.g. `File.Delete`) with any arguments.
+The method must be marked with the `AllowStaticCommand` attribute. DotVVM needs the methods to be explicitly allowed for static commands; otherwise, anyone would be able to call any static method (e.g. `File.Delete`) with any arguments.
 
 > Be careful. There is no way for DotVVM to determine whether the arguments passed to the command weren't tampered with. Always validate that the values are correct and that the user has appropriate permissions to perform the operation. 
 

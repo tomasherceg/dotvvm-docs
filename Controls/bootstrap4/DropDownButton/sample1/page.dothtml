@@ -1,0 +1,24 @@
+<bs:DropDownButton Text="Very Simple Dropdown">
+  <Items>
+    <bs:DropDownButtonItem NavigateUrl="https://www.google.com/">
+      Google
+    </bs:DropDownButtonItem>
+    <bs:DropDownButtonItem NavigateUrl="https://github.com/riganti/dotvvm" Text="DotVVM" />
+  </Items>
+</bs:DropDownButton>
+
+<bs:DropDownButton Text="Drop up Button" DropDownType="DropUp">
+  <bs:DropDownButtonItem NavigateUrl="https://www.google.com/">
+    <ButtonTemplate>
+      Google is a <strong>search engine</strong>
+    </ButtonTemplate>
+  </bs:DropDownButtonItem>
+  <bs:DropDownButtonItem NavigateUrl="https://github.com/riganti/dotvvm">
+    DotVVM
+  </bs:DropDownButtonItem>
+</bs:DropDownButton>
+
+<p>IsCollapsed: {{value: Collapsed}}</p>
+<bs:DropDownButton IsCollapsed="{value: Collapsed}" Text="Collapse test">
+  <bs:DropDownButtonItem NavigateUrl="https://www.google.com">Google</bs:DropDownButtonItem>
+</bs:DropDownButton>

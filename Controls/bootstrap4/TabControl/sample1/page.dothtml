@@ -1,0 +1,22 @@
+﻿<bs:TabControl>
+  <bs:TabItem IsActive="true">
+    <HeaderTemplate>Tab 1</HeaderTemplate>
+    <ContentTemplate>
+      <p>First tab</p>
+    </ContentTemplate>
+  </bs:TabItem>
+
+  <bs:TabItem>
+    <HeaderTemplate>Tab 2</HeaderTemplate>
+    <ContentTemplate>
+      <p>Second tab</p>
+    </ContentTemplate>
+  </bs:TabItem>
+
+  <bs:TabItem Enabled="false">
+    <HeaderTemplate>Tab 3</HeaderTemplate>
+    <ContentTemplate>
+      <p>Third tab</p>
+    </ContentTemplate>
+  </bs:TabItem>
+</bs:TabControl>

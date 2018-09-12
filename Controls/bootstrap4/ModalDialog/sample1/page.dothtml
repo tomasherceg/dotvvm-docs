@@ -1,0 +1,11 @@
+﻿<bs:Button Text="Open Dialog" Type="Primary" Click="{command: OpenDialog()}" />
+
+<bs:ModalDialog IsDisplayed="{value: Displayed}">
+  <HeaderTemplate>
+    My Dialog
+    <bs:CloseButton/>
+  </HeaderTemplate>
+  <ContentTemplate>
+    This is the contents of the dialog.
+  </ContentTemplate>
+</bs:ModalDialog>

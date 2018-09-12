@@ -1,0 +1,8 @@
+﻿<bs:Row AlignItems="Center">
+  <bs:Column>
+    Column 1
+  </bs:Column>
+  <bs:Column>
+    Column 2
+  </bs:Column>
+</bs:Row>
