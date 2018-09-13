@@ -10,6 +10,7 @@ DotVVM can do client validation for the following attributes on the client side:
 + `RegularExpression`
 + `Range`
 + `DotvvmEnforceClientFormat` - see the [Formatting Dates and Numbers](/docs/tutorials/basics-formatting-dates-and-numbers/{branch}) for more information.
++ `EmailAddress`
 
 > The client side validation is only an addition to the server side validation. Even if the rule can be translated to JavaScript and executed on the client side, it is also always executed on the server side.
 
