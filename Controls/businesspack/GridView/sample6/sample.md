@@ -1,8 +1,8 @@
 ## Sample 6: Inline Editing
 
-The `InlineEditing` property can be use to enable the user edit rows directly in the grid.
+Enum `InlineEditMode` determines, if it will be enabled the user can edit rows directly in the grid. To enable editing set the value to `SingleRow`.
 
-Every column has the `IsEditable` property which specifies whether the column can be edited or not.
+Every column has the `AllowEditing` property which specifies whether the column can be edited or not.
 
 The columns also have the `EditTemplate` property which can be used to define a custom edit template for the cell.
 

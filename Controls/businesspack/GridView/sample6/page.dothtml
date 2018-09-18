@@ -1,9 +1,9 @@
 <bp:GridView DataSource="{value: Customers}"
-             InlineEditing="true">
+             InlineEditMode="SingleRow">
     <Columns>
         <bp:GridViewTextColumn ValueBinding="{value: Id}"
                                HeaderText="ID"
-                               IsEditable="false" />
+                               AllowEditing="false" />
         <bp:GridViewTextColumn ValueBinding="{value: Name}"
                                HeaderText="Name" />
         <bp:GridViewTemplateColumn HeaderText="Birthdate">
