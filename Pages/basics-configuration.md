@@ -38,7 +38,7 @@ In ASP.NET Core, the registration of frameworks is splitted to the registration 
 In the `ConfigureServices` method, we should register DotVVM services:
 
 ```CSHARP
-services.AddDotVVM();
+services.AddDotVVM<DotvvmStartup>();
 ```
 
 In the `Configure` method we have to register the DotVVM middleware.
