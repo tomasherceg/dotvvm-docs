@@ -27,7 +27,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "Accordion",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<AccordionItem>",
+        "PropertyTypeName": "List<IAccordionItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -298,6 +298,272 @@
         "Name": "Attributes",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "Accordion",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "AccordionItem",
+    "IsContentAllowed": false,
+    "DefaultContentPropertyName": "Content",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "HeaderText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "FooterText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "TitleText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "HeaderTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "SubtitleText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "FooterTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Content",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<ICardItem>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "AccordionItem",
         "PropertyTypeNamespace": "System.Collections.Generic",
         "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
@@ -1171,7 +1437,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "Breadcrumb",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<BreadcrumbItem>",
+        "PropertyTypeName": "List<IBreadcrumbItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -3017,272 +3283,6 @@
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "AccordionItem",
-    "IsContentAllowed": false,
-    "DefaultContentPropertyName": "Content",
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "HeaderText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "FooterText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "TitleText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "HeaderTemplate",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ITemplate",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 2,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "SubtitleText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Text",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "FooterTemplate",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ITemplate",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 2,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Content",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "Card",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<ICardItem>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 2,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "AccordionItem",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": false
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
     "Name": "Card",
     "IsContentAllowed": false,
     "DefaultContentPropertyName": "Content",
@@ -4421,7 +4421,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "ListGroup",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<ListGroupItem>",
+        "PropertyTypeName": "List<IListGroupItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -5347,240 +5347,6 @@
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "CheckBoxBase",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "CheckedItems",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckBox",
-        "PropertyTypeNamespace": "System.Collections",
-        "PropertyTypeName": "IEnumerable",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Enabled",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Changed",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "Command",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Text",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "",
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "CheckedValue",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Checked",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckBox",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean?",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "CheckBoxBase",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
     "Name": "CloseButton",
     "IsContentAllowed": true,
     "DefaultContentPropertyName": null,
@@ -5872,6 +5638,288 @@
         "Name": "Attributes",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "Collapsible",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "CollapsiblePanel",
+    "IsContentAllowed": false,
+    "DefaultContentPropertyName": "Content",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "HeaderText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "FooterText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "IsCollapsed",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CollapsiblePanel",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "TitleText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "HeaderTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "SubtitleText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "FooterTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Content",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "Card",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<ICardItem>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CollapsiblePanel",
         "PropertyTypeNamespace": "System.Collections.Generic",
         "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
@@ -8277,6 +8325,1236 @@
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "CheckBoxFormGroup",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": "ContentTemplate",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "Changed",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "Command",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ContentTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<DotvvmControl>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "FormControlStyle",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "BootstrapFormStyle",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeXL",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "CheckedValue",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "FormGroupType",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeMD",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSize",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "CheckedItems",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "System.Collections",
+        "PropertyTypeName": "IEnumerable",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Checked",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeSM",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeLG",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxFormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "ComboBoxFormGroup",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": "ContentTemplate",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "LabelText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ContentTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<DotvvmControl>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeXL",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "EmptyItemText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ItemValueBinding",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "IValueBinding",
+        "IsBindingProperty": true,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "SelectionChanged",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "Command",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "FormControlStyle",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "BootstrapFormStyle",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "FormGroupType",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataSource",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ItemTextBinding",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "IValueBinding",
+        "IsBindingProperty": true,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "ItemTitleBinding",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "IValueBinding",
+        "IsBindingProperty": true,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "SelectedValue",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": true
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeMD",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSize",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeSM",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeLG",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ComboBoxFormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "DateTimePickerFormGroup",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": "ContentTemplate",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "LabelText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "DateTimePickerFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ContentTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<DotvvmControl>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "SelectedDate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "DateTimePickerFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "DateTime?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": true
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeXL",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "FormatString",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "DateTimePickerFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Changed",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "DateTimePickerFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "Command",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "FormGroupType",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Mode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "DateTimePickerFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "DateTimePickerType?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "DateTime",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeMD",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSize",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeSM",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeLG",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "DateTimePickerFormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
     "Name": "FormGroup",
     "IsContentAllowed": true,
     "DefaultContentPropertyName": "ContentTemplate",
@@ -8558,6 +9836,842 @@
         "Name": "Attributes",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "RadioButtonFormGroup",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": "ContentTemplate",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "LabelText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "CheckedValue",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ContentTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<DotvvmControl>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeXL",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Changed",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "Command",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "GroupName",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "CheckedItem",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Checked",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "FormGroupType",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "FormControlStyle",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "BootstrapFormStyle",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeMD",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSize",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeSM",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeLG",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonFormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "Dictionary<String,Object>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      }
+    ],
+    "IsAbstract": false
+  },
+  {
+    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
+    "Name": "TextBoxFormGroup",
+    "IsContentAllowed": true,
+    "DefaultContentPropertyName": "ContentTemplate",
+    "HasHtmlAttributesCollection": true,
+    "Properties": [
+      {
+        "Name": "UpdateTextAfterKeydown",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "TextBoxType",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "TextBoxType",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Normal",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": true
+        },
+        "DefaultValue": "",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ContentTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<DotvvmControl>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "InnerText",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeXL",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Size",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "Size",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "DataContext",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmBindableObject",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Object",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Enabled",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientIDMode",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ClientIDMode",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Static",
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "Type",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "PropertyTypeName": "FormGroupType",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": "Default",
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelTemplate",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
+        "PropertyTypeName": "ITemplate",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Changed",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
+        "PropertyTypeName": "Command",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "ClientID",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 0,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "SelectAllOnFocus",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": false,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeMD",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "IncludeInPage",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "DotvvmControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSize",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "FormatString",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "String",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "LabelSizeSM",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Visible",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
+        "DeclaringTypeName": "HtmlGenericControl",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": true,
+          "AllowHardCodedValue": false,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": true,
+        "IsBasicProperty": true
+      },
+      {
+        "Name": "LabelSizeLG",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "FormGroup",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "Attributes",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "TextBoxFormGroup",
         "PropertyTypeNamespace": "System.Collections.Generic",
         "PropertyTypeName": "Dictionary<String,Object>",
         "IsBindingProperty": false,
@@ -9386,144 +11500,6 @@
       }
     ],
     "IsAbstract": false
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "HtmlBootstrapControlBase",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "HtmlBootstrapControlBase",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
@@ -12655,814 +14631,6 @@
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "BootstrapClickableItemsControl",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "IsEnabledBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClickBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "ICommandBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataSource",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "ItemsControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "BootstrapItemsControl",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataSource",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "ItemsControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapItemsControl",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "BootstrapItemsControlWithScrollSpySupport",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "IsEnabledBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IsSelectedBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ScrollSpyEnabled",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapItemsControlWithScrollSpySupport",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClickBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "ICommandBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataSource",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "ItemsControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "NavigateUrlBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ScrollSpyOffset",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapItemsControlWithScrollSpySupport",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Int32",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": 10,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapItemsControlWithScrollSpySupport",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "BootstrapNavigableItemsControl",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "IsEnabledBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IsSelectedBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClickBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "ICommandBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataSource",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "ItemsControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "NavigateUrlBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
     "Name": "ListItem",
     "IsContentAllowed": true,
     "DefaultContentPropertyName": "ContentTemplate",
@@ -13726,320 +14894,6 @@
       }
     ],
     "IsAbstract": false
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "NavigationBarBase",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "IsEnabledBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IsSelectedBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "ItemsContentTemplate",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "NavigationBarBase",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ITemplate",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 2,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ItemsLayout",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "NavigationBarBase",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "PropertyTypeName": "ItemsLayout",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Default",
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ScrollSpyEnabled",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapItemsControlWithScrollSpySupport",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "VisualStyle",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "NavigationBarBase",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "PropertyTypeName": "NavigationBarVisualStyle",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Tabs",
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClickBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapClickableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "ICommandBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "TextBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "NavigationBarBase",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataSource",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "ItemsControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "NavigateUrlBinding",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapNavigableItemsControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "IValueBinding",
-        "IsBindingProperty": true,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ScrollSpyOffset",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "BootstrapItemsControlWithScrollSpySupport",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Int32",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": 10,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "NavigationBarBase",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
@@ -14447,7 +15301,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "ListGroup",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<ListGroupItem>",
+        "PropertyTypeName": "List<IListGroupItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -14915,7 +15769,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "MediaList",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<MediaObject>",
+        "PropertyTypeName": "List<IMediaObject>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -16719,7 +17573,7 @@
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
         "DeclaringTypeName": "NavigationBar",
         "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "List<NavigationItem>",
+        "PropertyTypeName": "List<INavigationItem>",
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": false,
@@ -18073,9 +18927,25 @@
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
     "Name": "StackedProgressBar",
     "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
+    "DefaultContentPropertyName": "Items",
     "HasHtmlAttributesCollection": true,
     "Properties": [
+      {
+        "Name": "Items",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "StackedProgressBar",
+        "PropertyTypeNamespace": "System.Collections.Generic",
+        "PropertyTypeName": "List<IProgressBar>",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 2,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
       {
         "Name": "InnerText",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
@@ -18488,256 +19358,6 @@
       }
     ],
     "IsAbstract": false
-  },
-  {
-    "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
-    "Name": "RadioButtonBase",
-    "IsContentAllowed": true,
-    "DefaultContentPropertyName": null,
-    "HasHtmlAttributesCollection": true,
-    "Properties": [
-      {
-        "Name": "Enabled",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "InnerText",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Checked",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "RadioButton",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": false,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Changed",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "DotVVM.Framework.Binding.Expressions",
-        "PropertyTypeName": "Command",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "Text",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "",
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "DataContext",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmBindableObject",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "GroupName",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "RadioButton",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "",
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientIDMode",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "DotVVM.Framework.Controls",
-        "PropertyTypeName": "ClientIDMode",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "Static",
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "CheckedValue",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "CheckableControlBase",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "CheckedItem",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "RadioButton",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ClientID",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 0,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "IncludeInPage",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "DotvvmControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Visible",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "HtmlGenericControl",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": false,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": true
-      },
-      {
-        "Name": "Attributes",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
-        "DeclaringTypeName": "RadioButtonBase",
-        "PropertyTypeNamespace": "System.Collections.Generic",
-        "PropertyTypeName": "Dictionary<String,Object>",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": null,
-        "IsBasicProperty": true
-      }
-    ],
-    "IsAbstract": true
   },
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",

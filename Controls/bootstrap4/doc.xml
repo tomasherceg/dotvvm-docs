@@ -59,6 +59,11 @@
             Gets or sets the index of the item which is currently expanded.
             </summary>
         </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.AccordionItem">
+            <summary>
+            Represents and item inside the Accordion widget.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap4.Alert">
             <summary>
             Displays contextual feedback messages for users.
@@ -319,11 +324,6 @@
             Gets or sets the size of the button.
             </summary>
         </member>
-        <member name="T:DotVVM.Framework.Controls.Bootstrap4.AccordionItem">
-            <summary>
-            Represents and item inside the Accordion widget.
-            </summary>
-        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap4.Card">
             <summary>
             Renders the Bootstrap panel.
@@ -541,6 +541,16 @@
             </summary>
         </member>
         <member name="P:DotVVM.Framework.Controls.Bootstrap4.Collapsible.IsCollapsed">
+            <summary>
+            Gets or sets whether the content is collapsed or not.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.CollapsiblePanel">
+            <summary>
+            Renders a collapsible Card.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CollapsiblePanel.IsCollapsed">
             <summary>
             Gets or sets whether the content is collapsed or not.
             </summary>
@@ -782,6 +792,127 @@
             Renders a drop down menu separator.
             </summary>
         </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup">
+            <summary>
+            Renders a FormGroup control with a CheckBox
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.Text">
+            <summary>
+            Gets or sets the label text that is rendered next to the checkbox.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.CheckedValue">
+            <summary>
+            Gets or sets the value that will be used as a result when the control is checked.
+            Use this property in combination with the CheckedItem or CheckedItems property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.Changed">
+            <summary>
+            Gets or sets the command that will be triggered when the control check state is changed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control is enabled and can be clicked on.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.Checked">
+            <summary>
+            Gets or sets whether the control is checked.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.CheckedItems">
+            <summary>
+            Gets or sets a collection of values of all checked checkboxes. Use this property in combination with the CheckedValue property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.CheckBoxFormGroup.FormControlStyle">
+            <summary>
+            Gets or sets whether the control should use default or custom style.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup">
+            <summary>
+            Renders a FormGroup control with a ComboBox
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.EmptyItemText">
+            <summary>
+            Text displayed when no value is selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control is enabled and can be modified.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.ItemTextBinding">
+            <summary>
+            The expression of DataSource item that will be displayed in the control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.ItemValueBinding">
+            <summary>
+            The expression of DataSource item that will be passed to the SelectedValue property when the item is selected.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.SelectionChanged">
+            <summary>
+            Gets or sets the command that will be triggered when the selection is changed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.ItemTitleBinding">
+            <summary>
+            The expression of DataSource item that will be placed into html title attribute.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.DataSource">
+            <summary>
+            Gets or sets the source collection or a GridViewDataSet that contains data in the control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.FormControlStyle">
+            <summary>
+            Gets or sets the Bootstrap form style of the control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.ComboBoxFormGroup.SelectedValue">
+            <summary>
+            Gets or sets the value of the selected item.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.DateTimePickerFormGroup">
+            <summary>
+            Renders a FormGroup control with a DateTimePicker
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.DateTimePickerFormGroup.SelectedDate">
+            <summary>
+            Gets or sets the date selected in the control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.DateTimePickerFormGroup.FormatString">
+            <summary>
+            Gets or sets format string that will be used to display the date.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.DateTimePickerFormGroup.Mode">
+            <summary>
+            Gets or sets whether you want the user to pick only date, only time, or both date and time.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.DateTimePickerFormGroup.Changed">
+            <summary>
+            Gets or sets the command that will be triggered when the control text is changed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.DateTimePickerFormGroup.Enabled">
+            <summary>
+            Gets or sets whether the control is enabled.
+            </summary>
+        </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap4.FormGroup">
             <summary>
             Represents a group in the Form control.
@@ -835,6 +966,93 @@
         <member name="P:DotVVM.Framework.Controls.Bootstrap4.FormGroup.ContentTemplate">
             <summary>
             Gets or sets the content of the form group.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup">
+            <summary>
+            Renders a FormGroup control with a RadioButton
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.Text">
+            <summary>
+            Gets or sets the label text that is rendered next to the control.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.CheckedValue">
+            <summary>
+            Gets or sets the value that will be used as a result when the control is checked.
+            Use this property in combination with the CheckedItem or CheckedItems property.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.Changed">
+            <summary>
+            Gets or sets the command that will be triggered when the control check state is changed.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control is enabled and can be clicked on.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.Checked">
+            <summary>
+            Gets or sets whether the control is checked.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.CheckedItem">
+            <summary>
+            Gets or sets the <see cref="P:DotVVM.Framework.Controls.CheckableControlBase.CheckedValue"/> of the first <see cref="T:DotVVM.Framework.Controls.Bootstrap4.RadioButton" /> that is checked and bound to this collection.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.GroupName">
+            <summary>
+            Gets or sets an unique name of the radio button group.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.RadioButtonFormGroup.FormControlStyle">
+            <summary>
+            Gets or sets whether the control should use default or custom style.
+            </summary>
+        </member>
+        <member name="T:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup">
+            <summary>
+            Renders a FormGroup control with a TextBox
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.Enabled">
+            <summary>
+            Gets or sets a value indicating whether the control is enabled and can be modified.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.FormatString">
+            <summary>
+            Gets or sets a format of presentation of value to client.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.Changed">
+            <summary>
+            Gets or sets the command that will be triggered when the onchange event is fired.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.SelectAllOnFocus">
+            <summary>
+            Gets or sets whether all text inside the TextBox becomes selected when the element gets focused.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.Text">
+            <summary>
+            Gets or sets the text in the TextBox.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.TextBoxType">
+            <summary>
+            Gets or sets the mode of the text field.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.TextBoxFormGroup.UpdateTextAfterKeydown">
+            <summary>
+            Gets or sets whether the viewmodel property will be updated after the key is pressed. 
+            By default, the viewmodel is updated after the control loses its focus.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap4.Form">
@@ -1690,6 +1908,11 @@
         <member name="T:DotVVM.Framework.Controls.Bootstrap4.StackedProgressBar">
             <summary>
             Renders Bootstrap Stacked Progress Bars.
+            </summary>
+        </member>
+        <member name="P:DotVVM.Framework.Controls.Bootstrap4.StackedProgressBar.Items">
+            <summary>
+            Gets or sets a collection of items that is used when no DataSource is set.
             </summary>
         </member>
         <member name="T:DotVVM.Framework.Controls.Bootstrap4.RadioButton">

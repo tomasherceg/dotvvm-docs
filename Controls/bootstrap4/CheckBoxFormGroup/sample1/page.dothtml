@@ -1,0 +1,1 @@
+﻿<bs:CheckBoxFormGroup Checked="{value: Value}" Text="Check me out" LabelText="Label" />

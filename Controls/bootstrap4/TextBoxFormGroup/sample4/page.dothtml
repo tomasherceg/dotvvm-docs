@@ -1,0 +1,3 @@
+﻿<bs:TextBoxFormGroup LabelText="Password box" Text="password" Type="Password" />
+
+<bs:TextBoxFormGroup LabelText="Numeric value" Text="0" ValueType="Number" />
