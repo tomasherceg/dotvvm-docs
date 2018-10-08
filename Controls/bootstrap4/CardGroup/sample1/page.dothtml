@@ -1,0 +1,23 @@
+﻿<bs:CardGroup Type="Columns">
+    <bs:Card HeaderText="Tempor lorem"
+             Text="Kasd dolor diam"
+             FooterText="Et" />
+    <bs:Card HeaderText="No"
+             Text="But congealed but wassailers reverie objects by of would known thou bower night from to deadly harold of had a"
+             FooterText="Sed id" />
+    <bs:Card HeaderText="Labore lorem et"
+             Text="Had mirthful resolved"
+             FooterText="Amet ipsum takimata gubergren stet illum" />
+    <bs:Card HeaderText="Eos vel"
+             Text="Bower to there sad below hight virtues weary the on"
+             FooterText="Dolores tincidunt" />
+    <bs:Card HeaderText="Laoreet sea dolores"
+             Text="Sorrow one loved he fathers scarce childe him basked seek say had is hight wasmen ear of things found sooth it maidens for of and"
+             FooterText="Lorem odio feugiat" />
+    <bs:Card HeaderText="Nonummy nonumy consectetuer lorem"
+             Text="Text"
+             FooterText="Diam sed" />
+    <bs:Card HeaderText="Clita diam"
+             Text="Might the and and forgot is festal would control hall to sad"
+             FooterText="Kasd duo" />
+</bs:CardGroup>
