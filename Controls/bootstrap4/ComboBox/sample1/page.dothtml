@@ -1,5 +1,0 @@
-﻿<bs:ComboBox Size="Small" DataSource="{value: Fruits}"  SelectedValue="{value: SelectedFruit}"/>
-
-<bs:ComboBox Size="Default" DataSource="{value: Fruits}"  SelectedValue="{value: SelectedFruit}"/>
-
-<bs:ComboBox Size="Large" DataSource="{value: Fruits}"  SelectedValue="{value: SelectedFruit}"/>
