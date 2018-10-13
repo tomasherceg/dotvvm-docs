@@ -1,6 +1,6 @@
 ## Binding Extension Parameters
 
-Any DotVVM binding is an expression that may use certain identifiers and there is a few types of them:
+Any DotVVM binding is an expression that may use certain identifiers and there are a few types of them:
 
 * Class Names - For example, `System.String`, these don't have any value, you can only access (static) members on them.
 	The set of accessible classes is controlled by `NamespaceImport`s, you can set it globally in the `DotvvmConfiguration` or locally using `@import` directive.
@@ -17,10 +17,10 @@ The new ExtensionParameter is defined by the `BindingExtensionParameter` abstrac
 * `type` - Type of the parameter. If you'd do the `_index` parameter it would be `System.Int32`, the `_page` is of type `BindingPageInfo`. You can, of course, create a new type that will be used specifically for this purpose.
 * `inherit` - When the extension parameter is introduced in a specific data context (like the `_index` that is only present in Repeater-like controls), this parameter controls if the parameter will also be valid in child data contexts.
 * `GetServerEquivalent(Expression controlParameter)` - When the binding is compiled to be used in .NET code, this method is invoked to get an expression that returns the value of the parameter. You can use a reference to the current control in the code.
-* `GetJsTranslation(JsExpression dataContext)` - This get's the expression that can be used in the translated Javascript expressions. Here, you can use a reference to the knockout context to compute the value.
+* `GetJsTranslation(JsExpression dataContext)` - This gets the expression that can be used in the translated Javascript expressions. Here, you can use a reference to the knockout context to compute the value.
 
 
-For example, you may know the [`@import` directive](/Pages/advanced-ioc-di-container.md) - it basically introduces a new extension parameter that represents a service imported from `IServiceProvider`. Let's have a look at how could we implement it. First, we will need class inheriting from `BindingExtensionParameter`:
+For example, you may know the [`@import` directive](/Pages/advanced-ioc-di-container.md) - it basically introduces a new extension parameter that represents a service imported from `IServiceProvider`. Let's have a look at how we could implement it. First, we will need class inheriting from `BindingExtensionParameter`:
 
 ```csharp
 public class InjectedServiceExtensionParameter : BindingExtensionParameter
@@ -70,7 +70,7 @@ public override JsExpression GetJsTranslation(JsExpression dataContext)
 ```
 
 
-> If you'd like to see implementation of a few more, have a look at https://github.com/riganti/dotvvm/blob/master/src/DotVVM.Framework/Compilation/ControlTree/BindingExtensionParameter.cs
+> If you'd like to see implementation of a few more, have a look at [the real implementation on Github](https://github.com/riganti/dotvvm/blob/master/src/DotVVM.Framework/Compilation/ControlTree/BindingExtensionParameter.cs)
 
 ### Registration
 
@@ -81,7 +81,9 @@ config.Markup.DefaultExtensionParameters.Add(
 	new InjectedServiceExtensionParameter("myCoolService", new ResolvedTypeDescriptor(typeof(MyCoolService))));
 ```
 
-The parameters are part of the data context (represented by `DataContextStack` class), so they can be added by `DataContextChangeAttributes`. DotVVM compiler tracks the data context for each control and each control may modify the data context that will be inside its children or inside its templates. This is done by annotating the template property or the control by an attribute that inherits `DataContextChangeAttribute`. For example, `Repeater` changes data context of it's `ItemTemplate` into the type of element of the collection bound in `DataSource` property. This is done by annotating the property with two change attributes - the changes the type to be the type of the `DataSource` property and the second changes the type to be element of that collection:
+The parameters are part of the data context (represented by `DataContextStack` class), so they can be added by `DataContextChangeAttributes` and you can use to set the extension parameter locally. For example, the `_index` and `_collection` parameters are created only inside Repeater-like controls. DotVVM compiler tracks the data context for each control and each control may modify the data context that will be inside its children or inside its templates.
+
+This is done by annotating the template property or the control by an attribute that inherits `DataContextChangeAttribute`. For example, `Repeater` changes data context of its `ItemTemplate` into the type of element of the collection bound in `DataSource` property. This is done by annotating the property with two change attributes - the changes the type to be the type of the `DataSource` property and the second changes the type to be element of that collection:
 
 ```csharp
 
