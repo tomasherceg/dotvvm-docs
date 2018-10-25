@@ -1,0 +1,1 @@
+Represents a [CheckBox](/docs/controls/bootstrap4/CheckBox/{branch}) in [FormGroup](/docs/controls/bootstrap4/FormGroup/{branch}).

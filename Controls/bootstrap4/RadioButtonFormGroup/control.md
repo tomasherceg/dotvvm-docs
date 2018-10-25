@@ -1,0 +1,1 @@
+Represents a [RadioButton](/docs/controls/bootstrap4/RadioButton/{branch}) in [FormGroup](/docs/controls/bootstrap4/FormGroup/{branch}).

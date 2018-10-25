@@ -1,0 +1,1 @@
+﻿<bs:ComboBoxFormGroup DataSource="{value: Fruits}"  SelectedValue="{value: SelectedFruit}" LabelText="Fruits" />
