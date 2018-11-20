@@ -4,14 +4,14 @@ Currently we have 8 contrib controls from the DotVVM community. If you like, you
 
 ## List of controls
 
-* [CkEditorMinimal](Controls/CkEditorMinimal/readme.md)
-* [GoogleAnalyticsJavascript](Controls/GoogleAnalyticsJavascript/readme.md)
-* [NoUiSlider](Controls/NoUiSlider/readme.md) with *Slider* and *Switch* controls
-* [Select2](Controls/Select2/readme.md)
-* [TemplateSelector](Controls/TemplateSelector/readme.md)
-* [TypeAhead](Controls/TypeAhead/readme.md)
-* [PolicyView](Controls/PolicyView/readme.md)
-* [FAIcon](Controls/FAIcon/readme.md)
+* [CkEditorMinimal](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/CkEditorMinimal/readme.md)
+* [GoogleAnalyticsJavascript](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/GoogleAnalyticsJavascript/readme.md)
+* [NoUiSlider](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/NoUiSlider/readme.md) with *Slider* and *Switch* controls
+* [Select2](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/Select2/readme.md)
+* [TemplateSelector](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/TemplateSelector/readme.md)
+* [TypeAhead](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/TypeAhead/readme.md)
+* [PolicyView](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/FAIcon/readme.md)
+* [FAIcon](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/FAIcon/readme.md)
 
 
 If you which to contribute with your control, feel free to send pull request to our official repository. For more info about controls and contributing please visit our [official github repository](https://github.com/riganti/dotvvm-contrib ).
