@@ -14,4 +14,4 @@ Currently we have 8 contrib controls from the DotVVM community. If you like, you
 * [FAIcon](https://github.com/riganti/dotvvm-contrib/blob/master/Controls/FAIcon/readme.md)
 
 
-If you which to contribute with your control, feel free to send pull request to our official repository. For more info about controls and contributing please visit our [official github repository](https://github.com/riganti/dotvvm-contrib ).
+If you want to share your control or to contribute, feel free to send a pull request to our official repository. For more info about controls and contributing please visit our [official github repository](https://github.com/riganti/dotvvm-contrib).
