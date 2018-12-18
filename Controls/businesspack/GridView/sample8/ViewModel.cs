@@ -2,46 +2,50 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotVVM.BusinessPack.Controls;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
-
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample8
 {
     public class ViewModel : DotvvmViewModelBase
     {
-        public BusinessPackDataSet<Order> Orders { get; set; } = new BusinessPackDataSet<Order>()
-        {
-            SortingOptions = { SortExpression = nameof(Order.Id) }, 
-            RowEditOptions = { PrimaryKeyPropertyName = nameof(Order.Id), EditRowId = -1 }
-        };
-
+        public BusinessPackDataSet<Order> Orders { get; set; }
         public List<string> DeliveryTypes { get; set; } = new List<string> { "Post office", "Home" };
 
         public override Task Init()
         {
-            if(Orders.IsRefreshRequired)
-            {
-                Orders.LoadFromQueryable(GetQueryable(15));
-            }
+            Orders = new BusinessPackDataSet<Order> {
+                PagingOptions = {
+                    PageSize = 10
+                },
+                RowEditOptions = new RowEditOptions {
+                    PrimaryKeyPropertyName = nameof(Order.Id),
+                    EditRowId = -1
+                }
+            };
 
             return base.Init();
         }
 
-        public GridViewDataSetLoadedData<Order> GetData(IGridViewDataSetLoadOptions gridViewDataSetOptions)
+        public override Task Load()
         {
-            var queryable = GetQueryable(15);
-            return queryable.GetDataFromQueryable(gridViewDataSetOptions);
+            if (Orders.IsRefreshRequired)
+            {
+                Orders.LoadFromQueryable(GetQueryable(15));
+            }
+
+            return base.Load();
         }
 
         private IQueryable<Order> GetQueryable(int size)
         {
-            var orders = new List<Order>();
+            var numbers = new List<Order>();
             for (var i = 0; i < size; i++)
             {
-                orders.Add(new Order { Id = i + 1, DeliveryType = DeliveryTypes[(i + 1) % 2], IsPaid = (i + 1) % 2 == 0, CreatedDate = DateTime.Now.AddDays(-i) });
+                numbers.Add(new Order { Id = i + 1, DeliveryType = DeliveryTypes[(i + 1) % 2], IsPaid = (i + 1) % 2 == 0, CreatedDate = DateTime.Now.AddDays(-i) });
             }
-            return orders.AsQueryable();
+            return numbers.AsQueryable();
         }
     }
 }

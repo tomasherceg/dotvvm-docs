@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotVVM.BusinessPack.Controls;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
-
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample11
 {
@@ -14,18 +14,22 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample11
 
         public override Task Init()
         {
-            Customers = new BusinessPackDataSet<Customer> {
-                OnLoadingData = GetData
+            Customers = new BusinessPackDataSet<Customer>() {
+                PagingOptions = {
+                    PageSize = 10
+                }
             };
-            Customers.SetSortExpression(nameof(Customer.Id));
 
             return base.Init();
         }
-
-        public GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetOptions)
+        public override Task Load()
         {
-            var queryable = GetQueryable(15);
-            return queryable.GetDataFromQueryable(gridViewDataSetOptions);
+            if (Customers.IsRefreshRequired)
+            {
+                Customers.LoadFromQueryable(GetQueryable(15));
+            }
+
+            return base.Load();
         }
 
         private IQueryable<Customer> GetQueryable(int size)

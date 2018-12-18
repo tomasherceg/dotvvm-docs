@@ -15,7 +15,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.TreeView.sample6
         };
 
         [AllowStaticCommand]
-        public IEnumerable<TreeItem> LoadChildren(TreeItem item)
+        public IEnumerable<TreeItem> LoadChildren(TreeItem parent)
         {
             if (parent.Name == "Documents")
             {
@@ -25,7 +25,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.TreeView.sample6
                     Items = new List<TreeItem> {
                         new TreeItem { Name = "Invoice.pdf" }
                     }
-                });
+                };
             }
         }
     }

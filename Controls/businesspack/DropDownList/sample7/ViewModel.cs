@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using DotVVM.BusinessPack.Controls;
 using DotVVM.Framework.ViewModel;
 

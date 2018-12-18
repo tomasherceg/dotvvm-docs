@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotVVM.BusinessPack.Controls;
 using DotVVM.Framework.Controls;
 using DotVVM.Framework.ViewModel;
 
@@ -14,7 +15,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample5
 
         public BusinessPackDataSet<Customer> Customers { get; set; } = new BusinessPackDataSet<Customer>()
         {
-            PagingOptions = { PageSize = DefaultPageSize },
+            PagingOptions = { PageSize = defaultPageSize },
             SortingOptions =  {SortExpression = nameof(Customer.Id) }
         };
 

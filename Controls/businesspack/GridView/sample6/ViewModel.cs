@@ -48,7 +48,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample6
         public void CancelEditCustomer()
         {
             CancelEdit();
-            Customers.RequestRefresh(true);
+            Customers.RequestRefresh();
         }
 
         private IQueryable<Customer> GetQueryable(int size)

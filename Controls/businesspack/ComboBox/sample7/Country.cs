@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample2
+namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample7
 {
     public class Country
     {

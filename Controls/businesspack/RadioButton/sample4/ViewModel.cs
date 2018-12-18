@@ -6,8 +6,8 @@ using DotVVM.Framework.ViewModel;
 
 namespace DotvvmWeb.Views.Docs.Controls.businesspack.RadioButton.sample4
 {
-	public class ViewModel : DotVVM.BusinessPack.DocSamples.Samples.LayoutViewModel
-	{
+	public class ViewModel : DotvvmViewModelBase
+    {
 	    public float PriceWithoutTax { get; set; }
 
 	    public float Tax { get; set; }
