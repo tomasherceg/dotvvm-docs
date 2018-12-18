@@ -1,12 +1,11 @@
 <bp:GridView DataSource="{value: Customers}">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}" HeaderText="ID" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}" HeaderText="Name" />
-        <bp:GridViewTextColumn ValueBinding="{value: BirthDate}" HeaderText="Birth Date" 
+        <bp:GridViewTextColumn Value="{value: Id}" HeaderText="ID" />
+        <bp:GridViewTextColumn Value="{value: Name}" HeaderText="Name" />
+        <bp:GridViewTextColumn Value="{value: BirthDate}" HeaderText="Birth Date" 
                                FormatString="dd.MM.yyyy" />
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}" HeaderText="Orders" />
+        <bp:GridViewTextColumn Value="{value: Orders}" HeaderText="Orders" />
     </Columns>
 </bp:GridView>
 
-<bp:DataPager DataSet="{value: Customers}"
-              PageSize="{value: PageSize}" />
+<bp:DataPager DataSet="{value: Customers}" />

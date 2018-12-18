@@ -1,7 +1,7 @@
 <bp:GridView DataSource="{value: Customers}">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}" HeaderText="ID" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}" HeaderText="Name" />
+        <bp:GridViewTextColumn Value="{value: Id}" HeaderText="ID" />
+        <bp:GridViewTextColumn Value="{value: Name}" HeaderText="Name" />
     </Columns>
 </bp:GridView>
 

@@ -1,10 +1,10 @@
 <bp:GridView DataSource="{value: Orders}"
              InlineEditing="true">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+        <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="Order ID" />
-        <bp:GridViewComboBoxColumn ValueBinding="{value: DeliveryType}"
-                                   DataSourceBinding="{value: _parent.DeliveryTypes}"
+        <bp:GridViewComboBoxColumn Value="{value: DeliveryType}"
+                                   DataSource="{value: DeliveryTypes}"
                                    HeaderText="Delivery type" />
         <bp:GridViewTemplateColumn HeaderText="Date">
             <ContentTemplate>
@@ -12,17 +12,17 @@
                              FormatString="dd.MM.yyyy hh:mm" />
             </ContentTemplate>
             <EditTemplate>
-                <bp:DateTimePicker SelectedDate="{value: CreatedDate}"
+                <bp:DateTimePicker SelectedDateTime="{value: CreatedDate}"
                                    FormatString="dd.MM.yyyy hh:mm"
                                    Mode="DateTime" />
             </EditTemplate>
         </bp:GridViewTemplateColumn>
-        <bp:GridViewCheckBoxColumn ValueBinding="{value: IsPaid}"
+        <bp:GridViewCheckBoxColumn Value="{value: IsPaid}"
                                    HeaderText="Is Paid?" />
         <bp:GridViewTemplateColumn>
             <ContentTemplate>
                 <bp:Button Text="Edit"
-                           Click="{command: _root.Orders.RowEditOptions.EditRowId = Id}" />
+                           Click="{command: _parent.Orders.RowEditOptions.EditRowId = Id}" />
             </ContentTemplate>
             <EditTemplate></EditTemplate>
         </bp:GridViewTemplateColumn>

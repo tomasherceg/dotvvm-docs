@@ -1,9 +1,9 @@
 <bp:GridView DataSource="{value: Customers}"
              ShowHeaderWhenNoData="true">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+        <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="Customer ID" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+        <bp:GridViewTextColumn Value="{value: Name}"
                                HeaderCssClass="gridview-header-highlight">
             <HeaderTemplate>
                 <i>Name</i>

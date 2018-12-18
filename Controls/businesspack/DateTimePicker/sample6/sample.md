@@ -1,3 +1,3 @@
-## Sample 6: SelectionCompleted Event
+## Sample 7: Keep Popup Open
 
-When the user completes or changes the selection, the `SelectionCompleted` event is triggered.
+The `ClosePopupOnSelectionComplete` can keep the popup open when the date is selected. By default, the popup closes when the user finishes the date selection.

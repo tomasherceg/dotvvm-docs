@@ -1,4 +1,0 @@
-<bp:RangeCalendar SelectedStartDate="{value: StartDate}"
-                  SelectedEndDate="{value: EndDate}" />
-
-<p>Selected dates: <dot:Literal Text="{value: StartDate}" FormatString="g" /> - <dot:Literal Text="{value: EndDate}" FormatString="g" /></p>

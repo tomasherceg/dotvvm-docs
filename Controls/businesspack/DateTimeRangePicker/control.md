@@ -1,1 +1,0 @@
-Renders a text field that allows the user to enter or select two date, time or date and time values using a Gregorian-style calendar popup.

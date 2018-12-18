@@ -1,5 +1,0 @@
-<bp:RangeCalendar SelectedStartDate="{value: StartDate}"
-                  SelectedEndDate="{value: EndDate}"
-                  SelectionCompleted="{command: SelectionCompleted()}" />
-
-<p>Date range selection has changed {{value: DateSelectionsCount}} times.</p>

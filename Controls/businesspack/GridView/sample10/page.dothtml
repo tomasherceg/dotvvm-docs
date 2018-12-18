@@ -3,16 +3,16 @@
              AllowReorderColumns="true">
     <Columns>
         <bp:GridViewTextColumn ColumnName="CustomerName"
-                               ValueBinding="{value: Name}"
+                               Value="{value: Name}"
                                HeaderText="Name" />
         <bp:GridViewTextColumn ColumnName="CustomerOrders"
-                               ValueBinding="{value: Orders}"
+                               Value="{value: Orders}"
                                HeaderText="Orders" />
         <bp:GridViewTextColumn ColumnName="CustomerId"
-                               ValueBinding="{value: Id}"
+                               Value="{value: Id}"
                                HeaderText="Customer ID" />
         <bp:GridViewTextColumn ColumnName="CustomerBirthdate"
-                               ValueBinding="{value: BirthDate}"
+                               Value="{value: BirthDate}"
                                FormatString="dd.MM.yyyy"
                                HeaderText="Birthdate" />
     </Columns>

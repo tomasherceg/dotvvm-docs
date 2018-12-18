@@ -16,7 +16,10 @@
 </bp:TabControl>
 
 <%-- Templated tabs --%>
-<bp:TabControl DataSource="{value: Countries}">
+<bp:TabControl DataSource="{value: Countries}"
+               TabIsActiveBinding="{value: IsSelected}"
+               TabHeaderTextBinding="{value: Name}"
+               TabKeyBinding="{value: Id}">
     <TabHeaderTemplate>
         {{value: Name}}
     </TabHeaderTemplate>

@@ -1,4 +1,0 @@
-<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
-                   ClosePopupOnSelectionComplete="false" />
-
-<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

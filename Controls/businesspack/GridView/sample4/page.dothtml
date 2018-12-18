@@ -1,15 +1,15 @@
 <bp:GridView DataSource="{value: Customers}">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+        <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="Id"
                                AllowSorting="true"
                                SortAscendingHeaderCssClass="sort-asc-custom"
                                SortDescendingHeaderCssClass="sort-desc-custom" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+        <bp:GridViewTextColumn Value="{value: Name}"
                                HeaderText="Name"
                                AllowSorting="true"
                                SortExpression="LastName" />
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}"
+        <bp:GridViewTextColumn Value="{value: Orders}"
                                HeaderText="Orders"
                                AllowSorting="true" />
     </Columns>

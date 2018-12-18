@@ -1,3 +1,0 @@
-<bp:RangeCalendar SelectedStartDate="{value: StartDate}"
-                  SelectedEndDate="{value: EndDate}"
-                  Restrictions="{value: Restrictions}" />

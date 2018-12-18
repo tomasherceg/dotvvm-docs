@@ -11,16 +11,16 @@
         <dot:Decorator class="edit-row" />
     </EditRowDecorators>
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}" 
+        <bp:GridViewTextColumn Value="{value: Id}" 
                                HeaderText="Customer ID" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+        <bp:GridViewTextColumn Value="{value: Name}"
                                HeaderText="Name" />
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}" 
+        <bp:GridViewTextColumn Value="{value: Orders}" 
                                HeaderText="# of orders" />
         <bp:GridViewTemplateColumn>
             <ContentTemplate>
                 <bp:Button Text="Edit"
-                           Click="{command: _root.Customers.RowEditOptions.EditRowId = Id}" />
+                           Click="{command: _parent.Customers.RowEditOptions.EditRowId = Id}" />
             </ContentTemplate>
             <EditTemplate></EditTemplate>
         </bp:GridViewTemplateColumn>

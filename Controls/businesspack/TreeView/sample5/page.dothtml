@@ -1,6 +1,6 @@
 <bp:TreeView DataSource="{value: Files}"
-             ExpandIconCssClass="{resource: IconType.FaCaretRight}"
-             CollapseIconCssClass="{resource: IconType.FaCaretUp}"
+             ExpandIconCssClass="fas fa-caret-right"
+             CollapseIconCssClass="fas fa-caret-up"
              SelectedValues="{value: SelectedFiles}"
              ItemKeyBinding="{value: Name}"
              ItemHasChildrenBinding="{value: HasItems}"

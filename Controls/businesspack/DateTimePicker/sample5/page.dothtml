@@ -1,4 +1,4 @@
-<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
+<bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
                    FormatString="dd MMM yyyy"
                    Mode="Date" />
 

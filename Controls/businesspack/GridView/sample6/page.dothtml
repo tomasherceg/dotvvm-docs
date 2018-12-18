@@ -1,10 +1,10 @@
 <bp:GridView DataSource="{value: Customers}"
              InlineEditMode="SingleRow">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+        <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="ID"
                                AllowEditing="false" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+        <bp:GridViewTextColumn Value="{value: Name}"
                                HeaderText="Name" />
         <bp:GridViewTemplateColumn HeaderText="Birthdate">
             <ContentTemplate>
@@ -12,12 +12,12 @@
                              FormatString="dd.MM.yyyy" />
             </ContentTemplate>
             <EditTemplate>
-                <bp:DateTimePicker SelectedDate="{value: BirthDate}"
+                <bp:DateTimePicker SelectedDateTime="{value: BirthDate}"
                                    FormatString="dd.MM.yyyy"
                                    Mode="Date" />
             </EditTemplate>
         </bp:GridViewTemplateColumn>
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+        <bp:GridViewTextColumn Value="{value: Orders}" />
         <bp:GridViewTemplateColumn>
             <ContentTemplate>
                 <dot:Button Text="Edit" Click="{command: _parent.EditCustomer(_this)}"/>

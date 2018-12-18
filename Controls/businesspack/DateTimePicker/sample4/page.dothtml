@@ -1,2 +1,2 @@
-<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
+<bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
                    Restrictions="{value: Restrictions}" />

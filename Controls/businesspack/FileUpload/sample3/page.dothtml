@@ -3,5 +3,5 @@
 <p>
   <bp:Button Text="Save Files" 
               Click="{command: Process()}"
-              Enabled="{value: !Files.IsBusy}" />
+              Enabled="{value: !Upload.IsBusy}" />
 </p>

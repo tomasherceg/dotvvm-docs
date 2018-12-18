@@ -3,6 +3,6 @@
              ItemKeyBinding="{value: Name}" 
              ItemHasChildrenBinding="{value: HasItems}"
              ItemChildrenBinding="{value: Items}" 
-             LoadChildren="{staticCommand: _root.LoadChildren(_this)}">
+             LoadChildren="{staticCommand: _parent.LoadChildren(_this)}">
     <span>{{value: Name}}</span>
 </bp:TreeView>

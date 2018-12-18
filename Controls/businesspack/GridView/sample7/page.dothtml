@@ -2,10 +2,10 @@
              InlineInserting="true"
              InlineInsertRowPlacement="Bottom">
     <Columns>
-        <bp:GridViewTextColumn ValueBinding="{value: Id}"
+        <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="ID"
-                               IsEditable="false" />
-        <bp:GridViewTextColumn ValueBinding="{value: Name}"
+                               AllowEditing="false" />
+        <bp:GridViewTextColumn Value="{value: Name}"
                                HeaderText="Name" />
         <bp:GridViewTemplateColumn HeaderText="Birthdate">
             <ContentTemplate>
@@ -13,12 +13,12 @@
                              FormatString="dd.MM.yyyy" />
             </ContentTemplate>
             <InsertTemplate>
-                <bp:DateTimePicker SelectedDate="{value: BirthDate}"
+                <bp:DateTimePicker SelectedDateTime="{value: BirthDate}"
                                    FormatString="dd.MM.yyyy"
                                    Mode="Date" />
             </InsertTemplate>
         </bp:GridViewTemplateColumn>
-        <bp:GridViewTextColumn ValueBinding="{value: Orders}" />
+        <bp:GridViewTextColumn Value="{value: Orders}" />
     </Columns>
 </bp:GridView>
 

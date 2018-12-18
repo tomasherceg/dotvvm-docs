@@ -1,4 +1,4 @@
-<bp:DateTimePicker SelectedDate="{value: SelectedDate}"
-                   SelectionCompleted="{command: SelectionCompleted()}" />
+<bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
+                   ClosePopupOnSelectionComplete="false" />
 
-<p>Date has been changed {{value: DateSelectionsCount}} times.</p>
+<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

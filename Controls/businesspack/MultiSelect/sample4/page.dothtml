@@ -1,6 +1,7 @@
 <bp:MultiSelect DataSource="{value: Cities}"
                 SelectedValues="{value: SelectedCities}"
                 ItemKeyBinding="{value: Id}"
+                ItemTextBinding="{value: Name}"
                 Placeholder="Select multiple cities">
     <ItemTemplate>
         <span>{{value: Name}}, {{value: Country}}</span>
