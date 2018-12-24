@@ -1,4 +1,6 @@
-﻿<!-- the alert is somewhere in master page -->
+﻿@viewModel Dotvvm.Samples.Alert.sample3.ViewModel, Dotvvm.Samples
+
+<!-- the alert is somewhere in master page -->
 <bs:Alert Text="{value: AlertText}" Type="{value: AlertType}" />
 
 <!-- content page -->
