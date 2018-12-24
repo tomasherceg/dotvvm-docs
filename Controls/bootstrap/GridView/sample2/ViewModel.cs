@@ -35,23 +35,16 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.BootstrapGridView.sample2
             }.AsQueryable();
         }
 
-        private GridViewDataSetLoadedData<CustomerData> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
-        {
-            var queryable = FakeDb();
-            // NOTE: Apply Pagign and Sorting options.
-            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
-        }
+        public GridViewDataSet<CustomerData> Customers { get; set; } = new GridViewDataSet<CustomerData>() { PagingOptions = { PageSize = 4} };
 
-        public GridViewDataSet<CustomerData> Customers { get; set; }
-
-        public override Task Init()
+        public override Task PreRender()
         {
-            Customers = new GridViewDataSet<CustomerData>()
+            if (Customers.IsRefreshRequired)
             {
-                OnLoadingData = GetData
-            };
-
-            return base.Init();
+                var queryable = FakeDb();
+                Customers.LoadFromQueryable(queryable);
+            }
+            return base.PreRender();
         }
 
         public void SortCustomers(string column)
