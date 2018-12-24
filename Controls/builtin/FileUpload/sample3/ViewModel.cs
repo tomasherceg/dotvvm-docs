@@ -7,19 +7,22 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.FileUpload.sample3
 {
     public class ViewModel : DotvvmViewModelBase
     {
+		private IUploadedFileStorage storage;
+		
         public UploadedFilesCollection Files { get; set; }
 
 
-        public ViewModel()
+        public ViewModel(IUploadedFileStorage storage)
         {
+			// use dependency injection to request IUploadedFileStorage
+			this.storage = storage;
+			
             Files = new UploadedFilesCollection();
         }
 
 
         public void Process()
         {
-            var storage = Context.Configuration.ServiceLocator.GetService<IUploadedFileStorage>();
-
             var uploadPath = GetUploadPath();
 
             // save all files to disk
