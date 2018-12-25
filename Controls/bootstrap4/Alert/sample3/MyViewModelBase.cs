@@ -23,7 +23,7 @@
             AlertText = successText;
             AlertType = AlertType.Success;
         }
-        catch (DotvvmInterruptRequestExecutionException)
+        catch (DotVVM.Framework.Hosting.DotvvmInterruptRequestExecutionException)
         {
             // this exception is used for redirecting - don't catch it
             throw;

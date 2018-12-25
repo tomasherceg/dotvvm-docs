@@ -1,4 +1,4 @@
-﻿using DotVVM.Framework.Controls.Bootstrap;
+﻿using DotVVM.Framework.Controls.Bootstrap4;
 using DotVVM.Framework.ViewModel;
 using System;
 using System.Collections.Generic;

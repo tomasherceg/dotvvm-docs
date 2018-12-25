@@ -21,22 +21,16 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.DataPager.sample1
             }.AsQueryable();
         }
 
-        private GridViewDataSetLoadedData<Customer> GetData(IGridViewDataSetLoadOptions gridViewDataSetLoadOptions)
+        public GridViewDataSet<Customer> Customers { get; set; } = new GridViewDataSet<Customer>() { PagingOptions = { PageSize = 4} };
+
+        public override Task PreRender()
         {
-            var queryable = FakeDb();
-            // NOTE: Apply Pagign and Sorting options.
-            return queryable.GetDataFromQueryable(gridViewDataSetLoadOptions);
-        }
-
-
-        public GridViewDataSet<Customer> Customers { get; set; }
-
-        public override Task Init()
-        {
-            // NOTE: You can also create the DataSet with factory.
-            // Just call static method Create with delegate and pagesize.
-            Customers = GridViewDataSet.Create(gridViewDataSetLoadDelegate: GetData, pageSize: 4);
-            return base.Init();
+            if (Customers.IsRefreshRequired)
+            {
+                var queryable = FakeDb();
+                Customers.LoadFromQueryable(queryable);
+            }
+            return base.PreRender();
         }
 
     }
