@@ -23,7 +23,7 @@ public class ConfirmPostBackHandler : PostBackHandler
     {
         return new Dictionary<string, string>()
         {
-            ["message"] = TranslateValueOrBinding(MessageProperty)
+            ["message"] = GetValueRaw(MessageProperty)
         };
     }
 
