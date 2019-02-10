@@ -41,9 +41,7 @@ This class contains several things:
 
 * The `ClientHandlerName` property specifies the name of the postback handler in the javascript. You'll need the value later in Step 2 to register the handler.
 
-* The `GetHandlerOptionClientExpressions` returns a key-value collection of postback handler parameters. This collection will be serialized and placed in the 
-HTML page. Thanks to this, you can read the values of the postback handler parameters on the client side. The `TranslateValueOrBinding` generates an expression
-either with the static value, or with the `{value: Something}` binding. If you evaluate this expression on the client side, it'll provide the value of the property.
+* The `GetHandlerOptions` returns a key-value collection of postback handler parameters. This collection will be serialized and placed in the HTML page. Thanks to this, you can read the values of the postback handler parameters on the client side. If you need to pass a binding in the dictionary, use the `GetValueRaw` method. If you evaluate this expression on the client side, it'll provide the value of the property.
 
 * The `Message` property is a postback handler parameter which you can use in the DOTHTML markup to pass a value to the handler.
 
