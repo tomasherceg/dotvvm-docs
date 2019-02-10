@@ -19,9 +19,9 @@ public class ConfirmPostBackHandler : PostBackHandler
 {
     protected override string ClientHandlerName => "confirm";
 
-    protected override Dictionary<string, string> GetHandlerOptionClientExpressions()
+    protected override Dictionary<string, object> GetHandlerOptions()
     {
-        return new Dictionary<string, string>()
+        return new Dictionary<string, object>()
         {
             ["message"] = GetValueRaw(MessageProperty)
         };
