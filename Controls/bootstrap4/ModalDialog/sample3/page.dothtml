@@ -6,7 +6,8 @@
 				AddCloseButton="true"
 				CloseOnEscape="false"
 				CloseOnBackdropClick="false"
-				UseBackdrop="false">
+				UseBackdrop="false"
+				CrollableContent="true" >
 	<ContentTemplate>
 		This is the dialog.
 	</ContentTemplate>
