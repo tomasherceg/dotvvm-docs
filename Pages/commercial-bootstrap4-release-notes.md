@@ -27,6 +27,7 @@
         * Added *MaximumScreenSizeBeforeChangeToVertical* property
     * **ModalDialog**
         * Added *ScrollableContent* property
+        * Added new XL *Size*
     * **Popover**
         * Added *AllowHtmlSanitization* property
     * **ResponsiveNavigation**
