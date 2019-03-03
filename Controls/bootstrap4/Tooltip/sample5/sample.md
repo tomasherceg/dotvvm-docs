@@ -6,4 +6,4 @@ HTML sanitizer filters out all non whitelisted tags and attributes.
 
 To disable HTML sanitization you must set `AllowHtmlSanitization` to false.
 
->Without sanitization you could have bee volnurable to XSS attacks.
+>Without sanitization you could have be volnurable to XSS attacks.

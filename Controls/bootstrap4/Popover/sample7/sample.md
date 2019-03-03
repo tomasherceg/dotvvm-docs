@@ -1,11 +1,9 @@
-## Sample 6: Popover Template
+## Sample 7: HTML sanitization
 
-The `Popover` control can define custom look using the `PopoverTemplate` property.
+All HTML passed into `Popover` by default goes through throught Bootsraps HTML sanitizer.  
+HTML sanitizer filters out all non whitelisted tags and attributes.  
+[List of allowed tags and attributes.](https://getbootstrap.com/docs/4.3/getting-started/javascript/#sanitizer)  
 
-The popover's title must be decorated with `popover-header` CSS class.
+To disable HTML sanitization you must set `AllowHtmlSanitization` to false.
 
-The popover's content must be decorated with `popover-body` CSS class.
-
-Element marked with `arrow` CSS class will become the popover's arrow.
-
-The outermost wrapper element should have the `popover` CSS class.
+>Without sanitization you could have be volnurable to XSS attacks.
