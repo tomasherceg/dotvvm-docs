@@ -1,4 +1,4 @@
-﻿<bs:ListGroup IsFlush="true">
+﻿<bs:ListGroup Type="Horizontal" MaximumScreenSizeBeforeChangeToVertical="Medium" >
   <bs:ListGroupItem Text="{value: Text}" />
   <bs:ListGroupItem Text="Item 2" />
   <bs:ListGroupItem Text="Item 3" />
