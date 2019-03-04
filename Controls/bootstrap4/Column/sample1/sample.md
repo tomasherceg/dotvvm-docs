@@ -10,4 +10,4 @@ If you don't specify the size of the column, Bootstrap will distribute the space
 
 <!-- TODO: sample with auto-width columns -->
 
-See [Bootstrap Grid documentation](https://getbootstrap.com/docs/4.1/layout/grid/#auto-layout-columns) for more details.
+See [Bootstrap Grid documentation](https://getbootstrap.com/docs/4.3/layout/grid/#auto-layout-columns) for more details.
