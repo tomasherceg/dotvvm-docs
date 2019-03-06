@@ -1,3 +1,3 @@
 Renders the Bootstrap range form control.
 
-<https://getbootstrap.com/docs/4.1/components/forms/#range>
+<https://getbootstrap.com/docs/4.3/components/forms/#range>

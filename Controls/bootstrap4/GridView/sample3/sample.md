@@ -1,4 +1,4 @@
-## Sample 3: Striped Rows
+## Sample 3: Striped Rows and Highlighted Rows
 
 The `HasStripedRows` property can make the rows to use dual colors.
 

@@ -1,4 +1,4 @@
-﻿<bs:ListGroup IsFluid="true">
+﻿<bs:ListGroup IsFlush="true">
   <bs:ListGroupItem Text="{value: Text}" />
   <bs:ListGroupItem Text="Item 2" />
   <bs:ListGroupItem Text="Item 3" />

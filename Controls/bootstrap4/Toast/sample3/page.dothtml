@@ -1,0 +1,1 @@
+﻿<bs:Toast IsDisplayed="{value: Displayed}" Text="Content" AutoHideDelay="3" AddCloseButton="false" />

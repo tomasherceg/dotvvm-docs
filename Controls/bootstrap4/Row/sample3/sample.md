@@ -10,5 +10,5 @@ There are also `JustifyContentSM`, `JustifyContentMD`, `JustifyContentLG` and `J
 * `Around` distributes the remaining space equally around every column.
 * `Between` distributes the remaining space equally in the gaps between columns.
 
-See the diagram in [Bootstrap Grid documentation](<https://getbootstrap.com/docs/4.1/layout/grid/#horizontal-alignment>).
+See the diagram in [Bootstrap Grid documentation](<https://getbootstrap.com/docs/4.3/layout/grid/#horizontal-alignment>).
 

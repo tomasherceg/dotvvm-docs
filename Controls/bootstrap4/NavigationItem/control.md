@@ -2,4 +2,4 @@ Represents an item in [NavigationBar](/docs/controls/bootstrap4/NavigationBar/{b
 
 This control inherits from [ListItem](/docs/controls/bootstrap4/ListItem/{branch}). 
 
-<https://getbootstrap.com/docs/4.1/components/navs/>
+<https://getbootstrap.com/docs/4.3/components/navs/>
