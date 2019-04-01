@@ -1,3 +1,3 @@
-## Sample 3: RouteLink Shapes
+## Sample 3: RouteLink VisualStyle
 
-The `Shape` property allows to switch between button with solid fill and outline buttons.
+The `VisualStyle` property allows to switch between button with solid fill and outline buttons.

@@ -1,9 +1,9 @@
 ﻿<bs:LinkButton Click="{command: DoSomething()}"
                Text="Solid Fill"
                Type="Primary"
-               Shape="SolidFill" />
+               VisualStyle="SolidFill" />
 
 <bs:LinkButton Click="{command: DoSomething()}"
                Text="Outline"
                Type="Primary"
-               Shape="Outline" />
+               VisualStyle="Outline" />

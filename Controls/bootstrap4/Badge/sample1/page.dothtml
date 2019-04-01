@@ -4,4 +4,4 @@
   <h1>9000+</h1>
 </bs:Badge>
 
-<bs:Badge Type="Primary" Shape="Pill" />
+<bs:Badge Type="Primary" VisualStyle="Pill" />

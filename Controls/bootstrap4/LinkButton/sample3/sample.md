@@ -1,3 +1,3 @@
-## Sample 3: Button Shapes
+## Sample 3: Button VisualStyle
 
-The `Shape` property allows to switch between buttons with solid fill and outline buttons.
+The `VisualStyle` property allows to switch between buttons with solid fill and outline buttons.
