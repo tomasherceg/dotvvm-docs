@@ -2,4 +2,4 @@ A special version of the [RouteLink](/docs/controls/bootstrap4/RouteLink/{branch
 
 See [RouteLink](/docs/controls/bootstrap4/RouteLink/{branch}) for more info on how to use this control.
 
-<https://getbootstrap.com/docs/4.1/components/input-group/>
+<https://getbootstrap.com/docs/4.3/components/input-group/>

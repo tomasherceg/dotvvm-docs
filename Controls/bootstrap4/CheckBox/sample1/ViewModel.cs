@@ -6,5 +6,6 @@ namespace DotvvmWeb.Views.Docs.Controls.bootstrap.CheckBox.sample1
     {
         public bool Checked1 { get; set; }
         public bool Checked2 { get; set; }
+        public bool Checked3 { get; set; }
     }
 }
