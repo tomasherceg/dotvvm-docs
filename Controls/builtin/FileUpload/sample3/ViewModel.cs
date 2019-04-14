@@ -7,16 +7,16 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.FileUpload.sample3
 {
     public class ViewModel : DotvvmViewModelBase
     {
-		private IUploadedFileStorage storage;
-		
+        private IUploadedFileStorage storage;
+        
         public UploadedFilesCollection Files { get; set; }
 
 
         public ViewModel(IUploadedFileStorage storage)
         {
-			// use dependency injection to request IUploadedFileStorage
-			this.storage = storage;
-			
+            // use dependency injection to request IUploadedFileStorage
+            this.storage = storage;
+            
             Files = new UploadedFilesCollection();
         }
 
