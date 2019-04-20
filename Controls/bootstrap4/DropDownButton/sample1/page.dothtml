@@ -7,7 +7,7 @@
   </Items>
 </bs:DropDownButton>
 
-<bs:DropDownButton Text="Drop up Button" DropDownType="DropUp">
+<bs:DropDownButton Text="Drop up Button" DropDirection="DropUp">
   <bs:DropDownButtonItem NavigateUrl="https://www.google.com/">
     <ButtonTemplate>
       Google is a <strong>search engine</strong>

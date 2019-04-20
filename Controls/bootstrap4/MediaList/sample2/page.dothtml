@@ -1,8 +1,8 @@
 ﻿<bs:MediaList DataSource="{value: Medias}" 
               ImageUrlBinding="{value: ImageUrl}"
-              AlternateTextBinding="{value: AltText}"
-              HeaderTextBinding="{value: Header}"
+              AlternateTextBinding="{value: AltText}" 
+              NavigateUrlBinding="{value: NavigateUrl}"
+              HeaderTextBinding="{value: Header}" 
               DescriptionBinding="{value: Description}"
-              NavigateUrlBinding="{value: NavigateUrl}"              
-              WidthBinding="{value: Width}"
+              WidthBinding="{value: Width}" 
               HeightBinding="{value: Height}" />

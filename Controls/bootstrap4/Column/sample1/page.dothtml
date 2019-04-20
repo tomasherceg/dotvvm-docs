@@ -1,8 +1,8 @@
 ﻿<bs:Row>
-    <bs:Column Size="4" SizeLG="10" style="background-color: red">
+    <bs:Column Size="4" SizeLG="10" style="background-color: red; color: white">
         Default = 4/12 | LG = 10/12
     </bs:Column>
-    <bs:Column Size="8" SizeLG="2" style="background-color: blue">
+    <bs:Column Size="8" SizeLG="2" style="background-color: blue; color: white">
         Default = 8/12 | LG = 2/12
     </bs:Column>
 </bs:Row>

@@ -1,19 +1,19 @@
-﻿<bs:NavigationBar VisualState="Pills">
-    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+﻿<bs:NavigationBar VisualStyle="Pills">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" IsSelected="true"/>
     <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
 </bs:NavigationBar>
-
-<bs:NavigationBar VisualState="Tabs">
-    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+<br />
+<bs:NavigationBar VisualStyle="Tabs">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" IsSelected="true"/>
     <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
 </bs:NavigationBar>
-
-<bs:NavigationBar IsFilled="true">
-    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+<br />
+<bs:NavigationBar ItemsLayout="StretchEvenly">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" IsSelected="true"/>
     <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
 </bs:NavigationBar>
-
-<bs:NavigationBar IsJustified="true">
-    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google"/>
+<br />
+<bs:NavigationBar ItemsLayout="Stretch">
+    <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" IsSelected="true"/>
     <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3Schools"/>
 </bs:NavigationBar>

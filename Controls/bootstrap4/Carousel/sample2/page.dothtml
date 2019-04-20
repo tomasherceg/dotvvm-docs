@@ -1,7 +1,7 @@
 <div style="height: 428px; width: 640px;">
 
-    <bs:Carousel RenderSideControls="false" RenderIndicators="false" 
-                 Animation="Fade" AutoSlideInterval="3000" 
+    <bs:Carousel RenderSideControls="false" RenderIndicators="true" 
+                 Animation="Fade" AutoSlideInterval="3" 
                  PauseOnHover="false" CycleItems="false">
                  
         <bs:CarouselItem IsActive="true">

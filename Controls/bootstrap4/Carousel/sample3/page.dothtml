@@ -16,15 +16,15 @@
             </bs:CarouselItem>
         
         </Items>
-    
+
         <RightControlTemplate>
-            <span aria-hidden="true">&lt; Previous</span>
+            <span aria-hidden="true" style="color: white">&gt; Next</span>
         </RightControlTemplate>
-    
+
         <LeftControlTemplate>
-            <span aria-hidden="true">&gt; Next</span>
+            <span aria-hidden="true" style="color: white">&lt; Previous</span>
         </LeftControlTemplate>
-    
+
     </bs:Carousel>
 
 </div>
