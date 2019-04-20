@@ -1,1 +1,3 @@
-﻿<bs:ComboBoxFormGroup DataSource="{value: Fruits}"  SelectedValue="{value: SelectedFruit}" LabelText="Fruits" />
+﻿<bs:Form>
+    <bs:ComboBoxFormGroup DataSource="{value: Fruits}"  SelectedValue="{value: SelectedFruit}" LabelText="Fruits" />
+</bs:Form>

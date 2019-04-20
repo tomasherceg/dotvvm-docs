@@ -1,5 +1,7 @@
-﻿<bs:TextBoxFormGroup LabelText="Update test" Text="{value: UpdateTestText}" UpdateTextAfterKeydown="true" />
-<span>{{value: UpdateTestText}}</span>
+﻿<bs:Form>
+    <bs:TextBoxFormGroup LabelText="Update test" Text="{value: UpdateTestText}" UpdateTextAfterKeydown="true" />
+    <span>{{value: UpdateTestText}}</span>
 
-<bs:TextBoxFormGroup LabelText="OnChanged test" Text="{value: ChangedTestText}" Changed="{command: Changed()}" />
-<span>{{value: ChangedValue}}</span>
+    <bs:TextBoxFormGroup LabelText="OnChanged test" Text="{value: ChangedTestText}" Changed="{command: Changed()}" />
+    <span>{{value: ChangedValue}}</span>
+</bs:Form>

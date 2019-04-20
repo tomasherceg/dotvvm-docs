@@ -1,5 +1,7 @@
-﻿<bs:DateTimePickerFormGroup SelectedDate="{value: Date}" LabelText="Pick a date" Mode="Date" />
+﻿<bs:Form>
+    <bs:DateTimePickerFormGroup SelectedDate="{value: Date}" LabelText="Pick a date" Mode="Date" />
 
-<bs:DateTimePickerFormGroup SelectedDate="{value: Date}" LabelText="Pick a datetime" Mode="DateTime" />
+    <bs:DateTimePickerFormGroup SelectedDate="{value: Date}" LabelText="Pick a datetime" Mode="DateTime" />
 
-<bs:DateTimePickerFormGroup SelectedDate="{value: Date}" LabelText="Pick a time" Mode="Time" />
+    <bs:DateTimePickerFormGroup SelectedDate="{value: Date}" LabelText="Pick a time" Mode="Time" />
+</bs:Form>

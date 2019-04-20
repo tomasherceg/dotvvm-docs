@@ -1,1 +1,4 @@
-﻿<bs:RadioButtonFormGroup Checked="{value: IsChecked}" CheckedValue="{value: true}" GroupName="RadioGroup" Text="Check me out" LabelText="Label" />
+﻿<bs:Form>
+    <bs:RadioButtonFormGroup Checked="{value: IsChecked}" CheckedValue="{value: true}" GroupName="RadioGroup" Text="yes" LabelText="Label" />
+    <bs:RadioButtonFormGroup Checked="{value: IsChecked}" CheckedValue="{value: false}" GroupName="RadioGroup" Text="no" LabelText="Label" />
+</bs:Form>
