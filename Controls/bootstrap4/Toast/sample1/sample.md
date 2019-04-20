@@ -1,7 +1,9 @@
 ## Sample 1: Basic Toast
 
-The header content of Toast can be set be one of two ways, by `HeaderText` property or by using `HeaderTemplate`.  
-The main content can be set by `Text` or by `ContentTemlate`.  
-It`s not required to provide both header and content, but at least one required is.
+The header content of `Toast` can be set be one of two ways: using the `HeaderText` property or using `HeaderTemplate`.  
 
-Showing / hidding of Toast is done using `IsDisplayed` property.
+The main content can be set using `Text` or `ContentTemplate`.  
+
+It's not required to provide both header and content, but at least one is needed.
+
+Showing and hidding the toast can be using the `IsDisplayed` property.

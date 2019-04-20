@@ -1,7 +1,0 @@
-﻿<bs:Form Type="Horizontal" LabelSizeXS="2" LabelSizeLG="8">
-  <bs:FormGroup LabelText="Label size would be different on different screen sizes">
-    <bs:CheckBox Text="Simple Test 1" Inline="true" Checked="{value: CheckBox1Checked}" />
-    <bs:CheckBox Text="Simple Test 2" Inline="true" Checked="{value: CheckBox2Checked}" />
-    <bs:CheckBox Text="Simple Test 3" Inline="true" Checked="{value: CheckBox3Checked}" />
-  </bs:FormGroup>
-</bs:Form>

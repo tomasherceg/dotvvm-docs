@@ -10,6 +10,7 @@
         Text = "Button was clicked " + Clicks + 'x';
     }
 
+    public bool Checked { get; set; }
     public string Text2 { get; set; } = "a";
     public string[] Values { get; set; } = new string[] { "a", "b", "c" };
 

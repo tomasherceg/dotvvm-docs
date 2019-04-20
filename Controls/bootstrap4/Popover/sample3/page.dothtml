@@ -1,5 +1,5 @@
 ﻿<bs:Popover Title="Title" Content="Content text" Trigger="Click">
-    <bs:Button Text="Click" Type="Default" />
+    <bs:Button Text="Click" Type="Danger" />
 </bs:Popover>
 
 <bs:Popover Title="Title" Content="Content text" Trigger="Focus">

@@ -6,7 +6,7 @@
                      Text="Wc3Schools"
                      Enabled="false"/>
 
-  <bs:BreadcrumbItem RouteName="MyRoute"
+  <bs:BreadcrumbItem RouteName="Breadcrumb_sample1"
                      Param-Id="{value: Test}"
                      Text="Route link" />
 

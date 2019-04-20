@@ -1,15 +1,15 @@
-﻿<bs:Tooltip Position="Left" Title="This element has simple tooltip">
+﻿<bs:Tooltip Placement="Left" Title="This element has simple tooltip">
   <a href="#">Link 1</a>
 </bs:Tooltip>
 
-<bs:Tooltip Position="Right" Title="This element has simple tooltip">
+<bs:Tooltip Placement="Right" Title="This element has simple tooltip">
   <a href="#">Link 2</a>
 </bs:Tooltip>
 
-<bs:Tooltip Position="Bottom" Title="This element has simple tooltip">
+<bs:Tooltip Placement="Bottom" Title="This element has simple tooltip">
   <a href="#">Link 3</a>
 </bs:Tooltip>
 
-<bs:Tooltip Position="Top" Title="This element has simple tooltip">
+<bs:Tooltip Placement="Top" Title="This element has simple tooltip">
   <a href="#">Link 4</a>
 </bs:Tooltip>

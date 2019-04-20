@@ -6,7 +6,7 @@
     <bs:InputGroupTextBox Text="{value: Text}" />
   </ContentTemplate>
   <RightTemplate>
-    <bs:InputGroupLiteral>Click the Button on the left.</bs:InputGroupLiteral>
+    <bs:InputGroupLiteral Text="Click the Button on the left." />
   </RightTemplate>
 </bs:InputGroup>
 
@@ -18,6 +18,6 @@
     <bs:InputGroupComboBox SelectedValue="{value: Text2}" DataSource="{value: Values}" />
   </ContentTemplate>
   <RightTemplate>
-    <bs:InputGroupLiteral>Click the CheckBox on the left.</bs:InputGroupLiteral>
+    <bs:InputGroupLiteral Text="Click the CheckBox on the left." />
   </RightTemplate>
 </bs:InputGroup>

@@ -4,6 +4,6 @@ Each tab is represented by the [TabItem](/docs/controls/bootstrap4/TabItem/{bran
 
 The header and content of each `TabItem` is defined using the `HeaderTemplate` and `ContentTemplate` properties.  
 
-The `IsActive` property specifies whether the tab is currently selected or not.
+The `ActiveTabIndex` property specifies a zero-based index of the tab that is currently selected.
 
-The tab can be disabled by setting its `Enabled` property to `false`.
+A tab item can be disabled by setting its `Enabled` property to `false`.

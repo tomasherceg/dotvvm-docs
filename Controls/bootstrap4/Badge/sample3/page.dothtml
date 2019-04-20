@@ -1,11 +1,11 @@
 ﻿<bs:Badge Text="NavigateUrl" 
-          NavigateUrl="https://google.com" />
+            NavigateUrl="https://google.com" />
 
-<bs:Badge Text="Click" 
-          Click="{command: ChangeText()}" />
+<bs:Badge Text="{value: Clicks + ' clicks'}" 
+            Click="{command: Increment()}" />
 
 <bs:Badge Text="Route" 
-          RouteName="Badge_Link" 
-          Param-Id="1"
-          Query-Page="10"
-          UrlSuffix="#table" />
+            RouteName="Badge_sample3" 
+            Param-Id="1"
+            Query-Page="10"
+            UrlSuffix="#table" />

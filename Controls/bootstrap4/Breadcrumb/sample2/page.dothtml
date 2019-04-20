@@ -3,7 +3,7 @@
   <bs:BreadcrumbItem NavigateUrl="https://www.google.com/"
                      Text="Google"/>
 
-  <bs:BreadcrumbItem RouteName="MyRoute"
+  <bs:BreadcrumbItem RouteName="Breadcrumb_sample2"
                      Param-Id="{value: Test}"
                      Text="Route link"
                      IsSelected="true" />

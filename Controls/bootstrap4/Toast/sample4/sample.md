@@ -1,3 +1,3 @@
 ## Sample 4: Callbacks
 
-When we need to perform some action after the toast is shown / hidden than we can use `OnShow` and `OnHide` command properties.
+You can use `OnShow` and `OnHide` commands to perform some actions when the toast changes its state.

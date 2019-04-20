@@ -1,6 +1,6 @@
 ## Sample 4: Text Box Form Group - Type and ValueType
 
-The `Type` property is used to change the mode of the text field. Possible values are:
+The `TextBoxType` property is used to change the mode of the text field. Possible values are:
 
 + `Normal`
 + `Password`
@@ -15,8 +15,3 @@ The `Type` property is used to change the mode of the text field. Possible value
 + `Number`
 
 
-The `ValueType` property is used for changing the type of value being formatted. Possible values are:
-
-+ `Text`
-+ `DateTime`
-+ `Number`

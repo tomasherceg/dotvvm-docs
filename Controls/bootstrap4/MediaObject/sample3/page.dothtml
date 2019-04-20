@@ -1,29 +1,27 @@
 ﻿<bs:MediaList>
 
-    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top" AlternateText="TEST">
-
+    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Start" AlternateText="TEST">
         <ContentTemplate>
             <h4>Media object in list</h4>
             <p>Description in template</p>
 
-            <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top" AlternateText="TEST">
+            <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Start" AlternateText="TEST">
                 <ContentTemplate>
                     <h4>Child</h4>
                     <p>Description of a child</p>
 
-                    <bs:MediaObject HeaderText="Nested Media Object" Description="Simple description" VerticalAlignment="Top">
-                        <ImageTemplate>
+                    <bs:MediaObject HeaderText="Nested Media Object" Description="Simple description" VerticalAlignment="Start">
+                        <MediaTemplate>
                             <iframe width="300" height="180" src="https://www.youtube.com/embed/fJ9rUzIMcZQ" frameborder="0" allowfullscreen=""></iframe>
-                        </ImageTemplate>
+                        </MediaTemplate>
                     </bs:MediaObject>
 
                 </ContentTemplate>
-
             </bs:MediaObject>
-        </ContentTemplate>
 
+        </ContentTemplate>
     </bs:MediaObject>
 
-    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Top" AlternateText="TEST" />
+    <bs:MediaObject ImageUrl="~/Images/person.png" VerticalAlignment="Start" AlternateText="TEST" />
 
 </bs:MediaList>

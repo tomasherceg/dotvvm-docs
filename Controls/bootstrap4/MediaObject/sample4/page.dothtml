@@ -1,6 +1,6 @@
 ﻿<bs:MediaObject ImageUrl="~/Images/person.png" 
                 HeaderText="Basic Image" 
                 Description="Simple Description"
-                VerticalAlignment="Bottom"
+                VerticalAlignment="End"
                 Position="Right" />
 

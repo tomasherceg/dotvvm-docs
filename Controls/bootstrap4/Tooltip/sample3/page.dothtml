@@ -2,10 +2,10 @@
     <bs:Button Text="Text" Type="Danger" />
 </bs:Tooltip>
 
-<bs:Tooltip Title="Title" Delay="500">
+<bs:Tooltip Title="Title" Delay="1">
     <bs:Button Text="Text" Type="Info" />
 </bs:Tooltip>
 
 <bs:Tooltip Title="Title" Container="body">
-    <bs:Button Text="Text" Type="Default" />
+    <bs:Button Text="Text" Type="Primary" />
 </bs:Tooltip>

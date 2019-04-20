@@ -2,7 +2,7 @@
   <HeaderTemplate>Tab {{value: Name}}</HeaderTemplate>
   <ContentTemplate>
     <p>{{value: Description}}</p>
-    <dot:Button Click="{command: _parent.Select(Id)}" Text="Select Tab" />
+    <dot:Button Click="{command: _parent.SelectTab(Id)}" Text="Select Tab" />
   </ContentTemplate>
 </bs:TabControl>
 

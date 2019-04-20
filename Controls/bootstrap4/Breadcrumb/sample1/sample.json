@@ -1,5 +1,15 @@
 ﻿{
   "files": [
-    { "name": "page.dothtml" }
+    { 
+      "name": "page.dothtml",
+      "replacements": [
+        {
+          "pattern": "(https?://)",
+          "replacement": "../../?url=\\1"
+        }
+      ],
+      "routeUrl": "Breadcrumb/sample1/{Id?}"
+    },
+    { "name": "ViewModel.cs" }
   ]
 }

@@ -1,6 +1,6 @@
 ﻿<bs:ListGroup ItemType="Button">
   <bs:ListGroupItem Text="Item 1" />
-  <bs:ListGroupItem Text="Item 2" Color="Default" />
+  <bs:ListGroupItem Text="Item 2" Color="Primary" />
   <bs:ListGroupItem Text="Item 3" Color="Info" />
   <bs:ListGroupItem Text="{value: Text}" Color="Success" />
   <bs:ListGroupItem Text="Item 5" Color="Warning" />

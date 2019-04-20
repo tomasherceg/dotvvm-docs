@@ -1,7 +1,7 @@
 ﻿<bs:ResponsiveNavigation>
-  <LeftAlignedItemsTemplate>
+  <LeftAlignedItems>
     <bs:NavigationItem NavigateUrl="https://www.google.com/" Text="Google" IsSelected="true" />
-    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3 Schools" IsDisabled="true" />
+    <bs:NavigationItem NavigateUrl="http://www.w3schools.com/html/" Text="W3 Schools" Enabled="false" />
     
     <bs:DropDownButton Text="DropDownButton">
       <Items>
@@ -13,13 +13,13 @@
         </bs:DropDownButtonItem>
       </Items>
     </bs:DropDownButton>
-  </LeftAlignedItemsTemplate>
+  </LeftAlignedItems>
 
-  <RightAlignedItemsTemplate>
+  <RightAlignedItems>
     <bs:Form Type="Inline">
       <bs:FormGroup>
-        <dot:TextBox Text="TEST" />
+        <bs:TextBox Text="TEST" />
       </bs:FormGroup>
     </bs:Form>
-  </RightAlignedItemsTemplate>
+  </RightAlignedItems>
 </bs:ResponsiveNavigation>

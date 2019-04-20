@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace DotvvmWeb.Views.Docs.Controls.bootstrap.ModalDialog.sample2
+﻿public class ViewModel
 {
-    public class ViewModel
+    public bool Displayed { get; set; } = false;
+
+    public string Log { get; set; }
+
+    public void Shown()
     {
-        public bool Displayed { get; set; } = false;
+        Log += "shown\r\n";
+    }
 
-        public void Shown(){
-
-        }
-
-        public void Hidden(){
-            
-        }
+    public void Hidden()
+    {
+        Log += "hidden\r\n";
     }
 }

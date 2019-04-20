@@ -6,6 +6,6 @@ The `DataSource` property can be used to generate the items from an `IEnumerable
 
 Then you can use the following properties which tell the control what property of the collection item will be used:
 
-* `TextBinding` specifies the property of the collection elements to be used as list item text.
-
-<!-- TODO: doplnit další bindovatelné vlastnosti, až budou k dispozici -->
+* `TextBinding` specifies the property of the collection elements to be used as the content of the accordion item.
+* `HeaderTextBinding` specifies the text in the accordion item header.
+* `FooterTextBinding` specifies the text in the accordion item footer.

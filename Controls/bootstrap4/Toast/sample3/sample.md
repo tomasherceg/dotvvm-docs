@@ -1,8 +1,7 @@
 ## Sample 3: Hiding
 
-Default way how to hide Toast is by [CloseButton](/docs/controls/bootstrap4/CloseButton/{branch}) which is automatically generated into header.
+The default way for hiding `Toast` is the [CloseButton](/docs/controls/bootstrap4/CloseButton/{branch}) which is automatically created in header.
 
-Automatic adding of [CloseButton](/docs/controls/bootstrap4/CloseButton/{branch}) can be disabled by setting `AddCloseButton` to *false*.
+You can remove the default [CloseButton](/docs/controls/bootstrap4/CloseButton/{branch}) by setting `AddCloseButton` to *false*.
 
-Alternative way how to hide Toast is by setting `AutoHideDelay` property.  
-`AutoHideDelay` property represents number (double) in seconds. And can be set to null when we want want auto hide functionality.
+An alternative way for hiding the `Toast` is by setting the `AutoHideDelay` property. The delay is in seconds.

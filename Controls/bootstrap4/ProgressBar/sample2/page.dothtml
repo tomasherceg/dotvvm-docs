@@ -3,6 +3,6 @@
 </bs:ProgressBar>
 
 
-<bs:ProgressBar Color="Success" VisualStyle="StripedAnimated" Value="100">
+<bs:ProgressBar Color="Success" VisualStyle="AnimatedStriped" Value="100">
   COMPLETED
 </bs:ProgressBar>

@@ -1,5 +1,7 @@
-﻿<bs:Form Type="Vertical">
-  <bs:FormGroup LabelText="E-mail Address">
-    <bs:FormStaticValue>email@example.com</bs:FormStaticValue>
+﻿<bs:Form Type="Horizontal" LabelSizeXS="2" LabelSizeLG="8">
+  <bs:FormGroup LabelText="Label size would be different on different screen sizes">
+    <bs:CheckBox Text="Simple Test 1" Checked="{value: CheckBox1Checked}" />
+    <bs:CheckBox Text="Simple Test 2" Checked="{value: CheckBox2Checked}" />
+    <bs:CheckBox Text="Simple Test 3" Checked="{value: CheckBox3Checked}" />
   </bs:FormGroup>
 </bs:Form>

@@ -1,6 +1,6 @@
 <bs:DropDownButton Text="Dropdown Created From Data Source!"
                    DataSource="{value: LinksDataSet}"
-                   IsDisabledBinding="{value: IsDisabled}"
+                   IsEnabledBinding="{value: IsEnabled}"
                    IsSelectedBinding="{value: IsSelected}"
                    TextBinding="{value: Text}"
                    NavigateUrlBinding="{value: NavigateUrl}">

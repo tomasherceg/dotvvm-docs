@@ -1,5 +1,3 @@
 ﻿<bs:TextBoxFormGroup LabelText="Static label" Text="Static value" />
 
 <bs:TextBoxFormGroup LabelText="{value: LabelText}" Text="{value: ValueText}" />
-
-<bs:TextBoxFormGroup LabelText="No value" />

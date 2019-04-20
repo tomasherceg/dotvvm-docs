@@ -1,4 +1,4 @@
-<bs:DropDownButton Text="Very Simple Dropdown with Headers" ButtonType="Success" >
+<bs:DropDownButton Text="Very Simple Dropdown with Headers" ButtonType="Button" Type="Success" >
   <bs:DropDownButtonHeader>Item 1</bs:DropDownButtonHeader>
   <bs:DropDownButtonItem NavigateUrl="https://www.google.com/">
     Google
@@ -10,11 +10,11 @@
 </bs:DropDownButton>
 
 <bs:DropDownButton>
-  <ButtonTemplate>
+  <ButtonContentTemplate>
     Very <strong>Simple Dropdown</strong> with separator and disabled value
-  </ButtonTemplate>
+  </ButtonContentTemplate>
 
-  <bs:DropDownButtonItem NavigateUrl="https://www.google.com/" IsDisabled="true">
+  <bs:DropDownButtonItem NavigateUrl="https://www.google.com/" Enabled="false">
     Google
   </bs:DropDownButtonItem>
   <bs:DropDownButtonSeparator/>

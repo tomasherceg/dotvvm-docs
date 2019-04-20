@@ -2,7 +2,7 @@
     HeaderText="If this menu cannot fit screen it will collapse to button." 
     MaximumScreenSizeBeforeCollapse="Small">
   <CollapseButtonTemplate>
-    <bs:GlyphIcon Icon="Arrow_down" />
+      Menu Button
   </CollapseButtonTemplate>
   
   <bs:NavigationItem NavigateUrl="https://www.google.cz/" Text="Google" />
