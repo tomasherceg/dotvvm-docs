@@ -1,4 +1,4 @@
-﻿<bs:Thumbnail ImageUrl="~/Images/LA.jpg" Title="Simplne Thumbnail" Alt="Image">
+﻿<bs:Thumbnail ImageUrl="~/Images/LA.jpg" Title="Simple Thumbnail" Alt="Image">
   <CaptionTemplate >
     <h1>This is image caption.</h1>
     <p>You can put here description of the Image.</p>
