@@ -4,4 +4,4 @@ The `AllowDismiss` property will add an icon to the right side of the alert, all
 
 The `DismissIcon` can be used to specify custom dismiss icon.
 
-You can also use the `AutoHideTimeout` property to hide the alert automatically after being displayed for some time. The `Dismissed` command is not triggered in this case.
+You can also use the `AutoHideTimeout` property  to hide the alert automatically after being displayed for specified number of seconds. The `Dismissed` command is not triggered in this case.

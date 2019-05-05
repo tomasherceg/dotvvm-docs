@@ -1,5 +1,4 @@
-<bp:GridView DataSource="{value: Customers}"
-             ShowFooter="true">
+<bp:GridView DataSource="{value: Customers}">
     <Columns>
         <bp:GridViewTextColumn Value="{value: Id}" HeaderText="ID" />
         <bp:GridViewTextColumn Value="{value: Name}" HeaderText="Name" />

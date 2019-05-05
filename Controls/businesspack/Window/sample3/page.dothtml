@@ -1,5 +1,5 @@
 <bp:Window IsDisplayed="{value: IsWindowDisplayed}"
-           CloseOnEscapePress="false"
+           CloseOnEscape="false"
            CloseOnOutsideClick="false">
     <p>Display window content here.</p>
 </bp:Window>

@@ -1,5 +1,5 @@
-<bp:RangeSlider SelectedStartValue="{value: Minimum}"
-                SelectedEndValue="{value: Maximum}"
+<bp:RangeSlider SelectedMinValue="{value: Minimum}"
+                SelectedMaxValue="{value: Maximum}"
                 MinValue="0"
                 MaxValue="100" />
 

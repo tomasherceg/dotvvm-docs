@@ -1,5 +1,5 @@
 <bp:GridView DataSource="{value: Customers}"
-             InlineInserting="true"
+             InlineInsertMode="SingleRow"
              InlineInsertRowPlacement="Bottom">
     <Columns>
         <bp:GridViewTextColumn Value="{value: Id}"

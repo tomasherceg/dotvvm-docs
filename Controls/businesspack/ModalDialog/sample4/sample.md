@@ -1,8 +1,8 @@
 ## Sample 4: Dialog Size
 
-The `Width` and `Height` properties can be used to specify fixed dimensions of the dialog. You can use any CSS units here - e.g. `400px`, `50%` etc.
+The `WidthRequest` and `HeightRequest` properties can be used to specify requested dimensions of the dialog (in pixels). If the screen is smaller than the requested size, the dialog will take all available space.
 
-To let the user resize the dialog, set the `AllowResize` property to `true`.
+You can fine-tune dialog sizing on various screen sizes using CSS.
 
-The `MinWidth` and `MinHeight` properties can restrict the minimum dimensions of the dialog. They are always in pixels.
+<!-- TODO -->
 

@@ -1,5 +1,5 @@
 ## Sample 1: Basic Usage
 
-The `DataSource` property specifies a collection of `string`s. For each item in the collection, a checkbox is created.
+The `DataSource` property specifies a collection of strings. For each item in the collection, a checkbox will be created.
 
-The `SelectedValues` property is bound to a collection which contains all `string`s of checkboxes that are checked. The data-binding works in both ways, so you can either read, or modify the collection in the viewmodel and the changes will get synchronized with the checkboxes.
+The `SelectedValues` property is bound to a collection which contains all values of checkboxes that are checked. The data-binding works in both ways, so you can either read, or modify the collection in the viewmodel and the checkbox states will be synchronized to reflect changes made to the collection.

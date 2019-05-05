@@ -6,4 +6,4 @@ The `SelectedValues` will then contain only the values of the properties specifi
 
 > The `ItemKeyBinding` property is required when the control cannot compare the objects in the `DataSource` collection with the objects in the `SelectedValues`. If the `ItemValueBinding` is set and makes the `SelectedValues` collection use primitive types that can be compared, the `ItemKeyBinding` property is not needed. Similarly, if the `DataSource` collection contains only primitive values (`string`, `int` etc.), the `ItemKeyBinding` property is not necessary.
 
-Use the `ItemIsExpanded` binding to control whether nodes are collapsed or expanded. It may be useful in combination with the `LoadChildren` command.
+Use the `ItemIsExpandedBinding` binding to control whether nodes are collapsed or expanded. It may be useful in combination with the `LoadChildren` command.

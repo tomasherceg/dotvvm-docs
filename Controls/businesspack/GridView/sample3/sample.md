@@ -1,5 +1,7 @@
 ## Sample 3: Grid Footer
 
-The `ShowFooter` specifies whether the row footer is displayed or not. By default, it is hidden.
+By default, the grid doesn't render any footer.
 
-The `FooterTemplate` property of the column can be used to customize the content of the column footer cell.
+If any of the columns specifies its `FooterTemplate` property, the footer row will appear.
+
+The `FooterTemplate` property of the control can be used to render an additional footer row for the entire table.
