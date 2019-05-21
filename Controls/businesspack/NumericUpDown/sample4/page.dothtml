@@ -1,6 +1,11 @@
 <bp:NumericUpDown Value="{value: Value}"
-                  DecreaseIconCssClass="decrease"
-                  IncreaseIconCssClass="increase"
                   MinValue="0.5"
                   MaxValue="5"
-                  Step="0.5" />
+                  Step="0.5">
+    <IncreaseIcon>
+        <bp:Icon Icon="Plus"></bp:Icon>
+    </IncreaseIcon>
+    <DecreaseIcon>
+        <bp:Icon Icon="Minus"></bp:Icon>
+    </DecreaseIcon>
+</bp:NumericUpDown>

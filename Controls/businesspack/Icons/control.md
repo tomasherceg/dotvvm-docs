@@ -1,0 +1,1 @@
+Renders an BusinessPack custom icon.

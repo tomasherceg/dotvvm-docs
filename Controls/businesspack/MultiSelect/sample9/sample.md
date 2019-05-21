@@ -1,5 +1,7 @@
 ## Sample 9: Customizing Icons
 
-The icons used by the control can be customized using the following properties:
+The icon used by the control can be customized using the following inner elements:
 
-* `UnselectIconCssClass` represents an icon that allows the user to deselect items. The default value is `fa fa-close` (FontAwesome).
+* `UnselectIcon` represents an icon that allows the user to deselect items. The default is `Close` icon.
+
+See the [Icon](/docs/controls/businesspack/Icon/{branch}) documentation to find about using other icon packs.
