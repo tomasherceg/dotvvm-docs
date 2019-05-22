@@ -1,4 +1,11 @@
-<bp:Alert Type="Info"
-          AnimationDuration="0.5"
+<bp:Alert Type="Warning"
+          IsDisplayed="{value: IsDisplayed}"
           AllowDismiss="true"
-          Text="This alert is animated." />
+          Text="Warning" />
+
+<bp:Alert Type="Danger"
+          AllowDismiss="true"
+          Text="{value: ErrorMessage}" />
+
+<bp:CheckBox Text="Is warning displayed"
+             Checked="{value: IsDisplayed}" />

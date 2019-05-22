@@ -5,8 +5,6 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.CheckBoxList.sample5
 {
     public class ViewModel : DotvvmViewModelBase
     {
-        public bool IsControlEnabled { get; set; }
-        public bool IsItemEnabled { get; set; }
 
         public List<Country> Countries { get; set; } = new List<Country> {
             new Country { Id = 1, Name = "Czech Republic" },

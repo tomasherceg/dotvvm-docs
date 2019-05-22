@@ -1,7 +1,7 @@
-## Sample 4: Display State
+## Sample 4: Common Usage
 
-You can use the `IsDisplayed` property to determine or specify, whether the alert is displayed.
+The typical use of the `Alert` control is to have 2 properties in the viewmodel (`AlertText` and `AlertType`) which are bound to the properties of the `Alert` control.
 
-If you set this property to `true`, the alert will be displayed. When the alert is hidden, the property will be switched to `false`.
+Notice that the properties are marked with the `Bind` attribute setting the direction to `ServerToClient`. That's because we don't need to send the property values to the server when we are making a postback. We only need to send the new value to the client if the properties are changed.
 
-If the `IsDisplayed` property is not set, the alert is displayed whenever the `Text` is not `null` or empty.
+We suggest to put the `AlertText` and `AlertType` properties into the base viewmodel class and create a method which does this kind of exception handling. Then you can use it on all places in your application.
