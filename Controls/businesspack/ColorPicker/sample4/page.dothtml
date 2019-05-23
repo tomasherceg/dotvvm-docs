@@ -1,4 +1,4 @@
-<p><font color="{value: CssColor}">Custom color text</font></p>
+<p style="{value: "color: " + CssColor}">Custom colored text</p>
 
 <bp:ColorPicker SelectedRgbaColor="{value: Color}"
                 Changed="{command: ColorChanged()}"

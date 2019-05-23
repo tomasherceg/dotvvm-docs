@@ -1,24 +1,24 @@
 <bp:ImageCrop ImageUrl="{value: ImagePath}"
               Operations="{value: ImageOperations}">
-    <RotateLeftIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
-    </RotateLeftIcon>
-    <RotateRightIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
-    </RotateRightIcon>
-    <ZoomInIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
-    </ZoomInIcon>
-    <ZoomOutIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
-    </ZoomOutIcon>
-    <ResetIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
-    </ResetIcon>
     <SwitchToMovingIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
+        <bp:Icon Icon="Move"></bp:Icon>
     </SwitchToMovingIcon>
     <SwitchToCroppingIcon>
-        <bp:Icon Icon="Plus"></bp:Icon>
+        <bp:Icon Icon="Crop"></bp:Icon>
     </SwitchToCroppingIcon>
+    <ResetIcon>
+        <bp:Icon Icon="Reset"></bp:Icon>
+    </ResetIcon>
+    <RotateLeftIcon>
+        <bp:Icon Icon="RotateLeft"></bp:Icon>
+    </RotateLeftIcon>
+    <RotateRightIcon>
+        <bp:Icon Icon="RotateRight"></bp:Icon>
+    </RotateRightIcon>
+    <ZoomInIcon>
+        <bp:Icon Icon="ZoomIn"></bp:Icon>
+    </ZoomInIcon>
+    <ZoomOutIcon>
+        <bp:Icon Icon="ZoomOut"></bp:Icon>
+    </ZoomOutIcon>
 </bp:ImageCrop>

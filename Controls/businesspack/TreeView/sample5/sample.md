@@ -1,4 +1,9 @@
 ## Sample 5: Icons
 
-The `ExpandIconCssClass` and `CollapseIconCssClass` properties can be used to customize the icons used by the control.
-The default values are `fa fa-caret-right` and `fa fa-caret-up` respectively (FontAwesome).
+The icons used by the control can be customized using the following inner elements:
+
+* `ExpandIcon` represents an icon of toggle button that expand data. The default is `Plus` icon.
+
+* `CollapseIcon` represents an icon of toggle button that collapse data. The default is `Minus` icon.
+
+See the [Icon](/docs/controls/businesspack/Icon/{branch}) documentation to find about using other icon packs.
