@@ -6,9 +6,9 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.CheckBox.sample4
 {
     public class ViewModel : DotvvmViewModelBase
     {
-        public List<float> Extra { get; set; } = new List<float>();
+        public List<double> Extra { get; set; } = new List<double>();
 
-        public float Price { get; set; } = 4;
+        public double Price { get; set; } = 4;
 
         public void UpdatePrice()
         {
