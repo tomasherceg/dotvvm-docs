@@ -1,4 +1,4 @@
-<bp:DatePicker SelectedDateTime="{value: SelectedDate}"
-                   Restrictions="{value: Restrictions}" />
+<bp:DatePicker SelectedDate="{value: SelectedDate}"
+               Restrictions="{value: Restrictions}" />
 
 <p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

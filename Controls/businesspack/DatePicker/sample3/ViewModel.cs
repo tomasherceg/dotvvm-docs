@@ -9,7 +9,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.DatePicker.sample3
     {
         public DateTime SelectedDate { get; set; } = DateTime.Now;
 
-        public List<DateTimeRestriction> Restrictions { get; set; } = new List<DateTimeRestriction>()
+        public List<DateRestriction> Restrictions { get; set; } = new List<DateRestriction>()
         {
             new DayOfWeekRestriction() { DayOfWeek = DayOfWeek.Saturday },
             new DayOfWeekRestriction() { DayOfWeek = DayOfWeek.Sunday },

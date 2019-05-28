@@ -1,4 +1,4 @@
-<bp:DatePicker SelectedDateTime="{value: SelectedDate}"
-                   FormatString="dd MMM yyyy"/>
+<bp:DatePicker SelectedDate="{value: SelectedDate}"
+               FormatString="dd MMM yyyy"/>
 
 <p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>
