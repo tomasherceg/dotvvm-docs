@@ -1,0 +1,5 @@
+<bp:TimePicker SelectedTime="{value: SelectedTime}"
+               MinTime="{value: MinimumTime}"
+               MaxTime="{value: MaximumTime}" />
+
+<p>Selected time: <dot:Literal Text="{value: SelectedTime}" FormatString="g" /></p>

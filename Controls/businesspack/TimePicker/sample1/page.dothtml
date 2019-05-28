@@ -1,0 +1,3 @@
+<bp:TimePicker SelectedTime="{value: SelectedTime}" />
+
+<p>Selected time: <dot:Literal Text="{value: SelectedTime}" FormatString="g" /></p>

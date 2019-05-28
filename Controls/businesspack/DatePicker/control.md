@@ -1,0 +1,1 @@
+Renders a inline calendar or text field that allows the user to enter or select date using a Gregorian-style calendar popup.

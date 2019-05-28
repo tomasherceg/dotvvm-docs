@@ -1,0 +1,3 @@
+<bp:DatePicker SelectedDate="{value: SelectedDate}" />
+
+<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>
