@@ -3,7 +3,7 @@ using DotVVM.Framework.ViewModel;
 using DotVVM.Framework.Hosting;
 using DotVVM.BusinessPack.Controls;
 
-namespace DotvvmWeb.Views.Docs.Controls.businesspack.Alert.sample5
+namespace DotvvmWeb.Views.Docs.Controls.businesspack.Alert.sample4
 {
     public class MyViewModelBase : DotvvmViewModelBase
     {

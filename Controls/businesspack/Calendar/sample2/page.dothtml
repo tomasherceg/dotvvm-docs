@@ -1,5 +1,8 @@
-<bp:Calendar SelectedDate="{value: SelectedDate}"
-             MinDate="{value: MinimumDate}"
-             MaxDate="{value: MaximumDate}" />
+<bp:Calendar ActiveDate="{value: ActiveDate}"
+             View="Month" />
 
-<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>
+<bp:Calendar ActiveDate="{value: ActiveDate}"
+             View="Year" />
+
+<bp:Calendar ActiveDate="{value: ActiveDate}"
+             View="Decade" />

@@ -1,4 +1,4 @@
-namespace DotvvmWeb.Views.Docs.Controls.businesspack.Alert.sample5
+namespace DotvvmWeb.Views.Docs.Controls.businesspack.Alert.sample4
 {
     public class ViewModel : MyViewModelBase
     {        

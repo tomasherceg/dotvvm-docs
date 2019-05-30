@@ -1,8 +1,0 @@
-<bp:Calendar SelectedDate="{value: SelectedDate}"
-             Mode="Date" />
-
-<bp:Calendar SelectedDate="{value: SelectedTime}"
-             Mode="Time" />
-
-<bp:Calendar SelectedDate="{value: SelectedDateTime}"
-             Mode="DateTime" />
