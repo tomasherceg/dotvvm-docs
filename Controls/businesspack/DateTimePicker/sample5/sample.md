@@ -1,6 +1,17 @@
-## Sample 5: Format Strings
+## Sample 5: Custom Icons
 
-The `FormatString` property specifies the format that will be used to display selected date. Use [standard](https://msdn.microsoft.com/en-us/library/az4se3k1(v=vs.110).aspx) or 
-[custom](https://msdn.microsoft.com/en-us/library/8kb3ddd4(v=vs.110).aspx) .NET date format strings.
+To customize the look of icons in the control, you can use the following inner elements:
 
-The language of the calendar and the first day of week is specified by the request culture. You can find more info in the [Globalization](/docs/tutorials/basics-globalization/{branch}) tutorial.
+* `ToggleIcon` allows to customize the toggle icon. The default value is `Calendar`.
+
+* `UnselectIcon` allows to customize the unselect icon. The default value is `Close`.
+
+* `PrevDateIcon` allows to customize the icon displayed on the button navigating to previous page of date picker. The default value is `ChevronLeft`.
+
+* `NextDateIcon` allows to customize the icon displayed on the button navigating to next page of date picker. The default value is `ChevronRight`.
+
+* `PrevTimeIcon` allows to customize the icon displayed on the button navigating to previous page of time picker. The default value is `ChevronUp`.
+
+* `NextTimeIcon` allows to customize the icon displayed on the button navigating to next page of time picker. The default value is `ChevronDown`.
+
+See the [Icon](/docs/controls/businesspack/Icon/{branch}) documentation to find about using other icon packs.

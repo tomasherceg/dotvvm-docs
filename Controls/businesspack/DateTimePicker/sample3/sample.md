@@ -1,5 +1,8 @@
-## Sample 3: Modes
+## Sample 3: Restrictions
 
-You can use the `Mode` property to determine whether you want to select `Date`, `Time` or `DateTime` (a combination of date and time).
+If you require more granular control over what dates can be selected, you can use the `Restrictions` property. We currently support the following types of restrictions:
 
-Even if you are in the `Time` mode, the control still requires the `SelectedDate` property to be bound to a property of `DateTime` type.
+- **DayOfWeekRestriction** - Allows to disable selection of a specific day of week. You can also specify the time interval you need to disable using the `StartTime` and `EndTime` properties.
+- **DateRangeRestriction** - Allows to disable a secific range of dates (one day, one month, etc.). You just need to set the `StartDate` and `EndDate` properties.
+
+Restrictions can be combined with `MinDateTime` and `MaxDateTime` properties and are verified both on client-side and server-side.
