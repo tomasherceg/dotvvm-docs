@@ -1,4 +1,4 @@
 <bp:Button ButtonTagName="button">
     <bp:Icon Icon="Star"></bp:Icon>   
-    <p>Custom Button with Icon<p />
+    <span>Custom Button with Icon<span/>
 </bp:Button>

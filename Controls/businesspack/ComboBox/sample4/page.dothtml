@@ -4,6 +4,6 @@
              ItemTextBinding="{value: Name}"
              Placeholder="Please select Country">
     <ItemTemplate>
-        <p>{{value: Id}}. {{value: Name}}</p>
+        <span>{{value: Id}}. {{value: Name}}</span>
     </ItemTemplate>
 </bp:ComboBox>

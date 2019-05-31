@@ -2,6 +2,7 @@ Renders an BusinessPack custom icon.
 
 <div>
 	<p>List of all icons:</p>
+	<br/>
     <svg class="dotvvm-bp-control dotvvm-bp-icon" data-bind="dotvvm-businesspack-Icon:{ 'icon': $rawData, 'spriteUrl': &quot;/dotvvmResource/dotvvm--businesspack-svg/dotvvm--businesspack-svg&quot; }" viewBox="0 0 512 512" width="20">
 		<title>Calendar</title>
 		<path d="M423,197V62h-63V26h-63v36H153V26H90v36H27l0.4,361.8h176.1c28.9,37.4,74.1,61.2,124.7,61.2        c87.4,0,158-70.7,158-158C486.2,276,460.4,225.9,423,197z M63,386V125h324v54c-22-8-35-10.4-58.8-10.4c-87.4,0.3-158,71-158,158.4        c0,23.8,3.9,41,9.9,59H63z M425,405.8c-5.4,6.5-11.2,12.6-18,18c-21.4,17.7-48.9,28.2-79.2,28.2c-30.3,0-57.4-10.5-79.2-28.2        c-10.5-8.5-19.7-19-26.9-30.6c-11.9-19.4-19-41.8-19-66.3c0-69,56.1-125.1,125.1-125.1c24.5,0,46.9,7.1,66.3,19        c11.6,7.1,22.1,16.3,30.6,26.9c17.7,21.4,28.2,48.9,28.2,79.2C452.9,357.2,442.7,384.4,425,405.8z"></path>

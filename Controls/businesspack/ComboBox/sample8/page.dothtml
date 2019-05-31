@@ -4,7 +4,7 @@
              ItemKeyBinding="{value: Id}"
              Placeholder="Select city">
     <ItemTemplate>
-        <p>{{value: Name}}, {{value: Country}}</p>
+        <span>{{value: Name}}, {{value: Country}}</span>
     </ItemTemplate>
 </bp:ComboBox>
 
