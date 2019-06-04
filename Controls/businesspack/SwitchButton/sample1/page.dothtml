@@ -1,0 +1,3 @@
+<bp:SwitchButton Text="Switch button"
+                 Checked="{value: Checked}">
+</bp:SwitchButton>

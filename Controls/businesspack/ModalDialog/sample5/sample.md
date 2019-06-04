@@ -1,3 +1,6 @@
-## Sample 5: Initial Position
+## Sample 5: Position
 
-The `InitialPositionLeft` and `InitialPositionTop` properties can specify the initial distance from the left and top border of the browser viewport. You can use any CSS value here - e.g. `200px`, `30%` or `5vh`.
+The `HorizontalAlignment` and `VerticalAlignment` properties can specify the position of the modal dialog in page. 
+
+* `HorizontalAlignment` can be set to `Left`, `Right` and `Center`. The default value is `Center`.
+* `VerticalAlignment` can be set to `Top`, `Center` and `Bottom`. The default value is `Top`.

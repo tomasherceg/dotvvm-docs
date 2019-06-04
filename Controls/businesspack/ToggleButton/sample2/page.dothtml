@@ -1,0 +1,6 @@
+<bp:ToggleButton Checked="{value: Checked}"
+                 Click="{command: ClickCount = ClickCount + 1}">
+    <span>Toggle button</span>
+</bp:ToggleButton>
+
+<p>Click counter: {{value: ClickCount}}</p>

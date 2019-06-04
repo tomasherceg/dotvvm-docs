@@ -1,0 +1,6 @@
+<bp:SwitchButton Checked="{value: Checked}"
+                 Click="{command: ClickCount = ClickCount + 1}">
+    <span>Switch button</span> &nbsp;
+</bp:SwitchButton>
+
+<p>Click counter: {{value: ClickCount}}</p>
