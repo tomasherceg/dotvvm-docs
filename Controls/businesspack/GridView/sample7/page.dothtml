@@ -1,34 +1,36 @@
 <bp:GridView DataSource="{value: Customers}"
-             InlineInsertMode="SingleRow"
-             InlineInsertRowPlacement="Bottom">
+             AllowInlineInsert="true"
+             InsertRowPlacement="Bottom">
     <Columns>
         <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="ID"
                                AllowEditing="false" />
+
         <bp:GridViewTextColumn Value="{value: Name}"
                                HeaderText="Name" />
-        <bp:GridViewTemplateColumn HeaderText="Birthdate">
+
+        <bp:GridViewDateTimeColumn Value="{value: BirthDate}"
+                                   HeaderText="Birthdate"
+                                   FormatString="dd.MM.yyyy"/>
+
+        <bp:GridViewTemplateColumn HeaderText="Orders">
             <ContentTemplate>
-                <dot:Literal Text="{value: BirthDate}"
-                             FormatString="dd.MM.yyyy" />
+                <dot:Literal Text="{value: Orders}" />
             </ContentTemplate>
-            <InsertTemplate>
-                <bp:DateTimePicker SelectedDateTime="{value: BirthDate}"
-                                   FormatString="dd.MM.yyyy"
-                                   Mode="Date" />
-            </InsertTemplate>
         </bp:GridViewTemplateColumn>
-        <bp:GridViewTextColumn Value="{value: Orders}" />
+
     </Columns>
 </bp:GridView>
 
 <br />
-<bp:Button Text="Add"
+<bp:Button Text="Add row"
            Click="{command: InsertNewCustomer()}"
            Visible="{value: !IsInserting}" />
 <bp:Button Text="Save"
+           Type="Success"
            Click="{command: SaveNewCustomer()}"
            Visible="{value: IsInserting}" />
 <bp:Button Text="Cancel"
+           Type="Danger"
            Click="{command: CancelInsertNewCustomer()}"
            Visible="{value: IsInserting}" />

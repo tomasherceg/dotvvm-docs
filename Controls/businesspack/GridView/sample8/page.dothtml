@@ -3,9 +3,11 @@
     <Columns>
         <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="Order ID" />
+
         <bp:GridViewComboBoxColumn Value="{value: DeliveryType}"
                                    DataSource="{value: DeliveryTypes}"
                                    HeaderText="Delivery type" />
+
         <bp:GridViewTemplateColumn HeaderText="Date">
             <ContentTemplate>
                 <dot:Literal Text="{value: CreatedDate}"
@@ -17,6 +19,7 @@
                                    Mode="DateTime" />
             </EditTemplate>
         </bp:GridViewTemplateColumn>
+
         <bp:GridViewCheckBoxColumn Value="{value: IsPaid}"
                                    HeaderText="Is Paid?" />
         <bp:GridViewTemplateColumn>

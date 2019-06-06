@@ -10,6 +10,8 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample7
 {
     public class ViewModel : DotvvmViewModelBase
     {
+        public string NewCustomerName { get; set; }
+        public DateTime NewCustomerBirthday { get; set; } = DateTime.Now;
         public bool IsInserting { get; set; }
         public BusinessPackDataSet<Customer> Customers { get; set; }
 
@@ -42,6 +44,8 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample7
         {
             Customers.RowInsertOptions.InsertedRow = new Customer {
                 Id = Customers.Items.Max(c => c.Id) + 1,
+                Name = NewCustomerName,
+                BirthDate = NewCustomerBirthday,
                 Orders = 0
             };
             IsInserting = true;

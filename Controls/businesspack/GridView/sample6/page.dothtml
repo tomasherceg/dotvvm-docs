@@ -17,7 +17,7 @@
                                    Mode="Date" />
             </EditTemplate>
         </bp:GridViewTemplateColumn>
-        <bp:GridViewTextColumn Value="{value: Orders}" />
+        <bp:GridViewTextColumn HeaderText="Orders" Value="{value: Orders}" />
         <bp:GridViewTemplateColumn>
             <ContentTemplate>
                 <dot:Button Text="Edit" Click="{command: _parent.EditCustomer(_this)}"/>

@@ -8,5 +8,7 @@
             {{value: FileName}}
         </div>
     </dot:Repeater>
-    <bp:Button class="bp-select-files" Text="Upload" /> 
+    <div>
+        <bp:Button Text="Upload" Type="Primary" Click="{command: UploadFiles()}"/>
+    </div>
 </bp:FileUpload>
