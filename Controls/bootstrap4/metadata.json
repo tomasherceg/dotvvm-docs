@@ -5343,6 +5343,22 @@
         "IsBasicProperty": true
       },
       {
+        "Name": "RenderLabel",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
         "Name": "Visible",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "HtmlGenericControl",
@@ -12717,6 +12733,22 @@
         "IsBasicProperty": true
       },
       {
+        "Name": "RenderLabel",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "CheckBoxBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
         "Name": "Visible",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "HtmlGenericControl",
@@ -13728,24 +13760,24 @@
   {
     "Namespace": "DotVVM.Framework.Controls.Bootstrap4",
     "Name": "InputGroupLiteral",
-    "IsContentAllowed": false,
+    "IsContentAllowed": true,
     "DefaultContentPropertyName": null,
     "HasHtmlAttributesCollection": true,
     "Properties": [
       {
-        "Name": "FormatString",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "Literal",
+        "Name": "Text",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "InputGroupLiteral",
         "PropertyTypeNamespace": "System",
         "PropertyTypeName": "String",
         "IsBindingProperty": false,
         "MarkupOptions": {
-          "AllowBinding": false,
+          "AllowBinding": true,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
         },
-        "DefaultValue": "",
+        "DefaultValue": null,
         "IsBasicProperty": false
       },
       {
@@ -13765,22 +13797,6 @@
         "IsBasicProperty": true
       },
       {
-        "Name": "Text",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "Literal",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Object",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "",
-        "IsBasicProperty": false
-      },
-      {
         "Name": "ID",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "DotvvmControl",
@@ -13795,22 +13811,6 @@
         },
         "DefaultValue": null,
         "IsBasicProperty": true
-      },
-      {
-        "Name": "RenderSpanElement",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
-        "DeclaringTypeName": "Literal",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "Boolean",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": false,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": true,
-        "IsBasicProperty": false
       },
       {
         "Name": "DataContext",
@@ -13975,6 +13975,22 @@
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "RenderLabel",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false
@@ -19301,6 +19317,22 @@
         "IsBindingProperty": false,
         "MarkupOptions": {
           "AllowBinding": true,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": null,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "RenderLabel",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "RadioButtonBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Boolean?",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
           "AllowHardCodedValue": true,
           "MappingMode": 1,
           "Required": false

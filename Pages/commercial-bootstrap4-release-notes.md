@@ -1,4 +1,34 @@
 # Release notes
+## 2.3.0
+
+* **Package updates**
+    * Dotvvm upgraded to **2.3.0**
+
+* **Changes to existing controls**
+    * **CheckBox**
+        * Added *RenderLabel* property which allows user to set whether checkbox should render label.  
+        When not set than label will be rendered only if needed.
+    * **RadioButton**
+        * Added *RenderLabel* property which allows user to set whether checkbox should render label.  
+        When not set than label will be rendered only if needed.
+* **Other changes**
+    * Users can now specify their own IResource to be used as BoostrapJs, BootstrapCss and JQuery.  
+    [```Usage example```](https://www.dotvvm.com/docs/tutorials/commercial-bootstrap4-for-dotvvm/)
+    
+## 2.2.0
+
+* **Package updates**
+    * Dotvvm upgraded to **2.2.0**
+
+* **Bug fixes**
+    * BootstrapItemsControl     
+        *Base for most controls with DataSource*
+        * Data context is now correctly set for child controls.
+    * GridView
+        * All HTML attributes are now present on correct element when *MaximumScreenSizeBeforeScrollBarShows* is set to *None*
+    * other small bug fixes
+    
+
 
 ## 2.1.0
 ### First stable ( non-preview ) release.

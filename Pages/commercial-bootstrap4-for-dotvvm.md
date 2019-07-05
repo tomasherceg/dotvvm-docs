@@ -43,6 +43,25 @@ config.AddBootstrap4Configuration(new DotvvmBootstrapOptions()
 });
 ```
 
+Or specify your own IResources.
+```CSHARP
+            var options = new DotvvmBootstrapOptions()
+            {
+                BootstrapJsResource = new ScriptResource(new UrlResourceLocation("PATH TO CUSTOM BOOSTRAP.JS")),
+                BootstrapCssResource = new StylesheetResource(new UrlResourceLocation("PATH OT CUSTOM BOOSTRAP.CSS")),
+                JQueryResource = new ScriptResource(new UrlResourceLocation("PATH TO CUSTOM BOOSTRAP.JS")),
+                IncludeBootstrapResourcesInPage = true,
+                IncludeJQueryResourceInPage = true
+            };
+
+            //var options = DotvvmBootstrapOptions.CreateDefaultSettings();
+            //options.BootstrapJsResource = new ScriptResource(new UrlResourceLocation("PATH TO CUSTOM BOOSTRAP.JS"));
+
+
+            // bootstrap configuration
+            config.AddBootstrap4Configuration(options);
+```
+
 ### Is It OK?
 
 To verify that Bootstrap resources are included correctly, press F12 in your web browser. Verify that bootstrap.css or bootstrap.js is not loaded twice, and there are 
