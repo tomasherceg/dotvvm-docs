@@ -11,7 +11,10 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.ColorPicker.sample4
 
         public void ColorChanged()
         {
-            CssColor = Color.ToCssColor();
+            if( Color != null )
+            {
+                CssColor = Color.ToHexColor();
+            }
         }
     }
 }

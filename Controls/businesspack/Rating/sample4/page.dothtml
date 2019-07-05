@@ -1,5 +1,6 @@
 <bp:Rating Value="{value: Rating}"
-           MaxValue="5"
-           EmptyPointIconCssClass="empty"
-           HalfPointIconCssClass="half"
-           FullPointIconCssClass="full" />
+           MaxValue="5">
+    <PointIcon>
+        <bp:Icon Icon="Plus"></bp:Icon>
+    </PointIcon>
+</bp:Rating>

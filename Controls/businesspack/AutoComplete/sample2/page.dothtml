@@ -2,5 +2,7 @@
                  DataSource="{value: Countries}"
                  ItemTextBinding="{value: Name}"
                  Placeholder="Country">
-    <span>{{value: Id}}. {{value: Name}}</span>
+    <ItemTemplate>
+        <span>{{value: Id}}. {{value: Name}}</span>
+    </ItemTemplate>
 </bp:AutoComplete>

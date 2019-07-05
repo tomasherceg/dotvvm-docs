@@ -2,27 +2,27 @@
 <p>
     <bp:CheckBox CheckedItems="{value: Extra}" 
                   Changed="{command: UpdatePrice()}" 
-                  CheckedValue="{value: 0.5}" Text="Jalapeño" />
+                  CheckedValue="{value: 0.5}" Text="Jalapeño (0.5$)" />
     <br />
 
     <bp:CheckBox CheckedItems="{value: Extra}" 
                   Changed="{command: UpdatePrice()}" 
-                  CheckedValue="{value: 0.45}" Text="Egg" />
+                  CheckedValue="{value: 0.45}" Text="Egg (0.45$)" />
     <br />
 
     <bp:CheckBox CheckedItems="{value: Extra}" 
                   Changed="{command: UpdatePrice()}" 
-                  CheckedValue="{value: 0.75}" Text="Tuna" />
+                  CheckedValue="{value: 0.75}" Text="Tuna (0.75$)" />
     <br />
 
     <bp:CheckBox CheckedItems="{value: Extra}" 
                   Changed="{command: UpdatePrice()}" 
-                  CheckedValue="{value: 0.2}" Text="Garlic" />
+                  CheckedValue="{value: 0.2}" Text="Garlic (0.2$)" />
     <br />
 
     <bp:CheckBox CheckedItems="{value: Extra}" 
                   Changed="{command: UpdatePrice()}" 
-                  CheckedValue="{value: 0.8}" Text="Magic Mushrooms" />
+                  CheckedValue="{value: 0.8}" Text="Magic Mushrooms (0.8$)" />
 </p>
 
 <p>Total price: ${{value: Price}}</p>

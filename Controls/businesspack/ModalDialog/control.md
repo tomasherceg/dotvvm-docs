@@ -1,4 +1,4 @@
-Creates a `div` element styled as a modal dialog that can be shown or hidden any time. 
+Creates a `div` element styled as a modal dialog that can be shown or hidden at any time. 
 
 When the dialog is displayed, the content behind it is covered by a semi-transparent backdrop and thus cannot be interacted with.
 

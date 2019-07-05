@@ -1,0 +1,4 @@
+<bp:TimePicker SelectedTime="{value: SelectedTime}"
+               ShowInline />
+
+<p>Selected time: <dot:Literal Text="{value: SelectedTime}" FormatString="g" /></p>

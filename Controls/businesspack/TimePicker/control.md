@@ -1,0 +1,1 @@
+Renders a text field that allows the user to enter or select time.

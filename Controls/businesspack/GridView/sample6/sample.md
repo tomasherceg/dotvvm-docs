@@ -1,9 +1,9 @@
 ## Sample 6: Inline Editing
 
-Enum `InlineEditMode` determines, if it will be enabled the user can edit rows directly in the grid. To enable editing set the value to `SingleRow`.
+Enum `InlineEditMode` specifies whether the user will be able to edit rows directly in the grid. To enable editing set the value to `SingleRow`.
 
-Every column has the `AllowEditing` property which specifies whether the column can be edited or not.
+Every column has the `AllowEditing` property which specifies whether the particular column can be edited or not.
 
 The columns also have the `EditTemplate` property which can be used to define a custom edit template for the cell.
 
-The object that is currently being edited, is identified by the `Customers.RowEditOptions.EditRowId` property which contains the primary key of the edited object. The name of the property which is a primary key, is stored in `Customers.RowEditOptions.PrimaryKeyPropertyName`.
+The object that is currently being edited, is found by the `Customers.RowEditOptions.EditRowId` property which contains its primary key. The name of the property that is the primary key is set in `Customers.RowEditOptions.PrimaryKeyPropertyName`.

@@ -1,8 +1,4 @@
 <bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
-                   Mode="Date" />
+                   Restrictions="{value: Restrictions}" />
 
-<bp:DateTimePicker SelectedDateTime="{value: SelectedTime}"
-                   Mode="Time" />
-
-<bp:DateTimePicker SelectedDateTime="{value: SelectedDateTime}"
-                   Mode="DateTime" />
+<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

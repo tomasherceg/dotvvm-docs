@@ -1,5 +1,0 @@
-﻿@viewModel Dotvvm.Samples.Alert.sample5.ViewModel, DotvvmWeb
-
-<bp:Alert Text="{value: AlertText}" Type="{value: AlertType}" />
-
-<bp:Button Text="Do Something" Click="{command: DoSomething()}" />

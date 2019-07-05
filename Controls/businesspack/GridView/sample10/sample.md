@@ -1,8 +1,6 @@
 ## Sample 10: User Settings
 
-The `AllowReorderColumns` property can be used to let the user reorder the columns.
-
-The `UserSettings` property allows to persist the customizations that the user has made to the grid control. This property expects an object of type `GridViewUserSettings` which stores the order, widths and visibility of the individual columns.
+The `UserSettings` property allows to persist the customizations that the user has made to the grid control. This property expects an object of type `GridViewUserSettings` which stores the widths and visibility of the individual columns.
 
 This object can be JSON-serialized easily and stored in the database, file system or any other data store. When the user customizes anything in the grid, the changes are stored in this object.
 

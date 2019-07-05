@@ -1,9 +1,14 @@
 <bp:TreeView DataSource="{value: Files}"
-             ExpandIconCssClass="fas fa-caret-right"
-             CollapseIconCssClass="fas fa-caret-up"
              SelectedValues="{value: SelectedFiles}"
              ItemKeyBinding="{value: Name}"
              ItemHasChildrenBinding="{value: HasItems}"
              ItemChildrenBinding="{value: Items}">
-    <p>{{value: Name}}</p>
-</bp:TreeView>
+    <ExpandIcon>
+        <bp:Icon Icon="ChevronDown"></bp:Icon>
+    </ExpandIcon>
+    <CollapseIcon>
+        <bp:Icon Icon="ChevronUp"></bp:Icon>
+    </CollapseIcon>
+
+    <span>{{value: Name}}</span>
+</bp:TreeView>CS

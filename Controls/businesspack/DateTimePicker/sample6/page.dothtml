@@ -1,4 +1,7 @@
 <bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
-                   ClosePopupOnSelectionComplete="false" />
+                   HourText="Hours"
+                   MinuteText="Minutes"
+                   SecondText="Seconds"
+                   AmPmDesignatorText="AM/PM"/>
 
 <p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

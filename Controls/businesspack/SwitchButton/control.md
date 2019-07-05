@@ -1,0 +1,1 @@
+ Renders the button that can switch states like the [CheckBox](/docs/controls/businesspack/CheckBox/{branch})

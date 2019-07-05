@@ -1,6 +1,16 @@
 <bp:ListView DataSource="{value: Fruit}"
              SelectedValues="{value: SelectedFruit}">
     <RowTemplate>
-        <p>{{value: _this}}</p>
+        <span>{{value: _this}}</span>
     </RowTemplate>
 </bp:ListView>
+
+<p>
+    Selected items: 
+
+    <dot:Repeater DataSource="{value: SelectedFruit}" RenderWrapperTag="false" >
+        <ItemTemplate>
+            <span>{{value: _this}},</span>
+        </ItemTemplate>
+    </dot:Repeater>
+</p>

@@ -1,3 +1,5 @@
-## Sample 2: Selection Bounds
+## Sample 2: Views
 
-You can use the `MinDate` and `MaxDate` properties to specify the minimum and maximum values for the selection.
+You can use the `View` property to determine which of the calendars `Month`, `Year` or `Decade` will be displayed.
+
+The default value is `Month`.

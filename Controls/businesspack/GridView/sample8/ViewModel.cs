@@ -47,5 +47,6 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.GridView.sample8
             }
             return numbers.AsQueryable();
         }
+
     }
 }

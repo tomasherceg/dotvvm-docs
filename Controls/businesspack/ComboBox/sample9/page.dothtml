@@ -1,5 +1,10 @@
 <bp:ComboBox DataSource="{value: Countries}"
              SelectedValue="{value: SelectedCountry}"
-             ToggleIconCssClass="toggle"
-             UnselectIconCssClass="unselect"
-             Placeholder="Please select Country" />
+             Placeholder="Please select Country" >
+    <ToggleIcon>
+        <bp:Icon Icon="ChevronDown"></bp:Icon>
+    </ToggleIcon>
+    <UnselectIcon>
+        <bp:Icon Icon="Close"></bp:Icon>
+    </UnselectIcon>
+</bp:ComboBox>

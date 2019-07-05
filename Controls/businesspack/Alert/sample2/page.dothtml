@@ -5,8 +5,11 @@
 
 <bp:Alert Type="Danger"
           AllowDismiss="true"
-          DismissIconCssClass="fa fa-delete"
-          Text="This alert can be dismissed and uses a custom dismiss icon." />
+          Text="This alert can be dismissed and uses a custom dismiss icon.">
+    <DismissIcon>
+        <bp:Icon Icon="Trash" />
+    </DismissIcon>
+</bp:Alert>
           
 <bp:Alert Type="Info"
           AutoHideTimeout="5"

@@ -1,6 +1,7 @@
 <bp:Window IsDisplayed="{value: IsWindowDisplayed}"
            WindowState="{value: State}">
     <p>Display window content here.</p>
+    <p>Current state is: {{value: State}}</p>
 </bp:Window>
 
 <bp:Button Text="Display Window"

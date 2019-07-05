@@ -1,5 +1,22 @@
-<bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
-                   FormatString="dd MMM yyyy"
-                   Mode="Date" />
+<bp:DateTimePicker SelectedDateTime="{value: SelectedDate}">
+    <ToggleIcon>
+        <bp:Icon Icon="Calendar"></bp:Icon>
+    </ToggleIcon>
+    <UnselectIcon>
+        <bp:Icon Icon="Close"></bp:Icon>
+    </UnselectIcon>
+    <PrevDateIcon>
+        <bp:Icon Icon="ChevronLeft"></bp:Icon>
+    </PrevDateIcon>
+    <NextDateIcon>
+        <bp:Icon Icon="ChevronRight"></bp:Icon>
+    </NextDateIcon>
+    <PrevTimeIcon>
+        <bp:Icon Icon="ChevronUp"></bp:Icon>
+    </PrevTimeIcon>
+    <NextTimeIcon>
+        <bp:Icon Icon="ChevronDown"></bp:Icon>
+    </NextTimeIcon>
+</bp:DateTimePicker>
 
 <p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

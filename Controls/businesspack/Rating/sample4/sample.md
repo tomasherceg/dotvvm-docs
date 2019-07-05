@@ -1,7 +1,7 @@
 ## Sample 4: Custom Icons
 
-The icons in the control can be customized using the following properties:
+The icon used by the control can be customized using the following inner elements:
 
-* `EmptyPointIconCssClass` represents an icon for a start that is not selected. The default value is `fa fa-star` (FontAwesome).
-* `HalfPointIconCssClass` represents an icon for a start that is partially selected. The default value is `fa fa-star-half-empty` (FontAwesome).
-* `FullPointIconCssClass` represents an icon for a start that is fully selected. The default value is `fa fa-star0` (FontAwesome).
+* `PointIcon` represents an icon that user can select. The default is `Star` icon.
+
+See the [Icon](/docs/controls/businesspack/Icon/{branch}) documentation to find about using other icon packs.

@@ -1,5 +1,5 @@
 <bp:GridView DataSource="{value: Customers}"
-             ShowHeaderWhenNoData="true">
+             ShowTableWhenNoData="true">
     <Columns>
         <bp:GridViewTextColumn Value="{value: Id}"
                                HeaderText="Customer ID" />

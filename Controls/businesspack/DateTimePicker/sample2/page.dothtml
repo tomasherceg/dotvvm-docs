@@ -1,5 +1,5 @@
 <bp:DateTimePicker SelectedDateTime="{value: SelectedDate}"
-                   MinDate="{value: MinimumDate}"
-                   MaxDate="{value: MaximumDate}" />
+                   MinDateTime="{value: MinimumDate}"
+                   MaxDateTime="{value: MaximumDate}" />
 
 <p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

@@ -1,11 +1,3 @@
-<bp:Alert Type="Warning"
-          IsDisplayed="{value: IsDisplayed}"
-          AllowDismiss="true"
-          Text="Warning" />
+﻿<bp:Alert Text="{value: AlertText}" Type="{value: AlertType}" />
 
-<bp:Alert Type="Danger"
-          AllowDismiss="true"
-          Text="{value: ErrorMessage}" />
-
-<bp:CheckBox Text="Is warning displayed"
-             Checked="{value: IsDisplayed}" />
+<bp:Button Text="Do Something" Click="{command: DoSomething()}" />

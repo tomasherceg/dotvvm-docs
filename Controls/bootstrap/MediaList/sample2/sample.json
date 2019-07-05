@@ -6,7 +6,11 @@
       "replacements": [
         {
           "pattern": "(https?://)",
-          "replacement": "../../?url=\\1"
+          "replacement": "/bootstrap-2.0/?url=\\1"
+        },
+        {
+          "pattern": "(/Images)",
+          "replacement": "/bootstrap-2.0/Images"
         }
       ]
     }

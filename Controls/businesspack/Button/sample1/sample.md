@@ -1,5 +1,5 @@
 ## Sample 1: Basic Usage
 
-The Button control has a `Text` property that holds the text displayed in the button.
+The `Button` control has the `Text` property that specifies the text displayed on the button.
 
-In the `Click` event you can specify which method will be called in the viewmodel.
+Using the `Click` event, you can specify which method in the viewmodel will be called when the button is clicked.

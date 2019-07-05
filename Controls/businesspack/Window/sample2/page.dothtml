@@ -9,9 +9,13 @@
            Click="{command: IsWindow1Displayed = true}" />
 
 <%-- Custom content with header and footer template --%>
-<bp:Window IsDisplayed="{value: IsWindow2Displayed}">
+<bp:Window IsDisplayed="{value: IsWindow2Displayed}" 
+           CloseOnOutsideClick="true">
     <HeaderTemplate>
-        <h3>This is header</h3>
+        <span>This is header</span>
+        <bp:CloseDialogButton >
+            Close
+        </bp:CloseDialogButton>
     </HeaderTemplate>
     <ContentTemplate>
         <p>Display window content here.</p>

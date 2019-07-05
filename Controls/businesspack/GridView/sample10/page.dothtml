@@ -1,6 +1,5 @@
 <bp:GridView DataSource="{value: Customers}"
-             UserSettings="{value: UserSettings}"
-             AllowReorderColumns="true">
+             UserSettings="{value: UserSettings}">
     <Columns>
         <bp:GridViewTextColumn ColumnName="CustomerName"
                                Value="{value: Name}"

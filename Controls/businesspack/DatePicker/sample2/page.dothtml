@@ -1,0 +1,5 @@
+<bp:DatePicker SelectedDate="{value: SelectedDate}"
+               MinDate="{value: MinimumDate}"
+               MaxDate="{value: MaximumDate}" />
+
+<p>Selected date: <dot:Literal Text="{value: SelectedDate}" FormatString="g" /></p>

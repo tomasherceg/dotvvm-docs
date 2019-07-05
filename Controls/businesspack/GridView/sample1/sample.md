@@ -1,6 +1,6 @@
 ## Sample 1: Basic Usage
 
-The `DataSource` property expects `BusinessPackDataSet` object and defines the data for the control.
+The `DataSource` property expects `BusinessPackDataSet<T>` object which contains all necessary information about the data presented by the control.
 
 The `Columns` collection specifies all columns in the control.
 

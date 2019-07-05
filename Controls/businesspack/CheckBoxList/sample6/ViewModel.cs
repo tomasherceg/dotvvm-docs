@@ -10,7 +10,5 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.CheckBoxList.sample6
             new Country { Id = 2, Name = "Slovakia" },
             new Country { Id = 3, Name = "United States" }
         };
-
-        public List<Country> SelectedCountries { get; set; } = new List<Country>();
     }
 }

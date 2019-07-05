@@ -1,16 +1,8 @@
 <bp:ModalDialog IsDisplayed="{value: IsCustomSizeModalVisible}"
-                Width="800px"
-                Height="300px">
+                WidthRequest="800"
+                HeightRequest="300">
     <p>I have custom size.</p>
 </bp:ModalDialog>
+
 <bp:Button Text="Show Modal Dialog with custom size"
            Click="{command: IsCustomSizeModalVisible = true}" />
-
-<bp:ModalDialog IsDisplayed="{value: IsResizableModalVisible}"
-                AllowResize="true"
-                MinWidth="200"
-                MinHeight="100">
-    <p>I can be resized.</p>
-</bp:ModalDialog>
-<bp:Button Text="Show resizable Modal Dialog"
-           Click="{command: IsResizableModalVisible = true}" />

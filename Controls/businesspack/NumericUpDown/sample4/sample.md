@@ -1,7 +1,9 @@
 ## Sample 4: Customizing Icons
 
-The icons used by the control can be customized using the following properties:
+The icons used by the control can be customized using the following inner elements:
 
-* `DecreaseIconCssClass` represents an icon that allows to decrease the value. The default value is `fa fa-minus` (FontAwesome).
+* `IncreaseIcon` represents an icon that allows to increase the value. The default is `Plus` icon.
 
-* `IncreaseIconCssClass` represents an icon that allows to increase the value. The default value is `fa fa-plus` (FontAwesome).
+* `DecreaseIcon` represents an icon that allows to decrease the value. The default is `Minus` icon.
+
+See the [Icon](/docs/controls/businesspack/Icon/{branch}) documentation to find about using other icon packs.
