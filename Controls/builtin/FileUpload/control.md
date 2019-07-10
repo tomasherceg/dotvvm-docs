@@ -52,7 +52,7 @@ You can then use the `GetFile` method to retrieve the `Stream` to access the fil
 ```CSHARP
 foreach (var file in UploadedFiles.Files)
 {
-  if (file.Allowed)
+  if (file.IsAllowed)
   {
     // get the stream of the uploaded file and do whatever you need to do
     var stream = storage.GetFile(file.FileId);
