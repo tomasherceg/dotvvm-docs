@@ -4,7 +4,7 @@ Imagine you have a button in your page which removes some data. In many cases, y
 This is a situation when you shall use a feature called **postback handler**.
 
 In general, the postback handler is a mechanism which allows to intercept postbacks on any control and execute your own custom logic before the postback
-is actually sent to the server. It is even possible to cancel the postback at all.
+is actually sent to the server. It is even possible to cancel the postback entirely.
 
 You can attach a postback handler to any control using the `PostBack.Handlers` property. You have to declare it as an inner element, because it is a collection of objects. 
 
