@@ -18,7 +18,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.FileUpload.sample3
 
         public void Process()
         {
-            var folderPath = GetFolderdPath();
+            var folderPath = GetFolderPath();
 
             // save all files to disk
             foreach (var file in Upload.Files)
@@ -32,7 +32,7 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.FileUpload.sample3
             Upload.Clear();
         }
 
-        private string GetFolderdPath()
+        private string GetFolderPath()
         {
             var folderPath = Path.Combine(Context.Configuration.ApplicationPhysicalPath, "MyFiles");
 
