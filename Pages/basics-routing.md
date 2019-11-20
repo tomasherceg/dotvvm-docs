@@ -62,6 +62,13 @@ else
 }
 ```
 
+Alternatively we can instruct DotVVM to inject route parameter value directly into viewmodel property by using `FromRoute` or `FromQuery` attribute.
+
+```CSHARP
+ [FromRoute("Id")]
+ public int CustomerId { get; set; }
+```
+
 We can also make the parameter optional (without the default value):
 
 ```CSHARP
