@@ -61,6 +61,7 @@
     <DocPageMenuItem RouteName="application-insights" PageName="Using Application Insights" />
     <DocPageMenuItem RouteName="electron" PageName="Electron integration" />
     <DocPageMenuItem RouteName="miniprofiler" PageName="Using MiniProfiler" />
+    <DocPageMenuItem RouteName="custom-tracing" PageName="Custom tracing" />
     <DocPageMenuItem RouteName="ioc-di-container" PageName="IoC/DI Containers" />
     <DocPageMenuItem RouteName="ioc-di-container-owin" PageName="IoC/DI Containers (OWIN)" />
     <DocPageMenuItem RouteName="ioc-di-container-aspnetcore" PageName="IoC/DI Containers (ASP.NET Core)" />
