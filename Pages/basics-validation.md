@@ -32,7 +32,7 @@ In order to support complex scenarios, the viewmodel can implement the `IValidat
 ```CSHARP
 using DotVVM.Framework.ViewModel.Validation;
 
-public class AppointmentData : DotvvmViewModelBase, IValidatableObject
+public class AppointmentData : IValidatableObject
 {
     [Required]
     public DateTime BeginDate { get; set; }
@@ -45,7 +45,7 @@ public class AppointmentData : DotvvmViewModelBase, IValidatableObject
     {
         if (BeginDate >= EndDate)
         {
-            yield return this.CreateValidationResult(t => t.BeginDate, "The begin date of the appointment must be lower than the end date.");
+            yield return validationContext.CreateValidationResult<AppointmentData>("The begin date of the appointment must be lower than the end date.", t => t.BeginDate, t => t.EndDate);
         }
     }
 }
