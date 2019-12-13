@@ -1,6 +1,6 @@
 ﻿using DotVVM.Framework.ViewModel;
 
-namespace DotvvmWeb.Views.Docs.Controls.bootstrap.Popover.sample5
+namespace DotvvmWeb.Views.Docs.Controls.bootstrap.Tooltip.sample4
 {
     public class ViewModel : DotvvmViewModelBase
     {
