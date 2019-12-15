@@ -18575,6 +18575,22 @@
         "IsBasicProperty": false
       },
       {
+        "Name": "AutoCloseMonitoringDepth",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ConnectedElementDecoratorBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 2,
+        "IsBasicProperty": false
+      },
+      {
         "Name": "InnerText",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls",
         "DeclaringTypeName": "HtmlGenericControl",
@@ -22614,6 +22630,22 @@
           "Required": false
         },
         "DefaultValue": true,
+        "IsBasicProperty": false
+      },
+      {
+        "Name": "AutoCloseMonitoringDepth",
+        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap4",
+        "DeclaringTypeName": "ConnectedElementDecoratorBase",
+        "PropertyTypeNamespace": "System",
+        "PropertyTypeName": "Int32",
+        "IsBindingProperty": false,
+        "MarkupOptions": {
+          "AllowBinding": false,
+          "AllowHardCodedValue": true,
+          "MappingMode": 1,
+          "Required": false
+        },
+        "DefaultValue": 2,
         "IsBasicProperty": false
       },
       {

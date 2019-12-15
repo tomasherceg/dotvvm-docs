@@ -1,0 +1,13 @@
+﻿<dot:Button Click="{command: DeleteItems()}" Text="Delete items" />
+
+<dot:Repeater DataSource="{value: Tooltips}" RenderWrapperTag="true" >
+    <ItemTemplate>
+        <div>
+            <div>
+                <bs:Tooltip Title="{value: Title}" IsDisplayed="{value: true}" AutoCloseMonitoringDepth="3" >
+                    <a href="#">Link</a>
+                </bs:Tooltip>
+            </div>
+        </div>
+    </ItemTemplate>
+</dot:Repeater>

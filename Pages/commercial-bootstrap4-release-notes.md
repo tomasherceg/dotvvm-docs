@@ -1,4 +1,13 @@
 # Release notes
+## 2.3.1
+
+* **Package updates**
+    * Dotvvm upgraded to **2.3.1**
+
+* **Changes to existing controls**
+    * **Tooltip** and **Popover**
+        * Added *AutoCloseMonitoringDepth* property which allows to set how many levels of ancestors would be monitored for element removal. 
+        Detecting removal of **Tooltip** | **Popover** source element or its parents would close **Tooltip** | **Popover**.
 ## 2.3.0
 
 * **Package updates**
