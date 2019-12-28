@@ -1,5 +1,10 @@
 # Release notes
 
+## v2.4.172.0
+*Compatible with VS 2019 v16.4.2+*
+* Fixed IntelliSense for DotVVM 2.4.0
+* Stability improvements 
+
 ## v2.0.117.0
 *Compatible with VS 2017 v15.8.0+*
 * Fixed DotVVM configuration deserialization problems
