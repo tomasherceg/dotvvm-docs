@@ -24,7 +24,7 @@ DotVVM can be used to build new web applications, or to modernize legacy ASP.NET
 
 ## Examples
 
-The ideal projects for DotVVM are various admin dashboards, intranet portals, CRM or ERP web applications. These applicatios typically contain data grids, forms with many field, complex validation and business logic, pages with wizards or modal dialogs. 
+The ideal projects for DotVVM are various admin dashboards, intranet portals, CRM or ERP web applications. These applications typically contain data grids, forms with many field, complex validation and business logic, pages with wizards or modal dialogs. 
 
 DotVVM can also help in e-commerce sites, especially in the back-office part. Since DotVVM can be used together with other ASP.NET frameworks in the same application, the public facing part of the website may be implemented in ASP.NET MVC while the admin portal is made in DotVVM. 
 
