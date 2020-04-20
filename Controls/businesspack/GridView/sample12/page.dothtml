@@ -1,0 +1,23 @@
+<bp:GridView DataSource="{value: Customers}"
+             FilterPlacement="SeparateHeaderRow">
+    <Columns>
+        <bp:GridViewTextColumn Value="{value: Name}"
+                               HeaderText="Name"
+                               AllowFiltering />
+        <bp:GridViewTextColumn Value="{value: Orders}"
+                               HeaderText="Orders"
+                               AllowFiltering>
+            <FilterTemplate>
+                <bp:TextBox Text="{value: _root.OrderFilter}"
+                            Changed="{command: _root.OnOrderFilterChanged()}" />
+            </FilterTemplate>
+        </bp:GridViewTextColumn>
+        <bp:GridViewTextColumn Value="{value: Id}"
+                               HeaderText="Customer ID"
+                               AllowFiltering />
+        <bp:GridViewDateTimeColumn Value="{value: BirthDate}"
+                                   FormatString="dd.MM.yyyy"
+                                   HeaderText="Birthdate"
+                                   AllowFiltering="false" />
+    </Columns>
+</bp:GridView>
