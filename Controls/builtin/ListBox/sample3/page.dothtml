@@ -1,4 +1,6 @@
-<dot:ListBox DataSource="{value: Fruits}" SelectedValue="{value: SelectedFruitId}" 
-             ValueMember="Id" DisplayMember="Name" />
+<dot:ListBox DataSource="{value: Fruits}" 
+             SelectedValue="{value: SelectedFruitId}" 
+             ItemValueBinding="{value: Id}" 
+             ItemTextBinding="{value: Name}" />
 
 {{value: SelectedFruitId}}

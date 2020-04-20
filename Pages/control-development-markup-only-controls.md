@@ -32,7 +32,12 @@ The `.dotcontrol` file can look like this:
     ...
     <tr>
         <td>Country: </td>
-        <td><dot:ComboBox DataSource="{value: Countries}" SelectedValue="{value: CountryId}" DisplayMember="Name" ValueMember="Id" /></td>
+        <td>
+        <dot:ComboBox DataSource="{value: Countries}" 
+                      SelectedValue="{value: CountryId}" 
+                      ItemTextBinding="{value: Name}" 
+                      ItemValueBinding="{value: Id}" />
+        </td>
     </tr>
 </table>
 ```
@@ -54,7 +59,12 @@ Markup controls are wrapped inside a `div` tag by default. You can specify the t
 ...
 <tr>
     <td>Country: </td>
-    <td><dot:ComboBox DataSource="{value: Countries}" SelectedValue="{value: CountryId}" DisplayMember="Name" ValueMember="Id" /></td>
+    <td>
+        <dot:ComboBox DataSource="{value: Countries}" 
+                      SelectedValue="{value: CountryId}" 
+                      ItemTextBinding="{value: Name}" 
+                      ItemValueBinding="{value: Id}" />
+    </td>
 </tr>
 ```
 
