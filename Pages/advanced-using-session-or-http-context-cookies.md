@@ -114,14 +114,12 @@ public class SystemWebCookieManager : ICookieManager
 }
 ```
 
-The `SystemWebCookieManager` can be registered in `Startup.cs` using the following code:
+The `SystemWebCookieManager` can be registered in `DotvvmStartup.cs` using the `ConfigureServices` method:
 
 ```
-var dotvvmConfiguration = app.UseDotVVM<DotvvmStartup>(applicationPhysicalPath, debug: IsInDebugMode(), options: options =>
+public void ConfigureServices(IDotvvmServiceCollection services)
 {
     ...
-
-    // replace the default cookie manager
-    options.Services.AddSingleton<ICookieManager, SystemWebCookieManager>();
-});
+    services.Services.AddSingleton<ICookieManager, SystemWebCookieManager>();
+}
 ```
