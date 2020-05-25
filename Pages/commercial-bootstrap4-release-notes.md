@@ -1,4 +1,14 @@
 # Release notes
+## 2.4.0.10
+* **New controls**
+    * [```Icon```](https://www.dotvvm.com/docs/controls/bootstrap4/Icon)
+    
+* **Changes to existing controls**
+    * **Toast**
+        * Fixed bug in *OnShown* and *OnHide* events.
+        * *OnShown* and *OnHide* events are no longer called immediately after page load. Those events are now called only after client side change.
+* **Other changes**
+   * General bug fixes in Custom CSS feature.
 ## 2.3.1
 
 * **Package updates**
