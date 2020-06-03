@@ -1,10 +1,14 @@
 <h3>Match inventors and inventions</h3>
 
-<dot:ListBox DataSource="{value: Inventors}" SelectedValue="{value: SelectedInventor}"
-       DisplayMember="Name" ValueMember="Id"/>
+<dot:ListBox DataSource="{value: Inventors}"
+             SelectedValue="{value: SelectedInventor}"
+             ItemValueBinding="{value: Id}"
+             ItemTextBinding="{value: Name}" />
 
-<dot:ListBox DataSource="{value: Inventions}" SelectedValue="{value: SelectedInvention}" />
+<dot:ListBox DataSource="{value: Inventions}"
+             SelectedValue="{value: SelectedInvention}" />
 
-<dot:Button Text="Check Answers" Click="{command: CheckAnswer()}" />
+<dot:Button Text="Check Answers"
+            Click="{command: CheckAnswer()}" />
 
 <p>Points: {{value: Points}}</p>

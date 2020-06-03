@@ -1,9 +1,8 @@
-<bp:ComboBox Text="{value: Text}"
-             DataSource="{value: Countries}"
+<bp:ComboBox DataSource="{value: Countries}"
              SelectedValue="{value: SelectedCountry}"
              ItemTextBinding="{value: Name}"
              ItemKeyBinding="{value: Name}"
-             LoadItems="{staticCommand: LoadCountries(Text)}"
+             LoadItems="{staticCommand: LoadCountries(text)}"
              Placeholder="Please select Country" />
 
 <p>Selected Country: {{value: SelectedCountry.Name}}</p>

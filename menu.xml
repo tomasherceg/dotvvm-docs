@@ -61,6 +61,7 @@
     <DocPageMenuItem RouteName="application-insights" PageName="Using Application Insights" />
     <DocPageMenuItem RouteName="electron" PageName="Electron integration" />
     <DocPageMenuItem RouteName="miniprofiler" PageName="Using MiniProfiler" />
+    <DocPageMenuItem RouteName="custom-tracing" PageName="Custom tracing" />
     <DocPageMenuItem RouteName="ioc-di-container" PageName="IoC/DI Containers" />
     <DocPageMenuItem RouteName="ioc-di-container-owin" PageName="IoC/DI Containers (OWIN)" />
     <DocPageMenuItem RouteName="ioc-di-container-aspnetcore" PageName="IoC/DI Containers (ASP.NET Core)" />
@@ -99,6 +100,7 @@
     </DocPageMenuItem>
     <DocPageMenuItem RouteName="bootstrap4" PageName="Bootstrap 4">
       <DocPageMenuItem RouteName="for-dotvvm" PageName="Installing Bootstrap 4 For DotVVM" />
+      <DocPageMenuItem RouteName="for-customcss" PageName="Bootstrap4 Custom CSS" />
       <DocPageMenuItem RouteName="release-notes" PageName="Release Notes" />
     </DocPageMenuItem>
     <DocPageMenuItem RouteName="business-pack" PageName="BusinessPack">

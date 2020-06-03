@@ -39,15 +39,15 @@ namespace DotvvmWeb.Views.Docs.Controls.builtin.GridView.Sample6
             Customers.RowEditOptions.EditRowId = null;
 
             // uncomment this line - it's here only for the sample to work without database
-            //Customers.RequestRefresh(forceRefresh: true);
+            //Customers.RequestRefresh();
         }
 
         public void CancelEdit()
         {
             Customers.RowEditOptions.EditRowId = null;
 
-            // uncomment this line - it's here only for the sample to work without database
-            //Customers.RequestRefresh(forceRefresh: true);
+            // Refresh GridView items
+            Customers.RequestRefresh();
         }
     }
 

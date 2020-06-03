@@ -6,14 +6,12 @@ namespace DotvvmWeb.Views.Docs.Controls.businesspack.ComboBox.sample7
 {
     public class ViewModel : DotvvmViewModelBase
     {
-        public string Text { get; set; }
-
         public Country SelectedCountry { get; set; }
 
         public List<Country> Countries { get; set; } = new List<Country>();
 
         [AllowStaticCommand]
-        public IEnumerable<Country> LoadCountries(string searchText)
+        public IEnumerable<Country> LoadCountries(string text)
         {
             yield return new Country
             {

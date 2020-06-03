@@ -1,4 +1,23 @@
 # Release notes
+## 2.4.0.10
+* **New controls**
+    * [```Icon```](https://www.dotvvm.com/docs/controls/bootstrap4/Icon)
+    
+* **Changes to existing controls**
+    * **Toast**
+        * Fixed bug in *OnShown* and *OnHide* events.
+        * *OnShown* and *OnHide* events are no longer called immediately after page load. Those events are now called only after client side change.
+* **Other changes**
+   * General bug fixes in Custom CSS feature.
+## 2.3.1
+
+* **Package updates**
+    * Dotvvm upgraded to **2.3.1**
+
+* **Changes to existing controls**
+    * **Tooltip** and **Popover**
+        * Added *AutoCloseMonitoringDepth* property which allows to set how many levels of ancestors would be monitored for element removal. 
+        Detecting removal of **Tooltip** | **Popover** source element or its parents would close **Tooltip** | **Popover**.
 ## 2.3.0
 
 * **Package updates**
