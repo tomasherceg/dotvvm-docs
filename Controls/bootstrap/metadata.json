@@ -3969,22 +3969,6 @@
     "HasHtmlAttributesCollection": true,
     "Properties": [
       {
-        "Name": "DisplayMember",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
-        "DeclaringTypeName": "ComboBoxGroup",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "",
-        "IsBasicProperty": false
-      },
-      {
         "Name": "DataSource",
         "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
         "DeclaringTypeName": "ComboBoxGroup",
@@ -3998,22 +3982,6 @@
           "Required": false
         },
         "DefaultValue": null,
-        "IsBasicProperty": false
-      },
-      {
-        "Name": "ValueMember",
-        "DeclaringTypeNamespace": "DotVVM.Framework.Controls.Bootstrap",
-        "DeclaringTypeName": "ComboBoxGroup",
-        "PropertyTypeNamespace": "System",
-        "PropertyTypeName": "String",
-        "IsBindingProperty": false,
-        "MarkupOptions": {
-          "AllowBinding": true,
-          "AllowHardCodedValue": true,
-          "MappingMode": 1,
-          "Required": false
-        },
-        "DefaultValue": "",
         "IsBasicProperty": false
       },
       {
