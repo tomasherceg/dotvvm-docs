@@ -1,0 +1,37 @@
+<bp:GridView DataSource="{value: Customers}"
+             FilterPlacement="SeparateHeaderRow">
+    <!-- This will only allow Starts with and Ends with operators on all columns with string values in them. -->
+    <StringOperators>
+        <op:StartsWithOperator DisplayName="Starts with" />
+        <op:EndsWithOperator DisplayName="Ends with" />
+    </StringOperators>
+    <!-- This will only allow filtering by true value on all columns with boolean values. -->
+    <BooleanOperators>
+        <op:TrueOperator DisplayName="Is true" />
+    </BooleanOperators>
+    <Columns>
+        <!-- This column will use filtering operators specified in the GridView StringOperators collection -->
+        <bp:GridViewTextColumn Value="{value: Name}"
+                               HeaderText="Name"
+                               AllowFiltering />
+        
+        <!-- This column will use filtering operators specified in its own StringOperators collection  -->
+        <bp:GridViewTextColumn Value="{value: Name}"
+                               HeaderText="Name with only Contains operator"
+                               AllowFiltering>
+            <StringOperators>
+                <op:ContainsOperator DisplayName="Contains" />
+            </StringOperators>
+        </bp:GridViewTextColumn>
+
+        <!-- This columns will use default filtering operators from the NumberOperators collection  -->
+        <bp:GridViewTextColumn Value="{value: Orders}"
+                               HeaderText="Number of orders"
+                               AllowFiltering />
+
+        <!-- This column will use filtering operators specified in the GridView BooleanOperators collection -->
+        <bp:GridViewCheckBoxColumn Value="{value: HasPremiumSupport}"
+                                   HeaderText="Has premium support"
+                                   AllowFiltering  />
+    </Columns>
+</bp:GridView>
