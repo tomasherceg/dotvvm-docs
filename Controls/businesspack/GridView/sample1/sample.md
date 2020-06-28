@@ -4,7 +4,7 @@ The `DataSource` property expects `BusinessPackDataSet<T>` object which contains
 
 The `Columns` collection specifies all columns in the control.
 
-The `HeaderTemplate` property of the column defines the text displayed in the column header.
+The `HeaderText` property of the column defines the text displayed in the column header.
 
 ### Column Types
 
