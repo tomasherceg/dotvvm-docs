@@ -1,4 +1,4 @@
-## Sample 3: ValueMember and DisplayMember
+## Sample 3: ItemValueBinding and ItemTextBinding
 
 Typically, the `DataSource` is not a collection of strings, but a collection of some complex objects. 
 
